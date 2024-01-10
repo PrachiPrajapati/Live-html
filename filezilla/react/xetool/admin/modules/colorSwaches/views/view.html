@@ -1,0 +1,110 @@
+<div class="row" ng-controller="swatchController">
+    <div class="col-md-8 col-centered" ng-init="init()">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-color-from-store-top-one">
+                    <div class="left">Product colors from store</div>
+                    <div class="right"></div>
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <div class="product-color-from-store-top-two">
+                    <div class="left">The following color names are pulled from your ecommerce site.</div>
+                    <div class="right">Select the color swatches for every product color name.</div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="product-color-from-store-top-three" ng-style="isEditViewActive && {'justify-content':'flex-end'}">
+                    <div class="left" ng-show="isAddNewButton && isStore">
+                        <a href="#" class="btn  btn-sm btn-blue" ng-click="addNewColor()"> 
+                            +<xe-translate text-value="Add New Color">
+                            </xe-translate>
+                        </a>
+                        <i class="fa fa-info-circle info-module-icon" ng-click="showColorSwachesFaqDetails(1)"></i>
+                    </div>
+                    <!-- save button for add color swaches -->
+                    <div class="right" ng-show="isAddViewActive">
+                        <a href="#" class="btn btn-sm btn-success" ng-click="addSwachColor()"
+                            ng-class="{'disabled': !swachColor.name}" ng-disabled="demoStatus"><span
+                                class="fa fa-save"></span>
+                            <xe-translate text-value="Save">
+                            </xe-translate>
+                        </a>
+                    </div>
+                    <!-- <div class="left" ng-show="isEditViewActive">
+                        <a href="#" class="btn  btn-sm">
+                            + </a>
+                    </div> -->
+                    <!-- save button for edit color swaches -->
+                    <div class="right" ng-show="isEditViewActive">
+                        <a href="#" class="btn btn-sm btn-success" ng-click="editSwachColor(editInfo)"
+                            ng-class="{'disabled': !editInfo.optionlabel || !editInfo.hexValue}"
+                            ng-disabled="demoStatus"><span class="fa fa-save"></span>
+                            <xe-translate text-value="Save">
+                            </xe-translate>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <ng-include src="'modules/colorSwaches/views/partials/addColorView.html'" ng-show="isAddViewActive">
+            </ng-include>
+            <ng-include src="'modules/colorSwaches/views/partials/editColorView.html'" ng-show="isEditViewActive">
+            </ng-include>
+            <div class="col-md-12" ng-show="preloader">
+                <div class="graphics-wrap-height">
+                    <div class="panel-body text-center">
+                        <img class="image-responsive-height demo-mw-50 page-loader"
+                            src="assets/img/progress/progress-circle-master.svg" alt="Progress" />
+                        <span style="position: absolute;top:55%;">
+                            <xe-translate text-value="Loading color variants of products">
+                            </xe-translate>
+                            ...
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" ng-hide="preloader">
+                <div ng-if="optionList.length> 0">
+                    <div class="product-color-code-image" ng-repeat="option in optionList">
+                        <div class="left">
+                            <span class="c-name">{{ option.label }}</span>
+                        </div>
+                        <div class="right">
+                            <div class="h-code" ng-if="option.hexCode != ''">
+                                <div class="code-thumb"
+                                    ng-style="option.swatchImage !='' ? {'background-image': 'url('+option.swatchImage+randomValue+')'} : {'background-color':option.hexCode}">
+                                </div>
+                                <div class="code-text">{{option.hexCode}}</div>
+                            </div>
+                            <div class="p-img" ng-if="option.swatchImage != ''">
+                                <img height="20" width="20" ng-src="{{option.swatchImage}}">
+                            </div>
+                        </div>
+                        <div class="action">
+                            <span class="fa fa-pencil text-success cursor-pointer" ng-class="{'disabled': isPreLoader}"
+                                ng-click="editattributevalue(option)"></span>
+                            <!-- <span class="fa fa-close text-danger"></span> -->
+                        </div>
+                    </div>
+                </div>
+                <span ng-if="optionList.length == 0">
+                    <p class="font-normal text-lg text-center m-t-150">
+                        <xe-translate text-value="No Color Swatch found">
+                        </xe-translate>
+                    </p>
+                </span>
+                <div class="load-more" ng-show="isLoadMore">
+                    <span class="curser-hand" ng-click="loadMore()" ng-disabled="isPreLoader" ng-show="isLoadMore">
+                        <xe-translate text-value="Load More">
+                        </xe-translate>
+                    </span>
+                    <img class="image-responsive-height demo-mw-30 "
+                        src="assets/img/progress/progress-circle-master.svg" alt="Progress" ng-show="isPreLoader" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-include src="'modules/colorSwaches/doc/cs01.html'">
+    </ng-include>
+</div>

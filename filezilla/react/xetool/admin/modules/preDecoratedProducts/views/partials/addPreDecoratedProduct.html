@@ -1,0 +1,192 @@
+<div class="">
+    <div class="panel panel-default" ng-hide="addpreloader">
+        <div class="graphics-wrap-height">
+            <div class="panel-body text-center">
+                <img alt="Progress" class="image-responsive-height demo-mw-50 page-loader"
+                    src="assets/img/progress/progress-circle-master.svg" />
+                <span class="loader-label" ng-show="addProductTemp.sizes.length> 0">
+                    <xe-translate text-value="Product adding">
+                    </xe-translate>
+                    ...
+                </span>
+            </div>
+        </div>
+    </div>
+    <div ng-show="addpreloader">
+        <div class="row m-b-30 decorated-products-two">
+            <div class="col-md-12">
+                <h5>Decorated products</h5>
+            </div>
+        </div>
+        <div class="row m-b-40 product-preview">
+            <div class="col-md-3">
+                <div class="title">Product Preview</div>
+            </div>
+            <div class="col-md-9">
+                <div class="product-preview-wrap">
+
+                    <div class="product-img" ng-repeat="img in addProductTemp.images track by $index">
+
+                        <img class="img-responsive" ng-src="{{ img }}" />
+
+                    </div>
+                    <div class="product-opt">
+                        <div class="radio-x">
+                            <input type="radio" name="radio1" id="radio1" value="option1" checked="">
+                            <label for="radio1">
+                                Include product image
+                            </label>
+                        </div>
+                        <div class="radio-x">
+                            <input type="radio" name="radio1" id="radio2" value="option2">
+                            <label for="radio2">
+                                Include only designs
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-b-30 product-details">
+            <div class="col-md-3">
+                <div class="title">Product details</div>
+            </div>
+            <div class="col-md-9">
+                <div class="row m-b-10">
+                    <div class="col-md-6">
+                        <span class="text-danger text-man">*</span>
+                        <input type="text" class="form-control" placeholder="Name"
+                            ng-model="addProductTemp.product_name"></div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-md-3">
+                        <span class="text-danger text-man">*</span>
+                        <input type="text" class="form-control" placeholder="SKU"
+                            ng-model="addProductTemp.sku">
+                        </div>
+                    <div class="col-md-3"><input type="text" class="form-control" placeholder="Quantity" min="1"
+                            name="Quantity" ng-model="addProductTemp.qty" numbers-only="numbers-only" required=""
+                            type="number"></div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-md-6">
+                    <span class="text-danger text-man">*</span>
+                        <input type="text" class="form-control" placeholder="Price" name="Price"
+                            ng-model="addProductTemp.price" price-only="price-only" required=""></div>
+                    <div class="col-md-6">
+                        <div style="display: flex; align-items:center; height:35px;">(This price include both product
+                            price and design price)</div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-md-6"><textarea type="text" class="form-control" placeholder="Short Description"
+                            name="shortDesc" ng-model="addProductTemp.short_description"
+                            placeholder="Briefly Describe your Product" required=""></textarea></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><textarea type="text" class="form-control" placeholder="Description"
+                            name="desc" ng-model="addProductTemp.description"
+                            placeholder="Briefly Describe your Product" required=""></textarea></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row m-b-30 enable-redesign">
+            <div class="col-md-3">
+                <div class="title">Enable Redesign</div>
+            </div>
+            <div class="col-md-3">
+                <div class="checkbox-x checkbox-x-success">
+                    <input id="checkbox" type="checkbox" ng-model="addProductTemp.is_customized">
+                    <label for="checkbox">
+                        Allow by user
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row m-b-30 assign-categories">
+            <div class="col-md-3">
+                <div class="title">Assign Categories <span class="text-danger">*</span></div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-3 m-b-20" ng-repeat="category in productCategoryData">
+                        <div class="checkbox-x checkbox-x-success">
+                            <input id="checkbox{{$index}}" type="checkbox" ng-model="uploadCategoryType[$index]">
+                            <label for="checkbox{{$index}}">
+                                {{ category.name }}
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row m-b-30 color-sizes" ng-show="showColorSize">
+            <div class="col-md-3">
+                <div class="title">Color and Sizes <span class="text-danger">*</span></div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-sm-12 m-t-10" ng-if="storeType != '3dcart'">
+                        <div class="btn-group">
+                            <button class="btn btn-default" data-toggle="dropdown" style="width: 150px;" type="button">
+                                {{ selectedColor }}
+                            </button>
+                            <button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle"
+                                data-toggle="dropdown" type="button">
+                                <span class="caret">
+                                </span>
+                                <span class="sr-only">
+                                    Toggle Dropdown
+                                </span>
+                            </button>
+                            <ul class="dropdown-menu" ng-class="{'button-scroll':colorData.length> 4}" role="menu"
+                                style="width: 176px;">
+                                <li ng-click="assignColor($index)" ng-repeat="color in colorData">
+                                    <a href="">
+                                        {{ color.label }}
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- dropdown end  -->
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- dropdown start -->
+                    <div class="col-sm-12 m-t-10 pre-deco-sizeList" ng-if="storeType == '3dcart'">
+                        <div class="checkbox check-info" ng-repeat="color in colorData">
+                            <input id="color_{{ color.value }}" ng-model="uploadColorType[$index]" type="checkbox" />
+                            <label for="color_{{ color.value }}">
+                                {{ color.label }}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 m-b-20" ng-repeat="size in SizeData">
+                        <div class="checkbox-x checkbox-x-success">
+                            <input id="checkbox1" type="checkbox" ng-model="uploadSizeType[$index]">
+                            <label for="size_{{ size.value }}">
+                                {{ size.label }}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <button class="btn btn-success" ng-click="saveTemplateAsProduct(myform,myform2)">
+                    <xe-translate text-value="Save">
+                    </xe-translate>
+                </button>
+                <button class="btn btn-danger" ng-click="cancelTemplate()" type="button">
+                    <xe-translate text-value="Cancel">
+                    </xe-translate>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

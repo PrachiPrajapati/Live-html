@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GSAP Scroll Animation</title>
+	<style>
+		* { padding: 0; margin: 0;}
+		body { position: relative;}
+		section {min-height: 100vh; overflow: hidden;}
+		.wrapper { width: 1320px; margin: 0px auto;}
+		.main-box { background: rgb(45 36 144);}
+		.last-content {background: rgb(0, 0, 0);position: relative; z-index: 1000;}
+		.boat { position: relative; top: calc(100vh - 75px); left: 0; display: inline-block; }
+		.boat > img { max-width: 100px; position: relative; z-index: 2;}
+		.boat > div { position: absolute; width: 120vw; right: 30%; top: 60%; transform: translateY(-18.7%); z-index: 1; opacity: 0;}
+		.boat > div.wave2 {  transform: translateY(-9.0%);}
+		.boat > div.wave3, .boat > div.wave4, .boat > div.wave5 { transform: translateY(-2.3%);}
+		.boat > div img { width: 100%;}
+		.horizontal-scroll { width: 600%; display: flex; flex-wrap: nowrap;}
+		.horizontal-section { width: 100%; display: flex; align-items: center; justify-content: center; font-size: 32px; line-height: 48px; color: rgba(255, 255, 255, 0.7);}
+		.horizontal-section:nth-child(3n + 1) { background: rgba(0, 0, 0, 0.7);}
+		.horizontal-section:nth-child(3n + 2) { background: rgba(0, 0, 0, 0.6);}
+		.horizontal-section:nth-child(3n + 3) { background: rgba(0, 0, 0, 0.5);}
+		.horizontal-section:nth-child(3n + 4) { background: rgba(0, 0, 0, 0.4);}
+		.horizontal-section:nth-child(3n + 5) { background: rgba(0, 0, 0, 0.3);}
+		.horizontal-section:nth-child(3n + 6) { background: rgba(0, 0, 0, 0.2);}
+		/* mockup section */
+		.section11 .wrapper { overflow: hidden;}
+		.mockup-box-block { width: 30%; max-height: 100vh; float: left;}
+		.mockup-box-desc-block { width: 70%; float: left;}
+		.mockup-box { background: rgba(255, 255, 255, 0); width: 100%; aspect-ratio: 1 / 1.5; border: 10px solid rgba(255, 255, 255, 0.7); border-radius: 15px; box-shadow: inset 0px 0px 70px 2px rgba(0, 0, 0, 0.4); box-sizing: border-box; position: relative;}
+		.section11 ul { list-style: none;}
+		.mockup-box-desc-block ul li { height: 100vh; color: #fff; font-size: 48px; line-height: 56px; display: flex; align-items: center; justify-content: center;}
+		.mockup-box { overflow: hidden;}
+		.mockup-box ul { position: absolute; left: 0; top: 0; width: 600%; height: 100%; display: flex; flex-wrap: nowrap;}
+		.mockup-box ul li { width: 100%; display: flex; align-items: center; justify-content: center; font-size: 32px; line-height: 48px; color: rgba(0, 0, 0, 0.3); font-weight: bold;}
+		/* Pin Point section */
+		.pin-point-block { background: rgb(46,46,46); background: -moz-linear-gradient(180deg, rgba(46,46,46,0.8813900560224089) 10%, rgba(255,255,255,0) 100%); background: -webkit-linear-gradient(180deg, rgba(46,46,46,0.8813900560224089) 10%, rgba(255,255,255,0) 100%); background: linear-gradient(180deg, rgba(46,46,46,0.8813900560224089) 10%, rgba(255,255,255,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2e2e2e",endColorstr="#ffffff",GradientType=1); padding: 3vh 5vw; border-radius: 25px;}
+		.pin-point-block ul { overflow: hidden; list-style: none; text-align: center;}
+		.pin-point-block ul li {width:16%; margin: 2%; display: inline-block; border: 2px solid rgba(0,0,0,0.3); background: #F40FFF url(images/pt1.png) repeat center center / cover; border-radius: 10px; height: 70px; box-sizing: border-box;}
+		.pin-point-block ul li:nth-child(4n-2) { background-color: #FEFE04}
+		.pin-point-block ul li:nth-child(4n-1) { background-color: #F58002;}
+		.pin-point-block ul li:nth-child(4n) { background-color: #C00000}
+		/* Stack section */
+		.stack-section .stack-overlap { height: calc(100vh) !important;}
+		.stack-section .stack-overlap .tile-slide { height: calc(90vh) !important;   border: 8px solid rgba(0,0,0,0.3); border-radius: 25px 25px 0px 0px; box-sizing: border-box; background-image: url(images/pt1.png); background-repeat: repeat;}
+		.tile1 { background-color: #F40FFF;}
+		.tile2 { background-color: #FEFE04;}
+		.tile3 { background-color: #F58002;}
+		.tile4 { background-color: #C00000;}
+
+		.section11 + .pin-spacer { z-index: 100;}
+		.stack-section { position: relative; z-index: 10;}
+		@media (max-width:767px) {
+			.wrapper { width: 90%;}
+			.boat > div { width: 220vh;}
+		}
+	</style>
+</head>
+<body>
+	<section class="main-box">
+		<section class="section1">
+			<div class="boat">
+				<img src="images/boat.svg" />
+				<div class="wave1">
+					<img src="images/wave1.svg" />
+				</div>
+				 <div class="wave2">
+					<img src="images/wave2.svg" />
+				</div>
+				<div class="wave3">
+					<img src="images/wave3.svg" />
+				</div>
+				<div class="wave4">
+					<img src="images/wave4.svg" />
+				</div>
+				<div class="wave5">
+					<img src="images/wave5.svg" />
+				</div> 
+			</div>
+		</section>
+		<section class="section2"></section>
+		<section class="section3"></section>
+		<section class="section4"></section>
+		<section class="section5"></section>
+		<section class="section6"></section>
+		<section class="section7"></section>
+		<section class="section8"></section>
+		<section class="section9 horizontal-scroll">
+			<div class="horizontal-section">Horizontal Section 1</div>
+			<div class="horizontal-section">Horizontal Section 2</div>
+			<div class="horizontal-section">Horizontal Section 3</div>
+			<div class="horizontal-section">Horizontal Section 4</div>
+			<div class="horizontal-section">Horizontal Section 5</div>
+			<div class="horizontal-section">Horizontal Section 6</div>
+		</section>
+		<section class="section10"></section>
+		<section class="section11">
+			<div class="wrapper">
+				<div class="mockup-box-block">
+					<div class="mockup-box">
+						<ul>
+							<li class="card-section"></li>
+							<li class="card-section">P #F40FFF</li>
+							<li class="card-section">Y #FEFE04</li>
+							<li class="card-section">O #F58002</li>
+							<li class="card-section">R #C00000</li>
+							<li class="card-section">G #55FF00</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mockup-box-desc-block">
+					<ul>
+						<li></li>
+						<li class="radient-pink">Radient Pink</li>
+						<li class="radient-yellow">Radient Yellow</li>
+						<li class="radient-orange">Radient Orange</li>
+						<li class="radient-red">Radient Red</li>
+						<li class="radient-green">Radient Green</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="section12">
+			<div class="pin-point-block">
+				<ul class="thumb-list">
+					<li class="tile1-thumb" data-target=".tile1-slide-block"></li>
+					<li class="tile2-thumb" data-target=".tile2-slide-block"></li>
+					<li class="tile3-thumb" data-target=".tile3-slide-block"></li>
+					<li class="tile4-thumb" data-target=".tile4-slide-block"></li>
+				</ul>
+			</div>
+		</section>
+		<section class="section13 stack-section">
+			<div class="stack-overlap tile1-slide-block"><div class="tile-slide tile1"></div></div>
+			<div class="stack-overlap tile2-slide-block"><div class="tile-slide tile2"></div></div>
+			<div class="stack-overlap tile3-slide-block"><div class="tile-slide tile3"></div></div>
+			<div class="stack-overlap tile4-slide-block"><div class="tile-slide tile4"></div></div>
+		</section>
+	</section>
+	<section class="last-content"></section>
+	<!-- GSAP Library Included -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/ScrollToPlugin.min.js"></script>
+	<script>
+		/* OnClick Scroll block */
+		gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+		gsap.utils.toArray(".pin-point-block li").forEach(function(a) {
+			a.addEventListener("click", function(e) {
+				e.preventDefault();
+				gsap.to(window, {duration: 0.5, scrollTo: e.target.getAttribute("data-target")});
+			});
+		});
+		gsap.to('.tile1-thumb', {
+			borderRadius: '50%',
+			duration:0.5,
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".tile1",
+				start: "top center",
+				endTrigger: ".tile2",
+				end: "top center",
+				toggleActions: "play reverse play reverse",
+				markers: true,
+				scrub: false
+			}
+		});
+		gsap.to('.tile2-thumb', {
+			borderRadius: '50%',
+			duration:0.5,
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".tile2",
+				start: "top center",
+				endTrigger: ".tile3",
+				end: "top center",
+				toggleActions: "play reverse play reverse",
+				markers: true,
+				scrub: false
+			}
+		});
+		gsap.to('.tile3-thumb', {
+			borderRadius: '50%',
+			duration:0.5,
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".tile3",
+				start: "top center",
+				endTrigger: ".tile4",
+				end: "top center",
+				toggleActions: "play reverse play reverse",
+				markers: true,
+				scrub: false
+			}
+		});
+		gsap.to('.tile4-thumb', {
+			borderRadius: '50%',
+			duration:0.5,
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".tile4",
+				start: "top center",
+				endTrigger: ".section13",
+				end: "bottom top",
+				toggleActions: "play reverse play reverse",
+				markers: true,
+				scrub: false
+			}
+		});
+		/* Rotate block */
+		gsap.set('.pin-point-block', {rotation:-100, transformOrigin: "right top"});		
+		gsap.to('.pin-point-block', {
+			rotation:0,
+			duration:1,
+			ease:'none',
+			scrollTrigger:{
+				trigger: ".section12",
+				scrub:0.2,
+				start: "top bottom",
+				endTrigger: ".section12",
+				end: "+=" + window.innerHeight,
+				markers:false
+			}
+		});
+		gsap.to('.section12', {
+			ease:'none',
+			scrollTrigger:{
+				trigger: ".section12",
+				scrub:0.2,
+				start: "top top",
+				endTrigger: ".section13",
+				end: "bottom bottom",
+				pin: true,
+				pinSpacing: false,
+				markers: false
+			}
+		});		
+		gsap.to('.mockup-box', {
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".mockup-box",
+				start: "center center",
+				endTrigger: ".section12",
+				end: "top bottom",
+				markers:false,
+				pin: true,
+				pinSpacing: true,
+				scrub: 1
+			}
+		});
+		gsap.to('.tile1', {
+			scale: 0.6,
+			transformOrigin: "center bottom",
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".tile1",
+				start: "bottom bottom",
+				end: "+=4000",				 
+				markers:false,
+				pin: true,
+				pinSpacing: false,
+				scrub: 1
+			}
+		});
+		gsap.to('.tile2', {
+			scale: 0.6,
+			transformOrigin: "center bottom",
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".tile2",
+				start: "bottom bottom",
+				end: "+=4000",
+				markers:false,
+				pin: true,
+				pinSpacing: false,
+				scrub: 1
+			}
+		});
+		gsap.to('.tile3', {
+			scale: 0.6,
+			transformOrigin: "center bottom",
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".tile3",
+				start: "bottom bottom",
+				end: "+=4000",
+				markers:false,
+				pin: true,
+				pinSpacing: false,
+				scrub: 1
+			}
+		});
+		gsap.to('.tile4', {			
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".tile4",
+				start: "bottom bottom",
+				endTrigger: '.section13',
+				end: "bottom bottom",
+				markers:false,
+				pin: true,
+				pinSpacing: false,
+				scrub: 1
+			}
+		});		
+		// gsap.to('.thumb-list', {			
+		// 	ease: "none",
+		// 	scrollTrigger: {
+		// 		trigger: '.thumb-list',
+		// 		start: "top top",
+		// 		endTrigger: '.section13',
+		// 		end: "bottom bottom",
+		// 		markers:false,
+		// 		pin: true,
+		// 		pinSpacing: false,
+		// 		scrub: 1
+		// 	}
+		// });
+		gsap.to('.section11', {
+			background: '#F40FFF',
+			ease: "linear",
+			scrollTrigger: {
+				trigger: ".radient-pink",
+				start: "top center",
+				end: "center center",
+				markers:false,
+				scrub: 1
+			}
+		});
+		gsap.to('.section11', {
+			background: '#FEFE04',
+			immediateRender: false,
+			ease: "linear",
+			scrollTrigger: {
+				trigger: ".radient-yellow",
+				start: "top center",
+				end: "center center",
+				scrub: 1
+			}
+		});
+		gsap.to('.section11', {
+			background: '#F58002',
+			immediateRender: false,
+			ease: "linear",
+			scrollTrigger: {
+				trigger: ".radient-orange",
+				start: "top center",
+				end: "center center",
+				scrub: 1
+			}
+		});
+		gsap.to('.section11', {
+			background: '#C00000',
+			immediateRender: false,
+			ease: "linear",
+			scrollTrigger: {
+				trigger: ".radient-red",
+				start: "top center",
+				end: "center center",
+				scrub: 1
+			}
+		});
+		gsap.to('.section11', {
+			background: '#55FF00',
+			immediateRender: false,
+			ease: "linear",
+			scrollTrigger: {
+				trigger: ".radient-green",
+				start: "top center",
+				end: "center center",
+				scrub: 1
+			}
+		});
+		gsap.to('.boat', {
+			left: '100%',
+			top: '0vh',
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".section1",
+				start: "top top",
+				endTrigger: '.section8',
+				end: "bottom bottom",
+				markers:false,
+				pin: true,
+				pinSpacing: false,
+				scrub: 1
+			}
+		});
+		gsap.to('.wave1', {
+			opacity: "1",
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".section1",
+				start: "top top",
+				endTrigger: '.section3',
+				end: "top bottom",
+				markers:false,
+				scrub: 0.5
+			}
+		});
+		gsap.to('.wave2', {
+			opacity: "1",
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".section2",
+				start: "top top",
+				endTrigger: '.section4',
+				end: "top bottom",
+				markers:false,
+				scrub: 0.5
+			}
+		});
+		gsap.to('.wave3', {
+			opacity: "1",
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".section3",
+				start: "top top",
+				endTrigger: '.section5',
+				end: "top bottom",
+				markers:false,
+				scrub: 0.5
+			}
+		});
+		gsap.to('.wave4', {
+			opacity: "1",
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".section4",
+				start: "top top",
+				endTrigger: '.section7',
+				end: "top bottom",
+				markers:false,
+				scrub: 0.5
+			}
+		});
+		gsap.to('.wave5', {
+			opacity: "1",
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".section5",
+				start: "top top",
+				endTrigger: '.section8',
+				end: "top bottom",
+				markers:false,
+				scrub: 0.5
+			}
+		});
+		gsap.registerPlugin(ScrollTrigger);
+		let sections = gsap.utils.toArray(".horizontal-section");
+		gsap.to(sections, {
+		xPercent: -100 * (sections.length - 1),
+		ease: "none",
+		scrollTrigger: {
+			trigger: ".section9",
+			pin: true,
+			scrub: 1,
+			snap: 0,
+			end: () => "+=" + document.querySelector(".section9").offsetWidth
+		}
+		});
+		let card = gsap.utils.toArray(".card-section");
+		gsap.to(card, {
+		xPercent: -100 * (card.length - 1),
+		ease: "none",
+		scrollTrigger: {
+			trigger: ".section11",
+			start: "top top",
+			scrub: 1,
+			snap: 0,
+			markers: false,
+			end: "bottom bottom"
+		}
+		});
+	</script>
+</body>
+</html>

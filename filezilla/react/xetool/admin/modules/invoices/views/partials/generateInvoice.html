@@ -1,0 +1,495 @@
+<div class="Form_Details invoiceCreate">
+    <div class="row m-b-20">
+        <div class="col-sm-6">
+            <label class="pageTitle">
+                <xe-translate text-value="generate invoice"></xe-translate>
+            </label>
+        </div>
+        <div class="col-sm-6 text-right">
+            <button ng-click="backInvoice()" type="button" class="btn btn-default btn-sm">
+                <i class="fa fa-caret-left" aria-hidden="true"></i>
+                <xe-translate text-value="Back"></xe-translate>
+            </button>
+        </div>
+    </div>
+    <div class="panel panel-default" style="margin-bottom:6px;">
+        <div class="panel-heading">
+            <div class="panel-title"><xe-translate text-value="INVOICE DETAILS"></xe-translate></div>
+        </div>
+        <div class="panel-body">
+            <div class="flexRow">
+                <!-- <div class="flexCol">
+                    <div class="form-group form-group-default">
+                        <label class="control-label">
+                            <xe-translate text-value="REFERENCE"></xe-translate>
+                        </label>
+                        <input type="text" class="form-control disable-invoice-input" name="" ng-model="invoiceDetails.reference" placeholder="Enter The Reference Number" numbers-only="numbers-only" readonly="">
+                    </div>
+                </div> -->
+                <div class="flexCol">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Billing Date"></xe-translate>
+                        </label>
+                        <input id="date1picker" ui-date="dateOptions" class="form-control disable-invoice-input" ui-date-format ng-model="invoiceDetails.billing_date" disabled="" onkeydown="return false">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Due Date Invoice"></xe-translate>
+                        </label>
+                        <input id="date2picker" ui-date="dateOptions" class="form-control" ui-date-format ng-model="invoiceDetails.due_date" onkeydown="return false">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default" style="margin-bottom:6px;">
+        <div class="panel-heading">
+            <div class="panel-title"><xe-translate text-value="CUSTOMER DETAILS"></xe-translate></div>
+        </div>
+        <div class="panel-body">
+            <div class="flexRow flexEq">
+                <div class="flexCol">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Purchaser Name">
+                            </xe-translate>
+                        </label>
+                        <input type="text" class="form-control" name="" ng-model="invoiceDetails.purchaser_name" placeholder="Enter Purchaser Name">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Purchaser Email">
+                            </xe-translate>
+                        </label>
+                        <input type="email" class="form-control" name="" ng-model="invoiceDetails.purchaser_mail" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" placeholder="Enter Purchaser email">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Purchaser Company">
+                            </xe-translate>
+                        </label>
+                        <input type="text" class="form-control" maxlength="20" onkeypress="return isNumberKey(event)" name="" ng-model="invoiceDetails.purchaserCompany" placeholder="Enter Purchaser Company Name">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Purchaser Address">
+                            </xe-translate>
+                        </label>
+                        <input type="text" name="" class="form-control" name="" ng-model="invoiceDetails.purchaser_address" placeholder="Enter Purchaser Address">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <!-- <label class="control-label">
+                        <xe-translate text-value="Purchaser Country">
+                        </xe-translate>
+                    </label>
+                    <input type="text" class="form-control" name="" ng-model="invoiceDetails.country_cust"
+                        placeholder="Enter Purchaser Country" autocomplete="off"> -->
+                    <div class="customer">
+                        <div id="c-country" class="select-wrap" ng-click="showInvoiceCountry()">
+                            <div class="d-flex justify-content-between align-items-center margin-b">
+                                <span class="heading-one">
+                                    <xe-translate text-value="Country">
+                                    </xe-translate>
+                                </span>
+                                <span class="star-one">*</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="select-one"> {{ invoiceDetails.country_cust }} </span>
+                                <span class="arrow-one"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer">
+                        <div id="c-country-drop" class="dropdown-wrap">
+                            <input type="text" class="input-sm form-control" id="c-country-search" ng-model="billingCountrySearch.value">
+                            <ul>
+                                <li ng-repeat="country in countryList | filter:billingCountrySearch.value" ng-click="onBillingInvoiceSelected(country)">
+                                    {{ country.countries_name }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <!-- <label class="control-label">
+                        <xe-translate text-value="Purchaser State">
+                        </xe-translate>
+                    </label>
+                    <input type="text" class="form-control" name="" ng-model="invoiceDetails.state_cust" placeholder="Enter Purchaser State" autocomplete="off"> -->
+                    <div class="customer" ng-class="invoiceDetails.country_cust == 'Select' ? 'disable-div' : '' ">
+                        <div id="c-state" class="select-wrap" ng-click="showInvoiceState()">
+                            <div class="d-flex justify-content-between align-items-center margin-b">
+                                <span class="heading-one">
+                                    <xe-translate text-value="State">
+                                    </xe-translate>
+                                </span>
+                                <span class="star-one">*</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="select-one"> {{ invoiceDetails.state_cust }} </span>
+                                <span class="arrow-one"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer">
+                        <div id="c-state-drop" class="dropdown-wrap">
+                            <input type="text" class="input-sm form-control" id="c-state-search" ng-model="billingStateSearch.value">
+                            <ul>
+                                <li ng-repeat="state in billingStateList | filter:billingStateSearch.value" ng-click="onBillingInvoiceStateSelected(state)">
+                                    {{ state.state_name }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="PURCHASER CITY">
+                            </xe-translate>
+                        </label>
+                        <input type="text" class="form-control" name="" ng-model="  invoiceDetails.city_cust" placeholder="Enter Purchaser City">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Purchaser Zipcode">
+                            </xe-translate>
+                        </label>
+                        <input type="text" class="form-control" name="" ng-model="  invoiceDetails.zip_code" placeholder="Enter Purchaser Zipcode" numbers-only="numbers-only">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default" style="margin-bottom:6px;">
+        <div class="panel-heading">
+            <div class="panel-title"><xe-translate text-value="SELLER DETAILS">
+            </xe-translate></div>
+        </div>
+        <div class="panel-body">
+            <div class="flexRow">
+                <div class="flexCol">
+                    <div class="form-group form-group-default">
+                        <label class="control-label">  <xe-translate text-value="Seller Logo">
+                            </xe-translate></label>
+                        <div>
+                            <img ng-src="{{filepreview}}" class="img-responsive" ng-show="filepreview" style="min-width:31px;max-height:31px;width:auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default ">
+                        <label class="control-label">
+                            <xe-translate text-value="Seller Name">
+                            </xe-translate>
+                        </label>
+                        <input type="text" class="form-control disable-invoice-input" name="" ng-model="invoiceDetails.seller_name" readonly="" placeholder="Enter Seller Name">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default ">
+                        <label class="control-label">
+                            <xe-translate text-value="Seller Email">
+                            </xe-translate>
+                        </label>
+                        <input type="email" class="form-control disable-invoice-input" name="" ng-model="invoiceDetails.invoice_sender_mail" readonly="" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" placeholder="Enter Seller email">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default ">
+                        <label class="control-label">
+                            <xe-translate text-value="Seller Company">
+                            </xe-translate>
+                        </label>
+                        <input type="text" readonly="" class="form-control disable-invoice-input" name="" ng-model="invoiceDetails.sellerCompany" readonly="" placeholder="Enter Seller Company Name">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default ">
+                        <label class="control-label">
+                            <xe-translate text-value="Seller Address">
+                            </xe-translate>
+                        </label>
+                        <input type="text" name="" readonly="" class="form-control disable-invoice-input" name="" ng-model="invoiceDetails.seller_address" placeholder="Enter Seller Address">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default ">
+                        <label class="control-label">
+                            <xe-translate text-value="Seller Country">
+                            </xe-translate>
+                        </label>
+                        <input type="text" class="form-control disable-invoice-input" name="" readonly="" ng-model="invoiceDetails.country_sell" placeholder="Enter Seller Country">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default ">
+                        <label class="control-label">
+                            <xe-translate text-value="Seller State">
+                            </xe-translate>
+                        </label>
+                        <input type="text" class="form-control disable-invoice-input" name="" readonly="" ng-model="invoiceDetails.state_sell" placeholder="Enter Seller State">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default ">
+                        <label class="control-label">
+                            <xe-translate text-value="Seller City">
+                            </xe-translate>
+                        </label>
+                        <input type="text" class="form-control disable-invoice-input" readonly="" name="" ng-model="  invoiceDetails.city_sell" placeholder="Enter Seller City">
+                    </div>
+                </div>
+                <div class="flexCol">
+                    <div class="form-group form-group-default ">
+                        <label class="control-label">
+                            <xe-translate text-value="Seller Zipcode">
+                            </xe-translate>
+                        </label>
+                        <input type="text" class="form-control disable-invoice-input" readonly="" name="" ng-model="invoiceDetails.zipcode_cust" placeholder="Enter Seller Zipcode">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default" style="margin-bottom:6px;">
+        <div class="panel-heading">
+            <div class="panel-title"><xe-translate text-value="PRODUCT DETAILS VIEW">
+            </xe-translate></div>
+        </div>
+        <div class="panel-body">
+            <div class="q-r-product-qty-container" data-ng-repeat="productAndQtys in productAndQtyDetails track by $index">
+                <div class="flexRow">
+                    <div class="flexCol" style="max-width:280px;">
+                        <!-- <div class="form-group form-group-default required">
+                            <label class="control-label">Product</label>
+                            <input type="text" ng-model="invoiceDetails.name[$index]" class="form-control" placeholder="Product Name">
+                        </div> -->
+                        
+                                <label class="control-label q-r-dropdown-btn-label">
+                                    <xe-translate text-value="Product"></xe-translate>
+                                </label>
+                                <div class="btn-group" style="width:100%;display:flex;">
+                                    <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown"
+                                        style="width:100%;font-size:12px;text-align:left;padding-top:35px;background-color:transparent;">
+                                        {{ productAndQtys.selectedProduct }}
+                                    </button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        data-disabled="true" aria-haspopup="true" aria-expanded="false"
+                                        style="height:64px;">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu" ng-class="{'button-scroll-lang':productAndQtys.productList.product.length > 5}"
+                                        role="menu" style="width:100%;">
+                                        <li ng-repeat="product in productAndQtys.productList.product"
+                                            ng-click="onProductSelected(product,$parent.$index)">
+                                            <a href="">{{product.name}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            
+                    </div>
+                    <div class="flexCol"  style="max-width:280px;"  ng-if="productAndQtys.color.length > 0">
+                        <!-- <div class="form-group form-group-default required">
+                            <label class="control-label">Description</label>
+                            <input type="text" ng-model="invoiceDetails.desciption[$index]" class="form-control" placeholder="Product Description">
+                        </div> -->
+
+                          <div class="q-r-colors-container">
+                            <label class="control-label q-r-dropdown-btn-label">
+                              <xe-translate text-value="Colors">
+                              </xe-translate>
+                            </label>
+                            <div class="btn-group" style="width: 100%; display: flex;">
+                              <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown"
+                                style="width:100%;font-size:12px;text-align:left;padding-top:35px;background-color:transparent;">
+                                {{ productAndQtys.selectedcolor | capitalize }}
+                              </button>
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                              </button>
+                              <ul class="dropdown-menu" role="menu" style="width: 100%;"
+                                ng-class="{'quote-drop-down-scroll':productAndQtys.color.length > 5}">
+                                
+                                <li ng-repeat="color in productAndQtys.color"
+                                  ng-click="onColorSelected(color, $parent.$index)">
+                                  <a href="">{{ color.xeColor | capitalize }}</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                         
+                        
+                    </div>
+                    <div class="flexCol" style="max-width:280px;" ng-if="productAndQtys.size.length > 0 && productAndQtys.size[0].xe_size_id != 0">
+                         <!--ng-if="productAndQtys.selectedProduct != 'Select'" -->
+                          
+                              <div class="q-r-size-container" >
+                                <label class="control-label q-r-dropdown-btn-label">
+                                  <xe-translate text-value="Size">
+                                  </xe-translate>
+                                </label>
+                                <div class="btn-group" style="width: 100%; display: flex;">
+                                  <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown"
+                                    style="width: 100%; font-size: 12px; text-align: left;padding-top: 35px; background-color: transparent;">
+                                    {{ productAndQtys.selectedsize }}
+                                  </button>
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                                    <span class="caret">
+                                    </span>
+                                    <span class="sr-only">
+                                      Toggle Dropdown
+                                    </span>
+                                  </button>
+                                  <ul class="dropdown-menu" role="menu" style="width: 100%;"
+                                    ng-class="{'quote-drop-down-scroll':sizeColor.length > 5}">
+                                    
+                                    <li ng-repeat="size in productAndQtys.size"
+                                      ng-click="onSizeSelected(size, $parent.$index)">
+                                      <a href="">
+                                        {{ size.xe_size }}
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                           
+                    </div>
+                    <div class="flexCol" style="max-width:100px;" ng-if="productAndQtys.selectedProduct != 'Select' && productAndQtys.productList.product.length > 0 || simpleProductId[$index] == true">
+                        <div class="form-group form-group-default required">
+                            <label class="control-label">Quantity</label>
+                            <input type="number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' min="1" ng-model="productAndQtys.qty" ng-blur="checkQuantity(productAndQtys.qty, $index)" ng-change="calculatedPrice($index,productAndQtys.price,productAndQtys.qty)" class="form-control" name="" placeholder="0" numbers-only="numbers-only">
+                        </div>
+                    </div>
+                    <div class="flexCol" style="max-width:100px;" ng-if="productAndQtys.selectedProduct != 'Select' && productAndQtys.productList.product.length > 0 || simpleProductId[$index] == true">
+                        <div class="form-group form-group-default required">
+                            <label class="control-label">Price</label>
+                            <input type="text" ng-model="productAndQtys.price" ng-change="calculatedPrice($index,productAndQtys.price,productAndQtys.qty)"  class="form-control" name="" money placeholder="$0.00">
+                        </div>
+                    </div>
+                    <div class="flexCol" ng-if="productAndQtys.selectedProduct != 'Select' && productAndQtys.productList.product.length > 0  || simpleProductId[$index] == true" style="flex:initial;min-width:70px;max-width:70px;">
+                        <div class="infoBox">
+                            <div class="text-bold">Total</div>
+                            {{(invoiceDetails.total[$index] == "0") ? 0 :  invoiceDetails.total[$index]| currency}}
+                        </div>
+                    </div>
+                    <div class="flexCol" style="flex:initial;">
+                        <button ng-if="deleteButtonVissible[$index]"  class="btn btn-link btn-sm" ng-click="removeProductAndQty($parent.$index)">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-default btn-sm" ng-disabled="productAndQtys.selectedProduct == 'Select' || curentPrice == 0" ng-click="addMoreProductToQuote()"><i class="fa fa-plus" aria-hidden="true"></i><xe-translate text-value="ADD PRODUCT">
+            </xe-translate></button>
+                <!-- <p style="color: red">{{invoiceDetails.total}}cvsva</p> -->
+                <!-- <button type="button" class="btn btn btn-success m-t-15 m-b-20"  ng-click="ShowAddProductSection()">
+                    <i class="fa fa-plus"></i>
+                    <span>
+                      <xe-translate text-value="Add Product">
+                      </xe-translate>
+                    </span>
+                </button> -->
+
+        </div>
+
+       
+    </div>
+    <div class="panel panel-default" style="margin-bottom:6px;">
+        <div class="panel-body">
+            <div class="flexRow">
+                <div class="flexCol">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Note Points">
+                            </xe-translate>
+                        </label>
+                        <input type="text" name="" class="form-control" name="" ng-model="invoiceDetails.notes" placeholder="Notes">
+                    </div>
+                </div>
+                <!-- <div class="flexCol">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Term And Condition">
+                            </xe-translate>
+                        </label>
+                        <input type="text" name="" class="form-control" name="" ng-model="invoiceDetails.message" placeholder="Term And Condition">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="dxTable table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th colspan="2"><xe-translate text-value="PRICE DETAILS">
+                    </xe-translate></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="60%"><xe-translate text-value="SUBTOTAL">
+                    </xe-translate></td>
+                    <td width="40%" style="text-align:right;">{{invoiceCurrency}}{{subGenerateTotal}}</td>
+                </tr>
+                <tr>
+                    <td width="60%"><xe-translate text-value="Shipping Charges">
+                    </xe-translate></td>
+                    <td width="40%" style="text-align:right;">{{invoiceCurrency}}{{shipping_charge}}</td>
+                </tr>
+                <tr>
+                    <td width="60%"><xe-translate text-value="TOTAL TAX">
+                    </xe-translate> ({{total_tax}}%)</td>
+                    <td width="40%" style="text-align:right;">{{invoiceCurrency}}{{showGenerateTaxableAmout}}</td>
+                </tr>
+                <tr>
+                    <td width="60%">
+                        <h4><strong><xe-translate text-value="TOTAL">
+                        </xe-translate></strong></h4>
+                    </td>
+                    <td width="40%" style="text-align:right;">
+                        <h4><strong>{{invoiceCurrency}}{{totalSumData()== "NaN" ? 0 : totalSumData()}}</strong></h4>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel panel-default" style="margin-bottom:0px;background:transparent;border:0;">
+        <div class="panel-body" style="padding:15px 0;">
+            <div class="row">
+                <div class="col-sm-12 text-right">
+                    <button type="reset" class="btn btn-danger" ng-click="cancelAll('addInvoice')"><xe-translate text-value="cancel">
+                    </xe-translate></button>
+                    <button class="btn btn-success" ng-disabled="productAndQtys.selectedProduct == 'Select' || curentPrice == 0"ng-click="submitFormData()"><xe-translate text-value="save">
+                    </xe-translate></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="preloader-trans" ng-show="generateInvoiceLoader">
+        <div class="page-loader">
+            <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+            <span>
+                <xe-translate text-value="Please wait"></xe-translate>...
+            </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>enviz</title>
+    <!-- Favicon included -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--Main Style Included-->
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <!-- Jquery included -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Banner section starts -->
+    <section class="banner-wrap">
+        <div class="img-anim">
+            <div class="fill-bg"></div>
+            <img src="images/transparent-bg.png" alt="background-img" />
+        </div>
+        <div class="banner-desc">
+            <div class="container">
+                <div class="banner-box">
+                    <div class="has-animation animation-ltr logo-box" data-delay="1000">
+                        <img src="images/logo.svg" alt="enviz">
+                    </div>
+                    <div class="has-animation animation-rtl title-box" data-delay="1500">
+                        <h1>We make certain to deliver excellence in our every design.
+                        </h1>
+                    </div>
+                    <div class="wave-box " id="wave-box" data-delay="2500"
+                        style="opacity: 0; transition-duration: 0.5s;">
+                        <img src="images/wave1.png" alt="logo">
+                    </div>
+                    <div class="has-animation animation-ltr" data-delay="2000">
+                        <p>Coming soon, undoubtedly creating distinctive designs and fabricating frame perfect UI\UX as
+                            well as brand designing solutions through comprehensive research. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- container ends -->
+    </section>
+</body>
+<!-- javascript starts -->
+<script type="text/javascript">
+    function showDiv1() {
+        // document.getElementsByClassName('wave-box').style.display = "block";
+        document.getElementById('wave-box').style.opacity = "1";
+        // document.getElementById('wave-box').style.transition - duration = "0.5s";
+        console.log("test1", name);
+    }
+
+    $(document).ready(function () {
+        $('.has-animation').each(function (index) {
+            $(this).delay($(this).data('delay')).queue(function () {
+                $(this).addClass('animate-in');
+            });
+        });
+        setTimeout("showDiv1()", 4000);
+    });
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+            <g id="Group" transform="translate(3.333333, 3.333333)">
+                <polyline id="Path" stroke="#FFFFFF" stroke-width="0.750750751" transform="translate(12.632570, 16.666667) scale(-1, 1) translate(-12.632570, -16.666667) " points="0.299236423 16.2290567 0.299236423 0 24.9659031 0 24.9659031 33.3333333 0.299236423 33.3333333 0.299236423 24.7407316"></polyline>
+                <g id="Group-Copy-3" transform="translate(24.548816, 20.617851) rotate(45.000000) translate(-24.548816, -20.617851) translate(14.548816, 18.617851)" stroke="#47EBC6" stroke-width="0.634437254">
+                    <path d="M3.66197183,0 L19.1549296,0 C19.5686868,0.4305376 19.7755654,1.01031394 19.7755654,1.73932902 C19.7755654,2.46834411 19.5686868,3.01532833 19.1549296,3.38028169 L3.66197183,3.38028169 L0.554153615,1.94590405 C0.412899496,1.88070984 0.351240756,1.71335041 0.416434965,1.57209629 C0.444506112,1.51127547 0.493332796,1.46244879 0.554153615,1.43437764 L3.66197183,0 L3.66197183,0 Z" id="Rectangle"></path>
+                    <path d="M17.1830986,0 L4.50704225,0 C4.95617171,0.4305376 5.18073644,1.01031394 5.18073644,1.73932902 C5.18073644,2.46834411 4.95617171,3.01532833 4.50704225,3.38028169 L17.1830986,3.38028169 L17.1830986,0 Z" id="Rectangle-Copy"></path>
+                </g>
+                <polyline id="Path-9" stroke="#47EBC6" stroke-width="0.747595739" points="5.63256976 2.66666667 2.96590309 5.33333333 5.63256976 8"></polyline>
+                <polyline id="Path-9-Copy" stroke="#47EBC6" stroke-width="0.747595739" transform="translate(20.299236, 28.000000) scale(-1, 1) translate(-20.299236, -28.000000) " points="21.6325698 25.3333333 18.9659031 28 21.6325698 30.6666667"></polyline>
+                <rect id="Rectangle" fill="#FFFFFF" x="6.96590309" y="4.66666667" width="14.6666667" height="1.33333333"></rect>
+                <rect id="Rectangle-Copy-8" fill="#FFFFFF" x="6.96590309" y="8.66666667" width="8.66666667" height="1.33333333"></rect>
+                <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="3.29923642" y="27.3333333" width="14.3333333" height="1.33333333"></rect>
+                <g id="Group-3" transform="translate(9.333333, 17.333333) scale(-1, 1) translate(-9.333333, -17.333333) translate(2.333333, 10.333333)">
+                    <rect id="Rectangle" fill="#FFFFFF" x="4.33333333" y="11.6666667" width="1" height="1.66666667"></rect>
+                    <rect id="Rectangle-Copy-5" fill="#FFFFFF" transform="translate(12.500000, 4.666667) rotate(-270.000000) translate(-12.500000, -4.666667) " x="12.1666667" y="3.83333333" width="1" height="1.66666667"></rect>
+                    <rect id="Rectangle-Copy-6" fill="#FFFFFF" transform="translate(12.500000, 7.333333) rotate(-270.000000) translate(-12.500000, -7.333333) " x="12.1666667" y="6.5" width="1" height="1.66666667"></rect>
+                    <rect id="Rectangle-Copy-7" fill="#FFFFFF" transform="translate(12.500000, 10.000000) rotate(-270.000000) translate(-12.500000, -10.000000) " x="12.1666667" y="9.16666667" width="1" height="1.66666667"></rect>
+                    <rect id="Rectangle-Copy-3" fill="#FFFFFF" x="7" y="11.6666667" width="1" height="1.66666667"></rect>
+                    <rect id="Rectangle-Copy-4" fill="#FFFFFF" x="9.66666667" y="11.6666667" width="1" height="1.66666667"></rect>
+                    <polygon id="Path-10" stroke="#47EBC6" stroke-width="0.750750751" points="13.3333333 0 13.3333333 13.3333333 0 13.3333333"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

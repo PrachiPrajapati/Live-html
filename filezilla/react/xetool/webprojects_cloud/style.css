@@ -1,0 +1,144 @@
+.btn-primary,
+.btn-secondary,
+.btn-success {
+    background: #0566FF !important;
+    border:1px solid #0566FF !important;
+}
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #side-pane .side-pane-wrap .pane-body .pane-content .nxi-tab-nav .nav-item.active,
+.nx-checkbox .xe-custom-checkbox .i-check,
+.xe-custom-checkbox-block .xe-custom-checkbox .i-check,
+.xe-custom-checkbox-block .xe-custom-checkbox-sm .i-check,
+.xe-wordcloud-stage .wordcloud_list ul li.active,
+.xe-img-setting .xe-img-setting-wrap .btn-group .btn.active,
+.xe-img-gallery .nx-btn-row li #openBtn.active {
+  background: #0566FF !important;
+}
+#nx-navbar .nav .nav-item .nav-link:hover,
+#nx-navbar .nav .nav-item .nav-link:focus,
+#nx-navbar .nav .nav-item .nav-link.active,
+#nx-navbar .nav .nav-item.dropdown.show .dropdown-toggle,
+#nx-navbar .nav .nav-item .dropdown-menu .dropdown-item:hover,
+#nx-topbar .edit-nav .nav-link:hover,
+#nx-topbar .edit-nav .nav-link:focus,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li.active,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:focus,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:hover,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face:focus,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face:hover,
+#nx-canvas #side-pane .side-pane-wrap .pane-header .pane-action .pane-btn:hover,
+#nx-canvas #side-pane .side-pane-wrap .pane-header .pane-action .pane-btn:focus,
+#nx-canvas #side-pane .side-pane-wrap .pane-body .pane-content .product-info-wrap .btn-link,
+#nx-canvas .nx-modal .nx-modal-wrap .nx-modal-body .print-profile-stage ul li:hover .media-body,
+#nx-canvas .nx-modal .nx-modal-wrap .nx-modal-body .print-profile-stage ul li:focus .media-body,
+.div_plainText_webFont .xe-web-fonts .font-list .font:hover,
+.div_plainText_webFont .xe-web-fonts .font-list .font:focus,
+.nxi-cart-section .nxi-cart-wrap .checkout-summery .nxi-checkout-price .nxi-cart-price span,
+.nx-mobile-menu .navbar-nav .nav-item .nav-link:hover,
+.nx-mobile-menu .navbar-nav .nav-item .nav-link:focus,
+.mobile-not-support .mobile-not-support-wrap h2,
+.text-success {
+  color: #0566FF !important;
+}
+
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li.active,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:focus,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:hover,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face:focus,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face:hover,
+.design-list .nx-thumbs .pane-scroll .scroll-items:hover,
+.design-list .nx-thumbs .pane-scroll .scroll-items.active,
+#nx-canvas #side-pane .side-pane-wrap .pane-body .pane-content .nxi-tab-nav .nav-item.active,
+.xe-img-setting .xe-img-setting-wrap .btn-group .btn.active,
+.xe-img-gallery .nx-btn-row li #openBtn.active,
+.color-popup .color-btn .btns.active,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li.active,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:focus,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:hover,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face:focus,
+#nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face:hover,
+.design-list .nx-thumbs .pane-scroll .scroll-items:hover,
+.design-list .nx-thumbs .pane-scroll .scroll-items.active,
+#nx-canvas #side-pane .side-pane-wrap .pane-body .pane-content .nxi-tab-nav .nav-item.active,
+.xe-img-setting .xe-img-setting-wrap .btn-group .btn.active,
+.xe-img-gallery .nx-btn-row li #openBtn.active,
+.color-popup .color-btn .btns.active {
+  border-color: #0566FF !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0566FF !important;
+}
+
+/*Addition Css*/
+.cart-txt.price .item-price,
+.nav-top-right .icon { color: #26A541 !important;}
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .nav-link { padding: 10px;}
+#nx-tool-box #nx-tool-wrap #nx-navbar,
+.full-screen-thumb { width: 90px;}
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li.active::after, 
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:focus::after, 
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:hover::after {
+background: #0566ff !important;
+}
+ #nx-canvas #side-pane .side-pane-wrap .pane-header .pane-action .pane-btn:hover { color: #fff !important;}
+.product-faces-thumb.active { border-color: #26A541; }
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .dropdown-menu { padding: 2px; min-width: 150px; max-width: 150px; }
+.icon-text-group:hover { color: #0566ff !important; }
+
+/*Addition Responsive*/
+@media ( min-width: 992px) and ( max-width: 1199px) {
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas { height: calc(100vh - 70px); }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs { bottom: -20px; }
+#nx-tool-box #nx-tool-wrap #nx-navbar { margin-top: -51px; width: 100vw; top: 100%; }
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .nav-link  { margin: 0; padding: 5px; }
+.cart-txt.price .item-price { font-size: 13px; line-height: 18px;}
+.cart-txt.price .item-count { font-size: 10px !important;}
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .dropdown-menu { padding: 5px; max-width: 100%; min-width: 100%; overflow-x: auto; top:102% !important; }
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .dropdown-menu .dropdown-item { padding-bottom: 5px; }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-color #color-pickers .colorBox-wrap .colorBox::before { top: -6px; left: -6px; }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer { transform: scale(0.8); -webkit-transform: scale(0.8); }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li .product_side_img { height: 35px; width: 35px; }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li.active::after, 
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:focus::after, 
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:hover::after { bottom: -8px; }
+}
+
+@media ( min-width: 768px) and ( max-width: 991px) {
+.header-wrap,
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-box#tool-edit,
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-box#tool-direction { overflow-x: auto;}
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas { height: calc(100vh - 70px); }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs { bottom: -20px; }
+#nx-tool-box #nx-tool-wrap #nx-navbar { margin-top: -51px; width: 100vw; top: 100%; }
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .nav-link  { margin: 0; padding: 5px; }
+.cart-txt.price .item-price { font-size: 13px; line-height: 18px;}
+.cart-txt.price .item-count { font-size: 10px !important;}
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .dropdown-menu { padding: 5px; max-width: 100%; min-width: 100%; overflow-x: auto; top:102% !important; }
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .dropdown-menu .dropdown-item { padding-bottom: 5px; }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-color #color-pickers .colorBox-wrap .colorBox::before { top: -6px; left: -6px; }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer { transform: scale(0.8); -webkit-transform: scale(0.8); }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li .product_side_img { height: 35px; width: 35px; }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li.active::after, 
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:focus::after, 
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs .preview-thumbs ul#ul_product_face li:hover::after { bottom: -8px; }
+}
+
+@media ( max-width: 767px) {
+.header-wrap,
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-box#tool-edit,
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-box#tool-direction { overflow-x: auto;}
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas { height: calc(100vh - 70px); }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-thumbs { bottom: 30px; }
+#nx-tool-box #nx-tool-wrap #nx-navbar { margin-top: -51px; width: 100vw; top: 100%; }
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .nav-link  { margin: 0; padding: 5px; }
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .nav-link .nxi { font-size: 18px;}
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .nav-link { font-size: 10px;}
+.cart-txt.price .item-price { font-size: 13px; line-height: 18px;}
+.cart-txt.price .item-count { font-size: 10px !important;}
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .dropdown-menu { padding: 5px; max-width: 100%; min-width: 100%; overflow-x: auto; top:102% !important; }
+#nx-tool-box #nx-tool-wrap #nx-navbar .nav .nav-item .dropdown-menu .dropdown-item { padding-bottom: 5px; }
+#nx-tool-box #nx-tool-wrap #nx-wrapper #nx-canvas #nx-designer .tool-color #color-pickers .colorBox-wrap .colorBox::before { top: -6px; left: -6px; }
+.edit-nav-new .drop-d-c ul li { font-size: 10px; padding: 5px; overflow-x: auto;}
+.edit-nav-new li .icon-text-group .icon-top { font-size: 17px; line-height: 22px; }
+.edit-nav-new li .icon-text-group .text-btm { font-size: 9px; line-height: 15px; }
+}

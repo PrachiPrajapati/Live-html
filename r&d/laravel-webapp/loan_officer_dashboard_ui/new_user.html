@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/custom_daterpicker.css">
+    <link rel="stylesheet" type="text/css" href="css/input_tag.css">
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/switch.css">
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="css/tabs.css">
+    <link rel="stylesheet" type="text/css" href="css/color.css">
+    <link rel="stylesheet" type="text/css" href="css/spectrum.css">
+    <link rel="stylesheet" type="text/css" href="css/toaster.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.6/dropzone.min.css" />
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="js/custom_datepicker.js"></script>
+    <script type="text/javascript" class="js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.6/min/dropzone.min.js"></script>
+    <script type="text/javascript" src="js/spectrum.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+
+</head>
+<body>
+
+
+    <main class="content" role="content">
+        <section class="container-fluid bg_white">
+            <div class="row">
+                <div class="col-12 p_lr_0">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a href="#" data-toggle="sidebar-colapse">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <img  id="collapse-icon" src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/menu.png" class="img-fluid" />
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/home"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/logo.png" class="img-fluid height_37" /></a>
+                        <div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+                            <form class="form-inline my-2 my-lg-0">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/bell.png" class="img-fluid m_r_15 notification" />
+                                <span class="notification_dot"></span>
+                                <ul class="dropdown-notification">
+                                    <div class="notification_title">
+                                        Notifications
+                                    </div>
+                                    <div class="content_center space_between p_tb_20 b_b_grey">
+                                        <div class="notification_readall">
+                                            <svg width="21" height="20" style="margin-right: 0" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.0415 7L6.39941 13.4167L3.38029 10.5" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.1821 7L10.54 13.4167" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+
+                                            Mark all as read
+                                        </div>
+                                        <div class="integation_dropdown">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                    <ins>All</ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio">
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="001" name="alphabet">
+                                                        <i>option 1</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="002" name="alphabet">
+                                                        <i>option 2</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="more_notification">
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_1">
+                                                </div>
+                                                <label for="html_1">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_2">
+                                                </div>
+                                                <label for="html_2">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_3">
+                                                </div>
+                                                <label for="html_3">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_4">
+                                                </div>
+                                                <label for="html_4">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36 user" />
+                                <ul class="dropdown-menu-profile">
+                                    <div class="content_center">
+                                        <div>
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36" />
+                                        </div>
+                                        <div class="m_l_10">
+                                            <div class="user_name">Ruchi Patel</div>
+                                            <div class="user_profile">Super admin</div>
+                                        </div>
+                                    </div>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/profile-page" class="dropdown-menu__link profilepage nav-link">
+                                            <img src="images/Pipeline_NA.svg" class="default-icon"/>
+                                            <img src="images/Pipeline_A.svg" class="hover-icon" />
+                                            My Account
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/Company_Profile_NA.svg" class="default-icon"/>
+                                            <img src="images/Company_Profile_A.svg" class="hover-icon" />
+                                            Company Profile
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/closing-targets" class="dropdown-menu__link profilepage nav-link">
+                                            <img src="images/Closing_Targets_NA.svg" class="default-icon"/>
+                                            <img src="images/Closing_Targets_A.svg" class="hover-icon" />
+                                            Closing Targets
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/Plan_Billing_NA.svg" class="default-icon"/>
+                                            <img src="images/Plan_Billing_A.svg" class="hover-icon" />
+                                            Plan & Billing
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-directory" class="dropdown-menu__link nav-link">
+                                            <img src="images/Company_Directory_NA.svg" class="default-icon"/>
+                                            <img src="images/Company_Directory_A.svg" class="hover-icon" />
+                                            Company Directory
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="#" class="dropdown-menu__link nav-link">
+                                            <img src="images/Commissions_NA.svg" class="default-icon"/>
+                                            <img src="images/Commissions_A.svg" class="hover-icon" />
+                                            Commissions
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/Integrations_NA.svg" class="default-icon"/>
+                                            <img src="images/Integrations_A.svg" class="hover-icon" />
+                                            Integrations
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/activity-feeds" class="dropdown-menu__link nav-link">
+                                            <img src="images/Activity_NA.svg" class="default-icon"/>
+                                            <img src="images/Activity_A.svg" class="hover-icon" />
+                                            Activity
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/manage_users" class="dropdown-menu__link nav-link">
+                                            <img src="images/Manage_users_NA.svg" class="default-icon"/>
+                                            <img src="images/Manage_users_A.svg" class="hover-icon" />
+                                            Manage users
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/View_Permissions_NA.svg" class="default-icon"/>
+                                            <img src="images/View_Permissions_A.svg" class="hover-icon" />
+                                            View Permissions
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/commission-schedule" class="dropdown-menu__link nav-link">
+                                            <img src="images/View_Commission_Schedule_NA.svg" class="default-icon"/>
+                                            <img src="images/View_Commission_Schedule_A.svg" class="hover-icon" />
+                                            View Commission Schedule
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/Lead_rotator_NA.svg" class="default-icon"/>
+                                            <img src="images/Lead_rotator_A.svg" class="hover-icon" />
+                                            Lead rotator
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/Custom_Fields_NA.svg" class="default-icon"/>
+                                            <img src="images/Custom_Fields_A.svg" class="hover-icon" />
+                                            Custom Fields
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+                                        <a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                            <img src="images/log-out_NA.svg" class="default-icon"/>
+                                            <img src="images/log-out_A.svg" class="hover-icon" />
+                                            Logout
+                                        </a>
+                                        <form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+                                            <input type="hidden" name="_token" value="SV3lbr4cEgcpX4pOBAkdhZEvkuHN1iBFSLpS0Qrj">         
+                                        </form>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div style="display: flex;" id="body-row">
+                <div id="sidebar-container">
+                    <div class="d-none d-md-block">
+                        <ul class="list-group">
+                            <a href="http://sigmadev.beta.loanofficer.ai/home" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <img src="images/Dashboard_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Dashboard_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Dashboard</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <img src="images/Pipeline_NA.svg" class="default-icon"/>
+                                    <img src="images/Pipeline_A.svg" class="hover-icon" />
+                                    <span class="menu-collapsed">Pipeline</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                    <img src="images/Proposals_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Proposals_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Proposals</span>
+                                </div>
+                            </a>
+                            <a href="http://sigmadev.beta.loanofficer.ai/rate-watches" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                    <img src="images/Rate_Watch_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Rate_Watch_A.svg" class="hover-icon" />
+
+
+                                    <span class="menu-collapsed">Rate Watch</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                    <img src="images/Lenders_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Lenders_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Lenders</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                    <img src="images/Partners_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Partners_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Partners</span>
+                                </div>
+                            </a>
+                            <a href="http://sigmadev.beta.loanofficer.ai/report/my-team-time" class=" list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                    <img src="images/Reports_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Reports_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Reports</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                    <img src="images/Tasks_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Tasks_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Tasks</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                    <img src="images/Campaigns_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Campaigns_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Campaigns</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                    <img src="images/Finance_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Finance_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Finance</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+
+                                    <img src="images/Workflow_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Workflow_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Workflow</span>
+                                </div>
+                            </a>
+                            <a href="http://sigmadev.beta.loanofficer.ai/data-points" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                    <img src="images/Workflow_NA.svg" class="default-icon"/>                                
+                                    <img src="images/Workflow_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Data-Points</span>
+                                </div>
+                            </a>
+                        </ul>
+                        <div class="bottom_menu">
+                            <ul class="list-group">
+                                <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                        <img src="images/loan_officer_university_NA.svg" class="default-icon"/>
+                                        <img src="images/loan_officer_university_A.svg" class="hover-icon" />
+
+                                        <span class="menu-collapsed">loan officer university</span>
+                                    </div>
+                                </a>
+                                <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                        <img src="images/Refer_a_friend_NA.svg" class="default-icon"/>
+                                        <img src="images/Refer_a_friend_A.svg" class="hover-icon" />
+
+                                        <span class="menu-collapsed">Refer a friend</span>
+                                    </div>
+                                </a>
+                                <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                        <img src="images/Help_Center_NA.svg" class="default-icon"/>
+                                        <img src="images/Help_Center_A.svg" class="hover-icon" />
+
+
+                                        <span class="menu-collapsed">Help Center</span>
+                                    </div>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="expanded_menu content_wrapper main_div">
+                    <div class="user_manage">
+                        <div class="container-fluid p_35">
+                            <div class="container_company_setting">
+                                <div class="content_center baseline">
+                                    <div class="m_r_30p">
+                                        <div class="content_center">
+                                            <div class="back_section content_center m_r_15">
+                                                <img src="images/back_arrow.png" class="img-fluid" />
+                                            </div>
+                                            <div class="title">User profile</div>
+                                        </div>
+                                        <div class="m_t_20">
+                                            <form id="my-drpezone" class="dropzone upload_img_outer">
+                                                <div class="dz-preview dz-file-preview " id="other_template_container" style="display:none;">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="width_100p">
+                                        <div class="custom_tab">
+                                            <div>
+                                                <div class="content_center end_position m_b_20">
+                                                    <div class="content_center space_between m_r_15">
+                                                        <label class="m_b_0 m_r_10">Include in Company Directory</label>
+                                                        <label class="switch text_right m_b_0 m_r_10">
+                                                            <input type="checkbox" class="name" name="name" checked="">
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="m_r_15">
+                                                        <button class="grey_btn" type="button"  data-toggle="modal" data-target="#reset_password">Reset password</button>
+                                                    </div>
+                                                    <div class="">
+                                                        <button class="red_btn" type="button"  data-toggle="modal" data-target="#delete_user">Delete user</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Nav tabs -->
+                                            <ul class="nav nav-tabs service_tab tab_selection content_center space_between">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="#home">
+                                                        Basic information
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#menu2">
+                                                        Email signature
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#services">
+                                                        Services
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab panes -->
+                                            <div class="tab-content p_tb_50">
+                                                <div id="home" class="container tab-pane active">
+                                                    <form class="form-horizontal" action="#" method="POST">
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-6">
+                                                                <div>
+                                                                    <label>First name</label>
+                                                                    <input type="text" name="company_name" class="input_text">
+                                                                </div>
+                                                                <div>
+                                                                    <label>Last name</label>
+                                                                    <input type="text" name="company_name" class="input_text">
+                                                                </div>
+                                                                <div>
+                                                                    <label>Email</label>
+                                                                    <input type="text" name="company_name" class="input_text">
+                                                                </div>
+                                                                <div>
+                                                                    <label>Personal line</label>
+                                                                    <input type="text" name="company_name" class="input_text">
+                                                                </div>
+                                                                <div>
+                                                                    <label>Business line</label>
+                                                                    <input type="text" name="company_name" class="input_text">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div>
+                                                                    <label>Job title</label>
+                                                                    <input type="text" name="company_name" class="input_text">
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-12 col-xl-6 m_b_10">
+                                                                        <label>Role</label>
+                                                                        <div class="content_center integation_dropdown">
+                                                                            <div class="dropdown">
+                                                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                                                    <ins>All</ins>
+                                                                                    <span class="arrow"></span>
+                                                                                </button>
+                                                                                <div class="dropdown-menu radio">
+                                                                                    <label class="dropdown-item">
+                                                                                        <input class="jRadioDropdown" type="radio" value="001"
+                                                                                        name="alphabet_1">
+                                                                                        <i>Option 1</i>
+                                                                                    </label>
+                                                                                    <label class="dropdown-item">
+                                                                                        <input class="jRadioDropdown" type="radio" value="002"
+                                                                                        name="alphabet_1">
+                                                                                        <i>Option 2</i>
+                                                                                    </label>
+                                                                                    <label class="dropdown-item">
+                                                                                        <input class="jRadioDropdown" type="radio" value="003"
+                                                                                        name="alphabet_1">
+                                                                                        <i>Option 3</i>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-xl-6 m_b_10">
+                                                                        <label>Permission Level</label>
+                                                                        <div class="content_center integation_dropdown">
+                                                                            <div class="dropdown">
+                                                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                                                    <ins>All</ins>
+                                                                                    <span class="arrow"></span>
+                                                                                </button>
+                                                                                <div class="dropdown-menu radio">
+                                                                                    <label class="dropdown-item">
+                                                                                        <input class="jRadioDropdown" type="radio" value="01"
+                                                                                        name="alphabet_2">
+                                                                                        <i>Option 1</i>
+                                                                                    </label>
+                                                                                    <label class="dropdown-item">
+                                                                                        <input class="jRadioDropdown" type="radio" value="02"
+                                                                                        name="alphabet_2">
+                                                                                        <i>Option 2</i>
+                                                                                    </label>
+                                                                                    <label class="dropdown-item">
+                                                                                        <input class="jRadioDropdown" type="radio" value="03"
+                                                                                        name="alphabet_2">
+                                                                                        <i>Option 3</i>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="m_b_10">
+                                                                    <label>Team</label>
+                                                                    <div class="content_center integation_dropdown custom_radio">
+                                                                        <div class="dropdown">
+                                                                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" name="team" id="team" aria-expanded="false">
+                                                                                <ins>    
+                                                                                    Marketing
+                                                                                </ins>
+                                                                                <span class="arrow"></span>
+                                                                            </button>
+                                                                            <div class="dropdown-menu radio">
+                                                                                <label class="dropdown-item" tabindex="0">
+                                                                                    <input class="jRadioDropdown" type="radio" value="1" name="team_id" id="team_1" checked="" tabindex="-1">
+                                                                                    <i>Sales</i>
+                                                                                </label>
+                                                                                <label class="dropdown-item active" tabindex="0">
+                                                                                    <input class="jRadioDropdown" type="radio" value="2" name="team_id" id="team_2" tabindex="-1">
+                                                                                    <i>Marketing</i>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <label>NMLS #</label>
+                                                                    <input type="text" name="company_name" class="input_text">
+                                                                </div>
+                                                                <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block">
+                                                                    <label>Licensed in states</label>
+                                                                    <div class="ui form">
+                                                                        <div class="inline field">
+                                                                            <select multiple="multiple" 
+                                                                            class="ui fluid search dropdown_states" 
+                                                                            id="lead_sources" name="lead_sources">
+                                                                            <option value="1">Alabama</option>
+                                                                            <option value="2">Alaska</option>
+                                                                            <option value="3">Arizona</option>
+                                                                            <option value="4">Arkansas</option>
+                                                                            <option value="5">California</option>
+                                                                            <option value="6">Colorado</option>
+                                                                            <option value="7">Connecticut</option>
+                                                                            <option value="8">Delaware</option>
+                                                                            <option value="9">Florida</option>
+                                                                            <option value="10">Georgia</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="d-md-block d-lg-block d-xl-none">
+                                                                <label>Licensed in states</label>
+                                                                <div class="ui form">
+                                                                    <div class="inline field">
+                                                                        <select multiple="multiple" 
+                                                                        class="ui fluid search dropdown_states" 
+                                                                        id="lead_sources" name="lead_sources">
+                                                                        <option value="1">Alabama</option>
+                                                                        <option value="2">Alaska</option>
+                                                                        <option value="3">Arizona</option>
+                                                                        <option value="4">Arkansas</option>
+                                                                        <option value="5">California</option>
+                                                                        <option value="6">Colorado</option>
+                                                                        <option value="7">Connecticut</option>
+                                                                        <option value="8">Delaware</option>
+                                                                        <option value="9">Florida</option>
+                                                                        <option value="10">Georgia</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div id="menu2" class="container tab-pane fade">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-6">
+                                                    <div class="custom_tab_2">
+                                                        <!-- Nav tabs -->
+                                                        <ul class="nav nav-tabs">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link active" data-toggle="tab" href="#Basic">
+                                                                    Basic
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="tab" href="#Image">
+                                                                    Image
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="tab" href="#Links">
+                                                                    Links
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="tab" href="#Color">
+                                                                    Color
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- Tab panes -->
+                                                        <div class="tab-content">
+                                                            <div id="Basic" class="container tab-pane active">
+                                                                <div class="row m_t_30">
+                                                                    <div class="col-12 p_lr_0">
+                                                                        <form class="form-horizontal" action="#" method="POST">
+                                                                            <div>
+                                                                                <label>Full name</label>
+                                                                                <input type="text" name="company_name" class="input_text">
+                                                                            </div>
+                                                                            <div>
+                                                                                <label>Job title</label>
+                                                                                <input type="text" name="company_name" class="input_text">
+                                                                            </div>
+                                                                            <div>
+                                                                                <label>Company</label>
+                                                                                <input type="text" name="company_name" class="input_text">
+                                                                            </div>
+                                                                            <div>
+                                                                                <label>URL/Website</label>
+                                                                                <input type="text" name="company_name" class="input_text">
+                                                                            </div>
+                                                                            <div>
+                                                                                <label>Phone number</label>
+                                                                                <input type="text" name="company_name" class="input_text">
+                                                                            </div>
+                                                                            <div>
+                                                                                <label>Email</label>
+                                                                                <input type="text" name="company_name" class="input_text">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="Image" class="container tab-pane fade">
+                                                                <div class="content_center space_between custom_icon">
+                                                                    <div>                                     
+                                                                        <img src="images/profile_trash.png" class="img-fluid cursor_pointer" />
+                                                                    </div>
+                                                                    <div>                                     
+                                                                        <img src="images/profile_edit.png" class="img-fluid cursor_pointer" />
+                                                                    </div>
+                                                                </div>
+                                                                <form id="my-drpezone_2" class="dropzone upload_img_outer">
+                                                                    <div class="dz-preview dz-file-preview " id="other_template_container_2" style="display:none;">
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div id="Links" class="container tab-pane fade">
+                                                                <div class="row m_t_30">
+                                                                    <div class="col-12 p_lr_0">
+                                                                        <form class="form-horizontal" action="#" method="POST">
+                                                                            <div class="content_center m_b_35">
+                                                                                <img src="images/grey_facebook.png" class="img-fluid m_r_10 width_36" />
+                                                                                <input type="text" name="company_name" placeholder="Enter Facebook URL " class="input_text">
+                                                                            </div>
+                                                                            <div class="content_center m_b_35">
+                                                                                <img src="images/grey_linkedin.png" class="img-fluid m_r_10 width_36" />
+                                                                                <input type="text" name="company_name" placeholder="Enter LinkedIn URL" class="input_text">
+                                                                            </div>
+                                                                            <div class="content_center m_b_35">
+                                                                                <img src="images/grey_zillow.png" class="img-fluid m_r_10 width_36" />
+                                                                                <input type="text" name="company_name" placeholder="Enter Zillow URL" class="input_text">
+                                                                            </div>
+                                                                            <div class="content_center m_b_35">
+                                                                                <img src="images/grey_bbb.png" class="img-fluid m_r_10 width_36" />
+                                                                                <input type="text" name="company_name" placeholder="Enter BBB URL" class="input_text">
+                                                                            </div>
+                                                                            <div class="content_center m_b_35">
+                                                                                <img src="images/grey_youtube.png" class="img-fluid m_r_10 width_36" />
+                                                                                <input type="text" name="company_name" placeholder="Enter Youtube URL" class="input_text">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="Color" class="container tab-pane fade">
+                                                                <div class="row m_t_30 bg_color_base">
+                                                                    <div class="col-9">
+                                                                        <div>
+                                                                            <input type='text' id="full" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <div id="box" class="hw_100p border_radius_6"></div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <form class="form-horizontal"
+                                                                            action="#" method="POST">
+                                                                            <div class="row m_t_20">
+                                                                                <div class="col-3">
+                                                                                    <div>
+                                                                                        <label>HEX</label>
+                                                                                        <input style="background: #fff;" type="text" name="company_name" class="input_text" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-3">
+                                                                                    <div>
+                                                                                        <label>Opacity</label>
+                                                                                        <input style="background: #fff;" type="text" name="company_name" class="input_text" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row m_t_20">
+                                                                    <div class="col-12 p_lr_0">
+                                                                        <form class="form-horizontal" action="#" method="POST">
+                                                                            <div>
+                                                                                <label>Footer text</label>
+                                                                                <input type="text" name="company_name" class="input_text" value="The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-6">
+                                                    <div class="content_center">
+                                                        <label class="style_selection">
+                                                            Style selection
+                                                        </label>
+                                                        <div class="integation_dropdown" style="width: 100%;">
+                                                            <div class="dropdown">
+                                                                <button type="button" class="btn btn-light dropdown-toggle"  data-toggle="modal" data-target="#theme_selection">
+                                                                    <ins>theme 1</ins>
+                                                                    <span class="arrow"></span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m_t_30">
+                                                        <div class="theme_box p_30">
+                                                            <div class="border_box"></div>
+                                                            <div class="border_box"></div>
+                                                            <div class="border_box"></div>
+                                                            <div class="border_box" style="width: 75%;"></div>
+                                                            <div class="border_box m_t_20"></div>
+                                                            <div class="border_box"></div>
+                                                            <div class="border_box"></div>
+                                                            <div class="border_box" style="width: 75%;"></div>
+                                                            <div class="content_center m_t_30">
+                                                                <div class="m_r_15">
+                                                                    <img src="images/theme_user.png" class="theme_img img-fluid">
+                                                                </div>
+                                                                <div>
+                                                                    <div class="name">John Herwitz</div>
+                                                                    <div class="desg">Senior Loan Officer / Interestsmart</div>
+                                                                    <div class="url">www.interestsmart.com</div>
+                                                                    <div class="number">(000) 000-0000</div>
+                                                                    <div class="content_center">
+                                                                        <div class="rectangle_box">
+                                                                            <img src="images/white_facebook.png" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="rectangle_box">
+                                                                            <img src="images/white_youtube.png" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="rectangle_box">
+                                                                            <img src="images/white_linkedin.png" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <button class="blue_btn m_t_280">
+                                                        Save signature
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="services" class="container tab-pane fade">
+                                            <form class="form-horizontal" action="#" method="POST">
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <div>
+                                                            <label class="email_label">Username</label>
+                                                            <div class="email_verify">
+                                                                jared@interestsmart.com
+                                                                <span class="verified">Verified</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="m_t_30">
+                                                            <label class="tooltip_label">
+                                                                Select area code 
+                                                                <img src="images/grey_question.png" class="img-fluid area_code">
+                                                                <div class="tool_tip">
+                                                                    All text messages and voicemails will be for to this number
+                                                                </div>
+                                                            </label>
+                                                            <div class="content_center row">
+                                                                <div class="content_center col-8 integation_dropdown">
+                                                                    <div class="dropdown">
+                                                                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                                            <ins>All</ins>
+                                                                            <span class="arrow"></span>
+                                                                        </button>
+                                                                        <div class="dropdown-menu radio">
+                                                                            <label class="dropdown-item">
+                                                                                <input class="jRadioDropdown" type="radio" value="001"
+                                                                                name="alphabet_1">
+                                                                                <i>Option 1</i>
+                                                                            </label>
+                                                                            <label class="dropdown-item">
+                                                                                <input class="jRadioDropdown" type="radio" value="002"
+                                                                                name="alphabet_1">
+                                                                                <i>Option 2</i>
+                                                                            </label>
+                                                                            <label class="dropdown-item">
+                                                                                <input class="jRadioDropdown" type="radio" value="003"
+                                                                                name="alphabet_1">
+                                                                                <i>Option 3</i>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <button class="blue_btn w_200p">
+                                                                        Generate SMS number
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="m_t_30">
+                                                            <label class="tooltip_label">
+                                                                Your LoanOfficer.ai number
+                                                                <img src="images/grey_question.png" class="img-fluid officer_code">
+                                                                <div class="tool_tip">
+                                                                    All text messages and voicemails will be for to this number
+                                                                </div>
+                                                            </label>
+                                                            <input type="text" name="company_name" class="input_text">
+                                                        </div>
+                                                        <div class="m_t_30">
+                                                            <label class="tooltip_label">
+                                                                Your forwarding number
+                                                                <img src="images/grey_question.png" class="img-fluid number_code">
+                                                                <div class="tool_tip">
+                                                                    All text messages and voicemails will be for to this number
+                                                                </div>
+                                                            </label>
+                                                            <input type="text" name="company_name" class="input_text">
+                                                        </div>
+                                                        <div class="m_t_30">
+                                                            <button class="blue_btn w_200p">
+                                                                Update Phone
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="row m_t_225">
+                                                <div class="col-12">
+                                                    <div class="content_center">
+                                                        <div class="">
+                                                            <img src="images/info.png" class="img-fluid" />
+                                                        </div>
+                                                        <div class="m_l_10">
+                                                            <div>
+                                                                How do this work?
+                                                            </div>
+                                                            <div>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, nunc egestas arcu vitae euismod maecenas massa.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Modal -->
+<div class="modal fade" id="reset_password" tabindex="-1" role="dialog" aria-labelledby="reset_passwordTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom_modal_3">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title">Reset password</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal m_t_30" action="#" method="POST" id="modalform">
+                    <div class="text_center p_tb_50">
+                        <img src="images/reset_password.png" class="img-fluid" />
+                        <div class="modal_subtitle_2 m_t_30">
+                           Do you really want to reset this password?
+                       </div>
+                       <div class="desp_2 m_tb_10 width_75p">
+                        If you reset the password, the user will only be able to log in after creating a new password.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="red_btn_2">Yes</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="common_btn default_btn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="delete_user" tabindex="-1" role="dialog" aria-labelledby="delete_userTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom_modal_1">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="space_between content_center baseline">
+                    <h4 class="modal-title text_center p35">
+                       Do you really want to delete this user?
+                    </h4>
+                    <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                </div>
+                <div class="desp_2 m_tb_10">
+                   After delete confirmation, you will be prompted to transfer this user's leads to other employees.
+                </div>
+                <div class="row m_t_30">
+                    <div class="col-6">
+                        <button class="red_btn m_0 width_100p" type="button" data-toggle="modal" data-target="#incomenext_2" >Yes</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="border_btn m_0 width_100p" type="button" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="modal fade" id="delete_user" tabindex="-1" role="dialog" aria-labelledby="delete_userTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered custom_modal_3">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12">
+                    <div class="space_between content_center">
+                        <h4 class="modal-title">Delete user</h4>
+                        <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                    </div>
+                </div>
+            </div>
+            <form class="form-horizontal m_t_30" action="#" method="POST" id="modalform">
+                <div class="text_center p_tb_50">
+                    <img src="images/delete_user.png" class="img-fluid" />
+                    <div class="modal_subtitle_2 m_t_30">
+                       Do you really want to delete this user?
+                   </div>
+                   <div class="desp_2 m_tb_10 width_75p">
+                       After delete confirmation, you will be prompted to transfer this user's leads to other employees.
+                   </div>
+               </div>
+               <div class="row">
+                <div class="col-6">
+                    <button class="common_btn default_btn">Yes</button>
+                </div>
+                <div class="col-6">
+                    <button class="border_btn">No</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div> -->
+<div class="modal fade" id="delete_user_2" tabindex="-1" role="dialog" aria-labelledby="delete_user2Title" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered custom_modal_4">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12">
+                    <div class="space_between content_center">
+                        <h4 class="modal-title">Transfer of leads</h4>
+                        <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                    </div>
+                </div>
+            </div>
+            <form class="form-horizontal m_t_30" action="#" method="POST" id="modalform">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="modal_subtitle">
+                            %USERNAME% has been assigned 10 leads
+                        </div>
+                        <div class="modal_subtitle_3">
+                            Would you like to transfer all of <span>%USERNAME%</span> leads to the other Agent? 
+                        </div>
+                    </div>
+                </div>
+                <div class="row m_t_30 content_center">
+                    <div class="col-6">
+                        <div class="modal_subtitle_2 text_left">Distribute leads the following way</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="add_agent">+ Add Agent <img src="images/chevron_up.png" class="img-fluid" /></div>
+                    </div>
+                </div>
+                <div class="m_t_30">
+                    <table id="agent_table">
+                        <thead>
+                            <tr>
+                                <th><span>Jared Hart</span></th>
+                                <th><span>Proportion</span></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jared Hart</td>
+                                <td>
+                                    <div class="value_percentage">20%</div>
+                                </td>
+                                <td><img src="images/blue_cross.png" class="img-fluid right"></td>
+                            </tr>
+                            <tr>
+                                <td>Steven Barlow</td>
+                                <td>
+                                    <div class="value_percentage">20%</div>
+                                </td>
+                                <td><img src="images/blue_cross.png" class="img-fluid right"></td>
+                            </tr>
+                            <tr>
+                                <td>Jared Hart</td>
+                                <td>
+                                    <div class="value_percentage">20%</div>
+                                </td>
+                                <td><img src="images/blue_cross.png" class="img-fluid right"></td>
+                            </tr>
+                            <tr>
+                                <td>Steven Barlow</td>
+                                <td>
+                                    <div class="value_percentage">20%</div>
+                                </td>
+                                <td><img src="images/blue_cross.png" class="img-fluid right"></td>
+                            </tr>
+                            <tr>
+                                <td>Steven Barlow</td>
+                                <td>
+                                    <div class="value_percentage">20%</div>
+                                </td>
+                                <td><img src="images/blue_cross.png" class="img-fluid right"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th>100%</th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="row m_t_30">
+                    <div class="col-12">
+                        <div class="content_center">
+                            <div class="">
+                                <img src="images/error.png" class="img-fluid width_25p">
+                            </div>
+                            <div class="m_l_10">
+                                <div class="bottom_title red_color">This cannot be reversed!</div>
+                                <div class="bottom_subtitle">
+                                 Please make sure the selection is correct before confirming
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="row m_t_30">
+                <div class="col-6">
+                    <button class="border_btn">Cancel</button>
+                </div>
+                <div class="col-6">
+                    <button class="red_btn_2">Transfer leads and delete user</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="delete_user_3" tabindex="-1" role="dialog" aria-labelledby="delete_user3Title" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered custom_modal_3">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12">
+                    <div class="space_between content_center">
+                        <h4 class="modal-title">Delete Invite</h4>
+                        <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                    </div>
+                </div>
+            </div>
+            <form class="form-horizontal m_t_30" action="#" method="POST" id="modalform">
+                <div class="text_center p_tb_50">
+                    <img src="images/delete_profile.png" class="img-fluid" />
+                    <div class="modal_subtitle_2 m_t_30">
+                     Do you really want to delete this invite?
+                    </div>
+                     <div class="desp_2 m_tb_10 width_75p">
+                        Upon confirmation, the user will be sent a notification email and the invitation will be canceled.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="red_btn_2">Confirm delete</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="common_btn default_btn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+
+    function toggleMainmenu(e) {
+        e.classList.toggle("active");
+        document.querySelector("aside").classList.toggle("active");
+    }
+
+    Dropzone.autoDiscover = false;
+    var myDropzone = new Dropzone("form#my-drpezone", {
+        dictDefaultMessage:'<img src="images/upload_profile.png" class="profile_upload_img" /><div class="profile_upload">Drag and drop photo here or</div> <div style="color: blue;" class="profile_upload">Browse file</div>',
+        url: 'upload.php',
+        // more configs here
+        method:"post",
+        maxFilesize: 10, //MB
+        maxFiles: 1,
+        acceptedFiles: "image/jpg,image/jpeg,image/png",
+        //previewTemplate: document.querySelector('#other_template_container').innerHTML
+    });
+    var myDropzone_2 = new Dropzone("form#my-drpezone_2", {
+        dictDefaultMessage:'<img src="images/upload_profile.png" class="profile_upload_img" /><div class="profile_upload">Drag and drop photo here or</div> <div style="color: blue;" class="profile_upload">Browse file</div>',
+        url: 'upload.php',
+        // more configs here
+        method:"post",
+        maxFilesize: 10, //MB
+        maxFiles: 1,
+        acceptedFiles: "image/jpg,image/jpeg,image/png",
+        //previewTemplate: document.querySelector('#other_template_container').innerHTML
+    });
+    // myDropZone.options.thumbnailWidth = 250;
+    // myDropZone.options.thumbnailHeight = 250;
+
+
+
+    // //jquery to set equal height to both the containers
+    // setEqualContainer();
+
+
+    function toggleMainmenu(e) {
+        e.classList.toggle("active");
+        document.querySelector("aside").classList.toggle("active");
+    }
+    toastr.success("<div class='toast-dot toast-red'></div><div class='toast-message'>Signature has been updated successfully!</div><div><img src='images/toast_cross.png' class='img-fluid' /></div>")
+    //Set Notification toastr options
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "showDuration": "900",
+        "hideDuration": "5000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "slideDown",
+        "hideMethod": "slideUp"
+    };
+    jQuery.noConflict();
+
+    jQuery(document).ready(function($){
+        function setEqualContainer() {
+            if ($(window).width() > 768) {
+                setTimeout(function () {
+                    var highestBox = 0;
+                    $('container_company_setting').css({'min-height':'100%'});
+                // Select and loop the elements you want to equalise
+                $('.container_company_setting').each(function () {
+                    if ($(this).outerHeight() > highestBox) {
+                        highestBox = $(this).outerHeight();
+                    }
+                    //console.log('height box ' + highestBox);
+
+                    // Set the height of all those children to whichever was highest
+                    $('.sidenav').css({'min-height': highestBox + 'px'});
+                    $('.container_company_setting').css({'min-height': highestBox + 'px'});
+                });
+            }, 100);
+            }
+        }
+        $('.dropdown_states').dropdown({
+            label: {
+                duration: 0,
+            },
+            debug: true,
+            performance: true,
+        });
+        $('ul.tab_selection li').click(function(){
+            setEqualContainer() 
+        });
+//Add tabindex on labels
+$('label.dropdown-item').each(function (index, value){
+    $(this).attr('tabindex', 0 );
+    $(this).find('input').attr('tabindex', -1 );
+});
+
+//Add keyboard navigation
+$('label.dropdown-item').keypress(function(e){
+    if((e.keyCode ? e.keyCode : e.which) == 13){
+        $(this).trigger('click');
+    }
+});
+$('#agent_table').DataTable({
+    'sDom': '"top"i',
+    "paging":   false,
+    "info":     false
+});
+$(".custom_tab ul.nav-tabs li a.nav-link").each(function () {
+    $(this).click(function () {
+        if ($(this).attr('href') != '#home') {
+            $('.tab-content').css({'border-top-left-radius': '0px'});
+        } else {
+            $('.tab-content').css({'border-top-left-radius': '0px'});
+        }
+    });
+    $(this).click(function () {
+        if ($(this).attr('href') != '#home') {
+            $('.tab-content').css({'border-top-left-radius': '0px'});
+        } else {
+            $('.tab-content').css({'border-top-left-radius': '0px'});
+        }
+    });
+});
+$("#full").spectrum({
+    color: "#ECC",
+    flat: true,
+    showInput: true,
+    className: "full-spectrum",
+    showInitial: false,
+    showPalette: false,
+    showSelectionPalette: false,
+    preferredFormat: "hex",
+    localStorageKey: "spectrum.demo",
+    showButtons:false,
+    showAlpha: true,
+    flipAlpha: true,
+    alphaVertical: true,
+    move: function (color) {
+        $('#box').css('background-color', color.toRgbString());
+    },
+});
+$('#box').css('background-color',$(".sp-input").val());
+$(".sp-input").hide();
+    // Change the button text & add active class
+    $('.jRadioDropdown').change(function() {
+        var dropdown = $(this).closest('.dropdown');
+        var thislabel = $(this).closest('label');
+
+        dropdown.find('label').removeClass('active');
+        if( $(this).is(':checked') ) {
+            thislabel.addClass('active');
+            dropdown.find('ins').html( thislabel.text() );
+        }
+
+    });    
+    $('.user').click(function (e) {
+        e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').toggle();
+    });
+    $('.top_menu').click(function (e) {
+        e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').hide();
+        $('.nav-second-level').addClass('collapse').removeClass('show');
+    });
+
+
+    $('.user_arrow_down').click(function () {
+        if ($('.user_toggle_content').is(':visible') == false) {
+            $('.user_collapsible_integration_section').css({"margin-top":"0", "transform":"rotate(0deg)"});
+        } else {
+            $('.user_collapsible_integration_section').css({"margin-top":"0", "transform":"rotate(180deg)"});
+        }
+
+        $('.user_toggle_content').slideToggle('slow', function () {});
+    });
+});
+
+</script>
+</html>

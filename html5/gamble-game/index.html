@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Gamble Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+     <link rel="stylesheet preload" as="font" href="assets/fonts/Martian_Wars.ttf" type="font/ttf" crossorigin />
+    <script src='assets/scripts/phaser.min.js'></script>
+    <style type="text/css">
+        @font-face {
+            font-family: "Martian_Wars";
+            src: url('assets/fonts/Martian_Wars.ttf');
+        }
+        body {
+            margin: 0;
+            background: #000;  
+            font-family: "Martian_Wars"; 
+        }
+        canvas {
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.235);
+        overflow: visible;
+
+}
+@media(min-width: 1600px){
+    canvas {
+        transform: translate(-50%, -50%) scale(1.135);
+    }
+}
+        
+        </style>
+</head>
+<body>
+    <script type="text/javascript">
+        var game;
+    </script>
+    <script src="assets/scripts/screen/Game/gameScene.js"></script>
+    <script src="assets/scripts/screen/main.js"></script>
+</body>
+</html>

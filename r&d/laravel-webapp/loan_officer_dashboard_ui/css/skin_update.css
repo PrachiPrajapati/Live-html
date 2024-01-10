@@ -1,0 +1,78 @@
+.tox .tox-edit-area__iframe{
+	background-color: #F2F6FE!important;
+	border-radius: 6px!important;
+	height: 95%!important;
+}
+
+.tox-tinymce{
+	border-color: transparent!important;
+}
+
+.tox-tinymce:not(.tox-tinymce-inline) .tox-editor-header:not(:first-child) .tox-toolbar-overlord:first-child .tox-toolbar__primary,
+.tox-tinymce:not(.tox-tinymce-inline) .tox-editor-header:not(:first-child) .tox-toolbar:first-child{
+	border-top: 1px solid transparent!important;
+}
+
+.tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type){
+	border-right: 1.22px solid #CACCE1!important
+}
+
+.tox .tox-toolbar-overlord{
+	margin-bottom: 20px;
+}
+
+.tox .tox-toolbar, 
+.tox .tox-toolbar__overflow, 
+.tox .tox-toolbar__primary{
+	background: none!important;
+}
+
+.tox .tox-tbtn,
+.tox-tbtn:last-child {
+	margin-right: 5px!important;
+	width: auto!important;
+}
+
+.tox .tox-toolbar__group{
+	background: #fff;
+}
+
+.tox .tox-tbtn:hover{
+	background: transparent!important;
+	border: none!important; 
+}
+
+.sms_body .tox-tbtn:last-child {
+	text-align: right;
+	float: right;
+	position: absolute;
+	right: 0px;
+}
+
+.right_border.col-3 .permissions_tabs .nav-item a,
+.right_border.col-3 .permissions_tabs .nav-tabs ,
+.right_border.col-3 .permissions_tabs .nav-tabs .nav-link.active{
+	border-bottom: none!important;
+	padding: 0;
+	margin: 0;
+}
+
+.right_border.col-3 .permissions_tabs .nav-item a.nav-link .non_active,
+.right_border.col-3 .permissions_tabs .nav-item a.nav-link.active .active{
+	display: block;
+	width: 34px;
+}
+
+.right_border.col-3 .permissions_tabs .nav-item a.nav-link .active,
+.right_border.col-3 .permissions_tabs .nav-item a.nav-link.active .non_active{
+	display: none;
+}
+
+.right_border.col-3 .permissions_tabs .nav-item {
+	width: 33.33%;
+}
+
+.right_border.col-3 .permissions_tabs .nav-item a.nav-link .non_active {
+    padding: 0;
+    border: none;
+}

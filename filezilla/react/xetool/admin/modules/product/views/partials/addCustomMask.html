@@ -1,0 +1,253 @@
+<div class="modal fade stick-up" id="customMaskModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row configure-custom-mask section-header">
+                    <div class="col-md-12">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h4>
+                                    <xe-translate text-value="Configure custom Mask">
+                                    </xe-translate>
+                                </h4>
+                            </div>
+                            <div class="admin-custom-search">
+                                <input type="text" class="form-control input-sm" placeholder="Search here..."
+                                    ng-model="search.name">
+                                <i class="fa fa-search icon"></i>
+                            </div>
+                            <button type="button" class="close custom-modal-close" data-dismiss="modal"
+                                aria-hidden="true">
+                                <i class="pg-close"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body custom-size-modal-alert" id="customMaskkModal">
+                <div class="row configure-custom-mask section-body">
+                    <div class="col-md-12" ng-show="addNewMask.status || allCustomMaskData.length> 0">
+                        <div class="in-table">
+                            <div class="in-table-head">
+                                <ul class="in-table-tr">
+                                    <li class="in-table-th" style="width:5%">
+                                        <div>
+                                            Image
+                                        </div>
+                                    </li>
+                                    <li class="in-table-th" style="width:40%">
+                                        <div>
+                                            <xe-translate text-value="Mask Name">
+                                            </xe-translate>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-th" style="width:17%">
+                                        <div>
+                                            Width
+                                        </div>
+                                    </li>
+                                    <li class="in-table-th" style="width:17%">
+                                        <div>
+                                            Height
+                                        </div>
+                                    </li>
+                                    <li class="in-table-th" style="width:16%">
+                                        <div>
+                                            <xe-translate text-value="Price">
+                                            </xe-translate>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-th text-center" style="width:5%">
+                                        <div>Action</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="in-table-body">
+                                <ul class="in-table-tr" ng-show="addNewMask.status">
+                                    <li class="in-table-td" style="width:5%">
+                                        <div class="btn-stage-all-time" ng-hide="uploadCustomMask.isMask"
+                                            ng-file-select ng-file-change="customUpload($files)">
+                                            <xe-translate text-value="Upload">
+                                            </xe-translate>
+                                        </div>
+                                        <div class="image-upload-hover" ng-file-select ng-file-change="customUpload($files)" ng-show="uploadCustomMask.isMask">
+                                            <div class="upload-icon-show cursor-pointer">
+                                                <img src="assets/images/upload-ccm.png">
+                                            </div>
+                                            <img ng-src="{{ uploadCustomMask.data }}">
+                                        </div>
+                                        
+                                    </li>
+                                    <li class="in-table-td" style="width:40%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="CustoMask.name"
+                                                remove-spl-chars="remove-spl-chars">
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:17%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="CustoMask.width"
+                                                ng-keyup="getMaskHeight(CustoMask.width)"
+                                                ng-disabled="!uploadCustomMask.isMask" price-only="price-only">
+                                            <div class="in-table-measurement">{{ productDimenssionUnit }}</div>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:17%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="CustoMask.height"
+                                                ng-keyup="getMaskWidth(CustoMask.height)"
+                                                ng-disabled="!uploadCustomMask.isMask" price-only="price-only">
+                                            <div class="in-table-measurement">{{ productDimenssionUnit }}</div>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:16%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="CustoMask.price"
+                                                price-only="price-only" ng-disabled="!uploadCustomMask.isMask">
+                                            <div class="in-table-measurement">{{ appCurrency }}</div>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td text-center" style="width:5%">
+                                       <div class="d-flex align-items-center justify-content-between" style="max-width: 35px; margin: 0 auto;">
+                                        <button class="btn custom-btn-xxs"
+                                        ng-disabled="demoStatus || !uploadCustomMask.isMask || !CustoMask.height || !CustoMask.width || saveMaskButton"
+                                        ng-click="saveCustomMask(CustoMask)">
+                                        <span>
+                                            <i class="fa fa-floppy-o text-info cursor-pointer" aria-hidden="true">
+                                            </i>
+                                        </span>
+                                    </button>
+                                    <button class="btn custom-btn-xxs" ng-disabled="demoStatus"
+                                        ng-click="addNewMask.status = false; uploadCustomMask.isMask = false;clearMaskInfo()">
+                                        <span>
+                                            <i class="fa fa-trash-o text-danger cursor-pointer"
+                                                aria-hidden="true"></i>
+                                        </span>
+                                    </button>
+                                       </div>
+                                    </li>
+                                </ul>
+                                <ul class="in-table-tr"
+                                    ng-repeat="maskdata in allCustomMaskData | filter:search:strict">
+                                    <li class="in-table-td" style="width:5%">
+                                        <div class="image-upload-hover">
+                                            <img ng-src="{{ maskdata.url }}">
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:40%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="maskdata.name"
+                                                remove-spl-chars="remove-spl-chars" />
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:17%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="maskdata.maskwidth"
+                                                ng-keyup="maskdata.maskwidth=getEditMaskHeight(maskdata.maskwidth,$index)"
+                                                price-only="price-only">
+                                            <div class="in-table-measurement">{{ productDimenssionUnit }}</div>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:17%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="maskdata.maskheight"
+                                                ng-keyup="maskdata.maskheight=getEditMaskWidth(maskdata.maskheight,$index)"
+                                                price-only="price-only">
+                                            <div class="in-table-measurement">{{ productDimenssionUnit }}</div>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:16%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="maskdata.price"
+                                                price-only="price-only">
+                                            <div class="in-table-measurement">{{ appCurrency }}</div>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td text-center" style="width:5%">
+                                        <div>
+                                            <i class="fa fa-trash-o text-danger cursor-pointer"
+                                                ng-click="deleteMaskById(maskdata.id)" aria-hidden="true"></i> 
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="in-table-tr" ng-show="(allCustomMaskData | filter:search).length == 0">
+                                    <li class="in-table-td" style="width:100%; text-align: center;">
+                                        <xe-translate text-value="No data found">
+                                        </xe-translate>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row configure-custom-mask section-footer">
+                    <div class="col-md-12">
+                        <div class="d-flex align-items-center justify-content-between m-t-20">
+                            <div class="d-flex align-items-center">
+                                <button class="btn btn-info" ng-click="showZipUpload()" multiple="" ng-file-select=""
+                                    ng-file-change="uploadImportedProductMask($files)" name="mask_Files[]"
+                                    id="maskFiles" __refelem__="true" style="overflow: hidden;"
+                                    ng-disabled="isUploadingToServer">
+                                    <xe-translate text-value="Import Product Mask">
+                                    </xe-translate>
+                                </button>
+                                <p class="small" ng-show="uploadZip">
+                                    <xe-translate text-value="Upload Zip File Only">
+                                    </xe-translate>
+                                </p>
+                                <div ng-hide="isZipUploadedToServer">
+                                    <button class="btn btn-default" ng-click="uploadProductMaskZipFile()" ng-if="isZipFile"
+                                        style="margin-top: 1px!important;" ng-disabled="isUploadingToServer">
+                                        <xe-translate text-value="Upload">
+                                        </xe-translate>
+                                    </button>
+                                    <div class="clearfix">
+                                        <span class="text-success m-t-5" ng-if="isZipFile">{{importZipFileName}}</span>
+                                        <span class="text-danger m-t-5"
+                                            ng-show="errMsgMaxmSize">{{errMsgMaxmSize}}</span>
+                                    </div>
+                                </div>
+                                <div ng-hide="isZipUploadedToServer" ng-if="isCancel">
+                                    <a ng-click="cancelUploadingProductMask()" ng-if="isZipFile"
+                                        style="margin-top: 3px!important;">
+                                        <u class="no-margin cursor-pointer ng-binding">
+                                            <span class="ng-binding text-danger m-t-5 m-l-5 block">
+                                                <xe-translate text-value="Cancel">
+                                                </xe-translate>
+                                            </span>
+                                        </u>
+                                    </a>
+                                </div>
+                                <button class="btn btn-info m-l-10" ng-click="addNewMask.status = true">+
+                                    <xe-translate text-value="Add New Mask">
+                                    </xe-translate>
+                                </button>
+                            </div>
+                            <div>
+                                <button class="btn btn-danger" data-dismiss="modal" ng-click="clearMaskInfo()">
+                                    <xe-translate text-value="Cancel">
+                                    </xe-translate>
+                                </button>
+                                <button class="btn btn-success m-l-10" ng-click="updateCustomMask()"
+                                    ng-disabled="demoStatus || allCustomMaskData.length==0 || addNewMask.status">
+                                    <xe-translate text-value="Update">
+                                    </xe-translate>
+                                </button>
+                                <div class="clearfix">
+                                    <p class="small text-danger ng-binding" ng-hide="errorMessage !=''">{{errorMessage}}
+                                    </p>
+                                    <p class="small text-danger ng-binding">{{maxFileUpload}}</p>
+                                    <p class="small text-danger ng-binding" ng-show="show_Error">
+                                        <xe-translate text-value="Invalid File Format">
+                                        </xe-translate>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

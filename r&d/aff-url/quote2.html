@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<a target="_blank" class="affParameter" href="https://www.google.com">Google</a>
+	<a target="_blank" class="affParameter" href="https://www.instagram.com">Instagram</a>
+	<a target="_blank" class="affParameter" href="https://www.wordpress.org">Wordpress</a>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		jQuery('a.affParameter').each( function() {
+			var href = jQuery(this).attr('href')+'?'+window.location.href.slice(window.location.href.indexOf('?') + 1);
+			console.log(href);
+			$(this).attr('href',href)
+		});
+		// jquery('a.affParameter').attr('href',jquery('a.affParameter').attr('href')+'?'+window.location.href.slice(window.location.href.indexOf('?') + 1))
+	</script>
+</body>
+</html>

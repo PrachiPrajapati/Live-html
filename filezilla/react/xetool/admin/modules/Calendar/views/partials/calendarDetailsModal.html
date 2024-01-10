@@ -1,0 +1,45 @@
+<div id="calendarModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">
+                    <xe-translate text-value="Task Details"></xe-translate>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12" ng-show="SelectedEvent">
+                        <div>
+                            <h3 style="font-size:18px;line-height:24px;margin-bottom:18px;">{{SelectedEvent.title | removeHTMLTags}}</h3>
+                            <div class="col-md-7">
+                                <label class="control-label">Assigned To</label>
+                                <select class="form-control select" ng-model="SelectedEvent.status" ng-options="item.id as item.name for item in userDataList" ng-change="onClickedUserDetails(SelectedEvent.status,SelectedEvent.cal_id)" ng-selected="true">
+                                    <option value="" ng-disabled="true">Assigned To </option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <label class="control-label">Status</label>
+                                <!-- <select class="form-control select" ng-model="SelectedEvent.status_pending"
+                                ng-options="item.id as item.lable  for item in statusArrayview" style="background-color:{{item.color_code}}"
+                                ng-change="onClickedStatusChange(SelectedEvent.status_pending,SelectedEvent.cal_id)"
+                                ng-selected="true" >
+                                <option value="" ng-disabled="true">Select</option>
+                            </select> -->
+                                <div class="dropleft">
+                                    <button class="btn btn-primary dropdown-toggle" style="background-color: {{selectedColor}};width: 100%" type="button" data-toggle="dropdown">{{selectedStatus}}
+                                        <span class="caret text-right"></span></button>
+                                    <ul class="dropdown-menu" style="left: auto">
+                                        <li ng-repeat="(key, value) in statusArrayview" ng-click="onClickedStatusChange(value.id,SelectedEvent.cal_id,value)"><a href="#" style="position:relative;padding-left:20px;">{{value.name}}<span class="statusColor" style="background:{{ value.color_code }}; border: 1px solid #ddd;"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

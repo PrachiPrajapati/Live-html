@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="25px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>ic_download</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="web" transform="translate(-796.000000, -321.000000)">
+            <g id="Group-7" transform="translate(308.000000, 133.000000)">
+                <g id="Group-5" transform="translate(374.000000, 0.000000)">
+                    <g transform="translate(112.000000, 187.000000)" id="ic_download">
+                        <g>
+                            <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="28" height="28"></rect>
+                            <g id="Group-18" transform="translate(3.500000, 2.916667)" stroke="#080808" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.33333333">
+                                <path d="M2.44475,12.7573833 L1.0115,14.4023833 C0.651583333,14.81655 0.45325,15.3473833 0.45325,15.8957167 L0.45325,19.1623833 C0.45325,20.1948833 1.28683333,21.0232167 2.31466667,21.0232167 L19.068,21.0232167 C20.0958333,21.0232167 20.9288333,20.1948833 20.9288333,19.1623833 L20.9288333,15.8957167 C20.9288333,15.3473833 20.7310833,14.81655 20.3711667,14.4023833 L18.9379167,12.7573833" id="Stroke-9"></path>
+                                <line x1="5.25" y1="7.83988333" x2="10.6913333" y2="13.2823833" id="Stroke-10"></line>
+                                <line x1="10.6913333" y1="13.2823833" x2="16.1326667" y2="7.83988333" id="Stroke-11"></line>
+                                <line x1="10.6913333" y1="0.0232166667" x2="10.6913333" y2="13.0082167" id="Stroke-12"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

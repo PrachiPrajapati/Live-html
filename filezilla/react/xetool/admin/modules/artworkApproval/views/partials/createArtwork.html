@@ -1,0 +1,201 @@
+<div class="modal fade stick-up" id="createArtworkModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body create-art-popup">
+                <div class="container-create-new-artwork" id="createArtworkModalMsg">
+                    <button type="button" class="close custom-modal-close" data-dismiss="modal" aria-hidden="true" style="right: 12px;">
+                        <i class="pg-close fs-14"></i>
+                    </button>
+                    <div class="row" ng-if="isShowArtworkChooseSection">
+                        <div class="col-md-12">
+                            <div class="create-new-artwork-top">
+                                <h4 ng-if="createArtPopStatus == 'create'">
+                                    <xe-translate text-value="Create Artwork">
+                                    </xe-translate>
+                                </h4>
+                                <h4 ng-if="createArtPopStatus == 'update'">
+                                    <xe-translate text-value="Update Artwork">
+                                    </xe-translate>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <ul class="print-type-box text-center creat-new-artwork" ng-if="isShowArtworkChooseSection">
+                                <li>
+                                    <a ng-href="#" ng-click="onUsingDesignerToolClicked()">
+                                        <img class="print-method-image" ng-src="./assets/img/inkxe-logo-b.png"/>
+                                        <span>
+                                            <xe-translate text-value="Using Designer Studio">
+                                            </xe-translate>
+                                        </span>
+                                    </a>
+                                </li>
+                                <span>
+                                    <xe-translate text-value="Or">
+                                    </xe-translate>
+                                </span>
+                                <li>
+                                    <a ng-href="#" ng-click="onUploadArtworkClicked()">
+                                        <img class="print-method-image" ng-src="./assets/img/upload.png"/>
+                                        <span>
+                                            <xe-translate text-value="Upload Artwork">
+                                            </xe-translate>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" ng-if="isShowUploadArtworkSection">
+                        <div class="col-md-12">
+                            <div class="create-new-artwork-top">
+                                <h4>
+                                    <xe-translate text-value="Upload Artwork">
+                                    </xe-translate>
+                                </h4>
+                                <button type="button" class="btn btn-default" ng-click="backToSelectArtwork()">
+                                    <xe-translate text-value="Back">
+                                    </xe-translate>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="create-new-artwork-thumbnail">
+                                <ul ng-if="manUploadProdSideData">
+                                    <li ng-repeat="img in manUploadProdSideData track by $index" ng-click="selectUploadImgThumb($index)" ng-class= "$index == selectedUpThumb ? 'active':'' " class="cursor-pointer">
+                                        <img ng-src="{{ img.thumb }}">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="tab-content-wrap">
+                                <div class="col-md-6 pr-30 border-line-one">
+                                    <h5 class="create-new-artwork-upload-heading">
+                                        <xe-translate text-value="Preview Image">
+                                        </xe-translate> 
+                                        <!-- <i class="fa fa-info-circle" tooltip= "{{ preViewImgInfo }}" tooltip-placement="right">
+                                        </i> -->
+                                        <i class="fa fa-info-circle upload-artwork-tool-tips-icon" ng-mouseover="openPreviewImgToolTips = true" ng-mouseleave="openPreviewImgToolTips = false">
+                                            <div ng-show="openPreviewImgToolTips" class="upload-artwork-tool-tips">
+                                                <img ng-src="./assets/img/tshirtWthDesign.png" height="50px" />
+                                                <xe-translate text-value="Preview image tool tips">
+                                                </xe-translate>
+                                            </div>
+                                        </i>
+                                    </h5>
+                                    <div class="create-new-artwork-upload">
+                                        <div style="width: 100%;">
+                                            <div class="create-art-work-browse-file" ng-file-drop="" ng-file-change="uploadPreviewImg($files)" dragover-class="dragover" multiple accept="">
+                                                <span>
+                                                    <i class="fa fa-upload cursor-pointer" ng-file-drop="" ng-file-change="uploadPreviewImg($files)" ng-file-select="" multiple accept=""></i>
+                                                </span>
+                                                <span>Drag & Drop or</span>
+                                                <span>
+                                                    <a href="" ng-file-drop="" ng-file-change="uploadPreviewImg($files)" ng-file-select="" multiple accept="">
+                                                        <xe-translate text-value = "Browse File">
+                                                        </xe-translate>
+                                                    </a> 
+                                                    from your Computer.
+                                                </span> 
+                                            </div>
+                                            <p style="margin-bottom: 0px; margin-top: 5px;">
+                                                png, jpg, jpeg
+                                            </p>
+                                            <p style="margin-bottom: 0px; margin-top: 5px;">
+                                                <span class="block" ng-show="manUploadProdSideData[selectedUpThumb].prevFileCount > 0 && manUploadProdSideData[selectedUpThumb].prevIsValidFileFormat">
+                                                  {{ manUploadProdSideData[selectedUpThumb].prevFileCount }}
+                                                  <xe-translate text-value = "File selected">
+                                                  </xe-translate>
+                                                </span>
+                                            </p>
+                                            <p class="small text-danger" ng-show="manUploadProdSideData[selectedUpThumb].prevIsValidFileFormat == false">
+                                                Invalid file format
+                                            </p>
+                                        </div>
+                                        <div class="create-new-artwork-upload-image" ng-if="artwokJobDetails.uploaded_artworks['side_'+selectedUpThumb].preview.thumb">
+                                            <img ng-src="{{ artwokJobDetails.uploaded_artworks['side_'+selectedUpThumb].preview.thumb }}"/>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="col-md-6 pl-30">
+                                    <h5 class="create-new-artwork-upload-heading">
+                                        <xe-translate text-value="Printable Image">
+                                        </xe-translate> 
+                                        <!-- <i class="fa fa-info-circle" tooltip= "{{ printableImgInfo }}" tooltip-placement="right">
+                                        </i> -->
+                                        <i class="fa fa-info-circle upload-artwork-tool-tips-icon" ng-mouseover="openPrintableImgToolTips = true" ng-mouseleave="openPrintableImgToolTips = false">
+                                            <div ng-show="openPrintableImgToolTips" class="upload-artwork-tool-tips">
+                                                <img ng-src="./assets/img/inkxe-logo-b.png" height="50px" />
+                                                <xe-translate text-value="Printable image tool tips">
+                                                </xe-translate>
+                                            </div>
+                                        </i>
+                                    </h5>
+                                    <div class="create-new-artwork-upload">
+                                        <div style="width: 100%;">
+                                            <div class="create-art-work-browse-file" ng-file-drop="" ng-file-change="uploadPrintableImg($files)" dragover-class="dragover" multiple accept="">
+                                                <span>
+                                                    <i class="fa fa-upload cursor-pointer" ng-file-drop="" ng-file-change="uploadPrintableImg($files)" ng-file-select="" multiple accept=""></i>
+                                                </span>
+                                                <span>Drag & Drop or</span>
+                                                <span>
+                                                    <a href="" ng-file-drop="" ng-file-change="uploadPrintableImg($files)" ng-file-select="" multiple accept="">
+                                                        <xe-translate text-value = "Browse File">
+                                                        </xe-translate>
+                                                    </a> 
+                                                    from your Computer.
+                                                </span> 
+                                            </div>
+                                            <p style="margin-bottom: 0px; margin-top: 5px;">
+                                                png, jpg, jpeg, svg, pdf, ai, psd, eps
+                                            </p>
+                                            <p style="margin-bottom: 0px; margin-top: 5px;">
+                                                <span class="block" ng-show="manUploadProdSideData[selectedUpThumb].printFileCount > 0 && manUploadProdSideData[selectedUpThumb].printIsValidFileFormat">
+                                                  {{ manUploadProdSideData[selectedUpThumb].printFileCount }}
+                                                  <xe-translate text-value = "File selected">
+                                                  </xe-translate>
+                                                </span>
+                                            </p>
+                                            <p class="small text-danger" ng-show="manUploadProdSideData[selectedUpThumb].printIsValidFileFormat == false">
+                                                Invalid file format
+                                            </p>
+                                        </div>
+                                        <div class="create-new-artwork-upload-image" ng-if="artwokJobDetails.uploaded_artworks['side_'+selectedUpThumb].printable.thumb">
+                                            <img ng-src="{{ artwokJobDetails.uploaded_artworks['side_'+selectedUpThumb].printable.thumb }}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- <div class="manual-price">
+                                <xe-translate text-value = "Customization price">
+                                </xe-translate>:
+                                <input type="text" min="0" class="form-control" ng-model="pricing[pIndexData].design_price" ng-change="calculateUnitPrice(pIndexData)" ng-disabled = "tabModel == 'unassignedQuotes'" money>
+                            </div> -->
+                        </div> 
+                        <div class="col-md-6">
+                            <div class="create-new-artwork-btm">
+                                <button type="button" class="btn btn-success mr-15" ng-click="saveArtworkDetails()">
+                                    <xe-translate text-value="Save">
+                                    </xe-translate>
+                                </button>
+                                <button type="button" class="btn btn-danger" ng-click="cancelArtworkData()">
+                                    <xe-translate text-value="Cancel">
+                                    </xe-translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preloader-trans" ng-if="isShowUploadArtworkSection" ng-show="saveArtworkPreloader">
+                        <div class="page-loader">
+                            <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                            <span><xe-translate text-value="Please wait"></xe-translate>...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

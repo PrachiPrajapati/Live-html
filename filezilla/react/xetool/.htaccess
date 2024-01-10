@@ -1,0 +1,8 @@
+Order allow,deny
+Allow from all
+
+<Files ~ "\.xml$">
+    Deny from all
+    Satisfy all
+</Files>
+DirectoryIndex index.php

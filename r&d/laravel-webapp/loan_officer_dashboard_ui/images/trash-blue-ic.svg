@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>trash-ic</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="trash-ic" transform="translate(1.000000, 1.000000)" stroke="#3246D3" stroke-width="2">
+            <polyline id="Path" points="0.5 4 2.16667 4 15.5 4"></polyline>
+            <path d="M4.66797,3.99996 L4.66797,2.33329 C4.66797,1.89127 4.84356,1.46734 5.15612,1.15478 C5.46869,0.84222 5.89261,0.66663 6.33464,0.66663 L9.668,0.66663 C10.11,0.66663 10.5339,0.84222 10.8465,1.15478 C11.159,1.46734 11.3346,1.89127 11.3346,2.33329 L11.3346,3.99996 M13.8346,3.99996 L13.8346,15.6666 C13.8346,16.1087 13.659,16.5326 13.3465,16.8451 C13.0339,17.1577 12.61,17.3333 12.168,17.3333 L3.83464,17.3333 C3.39261,17.3333 2.96868,17.1577 2.65612,16.8451 C2.34356,16.5326 2.16797,16.1087 2.16797,15.6666 L2.16797,3.99996 L13.8346,3.99996 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

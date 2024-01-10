@@ -1,0 +1,305 @@
+<div class="modal fade slide-right" id="settingsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14"></i>
+                </button>
+                <div class="modal-body">
+                    <div class="category-head">
+                        <xe-translate text-value="Default Invoice Settings"></xe-translate>
+                    </div>
+                    <div class="alert alert-danger" ng-show="errorMessage">
+                        {{errorDetail}}
+                    </div>
+                    <!--ng-show="settingsDataAvailable" {If Needed} -->
+                    <div class="category-modal">
+                        <div class="flexRow">
+                            <div class="flexCol">
+                                <div class="form-group form-group-default required">
+                                    <label class="control-label">
+                                        <xe-translate text-value="Invoice Sender Mail">
+                                        </xe-translate>
+                                    </label>
+                                    <input type="email" name="" ng-model="settingsData.invoice_sender_mail"
+                                        class="form-control" placeholder="Enter Invoice Sender Email">
+                                </div>
+                            </div>
+                            <div class="flexCol">
+                                <div class="form-group form-group-default required">
+                                    <label class="control-label">
+                                        <xe-translate text-value="Company Name">
+                                        </xe-translate>
+                                    </label>
+                                    <input type="text" name="" ng-model="settingsData.brand_name" class=" form-control"
+                                        placeholder="Enter Your Company Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="flexCol">
+                                <div class="form-group form-group-default">
+                                    <div class="flexRow m-b-5" style="margin-top:3px;">
+                                        <div class="flexCol">
+                                            <div class="gallery-upload-thumb invoice-gallery">
+                                                <img class="img-responsive" ng-src="{{settingsData.logo}}" />
+                                            </div>
+                                        </div>
+                                        <div class="flexCol" style="flex:initial">
+                                            <button class="btn btn-default btn-sm" ng-file-select
+                                                ng-file-change="upload($files)">
+                                                <xe-translate text-value="logo"></xe-translate>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flexCol">
+                                <div class="form-group form-group-default">
+                                    <div class="flexRow m-b-5" style="margin-top:3px;">
+                                        <div class="flexCol">
+                                            <div class="gallery-upload-thumb invoice-gallery">
+                                                <div class="hexBg"
+                                                    style="background-color:{{ settingsData.default_color_code }};">
+                                                </div>
+                                                <span class="hexCode">{{ settingsData.default_color_code }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexCol" style="flex:initial">
+                                            <div>
+                                                <xe-translate text-value="Default Color"></xe-translate>
+                                            </div>
+                                            <spectrum-colorpicker ng-model="settingsData.default_color_code"
+                                                options="{showInput: true,  showAlpha: false}" format="'hex'"
+                                                on-hide="onColorUpdate(color)">
+                                            </spectrum-colorpicker>
+                                        </div>
+                                        <!-- <small><xe-translate text-value="Hex Code"></xe-translate>: {{ settingsData.default_color_code }}</small> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="flexCol">
+                                <div class="form-group form-group-default required">
+                                    <label class="control-label">
+                                        <xe-translate text-value="Phone">
+                                        </xe-translate>
+                                    </label>
+                                    <input type="text" numbers-only="numbers-only" class="form-control"
+                                        ng-model="settingsData.phone" placeholder="Enter Your Phone Number">
+                                </div>
+                            </div>
+                            <div class="flexCol">
+                                <div class="form-group form-group-default required">
+                                    <label class="control-label">
+                                        <xe-translate text-value="city">
+                                        </xe-translate>
+                                    </label>
+                                    <input type="text" class="form-control"
+                                        onkeypress="return onlyAlphabets(event,this);" ng-model="settingsData.city"
+                                        name="" placeholder="Enter Your City">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="flexCol">
+                                <div class="form-group customer required">
+                                    <div id="q-b-country" class="select-wrap" ng-click="showCountry()">
+                                        <div class="d-flex justify-content-between align-items-center margin-b">
+                                            <span class="heading-one">
+                                                <xe-translate text-value="Country">
+                                                </xe-translate>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="select-one"> {{settingsData.country}} </span>
+                                            <span class="arrow-one"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group customer">
+                                    <div id="q-b-country-drop" class="dropdown-wrap">
+                                        <input autocomplete="off" type="text" class="input-sm form-control" id="q-b-country-search"
+                                            ng-model="billingCountrySearch.value">
+                                        <ul>
+                                            <li ng-repeat="country in countryList | filter:billingCountrySearch.value"
+                                                ng-click="onBillingCountrySelected(country)">
+                                                {{ country.countries_name }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flexCol">
+                                <div class="form-group customer required"
+                                    ng-class="settingsData.country == 'Select' ? 'disable-div' : '' ">
+                                    <div id="q-b-state" class="select-wrap" ng-click="showState()">
+                                        <div class="d-flex justify-content-between align-items-center margin-b">
+                                            <span class="heading-one">
+                                                <xe-translate text-value="State">
+                                                </xe-translate>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="select-one"> {{ settingsData.state }} </span>
+                                            <span class="arrow-one"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group customer">
+                                    <div id="q-b-state-drop" class="dropdown-wrap">
+                                        <input type="text" class="input-sm form-control" id="q-b-state-search"
+                                            ng-model="billingStateSearch.value">
+                                        <ul>
+                                            <li ng-repeat="state in billingStateList | filter:billingStateSearch.value"
+                                                ng-click="onBillingStateSelected(state)">
+                                                {{ state.state_name }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="flexCol">
+                                <div class="form-group form-group-default required">
+                                    <label class="control-label">
+                                        <xe-translate text-value="Zip Code">
+                                        </xe-translate>
+                                    </label>
+                                    <input type="text" class="form-control" ng-model="settingsData.zip_code"
+                                        placeholder="Enter Your Zip Code">
+                                </div>
+                            </div>
+                            <div class="flexCol">
+                                <label class="control-label q-r-dropdown-btn-label required">
+                                    <xe-translate text-value="Default Language"></xe-translate>
+                                </label>
+                                <div class="btn-group" style="width:100%;display:flex;">
+                                    <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown"
+                                        style="width:100%;font-size:12px;text-align:left;padding-top:35px;background-color:transparent;">
+                                        {{ settingsData.language_name }}
+                                    </button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        data-disabled="true" aria-haspopup="true" aria-expanded="false"
+                                        style="height:64px;">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu" ng-class="{'button-scroll-lang':clientLang.length> 4}"
+                                        role="menu" style="width:100%;">
+                                        <li ng-repeat="language in clientLang track by $index"
+                                            ng-click="languageSelected(language)">
+                                            <a href="">{{ language.name }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="flexCol">
+                                <div class="form-group form-group-default required">
+                                    <label class="control-label">
+                                        <xe-translate text-value="INVOICE ADDRESS">
+                                        </xe-translate>
+                                    </label>
+                                    <input type="text" name="" class="form-control"
+                                        ng-model="settingsData.address_line_2" placeholder="Enter the invoice address">
+                                </div>
+                            </div>
+                            <div class="flexCol">
+                                <div class="form-group form-group-default required">
+                                    <label class="control-label">
+                                        <xe-translate text-value="Tax In Percentage">
+                                        </xe-translate>(%)
+                                    </label>
+                                    <input type="text" class="form-control" ng-model="settingsData.tax"
+                                        placeholder="Enter Your Tax In  Percentage" max="100" maxlength="3"
+                                        pattern="^[0-9]$" numbers-only="numbers-only"
+                                        ng-blur="checkValidationTask(settingsData.tax)">
+                                    <span class="text-danger" ng-show="settingDataTask">{{percentageErrorMessage}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="flexCol">
+                                <div class="form-group form-group-default required">
+                                    <label class="control-label">
+                                        <xe-translate text-value="Shipping Charges">
+                                        </xe-translate>($)
+                                    </label>
+                                    <input type="text"  pattern="^[0-9]$" class="form-control"
+                                        numbers-only="numbers-only" ng-model="settingsData.shipping_charge"
+                                        placeholder="Enter Your Shipping Charge"
+                                        >
+                                        <span class="text-danger" ng-show="settingShipping"><xe-translate text-value="SHIPPING CHARGE EMPTY">
+                                        </xe-translate></span>
+                                    <!-- ng-blur="checkValidationShip(settingsData.shipping_charge)"<span class="text-danger" ng-show="settingShipping">Maximum Percentage Should be
+                                        100.</span> -->
+                                </div>
+                            </div>
+                            <div class="flexCol">
+                                <div class="form-group form-group-default ">
+                                    <label class="control-label">
+                                        <xe-translate text-value="Default Currency">
+                                        </xe-translate>
+                                    </label>
+                                    <input type="text" readonly="" class="form-control" ng-model="settingsData.default_currency"
+                                        placeholder="Enter Your Default Currency">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="flexRow">
+                            <div class="flexCol">
+                                <div class="form-group form-group-default">
+                                    <label class="control-label">
+                                        <xe-translate text-value="TErm And Condition">
+                                        </xe-translate>
+                                    </label>
+                                    <input type="text" class="form-control" ng-model="settingsData.terms_condition"
+                                        placeholder="Term And Condition">
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="flexRow">
+                            <div class="flexCol"><button ng-disabled="!isSuperAdmin" class="btn btn-success"
+                                    ng-click="saveSettings()">
+                                    <xe-translate text-value="Save">
+                                    </xe-translate>
+                                </button>
+                                <button class="btn btn-danger" ng-click="cancelAll('editSettings')">
+                                    <xe-translate text-value="cancel">
+                                    </xe-translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" charset="utf-8" async defer>
+    //Allow Only Alphabates
+    /****************************************************************************************************/
+    function onlyAlphabets(e, t) {
+        try {
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            } else if (e) {
+                var charCode = e.which;
+            } else {
+                return true;
+            }
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                return true;
+            else
+                return false;
+        } catch (err) {
+            alert(err.Description);
+        }
+    }
+    /****************************************************************************************************/
+</script>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>cancel(24x24)@1x (1)</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="11.5.2_Configuration_Create_Attributes_Assign_value" transform="translate(-1207.000000, -477.000000)" stroke="#221B38" stroke-width="1.77777778">
+            <g id="Group-14" transform="translate(660.000000, 461.000000)">
+                <g id="cancel(24x24)@1x-(1)" transform="translate(548.000000, 17.000000)">
+                    <line x1="0" y1="0" x2="32" y2="32" id="Path"></line>
+                    <line x1="0" y1="32" x2="32" y2="0" id="Path"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,72 @@
+<div class="modal fade stick-up" id="createArtworkJobModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left" id="createArtworkJobModalMsg">
+                 <div class="row" id="shipAddModalNotification">
+                    <div class="col-sm-6 text-left">
+                        <h5>
+                            <span class="semi-bold">
+                               <xe-translate text-value="Create Artwork Job">
+                               </xe-translate>
+                            </span>
+                        </h5>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="m-t-10">
+                            <button type="button" class="close custom-modal-close" data-dismiss="modal" aria-hidden="true">
+                                <i class="pg-close fs-14"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                  <div class="col-sm-12">
+                      <div class="form-group form-group-default required">
+                          <label  class="control-label">
+                            <xe-translate text-value="Description">
+                            </xe-translate>
+                          </label>
+                          <textarea class="form-control ng-pristine ng-valid" rows="6" placeholder="Type description here" ng-model="newArtworkJob.description" style="resize: none; height: 100px">
+                          </textarea>
+                      </div>
+                  </div>
+                  <div class="col-sm-12 m-t-10">
+                      <div class="form-group form-group-default input-group">
+                        <div class="form-input-group">
+                          <label>
+                            <xe-translate text-value="Due Date">
+                            </xe-translate>
+                          </label>
+                          <input style=" z-index: 100000;" type="text" ui-date="dateOptions" class="form-control" ui-date-format id="artwork_job_due_date"  ng-model="newArtworkJob.dueDate" onkeydown="return false">
+                        </div>
+                        <div class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                      </div>
+                  </div>
+                <div class="m-t-20 clearfix">
+                    <button type="button" class="btn btn-danger btn-sm pull-right m-l-5" ng-click="cancelArtworkJob()">
+                        <span>
+                            <xe-translate text-value="Cancel">
+                            </xe-translate>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm pull-right" ng-click="saveArtworkJob()">
+                        <span>
+                            <xe-translate text-value="Save">
+                            </xe-translate>
+                        </span>
+                    </button>
+                </div>
+                <div class="preloader-trans" ng-show="artworkJobPreloader" style="padding-left: 0px; z-index: 100000">
+                  <div class="page-loader">
+                    <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                    <xe-translate text-value="Please wait"></xe-translate>...
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

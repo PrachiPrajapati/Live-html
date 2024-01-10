@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/intergation.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile_menu.css">
+	<link rel="stylesheet" type="text/css" href="css/general_menu.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" class="js/custom.js"></script>
+</head>
+<body>
+
+
+	<main class="content bg_skyblue" role="content">
+		<section class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button> -->
+						<div class="toggle-wrap d-block d-lg-none top_menu" onclick="toggleMainmenu(this)">
+							<span class="toggle-bar"></span>
+						</div>
+						<aside class="navbar-nav mr-auto sidenav d-block d-lg-none">
+							<div class="navbar-collapse">
+								<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+									<li class="nav-item active">
+										<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Pipeline</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Proposals</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Lenders</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Partners</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Campaigns</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Reports</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Tasks</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Finance</a>
+									</li>
+								</ul>
+								<form class="form-inline my-2 my-lg-0">
+									<img src="images/bell.png" class="img-fluid m_r_15" />
+									<span class="notification_dot"></span>
+									<img src="images/user.png" class="img-fluid width_36 user" />
+									<ul class="dropdown-menu-profile">
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/profile-page" data-bind="" class="dropdown-menu__link profilepage nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m9 10c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z" fill="#2849de" data-original="#000000" style="" stroke="#2849DE" stroke-width="1" class=""></path></g><g xmlns="http://www.w3.org/2000/svg"><path d="m8.5 21h-8c-.276 0-.5-.224-.5-.5v-4c0-2.481 2.019-4.5 4.5-4.5h6c.276 0 .5.224.5.5s-.224.5-.5.5h-6c-1.93 0-3.5 1.57-3.5 3.5v3.5h7.5c.276 0 .5.224.5.5s-.224.5-.5.5z" fill="#2849de" data-original="#000000" style="" class="" stroke="#2849DE" stroke-width="1"></path></g><g xmlns="http://www.w3.org/2000/svg"><g><path d="m17 20c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z" fill="#2849de" data-original="#000000" style="" class=""></path></g><g><path d="m17.797 24h-1.595c-.516 0-.944-.387-.995-.901l-.127-1.271c-.303-.135-.592-.303-.865-.503l-1.168.527c-.469.214-1.02.035-1.277-.412l-.797-1.381c-.258-.447-.136-1.011.282-1.312l1.029-.74c-.02-.155-.034-.327-.034-.507s.014-.353.034-.507l-1.029-.74c-.418-.301-.54-.865-.282-1.312l.797-1.381c.258-.447.806-.624 1.277-.412l1.168.527c.273-.2.562-.368.865-.503l.127-1.271c.051-.513.479-.9.995-.9h1.595c.516 0 .944.387.995.901l.127 1.271c.304.135.593.304.865.503l1.168-.527c.471-.211 1.02-.034 1.277.412l.797 1.381c.258.447.136 1.011-.282 1.312l-1.029.74c.02.155.034.327.034.507s-.014.353-.034.507l1.029.74c.418.301.54.865.282 1.312l-.796 1.38c-.258.446-.805.625-1.277.412l-1.168-.527c-.273.2-.562.368-.865.503l-.128 1.272c-.051.513-.479.9-.995.9zm-3.512-3.755c.115 0 .229.04.321.117.339.284.714.501 1.113.647.18.066.307.229.326.42l.158 1.571h1.595l.157-1.571c.019-.191.146-.354.326-.42.399-.146.774-.364 1.113-.647.148-.123.352-.151.526-.072l1.444.652.797-1.381-1.278-.918c-.156-.112-.233-.304-.201-.493.037-.211.067-.426.067-.648s-.03-.437-.067-.648c-.033-.189.045-.38.201-.493l1.278-.918-.797-1.381-1.444.651c-.175.079-.379.051-.527-.072-.338-.284-.712-.501-1.113-.647-.18-.066-.307-.229-.326-.42l-.157-1.574h-1.595l-.157 1.571c-.019.191-.146.354-.326.42-.399.146-.774.364-1.113.647-.147.123-.351.152-.526.072l-1.444-.652-.797 1.381 1.278.918c.156.112.233.304.201.493-.037.211-.067.426-.067.648s.03.437.067.648c.033.189-.045.38-.201.493l-1.278.918.797 1.381 1.444-.651c.066-.028.135-.042.205-.042z" fill="#2849de" data-original="#000000" style="" class=""></path></g></g></g></svg>
+												My Profile
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/users" class="dropdown-menu__link profilepage nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+												Manage Users
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#settingcollapse" aria-controls="settingcollapse" aria-expanded="false">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+												Company Settings <span class="arrow" style="margin-left: 35%;"></span>
+												<ul class="nav-second-level collapse" id="settingcollapse" data-parent="#navAccordion">
+													<div class="sidebar_title">Settings</div>
+													<li class="nav-item">
+														<a class="nav-link" href="#">
+															<img src="images/file-text.png" class="img-fluid">
+															Company Profile
+														</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="#">
+															<img src="images/file-text.png" class="img-fluid">Plan & Billing
+														</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Company Directory</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Commissions</a>
+													</li>
+													<li class="nav-item active">
+														<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems1" aria-controls="collapseSubItems1" aria-expanded="false"><img src="images/file-text-blue.png" class="img-fluid">Integrations</a>
+													</li>
+													<li class="nav-item">
+														<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">Workflow<span class="arrow"></span></a>
+														<ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+																</a>
+															</li>
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+																</a>
+															</li>
+														</ul>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Log viewer</a>
+													</li>
+													<li class="nav-item">
+														<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems3" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">User Management<span class="arrow"></span></a>
+														<ul class="nav-second-level collapse" id="collapseSubItems3" data-parent="#navAccordion">
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+																</a>
+															</li>
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+																</a>
+															</li>
+														</ul>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Lead rotator</a>
+													</li>
+												</ul>
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+											<a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+												<svg width="24" height="24">
+													<use xlink:href="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/icons.svg#ico-logout">
+
+													</use>
+												</svg>
+												Logout
+											</a>
+											<form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+												<input type="hidden" name="_token" value="hAEQjARbzqFjkrSBw1G0HJs8F3Zr3PvyXC53t3Y3">
+											</form>
+										</li>
+									</ul>
+								</form>
+							</div>
+						</aside>
+						<a class="navbar-brand" href="#">
+							<img src="images/logo.png" class="img-fluid height_37" />
+						</a>
+						<div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+								<li class="nav-item active">
+									<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Pipeline</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Proposals</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Lenders</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Partners</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Campaigns</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Reports</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Tasks</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Finance</a>
+								</li>
+							</ul>
+							<form class="form-inline my-2 my-lg-0">
+								<img src="images/bell.png" class="img-fluid m_r_15" />
+								<span class="notification_dot"></span>
+								<img src="images/user.png" class="img-fluid width_36 user" />
+									<ul class="dropdown-menu-profile">
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/profile-page" data-bind="" class="dropdown-menu__link profilepage nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m9 10c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z" fill="#2849de" data-original="#000000" style="" stroke="#2849DE" stroke-width="1" class=""></path></g><g xmlns="http://www.w3.org/2000/svg"><path d="m8.5 21h-8c-.276 0-.5-.224-.5-.5v-4c0-2.481 2.019-4.5 4.5-4.5h6c.276 0 .5.224.5.5s-.224.5-.5.5h-6c-1.93 0-3.5 1.57-3.5 3.5v3.5h7.5c.276 0 .5.224.5.5s-.224.5-.5.5z" fill="#2849de" data-original="#000000" style="" class="" stroke="#2849DE" stroke-width="1"></path></g><g xmlns="http://www.w3.org/2000/svg"><g><path d="m17 20c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z" fill="#2849de" data-original="#000000" style="" class=""></path></g><g><path d="m17.797 24h-1.595c-.516 0-.944-.387-.995-.901l-.127-1.271c-.303-.135-.592-.303-.865-.503l-1.168.527c-.469.214-1.02.035-1.277-.412l-.797-1.381c-.258-.447-.136-1.011.282-1.312l1.029-.74c-.02-.155-.034-.327-.034-.507s.014-.353.034-.507l-1.029-.74c-.418-.301-.54-.865-.282-1.312l.797-1.381c.258-.447.806-.624 1.277-.412l1.168.527c.273-.2.562-.368.865-.503l.127-1.271c.051-.513.479-.9.995-.9h1.595c.516 0 .944.387.995.901l.127 1.271c.304.135.593.304.865.503l1.168-.527c.471-.211 1.02-.034 1.277.412l.797 1.381c.258.447.136 1.011-.282 1.312l-1.029.74c.02.155.034.327.034.507s-.014.353-.034.507l1.029.74c.418.301.54.865.282 1.312l-.796 1.38c-.258.446-.805.625-1.277.412l-1.168-.527c-.273.2-.562.368-.865.503l-.128 1.272c-.051.513-.479.9-.995.9zm-3.512-3.755c.115 0 .229.04.321.117.339.284.714.501 1.113.647.18.066.307.229.326.42l.158 1.571h1.595l.157-1.571c.019-.191.146-.354.326-.42.399-.146.774-.364 1.113-.647.148-.123.352-.151.526-.072l1.444.652.797-1.381-1.278-.918c-.156-.112-.233-.304-.201-.493.037-.211.067-.426.067-.648s-.03-.437-.067-.648c-.033-.189.045-.38.201-.493l1.278-.918-.797-1.381-1.444.651c-.175.079-.379.051-.527-.072-.338-.284-.712-.501-1.113-.647-.18-.066-.307-.229-.326-.42l-.157-1.574h-1.595l-.157 1.571c-.019.191-.146.354-.326.42-.399.146-.774.364-1.113.647-.147.123-.351.152-.526.072l-1.444-.652-.797 1.381 1.278.918c.156.112.233.304.201.493-.037.211-.067.426-.067.648s.03.437.067.648c.033.189-.045.38-.201.493l-1.278.918.797 1.381 1.444-.651c.066-.028.135-.042.205-.042z" fill="#2849de" data-original="#000000" style="" class=""></path></g></g></g></svg>
+												My Profile
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/users" class="dropdown-menu__link profilepage nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+												Manage Users
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+												Company Settings
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+											<a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+												<svg width="24" height="24">
+													<use xlink:href="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/icons.svg#ico-logout">
+														
+													</use>
+												</svg>
+												Logout
+											</a>
+											<form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+												<input type="hidden" name="_token" value="hAEQjARbzqFjkrSBw1G0HJs8F3Zr3PvyXC53t3Y3">
+											</form>
+										</li>
+									</ul>
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</section>
+		<nav class="navbar navbar-expand-lg navbar-light left_top_menu">
+			<button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto sidenav" id="navAccordion">
+					<div class="sidebar_title">Settings</div>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<img src="images/file-text.png" class="img-fluid">
+							Company Profile
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<img src="images/file-text.png" class="img-fluid">Plan & Billing
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Company Directory</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Commissions</a>
+					</li>
+					<li class="nav-item">
+						<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems1" aria-controls="collapseSubItems1" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">Integrations<span class="arrow"></span><span class="sr-only">(current)</span></a>
+						<ul class="nav-second-level collapse" id="collapseSubItems1" data-parent="#navAccordion">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All<span class="sr-only">(current)</span></span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Active Integrations</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Credit Vendors</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">LOS Vendors</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">E Sign Vendors</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Loan Pricing Vendors</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Property Data</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">Workflow<span class="arrow"></span></a>
+						<ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href=""><img src="images/file-text-blue.png" class="img-fluid">Activity</a>
+					</li>
+					<li class="nav-item">
+						<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems3" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">User Management<span class="arrow"></span></a>
+						<ul class="nav-second-level collapse" id="collapseSubItems3" data-parent="#navAccordion">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Lead rotator</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="content-wrapper bg_skyblue closing_target">
+			<div class="container-fluid">
+				<div class="">
+					<div class="row activity_collapsible_integration_content_row">
+						<div class="top_body">
+							<div class="row">
+								<div class="col-12">
+									<div class="title">
+										<span>Activity</span>
+										<div class="activity_arrow_down">
+											<img src="images/black_closearrow.png" class="img-fluid activity_collapsible_integration_section">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row activity_toggle_content">
+								<div class="col-12">
+									<div class="content_center">
+										<div class="">
+											<button class="btn_filter m_t_0">
+												<img src="images/cross_circle.png" class="img-fluid m_r_15" />Clear filter
+											</button>
+										</div>
+										<div class="m_l_30">
+											<div class="form-group has-search">
+												<img src="images/search.png"  class="img-fluid form-control-feedback" />
+												<input type="text" class="form-control" placeholder="Search for activity">
+											</div>
+										</div>
+										<div class="m_l_30">
+											<div class="dropdown">
+												<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+													<ins>All activities</ins>
+													<span class="arrow"></span>
+												</button>
+												<div class="dropdown-menu radio">
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="001" name="alphabet">
+														<i>All status</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="002" name="alphabet">
+														<i>Funded</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="003" name="alphabet">
+														<i>In Disclosures</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="004" name="alphabet">
+														<i>In Processing</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="005" name="alphabet">
+														<i>Submitted to UW</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="006" name="alphabet">
+														<i>Approved</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="007" name="alphabet">
+														<i>In Suspense</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="008" name="alphabet">
+														<i>Waiting on CTC</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="009" name="alphabet">
+														<i>In Closing</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="010" name="alphabet">
+														<i>Closed</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="008" name="alphabet">
+														<i>Submission Hold</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="009" name="alphabet">
+														<i>Investor Purchased</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="010" name="alphabet">
+														<i>Declined - Borrower</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="011" name="alphabet">
+														<i>Docs Out</i>
+													</label>
+
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="012" name="alphabet">
+														<i>Resubmission Required</i>
+													</label>
+
+												</div>
+											</div>
+										</div>
+										<div class="m_l_30">
+											<div class="dropdown">
+												<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+													<ins>All users</ins>
+													<span class="arrow"></span>
+												</button>
+												<div class="dropdown-menu radio">
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="001" name="alphabet_1">
+														<i>All milestones</i>
+													</label>
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="002" name="alphabet_1">
+														<i>On Track</i>
+													</label>
+													<label class="dropdown-item">
+														<input class="jRadioDropdown" type="radio" value="003" name="alphabet_1">
+														<i>Off Track</i>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="m_l_30">
+											<div class="date_selection light_blue content_center">
+												<img src="images/calendra.png" class="img-fluid m_r_15 reportrange">
+												<span class="reportrange"> Jun 01, 2020 - Nov 30, 2020 </span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="scroll_body">
+					<div>
+						<div class="height_constant relative top_radius">
+							<div class="row center_page">
+								<div class="col-12">
+									<div class="text-center">
+										<img src="images/empty_intergation.png" class="img-fluid" />
+										<div class="empty_intergation">No results found</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main> <!-- /content -->
+</body>
+<script type="text/javascript">
+
+	function toggleMainmenu(e) {
+		e.classList.toggle("active");
+		document.querySelector("aside").classList.toggle("active");
+	}
+	// OPTIONAL JS
+
+// Change the button text & add active class
+$('.jRadioDropdown').change(function() {
+	var dropdown = $(this).closest('.dropdown');
+	var thislabel = $(this).closest('label');
+
+	dropdown.find('label').removeClass('active');
+	if( $(this).is(':checked') ) {
+		thislabel.addClass('active');
+		dropdown.find('ins').html( thislabel.text() );
+	}
+
+});    
+
+//Add tabindex on labels
+$('label.dropdown-item').each(function (index, value){
+	$(this).attr('tabindex', 0 );
+	$(this).find('input').attr('tabindex', -1 );
+});
+
+//Add keyboard navigation
+$('label.dropdown-item').keypress(function(e){
+	if((e.keyCode ? e.keyCode : e.which) == 13){
+		$(this).trigger('click');
+	}
+});
+$(document).ready(function(){
+	$('.user').click(function (e) {
+		e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').toggle();
+    });
+    $('.top_menu').click(function (e) {
+		e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').hide();
+        $('.nav-second-level').addClass('collapse').removeClass('show');
+    });
+    
+	$('.activity_arrow_down').click(function () {
+        if ($('.activity_toggle_content').is(':visible') == false) {
+            $('.activity_collapsible_integration_section').css({"margin-top":"0", "transform":"rotate(0deg)"});
+            $('.content-wrapper').removeClass('empty_class');
+        } else {
+            $('.activity_collapsible_integration_section').css({"margin-top":"0", "transform":"rotate(180deg)"});
+            $('.content-wrapper').addClass('empty_class');
+        }
+
+        $('.activity_toggle_content').slideToggle('slow', function () {});
+    });
+
+	$('#activity_target').DataTable( {
+		"scrollY":        "100%",
+		"scrollCollapse": true,
+		"dom": 'rt<"bottom right"ip><"clear">',
+		language: {
+			paginate: {
+				next: '<img src="images/right_arrow.png">',
+				previous: '<img src="images/left_arrow.png">'
+			}
+		},
+		"infoCallback": function( settings, start, end, max, total, pre ) {
+			return "Showing " + start +" - "+ end + " of " + total;
+		}
+		//"paging":         false,
+		// "pagingType": "full_numbers",
+		// "full_numbers": true
+	});
+});
+
+</script>
+</html>

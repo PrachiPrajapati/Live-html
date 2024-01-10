@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+/********* Fonts Face CSS End **********/
+/******* Common Element CSS Start ******/
+*{ margin: 0px; padding: 0px;}
+html,body					{ height: 100%;}
+body						{font-family: 'Open Sans', sans-serif; font-size:14px; }
+.clear						{ clear:both;}
+img							{ border: 0px;}
+ul,ol						{ list-style: none;}
+a							{ text-decoration: none; outline: none;}
+a:focus, a:active,a:visited	{ outline: none;  text-decoration: none !important;}
+h1							{ font-weight: bold; font-size: 36px; color:#1b7bb2; text-transform: uppercase; letter-spacing: 2px;}
+h2							{ text-transform: uppercase; font-size: 30px; font-weight: 600; color:#349fdd;}
+h3							{ font-size: 18px; font-weight: 600; color:grey; text-transform: uppercase; padding-top: 15px; margin-bottom: 0px;}
+h4.italic					{ font-weight: 600;color:#1b7bb2; text-transform: uppercase; font-size: 16px; padding-top: 20px; font-style: italic;}
+h6							{ color:#ffffff; font-size: 14px; text-transform: uppercase;}
+p							{ font-size: 16px; line-height: 28px; font-weight: 400; color:#6a6a6a;}
+p.white						{ color:#ffffff; margin-bottom: 30px;}
+.border-none				{ border: none !important; }
+.bg-none					{ background: none !important;}
+.margint-none				{ margin-top: 0px !important;}
+.marginr-none				{ margin-right: 0px !important;}
+.marginb-none				{ margin-bottom: 0px !important;}
+.marginl-none				{ margin-left: 0px !important;}
+.paddingt-none				{ padding-top: 0px !important;}
+.paddingr-none				{ padding-right: 0px !important;}
+.paddingb-none				{ padding-bottom: 0px !important;}
+.paddingl-none				{ padding-left: 0px !important;}
+/******* Common Element CSS End *********/
+/******* Header Section CSS Start *******/
+
+/*Go Top CSS Start*/
+#toTop { display:none; text-decoration:none; position:fixed; bottom:10px; right:10px; overflow:hidden; width:51px; height:51px; border:none; text-indent:100%;
+background:url(../images/ui.totop.png) no-repeat left top;}
+#toTopHover { background:url(../images/ui.totop.png) no-repeat left -51px;width:51px;height:51px;display:block;overflow:hidden;float:left;opacity: 0;-moz-opacity: 0;filter:alpha(opacity=0);-o-transition:0s; -ms-transition:0s; -moz-transition:0s; -webkit-transition:0s; transition:0s;}
+#toTop:active, #toTop:focus { outline:none;}
+/*Go Top CSS End*/
+.navbar-default .navbar-toggle .icon-bar{ background-color:#349fdd !important; }
+header						{ height: 100%; width: 100%; background: url("../images/bg.jpg") no-repeat; background-size: cover; background-attachment: fixed; }
+.navbar						{ background: #ffffff; min-height:100px; border: none;}
+.navbar-brand 				{ padding: 10px; height: auto; line-height: 0px; padding: 0px;}
+.navbar-collapse			{ padding-bottom: 0px;}
+.logo						{  padding: 10px; }
+.navbar-nav > li > a		{ line-height: 65px; font-size: 16px; color:#000000;}
+.navbar-nav > li > a.active	{ color:#349fdd;}
+.head-btn					{ border: none; border-radius:0px; background: #349fdd; color:#ffffff; font-size: 16px; padding-left: 20px; padding-right:20px; }
+.head-text 					{ position: relative; top: 50%; transform: translateY(-50%);}
+.btn-all					{ border: none; border-radius:0px; background: #349fdd; color:#ffffff; font-size: 20px; font-weight: 400; padding:10px 20px;text-transform: uppercase;}
+.btn-all:hover				{ text-decoration: none;}
+/******* Header Section CSS End *********/
+/******* Middle section CSS Start ******/
+section						{  padding:50px 0px;}
+.section					{ background: #f8f8f8; border-bottom: 1px solid #f1f1f1; border-top: 1px solid #f1f1f1;}
+.info						{ padding-top: 10px;}
+.inline-btn					{ padding-top: 45px;}
+.inline-btn	li				{ display: inline-block; }
+.inline-btn li:first-child	{ padding-right: 15px;}
+.inline-btn li:last-child	{ padding-left: 15px;}
+.video						{ padding-top: 45px; }
+.video	iframe				{ width:560px; height:315px;}
+.mail						{ font-size: 16px; line-height: 28px; font-weight: 400; color:#349fdd;}
+.mail:hover					{ text-decoration: none;}
+.transprent					{ background: transparent; border: 1px solid #349fdd; border-radius:0px; color:#349fdd;font-size: 20px; font-weight: 400; padding:10px 20px;text-transform: uppercase;}
+.transprent	 i				{ padding: 5px 15px 5px 0;}
+.transprent:hover			{ text-decoration: none;}
+/******** Middle section CSS End *******/
+/***** Bottom section CSS Start *******/
+footer							{ background: #349fdd; text-align: center;}
+.footer							{ padding-bottom: 0px;}
+.connect						{ padding: 30px 0px;}
+.connect li						{ display: inline-block; padding: 0px 5px;}
+.connect li	a i					{  color:#ffffff; font-size: 16px;}
+.inline	li						{ display:inline-block;  text-transform: uppercase;}
+.site-info						{ background: #1b7bb2; padding: 15px 0px; color:#ffffff; font-size: 14px;}
+/****** Bottom section CSS End *******/
+/*********************registeration page start*******************/
+form							{ padding-top: 20px;}
+.account 						{ margin: 25px 0px; border-radius: 10px; box-shadow: 0px 2px 2px 0px #ccc; -webkit-box-shadow: 0px 2px 2px 0px #ccc; -moz-box-shadow: 0px 2px 2px 0px #ccc;}
+.account .account-heading 		{ border-top-left-radius: 10px; border-top-right-radius: 10px; padding: 15px 0px; background: #349fdd; text-align: center;}
+.account .account-heading h2 	{ color: #fff;}
+.account .account-desc 			{ padding: 30px 30px 45px; font-size: 18px;}
+.account .account-desc .account-create { padding: 0px 20px;}
+.account .account-desc .account-create a { margin: 30px auto 20px; padding: 15px; display: block; background: #f1f5f4; color: #8e8a8a; font-size: 20px; border: 1px solid #e5e5e5; border-radius: 40px;}
+.account .account-desc .account-create a:hover { color: #e5e5e5;}
+.account-desc					{ text-align: left;}
+.fileUpload 				{ position: relative; margin: 0; }
+.fileUpload input.upload    { position: absolute; top: 0; right: 0; margin: 0; padding: 0;font-size: 16px; cursor: pointer;  width: 100%; height: 50px; color:#6a6a6a; border: none;background: transparent;}
+.registration h1			{ padding: 15px 0px; border-bottom: 2px solid #ddd; }
+.control-label				{ text-align: left !important;}
+.form-group >label			{ font-size: 16px; line-height: 28px; font-weight: 400; color:#6a6a6a;}
+.form-control				{ height: 50px; border-radius:0px; }
+.create-account 			{ width: 100%; padding: 10px; font-size: 20px; background: #349fdd; text-align: center; border: 0px; color:#ffffff;}
+.create-account:hover 		{ background-color: #286090; border-color: #204d74;color: #fff;}
+textarea					{ resize:none;}
+.browse-block	input		{ width: 100%; height: 50px;}
+.browse-btn					{ background-color: #ffffff; border-radius: 0px; border: 1px solid #d1dde3;  color:#9E9E9E; font-family: 'open_sansregular'; font-size: 18px; color:#717171; font-weight: normal;}
+
+/*********************registeration page start*******************/
+/***************media query start**********/
+ @media (min-width: 992px) and (max-width: 1280px){}
+ @media (min-width: 768px) and (max-width: 991px){
+ .logo							{ width: 175px; padding: 0px;}
+ .navbar-brand					{ margin-top: 10px;}
+ section						{ padding: 25px 0px}
+ h2								{ margin-top: 0px; font-size: 20px;}
+ .inline-btn					{ padding-top: 25px;}
+ .video							{ padding-top: 25px;}
+ .btn-all						{ font-size: 15px;}
+ .fileUpload input.upload		{ font-size: 12px;}
+ .create-account				{ font-size: 16px;}
+ }
+ @media (max-width: 767px){
+ .navbar						{ min-height: 0px;}
+ .navbar-nav > li > a			{ line-height: 0px; text-align: center;}
+ .logo 							{ width: 100px;}
+ .navbar-nav					{ float: none !important;}
+ .nav li						{ padding: 5px 0px;}
+ .btn-all						{ font-size: 14px; width: 100%; display: block;}
+ .head-text						{ top:40%;}
+ .head-text		img				{  width: 150px;}
+ h1								{ font-size: 16px;}
+ p								{ font-size: 14px; line-height: 22px;}
+ .inline-btn li:first-child		{ padding-right: 0px;}
+ .inline-btn li					{ margin-bottom: 15px; width: 100%;}
+ .inline-btn li:last-child		{ padding-left: 0px;}
+ .video							{ padding-top: 30px;}
+ .video	iframe					{ width:293px; height:315px;}
+ .transprent					{ font-size: 12px; width: 100%; display: block;}
+.inline li						{ float: none !important; margin-bottom: 10px;}
+ p.white						{ padding:0px 10px;}
+ section						{ padding: 25px 0px;}
+ h2								{ font-size: 16px;}
+ h3								{ font-size: 14px; padding-top: 0px;}
+ p								{ font-size: 12px;}
+.head-btn						{ width: 100%;}
+ .nav li:nth-child(4)			{ padding: 0px;}
+ .nav li:nth-child(4) a			{ padding: 0px 0px 10px 0px;}
+ .nav li:nth-child(5)			{ padding: 0px;}
+ .nav li:nth-child(5) a			{ padding: 0px;}
+ h4.italic						{ font-size: 12px; padding-top: 10px;}
+ .inline-btn					{ padding-top: 10px;}
+ .site-info						{ font-size: 12px;}
+ .connect						{ padding: 15px 0px;}
+ .fileUpload					{ margin: 15px 15px 35px !important; position: relative;}
+ .fileUpload input.upload		{ height: 35px; right: -5px; top: 7px;}
+  } 
+ /***************media query end**********/
+ 

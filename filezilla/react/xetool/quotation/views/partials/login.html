@@ -1,0 +1,78 @@
+<div class="container m-t-30 m-b-30" ng-if = "isCustomerLogin == false && showQuoteDetails == false && isQuoteDetailsFetched == false">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="page-wrap">
+					<div class="header-section">
+						<div class="clearfix">
+							<h3>Login to request a quote</h3>
+						</div>
+					</div>
+					<div class="page-body">
+						<div class="row">
+							<div class="col-sm-12">
+								<form>
+								  <div class="form-group">
+
+									<label for="exampleInputEmail1">
+										Email 
+										<span class="text-danger">
+                                    		*
+                                		</span>
+									</label>
+									<input type="email" class="form-control" id="exampleInputEmail1" ng-keyup="userCharEntered(userMail,'um')" ng-model="userMail" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" placeholder="Email">
+								    </div>
+								    <div class="form-group">
+										<label for="exampleInputPassword1">
+											Password
+											<span class="text-danger">
+	                                    		*
+	                                		</span>
+										</label>
+										<input type="password" class="form-control" id="exampleInputPassword1" ng-keyup="userCharEntered(userPwd,'up')" ng-model="userPwd" placeholder="Password">
+								  	</div>
+								  	<div class="m-t-sm">
+			                            <small ng-show="isEmailError">
+			                                <label class="text-danger">
+			                                    Please enter a valid Email.
+			                                </label>
+			                            </small>
+			                            <small ng-show="isError">
+			                                <label class="text-danger">
+			                                   Please enter a valid Email and Password.
+			                                </label>
+			                            </small>
+			                            <small ng-show="isPassword">
+			                                <label class="text-danger">
+			                                   Plese enter Password.
+			                                </label>
+			                            </small>
+			                            <small ng-show="loginSuccess">
+			                                <label class="text-success">
+			                                    Login successful now upload your image.
+			                                </label>
+			                            </small>
+                        			</div>
+
+                        			<div class="row m-t">
+			                            <div class="col-xs-6">
+			                                <label class="m-t-sm">
+			                                    Don't have an account
+			                                    <a href = "" ng-click="register()">
+			                                        Sign up
+			                                    </a>
+			                                </label>
+			                            </div>
+			                             <button type="submit" class="btn btn-green btn-md pull-right"  ng-disabled = "isLoginPreloader" ng-click="loginUser(userMail,userPwd)"> Log In 
+			                             	<img ng-show = "isLoginPreloader" class="image-responsive-height demo-mw-50" src="assets/progress.svg" alt="Progress" style="position: absolute;top: 30%px;width: 25px;right: %;right: 50%;width: 32px;">
+			                             </button>
+			                        </div>
+								</form>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>

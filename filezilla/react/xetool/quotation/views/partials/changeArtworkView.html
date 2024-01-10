@@ -1,0 +1,63 @@
+<div class="modal fade reject_popup" id="changeArtworkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content" >
+		   <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title"> {{quoteModalLabel}}</h4>
+		   </div>
+		   <div class="modal-body"  id="changeArtworkModal">
+			   	<form>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-12">
+								<label for="input1" class="control-label">
+									Reason For Change Request
+								</label>
+								<textarea class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched" ng-model="changeRequest.notes" rows="3" required=""></textarea>
+							</div>
+						</div>
+						<div class="row m-t-20">
+							<div class="col-sm-12">
+								<label for="input1" class="control-label">
+									Attach File
+								</label>
+								<div class="create-new-artwork-upload">
+                                    <div style="width: 100%;">
+                                        <div class="create-art-work-browse-file" ng-file-drop="" ng-file-change="uploadAttachedFiles($files)" dragover-class="dragover" ng-multiple="true">
+                                            <span>
+                                                <i class="fa fa-upload cursor-pointer" ng-file-drop="" ng-file-change="uploadAttachedFiles($files)" ng-file-select="" ng-multiple="true"></i>
+                                            </span>
+                                            <span>Drag & Drop or</span>
+                                            <span>
+                                                <a href="" ng-file-drop="" ng-file-change="uploadAttachedFiles($files)" ng-file-select="" ng-multiple="true">
+                                                    Browse File           
+                                                </a> 
+                                                from your Computer.
+                                            </span> 
+                                        </div>
+                                        <p style="margin-bottom: 0px; margin-top: 5px;">
+                                            png, jpg, jpeg, pdf, zip
+                                        </p>
+                                        <p style="margin-bottom: 0px; margin-top: 5px;">
+                                            <span class="block" ng-show="changeRequest.isValidFileFormat">
+                                              {{ changeRequest.uploadFileCount }}
+                                            </span>
+                                        </p>
+                                        <p class="small text-danger" ng-show="changeRequest.isValidFileFormat == false">
+                                            <b>Invalid file format.</b>
+                                        </p>
+                                    </div>
+                                </div> 
+							</div>
+						</div>
+					</div>
+				  
+					 <div class="modal-footer">
+	                	<button type="reset" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
+						<button type="button" class="btn btn-primary" ng-click = "submitChangeRequest()" ng-disabled = "!changeRequest.notes" data-dismiss="modal">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>	

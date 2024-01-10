@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>:: Rellax js Demo ::</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--Main Js Included-->
+    <script src="js/lib/jquery.js" type="text/javascript"></script>
+    <script src="js/parallax.js" type="text/javascript"></script>
+    <style type="text/css">
+        body { overflow: auto !important; overflow-x: hidden !important;}
+        .main-banner { position: relative;}
+        .grid-line-container { position: fixed; top: 0; left: 0; width: 100%;}
+        .grid-line { height: 100vh; border-left: 2px solid #f2f2f2;}
+
+        .banner-desc { height: 100vh; align-items: center; display: flex; position: relative;z-index: 10;}
+        .banner-desc h1 { color: #f2f2f2; font-size: 160px; line-height: 160px; font-weight: bold;}
+
+        .common-section { height: 100vh;}
+
+        .obj { position: absolute; width: 6%; display: block; border-radius: 15%; background: #1c2530; transform-origin: center center;}
+        .obj:nth-child(2),
+        .obj:nth-child(5),
+        .obj:nth-child(8) { background: #0487FF;}
+        .obj:nth-child(3),
+        .obj:nth-child(6),
+        .obj:nth-child(9) { background: #47EBC6;}
+        .obj > span { position: relative; padding-top: 100%; content: ""; display: block;}
+        .obj.s-small { width: 3%;}
+        .obj.small { width: 5%;}
+        .obj.big { width: 7.2%;}
+        .obj.s-big { width: 9%;}
+        .obj.giant { width: 28%;}
+
+        .obj1 {top: 0%; left: 20%;}
+        .obj2 {top: 80%; left: 5%;}
+        .obj3 {top: 70%; left: 40%;}
+        .obj4 {top: 20%; left: 70%;}
+        .obj5 {top: 100%; left: 50%;}
+        .obj6 {top: 40%; left: 90%;}
+        .obj7 {top: 90%; left: 30%;}
+        .obj8 {top: 120%; left: 75%;}
+        .obj9 {top: 10%; left: 0%;}
+    </style>
+</head>
+<body style="overflow: auto; overflow-x: hidden;">
+    <section class="main-banner" id="object-group">
+        <div class="grid-line-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                    <div class="col-sm-1 grid-line"></div>
+                </div>
+            </div>
+        </div>
+        <span class="obj obj1 giant rellax data-rellax-speed="-6" style="transform: rotate(45deg);"><span class="layer" data-depth="0.1"></span></span>
+        <span class="obj obj4 s-big rellax data-rellax-speed="-6" style="transform: rotate(45deg);"><span class="layer" data-depth="0.6"></span></span>
+        <span class="obj obj2 small rellax data-rellax-speed="4" style="transform: rotate(45deg);"><span class="layer" data-depth="0.2"></span></span>
+        <span class="obj obj5 small rellax data-rellax-speed="2" style="transform: rotate(45deg);"><span class="layer" data-depth="0.4"></span></span>
+        <span class="obj obj3 rellax data-rellax-speed="8" style="transform: rotate(45deg);"><span class="layer" data-depth="0.7"></span></span>
+        <span class="obj obj6 big rellax data-rellax-speed="-1" style="transform: rotate(45deg);"><span class="layer" data-depth="0.9"></span></span>
+        <span class="obj obj8 rellax data-rellax-speed="10" style="transform: rotate(45deg);"><span class="layer" data-depth="0.5"></span></span>
+        <span class="obj obj7 s-small rellax data-rellax-speed="7" style="transform: rotate(45deg);"><span class="layer" data-depth="0.7"></span></span>
+        <span class="obj obj9 small rellax data-rellax-speed="-15" style="transform: rotate(45deg);"><span class="layer" data-depth="0.8"></span></span>
+        <div class="banner-desc">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1>UI/UX Design</h1>
+            </div>
+        </div>
+    </section>
+    <section class="common-section">
+    </section>
+    <!-- javascript -->
+    <script type="text/javascript" src="js/rellax.js"></script>
+    <script>
+        var rellax = new Rellax('.rellax', {
+        // center: true
+        callback: function(position) {
+            // callback every position change
+            console.log(position);
+        }
+      });
+        var scene = document.getElementById('object-group');
+        var parallax = new Parallax(scene);
+    </script>
+</body>
+</html>

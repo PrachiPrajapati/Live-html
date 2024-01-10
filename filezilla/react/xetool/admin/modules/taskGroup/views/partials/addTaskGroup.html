@@ -1,0 +1,37 @@
+<div class="Form_Details">
+    <div class="row">
+        <div class="col-sm-6">
+            <label class="pageTitle">
+                <xe-translate text-value="Add Task Group"></xe-translate>
+            </label>
+        </div>
+    </div>
+    <div class="panel panel-default m-t-20">
+        <div class="panel-body">
+            <div class="form-group form-group-default required">
+                <label class="control-label">
+                    <xe-translate text-value="Description">
+                    </xe-translate>
+                </label>
+                <textarea class="form-control" ng-model="taskGroup.text_data"
+                    placeholder="Enter Workflow Name" required></textarea>
+            </div>
+        </div>
+        <div class="panel-footer text-right">
+            <button type="reset" class="btn btn-danger btn-sm" ng-click="cancelTaskGroup('AddTaskGroup')">
+                <xe-translate text-value="Cancel">
+                </xe-translate>
+            </button>
+            <button class="btn btn-success btn-sm" ng-click="submitTaskGroupData(taskGroup.text_data)">
+                <xe-translate text-value="Save">
+                </xe-translate>
+            </button>
+        </div>
+    </div>
+    <div class="preloader-trans" ng-show="editCustomPreLoader">
+        <div class="page-loader">
+            <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+            <xe-translate text-value="Please wait"></xe-translate>...
+        </div>
+    </div>
+</div>

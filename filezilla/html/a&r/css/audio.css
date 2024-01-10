@@ -1,0 +1,47 @@
+* {
+    font-family: calibri;
+}
+body {
+    width: 960px;
+    margin: 0px auto;
+}
+#audioplayer{
+    width: 280px;
+    height: 60px;
+    margin-top: 50px;
+    /*border: dashed #a1a1a1;*/
+    border: 1px solid #e5e5e5;
+}
+
+#start { margin-top: 5px }
+#end { margin-top: 5px }
+
+#pButton{
+    height:60px; 
+    width: 60px;
+    border: none;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:left;
+    outline:none;
+}
+
+.play{background: url('play.png') ;}
+.pause{background: url('pause.png') ;}
+
+#timeline{
+    width: 200px;
+    height: 4px;
+    margin-top: 26px;
+    float: left;
+    background: rgba(0,0,0,.3);
+    border-radius: 30px;
+  
+}
+#playhead{
+    width: 1px;
+    height: 4px;
+    background: rgba(0, 0, 0,1);
+    border-radius: 30px;
+}

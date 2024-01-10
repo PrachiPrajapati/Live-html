@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Human Body</title>
+	<!--Favicon Included-->
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--Font Awsome Included-->
+	<link href="css/fontawesome.css" type="text/css" rel="stylesheet" />
+	<!-- Slick -->
+	<link href="css/slick.css" rel="stylesheet">
+	<link href="css/slick-theme.css" rel="stylesheet">
+	<!--Main Style Included-->
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+	<!--Extra Style Included-->
+	<!--Extra Js Included-->
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<!--******************* Header Section Start *********************-->
+	<header>
+		<div class="container">
+		</div>
+	</header>
+	<!--******************* Banner Section Start *********************-->
+	<!--******************* Banner Section End *********************-->
+	<!--******************* Header Section End *********************-->
+
+	<!--******************* Middle Section Start ******************-->
+	<main>
+		<div class="body-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-7">
+						<div class="content-section">
+							<h1>Revealed: air pollution may be damaging ‘every organ in the body’</h1>
+							<h4>Exclusive: Comprehensive analysis finds harm from head to toe, including dementia, heart and lung
+								disease, fertility problems and reduced intelligence</h4>
+							<div class="section-list">
+								<section fetch="lungs" class="content_sec">
+									<h1>Lungs and heart</h1>
+									<h4>The harmful effects of dirty air shown in the review begin when the pollution is inhaled.</h4>
+									<h4>This results in breathing problems, from asthma to emphysema to lung cancer. There is now
+										overwhelming evidence that air pollution results in serious harm not only to the lungs, but also to
+										the heart. Here it increases the risk of heart attacks as arteries narrow and muscles weaken</h4>
+									<h4>One reason for the wide-ranging damage from air pollution is that very small particles can
+										penetrate
+										the lungs and be carried around the body. “They land in the organs directly,” Schraufnagel said.
+									</h4>
+								</section>
+								<section fetch="brain" class="content_sec">
+									<h1>Brain and mind</h1>
+									<h4>The harmful effects of dirty air shown in the review begin when the pollution is inhaled.</h4>
+									<h4>This results in breathing problems, from asthma to emphysema to lung cancer. There is now
+										overwhelming evidence that air pollution results in serious harm not only to the lungs, but also to
+										the heart. Here it increases the risk of heart attacks as arteries narrow and muscles weaken</h4>
+									<h4>One reason for the wide-ranging damage from air pollution is that very small particles can
+										penetrate
+										the lungs and be carried around the body. “They land in the organs directly,” Schraufnagel said.
+									</h4>
+								</section>
+								<section fetch="liver" class="content_sec">
+									<h1>Abdominal organs</h1>
+									<h4>The harmful effects of dirty air shown in the review begin when the pollution is inhaled.</h4>
+									<h4>This results in breathing problems, from asthma to emphysema to lung cancer. There is now
+										overwhelming evidence that air pollution results in serious harm not only to the lungs, but also to
+										the heart. Here it increases the risk of heart attacks as arteries narrow and muscles weaken</h4>
+								</section>
+								<section fetch="uterus" class="content_sec">
+									<h1>Reproduction, babies and children</h1>
+									<h4>The harmful effects of dirty air shown in the review begin when the pollution is inhaled.</h4>
+									<h4>This results in breathing problems, from asthma to emphysema to lung cancer. There is now
+										overwhelming evidence that air pollution results in serious harm not only to the lungs, but also to
+										the heart. Here it increases the risk of heart attacks as arteries narrow and muscles weaken</h4>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="human-anatomy">
+				<img class="full-body" src="images/Silhouette.png" alt="">
+				<div class="organ-list ">
+					<div class="organ lungs">
+						<img src="images/01_Lungs_Heart.gif" alt="Lungs">
+					</div>
+					<div class="organ brain">
+						<img src="images/Brain-optimised.gif" alt="Brain">
+					</div>
+					<div class="organ liver">
+						<img src="images/Liver-optimised.gif" alt="Liver">
+					</div>
+					<div class="organ uterus">
+						<img src="images/Uterus-optimised.gif" alt="Uterus">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!--******************* Middle Section End ******************-->
+	<!--******************* Footer Section Start ******************-->
+	<footer>
+
+	</footer>
+	<!--******************* Footer Section End ******************-->
+	<!--Main Js Included-->
+	<script src="js/lib/jquery.js" type="text/javascript"></script>
+	<script src="js/modernizr.js" type="text/javascript"></script>
+	<script src="js/slick.js" type="text/javascript"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(document).on("scroll", function(event){
+				var scrollPos = $(document).scrollTop();
+				$('.section-list section').each(function () {
+					var currLink = $(this).attr('fetch');
+					var refElement = $('.'+currLink);
+
+					var top_of_element = $(this).offset().top;
+					var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+					var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+					var top_of_screen = $(window).scrollTop();
+
+					if ((bottom_of_screen > top_of_element) && (top_of_screen + 250 < bottom_of_element)){
+						// console.log($(this).attr('fetch') +'Element is in the viewport!');
+						// if($('.human-anatomy').attr('cuurrent-class') != $('.organ.active').hasClass($('.human-anatomy').attr('cuurrent-class'))){
+						if($('.organ.active').hasClass($('.human-anatomy').attr('cuurrent-class')) != true){
+							console.log('aama gyu');
+							$('.organ-list .organ').removeClass("active");
+							$('.human-anatomy').attr("cuurrent-class",currLink);
+							refElement.addClass("active");
+						}
+					} else {
+						// console.log($(this).attr('fetch') +'Element is NOT in the viewport!');
+						refElement.removeClass("active");
+					}
+
+
+					
+
+					
+					if (refElement.position().top <= scrollPos + 10 && refElement.position().top + refElement.height() > scrollPos) {
+						
+					}
+					else {
+						// $('.human-anatomy').attr("cuurrent-class",'none');
+						
+					}
+				});
+			});
+			$(document).scroll();
+		});		
+	</script>
+	<!--*********************** All End ************************-->
+</body>
+
+</html>

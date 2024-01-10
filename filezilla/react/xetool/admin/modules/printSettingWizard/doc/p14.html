@@ -1,0 +1,50 @@
+<div class="modal fade slide-right" id="p14" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body info-module-single">
+                <h4 class="info-module-title">
+                  How to set price for image/s uploaded by user?
+                </h4>
+                This price is added when your customer add their own image. You can also charge your customer for adding image on each side.<br><br>
+                To set image upload price,
+                <ol>
+                    <li>Open inkXE Admin.</li>
+                    <li>Go to <b>Print Profile</b> in the toolbar towards the left.</li>
+                    <li>Select your print profile and click on the edit icon.<img src="modules/printSettingWizard/doc/assets/editProfile.png" /></li>
+                    <li>In the new page, go to <b>Price Settings</b>.</li>
+                    <li> Under price settings, find <b>Image Upload Price</b> and enable it.</li>
+                    <li>A pop-up will appear where you need to enter number of sides and click update. Next, set price for each side.<br>
+                    -- <b>Calculate once per side</b> :<br>
+                        Price is calculated once irrespective to the number of images a user adds in a single side.<br>
+                    -- <b>Calculate multiple per side</b> :<br>
+                    Price is calculated every time a user adds an image in a single side.<img src="modules/printSettingWizard/doc/assets/p7_12.png" /></li>
+                    <li>Click <b>Save</b>.</li>
+                </ol>
+                Your image upload price will be enabled.
+                <br><br>
+                Example:<br>
+                1. <b>Calculate Once Per Side</b>:<br>
+                In inkXE Admin Number of Sides updated is 4 and for each side price is set as $1. When image is added on first side then the price will be $1 and in the second side two image is added then again $1 is calculated. So the Image Upload Price is $2.<br><br>
+
+                For First Side one image is added so the price will be  $1<br>
+                For Second Side two image is added so the price will be $1<br>
+                Then the Image Upload Price will be $2.<br><br>
+
+                So the price structure will be :<br><br>
+
+                Product Price + Image Upload Price = Total price ($20 + $2 = $22)<br><br>
+
+                2. <b>Calculate Multiple Per Side</b>:<br>
+                In inkXE Admin Number of Sides updated is 4 and for each side price is set as $1. When image is added on first side then the price will be $1 and in the second side two image is added then again $2 is calculated. So the Image Upload Price will be $3.<br><br>
+
+                For First Side one image is added so the price will be  $1<br>
+                For Second Side two image is added so the price will be $2<br>
+                Then the Image Upload Price will be $3.<br><br>
+
+                So the price structure will be :<br><br>
+
+                Product Price + Image Upload Price = Total price ($20 + $3 = $23)
+            </div>
+        </div>
+    </div>
+</div>

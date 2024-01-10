@@ -1,0 +1,818 @@
+/************************** font-face included ******************************/
+@font-face                                                                                                { font-family: 'Maven Pro ExtraBold'; src: url('../fonts/maven/MavenPro-ExtraBold.eot'); src: url('../fonts/maven/MavenPro-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../fonts/maven/MavenPro-ExtraBold.woff2') format('woff2'), url('../fonts/maven/MavenPro-ExtraBold.woff') format('woff'), url('../fonts/maven/MavenPro-ExtraBold.ttf') format('truetype'), url('../fonts/maven/MavenPro-ExtraBold.svg#MavenPro-ExtraBold') format('svg'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Maven Pro Black'; src: url('../fonts/maven/MavenPro-Black.eot'); src: url('../fonts/maven/MavenPro-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/maven/MavenPro-Black.woff2') format('woff2'), url('../fonts/maven/MavenPro-Black.woff') format('woff'), url('../fonts/maven/MavenPro-Black.ttf') format('truetype'), url('../fonts/maven/MavenPro-Black.svg#MavenPro-Black') format('svg'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Maven Pro Bold'; src: url('../fonts/maven/MavenPro-Bold.eot'); src: url('../fonts/maven/MavenPro-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/maven/MavenPro-Bold.woff2') format('woff2'), url('../fonts/maven/MavenPro-Bold.woff') format('woff'), url('../fonts/maven/MavenPro-Bold.ttf') format('truetype'), url('../fonts/maven/MavenPro-Bold.svg#MavenPro-Bold') format('svg'); font-weight: bold; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Maven Pro Regular'; src: url('../fonts/maven/MavenPro-Regular.eot'); src: url('../fonts/maven/MavenPro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/maven/MavenPro-Regular.woff2') format('woff2'), url('../fonts/maven/MavenPro-Regular.woff') format('woff'), url('../fonts/maven/MavenPro-Regular.ttf') format('truetype'), url('../fonts/maven/MavenPro-Regular.svg#MavenPro-Regular') format('svg'); font-weight: normal; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Maven Pro Medium'; src: url('../fonts/maven/MavenPro-Medium.eot'); src: url('../fonts/maven/MavenPro-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/maven/MavenPro-Medium.woff2') format('woff2'), url('../fonts/maven/MavenPro-Medium.woff') format('woff'), url('../fonts/maven/MavenPro-Medium.ttf') format('truetype'), url('../fonts/maven/MavenPro-Medium.svg#MavenPro-Medium') format('svg'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Maven Pro SemiBold'; src: url('../fonts/maven/MavenPro-SemiBold.eot'); src: url('../fonts/maven/MavenPro-SemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/maven/MavenPro-SemiBold.woff2') format('woff2'), url('../fonts/maven/MavenPro-SemiBold.woff') format('woff'), url('../fonts/maven/MavenPro-SemiBold.ttf') format('truetype'), url('../fonts/maven/MavenPro-SemiBold.svg#MavenPro-SemiBold') format('svg'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Airbnb Cereal App Black'; src: url('../fonts/airbnb/AirbnbCerealApp-Black.eot'); src: url('../fonts/airbnb/AirbnbCerealApp-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/airbnb/AirbnbCerealApp-Black.woff2') format('woff2'), url('../fonts/airbnb/AirbnbCerealApp-Black.woff') format('woff'), url('../fonts/airbnb/AirbnbCerealApp-Black.ttf') format('truetype'), url('../fonts/airbnb/AirbnbCerealApp-Black.svg#AirbnbCerealApp-Black') format('svg'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Airbnb Cereal App ExtraBold'; src: url('../fonts/airbnb/AirbnbCerealApp-ExtraBold.eot'); src: url('../fonts/airbnb/AirbnbCerealApp-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../fonts/airbnb/AirbnbCerealApp-ExtraBold.woff2') format('woff2'), url('../fonts/airbnb/AirbnbCerealApp-ExtraBold.woff') format('woff'), url('../fonts/airbnb/AirbnbCerealApp-ExtraBold.ttf') format('truetype'), url('../fonts/airbnb/AirbnbCerealApp-ExtraBold.svg#AirbnbCerealApp-ExtraBold') format('svg'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Airbnb Cereal App Light'; src: url('../fonts/airbnb/AirbnbCerealApp-Light.eot'); src: url('../fonts/airbnb/AirbnbCerealApp-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/airbnb/AirbnbCerealApp-Light.woff2') format('woff2'), url('../fonts/airbnb/AirbnbCerealApp-Light.woff') format('woff'), url('../fonts/airbnb/AirbnbCerealApp-Light.ttf') format('truetype'), url('../fonts/airbnb/AirbnbCerealApp-Light.svg#AirbnbCerealApp-Light') format('svg'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Airbnb Cereal App Bold'; src: url('../fonts/airbnb/AirbnbCerealApp-Bold.eot'); src: url('../fonts/airbnb/AirbnbCerealApp-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/airbnb/AirbnbCerealApp-Bold.woff2') format('woff2'), url('../fonts/airbnb/AirbnbCerealApp-Bold.woff') format('woff'), url('../fonts/airbnb/AirbnbCerealApp-Bold.ttf') format('truetype'), url('../fonts/airbnb/AirbnbCerealApp-Bold.svg#AirbnbCerealApp-Bold') format('svg'); font-weight: bold; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Airbnb Cereal App Book'; src: url('../fonts/airbnb/AirbnbCerealApp-Book.eot'); src: url('../fonts/airbnb/AirbnbCerealApp-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/airbnb/AirbnbCerealApp-Book.woff2') format('woff2'), url('../fonts/airbnb/AirbnbCerealApp-Book.woff') format('woff'), url('../fonts/airbnb/AirbnbCerealApp-Book.ttf') format('truetype'), url('../fonts/airbnb/AirbnbCerealApp-Book.svg#AirbnbCerealApp-Book') format('svg'); font-weight: normal; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Airbnb Cereal App Medium'; src: url('../fonts/airbnb/AirbnbCerealApp-Medium.eot'); src: url('../fonts/airbnb/AirbnbCerealApp-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/airbnb/AirbnbCerealApp-Medium.woff2') format('woff2'), url('../fonts/airbnb/AirbnbCerealApp-Medium.woff') format('woff'), url('../fonts/airbnb/AirbnbCerealApp-Medium.ttf') format('truetype'), url('../fonts/airbnb/AirbnbCerealApp-Medium.svg#AirbnbCerealApp-Medium') format('svg'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Montserrat-Black'; src: url('../fonts/monserrat/Montserrat-Black.eot'); src: url('../fonts/monserrat/Montserrat-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/monserrat/Montserrat-Black.woff2') format('woff2'), url('../fonts/monserrat/Montserrat-Black.woff') format('woff'), url('../fonts/monserrat/Montserrat-Black.ttf') format('truetype'), url('../fonts/monserrat/Montserrat-Black.svg#Montserrat-Black') format('svg'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Montserrat-Bold'; src: url('../fonts/monserrat/Montserrat-Bold.eot'); src: url('../fonts/monserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/monserrat/Montserrat-Bold.woff2') format('woff2'), url('../fonts/monserrat/Montserrat-Bold.woff') format('woff'), url('../fonts/monserrat/Montserrat-Bold.ttf') format('truetype'), url('../fonts/monserrat/Montserrat-Bold.svg#Montserrat-Bold') format('svg'); font-weight: bold; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Montserrat-ExtraBold'; src: url('../fonts/monserrat/Montserrat-ExtraBold.eot'); src: url('../fonts/monserrat/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../fonts/monserrat/Montserrat-ExtraBold.woff2') format('woff2'), url('../fonts/monserrat/Montserrat-ExtraBold.woff') format('woff'), url('../fonts/monserrat/Montserrat-ExtraBold.ttf') format('truetype'), url('../fonts/monserrat/Montserrat-ExtraBold.svg#Montserrat-ExtraBold') format('svg'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Montserrat-ExtraLight'; src: url('../fonts/monserrat/Montserrat-ExtraLight.eot'); src: url('../fonts/monserrat/Montserrat-ExtraLight.eot?#iefix') format('embedded-opentype'), url('../fonts/monserrat/Montserrat-ExtraLight.woff2') format('woff2'), url('../fonts/monserrat/Montserrat-ExtraLight.woff') format('woff'), url('../fonts/monserrat/Montserrat-ExtraLight.ttf') format('truetype'), url('../fonts/monserrat/Montserrat-ExtraLight.svg#Montserrat-ExtraLight') format('svg'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Montserrat-Light'; src: url('../fonts/monserrat/Montserrat-Light.eot'); src: url('../fonts/monserrat/Montserrat-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/monserrat/Montserrat-Light.woff2') format('woff2'), url('../fonts/monserrat/Montserrat-Light.woff') format('woff'), url('../fonts/monserrat/Montserrat-Light.ttf') format('truetype'), url('../fonts/monserrat/Montserrat-Light.svg#Montserrat-Light') format('svg'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Montserrat-Medium'; src: url('../fonts/monserrat/Montserrat-Medium.eot'); src: url('../fonts/monserrat/Montserrat-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/monserrat/Montserrat-Medium.woff2') format('woff2'), url('../fonts/monserrat/Montserrat-Medium.woff') format('woff'), url('../fonts/monserrat/Montserrat-Medium.ttf') format('truetype'), url('../fonts/monserrat/Montserrat-Medium.svg#Montserrat-Medium') format('svg'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Montserrat-Regular'; src: url('../fonts/monserrat/Montserrat-Regular.eot'); src: url('../fonts/monserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/monserrat/Montserrat-Regular.woff2') format('woff2'), url('../fonts/monserrat/Montserrat-Regular.woff') format('woff'), url('../fonts/monserrat/Montserrat-Regular.ttf') format('truetype'), url('../fonts/monserrat/Montserrat-Regular.svg#Montserrat-Regular') format('svg'); font-weight: normal; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Montserrat-Thin'; src: url('../fonts/monserrat/Montserrat-Thin.eot'); src: url('../fonts/monserrat/Montserrat-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/monserrat/Montserrat-Thin.woff2') format('woff2'), url('../fonts/monserrat/Montserrat-Thin.woff') format('woff'), url('../fonts/monserrat/Montserrat-Thin.ttf') format('truetype'), url('../fonts/monserrat/Montserrat-Thin.svg#Montserrat-Thin') format('svg'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face                                                                                                { font-family: 'Montserrat-SemiBold'; src: url('../fonts/monserrat/Montserrat-SemiBold.eot'); src: url('../fonts/monserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/monserrat/Montserrat-SemiBold.woff2') format('woff2'), url('../fonts/monserrat/Montserrat-SemiBold.woff') format('woff'), url('../fonts/monserrat/Montserrat-SemiBold.ttf') format('truetype'), url('../fonts/monserrat/Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg'); font-weight: 600; font-style: normal; font-display: swap; }
+/***************************** common styling ******************************/
+html                                                                                                      { overflow-x: hidden; scroll-behavior: smooth; }
+*                                                                                                         { margin: 0; padding: 0; }
+/******************************** typography *******************************/
+h1                                                                                                        { margin-bottom: 16px; font-size: 42px; line-height: 50px; text-transform: capitalize; font-family: 'Airbnb Cereal App Bold'; }
+h4                                                                                                        { font-size: 30px; line-height: 40px; font-family: 'Airbnb Cereal App Black'; }
+h5                                                                                                        { font-size: 25px; line-height: 32px; font-family: 'Airbnb Cereal App Bold'; text-transform: capitalize; }
+h6                                                                                                        { font-size: 20px; line-height: 26px; font-family: 'Airbnb Cereal App ExtraBold'; text-transform: capitalize; }
+p                                                                                                         { margin-bottom: 15px; font-size: 16px; line-height: 24px; }
+p.small-font                                                                                              { font-size: 14px; line-height: 20px;  }
+p.small-font strong,p strong                                                                              { font-family: 'Maven Pro ExtraBold'; }
+a                                                                                                         { display: inline-block; }
+a.common-link                                                                                             { padding-right: 25px; font-size: 16px; line-height: 24px; text-transform: capitalize; color: black; font-family: 'Maven Pro Medium'; position: relative; }
+a.common-link:after                                                                                       { content: ""; width: 11px; height: 11px; background: url(../images/arrow-right.svg) center center / cover no-repeat; position: absolute; top: 50%; transform: translateY(-50%); right: 0; }
+a.common-link:hover                                                                                       { opacity: 0.5; }
+span                                                                                                      { display: inline-block; }
+span                                                                                                      { margin-bottom: 8px; font-size: 12px; line-height: 22px; color: #ffffff; font-family: 'Airbnb Cereal App Black'; text-transform: uppercase; }
+button                                                                                                    { cursor: pointer; }
+/* common styling */
+body                                                                                                      { padding-top: 64px; background-color: white; margin: 0; overflow-x: hidden; font-size: unset; line-height: unset; font-family: 'Maven Pro Regular'; }
+img                                                                                                       { max-width: 100%; vertical-align: top; }
+button,button:focus,button:active                                                                         { background: transparent; border: none; outline: none; }
+ul ,li                                                                                                    { margin: 0; padding: 0; list-style: none; }
+.form-control:focus,input:focus                                                                           { color: unset; background-color: unset; outline: unset; box-shadow: unset; }
+a:focus,.slick-slide:focus                                                                                { outline-offset: unset; border: unset; box-shadow: unset; }
+:focus                                                                                                    { outline: unset; outline-offset: unset; }
+a,a:focus,a:active,a:hover                                                                                { text-decoration: none; }
+.color-magenta-pink,.project-box .project-info-box span,.news-info-box span,.news-info-box a:hover p,
+header .navbar-expand-lg .navbar-nav .nav-item.active .nav-link,footer .footer-navbox ul li a:hover,
+.project-box .project-info-box a:hover h5,
+header .navbar-expand-lg .navbar-nav .nav-item.active .nav-link,
+header .navbar-expand-lg .navbar-nav .nav-item .nav-link:hover,a h6:hover,.news-inner .news-image-area a:hover h1,
+header .social-links-navigation ul li a.nav-link:hover,footer .footer-social-links li a:hover                      { color: #931867; -webkit-transition: 0.3s; -o-transition:  0.3s ; transition: 0.3s; }
+a h1:hover                                                                                                { opacity: 0.8; }
+footer .newsletter-box .form-control::placeholder,.form-control::placeholder,
+.color-black,.project-box .project-info-box a h5,a h6                                                     { color: #000000; }
+a h1,.color-white                                                                                         { color: white; }
+.color-blue                                                                                               { color: #00487F; }
+.air-font                                                                                                 { margin-bottom: 8px; font-family: 'Airbnb Cereal App Black'; text-transform: uppercase; }
+.common-button                                                                                            { margin-top: 26px; min-width: 175px; padding: 14px; border: 1px solid #931867; display: inline-block; text-align: center; background: #931867; color: #ffffff; border-radius: 4px; -webkit-transition: 0.3s; -o-transition:  0.3s ; transition: 0.3s; font-size: 16px; line-height: 22px; font-family: 'Montserrat-Bold'; }
+.common-button:hover,.common-button:focus                                                                 { background: transparent; color: #931867; border: 1px solid #931867; }
+.common-bg                                                                                                { background: rgba(0, 72, 127,0.02); }
+.error-text                                                                                               { font-size: 12px; line-height: 12px; color: red; text-transform: capitalize; }
+/***************************** header section ******************************/
+header                                                                                                    { position: fixed; top: 0; left: 0; width: 100%; z-index: 7000; transition: all 0.3s; background-color: rgba(0, 72, 127,0.02); }
+header .navbar                                                                                            { padding: 10px 38px; position: relative; transition: .6s; background: rgba(147, 24, 103, 0.02); }
+header .navbar .navbar-brand                                                                              { padding: 0; margin: 0; }
+header .navbar-expand-lg .navbar-nav .nav-item .nav-link                                                  { padding: 0; margin: 0 16px; font-size: 14px; line-height: 17px; color: #000000; font-family: 'Maven Pro Medium'; -webkit-transition: 0.3s; -o-transition:  0.3s ; transition: 0.3s;  text-transform: capitalize; }
+header .social-links-navigation ul li a.nav-link                                                                   { padding: 0; margin: 0 12.5px; font-size: 17px; line-height: 17px; color: #000000; -webkit-transition: 0.3s; -o-transition:  0.3s ; transition: 0.3s; }
+header .social-links-navigation ul li:last-child a.nav-link                                                        { margin-left: 72px; margin-right: 0; }
+header .navbar .navbar-nav                                                                                { margin-right: 55.5px; }
+header .navbar-toggler                                                                                    { padding: 0; font-size: 19px; line-height: 17px; border: unset; margin-bottom: 0; }
+header .navbar .navbar-toggler-icon                                                                       { margin-left: 15px; margin-bottom: 0; margin-top: 5px; height: unset; width: unset; }
+.navbar-toggler-icon .icon-bar                                                                            { margin-bottom: 4px; display: block; width: 22px; height: 3px; border-radius: 1px; background: #931867; }
+.header-search input::placeholder                                                                         { opacity: 1; color: black; }
+.social-link-navigation                                                                                   { margin-top: 20px; }
+header.sticky                                                                                             { background: white; box-shadow: 0px 3px 8px rgba(0,0,0,0.2); -webkit-box-shadow:0px 3px 8px rgba(0,0,0,0.2) ; -o-box-shadow:0px 3px 8px rgba(0,0,0,0.2); }
+/****************************** banner section *****************************/
+.banner-sec                                                                                               { background: url(../images/banner.png) center center / cover no-repeat; }
+/* height: auto; min-height: 100vh; */
+.banner                                                                                                   { padding: 167px 0 118px;  box-sizing: border-box; display: flex; -webkit-display:flex; -o-display:flex; align-items: center; position: relative; color: white; }
+.banner::after                                                                                            { content: ""; width: 100%; height: 100%; background: linear-gradient(rgba(19, 40, 74,0),rgba(19, 40, 74,1)); display: block; position: absolute; bottom: 0; left: 0; }
+.banner-box                                                                                               { padding: 28px 0 45px 0; margin-right: 57px; border-top: 2px solid #ffffff; z-index: 1; position: relative; }
+.banner-box h1                                                                                            { font-family: 'Airbnb Cereal App Black'; }
+.banner-box p                                                                                             { margin-bottom: 0; font-family: 'Maven Pro Medium'; }
+.recent-post-slider                                                                                       { margin: 0 -15px; }
+.recent-post-slider .post-box                                                                             { padding-top: 15px; margin: 0 15px; border-top: 2px solid rgba(255, 255, 255,0.7); }
+p.small-font.number-text                                                                                  { margin-bottom: 9px; font-family: 'Airbnb Cereal App Bold'; font-size: 17px; opacity: 0.7; }
+p.small-font.post-info                                                                                    { margin-bottom: 9px; font-family: 'Airbnb Cereal App Bold'; line-height: 18px; opacity: 0.7; }
+.banner .common-button:hover                                                                              { border-color: white; color: white; }
+.recent-post-box                                                                                          { z-index: 4; position: relative; }
+.recent-post-slider .slick-slide.slick-current.slick-active .post-box                                     { border-color: white; }
+.recent-post-slider .slick-slide.slick-current.slick-active p.small-font.number-text,
+.recent-post-slider .slick-slide.slick-current.slick-active p.small-font.post-info                        { opacity: 1; }
+.recent-post-slider .slick-prev,.recent-post-slider .slick-next                                           { top: calc(100% + 72px); left: 15px; opacity: 1; }
+.recent-post-slider .slick-next                                                                           { left: 105px; }
+.recent-post-slider .slick-prev::before,
+.recent-post-slider .slick-next::before                                                                   { content: ""; width: 90px; height: 56px; opacity: 1; background: #EFEFEF url(../images/arrow-right.svg) center center no-repeat; display: block; }
+.recent-post-slider .slick-prev::before                                                                   { transform: rotate(180deg);}
+/******************************** map section ******************************/
+.our-projects  .map-section                                                                               { padding: 47px 0; }                               
+.map-section                                                                                              { padding: 102px 0 60px; }
+/***************************** projects section ****************************/
+.project-section                                                                                          { padding: 0 0 135px; }
+.project-title                                                                                            { padding: 0 0 25px; margin: 0 0 30px; border-bottom: 2px solid #000000; }
+.main-tab.nav-tabs                                                                                        { margin-bottom: 22px; border: unset; }
+.main-tab.nav-tabs li a                                                                                   { padding: 13px; margin-right: 40px; min-width: 154px; font-size: 15px; line-height: 19px; border: 1px solid transparent; display: inline-block; text-align: center;  font-family: 'Airbnb Cereal App Black'; color: #000; transition: 0.6s; background: #F1F1F1; border-radius: 25px; box-shadow: 0px 3px 6px rgba(0,0,0,0.2); -webkit-box-shadow:0px 3px 6px rgba(0,0,0,0.2) ; -o-box-shadow:0px 3px 6px rgba(0,0,0,0.2); text-transform: capitalize;  }
+.main-tab.nav-tabs li:last-child a                                                                        { margin-right: 0; }
+.main-tab.nav-tabs li a:hover,
+.main-tab.nav-tabs li a.active,.main-tab.nav-tabs li a:hover                                              { background: #931867; border: 1px solid #931867; box-shadow: 0 3px 6px rgba(147, 24, 103, 0.51) ; color: #ffffff; }
+.nested-tabs                                                                                              { margin-bottom: 34px; border: unset; }
+.nested-tabs.nav-tabs li a                                                                                { margin-right: 26px; font-size: 15px; line-height: 19px; color: rgba(0, 0, 0,0.5); font-family: 'Airbnb Cereal App Bold'; text-decoration: underline; text-transform: capitalize; }                         
+.nested-tabs.nav-tabs li a.active                                                                         { color: rgba(0, 0, 0, 1); }
+.project-box                                                                                              { position: relative; box-shadow: 0px 3px 20px rgba(0,0,0,0.2); -webkit-box-shadow:0px 3px 20px rgba(0,0,0,0.2) ; -o-box-shadow:0px 3px 20px rgba(0,0,0,0.2); border-radius: 10px; height: 100%; }
+.project-box .project-image-box                                                                           { padding-top: 50%; border-radius: 10px; display: block; height: calc(100% - 185px); }
+.project-box .project-info-box                                                                            { padding: 40px; height: 185px; }
+.project-box .project-info-box span                                                                       { margin-bottom: 10px; }  
+.project-box .project-info-box h5                                                                         { min-height: 73px; max-width: 306px; z-index: 3; position: relative; }                                          
+.parent                                                                                                   { margin: -20px; }
+.parent > div                                                                                             { width: calc(( 100% / 2 ) - 40px); margin: 20px; float: left; }
+.parent > div:nth-child(6n+2)                                                                             { float: right; }
+.parent > div:nth-child(6n+2) .project-box .project-image-box,
+.parent > div:nth-child(6n+4) .project-box .project-image-box                                             { padding-top: calc(100% + 225px); }                                                                       
+/***************************** projects section ****************************/
+.video-section                                                                                            { padding: 118px 0 223px; color: white; background: linear-gradient( 135deg, #00487F,#931867 70%);}
+.video-section .video-title                                                                               { margin-bottom: 24px; text-transform: capitalize; }
+.slider-box                                                                                               { padding-left: 137px; padding-right: 0px; }
+.video-slide                                                                                              { padding-top: 50%; width: 866px; margin-right: 39px; border-radius: 10px; position: relative;  overflow: hidden; }
+.video-slide .video-info                                                                                  { padding: 57px 48px; position: absolute; bottom: 0; left: 0; z-index: 1; width: 100%; height: 100%; display: flex; -webkit-display:flex; -o-display:flex; align-items: flex-end; background-image: linear-gradient(to right , rgba(0,0,0,1), rgba(0,0,0,0)); }
+.video-slide p                                                                                            { color: rgba(255, 255, 255, 0.53); }
+.video-slide h1,.slick-dotted.slick-slider                                                                { margin-bottom: 0; }
+.arrow-slider .slick-next,.arrow-slider .slick-prev,
+.video-slider .slick-next,.video-slider .slick-prev                                                       { top: -69px; right: 200px; width: 44px; height: 44px; background: #EFEFEF url(../images/arrow-right.svg) center center / 12px 12px no-repeat; transform: rotate(0deg) translateY(0%); border-radius: 50%; }
+.arrow-slider .slick-prev,
+.video-slider .slick-prev                                                                                 { left: unset; right: 257px; transform: rotate(-180deg) translateY(0%); -webkit-transform: rotate(-180deg) translateY(0%); -o-transform: rotate(-180deg) translateY(0%); }
+.arrow-slider .slick-prev::before,
+.slick-prev::before,.slick-next::before                                                                   { content: "";  }
+.video-slider .slick-dots                                                                                 { position: relative; bottom: -57px; text-align: left; display: flex; -webkit-display:flex; -o-display:flex; -webkit-display:flex; -o-display:flex; align-items: center; justify-content: space-between; }
+.video-slider .slick-dots li                                                                              { width: unset; height: unset; margin-left: 0px; margin-right: 100px; }
+.video-slider .slick-dots li button                                                                       { font-size: 17px; line-height: 38px; width: 38px; height: 38px; font-family: 'Montserrat-Bold'; padding: 0; text-align: center; color: white; border: 1px solid transparent; opacity: 0.20; border-radius: 50%; }
+.arrow-slider .slick-dots li button::before,
+.video-slider .slick-dots li button::before                                                               { content: ""; position: unset; } 
+.video-fancy-box                                                                                          { width: 62px; height: 62px; background: rgba(255,255,255,0.7); border-radius: 50%; display: flex; -webkit-display:flex; -o-display:flex; align-items: center; justify-content: center; position: absolute; top: 50%; left: 50%; transform: translate(-50% , -50%); }
+.video-fancy-box:hover                                                                                    { background: #931867; }
+.slider-box .scroll-text                                                                                  { padding-right: 20px; position: absolute; top: 183px; left: 0px; transform: rotate(270deg); text-transform: uppercase; }
+.slider-box .scroll-text::after                                                                           { position: absolute; content: ""; width: 75px; height: 0; border-top: 1px solid white; right: -75px; top: calc(50% - 0.5px);   }                                                                
+.project-slider-section .slick-prev:hover, .project-slider-section .slick-next:hover,
+.arrow-slider .slick-next:hover,.arrow-slider .slick-prev:hover,
+.video-slider .slick-prev:hover,.video-slider .slick-next:hover                                           { background-color: rgba(162, 56 ,124, 21%); }
+.video-slider .slick-dots li.slick-active button                                                          { border: 1px solid white; line-height: 30px; opacity: 1; }
+.video-slide h1                                                                                           { max-width: 390px; }
+.video-date                                                                                               { text-transform: capitalize; }
+/****************************** news section *******************************/  
+.news-section                                                                                             { padding: 105px 0 80px; }
+.news-title                                                                                               { display: inline-block; padding-bottom: 14px; margin-bottom: 43px; border-bottom: 1px solid #931867; }
+.news-box                                                                                                 { height: 100%; display: block; border-radius: 10px; overflow: hidden; position: relative; }
+.news-box::after                                                                                          { content: ""; width: 100%; height: 65%; background: linear-gradient(rgba(19, 40, 74,0),rgba(19, 40, 74,1)); display: block; position: absolute; bottom: 0; left: 0; }
+.news-box a h5                                                                                            { z-index: 3; position: relative; color: #ffffff;}
+.news-box a h5:hover                                                                                      { opacity: 0.8; }  
+.news-item                                                                                                { padding-bottom: 13px; margin-bottom: 13px; border-bottom: 1px solid rgba(10, 38, 55,0.1); }
+ul .news-item:last-child                                                                                  { padding-bottom: 0; margin-bottom: 0; border-bottom:unset; }
+ul .news-item:last-child .news-info-box                                                                   { padding-bottom: 0; }
+.news-image-box                                                                                           { width: 138px; padding-top: 102px; display: block; margin-right: 0px; border-radius: 6px;  position: relative; }
+.news-info                                                                                                { padding: 57px 48px; position: absolute; bottom: 0; left: 0; z-index: 1; }
+.news-info-box                                                                                            { width: calc(100% - 138px); padding: 10px; }
+.news-info-box p                                                                                          { margin-bottom: 0; font-family: 'Airbnb Cereal App Black'; color: black; text-transform: capitalize; }
+.link-box                                                                                                 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }                                                                     
+.news-info span                                                                                           { text-transform: uppercase; }
+/****************************** contact section ****************************/
+.contact-us                                                                                               { padding: 100px 0 105px; }
+.contact-info-text                                                                                        { padding-left: 60px; }
+/***************************** footer section ******************************/
+footer                                                                                                    { padding: 75px 0 90px; }
+footer p.footer-title                                                                                     { padding-bottom: 14px; margin-bottom: 25px; line-height: 18px; font-family: 'Airbnb Cereal App Black'; text-transform: capitalize; border-bottom: 1px solid #000000; }
+footer .footer-navbox ul li a                                                                             { margin-bottom: 15px; display: inline-block; font-size: 14px; line-height: 14px; color: #000000; font-family: 'Maven Pro Medium'; -webkit-transition: 0.3s; -o-transition:  0.3s ; transition: 0.3s; text-transform: capitalize; }
+footer .newsletter-box                                                                                    { position: relative; }
+footer .newsletter-box button                                                                             { padding-right: 12px; position: absolute; top: 0; right: 0; cursor: pointer; }
+footer .newsletter-box .form-control                                                                      { padding: 0 38px 12px 0; background: transparent; box-shadow: unset; border: unset; border-bottom: 1px solid #000000; border-radius: 0; font-size: 14px; line-height: 18px; font-family: 'Maven Pro Medium'; }
+footer .footer-social-links                                                                               { margin: 0 -20px; }
+footer .footer-social-links li                                                                            { margin: 0 20px; }
+footer .footer-social-links li a                                                                          { font-size: 17px; line-height: 17px; color: #000000; }
+/***************************** lifestyle page ******************************/
+.lifestyle .project-section,.project-section.search-page                                                  { padding: 94px 0 128px; }
+.lifestyle .main-tab.nav-tabs                                                                             { margin-bottom: 89px; }
+/*************************** lifestyle page end ****************************/
+/********************************* news page *******************************/
+.news.lifestyle .project-box                                                                              { box-shadow: unset; }
+.news.lifestyle .project-image-box                                                                        { position: relative; }
+.news.lifestyle .video-fancy-box                                                                          { background: rgba(255, 255, 255, 0.67); }
+.news.lifestyle .video-fancy-box:hover                                                                    { background: #931867; }
+.news.lifestyle .project-title                                                                            { margin-bottom: 77px; }
+.news.lifestyle .project-box .project-info-box                                                            { padding: 40px 15px 0 12px; }
+.news.lifestyle .project-box .project-info-box span                                                       { color: black; }
+.news.lifestyle .project-box .project-info-box h5                                                         { max-width: 398px; }
+.news-link                                                                                                { display: block; }
+.news .parent > div:nth-child(4n)                                                                         { width: calc(100% - 40px); }
+.news .parent > div:nth-child(4n) .project-box .project-image-box                                         { padding-top: 40%; }  
+.news .parent .empire-grid:nth-child(3n + 2) .project-image-box                                           { padding-top: calc(100% + 225px); }
+.news .parent > div:nth-child(4n)                                                                         { width: calc(100% - 40px); }                                                    
+/******************************* news page end *****************************/
+.news-inner .news-image-area                                                                              { padding-top: 30%; position: relative; }
+.news-inner .news-image-area::after                                                                       { content: ""; width: 100%; height: 88%; background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)); display: block; position: absolute; bottom: 0; left: 0;  }
+.news-inner .news-image-area p                                                                            { margin-bottom: 10px; color: white; text-transform: uppercase; font-family: 'Airbnb Cereal App Black'; }
+.news-inner .news-image-area h1                                                                           { margin: 0; max-width: 650px; font-size: 50px; line-height: 58px; color: #ffffff; font-family: 'Airbnb Cereal App ExtraBold'; }
+.news-inner .news-heading-area                                                                            { padding-bottom: 78px; position: absolute; bottom: 0; left: 0; z-index: 3; }
+.news-desc                                                                                                { padding: 94px 0 124px; }
+.news-desc .inner-img                                                                                     { padding-top: 39%; margin: 75px 0 89px; border-radius: 10px; }
+/* news-slider styling */
+.news-slider                                                                                              { padding-left: 125px; padding-bottom: 123px; }
+.news-slider .project-box                                                                                 { margin: 0 18px 20px; width: 441px; }
+.news-slider .project-box .project-image-box                                                              { height: unset; padding-top: 53%; position: relative; }
+.news-slider .project-box .project-image-box .video-fancy-box                                             { width: 50px; height: 50px; background: rgba(255, 255, 255, 0.67); }
+.news-slider .project-box .project-image-box .video-fancy-box img                                         { width: 12px; }
+.news-slider .project-box .project-image-box .video-fancy-box:hover                                       { background: #931867; }
+.news-slider .project-box .project-info-box                                                               { padding: 48px 27px; height: unset; }
+.news-slider .project-box .project-info-box h6                                                            { max-width: 235px; margin: 0; }
+[tabindex="-1"]:focus                                                                                     { outline: unset !important; }        
+.news-slider .project-box .project-info-box span                                                          { color: #000; }                                                                         
+/******************************* about us page *****************************/
+.about-us  h1                                                                                             { margin-bottom: 37px; }
+.about-us .news-desc                                                                                      { padding: 74px 0 109px; }
+.about-us .news-slider .project-box                                                                       { margin-right: 20px; width: 388px; }
+.about-us .inner-item                                                                                     { position: relative;  }
+.about-us .news-desc .inner-img                                                                           { margin: 55px 0 70px; position: relative; z-index: 2; }
+.about-us .news-desc .inner-item::after                                                                   { content: ""; height: 102px; width: 102px; background: url(../images/dots.svg) center center / cover no-repeat; position: absolute; top: 0; left: 0; transform: translate(-50%,-50%); }
+.about-us .news-desc .inner-item::before                                                                  { content: ""; height: 102px; width: 102px; background: url(../images/dots.svg) center center / cover no-repeat; position: absolute; bottom: 0; right: 0; transform: translate(50%,50%);}
+.news-slider h5,.about-us h5                                                                              { margin-bottom: 30px; }
+.bottom-box                                                                                               { margin-top: 18px; padding-top: 18px; display: inline-block; border-top: 2px solid black; }
+.about-us .regard-text                                                                                    { margin-bottom: 10px; font-family: 'Montserrat-Regular'; }
+.about-us .author-text                                                                                    { margin: 0; font-family: 'Airbnb Cereal App Black'; }
+.about-us .news-slider .project-box .project-info-box span                                                { color: #931867; }
+.related-news-slider .slick-list                                                                          { margin: 0 -20px; }
+.fancybox-is-open .fancybox-bg                                                                            { opacity: 0.8; }
+.fancybox-bg                                                                                              { background: #ffffff; }
+.fancybox-slide--html .fancybox-content                                                                   { border-radius: 10px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); padding: 0; min-width: 1184px; }
+.fancybox-slide--html .fancybox-content h4                                                                { padding: 32px 0px 32px 52px; max-width: 570px; margin: 0; }
+.fancybox-slide--html .fancybox-content .popup-fancy-image                                                { padding: 19%; }
+.fancybox-slide--html .fancybox-close-small                                                               { color: currentColor; padding: 0px; right: 20px; top: 20px; }
+/******************************* about us end page *************************/
+/******************************* contact us page ***************************/
+.contact-section                                                                                          { padding: 107px 0 91px; background: rgba(147, 24, 103, 0.02) url(../images/contact.png) 90% 30px no-repeat; background-size: 56% auto; }
+.contact-section  h1,.contact-section  h1 span                                                            { margin-bottom: 30px; font-size: 50px; line-height: 65px; color: black; position: relative; text-transform: capitalize; font-family: 'Maven Pro ExtraBold'; }
+.contact-section  h1 span::after                                                                          { content: ""; width: calc(100% + 10px); height: 0; border-top: 10px solid rgba(147, 24, 103, 0.51); border-radius: 5px; position: absolute; bottom: 10px; z-index: -1; display: block; right: -5px; }
+.contact-desc p,.contact-desc a                                                                           { margin-bottom: 5px; font-family: 'Maven Pro Medium'; }
+.contact-section .contact-link                                                                            { color: black; }
+.contact-section .contact-link:hover                                                                      { color: #931867; }
+.contact-desc .dubai-box                                                                                  { margin-top: 50px; }
+.form-control                                                                                             { padding: 15px 24px; margin-bottom: 10px; font-size: 14px; color: black; line-height: 14px; font-family: 'Maven Pro Medium'; border-radius: 10px; resize: none; border-color: white; box-shadow: 0px 3px 20px rgba(0,0,0,0.2); -webkit-box-shadow:0px 3px 20px rgba(0,0,0,0.2) ; -o-box-shadow:0px 3px 20px rgba(0,0,0,0.2); }
+.form-control:focus                                                                                       { background: white; border-color: #931867 }
+.form-control::placeholder                                                                                { text-transform: capitalize; }
+/***************************** contact us end page *************************/
+/***************************** careers page ********************************/
+.jobs-section                                                                                             { padding: 77px 0 118px; }
+.jobs-section .jobs-list li .jobs-item                                                                    { margin-bottom: 30px; padding: 30px; box-shadow: 0 2px 30px rgba(0, 0, 0, 0.07); border-radius: 10px; position: relative; }
+.jobs-section .jobs-list li .jobs-item h5                                                                 { margin: 0; max-width: 314px; min-height: 73px; }
+.jobs-section .checkbox-list li .custom-control                                                           { min-height: unset; padding-left: 0px; }
+.jobs-section .checkbox-list li:last-child                                                                { margin-right: 0; }
+.jobs-section .checkbox-list li label                                                                     { padding: 13px 17px; min-width: 154px; margin-right: 39px; margin-bottom: 60px;  background: #F1F1F1; border-radius: 21px; box-shadow: 0px 3px 6px rgba(0,0,0,0.2); -webkit-box-shadow:0px 3px 6px rgba(0,0,0,0.2) ; -o-box-shadow:0px 3px 6px rgba(0,0,0,0.2); text-align: center; position: relative; font-family: 'Airbnb Cereal App Black'; color: black; font-size: 15px; line-height: 19px; }
+.jobs-section .checkbox-list li input                                                                     { height: 100%; width: 100%; top: 0; left: 0; }
+.jobs-section .checkbox-list li .custom-control-label::after,
+.jobs-section .checkbox-list li .custom-control-label::before                                             { width: 20px; height: 20px; top: 50%; transform: translateY(-50%); left: 16px; background: #F1F1F1; }
+.custom-checkbox .custom-control-input:checked~.custom-control-label                                      { background: #931867; padding-left: 40px; -webkit-transition: 0.3s; -o-transition:  0.3s ; transition: 0.3s; color: white; }
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before                              { background: transparent; box-shadow: unset; border: unset; }
+input[type="checkbox" i]:focus                                                                            { outline-offset: unset; }
+.custom-control-input:focus~.custom-control-label::before                                                 { box-shadow: unset; }
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after                               { background-size:16px 11px; background: url(../images/right.svg) center center no-repeat; }
+/****************************** careers page end ***************************/
+/*********************** careers contact page ******************************/
+.careers-contact-section                                                                                  { padding: 101px 0 92px; }
+.careers-contact-section h1                                                                               { margin-bottom: 30px; }
+.careers-contact-section h5                                                                               { margin-bottom: 14px; }
+select.form-control:not([size]):not([multiple])                                                           { height: unset; }
+.file-input                                                                                               { position: absolute; left: 0; top: 0; height: 100%; width: 100%; cursor: pointer; opacity: 0; }
+.file-drop-area span                                                                                      { font-size: 14px; line-height: 14px;  font-family: 'Maven Pro Medium'; color: black; text-transform: capitalize; }
+.upload-file-data                                                                                         { background: url(../images/file-pin.svg) 98% no-repeat; background-size: 21px 21px; }
+.jcf-select                                                                                               { padding: 10px 14px; width: 100%; margin: 0; height: 100%;  border-radius: 10px; resize: none; border-color: white; border:unset; box-shadow: 0px 3px 20px rgba(0,0,0,0.2); -webkit-box-shadow:0px 3px 20px rgba(0,0,0,0.2) ; -o-box-shadow:0px 3px 20px rgba(0,0,0,0.2); }
+.jcf-select-text span,.jcf-list .jcf-option                                                               { margin: 0; font-size: 14px; color: black; line-height: 14px; font-family: 'Maven Pro Medium'; text-transform: capitalize; }
+.jcf-select .jcf-select-opener                                                                            { margin: 0; background: url(../images/select.svg) left center  no-repeat; background-size: 15px 8px; }
+.jcf-focus, .jcf-focus *                                                                                  { border: unset; }
+.jcf-select-drop .jcf-select-drop-content                                                                 { border-color: #931867; border-radius: 5px; }
+.jcf-list .jcf-option                                                                                     { padding: 8px 10px;  }
+.jcf-select-drop .jcf-hover, .jcf-list-box .jcf-selected                                                  { background: #931867; color: white; }
+.jcf-list,.jcf-list .jcf-list-content                                                                     { margin: 0; }
+/*********************** careers contact page end **************************/
+/***************************** careers inner page **************************/
+.careers-inner-section                                                                                    { padding: 79px 0 92px; }
+.careers-inner-section  h1                                                                                { margin-bottom: 21px; }
+.careers-inner-section .job-detail-box                                                                    { margin-top: 50px; }
+/*********************** careers inner end page ****************************/
+/***************************** project page ********************************/
+.project.project-section                                                                                 { padding: 98px 0 77px; background: rgba(147, 24, 103, 0.02); }
+.project.project-section .project-info-box                                                               { padding-left: 50px; }
+.project-section h1                                                                                       { max-width: 365px; }
+.project-section p                                                                                        { font-family: 'Maven Pro Medium'; }
+.project-section .project-desc                                                                            { width: calc(50% - 20px); padding-top: 40px; border-top: 1px solid rgba(0, 0, 0,0.5); }
+.project-section .project-brief                                                                           { margin-right: 20px; }
+.project-section .project-add-info                                                                        { margin-left: 20px; }
+.project-section .project-detail-list li p                                                                { margin-bottom: 7px; }
+.project-slider-section                                                                                   { padding: 63px 0 142px; }
+.project-slide-area                                                                                       { margin: 0 12.5px 30px; padding-top: 50%; border-radius: 10px; position: relative; }
+.project-slider-section .slick-prev                                                                       { width: 44px; height: 44px; background: #EFEFEF url(../images/arrow-left.svg) center center / 12px 12px no-repeat;  border-radius: 50%; display: block; top: calc(100% + 10px); left: 47%; transform: translateX(-47%); -webkit-transform: translateX(-47%); -o-transform: translateX(-47%); }
+.project-slider-section .slick-next                                                                       { top: calc(100% + 10px); width: 44px; height: 44px; background: #EFEFEF url(../images/arrow-right.svg) center center / 12px 12px no-repeat;  border-radius: 50%; display: block; right: auto; left: 53%; transform: translateX(-53%); -webkit-transform: translateX(-53%); -o-transform: translateX(-53%); }
+/* search functiobnality */
+.search-form.open, .autocomplete-container.open                                                           { opacity: 1; visibility: visible; }
+.search-form.open                                                                                         { z-index: 5; }
+.search-form, .autocomplete-container                                                                     { padding: 23px 29px 15px 20px; background-color: #f9f9f9; border-radius: 4px; position: absolute; width: 530px; opacity: 0; visibility: hidden; transition: all .3s ease-in-out; right: 0; transition: .5s; }
+.search-form.open .form-group                                                                             { width: 100%; }
+.search-form                                                                                              { top: 100%; }
+.search-form.form-inline .form-control                                                                    { border: unset; padding: 10px; color: #000; background: #EFEFEF; box-shadow: unset; width: 100%; }
+.search-form.open + .autocomplete-container.open                                                          { margin-top: 85px; } 
+.autocomplete-container                                                                                   { max-height: 600px; overflow-y: auto; }
+.autocomplete-container                                                                                   { right: 0; }
+.list-group                                                                                               { margin-bottom: 40px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding-left: 0; }
+header .list-group .searchitem .search-info-box a                                                         { margin: 0; }
+.list-group .searchitem .search-image-box                                                                 { width: 35%; padding-top: 28%; margin: 0; border-radius: 10px; }
+.searchitem                                                                                               { margin-top: 12px; padding: 18px 11px; display: flex; border-radius: 10px; overflow: hidden; box-shadow: 0px 3px 8px rgba(0,0,0,0.2); -webkit-box-shadow: 0px 3px 8px rgba(0,0,0,0.2); -o-box-shadow: 0px 3px 8px rgba(0,0,0,0.2); }
+.search-info-box                                                                                          { width: 65%; margin: 0; padding: 0px 0px 0 10px; }
+header .list-group .searchitem .search-info-box span                                                      { color: #931867; }
+header .list-group .searchitem .search-info-box a.common-link                                             { padding-right: 25px; font-size: 13px; line-height: 17px; }
+header .list-group .searchitem .search-info-box h6                                                        { margin-bottom: 15px; font-family: 'Airbnb Cereal App Medium'; }
+.dropdown-item:focus, .dropdown-item:hover                                                                { color: #fff; text-decoration: none; background-color: #931867; }
+.dropdown-menu                                                                                            { padding: 0; margin-top: 22px; border-color: #931867; overflow: hidden; }
+.dropdown-item                                                                                            { padding: 10px; }
+header .list-group.news-listing .searchitem .search-info-box span                                         { color: #000000; }
+.autocomplete-container a.common-button                                                                   { min-width: 136px; padding: 7px; }
+/***************************** project page end ****************************/
+/* search detail part */
+.search-detail-part                                                                                       { padding: 92px 0 25px; }
+.search-detail-part h1                                                                                    { margin-bottom: 9px; font-family: 'Airbnb Cereal App ExtraBold'; }
+.search-detail-part h6                                                                                    { margin-bottom: 41px; font-family: 'Maven Pro Medium'; font-size: 18px; line-height: 21px; }
+.search-detail-part .form-control                                                                         { margin-right: 3px; padding: 10px 24px; border: 1px solid #ffffff; box-shadow: 0 3px 20px rgba(0, 0, 0, 0.07); }
+.search-detail-part .common-button                                                                        { margin-left: 3px; min-width: 136px; padding: 7px; }
+/*********************** ******* media queries ******************************/
+@media (min-width: 1366px)                                                                                { 
+    .container                                                                                            { max-width: 1185px; }
+}
+@media (min-width: 1200px) and (max-width: 1365px) {
+    header section
+    header .navbar-expand-lg .navbar-nav .nav-item .nav-link                                              { margin: 0 12px; }
+    header .social-links-navigation ul li:last-child a.nav-link                                                    { margin-left: 30px; }
+    header .social-links-navigation ul li a.nav-link                                                               { margin: 0 8px; }
+    /* banner section */
+    /* news section */
+    .news-box                                                                                             { padding: 77% 0 0; }
+    .news-info                                                                                            { padding: 25px 30px; }
+    /* video section */
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* common styling */
+    /* typography */
+    h1,.contact-section h1,.contact-section h1 span                                                       { font-size: 34px; line-height: 44px; } 
+    h5                                                                                                    { font-size: 22px; line-height: 32px; }
+    p                                                                                                     { margin-bottom: 12px; }
+    /* header section */
+    header .navbar                                                                                        { padding: 10px 15px; }
+    header .navbar-expand-lg .navbar-nav .nav-item .nav-link                                              { margin: 0 10px; }
+    header .social-links-navigation ul li:last-child a.nav-link                                                    { margin-left: 8px; }
+    header .social-links-navigation ul li a.nav-link                                                               { margin: 0 8px; }
+    header .navbar .navbar-nav                                                                            { margin-right: 32.5px; }
+    /* banner section */
+    .banner                                                                                               { height: auto; }
+    .banner-box                                                                                           {  margin-right: 0; }
+    /* news section */
+    .news-info                                                                                            { padding: 25px 30px; }
+    .news-image-box                                                                                       { width: 100px; padding-top: 70px; }
+    .news-info-box                                                                                        { padding: 4px 10px; width: calc(100% - 100px); }
+    .news-item                                                                                            { padding-bottom: 7px; margin-bottom: 7px; }
+    .news-info-box p                                                                                      { font-size: 14px; line-height: 24px; }
+    /* project section */
+    .parent                                                                                               { grid-auto-rows: 360px 500px; }
+    .project-box .project-image-box                                                                       { height: calc(100% - 141px); } 
+    .project-box .project-info-box,.news.lifestyle .project-box .project-info-box                         { padding: 22px 18px; height: 141px; }
+    a.common-link                                                                                         { padding-right: 17px; font-size: 14px; line-height: 20px; }
+    /* video section */
+    .video-slide                                                                                          { width: 700px; }
+    .video-slide h1                                                                                       { max-width: 310px; }
+    .video-slide .video-info                                                                              { padding: 20px 30px; }
+    .video-slider .slick-dots li                                                                          { margin-right: 70px; }
+    .arrow-slider .slick-next,.arrow-slider .slick-prev,
+    .video-slider .slick-next,.video-slider .slick-prev                                                   { right: 70px; }
+    .arrow-slider .slick-prev,.video-slider .slick-prev                                                   { right: 130px; } 
+    /* news inner page */
+    .news-inner .news-heading-area                                                                        { padding-bottom: 58px; }
+    .news-desc                                                                                            { padding: 70px 0 90px; }
+    .parent > div:nth-child(6n+2) .project-box .project-image-box, 
+    .parent > div:nth-child(6n+4) .project-box .project-image-box,                                   
+    .news .parent .empire-grid:nth-child(3n+2) .project-image-box                                         { padding-top: calc(100% + 141px + 40px); }
+    .news-slider                                                                                          { padding-left: 100px; padding-bottom: 100px; }
+    .news.lifestyle .project-box .project-info-box h5                                                     { max-width: 309px; }
+    /* about us */
+    .about-us .news-desc .inner-item::before,.about-us .news-desc .inner-item::after                      { height: 50px; width: 50px; }
+    /* contact page */
+    .contact-section                                                                                      { background-position: 90% center; }
+    .contact-section h1 span::after                                                                       { border-top: 7px solid rgba(147, 24, 103, 0.51); bottom: 7px; }
+    /* careers page */
+    .jobs-section .jobs-list li .jobs-item                                                                { padding: 20px; }
+    .jobs-section .jobs-list li .jobs-item h5                                                             { min-height: 64px; }
+    /* project poage */
+    .project.project-section .project-info-box                                                           { padding-left: 0px; }
+    .project-section .project-brief                                                                       { margin-right: 10px; }
+    .project-section .project-add-info                                                                    { margin-left: 10px; }
+    .project-section .project-desc                                                                        { width: calc(50% - 10px); padding-top: 23px; }
+    .project-section h1                                                                                   { max-width: unset; }
+.fancybox-slide--html .fancybox-content                                                                                     { min-width: 90vw; }
+.fancybox-slide--html .fancybox-content h4                                                                                  { padding: 25px 0px 25px 35px; }
+    /* search detail page */
+    .search-detail-part                                                                                   { padding: 70px 0 0 ; }
+    .search-detail-part h6                                                                                { margin-bottom: 30px; font-size: 14px; line-height: 20px; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /* common styling */
+    body                                                                                                  { padding-top: 54px; }
+    .project.project-slider-section                                                                      { padding: 70px 0; }
+    .map-section,.news-section,.contact-us,footer,.contact-section,.banner,
+    .news-desc,.about-us .news-desc                                                                       { padding: 50px 0; }   
+    .lifestyle .project-section,.project-section.search-page                                         
+    .project-section                                                                                      { padding: 50px 0 30px; }
+    .common-button                                                                                        { margin-top: 20px; min-width: 135px; padding: 8px 10px; font-size: 14px; line-height: 20px; }
+    /* typography */
+    h1,.contact-section h1,.contact-section h1 span                                                       { font-size: 32px; line-height: 40px; } 
+    h5                                                                                                    { font-size: 20px; line-height: 28px; }
+    p                                                                                                     { margin-bottom: 12px; }
+    a.common-link                                                                                         { padding-right: 17px; font-size: 14px; line-height: 20px; }
+    span                                                                                                  { margin-bottom: 10px; font-size: 11px; line-height: 20px; }
+    /* header section */
+    header .navbar                                                                                        { padding: 5px 15px; }
+    header #navbarSupportedContent                                                                        { position: absolute; box-shadow: 0px 3px 8px rgba(0,0,0,0.2); -webkit-box-shadow:0px 3px 8px rgba(0,0,0,0.2) ; -o-box-shadow:0px 3px 8px rgba(0,0,0,0.2); z-index: 999; top: 100%; left: 0; background: #fff; width: 100%; text-align: center; padding: 25px 0; }
+    header .navbar-expand-lg .navbar-nav .nav-item .nav-link                                              { margin: 0 10px; font-size: 16px; line-height: 27px; color: black; }
+    header .social-links-navigation ul li:last-child a.nav-link                                                    { display: block; }
+    header .navbar .navbar-nav                                                                            { margin-right: 0px; }
+    header .navbar-expand-lg .navbar-nav .nav-item.active .nav-link,
+    header .navbar-expand-lg .navbar-nav .nav-item .nav-link:hover                                        { color: #931867; }
+    .banner-box                                                                                           { margin-right: 0; }
+    /* news section */
+    .news-title                                                                                           { padding-bottom: 8px; margin-bottom: 30px; }
+    .news-info                                                                                            { padding: 10px 15px; }
+    .news-box                                                                                             { margin-bottom: 25px; }
+    .news-box::after                                                                                      { height: 100%; }
+    .news-image-box                                                                                       { width: 100px; padding-top: 70px; }
+    .news-info-box                                                                                        { padding: 5px 10px; width: calc(100% - 100px); }
+    .news-item                                                                                            { padding-bottom: 5px; margin-bottom: 5px; }
+    .news-info-box p                                                                                      { font-size: 14px; line-height: 20px; }
+    .news-box h5                                                                                          { font-size: 16px; line-height: 24px; }
+    /* project section */
+    .project-box .project-image-box                                                                       { height: calc(100% - 123px); }
+    .project-box .project-info-box,.news.lifestyle .project-box .project-info-box                         { padding: 22px 18px; height: 123px; }
+    .news .parent .empire-grid:nth-child(3n+2) .project-image-box,
+    .parent > div:nth-child(6n+2) .project-box .project-image-box, 
+    .parent > div:nth-child(6n+4) .project-box .project-image-box                                         { padding-top: calc(100% + 40px + 123px); }
+    .news.lifestyle .project-box .project-info-box h5,.project-box .project-info-box a h5                 { min-height: 40px; font-size: 15px; line-height: 20px; max-width: 189px; }
+    /* footer section */
+    footer .footer-navbox ul li a                                                                         { margin-bottom: 10px; font-size: 12px; line-height: 12px; }
+    footer .newsletter-box button                                                                         { padding-right: 3px; }
+    footer p.footer-title                                                                                 { padding-bottom: 10px; margin-bottom: 20px; }
+    footer .footer-social-links                                                                           { margin: 0 -15px; }
+    footer .footer-social-links li                                                                        { margin: 0 15px; }
+    /* video section */
+    .video-slide                                                                                          { width: 550px; }
+    .video-slide h1                                                                                       { max-width: 310px; }
+    .video-slide .video-info                                                                              { padding: 20px 30px; }
+    .video-slider .slick-dots li button,.video-slider .slick-dots li.slick-active button                  { font-size: 10px; line-height: 22px; width: 28px; height: 28px; }
+    .video-section                                                                                        { padding: 60px 0 100px; }
+    .arrow-slider .slick-next,.arrow-slider .slick-prev,
+    .video-slider .slick-next, .video-slider .slick-prev                                                  { height: 34px; width: 34px; right: 50px; }
+    .arrow-slider .slick-prev,
+    .video-slider .slick-prev                                                                             { right: 90px; }
+    .video-slider .slick-dots                                                                             { bottom: -35px; }
+    .video-slider .video-slide .video-fancy-box                                                           { width: 50px; height: 50px; }
+    .slider-box                                                                                           { padding-left: 70px; }
+    .slider-box .scroll-text                                                                              { left: -37px; }
+    .video-slider .slick-dots li                                                                          { margin-right: 70px; }
+    /* lifestyle page */
+    .lifestyle .main-tab.nav-tabs                                                                         { margin-bottom: 30px; }
+    /* news page */
+    .news.lifestyle .project-title                                                                        { margin-bottom: 30px; }
+    .news.lifestyle .video-fancy-box,.project .video-fancy-box                                            { width: 52px; height: 52px; }
+    .news.lifestyle .video-fancy-box img, .project .video-fancy-box img                                   { max-width: 18px; }
+    .news-slider .project-box                                                                             { width: 300px; }
+    .news-slider .project-box .project-info-box h6                                                        { max-width: unset; }
+    /* news inner page */
+    .news-inner .news-heading-area                                                                        { padding-bottom: 48px; }
+    .news-slider                                                                                          { padding-left: 50px; padding-bottom: 50px; }
+    .news-desc .inner-img                                                                                 { margin: 40px 0; }
+    .news-inner .news-image-area h1                                                                       { margin: 0; max-width: 450px; font-size: 35px; line-height: 45px; }
+    .news-inner .news-image-area                                                                          { padding-top: 40%; }
+    /* about us */
+    .about-us .news-desc .inner-item::before,.about-us .news-desc .inner-item::after                      { height: 50px; width: 50px; }
+    .about-us h1                                                                                          { margin-bottom: 15px; }
+    .about-us .news-desc .inner-img                                                                       { margin: 30px 0; }
+    .news-slider .project-box .project-info-box                                                           { padding: 25px 15px; }
+    .about-us .news-slider .project-box                                                                   { margin-right: 15px; width: 275px; }
+    /* contact page */
+    .contact-desc p, .contact-desc a                                                                      { font-size: 14px; line-height: 20px; }
+    .contact-desc .dubai-box                                                                              { margin-top: 25px; }
+    .jcf-select,.form-control                                                                             { padding: 10px 14px; }
+    .jcf-select .jcf-select-text                                                                          { font-size: 13px; line-height: 19px; margin: 0; }
+    .contact-section h1 span::after                                                                       { border-top: 5px solid rgba(147, 24, 103, 0.51); bottom: 5px; }
+    /* careers page */
+    .jobs-section                                                                                         { padding: 60px 0 45px; }
+    .jobs-section .checkbox-list li label                                                                 { margin: 0px 5px 30px; padding: 9px 10px 11px 10px; font-size: 13px; line-height: 17px; min-width: 140px; }
+    .jobs-section .jobs-list li .jobs-item                                                                { margin-bottom: 25px; padding: 20px; }
+    .jobs-section .jobs-list li .jobs-item h5                                                             { margin: 0; max-width: 314px; min-height: 56px; }
+    .jobs-item p.small-font                                                                               { font-size: 12px; line-height: 16px; }
+    .checkbox-list                                                                                        { margin:0px -5px; }
+    /* project poage */
+    .project.project-section .project-info-box                                                            { padding-left: 0px; }
+    .project-section .project-brief                                                                       { margin-right: 5px; }
+    .project-section .project-add-info                                                                    { margin-left: 5px; }
+    .project-section .project-desc                                                                        { width: calc(50% - 5px); padding-top: 15px; }
+    .project-section h1                                                                                   { max-width: auto; }
+    .project-desc p.small-font                                                                            { font-size: 12px; line-height: 16px; }
+    .project-slider-section .slick-prev                                                                   { left: 45%; transform: translateX(-45%); -webkit-transform: translateX(-45%); -o-transform: translateX(-45%); }
+    .project-slider-section .slick-next                                                                   { left: 55%; transform: translateX(-55%); -webkit-transform: translateX(-55%); -o-transform: translateX(-55%); }
+    .contact-info-text                                                                                    { padding-left: 0px; }
+    .video-slider .slick-next, .video-slider .slick-prev                                                  { top: -54px; }
+    .arrow-slider .slick-next, .arrow-slider .slick-prev                                                  { top: -63px; }
+    .recent-post-slider .slick-prev, .recent-post-slider .slick-next                                      { top: calc(100% + 20px); }
+    .recent-post-slider .slick-prev::before, .recent-post-slider .slick-next::before                      { width: 65px; height: 40px; }
+    .recent-post-slider .slick-next                                                                       { left: 65px; }
+.fancybox-slide--html .fancybox-content                                                                                     { min-width: 90vw; }
+.fancybox-slide--html .fancybox-content h4                                                                                  { padding: 25px 0px 25px 25px; }
+    /* search detail page */
+    .search-detail-part                                                                                   { padding: 50px 0 0 ; }
+    .search-detail-part h6                                                                                { margin-bottom: 30px; font-size: 14px; line-height: 20px; }
+
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    /* common styling */
+    body                                                                                                  { padding-top: 54px; }
+    .project.project-slider-section                                                                      { padding: 50px 0 60px; }
+    .map-section,.project-slider-section,.banner,.project.project-section,                                                         
+    .news-section,.contact-us,footer,.news-desc,.about-us .news-desc                                      { padding: 50px 0; }
+    .project-section                                                                                      { padding-bottom: 50px; }
+    .lifestyle .project-section,.project-section.search-page                                              { padding: 50px 0 25px; }
+    .common-button                                                                                        { margin-top: 20px; min-width: 155px; padding: 12px 14px; }
+    a.common-link                                                                                         { padding-right: 17px; font-size: 14px; line-height: 20px; }
+    /* typography */
+    h1,.contact-section h1,.contact-section h1 span                                                       { font-size: 36px; line-height: 42px; } 
+    h5                                                                                                    { font-size: 22px; line-height: 30px; }
+    p                                                                                                     { margin-bottom: 12px; }
+    /* header section */
+    header .navbar                                                                                        { padding: 5px 15px; }
+    header #navbarSupportedContent                                                                        { position: absolute; box-shadow: 0px 3px 8px rgba(0,0,0,0.2); -webkit-box-shadow:0px 3px 8px rgba(0,0,0,0.2) ; -o-box-shadow:0px 3px 8px rgba(0,0,0,0.2); z-index: 999; top: 100%; left: 0; background: #fff; width: 100%; text-align: center; padding: 25px 0; }
+    header .navbar-expand-lg .navbar-nav .nav-item .nav-link                                              { margin: 0 10px; font-size: 16px; line-height: 27px; color: black; }
+    header .social-links-navigation ul li a.nav-link                                                               { display: none; }
+    header .social-links-navigation ul li:last-child a.nav-link                                                    { display: block; }
+    header .navbar-expand-lg .navbar-nav .nav-item.active .nav-link,
+    header .navbar-expand-lg .navbar-nav .nav-item .nav-link:hover                                        { color: #931867; }
+    header .navbar .navbar-nav                                                                            { margin-right: 0px; }
+    /* .header-form.intro                                                                                    { padding: 12px 0; top: 54px; } */
+    /* .header-search input                                                                                  { font-size: 16px; line-height: 30px; } */
+    /* .header-search button                                                                                 { height: 15.5px; width: 15px; } */
+    /* banner styling */
+    .banner                                                                                               { height: auto; }
+    .banner-box                                                                                           { margin-right: 0; }
+    .post-box                                                                                             { padding:10px 0 15px; border-top: 2px solid #931867; }
+     /* news section */
+     .news-title                                                                                           { padding-bottom: 8px; margin-bottom: 30px; }
+     .news-info                                                                                            { padding: 10px 20px; }
+     .news-box                                                                                             { padding-top: 74%; margin-bottom: 25px; height: unset; }
+    /* project section */
+    .nested-tabs                                                                                          { margin-bottom: 35px; }
+    .project-box .project-info-box,.news.lifestyle .project-box .project-info-box                         { padding: 15px 12px; height: 109px; }
+    .news.lifestyle .project-box .project-info-box h5,.project-box .project-info-box a h5                 { min-height: unset; max-width: unset; font-size: 15px; line-height: 20px; }
+    .main-tab.nav-tabs li a                                                                               { margin-right: 30px; min-width: 145px; font-size: 13px; line-height: 16px; }
+    /* grid responsive styling */
+    .parent                                                                                               { margin: 0; }
+    .parent > div                                                                                         { width: 100%; margin: 10px 0 20px; float: unset; } 
+    .project-box .project-image-box                                                                       { height: calc(100% - 109px); }
+    .parent > div:nth-child(6n+2) .project-box .project-image-box, 
+    .parent > div:nth-child(6n+4) .project-box .project-image-box,
+    .news .parent .empire-grid:nth-child(3n+2) .project-image-box,
+    .parent > div:nth-child(6n+2) .project-box .project-image-box, 
+    .parent > div:nth-child(6n+4) .project-box .project-image-box,
+    .news.lifestyle .parent > div:nth-child(4n-2) .project-box .project-image-box,
+    .news .parent > div:nth-child(4n) .project-box .project-image-box                                     { padding-top: 50%; }
+    .parent > div:nth-child(6n+2)                                                                         { float: unset; }
+    .news .parent > div:nth-child(4n)                                                                     { width: 100%; }
+    /* footer section */
+    footer .footer-box                                                                                    { margin-bottom: 25px; }
+    footer p.footer-title                                                                                 { padding-bottom: 6px; margin-bottom: 15px; }
+    footer .footer-navbox ul li a                                                                         { margin-bottom: 10px; font-size: 12px; line-height: 12px; }
+    footer .newsletter-box button                                                                         { padding-right: 3px; }
+    /* video section */
+    .video-slide                                                                                          { width: 425px; }
+    .video-slide h1                                                                                       { max-width: 310px; }
+    .video-slide .video-info                                                                              { padding: 20px 20px; }
+    .video-slider .slick-dots li button,.video-slider .slick-dots li.slick-active button                  { font-size: 10px; line-height: 22px; width: 28px; height: 28px; }
+    .video-section                                                                                        { padding: 60px 0 90px; }
+    .arrow-slider .slick-next,.arrow-slider .slick-prev,
+    .video-slider .slick-next, .video-slider .slick-prev                                                  { height: 34px; width: 34px; right: 50px; }
+    .arrow-slider .slick-prev,
+    .video-slider .slick-prev                                                                             { right: 90px; }
+    .video-slider .slick-dots                                                                             { bottom: -35px; }
+    .video-slider .video-slide .video-fancy-box                                                           { width: 50px; height: 50px; }
+    .slider-box                                                                                           { padding-left: 70px; }
+    .slider-box .scroll-text                                                                              { left: -37px; }
+    .video-slide h1                                                                                       { font-size: 28px; line-height: 34px; }
+    .video-slide p                                                                                        { margin-bottom: 8px; font-size: 13px; line-height: 16px; }
+    .video-slider .slick-dots li                                                                          { margin-right: 30px; }
+    /* lifestyle page */
+    .lifestyle .main-tab.nav-tabs                                                                         { margin-bottom: 30px; }
+    /* news page */
+    .news.lifestyle .project-title                                                                        { margin-bottom: 30px; }
+    .news.lifestyle .video-fancy-box,.project .video-fancy-box                                            { width: 52px; height: 52px; }
+    .news.lifestyle .video-fancy-box img, .project .video-fancy-box img                                   { max-width: 15px; }
+    .news-slider .project-box                                                                             { width: 280px; }
+    .news-slider .project-box .project-info-box h6                                                        { max-width: unset; }
+    /* news inner page */
+    .news-slider .project-box .project-info-box                                                           { padding: 15px; height: unset; }
+    .news-inner .news-heading-area                                                                        { padding-bottom: 15px; }
+    .news-inner .news-image-area                                                                          { padding-top: 40%; }
+    .news-slider                                                                                          { padding-left: 15px; padding-bottom: 50px; }
+    .news-desc .inner-img                                                                                 { margin: 40px 0; }
+    .news-inner .news-image-area h1                                                                       { margin: 0; max-width: 350px; font-size: 25px; line-height: 35px; }
+    /* about us */
+    .about-us .news-desc .inner-item::before,.about-us .news-desc .inner-item::after                      { height: 50px; width: 50px; }
+    .about-us h1                                                                                          { margin-bottom: 15px; }
+    .about-us .news-desc .inner-img                                                                       { margin: 30px 0; }
+    .about-us .news-slider .project-box                                                                   { margin-right: 15px; width: 265px;  }
+    .news-slider .project-box .project-info-box h6                                                        { font-size: 17px; line-height: 25px; }
+    /* contact page */
+    .contact-desc p, .contact-desc a                                                                      { font-size: 14px; line-height: 20px; }
+    .contact-desc .dubai-box                                                                              { margin-top: 25px; margin-bottom: 30px; }
+    .jcf-select,.form-control                                                                                         { padding: 10px 14px; }
+    .contact-section                                                                                      { padding: 50px 0 0; background: rgba(147, 24, 103, 0.02); }
+    .contact-section h1 span::after                                                                       { border-top: 7px solid rgba(147, 24, 103, 0.51); bottom: 7px; }
+    /* contact page */
+    .careers-inner-section                                                                                { padding: 70px 0 50px; }
+    .jcf-select .jcf-select-text                                                                          { font-size: 13px; line-height: 18px; margin: 0; }
+    /* careers page */
+    .jobs-section                                                                                         { padding: 60px 0 45px; }
+    .jobs-section .checkbox-list li label                                                                 { margin:0 5px 30px; font-size: 13px; line-height: 17px; padding: 9px 10px 11px 10px; min-width: 140px; }
+    .jobs-section .jobs-list li .jobs-item                                                                { margin-bottom: 25px; padding: 20px; }
+    .jobs-section .jobs-list li .jobs-item h5                                                             { margin: 0; max-width: unset; min-height: unset; }
+    .jobs-item p.small-font                                                                               { font-size: 12px; line-height: 16px; }
+    .checkbox-list                                                                                        { margin:0px -5px; }
+    /* project page */
+    .project-section                                                                                      { padding: 50px 0; }
+    .project.project-section .project-info-box                                                           { padding-left: 0px; }
+    .project .project-image-box img                                                                       { max-width: 400px; margin-bottom: 20px; }
+    .project-section .project-brief                                                                       { margin-right: 10px; }
+    .project-section .project-add-info                                                                    { margin-left: 10px; }
+    .project-section .project-desc                                                                        { width: calc(50% - 20px); padding-top: 15px; }
+    .project-section h1                                                                                   { max-width: unset; }
+    .project-slide-area                                                                                   { margin: 0 6px 20px; }
+    .project-slider-section .slick-prev                                                                   { left: 45%; transform: translateX(-45%); -webkit-transform: translateX(-45%); -o-transform: translateX(-45%); }
+    .project-slider-section .slick-next                                                                   { left: 55%; transform: translateX(-55%); -webkit-transform: translateX(-55%); -o-transform: translateX(-55%); }
+    .contact-info-text                                                                                    { padding-left: 0px; }
+    .arrow-slider .slick-next, .arrow-slider .slick-prev                                                  { top: -63px; }
+    .video-slider .slick-next, .video-slider .slick-prev                                                  { top: -54px; }
+    .recent-post-slider .slick-prev, .recent-post-slider .slick-next                                      { top: calc(100% + 21px); }
+    .recent-post-slider .slick-prev::before, .recent-post-slider .slick-next::before                      { width: 65px; height: 40px; }
+    .recent-post-slider .slick-next                                                                       { left: 65px; }
+.fancybox-slide--html .fancybox-content                                                                                     { min-width: 90vw; }
+.fancybox-slide--html .fancybox-content h4                                                                                  { padding: 20px; max-width: 450px; font-size: 22px; line-height: 30px; }
+    .fancybox-slide--html .fancybox-close-small                                                           { color: currentColor; padding: 7px; right: 10px; top: 11px; }
+    /* search detail page */
+    .search-detail-part                                                                                   { padding: 50px 0 0 ; }
+    .search-detail-part h6                                                                                { margin-bottom: 30px; font-size: 16px; line-height: 20px; }
+}
+@media (max-width: 575px) {
+    /* common styling */
+    body                                                                                                  { padding-top: 54px; }
+    .map-section,.banner,.project.project-section,                                                                                
+    .news-section,.contact-us,footer,.news-desc,.about-us .news-desc                                      { padding: 50px 0; }
+    .our-projects .project-section,.project-section                                                                        { padding: 0 0 30px; }
+    .lifestyle .project-section,.project-section.search-page                                              { padding: 50px 0 25px; }
+    .common-button                                                                                        { margin-top: 20px; min-width: 130px; padding: 10px 12px 12px; font-size: 14px; line-height: 14px; }
+    a.common-link                                                                                         { padding-right: 17px; font-size: 14px; line-height: 20px; }
+    /* typography */
+    h1,.contact-section h1,.contact-section h1 span                                                       { margin-bottom: 10px; font-size: 25px; line-height: 35px; } 
+    h5                                                                                                    { font-size: 20px; line-height: 28px; }
+    p                                                                                                     { margin-bottom: 12px; font-size: 14px; line-height: 20px; }
+    /* header section */
+    header .navbar                                                                                        { padding: 5px 15px; }
+    header #navbarSupportedContent                                                                        { position: absolute; box-shadow: 0px 3px 8px rgba(0,0,0,0.2); -webkit-box-shadow:0px 3px 8px rgba(0,0,0,0.2) ; -o-box-shadow:0px 3px 8px rgba(0,0,0,0.2); z-index: 999; top: 100%; left: 0; background: #fff; width: 100%; text-align: center; padding: 25px 0; }
+    header .navbar-expand-lg .navbar-nav .nav-item .nav-link                                              { margin: 0 10px; font-size: 16px; line-height: 27px; color: black; }
+    header .social-links-navigation ul li a.nav-link                                                               { display: none; }
+    header .social-links-navigation ul li:last-child a.nav-link                                                    { display: block; }
+    header .navbar-expand-lg .navbar-nav .nav-item.active .nav-link,
+    header .navbar-expand-lg .navbar-nav .nav-item .nav-link:hover                                        { color: #931867; }
+    header .navbar .navbar-nav                                                                            { margin-right: 0; }
+    
+    /* banner styling */
+    .banner                                                                                               { height: auto; }
+    .banner-box                                                                                           { margin-right: 0;  padding: 28px 0 35px; }
+    .post-box                                                                                             { padding:10px 0 15px; border-top: 2px solid #931867; }
+    .recent-post-slider .slick-prev, .recent-post-slider .slick-next                                      { top: calc(100% + 20px); }
+    .recent-post-slider .slick-prev::before, .recent-post-slider .slick-next::before                      { width: 65px; height: 40px; }
+    .recent-post-slider .slick-next                                                                       { left: 65px; }
+    /* news section */
+    .news-title                                                                                           { padding-bottom: 8px; margin-bottom: 30px; }
+    .news-info                                                                                            { padding: 10px 20px; }
+    .news-box                                                                                             { padding-top: 74%; margin-bottom: 25px; height: unset; }
+    .news-box::after                                                                                      { height: 100%; }
+    span                                                                                                  { margin-bottom: 10px; font-size: 11px; line-height: 20px; }
+    .news-image-box                                                                                       { width: 120px; padding-top: 80px; }
+    .news-info-box                                                                                        { width: calc(100% - 120px); }
+    /* project section */
+    .nested-tabs                                                                                          { margin-bottom: 35px; }
+    .nested-tabs.nav-tabs li a                                                                            { font-size: 13px; line-height: 18px; }
+    .project-box .project-info-box,.news.lifestyle .project-box .project-info-box                         { padding: 15px 18px; }
+    .news.lifestyle .project-box .project-info-box h5,.project-box .project-info-box a h5                 { min-height: unset; max-width: 200px; font-size: 15px; line-height: 20px; }
+    .main-tab.nav-tabs li a                                                                               { padding: 8px; margin-right: 8px; margin-bottom: 20px; min-width: 100px; font-size: 12px; line-height: 16px; }
+    /* grid responsive styling */
+    .parent                                                                                               { margin: 0; }
+    .parent > div                                                                                         { width: 100%; margin: 20px 0; float: unset; } 
+    .project-box .project-info-box                                                                        { height: 109px; }
+    .project-box .project-image-box                                                                       { height: calc(100% - 109px); }
+    .parent > div:nth-child(6n+2) .project-box .project-image-box, 
+    .parent > div:nth-child(6n+4) .project-box .project-image-box,
+    .news .parent .empire-grid:nth-child(3n+2) .project-image-box,
+    .news .parent > div:nth-child(4n) .project-box .project-image-box                                     { padding-top: 50%; }
+    .parent > div:nth-child(6n+2)                                                                         { float: unset; }
+    .news .parent > div:nth-child(4n)                                                                     { width: 100%; }
+    /* contact us */
+    /* footer section */
+    footer .footer-box                                                                                    { margin-bottom: 25px; }
+    footer p.footer-title                                                                                 { padding-bottom: 6px; margin-bottom: 15px; }
+    footer .footer-navbox ul li a                                                                         { margin-bottom: 10px; }
+    footer .newsletter-box button                                                                         { padding-right: 3px; }
+    /* video section */
+    .video-slide                                                                                          { width: 260px; }
+    .video-slide h1                                                                                       { max-width: 310px; }
+    .video-slide .video-info                                                                              { padding: 15px; }
+    .video-slider .slick-dots li button,.video-slider .slick-dots li.slick-active button                  { font-size: 10px; line-height: 22px; width: 28px; height: 28px; }
+    .video-section                                                                                        { padding: 60px 0 70px; }
+    .arrow-slider .slick-next,.arrow-slider .slick-prev,
+    .video-slider .slick-next, .video-slider .slick-prev                                                  { height: 30px; width: 30px; right: 20px; top: -58px; }
+    .arrow-slider .slick-prev,.video-slider .slick-prev                                                   { right: 60px; }
+    .video-slider .slick-dots                                                                             { bottom: -25px; }
+    .video-slider .video-slide .video-fancy-box                                                           { width: 50px; height: 50px; }
+    .slider-box                                                                                           { padding-left: 40px; }
+    .slider-box .scroll-text                                                                              { left: -40px; top: 105px; margin-bottom: 0; margin-right: 5px; font-size: 11px; line-height: 21px;  }
+    .video-slide h1                                                                                       { font-size: 18px; line-height: 28px; }
+    .video-slide p                                                                                        { margin-bottom: 8px; font-size: 13px; line-height: 16px; }
+    .slider-box .scroll-text::after                                                                       { width: 30px; right: -20px; }
+    .video-section .video-title                                                                           { margin-bottom: 15px; }
+    .video-slide                                                                                          { padding-top: 110%; margin-right: 10px; }
+    .video-slider .slick-dots li                                                                          { margin-right: 10px; }
+    /* lifestyle page */
+    .lifestyle .main-tab.nav-tabs                                                                         { margin-bottom: 30px; }
+    /* news page */
+    .news.lifestyle .project-title                                                                        { margin-bottom: 30px; }
+    .news.lifestyle .video-fancy-box,.project .video-fancy-box                                            { width: 52px; height: 52px; }
+    .news.lifestyle .video-fancy-box img, .project .video-fancy-box img                                   { max-width: 15px; }
+    .news-slider .project-box                                                                             { width: 260px; }
+    /* news inner page */
+    .news-slider .project-box .project-info-box                                                           { padding: 15px; height: unset; }
+    .news-inner .news-heading-area                                                                        { padding-bottom: 15px; }
+    .news-inner .news-image-area                                                                          { padding-left: 15px; padding-top: 60%; }
+    .news-slider                                                                                          { padding-left: 15px; padding-bottom: 40px; }
+    .news-desc .inner-img                                                                                 { margin: 25px 0; }
+    .news-inner .news-image-area h1                                                                       { margin: 0; max-width: 350px; font-size: 25px; line-height: 35px; }
+    /* about us */
+    .about-us .news-desc .inner-item::before,.about-us .news-desc .inner-item::after                      { height: 25px; width: 25px; }
+    .about-us h1                                                                                          { margin-bottom: 15px; }
+    .about-us .news-desc .inner-img                                                                       { margin: 30px 0; }
+    .news-slider .project-box .project-info-box                                                           { padding: 25px 15px; }
+    .about-us .news-slider .project-box                                                                   { margin-right: 15px; width: 275px; }
+    /* contact page */
+    .contact-desc p, .contact-desc a                                                                      { font-size: 14px; line-height: 20px; }
+    .contact-desc .dubai-box                                                                              { margin-top: 25px; margin-bottom: 30px; }
+    .jcf-select,.form-control                                                                                         { padding: 10px 14px; }
+    .contact-section                                                                                      { padding: 50px 0 0; background: rgba(147, 24, 103, 0.02); }
+    .contact-section h1 span::after                                                                       { border-top: 5px solid rgba(147, 24, 103, 0.51); bottom: 5px; }
+    /* careers inner page */
+    .careers-contact-section                                                                              { padding: 50px 0; } 
+    .careers-contact-section p,.careers-inner-section p.small-font                                        { font-size: 11px; line-height: 16px; }
+    /* contact page */
+    .careers-inner-section                                                                                { padding: 50px 0 30px; }
+    .careers-inner-section  h1                                                                            { margin-bottom: 15px; }
+    .careers-inner-section .job-detail-box                                                                { margin-top: 25px; }
+    .jcf-select .jcf-select-text                                                                          { font-size: 13px; line-height: 19px; margin: 0; }
+    /* careers page */
+    .jobs-section                                                                                         { padding: 50px 0 35px; }
+    .jobs-section .checkbox-list li label                                                                 { margin:0 5px 20px; padding: 9px 10px 11px 10px; font-size: 13px; line-height: 17px; min-width: 140px; }
+    .jobs-section .jobs-list li .jobs-item                                                                { margin-bottom: 25px; padding: 20px; }
+    .jobs-section .jobs-list li .jobs-item h5                                                             { margin: 0; max-width: auto; min-height: unset; }
+    .jobs-item p.small-font                                                                               { font-size: 12px; line-height: 16px; }
+    .checkbox-list                                                                                        { margin:0px -5px; }
+    /* project poage */
+    .project.project-section                                                                             { padding: 50px 0 35px; }
+    .project.project-section .project-info-box                                                           { padding-left: 0px; }
+    .project .project-image-box img                                                                       { margin-bottom: 20px; }
+    .project-section .project-brief                                                                       { margin-right: 0px; }
+    .project-section .project-add-info                                                                    { margin-left: 0px; }
+    .project-section .project-desc                                                                        { margin-bottom: 25px; width: 100%; display: block; padding-top: 12px; }
+    .project-section h1                                                                                   { max-width: unset; }
+    .project-slider-section                                                                               { padding: 50px 0 85px; }
+    .project-slider-section .slick-next, .project-slider-section .slick-prev                              { height: 30px; width: 30px; bottom: -30px; }
+    .project-slider-section .slick-prev                                                                   { left: 42%; transform: translateX(-42%); -webkit-transform: translateX(-42%); -o-transform: translateX(-42%); }
+    .project-slider-section .slick-next                                                                   { left: 58%; transform: translateX(-58%); -webkit-transform: translateX(-58%); -o-transform: translateX(-58%); }
+    .contact-info-text                                                                                    { padding-left: 0px; }
+    .main-tab.nav-tabs                                                                                    { margin-bottom: 0px; }
+    .lifestyle .main-tab.nav-tabs                                                                         { margin-bottom: 0px; }
+    .video-slider .slick-next, .video-slider .slick-prev                                                  { top: -43px; }
+    /* search functionality */
+    .search-form, .autocomplete-container                                                                 { width: 100%; padding: 15px; }
+    header .list-group .searchitem .search-info-box h6                                                    { margin-bottom: 8px; font-size: 16px; line-height: 24px; }
+    .search-form::placeholder                                                                             { color: #000000; }
+    .search-form.open + .autocomplete-container.open                                                      { margin-top: 80px; }
+    .autocomplete-container a.common-button                                                               { min-width: 100px;  line-height: 20px;}
+.fancybox-slide--html .fancybox-content                                                                                     { min-width: 90vw; }
+.fancybox-slide--html .fancybox-content h4                                                                                  { padding: 13px; max-width: 252px; font-size: 16px; line-height: 24px; }
+    .fancybox-slide--html .fancybox-close-small                                                           { color: currentColor; padding: 7px; right: 10px; top: 11px; }
+    .search-info-box                                                                                      { width: 67%; }
+    .list-group .searchitem .search-image-box                                                             { width: 33%; padding-top: 30%; align-self: flex-start;}
+    /* search detail page */
+    .search-detail-part                                                                                   { padding: 50px 0 0 ; }
+    .search-detail-part h1                                                                                { font-size: 22px; line-height: 32px; }
+    .search-detail-part h6                                                                                { margin-bottom: 30px; font-size: 14px; line-height: 20px; }
+    .search-detail-part .common-button                                                                    { margin-left: 3px; min-width: 77px; padding: 4px; font-size: 12px; }
+    .search-detail-part .form-control                                                                     { padding: 8px; }
+}

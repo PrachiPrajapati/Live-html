@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="40px" viewBox="0 0 46 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>warning-24px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Web_12-Nov,-2019" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Warning-popup" transform="translate(-462.000000, -194.000000)">
+            <g id="Group-8" transform="translate(433.000000, 145.000000)">
+                <g id="Group-7" transform="translate(0.000000, 40.000000)">
+                    <g id="Group-5" transform="translate(24.000000, 0.000000)">
+                        <g id="Group-2">
+                            <g id="warning-24px">
+                                <polygon id="Path" points="0 0 56 0 56 56 0 56"></polygon>
+                                <path d="M10.4274207,49 L45.5725793,49 C48.1499082,49 50.239246,46.9106622 50.239246,44.3333333 C50.239246,43.5122679 50.0226189,42.7057357 49.6112353,41.9951641 L32.038656,11.642527 C30.7473208,9.41203891 27.8923189,8.65070507 25.6618307,9.94204029 C24.956177,10.3505767 24.3698804,10.9368733 23.961344,11.642527 L6.38876466,41.9951641 C5.09742943,44.2256522 5.85876328,47.0806541 8.0892514,48.3719893 C8.79982301,48.7833729 9.60635522,49 10.4274207,49 Z M30.3333333,42 L25.6666667,42 L25.6666667,37.3333333 L30.3333333,37.3333333 L30.3333333,42 Z M30.3333333,32.6666667 L25.6666667,32.6666667 L25.6666667,23.3333333 L30.3333333,23.3333333 L30.3333333,32.6666667 Z" id="Shape" fill="#F39C11" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

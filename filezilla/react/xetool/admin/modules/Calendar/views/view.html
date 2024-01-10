@@ -1,0 +1,73 @@
+<div  ng-controller="calenderController" ng-init="init()">
+    <div class="row" style="margin-bottom: 10px">
+        <div class ="col-md-6">
+             <butoon class="btn  btn-sm m-l-8"
+                 ng-class="{'btn-info': kanbanViewActiveButton == true && listViewActiveButton == false &&
+                 !isCalendarClicked}"
+                 ng-click="changeView('Grid')">
+                 <i class="fa fa-th"></i>
+                 <xe-translate text-value="Grid View"></xe-translate>
+             </butoon>
+             <butoon class="btn  btn-sm m-l-9"
+                 ng-class="{'btn-info': kanbanViewActiveButton == false && listViewActiveButton == true &&
+                 !isCalendarClicked}"
+                 ng-click="changeView('List')">
+                 <i class="fa fa-list"></i>
+                 <xe-translate text-value="List View"></xe-translate>
+             </butoon>
+             <button class="btn  btn-sm m-l-9" type="button" ng-click="calendarView()"
+                 ng-class="{'btn-info': isCalendarClicked == true}">
+                 <i class="fa fa-calendar"></i>
+                 <xe-translate text-value="calendar view">
+                 </xe-translate>
+             </button>
+        </div>
+        <!-- <div class="col-sm-6 text-right">
+            <button ng-click="backtoTask()" type="button" class="btn btn-default btn-sm">
+                <i class="fa fa-caret-left" aria-hidden="true"></i>
+                <xe-translate text-value="Back"></xe-translate>
+            </button>
+
+        </div> -->
+    </div>
+    <div class="panel panel-default" style="margin:0;">
+        <div class="panel-body">
+            <div class="row calendarWrap">
+                <div class="col-md-12" ng-class="(isDataAvailabel) ? 'col-md-10' : 'col-md-12'">
+                    <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar">
+                    </div>
+                </div>
+                <div class="col-md-2" ng-show="isDataAvailabel">
+                    <div>
+                        <b style="color: #00b63b">{{selectedCurrentDayName}}</b>
+                        <h3 style="color: #00b63b">{{selectedCurrentDate}}</h3>
+                    </div>
+                    <hr>
+                    <div  style="max-height: 502px;overflow: auto;">
+                      <div class="card" ng-repeat="value in evenDetailsArray | orderBy:'-title':true">
+                        <div class="container-card">
+                          <h5>#{{value.task_refer_id}}</h5> 
+                          <b>{{value.title}}</b>
+                          <p style="font-size: 11px">Due: {{selectedDate}}</p> 
+                          <button class="btn btn-sm" style="border: 1px solid {{value.color_id}} !important;color: {{value.color_id}};width: 100%;cursor: default">{{value.status_name}}</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="panel panel-default" style="margin:0;">
+        <div class="panel-body">
+            
+        </div>
+    </div> -->
+    <div class="preloader-trans" ng-show="calenderLoader">
+        <div class="page-loader">
+            <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+            <xe-translate text-value="Please wait"></xe-translate>...
+        </div>
+    </div>
+     <ng-include src="'modules/Calendar/views/partials/calendarDetailsModal.html'">
+    </ng-include>
+</div>

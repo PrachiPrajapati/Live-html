@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="135px" height="191px" viewBox="0 0 135 191" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>location-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow-left" transform="translate(61.500000, -1026.000000) rotate(-90.000000) translate(-61.500000, 1026.000000) translate(-1156.500000, -1499.500000)" fill="#DA3581" fill-rule="nonzero">
+            <g id="location-icon" transform="translate(96.000000, 479.500000) rotate(90.000000) translate(-96.000000, -479.500000) translate(28.000000, 384.000000)">
+                <path d="M68,190.4 L10.9,103.1 C9.9,101.4 -12.7,60.4 13.6,28.5 C37,-1.11022302e-15 62.2,0.2 67.9,0.6 C72.3,0.2 98.1,-0.9 122.4,28.5 C148.7,60.4 126.1,101.4 125.1,103.1 L125,103.3 L68,190.4 Z M16.9,99.6 L68,177.7 L119.1,99.6 C120.2,97.6 139.7,60.5 117,33 C93.8,5 69.4,7.6 68.3,7.7 L67.5,7.7 C65.8,7.5 59.5,7.2 50.9,10 C39.1,13.8 28.3,21.5 18.8,33 C-3.7,60.4 15.8,97.5 16.9,99.6 Z M67.9,95.7 C50,95.7 35.5,81.1 35.5,63.2 C35.5,45.3 50,30.7 67.9,30.7 C85.8,30.7 100.3,45.3 100.3,63.2 C100.3,81.1 85.8,95.7 67.9,95.7 Z M67.9,37.7 C53.9,37.7 42.5,49.1 42.5,63.2 C42.5,77.3 53.9,88.7 67.9,88.7 C81.9,88.7 93.3,77.3 93.3,63.2 C93.3,49.1 81.9,37.7 67.9,37.7 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

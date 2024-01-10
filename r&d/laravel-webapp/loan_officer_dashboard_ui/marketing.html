@@ -1,0 +1,2621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/chart.css">
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile_menu.css">
+	<link rel="stylesheet" type="text/css" href="css/general_menu.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="css/custom_daterpicker.css">
+	<link rel="stylesheet" type="text/css" href="css/input_tag.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/vue-chartjs@3.4.0/dist/vue-chartjs.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<!-- <script type="text/javascript" src="js/input_tag.js"></script> -->
+	<script type="text/javascript" src="js/custom_datepicker.js"></script>  
+	<style>
+		.highcharts-figure, .highcharts-data-table table {
+			min-width: 100px;
+			max-width: 800px;
+			margin: 1em auto;
+		}
+
+		#marketing-roi-container {
+			height: 200px;
+		}
+
+		#container {
+			height: 200px;
+			width: 275px;
+			margin: auto;
+		}
+
+		#pie-chart-container {
+			height: 200px;
+		}
+
+		.highcharts-data-table table {
+			font-family: Verdana, sans-serif;
+			border-collapse: collapse;
+			border: 1px solid #EBEBEB;
+			margin: 10px auto;
+			text-align: center;
+			width: 100%;
+			max-width: 500px;
+		}
+		.highcharts-data-table caption {
+			padding: 1em 0;
+			font-size: 1.2em;
+			color: #555;
+		}
+		.highcharts-data-table th {
+			font-weight: 600;
+			padding: 0.5em;
+		}
+		.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+			padding: 0.5em;
+		}
+		.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+			background: #f8f8f8;
+		}
+		.highcharts-data-table tr:hover {
+			background: #f1f7ff;
+		}
+	</style>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.js"></script>
+</head>
+<body>
+
+	<main class="content bg_skyblue" role="content">
+		<section class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button> -->
+						<div class="toggle-wrap d-block d-lg-none top_menu" onclick="toggleMainmenu(this)">
+							<span class="toggle-bar"></span>
+						</div>
+						<aside class="navbar-nav mr-auto sidenav d-block d-lg-none">
+							<div class="navbar-collapse">
+								<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+									<li class="nav-item active">
+										<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Pipeline</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Proposals</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Lenders</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Partners</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Campaigns</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Reports</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Tasks</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Finance</a>
+									</li>
+								</ul>
+								<form class="form-inline my-2 my-lg-0">
+									<img src="images/bell.png" class="img-fluid m_r_15" />
+									<span class="notification_dot"></span>
+									<img src="images/user.png" class="img-fluid width_36 user" />
+									<ul class="dropdown-menu-profile">
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/profile-page" data-bind="" class="dropdown-menu__link profilepage nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m9 10c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z" fill="#2849de" data-original="#000000" style="" stroke="#2849DE" stroke-width="1" class=""></path></g><g xmlns="http://www.w3.org/2000/svg"><path d="m8.5 21h-8c-.276 0-.5-.224-.5-.5v-4c0-2.481 2.019-4.5 4.5-4.5h6c.276 0 .5.224.5.5s-.224.5-.5.5h-6c-1.93 0-3.5 1.57-3.5 3.5v3.5h7.5c.276 0 .5.224.5.5s-.224.5-.5.5z" fill="#2849de" data-original="#000000" style="" class="" stroke="#2849DE" stroke-width="1"></path></g><g xmlns="http://www.w3.org/2000/svg"><g><path d="m17 20c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z" fill="#2849de" data-original="#000000" style="" class=""></path></g><g><path d="m17.797 24h-1.595c-.516 0-.944-.387-.995-.901l-.127-1.271c-.303-.135-.592-.303-.865-.503l-1.168.527c-.469.214-1.02.035-1.277-.412l-.797-1.381c-.258-.447-.136-1.011.282-1.312l1.029-.74c-.02-.155-.034-.327-.034-.507s.014-.353.034-.507l-1.029-.74c-.418-.301-.54-.865-.282-1.312l.797-1.381c.258-.447.806-.624 1.277-.412l1.168.527c.273-.2.562-.368.865-.503l.127-1.271c.051-.513.479-.9.995-.9h1.595c.516 0 .944.387.995.901l.127 1.271c.304.135.593.304.865.503l1.168-.527c.471-.211 1.02-.034 1.277.412l.797 1.381c.258.447.136 1.011-.282 1.312l-1.029.74c.02.155.034.327.034.507s-.014.353-.034.507l1.029.74c.418.301.54.865.282 1.312l-.796 1.38c-.258.446-.805.625-1.277.412l-1.168-.527c-.273.2-.562.368-.865.503l-.128 1.272c-.051.513-.479.9-.995.9zm-3.512-3.755c.115 0 .229.04.321.117.339.284.714.501 1.113.647.18.066.307.229.326.42l.158 1.571h1.595l.157-1.571c.019-.191.146-.354.326-.42.399-.146.774-.364 1.113-.647.148-.123.352-.151.526-.072l1.444.652.797-1.381-1.278-.918c-.156-.112-.233-.304-.201-.493.037-.211.067-.426.067-.648s-.03-.437-.067-.648c-.033-.189.045-.38.201-.493l1.278-.918-.797-1.381-1.444.651c-.175.079-.379.051-.527-.072-.338-.284-.712-.501-1.113-.647-.18-.066-.307-.229-.326-.42l-.157-1.574h-1.595l-.157 1.571c-.019.191-.146.354-.326.42-.399.146-.774.364-1.113.647-.147.123-.351.152-.526.072l-1.444-.652-.797 1.381 1.278.918c.156.112.233.304.201.493-.037.211-.067.426-.067.648s.03.437.067.648c.033.189-.045.38-.201.493l-1.278.918.797 1.381 1.444-.651c.066-.028.135-.042.205-.042z" fill="#2849de" data-original="#000000" style="" class=""></path></g></g></g></svg>
+												My Profile
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/users" class="dropdown-menu__link profilepage nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+												Manage Users
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#settingcollapse" aria-controls="settingcollapse" aria-expanded="false">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+												Company Settings <span class="arrow" style="margin-left: 35%;"></span>
+												<ul class="nav-second-level collapse" id="settingcollapse" data-parent="#navAccordion">
+													<div class="sidebar_title">Settings</div>
+													<li class="nav-item">
+														<a class="nav-link" href="#">
+															<img src="images/file-text.png" class="img-fluid">
+															Company Profile
+														</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="#">
+															<img src="images/file-text.png" class="img-fluid">Plan & Billing
+														</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Company Directory</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Commissions</a>
+													</li>
+													<li class="nav-item active">
+														<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems1" aria-controls="collapseSubItems1" aria-expanded="false"><img src="images/file-text-blue.png" class="img-fluid">Integrations</a>
+													</li>
+													<li class="nav-item">
+														<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">Workflow<span class="arrow"></span></a>
+														<ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+																</a>
+															</li>
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+																</a>
+															</li>
+														</ul>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Log viewer</a>
+													</li>
+													<li class="nav-item">
+														<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems3" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">User Management<span class="arrow"></span></a>
+														<ul class="nav-second-level collapse" id="collapseSubItems3" data-parent="#navAccordion">
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+																</a>
+															</li>
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+																</a>
+															</li>
+														</ul>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Lead rotator</a>
+													</li>
+												</ul>
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+											<a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+												<svg width="24" height="24">
+													<use xlink:href="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/icons.svg#ico-logout">
+
+													</use>
+												</svg>
+												Logout
+											</a>
+											<form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+												<input type="hidden" name="_token" value="hAEQjARbzqFjkrSBw1G0HJs8F3Zr3PvyXC53t3Y3">
+											</form>
+										</li>
+									</ul>
+								</form>
+							</div>
+						</aside>
+						<a class="navbar-brand" href="#">
+							<img src="images/logo.png" class="img-fluid height_37" />
+						</a>
+						<div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+								<li class="nav-item active">
+									<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Pipeline</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Proposals</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Lenders</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Partners</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Campaigns</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Reports</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Tasks</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Finance</a>
+								</li>
+							</ul>
+							<form class="form-inline my-2 my-lg-0">
+								<img src="images/bell.png" class="img-fluid m_r_15" />
+								<span class="notification_dot"></span>
+								<img src="images/user.png" class="img-fluid width_36 user" />
+									<ul class="dropdown-menu-profile">
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/profile-page" data-bind="" class="dropdown-menu__link profilepage nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m9 10c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z" fill="#2849de" data-original="#000000" style="" stroke="#2849DE" stroke-width="1" class=""></path></g><g xmlns="http://www.w3.org/2000/svg"><path d="m8.5 21h-8c-.276 0-.5-.224-.5-.5v-4c0-2.481 2.019-4.5 4.5-4.5h6c.276 0 .5.224.5.5s-.224.5-.5.5h-6c-1.93 0-3.5 1.57-3.5 3.5v3.5h7.5c.276 0 .5.224.5.5s-.224.5-.5.5z" fill="#2849de" data-original="#000000" style="" class="" stroke="#2849DE" stroke-width="1"></path></g><g xmlns="http://www.w3.org/2000/svg"><g><path d="m17 20c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z" fill="#2849de" data-original="#000000" style="" class=""></path></g><g><path d="m17.797 24h-1.595c-.516 0-.944-.387-.995-.901l-.127-1.271c-.303-.135-.592-.303-.865-.503l-1.168.527c-.469.214-1.02.035-1.277-.412l-.797-1.381c-.258-.447-.136-1.011.282-1.312l1.029-.74c-.02-.155-.034-.327-.034-.507s.014-.353.034-.507l-1.029-.74c-.418-.301-.54-.865-.282-1.312l.797-1.381c.258-.447.806-.624 1.277-.412l1.168.527c.273-.2.562-.368.865-.503l.127-1.271c.051-.513.479-.9.995-.9h1.595c.516 0 .944.387.995.901l.127 1.271c.304.135.593.304.865.503l1.168-.527c.471-.211 1.02-.034 1.277.412l.797 1.381c.258.447.136 1.011-.282 1.312l-1.029.74c.02.155.034.327.034.507s-.014.353-.034.507l1.029.74c.418.301.54.865.282 1.312l-.796 1.38c-.258.446-.805.625-1.277.412l-1.168-.527c-.273.2-.562.368-.865.503l-.128 1.272c-.051.513-.479.9-.995.9zm-3.512-3.755c.115 0 .229.04.321.117.339.284.714.501 1.113.647.18.066.307.229.326.42l.158 1.571h1.595l.157-1.571c.019-.191.146-.354.326-.42.399-.146.774-.364 1.113-.647.148-.123.352-.151.526-.072l1.444.652.797-1.381-1.278-.918c-.156-.112-.233-.304-.201-.493.037-.211.067-.426.067-.648s-.03-.437-.067-.648c-.033-.189.045-.38.201-.493l1.278-.918-.797-1.381-1.444.651c-.175.079-.379.051-.527-.072-.338-.284-.712-.501-1.113-.647-.18-.066-.307-.229-.326-.42l-.157-1.574h-1.595l-.157 1.571c-.019.191-.146.354-.326.42-.399.146-.774.364-1.113.647-.147.123-.351.152-.526.072l-1.444-.652-.797 1.381 1.278.918c.156.112.233.304.201.493-.037.211-.067.426-.067.648s.03.437.067.648c.033.189-.045.38-.201.493l-1.278.918.797 1.381 1.444-.651c.066-.028.135-.042.205-.042z" fill="#2849de" data-original="#000000" style="" class=""></path></g></g></g></svg>
+												My Profile
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/users" class="dropdown-menu__link profilepage nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+												Manage Users
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+												Company Settings
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+											<a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+												<svg width="24" height="24">
+													<use xlink:href="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/icons.svg#ico-logout">
+														
+													</use>
+												</svg>
+												Logout
+											</a>
+											<form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+												<input type="hidden" name="_token" value="hAEQjARbzqFjkrSBw1G0HJs8F3Zr3PvyXC53t3Y3">
+											</form>
+										</li>
+									</ul>
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</section>
+		<nav class="navbar navbar-expand-lg navbar-light left_top_menu">
+			<button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto sidenav" id="navAccordion" style="min-height: auto;">
+					<div class="sidebar_title">Settings</div>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<img src="images/file-text.png" class="img-fluid">
+							Company Profile
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<img src="images/file-text.png" class="img-fluid">Plan & Billing
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Company Directory</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Commissions</a>
+					</li>
+					<li class="nav-item">
+						<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems1" aria-controls="collapseSubItems1" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">Integrations<span class="arrow"></span><span class="sr-only">(current)</span></a>
+						<ul class="nav-second-level collapse" id="collapseSubItems1" data-parent="#navAccordion">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All<span class="sr-only">(current)</span></span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Active Integrations</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Credit Vendors</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">LOS Vendors</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">E Sign Vendors</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Loan Pricing Vendors</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Property Data</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">Workflow<span class="arrow"></span></a>
+						<ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href=""><img src="images/file-text-blue.png" class="img-fluid">Activity</a>
+					</li>
+					<li class="nav-item">
+						<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems3" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">User Management<span class="arrow"></span></a>
+						<ul class="nav-second-level collapse" id="collapseSubItems3" data-parent="#navAccordion">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Lead rotator</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="content-wrapper bg_skyblue marketing_table">
+			<div class="container-fluid">
+				<div class="">
+					<div class="row">
+						<div class="top_body">
+							<div class="content_center">
+								<div class="width_70p">
+									<!-- <input id="form-tags-1" name="tags-1" type="text" value="Facebook - FHA,Mailers"> -->
+									<div class="ui form">
+									    <div class="inline field">
+											<select multiple="multiple" class="ui fluid search dropdown" id="lead_sources" name="lead_sources">
+											  <option value="">Filter by lead source</option>
+											  <option value="0">All lead sources</option>
+											  <option value="1">Repeat Customer</option>
+											  <option value="2">Facebook</option>
+											  <option value="3">Google</option>
+											  <option value="4">Mailers</option>
+											  <option value="5">XFR</option>
+											  <option value="6">Zillow</option>
+											  <option value="7">Referrals</option>
+											  <option value="8">MSA</option>
+											  <option value="9">FHA</option>
+											  <option value="10">Rate table</option>
+									      </select>
+									    </div>
+									</div>
+								</div>
+								<div class="m_l_30">
+									<div class="date_selection light_blue content_center">
+										<img src="images/calendra.png" class="img-fluid m_r_15 reportrange">
+										<span class="reportrange"> Jun 01, 2020 - Nov 30, 2020 </span>
+									</div>
+								</div>
+								<div class="m_l_30">
+									<button class="blue_btn">
+										Export to CSV
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div class="row marketing_collapsible_integration_content_row">
+						<div class="top_body">
+							<div class="row">
+								<div class="col-12">
+									<div class="title">
+										<div class="marketing_arrow_down">
+											<img src="images/black_closearrow.png" class="img-fluid marketing_collapsible_integration_section">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row marketing_toggle_content">
+								<div class="col-12">
+									<div class="row">
+										<div class="col-md-12 col-lg-6 col-xl-2">
+											<div class="graph_title">
+												Leads By Source
+											</div>
+											<figure class="highcharts-figure">
+												<div id="pie-chart-container"></div>
+											</figure>
+										</div>
+										<div class="col-md-12 col-lg-6 col-xl-4" style="padding: 0;">
+											<div class="graph_title">
+												Submission-to-Funded Ratio
+											</div>
+											<figure class="highcharts-figure">
+												<div id="container" style="width: 275px"></div>
+											</figure>
+										</div>
+										<div class="col-md-12 col-lg-12 col-xl-6">
+											<div class="graph_title marketing_title">
+												Top Five Marketing ROI Channels
+											</div>
+											<figure class="highcharts-figure">
+												<div id="marketing-roi-container"></div>
+											</figure>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="content_center" style="justify-content: space-around;">
+										<div>
+											<div class="content_center">
+												<div class="horizontal_line"></div>
+												<div class="">
+													<div class="grey_title">Lead Source Expense</div>
+													<div class="grey_amount">$14,756.55</div>
+													<div class="grey_percentage">
+														<img src="images/red_arrow.png" class="img-fluid" />0.3%
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="m_l_30">
+											<div class="content_center">
+												<div class="horizontal_line"></div>
+												<div class="">
+													<div class="grey_title">Lead Source Revenue</div>
+													<div class="grey_amount">$14,756.55</div>
+													<div class="grey_percentage">
+														<img src="images/red_arrow.png" class="img-fluid" />0.3%
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="m_l_30">
+											<div class="content_center">
+												<div class="horizontal_line"></div>
+												<div class="">
+													<div class="grey_title">Cost per Lead</div>
+													<div class="grey_amount">$14,756.55</div>
+													<div class="grey_percentage">
+														<img src="images/red_arrow.png" class="img-fluid" />0.3%
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="m_l_30">
+											<div class="content_center">
+												<div class="horizontal_line"></div>
+												<div class="">
+													<div class="grey_title">Rev per Lead</div>
+													<div class="grey_amount">$14,756.55</div>
+													<div class="grey_percentage">
+														<img src="images/green_arrow.png" class="img-fluid" />5.8%
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="m_l_30">
+											<div class="content_center">
+												<div class="horizontal_line"></div>
+												<div class="">
+													<div class="grey_title">Cost per Submitted</div>
+													<div class="grey_amount">$14,756.55</div>
+													<div class="grey_percentage">
+														<img src="images/red_arrow.png" class="img-fluid" />0.3%
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="m_l_30">
+											<div class="content_center">
+												<div class="horizontal_line"></div>
+												<div class="">
+													<div class="grey_title">Cost per Funding</div>
+													<div class="grey_amount">$14,756.55</div>
+													<div class="grey_percentage">
+														<img src="images/red_arrow.png" class="img-fluid" />0.3%
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="m_l_30">
+											<div class="content_center">
+												<div class="horizontal_line"></div>
+												<div class="">
+													<div class="grey_title">Rev per Funding</div>
+													<div class="grey_amount">$14,756.55</div>
+													<div class="grey_percentage">
+														<img src="images/red_arrow.png" class="img-fluid" />0.3%
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="m_l_30">
+											<div class="content_center">
+												<div class="horizontal_line"></div>
+												<div class="">
+													<div class="grey_title">ROI</div>
+													<div class="grey_amount">$14,756.55</div>
+													<div class="grey_percentage">
+														<img src="images/red_arrow.png" class="img-fluid" />0.3%
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="scroll_body height_auto">
+					<table id="marketing_target">
+						<thead>
+							<tr>
+								<th><span>Lead Source</span></th>
+								<th><span>Total</span></th>
+								<th><span>Lead Source Expense</span></th>
+								<th><span>Lead Source Revenue</span></th>
+								<th><span>Cost per Lead</span></th>
+								<th><span>Rev per Lead</span></th>
+								<th><span>Total Submitted</span></th>
+								<th><span>Cost per Submitted</span></th>
+								<th><span>Rev per Submitted</span></th>
+								<th><span>Total Funded</span></th>
+								<th><span>Cost per Funding</span></th>
+								<th><span>Rev per Funding</span></th>
+								<th><span>ROI</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Facebook - FHA</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>External Call XFR</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Facebook - Debt Consolidation</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>FHA Streamline Lead Form</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+
+							<tr>
+								<td>Facebook - FHA</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>External Call XFR</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Facebook - Debt Consolidation</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>FHA Streamline Lead Form</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+
+							<tr>
+								<td>Facebook - FHA</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>External Call XFR</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Facebook - Debt Consolidation</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>FHA Streamline Lead Form</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+
+							<tr>
+								<td>Facebook - FHA</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>External Call XFR</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Facebook - Debt Consolidation</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>FHA Streamline Lead Form</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+
+							<tr>
+								<td>Facebook - FHA</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>External Call XFR</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Facebook - Debt Consolidation</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>FHA Streamline Lead Form</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+
+							<tr>
+								<td>Facebook - FHA</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>External Call XFR</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Facebook - Debt Consolidation</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>FHA Streamline Lead Form</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+
+							<tr>
+								<td>Facebook - FHA</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>External Call XFR</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Facebook - Debt Consolidation</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>FHA Streamline Lead Form</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+
+							<tr>
+								<td>Facebook - FHA</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>External Call XFR</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Facebook - Debt Consolidation</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>FHA Streamline Lead Form</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+
+							<tr>
+								<td>Facebook - FHA</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>External Call XFR</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Facebook - Debt Consolidation</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>FHA Streamline Lead Form</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+							<tr>
+								<td>Repeat Customer</td>
+								<td>77</td>
+								<td>$14,756.55</td>
+								<td>$86,063.61</td>
+								<td>$191.64</td>
+								<td>$1,117.71</td>
+								<td>25</td>
+								<td>$590,26</td>
+								<td>$3,442.54</td>
+								<td>16</td>
+								<td>$922.28</td>
+								<td>$5,378.98</td>
+								<td>583.22%</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main> <!-- /content -->
+</body>
+<script type="text/javascript">
+//    $('.label.ui.dropdown').dropdown();
+//
+//    $('.no.label.ui.dropdown').dropdown({
+//      useLabels: false
+//    });
+//
+//    $('.ui.button').on('click', function () {
+//      $('.ui.dropdown').dropdown('restore defaults')
+//    });
+
+$('.dropdown').dropdown({
+	label: {
+		duration: 0,
+	},
+	debug: true,
+	performance: true,
+});
+	// OPTIONAL JS
+
+// Change the button text & add active class
+$('.jRadioDropdown').change(function() {
+	var dropdown = $(this).closest('.dropdown');
+	var thislabel = $(this).closest('label');
+
+	dropdown.find('label').removeClass('active');
+	if( $(this).is(':checked') ) {
+		thislabel.addClass('active');
+		dropdown.find('ins').html( thislabel.text() );
+	}
+
+});    
+
+//Add tabindex on labels
+$('label.dropdown-item').each(function (index, value){
+	$(this).attr('tabindex', 0 );
+	$(this).find('input').attr('tabindex', -1 );
+});
+
+//Add keyboard navigation
+$('label.dropdown-item').keypress(function(e){
+	if((e.keyCode ? e.keyCode : e.which) == 13){
+		$(this).trigger('click');
+	}
+});
+	function toggleMainmenu(e) {
+		e.classList.toggle("active");
+		document.querySelector("aside").classList.toggle("active");
+	}
+$(document).ready(function(){
+	$('.user').click(function (e) {
+		e.preventDefault();
+		//$(this).find('.dropdown-menu').toggle();
+		$('.dropdown-menu-profile').toggle();
+	});
+	$('.top_menu').click(function (e) {
+		e.preventDefault();
+		//$(this).find('.dropdown-menu').toggle();
+		$('.dropdown-menu-profile').hide();
+		$('.nav-second-level').addClass('collapse').removeClass('show');
+	});
+	$('.marketing_arrow_down').click(function () {
+		if ($('.marketing_toggle_content').is(':visible') == false) {
+			$('.marketing_collapsible_integration_section').css({"margin-top":"0", "transform":"rotate(0deg)"});
+			$('.content-wrapper').removeClass('empty_class');
+		} else {
+			$('.marketing_collapsible_integration_section').css({"margin-top":"0", "transform":"rotate(180deg)"});
+			$('.content-wrapper').addClass('empty_class');
+		}
+
+//jquery to reduce the collapsible container height.
+		var c_height = $('.marketing_toggle_content').height();
+		var orig_height = $('.sidenav').height();
+		var new_height = orig_height-c_height;
+		$('.sidenav').css({'height': new_height + 'px'});
+
+
+		$('.marketing_toggle_content').slideToggle('slow', function () {
+			setEqualContainer();
+			$('#marketing_target').DataTable().draw();
+		});
+	});
+
+	function setEqualContainer() {
+		setTimeout(function () {
+			var highestBox = 0;
+// Select and loop the elements you want to equalise
+			highestBox = $('.marketing_table').height();
+			console.log('height box ' + highestBox);
+
+// Set the height of all those children to whichever was highest
+			$('.sidenav').css({'height': highestBox + 'px'});
+		}, 100);
+	}
+
+	setEqualContainer();
+	$('#marketing_target').DataTable( {
+		"scrollY":        "100%",
+		"scrollCollapse": true,
+		"dom": 'rt<"bottom right"ip><"clear">',
+		"lengthMenu": [[50]],
+		language: {
+			paginate: {
+				next: '<img src="images/right_arrow.png">',
+				previous: '<img src="images/left_arrow.png">'
+			}
+		},
+		"infoCallback": function( settings, start, end, max, total, pre ) {
+			return "Showing " + start +" - "+ end + " of " + total;
+		}
+	});
+});
+
+        //Chart 1
+        Highcharts.chart('pie-chart-container', {
+        	chart: {
+        		plotBackgroundColor: null,
+        		plotBorderWidth: 0,
+        		plotShadow: false
+        	},
+        	credits: {
+        		enabled: false
+        	},
+        	title: {
+        		text: '<p class="graph_label">Total Leads</p> <br><b class="graph_total">217</b>',
+        		align: 'center',
+        		verticalAlign: 'middle',
+        		y: 10
+        	},
+        	tooltip: {
+        		shared: true,
+        		useHTML: true,
+        		borderWidth: 0,
+        		backgroundColor: "rgba(255,255,255,0)",
+        		borderRadius: 0,
+        		shadow: false,
+        		formatter: function() {
+        			var html = '<div class="chart">' +
+        			'<div class="content_center m_t_10">'+
+        			'<div class="color_filled lightblue_filled">'+
+        			'</div>'+
+        			'<div>'+
+        			'<div class="chart_value">'+
+					this.point.name +
+        			'</div>' +
+        			'<div class="chart_expenses">'+
+					this.point.y +
+        			'</div>'+
+        			'</div>'+
+        			'</div>'+
+        			'</div>';
+        			return html;
+				//return '<b>'+this.x+'</b><br><b>No of loans </b>' + this.points[0].y + '<br> <b>Value </b>' + this.points[1].y;
+			}
+		},
+		accessibility: {
+			point: {
+				valueSuffix: '%'
+			}
+		},
+			plotOptions: {
+				pie: {
+					dataLabels: {
+						enabled: true,
+						distance: -50,
+						style: {
+							fontWeight: 'bold',
+							color: 'white'
+						}
+					},
+					/* startAngle: -90,
+					 endAngle: 90, */
+					center: ['50%', '50%'],
+					size: '110%'
+				},
+				series: {
+					states: {
+						hover: {
+							enabled: false
+						},
+						inactive: {
+							opacity: 1
+						}
+					}
+				}
+			},
+			series: [{
+				type: 'pie',
+				//name: 'Browser share',
+				innerSize: '70%',
+				data: [
+					{
+						name: 'Repeat Customer',
+						y: 58,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgb(50,70,211)'
+					},
+					{
+						name: 'Facebook',
+						y: 13,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.2)'
+					},
+					{
+						name: 'Google',
+						y: 13,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.2)'
+					},
+					{
+						name: 'Mailiers',
+						y: 3,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.1)'
+					},
+					{
+						name: 'XFR',
+						y: 3,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.1)'
+					},
+					{
+						name: 'Zillow',
+						y: 7,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.1)'
+					},
+					{
+						name: 'Referrals',
+						y: 7,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.1)'
+					},
+					{
+						name: 'Rate table',
+						y: 7,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.1)'
+					},
+					{
+						name: 'MSA',
+						y: 7,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.1)'
+					},
+					{
+						name: 'FHA',
+						y: 7,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.1)'
+					},
+					{
+						name: 'Other',
+						y: 7,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.1)'
+					},
+					{
+						name: 'Other source',
+						y: 7,
+						dataLabels: {
+							enabled: false
+						},
+						color : 'rgba(50,70,211, 0.1)'
+					}
+				]
+			}]
+	});
+
+        $(document).ready(function(){
+   $('.highcharts-title').hover(function () {
+            $('.highcharts-title').tooltip({
+                title: '<div class="chart">' +
+                '<div class="content_center m_t_10">'+
+                '<div class="color_filled lightblue_filled">'+
+                '</div>'+
+                '<div>'+
+                '<div class="chart_value">'+
+                'Submitted' +
+                '</div>' +
+                '<div class="chart_expenses">'+
+                '70' +
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '<div class="content_center m_t_10">'+
+                '<div class="color_filled lightblue_filled">'+
+                '</div>'+
+                '<div>'+
+                '<div class="chart_value">'+
+                'Funded' +
+                '</div>' +
+                '<div class="chart_expenses">'+
+                '50' +
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '<div class="content_center m_t_10">'+
+                '<div class="color_filled lightblue_filled">'+
+                '</div>'+
+                '<div>'+
+                '<div class="chart_value">'+
+                'Ratio' +
+                '</div>' +
+                '<div class="chart_expenses">'+
+                '71%' +
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>',
+                html:true,
+                placement:'top'
+            });
+       });
+   });
+        //Chart 2
+        Highcharts.chart('container', {
+        	chart: {
+        		zoomType: 'xy'
+        	},
+        	credits: {
+        		enabled: false
+        	},
+
+        	title: {
+        		text: ''
+        	},
+//        subtitle: {
+//            text: 'Source: WorldClimate.com'
+//        },
+xAxis: [{
+	categories: ["Jun", "July", "Aug", "Sept","Oct"],
+	crosshair: true,
+//                labels: {
+//                    enabled: false
+//                },
+lineWidth: 1
+}],
+plotOptions: {
+	series: {
+		borderRadius: 10,
+		marker: {
+			enabled: false,
+			states: {
+				hover: {
+					lineWidth: 1.5,
+					lineWidthPlus: 0,
+					enabled: false,
+				}
+			}
+		}
+	}
+},
+		yAxis: [{ // Primary yAxis
+//            labels: {
+//                format: '{value}°C',
+//                style: {
+//                    color: Highcharts.getOptions().colors[1]
+//                }
+//            },
+opposite: true,
+title: {
+	text: null,
+	style: {
+		color: Highcharts.getOptions().colors[1]
+	}
+},
+labels: {
+	enabled: false,
+},
+},
+			{ // Secondary yAxis
+				title: {
+					text: null,
+					style: {
+						color: Highcharts.getOptions().colors[0]
+					}
+				},
+				lineWidth: 1
+//                labels: {
+//                    enabled: false
+//                }
+},
+],
+tooltip: {
+	shared: true,
+	useHTML: true,
+	borderWidth: 0,
+	backgroundColor: "rgba(255,255,255,0)",
+	borderRadius: 0,
+	shadow: false,
+	formatter: function() {
+		var html = '<div class="chart">' +
+		'<div class="content_center m_t_10">'+
+		'<div class="color_filled lightblue_filled">'+
+		'</div>'+
+		'<div>'+
+		'<div class="chart_value">'+
+		'Avg' +
+		'</div>' +
+		'<div class="chart_expenses">'+
+		this.points[1].y+ '%' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>';
+		return html;
+				//return '<b>'+this.x+'</b><br><b>No of loans </b>' + this.points[0].y + '<br> <b>Value </b>' + this.points[1].y;
+			}
+		},
+		legend: {
+			enabled: false,
+			layout: 'vertical',
+			align: 'left',
+			x: 120,
+			verticalAlign: 'top',
+			y: 100,
+			floating: true,
+			backgroundColor:
+			Highcharts.defaultOptions.legend.backgroundColor || // theme
+			'rgba(255,255,255,0.25)'
+		},
+		series: [{
+			name: 'Number of loans',
+			type: 'column',
+			yAxis: 1,
+			data: [16,16,4,2,21],
+			color: 'rgba(50,70,211, 0.1)',
+			pointWidth: 35,
+//            tooltip: {
+//                valueSuffix: ' mm'
+//            }
+
+}, {
+	name: 'Value',
+	type: 'spline',
+	data: [28.54,28.54,28.54,28.54,28.54],
+	color: 'rgb(50,70,211)',
+	dashStyle: 'longdash',
+	lineWidth: 1.5
+//            tooltip: {
+//                valueSuffix: '°C'
+//            }
+}],
+	}, function () { // on complete
+			var chart = this;
+			chart.renderer.text('Avg<br>' + chart.series[1].data[0].y + '%', 260, 80)
+					.attr({
+						rotation: 0
+					})
+					.css({
+						fontFamily: '"Inter",serif',
+						fontStyle: 'normal',
+						fontWeight: '300',
+						fontSize: '10px',
+						lineHeight: '14px',
+						color: '#60698B',
+						whiteSpace: 'nowrap',
+						zIndex: '99999',
+						overflow: 'visible'
+					})
+					.add();
+
+		});
+
+
+		//new chart 3
+//    New Chart
+var d = new Date();
+var pointStart = d.getTime();
+Highcharts.setOptions({
+	global: {
+		useUTC: false
+	},
+	credits: {
+		enabled: false
+	},
+	colors: [
+		'#657FDB',
+		'#CC95C1',
+		'#AEE2F5',
+		'#DCCEFF',
+		'#D1B9D6'
+	],
+	chart: {
+		alignTicks: false,
+		zoomType: 'x',
+		type: 'line',
+//        margin: [60, 25, 100, 90],
+		//borderRadius:10,
+		//borderWidth:1,
+		//borderColor:'rgba(156,156,156,.25)',
+		//backgroundColor:'rgba(204,204,204,.25)',
+		//plotBackgroundColor:'rgba(255,255,255,1)',
+		//style: {
+		//fontFamily: 'Abel,serif'
+		//}
+	},
+	title: {
+		text: '',
+		enabled: false,
+		align: 'left',
+		margin: 10,
+		x: 50,
+		style: {
+			fontWeight: 'bold',
+			color: 'rgba(0,0,0,.9)'
+		}
+	},
+	subtitle: {
+		text: '',
+		enabled: false,
+		align: 'left',
+		x: 52,
+	},
+	legend: {enabled: false},
+	plotOptions: {
+		line: {
+			lineWidth: 1,
+			marker: {
+				enabled: true,
+				symbol: 'circle',
+				radius: 4
+			}
+		},
+	},
+	xAxis: {
+		title: {
+			text: '',
+			rotation: 0,
+			textAlign: 'center',
+			style: {
+				color: 'rgba(0,0,0,.9)'
+			}
+		},
+		labels: {
+			style: {
+				color: 'rgba(0,0,0,.9)',
+				fontSize: '9px'
+			}
+		},
+		lineWidth: .5,
+		lineColor: 'rgba(0,0,0,.5)',
+		tickWidth: .5,
+		tickLength: 6,
+		tickColor: 'rgba(0,0,0,.75)'
+	},
+	yAxis: {
+		minPadding: 0,
+		maxPadding: 0,
+		gridLineColor: 'rgba(204,204,204,.25)',
+		gridLineWidth: 0,
+		title: {
+			text: '',
+			rotation: 0,
+			textAlign: 'right',
+			style: {
+				color: 'rgba(0,0,0,.9)',
+			}
+		},
+		labels: {
+			style: {
+				color: 'rgba(0,0,0,.9)',
+				fontSize: '9px'
+			}
+		},
+		lineWidth: .5,
+		lineColor: 'rgba(0,0,0,.5)',
+		tickWidth: .5,
+		tickLength: 12,
+		tickColor: 'rgba(0,0,0,.75)'
+	},
+	tooltip: {
+		shared: true,
+		useHTML: true,
+		borderWidth: 0,
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		shadow: false,
+		formatter: function () {
+			var html = '<div class="chart custom_chart" style="overflow: visible;">' +
+					'<div class="m_t_10">'+
+					'<div>'+
+					'<div class="chart_value" style="font-size:12px;line-height:14.52px;">'+
+					'Repeat Customer' +
+					'</div>' +
+					'<div class="chart_expenses" style="color: #657FDB; font-size:14px;line-height:16.9px;">'+
+					this.points[0].y+ '%' +
+					'</div>'+
+					'</div>'+
+					'</div>'+
+					'<div class="m_t_10">'+
+					'<div>'+
+					'<div class="chart_value" style="font-size:12px;line-height:14.52px;">'+
+					'Facebook' +
+					'</div>' +
+					'<div class="chart_expenses" style="color: #CC95C1; font-size:14px;line-height:16.9px;">'+
+					this.points[1].y+ '%' +
+					'</div>'+
+					'</div>'+
+					'</div>'+
+					'<div class="m_t_10">'+
+					'<div>'+
+					'<div class="chart_value" style="font-size:12px;line-height:14.52px;">'+
+					'Google' +
+					'</div>' +
+					'<div class="chart_expenses" style="color: #AEE2F5; font-size:14px;line-height:16.9px;">'+
+					this.points[2].y+ '%' +
+					'</div>'+
+					'</div>'+
+					'</div>'+
+					'<div class="m_t_10">'+
+					'<div>'+
+					'<div class="chart_value" style="font-size:12px;line-height:14.52px;">'+
+					'Mailiers' +
+					'</div>' +
+					'<div class="chart_expenses" style="color: #DCCEFF; font-size:14px;line-height:16.9px;">'+
+					this.points[3].y+ '%' +
+					'</div>'+
+					'</div>'+
+					'</div>'+
+					'<div class="m_t_10">'+
+					'<div>'+
+					'<div class="chart_value" style="font-size:12px;line-height:14.52px;">'+
+					'XFR' +
+					'</div>' +
+					'<div class="chart_expenses" style="color: #D1B9D6; font-size:14px;line-height:16.9px;">'+
+					this.points[4].y+ '%' +
+					'</div>'+
+					'</div>'+
+					'</div>'+
+					'</div>';
+			return html;
+		}
+	},
+});
+
+var chart;
+var pointStart = Date.UTC(2020, 0, 1);
+//$(function () {
+//jQuery.noConflict();
+jQuery(document).ready(function ($) {
+
+	$('#marketing-roi-container').highcharts({
+		chart: {type: 'line'},
+		title: {},
+		subtitle: {},
+		legend: {enabled: false},
+		plotOptions: {
+			series: {
+				pointStart: pointStart,
+				pointInterval: 24 * 3600 * 1000 * 30
+			}
+		},
+		xAxis: {
+//            min: Date.UTC(2020, 06, 0),
+//            max: Date.UTC(2020, 11, 1),
+			//allowDecimals: false,
+			type: 'datetime',
+			tickInterval: 24 * 3600 * 1000 * 30, //one day
+			labels: {
+				rotation: 0,
+				format: '{value:%b}',
+				style: {
+					color: '#9FA3C0'
+				}
+			},
+
+		},
+		yAxis: {
+			labels: {
+				style: {
+					color: '#9FA3C0'
+				}
+			}
+		}
+	});
+	chart = $('#marketing-roi-container').highcharts();
+
+
+	var jsonString1 = '[{ "date": "2020-6-01", "percentage": "500" }, { "date": "2020-7-02", "percentage": "50" }, { "date": "2020-8-03", "percentage": "2424"}, { "date": "2020-9-04", "percentage": "14040" }, { "date": "2020-10-05", "percentage": "14141" }, { "date": "2020-11-06", "percentage": "4111"} ]';
+	var jsonString2 = '[{ "date": "2020-6-01", "percentage": "1288" }, { "date": "2020-7-02", "percentage": "88942" }, { "date": "2020-8-03", "percentage": "44545"}, { "date": "2020-9-04", "percentage": "7588" }, { "date": "2020-10-05", "percentage": "99" }, { "date": "2020-11-06", "percentage": "242"} ]';
+	var jsonString3 = '[{ "date": "2020-6-01", "percentage": "1288" }, { "date": "2020-7-02", "percentage": "98942" }, { "date": "2020-8-03", "percentage": "44545"}, { "date": "2020-9-04", "percentage": "7588" }, { "date": "2020-10-05", "percentage": "199" }, { "date": "2020-11-06", "percentage": "2242"} ]';
+	var jsonString4 = '[{ "date": "2020-6-01", "percentage": "2388" }, { "date": "2020-7-02", "percentage": "78942" }, { "date": "2020-8-03", "percentage": "64545"}, { "date": "2020-9-04", "percentage": "5588" }, { "date": "2020-10-05", "percentage": "3199" }, { "date": "2020-11-06", "percentage": "6242"} ]';
+	var jsonString5 = '[{ "date": "2020-6-01", "percentage": "6388" }, { "date": "2020-7-02", "percentage": "8942" }, { "date": "2020-8-03", "percentage": "94545"}, { "date": "2020-9-04", "percentage": "7588" }, { "date": "2020-10-05", "percentage": "8199" }, { "date": "2020-11-06", "percentage": "8242"} ]';
+
+	var myData1 = JSON.parse(jsonString1);
+	var myData2 = JSON.parse(jsonString2);
+	var myData3 = JSON.parse(jsonString3);
+	var myData4 = JSON.parse(jsonString4);
+	var myData5 = JSON.parse(jsonString5);
+	var dataArray1 = [];
+	var dataArray2 = [];
+	var dataArray3 = [];
+	var dataArray4 = [];
+	var dataArray5 = [];
+
+	$.each(myData1, function (i, obj) {
+		//console.log(obj.date);
+		var d = new Date(obj.date);
+		dataArray1.push([Date.parse(d), parseInt(obj.percentage)]);
+	});
+	$.each(myData2, function (i, obj) {
+		//console.log(obj.date);
+		var d = new Date(obj.date);
+		dataArray2.push([Date.parse(d), parseInt(obj.percentage)]);
+	});
+	$.each(myData3, function (i, obj) {
+		//console.log(obj.date);
+		var d = new Date(obj.date);
+		dataArray3.push([Date.parse(d), parseInt(obj.percentage)]);
+	});
+	$.each(myData4, function (i, obj) {
+		//console.log(obj.date);
+		var d = new Date(obj.date);
+		dataArray4.push([Date.parse(d), parseInt(obj.percentage)]);
+	});
+	$.each(myData5, function (i, obj) {
+		//console.log(obj.date);
+		var d = new Date(obj.date);
+		dataArray5.push([Date.parse(d), parseInt(obj.percentage)]);
+	});
+
+	// add first series values
+	chart.addSeries({
+		data: dataArray1,
+		type: 'spline',
+		marker: {
+			symbol: 'circle',
+			lineWidth: 2
+		}
+	});
+
+	// add second   series values
+	chart.addSeries({
+		data: dataArray2,
+		type: 'spline',
+		marker: {
+			symbol: 'circle',
+			lineWidth: 2
+		}
+	});
+
+	// add third   series values
+	chart.addSeries({
+		data: dataArray3,
+		type: 'spline',
+		marker: {
+			symbol: 'circle',
+			lineWidth: 2
+		}
+	});
+
+	// add fourth   series values
+	chart.addSeries({
+		data: dataArray4,
+		type: 'spline',
+		marker: {
+			symbol: 'circle',
+			lineWidth: 2
+		}
+	});
+
+	// add fifth   series values
+	chart.addSeries({
+		data: dataArray5,
+		type: 'spline',
+		marker: {
+			symbol: 'circle',
+			lineWidth: 2
+		}
+	});
+});
+
+
+        //Chart 3
+//        Highcharts.chart('marketing-roi-container', {
+//        	chart: {
+//			//            zoomType: 'xy'
+//			type: 'spline'
+//		},
+//		credits: {
+//			enabled: false
+//		},
+//
+//		title: {
+//			text: ''
+//		},
+//		xAxis: [{
+//			categories: ["Jun", "Jul", "Aug",  "Sep", "Oct",  "Nov"],
+//			crosshair: true,
+//			lineWidth: 1
+//		}],
+//		yAxis: [{
+//			lineWidth: 1,
+//			title: {
+//				text: null
+//			},
+//			labels: {
+//				format: '{value}%',
+//			},
+//		}],
+//		tooltip: {
+//			shared: true,
+//			useHTML: true,
+//			borderWidth: 0,
+//			backgroundColor: "rgba(255,255,255,0)",
+//			borderRadius: 0,
+//			shadow: false,
+//			positioner: function (labelWidth, labelHeight, point) {
+//				return { x: point.plotX, y: 0 };
+//			},
+//			formatter: function() {
+//				var html = '<div class="chart custom_chart" style="overflow: visible;">' +
+//						'<div class="m_t_10">'+
+//						'<div>'+
+//						'<div class="chart_value" style="font-size:12px;line-height:14.52px;">'+
+//						'Repeat Customer' +
+//						'</div>' +
+//						'<div class="chart_expenses" style="color: #657FDB; font-size:14px;line-height:16.9px;">'+
+//						this.points[0].y+ '%' +
+//						'</div>'+
+//						'</div>'+
+//						'</div>'+
+//						'<div class="m_t_10">'+
+//						'<div>'+
+//						'<div class="chart_value" style="font-size:12px;line-height:14.52px;">'+
+//						'Facebook' +
+//						'</div>' +
+//						'<div class="chart_expenses" style="color: #CC95C1; font-size:14px;line-height:16.9px;">'+
+//						this.points[1].y+ '%' +
+//						'</div>'+
+//						'</div>'+
+//						'</div>'+
+//						'<div class="m_t_10">'+
+//						'<div>'+
+//						'<div class="chart_value" style="font-size:12px;line-height:14.52px;">'+
+//						'Google' +
+//						'</div>' +
+//						'<div class="chart_expenses" style="color: #AEE2F5; font-size:14px;line-height:16.9px;">'+
+//						this.points[2].y+ '%' +
+//						'</div>'+
+//						'</div>'+
+//						'</div>'+
+//						'<div class="m_t_10">'+
+//						'<div>'+
+//						'<div class="chart_value" style="font-size:12px;line-height:14.52px;">'+
+//						'Mailiers' +
+//						'</div>' +
+//						'<div class="chart_expenses" style="color: #DCCEFF; font-size:14px;line-height:16.9px;">'+
+//						this.points[3].y+ '%' +
+//						'</div>'+
+//						'</div>'+
+//						'</div>'+
+//						'<div class="m_t_10">'+
+//						'<div>'+
+//						'<div class="chart_value" style="font-size:12px;line-height:14.52px;">'+
+//						'XFR' +
+//						'</div>' +
+//						'<div class="chart_expenses" style="color: #D1B9D6; font-size:14px;line-height:16.9px;">'+
+//						this.points[4].y+ '%' +
+//						'</div>'+
+//						'</div>'+
+//						'</div>'+
+//						'</div>';
+//				return html;
+//				//return '<b>'+this.x+'</b><br><b>No of loans </b>' + this.points[0].y + '<br> <b>Value </b>' + this.points[1].y;
+//			}
+//		},
+//		legend: {
+//			enabled: false,
+//			layout: 'vertical',
+//			align: 'left',
+//			x: 120,
+//			verticalAlign: 'top',
+//			y: 100,
+//			floating: true,
+//			backgroundColor:
+//			Highcharts.defaultOptions.legend.backgroundColor || // theme
+//			'rgba(255,255,255,0.25)'
+//		},
+//		series: [{
+//			name: '1 Repeat Customer',
+//			//type: 'spline',
+//			//yAxis: 1,
+//			data: [500, 50, 2424, 14040,  14141,  4111],
+//			color: '#657FDB',
+//			marker: {
+//				symbol: 'circle',
+//				lineWidth: 2
+//			}
+//
+//		}, {
+//			name: '2 Facebook',
+//			//type: 'spline',
+//			data: [1288,  88942,  44545,  7588, 99, 242],
+//			color: '#CC95C1',
+//			marker: {
+//				symbol: 'circle',
+//				lineWidth: 2
+//			}
+//		}, {
+//			name: '3 Google',
+//			//type: 'spline',
+//			data: [1288,  98942,  44545,  7588, 199,  2242],
+//			color: '#AEE2F5',
+//			marker: {
+//				symbol: 'circle',
+//				lineWidth: 2
+//			}
+//		}, {
+//			name: '4 Mailiers',
+//			//type: 'spline',
+//			data: [2388,  78942,  64545,  5588, 3199,  6242],
+//			color: '#DCCEFF',
+//			marker: {
+//				symbol: 'circle',
+//				lineWidth: 2
+//			}
+//		}, {
+//			name: '5 XFR',
+//			//type: 'spline',
+//			data: [6388,  8942,  94545,  7588, 8199,  8242],
+//			color: '#D1B9D6',
+//			marker: {
+//				symbol: 'circle',
+//				lineWidth: 2
+//			}
+//		}
+//		]
+//	});
+</script>
+
+</html>

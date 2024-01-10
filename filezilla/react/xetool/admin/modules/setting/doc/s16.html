@@ -1,0 +1,45 @@
+<div class="modal fade slide-right" id="s16" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body info-module-single">
+                <h4 class="info-module-title">
+                  How do I enable imagick in Cpanel?
+                </h4>
+                <br>
+                Bind ImageMagick into PHP using Imagick
+                <ol>
+                    <li>Login to WHM and navigate to the “Module Installers” option under “Software” in the left hand menu.</li>
+                    <li>On the following page, select the “Manage” link beside the PHP Pecl language option.</li>
+                    <li>Enter imagick into the “Install a PHP Pecl” field and then click the install button.</li>
+                </ol>
+            </div>
+            <div class="modal-body info-module-single">
+                <h4 class="info-module-title">
+                  How do I install imagick on Ubuntu?
+                </h4>
+                <br>
+                If you want to install Imagick in your server in just a couple of minutes, follow these steps:
+                <ol>
+                    <li>Install PHP Imagick. To use Imagick with PHP 7 in your server, you can easily achieve it with the following command:</li>
+                    sudo apt-get install php-imagick
+                    <li>Verify if imagick has been loaded as an extension (optional)</li>
+                    <li>Restart apache.</li>
+                </ol>
+            </div>
+            <div class="modal-body info-module-single">
+                <h4 class="info-module-title">
+                  Install the Imagick PHP extension on Debian
+                </h4>
+                <br>
+                Install the software hith the following command:<br>
+                command apt-get -y install php5-imagick
+                <ol>
+                    <li>Reload the configuration with the following command:<br>
+                    test -e '/etc/init.d/php5-fpm' && command service 'php5-fpm' 'restart'<br>
+                    test -e '/etc/init.d/apache2' && command service 'apache2' 'force-reload'
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

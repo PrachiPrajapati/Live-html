@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/intergation.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/tabs.css">
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <!--<script type="text/javascript" src="js/custom.js"></script>-->
+    <script type="text/javascript" src="js/header.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+</head>
+<body>
+
+<main class="content bg_skyblue" role="content">
+    <section class="container-fluid bg_white">
+        <div class="row">
+            <div class="col-12 p_lr_0">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="#" data-toggle="sidebar-colapse">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <img  id="collapse-icon" src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/menu.png" class="img-fluid" />
+                        </div>
+                    </a>
+                    <a href="http://sigmadev.beta.loanofficer.ai/home"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/logo.png" class="img-fluid height_37" /></a>
+                    <div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+                        <form class="form-inline my-2 my-lg-0">
+                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/bell.png" class="img-fluid m_r_15 notification" />
+                            <span class="notification_dot"></span>
+                            <ul class="dropdown-notification">
+                                <div class="notification_title">
+                                    Notifications
+                                </div>
+                                <div class="content_center space_between p_tb_20 b_b_grey">
+                                    <div class="notification_readall">
+                                        <svg width="21" height="20" style="margin-right: 0" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.0415 7L6.39941 13.4167L3.38029 10.5" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17.1821 7L10.54 13.4167" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        Mark all as read
+                                    </div>
+                                    <div class="integation_dropdown">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                <ins>All</ins>
+                                                <span class="arrow"></span>
+                                            </button>
+                                            <div class="dropdown-menu radio">
+                                                <label class="dropdown-item">
+                                                    <input class="jRadioDropdown" type="radio" value="001" name="alphabet">
+                                                    <i>option 1</i>
+                                                </label>
+                                                <label class="dropdown-item">
+                                                    <input class="jRadioDropdown" type="radio" value="002" name="alphabet">
+                                                    <i>option 2</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="more_notification">
+                                    <li class="dropdown-menu__item nav-item">
+                                        <div class="content_center align_item_normal">
+                                            <div class="checkbox_custom">
+                                                <input type="checkbox" class="name" name="name" id="html_1">
+                                            </div>
+                                            <label for="html_1">
+                                                <div class="notification_text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                </div>
+                                                <div class="m_t_10 date_time">
+                                                    Created: 7/27/2020 9:11pm
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+                                        <div class="content_center align_item_normal">
+                                            <div class="checkbox_custom">
+                                                <input type="checkbox" class="name" name="name" id="html_2">
+                                            </div>
+                                            <label for="html_2">
+                                                <div class="notification_text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                </div>
+                                                <div class="m_t_10 date_time">
+                                                    Created: 7/27/2020 9:11pm
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+                                        <div class="content_center align_item_normal">
+                                            <div class="checkbox_custom">
+                                                <input type="checkbox" class="name" name="name" id="html_3">
+                                            </div>
+                                            <label for="html_3">
+                                                <div class="notification_text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                </div>
+                                                <div class="m_t_10 date_time">
+                                                    Created: 7/27/2020 9:11pm
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+                                        <div class="content_center align_item_normal">
+                                            <div class="checkbox_custom">
+                                                <input type="checkbox" class="name" name="name" id="html_4">
+                                            </div>
+                                            <label for="html_4">
+                                                <div class="notification_text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                </div>
+                                                <div class="m_t_10 date_time">
+                                                    Created: 7/27/2020 9:11pm
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </div>
+                            </ul>
+                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36 user" />
+                            <ul class="dropdown-menu-profile">
+                                <div class="content_center">
+                                    <div>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36" />
+                                    </div>
+                                    <div class="m_l_10">
+                                        <div class="user_name">Ruchi Patel</div>
+                                        <div class="user_profile">Super admin</div>
+                                    </div>
+                                </div>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/profile-page" class="dropdown-menu__link profilepage nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        My Account
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 2H6C4.897 2 4 2.897 4 4V21C4 21.2652 4.10536 21.5196 4.29289 21.7071C4.48043 21.8946 4.73478 22 5 22H19C19.2652 22 19.5196 21.8946 19.7071 21.7071C19.8946 21.5196 20 21.2652 20 21V4C20 2.897 19.103 2 18 2ZM18 20H6V4H18V20Z" fill="#9FA3C0"/>
+                                            <path d="M8 6H11V8H8V6ZM13 6H16V8H13V6ZM8 10H11V12H8V10ZM13 10.031H16V12H13V10.031ZM8 14H11V16H8V14ZM13 14H16V16H13V14Z" fill="#9FA3C0"/>
+                                        </svg>
+
+                                        Company Profile
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/closing-targets" class="dropdown-menu__link profilepage nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.205946 5.05509C0.0414333 4.89062 -0.0310287 4.65543 0.012373 4.42689C0.055727 4.19835 0.209368 4.00604 0.422672 3.91329L2.7927 2.88248L3.6244 0.480773C3.70366 0.251908 3.89517 0.0799421 4.1312 0.0256668C4.3672 -0.0285148 4.61457 0.0424462 4.78588 0.213709L6.12655 1.55437L7.1665 2.59428L9.08601 4.51378L9.07846 6.06888L8.71592 7.73764L9.60743 8.62329L10.6275 9.63661L12.5282 11.5249C12.8037 11.7985 12.8051 12.2437 12.5315 12.5191C12.3941 12.6574 12.2134 12.7267 12.0327 12.7267C11.8536 12.7267 11.6743 12.6586 11.5373 12.5224L9.6356 10.6333L8.60455 9.63661L8.61595 9.62035L7.73714 8.74731L6.00806 9.21132L4.44547 9.29245L4.43715 9.28506C4.43244 9.28094 4.42772 9.27682 4.42325 9.27234L2.49934 7.34843L1.45568 6.30492L0.205946 5.05509ZM8.03491 2.20146C9.30888 1.69017 10.6735 1.41709 12.0082 1.41709C14.8357 1.41709 17.494 2.51821 19.4934 4.51758C21.4928 6.51691 22.5939 9.17518 22.5939 12.0027C22.5939 14.8303 21.4928 17.4886 19.4934 19.488C17.494 21.4873 14.8357 22.5884 12.0082 22.5884C9.18068 22.5884 6.52236 21.4873 4.52299 19.488C2.52361 17.4886 1.4225 14.8303 1.4225 12.0027C1.4225 10.7275 1.65197 9.4695 2.0944 8.2881L0.955336 7.34843C0.337957 8.81432 0.0163097 10.3965 0.0163097 12.0027C0.0163097 15.2059 1.26371 18.2173 3.52865 20.4822C5.79363 22.7472 8.80502 23.9945 12.0082 23.9945C15.2113 23.9945 18.2227 22.7471 20.4877 20.4822C22.7527 18.2173 24 15.2058 24 12.0027C24 8.79966 22.7527 5.78832 20.4877 3.52333C18.2227 1.25834 15.2113 0.0109965 12.0082 0.0109965C10.3155 0.0109965 8.58228 0.39766 7 1.11562L8.03491 2.20146ZM5.13033 7.99101L6.5833 7.6011L3.19901 4.23908L1.93024 4.79093L5.13033 7.99101ZM5.3951 12.0027C5.3951 15.6492 8.36173 18.6159 12.0082 18.6159C15.6547 18.6159 18.6213 15.6492 18.6213 12.0027C18.6213 8.35627 15.6547 5.38964 12.0082 5.38964C11.2792 5.38964 10.6218 5.48512 10 5.68467V4.22443C10.6346 4.06316 11.3009 3.98355 12.0082 3.98355C16.43 3.98355 20.0274 7.58095 20.0274 12.0027C20.0274 16.4245 16.43 20.0219 12.0082 20.0219C7.58645 20.0219 3.98905 16.4245 3.98905 12.0027C3.98905 11.407 4.0423 10.8508 4.15212 10.3194H5.5968C5.46063 10.8442 5.3951 11.3977 5.3951 12.0027ZM11.7688 9.27234L10.6275 8.09221C11.0596 7.93919 11.5244 7.85589 12.0082 7.85589C14.2949 7.85589 16.1552 9.71615 16.1552 12.0028C16.1552 14.2894 14.2949 16.1497 12.0082 16.1497C9.72161 16.1497 7.86134 14.2894 7.86134 12.0028C7.86134 11.5899 7.92202 11.191 8.03491 10.8144L9.28043 11.735C9.27181 11.8231 9.26739 11.9124 9.26739 12.0027C9.26739 13.514 10.4969 14.7436 12.0082 14.7436C13.5195 14.7436 14.749 13.514 14.749 12.0027C14.749 10.4915 13.5195 9.26194 12.0082 9.26194C11.9275 9.26194 11.8477 9.26546 11.7688 9.27234ZM4.58566 2.00193L4.165 3.21661L7.53241 6.5619L7.82033 5.23666L4.58566 2.00193Z" fill="#9FA3C0"/>
+                                        </svg>
+
+                                        Closing Targets
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.50056 0H19.4996C21.5665 0 23.2494 1.68289 23.2494 3.74977V8.24949C23.2494 8.66346 22.9134 8.99944 22.4994 8.99944H17.2498V23.2335V23.235V23.2485C17.2498 23.2965 17.2318 23.3385 17.2228 23.3835C17.2138 23.4315 17.2153 23.4795 17.1958 23.5275C17.1958 23.529 17.1928 23.5305 17.1928 23.532C17.1418 23.658 17.0518 23.757 16.9453 23.8365C16.9198 23.856 16.8973 23.871 16.8703 23.886C16.7593 23.9505 16.6378 23.9985 16.4998 23.9985C16.4068 23.9985 16.3123 23.982 16.2208 23.9445L16.2073 23.9385C16.2073 23.9385 16.2073 23.9385 16.2058 23.9385L12.75 22.5571L9.27926 23.946C9.10077 24.018 8.90128 24.018 8.7228 23.946L5.25051 22.5571L1.77973 23.946C1.54874 24.039 1.28626 24.009 1.08077 23.871C0.875284 23.73 0.750793 23.4975 0.750793 23.2485V3.74977C0.750793 1.68289 2.43369 0 4.50056 0ZM17.2498 7.49953H21.7495V3.74977C21.7495 2.50934 20.74 1.49991 19.4996 1.49991C18.2592 1.49991 17.2498 2.50934 17.2498 3.74977V7.49953ZM2.2507 22.1416L4.97153 21.0527C5.15002 20.9807 5.34951 20.9807 5.52799 21.0527L9.00028 22.4401L12.4711 21.0512C12.6496 20.9792 12.849 20.9792 13.0275 21.0512L15.7499 22.1401V3.74977C15.7499 2.90232 16.0423 2.12837 16.5193 1.49991H4.50056C3.26014 1.49991 2.2507 2.50934 2.2507 3.74977V22.1416Z" fill="#9FA3C0"/>
+                                            <path d="M5.75012 12.9993H11.7497C12.1637 12.9993 12.4997 13.3352 12.4997 13.7492C12.4997 14.1632 12.1637 14.4992 11.7497 14.4992H5.75012C5.33614 14.4992 5.00016 14.1632 5.00016 13.7492C5.00016 13.3352 5.33614 12.9993 5.75012 12.9993Z" fill="#9FA3C0"/>
+                                            <path d="M5.75012 9.99927H11.7497C12.1637 9.99927 12.4997 10.3352 12.4997 10.7492C12.4997 11.1632 12.1637 11.4992 11.7497 11.4992H5.75012C5.33614 11.4992 5.00016 11.1632 5.00016 10.7492C5.00016 10.3352 5.33614 9.99927 5.75012 9.99927Z" fill="#9FA3C0"/>
+                                            <path d="M5.75012 3.99927H11.7497C12.1637 3.99927 12.4997 4.33525 12.4997 4.74922C12.4997 5.1632 12.1637 5.49917 11.7497 5.49917H5.75012C5.33614 5.49917 5.00016 5.1632 5.00016 4.74922C5.00016 4.33525 5.33614 3.99927 5.75012 3.99927Z" fill="#9FA3C0"/>
+                                            <path d="M5.75012 6.99927H11.7497C12.1637 6.99927 12.4997 7.33525 12.4997 7.74922C12.4997 8.1632 12.1637 8.49917 11.7497 8.49917H5.75012C5.33614 8.49917 5.00016 8.1632 5.00016 7.74922C5.00016 7.33525 5.33614 6.99927 5.75012 6.99927Z" fill="#9FA3C0"/>
+                                            <path d="M5.75012 16.001H11.7497C12.1637 16.001 12.4997 16.337 12.4997 16.7509C12.4997 17.1649 12.1637 17.5009 11.7497 17.5009H5.75012C5.33614 17.5009 5.00016 17.1649 5.00016 16.7509C5.00016 16.337 5.33614 16.001 5.75012 16.001Z" fill="#9FA3C0"/>
+                                        </svg>
+
+                                        Plan & Billing
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-directory" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M23 20.9989V18.9989C22.9993 18.1126 22.7044 17.2517 22.1614 16.5512C21.6184 15.8508 20.8581 15.3505 20 15.1289" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16 3.12891C16.8604 3.34921 17.623 3.84961 18.1676 4.55122C18.7122 5.25283 19.0078 6.11574 19.0078 7.00391C19.0078 7.89208 18.7122 8.75499 18.1676 9.4566C17.623 10.1582 16.8604 10.6586 16 10.8789" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        Company Directory
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="#" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 5L5 19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.5 9C7.88071 9 9 7.88071 9 6.5C9 5.11929 7.88071 4 6.5 4C5.11929 4 4 5.11929 4 6.5C4 7.88071 5.11929 9 6.5 9Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17.5 20C18.8807 20 20 18.8807 20 17.5C20 16.1193 18.8807 15 17.5 15C16.1193 15 15 16.1193 15 17.5C15 18.8807 16.1193 20 17.5 20Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        Commissions
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 7C19 6.46957 18.7984 5.96086 18.4397 5.58579C18.0809 5.21071 17.5943 5 17.087 5L3.69565 5C3.18828 5 2.14137 5.21071 1.78261 5.58579C1.42384 5.96086 1 6.46957 1 7L1 19C1 19.5304 1.42384 20.0391 1.78261 20.4142C2.14137 20.7893 3.18828 21 3.69565 21L17.087 21C17.5943 21 18.0809 20.7893 18.4397 20.4142C18.7984 20.0391 19 19.5304 19 19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M23 8.5L23 17.5C23 18.3284 22.4404 19 21.75 19L19.25 19C18.5596 19 18 18.3284 18 17.5L18 8.5C18 7.67157 18.5596 7 19.25 7L21.75 7C22.4404 7 23 7.67157 23 8.5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <line x1="19" y1="15" x2="22" y2="15" stroke-width="2"/>
+                                            <line x1="19" y1="11" x2="22" y2="11" stroke-width="2"/>
+                                            <rect x="4" y="8" width="5" height="5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <line x1="4" y1="17" x2="14" y2="17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        Integrations
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/activity-feeds" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M15 2H9C8.44772 2 8 2.44772 8 3V5C8 5.55228 8.44772 6 9 6H15C15.5523 6 16 5.55228 16 5V3C16 2.44772 15.5523 2 15 2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        Activity
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/manage_users" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                                <path d="M22.7321 15.7493C22.9329 16.4728 22.8391 17.231 22.4682 17.8843C21.7033 19.2316 19.9814 19.708 18.6299 18.9465C18.1785 18.6922 18.0188 18.1201 18.2731 17.6687C18.5274 17.2173 19.0995 17.0575 19.5509 17.3119C20.2708 17.7211 21.1484 17.0506 20.9243 16.2509C20.8575 16.01 20.7001 15.8094 20.4812 15.6861L20.4204 15.6516C19.4608 15.1066 18.937 14.0523 19.0858 12.9656C19.1771 12.3003 19.1748 11.6113 19.0784 10.9466C18.8467 9.57522 19.8672 8.53176 20.4783 8.20855C20.7001 8.08355 20.8574 7.88299 20.9243 7.6421C20.9907 7.40261 20.9596 7.15153 20.8368 6.93507C20.5809 6.48452 20.004 6.32561 19.5508 6.58105C19.5508 6.58105 18.8009 6.97607 18.1911 6.97607C17.5776 6.97607 16.9644 6.78259 16.4572 6.3765C15.9035 5.93326 15.2902 5.57581 14.6343 5.31409C13.6038 4.90289 12.9379 3.92359 12.9379 2.81921V2.8003C12.8864 1.55596 11.1133 1.556 11.0618 2.8003C11.0618 3.91079 10.3909 4.8921 9.35256 5.30026C8.68948 5.56094 8.06937 5.91929 7.50939 6.36539C6.51035 7.19323 5.1389 7.0384 4.44618 6.5794C3.99563 6.32561 3.41886 6.48443 3.163 6.93498C2.89898 7.38253 3.08397 7.97187 3.53621 8.21685C4.49595 8.76196 5.0343 9.85443 4.8761 10.9355C4.82577 11.2795 4.80021 11.6315 4.80021 11.9816C4.80021 12.3174 4.82366 12.6548 4.86981 12.9847C5.02215 14.0731 4.49848 15.1295 3.53583 15.6762L3.52143 15.6843C3.29963 15.8093 3.14231 16.0099 3.07548 16.2508C3.00901 16.4903 3.04011 16.7414 3.163 16.9578C3.41886 17.4084 3.99572 17.5672 4.44895 17.3118C4.9003 17.0576 5.47238 17.2173 5.72669 17.6686C5.981 18.12 5.82129 18.6921 5.36994 18.9464C4.93337 19.1923 4.45805 19.3091 3.98897 19.3092C3.00578 19.3092 2.04942 18.7962 1.53156 17.8842C1.16064 17.231 1.06688 16.4727 1.26763 15.7492C1.46875 15.0243 1.94107 14.4213 2.59762 14.0514C2.88275 13.8895 3.0561 13.5614 3.01183 13.2448C2.89246 12.3937 2.89504 11.514 3.01975 10.6638C3.06685 10.342 2.88735 10.0058 2.59509 9.83989C1.26341 9.12556 0.7569 7.3081 1.53156 6.00854C2.2965 4.66134 4.01833 4.18485 5.3699 4.94637C5.58002 5.08131 6.01036 5.17995 6.34033 4.89787C7.04655 4.33527 7.82909 3.88316 8.66613 3.55409C8.98174 3.42998 9.18567 3.13407 9.18567 2.80016C9.34046 -0.933628 14.6602 -0.931846 14.8141 2.80016C14.8141 3.13224 15.0164 3.4464 15.3296 3.57135C16.1576 3.90174 16.9314 4.35271 17.6297 4.91171C17.9682 5.19421 18.4123 5.10636 18.627 4.94787C19.9814 4.1848 21.7033 4.66134 22.4682 6.0085C23.2431 7.30983 22.7366 9.12546 21.4022 9.84126L21.338 9.87775C21.0513 10.0405 20.8895 10.362 20.9352 10.6777C20.9973 11.1068 21.0288 11.5455 21.0288 11.9815C21.0288 12.3957 21.0005 12.8124 20.9446 13.2201C20.9012 13.5371 21.0629 13.8587 21.347 14.02L21.405 14.0529C22.0586 14.4215 22.531 15.0244 22.7321 15.7493ZM16.268 11.9465C16.268 14.2741 14.3744 16.1678 12.0467 16.1678C6.44661 15.9359 6.44825 7.95621 12.0468 7.72516C14.3744 7.72516 16.268 9.61884 16.268 11.9465ZM14.3919 11.9465C14.3919 10.6533 13.3399 9.6013 12.0467 9.6013C8.93554 9.73014 8.93648 14.1633 12.0467 14.2916C13.3399 14.2916 14.3919 13.2396 14.3919 11.9465ZM18.238 23.0626C18.238 19.9073 15.6796 17.3404 12.5349 17.3404H11.6525C8.50773 17.3404 5.94934 19.9073 5.94934 23.0626C5.94934 23.5807 6.36931 24.0006 6.88741 24.0006C7.4055 24.0006 7.82548 23.5807 7.82548 23.0626C7.82548 20.9418 9.54228 19.2165 11.6525 19.2165H12.5349C14.6451 19.2165 16.3618 20.9418 16.3618 23.0626C16.3618 23.5807 16.7818 24.0006 17.2999 24.0006C17.818 24.0006 18.238 23.5807 18.238 23.0626Z" fill="#9FA3C0"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                        Manage users
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9566 15.0862L22.6928 11.6502C22.5853 11.3579 22.2987 11.1711 21.9876 11.1912L20.7688 11.2698L20.2275 10.175C20.1017 9.92058 19.8353 9.76673 19.5519 9.78502L18.0778 9.88008L14.8463 8.01436C14.963 7.06866 14.8267 6.11409 14.4444 5.22558C13.983 4.15312 13.2034 3.27694 12.1898 2.6917C11.1144 2.07084 9.85687 1.84083 8.63466 2.03869C7.96664 1.93045 7.27261 1.94695 6.58734 2.10281C6.42544 2.06597 6.26077 2.03639 6.0937 2.01455L4.68745 2.01459C2.04614 2.3602 0 4.62525 0 7.35938C0 8.5298 0.369 9.64312 1.06706 10.5789C1.64541 11.3543 2.40389 11.9496 3.28125 12.3213V22.3594C3.28125 22.5945 3.39872 22.814 3.59438 22.9444L5.00063 23.8819C5.12002 23.9615 5.25562 24 5.39025 24C5.59266 24 5.79263 23.9129 5.93081 23.747L8.27456 20.9345C8.47388 20.6953 8.49216 20.3535 8.31947 20.0944L7.64194 19.0781L8.31942 18.0619C8.47688 17.8257 8.47688 17.518 8.31942 17.2818L7.5 16.0527V12.7434C7.81214 12.7602 8.12437 12.7502 8.43525 12.7119L13.4543 21.4052C13.5719 21.6088 13.7834 21.7402 14.0179 21.7553L15.7046 21.8641C15.72 21.8651 15.7351 21.8656 15.7504 21.8656C16.0899 21.8656 16.3842 21.6212 16.4428 21.2822L17.0662 17.6747C17.1193 17.3678 16.9642 17.0626 16.685 16.9246L15.5902 16.3833L15.6688 15.1645C15.6871 14.8812 15.5332 14.6147 15.2788 14.4889L13.9546 13.8342L12.7134 11.6843C12.7189 11.6803 12.7245 11.6764 12.7301 11.6724C12.7322 11.6708 12.7344 11.6692 12.7365 11.6676L21.4303 16.687C21.5388 16.7497 21.6602 16.7812 21.7818 16.7812C21.8883 16.7812 21.9951 16.757 22.0935 16.7084L23.6085 15.9592C23.9305 15.7999 24.0807 15.4234 23.9566 15.0862ZM6.21183 19.4681L6.85814 20.4375L5.25497 22.3613L4.6875 21.9831V11.8316C4.6875 11.5245 4.48814 11.2529 4.19513 11.1608C2.52703 10.6368 1.40625 9.10908 1.40625 7.35938C1.40625 5.40239 2.82487 3.77161 4.6875 3.43837H6.09375C7.95638 3.77156 9.375 5.40239 9.375 7.35938C9.375 9.10908 8.25422 10.6368 6.58612 11.1608C6.29311 11.2529 6.09375 11.5245 6.09375 11.8316V16.2656C6.09375 16.4044 6.13481 16.5401 6.21183 16.6556L6.88931 17.6719L6.21183 18.6881C6.05438 18.9243 6.05438 19.232 6.21183 19.4681ZM4.6875 4.78125H4.45312C4.06481 4.78125 3.75 5.09606 3.75 5.48438C3.75 5.87269 4.06481 6.1875 4.45312 6.1875H6.32812C6.71644 6.1875 7.03125 5.87269 7.03125 5.48438C7.03125 5.09606 6.71644 4.78125 6.32812 4.78125H6.09375H4.6875ZM12.8431 14.7217C12.9125 14.8418 13.016 14.9389 13.1404 15.0004L14.2352 15.5417L14.1566 16.7605C14.1383 17.0438 14.2922 17.3102 14.5466 17.436L15.591 17.9525L15.1645 20.4201L14.4839 20.3762L9.40828 11.5848C9.3308 11.4506 9.21389 11.3498 9.07861 11.2913C9.30877 11.0747 9.52167 10.837 9.71419 10.5789C10.4123 9.64312 10.7812 8.5298 10.7812 7.35938C10.7812 5.946 10.2342 4.6582 9.34111 3.69581C10.1166 4.02628 10.7887 4.60083 11.2317 5.36798C12.1065 6.88327 11.8998 8.76666 10.7172 10.0545C10.5094 10.2808 10.4726 10.6157 10.6262 10.8817L12.8431 14.7217ZM21.8074 15.2809L13.016 10.2052C12.8188 10.0913 12.5839 10.0824 12.3833 10.1699C12.7864 9.5107 13.0428 8.77059 13.1352 7.98656C13.2697 6.84553 13.0414 5.71533 12.4764 4.71366C13.312 5.6505 13.6695 6.94584 13.3844 8.22553C13.3175 8.52534 13.4531 8.83378 13.7191 8.98734L17.559 11.2043C17.6793 11.2737 17.8174 11.3063 17.9559 11.2971L19.1747 11.2185L19.716 12.3133C19.8419 12.5677 20.1079 12.7218 20.3916 12.7033L21.5543 12.6283L22.4188 14.9786L21.8074 15.2809Z" fill="#9FA3C0"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                        View Permissions
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/commission-schedule" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M15 13L9 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 14C9.55228 14 10 13.5523 10 13C10 12.4477 9.55228 12 9 12C8.44772 12 8 12.4477 8 13C8 13.5523 8.44772 14 9 14Z" fill="#9FA3C0" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M15 19C15.5523 19 16 18.5523 16 18C16 17.4477 15.5523 17 15 17C14.4477 17 14 17.4477 14 18C14 18.5523 14.4477 19 15 19Z" fill="#9FA3C0" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16 2V6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8 2V6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3 9H21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        View Commission Schedule
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17 20L21 16L17 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7 12L3 8L7 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M21 16L11 16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3 8L13 8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        Lead rotator
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22 5L22 1L9 0.999999L9 5L22 5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6 5L6 1L2 0.999999L2 5L6 5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M22 13L22 9L9 9L9 13L22 13Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6 13L6 9L2 9L2 13L6 13Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <line x1="12" y1="17" x2="12" y2="23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <line x1="15" y1="20" x2="9" y2="20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        Custom Fields
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+                                    <a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16 17L21 12L16 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M21 12H9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        Logout
+                                    </a>
+                                    <form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+                                        <input type="hidden" name="_token" value="SV3lbr4cEgcpX4pOBAkdhZEvkuHN1iBFSLpS0Qrj">
+                                    </form>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div style="display: flex;" id="body-row">
+            <div id="sidebar-container" style="display:none;">
+                <div class="d-none d-md-block">
+                    <ul class="list-group">
+                        <a href="http://sigmadev.beta.loanofficer.ai/home" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2749 3H3.2749V10H10.2749V3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.2749 3H14.2749V10H21.2749V3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.2749 14H14.2749V21H21.2749V14Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.2749 14H3.2749V21H10.2749V14Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                                <span class="menu-collapsed">Dashboard</span>
+                            </div>
+                        </a>
+                        <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.2749 18L14.2749 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.2749 12L20.2749 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.2749 6L10.2749 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                                <span class="menu-collapsed">Pipeline</span>
+                                <span class="submenu-icon ml-auto"></span>
+                            </div>
+                        </a>
+                        <div id='submenu1' class="collapse sidebar-submenu">
+                            <a href="#sub_menu1" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="menu-collapsed">Contact details</span>
+                                    <span class="submenu-icon ml-auto"></span>
+                                </div>
+                            </a>
+                            <div id='sub_menu1' class="collapse sidebar_submenu">
+                                <a href="http://sigmadev.beta.loanofficer.ai/contact" class="list-group-item list-group-item-action  text-white">
+                                    <span class="menu-collapsed">Refinance</span>
+                                </a>
+                                <a href="http://sigmadev.beta.loanofficer.ai/contact" class="list-group-item list-group-item-action  text-white">
+                                    <span class="menu-collapsed">purchase</span>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.2749 3H8.2749C9.33577 3 10.3532 3.42143 11.1033 4.17157C11.8535 4.92172 12.2749 5.93913 12.2749 7V21C12.2749 20.2044 11.9588 19.4413 11.3962 18.8787C10.8336 18.3161 10.0706 18 9.2749 18H2.2749V3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22.2749 3H16.2749C15.214 3 14.1966 3.42143 13.4465 4.17157C12.6963 4.92172 12.2749 5.93913 12.2749 7V21C12.2749 20.2044 12.591 19.4413 13.1536 18.8787C13.7162 18.3161 14.4793 18 15.2749 18H22.2749V3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="menu-collapsed">Proposals</span>
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/rate-watches" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.8977 5.26367L5.89771 19.2637" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.39771 9.26367C8.77842 9.26367 9.89771 8.14438 9.89771 6.76367C9.89771 5.38296 8.77842 4.26367 7.39771 4.26367C6.01699 4.26367 4.89771 5.38296 4.89771 6.76367C4.89771 8.14438 6.01699 9.26367 7.39771 9.26367Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.3977 20.2637C19.7784 20.2637 20.8977 19.1444 20.8977 17.7637C20.8977 16.383 19.7784 15.2637 18.3977 15.2637C17.017 15.2637 15.8977 16.383 15.8977 17.7637C15.8977 19.1444 17.017 20.2637 18.3977 20.2637Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                                <span class="menu-collapsed">Rate Watch</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.2749 1V23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M17.2749 5H9.7749C8.84664 5 7.95641 5.36875 7.30003 6.02513C6.64365 6.6815 6.2749 7.57174 6.2749 8.5C6.2749 9.42826 6.64365 10.3185 7.30003 10.9749C7.95641 11.6313 8.84664 12 9.7749 12H14.7749C15.7032 12 16.5934 12.3687 17.2498 13.0251C17.9062 13.6815 18.2749 14.5717 18.2749 15.5C18.2749 16.4283 17.9062 17.3185 17.2498 17.9749C16.5934 18.6313 15.7032 19 14.7749 19H6.2749" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="menu-collapsed">Lenders</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.0861 7.00305C22.3377 6.75151 22.3379 6.34318 22.0861 6.09147L16.6696 0.675481C16.4178 0.423813 16.0099 0.423813 15.7581 0.675481L14.0642 2.36926L11.6772 3.09969L9.32918 2.33579L7.61507 0.621856C7.36332 0.370189 6.95524 0.370189 6.70358 0.621856L0.463621 6.86117C0.212082 7.11271 0.21191 7.52104 0.463621 7.77275L2.16376 9.47272L2.78836 11.8503C2.55542 12.0115 2.47352 12.1305 2.06554 12.5281C0.880589 13.713 1.67263 15.7321 3.32611 15.8216C3.37819 16.8066 4.16503 17.5916 5.14957 17.6449C5.20165 18.6299 5.98853 19.4149 6.97303 19.4682C6.99825 19.945 7.19578 20.3896 7.53592 20.7297C8.28912 21.4829 9.51463 21.4829 10.2679 20.7297L10.7533 20.2444C10.7628 20.2349 10.7717 20.2249 10.781 20.2153L11.566 21.0001C12.3191 21.7534 13.5451 21.7537 14.2986 21.0002C14.6085 20.6904 14.7996 20.2937 14.8505 19.8653C14.8588 19.8653 14.8671 19.8659 14.8754 19.8659C15.3702 19.8658 15.8651 19.6775 16.2418 19.3009C16.5444 18.9983 16.7338 18.6129 16.7899 18.196C16.8091 18.1965 16.8283 18.1973 16.8475 18.1973C17.3423 18.1973 17.8372 18.009 18.2139 17.6324C18.5108 17.3355 18.6992 16.9589 18.7591 16.5509C18.791 16.5525 18.823 16.5533 18.8549 16.5533C19.3497 16.5533 19.8446 16.3649 20.2213 15.9883C20.9765 15.2331 20.9767 14.011 20.2213 13.2557L18.4255 11.46L20.3179 8.77121L22.0861 7.00305ZM2.74281 8.22882L1.83088 7.31698L7.1593 1.98908L8.07123 2.90091L2.74281 8.22882ZM3.88599 14.3484C3.63531 14.599 3.22758 14.599 2.97707 14.3484C2.72592 14.0973 2.72588 13.6908 2.97707 13.4397L3.43215 12.9847C3.83434 12.5825 4.52927 12.868 4.52927 13.439C4.52927 13.8449 4.20813 13.9789 3.88599 14.3484ZM5.70941 16.1716C5.45882 16.4222 5.05113 16.4222 4.80054 16.1716C4.54938 15.9206 4.54934 15.5141 4.80054 15.263L6.6209 13.4428C6.87154 13.1922 7.27918 13.1921 7.52986 13.4427C7.78093 13.6939 7.78101 14.1002 7.52986 14.3514L5.70941 16.1716ZM7.53287 17.995C7.28228 18.2455 6.87459 18.2455 6.624 17.9949C6.37285 17.7438 6.3728 17.3374 6.624 17.0863L7.98933 15.7211C8.23992 15.4705 8.64765 15.4705 8.89824 15.7211C9.14935 15.9722 9.14935 16.3786 8.89824 16.6298H8.8982L7.53287 17.995ZM9.84175 19.3328L9.35633 19.8182C9.1057 20.0688 8.69801 20.0688 8.44737 19.8182C8.19626 19.5671 8.19622 19.1607 8.44742 18.9096L8.93283 18.4242C9.18343 18.1737 9.59116 18.1735 9.84175 18.4242C10.0929 18.6752 10.093 19.0817 9.84175 19.3328ZM19.3098 14.1672C19.5612 14.4185 19.5612 14.8254 19.3098 15.0767C19.059 15.3275 18.6508 15.3276 18.4 15.0767L16.885 13.5618C16.5935 13.2704 16.1841 13.2914 15.939 13.5365C15.6873 13.7882 15.6873 14.1963 15.939 14.448L17.3024 15.8113C17.5537 16.0626 17.5538 16.4694 17.3024 16.7208C17.0516 16.9716 16.6434 16.9716 16.3926 16.7208C15.9076 16.2333 15.9889 16.3163 15.0301 15.3567C14.7783 15.105 14.3702 15.1051 14.1186 15.3567C14.1183 15.3569 14.1182 15.3571 14.1179 15.3574C14.1179 15.3575 14.1178 15.3575 14.1177 15.3576C13.8661 15.6093 13.8661 16.0175 14.1178 16.2692L15.3469 17.4981C15.5831 17.7527 15.5744 18.1453 15.3304 18.3894C15.0795 18.6402 14.6713 18.6403 14.4205 18.3894L13.2089 17.1778C12.9572 16.9262 12.5491 16.9262 12.2974 17.1779C12.0457 17.4296 12.0457 17.8376 12.2974 18.0894L12.3261 18.1181C12.3265 18.1185 12.3268 18.119 12.3273 18.1194L13.3873 19.1793C13.6385 19.4305 13.6387 19.8373 13.3872 20.0888C13.1364 20.3395 12.7283 20.3397 12.4774 20.0887L11.3179 18.9292C11.3183 18.9123 11.3191 18.8954 11.3191 18.8785C11.3191 18.3625 11.1181 17.8774 10.7533 17.5125C10.572 17.3313 10.3632 17.1941 10.1404 17.1001C10.7228 16.0353 10.1836 14.6531 8.96141 14.3153C9.09955 13.6867 8.9245 13.0143 8.44131 12.5311C7.68816 11.7781 6.46261 11.7782 5.70941 12.5311L5.63181 12.6087C5.3443 12.0055 4.74876 11.5682 4.0329 11.5143L3.46021 9.3344L9.15911 3.63607L10.4826 4.06666C8.41919 6.13229 8.06306 6.4888 8.01305 6.53886C8.01317 6.53877 8.01305 6.53886 8.01274 6.53916C8.00982 6.54208 8.00798 6.54393 8.00694 6.54496C8.00707 6.54483 8.0072 6.5447 8.00733 6.54457C8.00694 6.54496 8.00664 6.54526 8.00626 6.54565C7.24292 7.30877 7.24266 8.54438 8.00621 9.30772C8.76775 10.0693 10.0069 10.0693 10.7685 9.30776L12.6092 7.46715L19.3098 14.1672ZM17.5002 10.5348L13.0649 6.09998C12.8132 5.84835 12.4051 5.84835 12.1534 6.09998L9.85692 8.39627C9.59795 8.65515 9.17664 8.6552 8.91762 8.39622C8.65813 8.13674 8.65805 7.71676 8.91767 7.45723C8.91779 7.4571 8.91788 7.45701 8.91801 7.45688C8.91848 7.45641 8.91956 7.45534 8.92158 7.45332C8.92149 7.45336 8.92145 7.45345 8.92136 7.45353C8.92175 7.45315 8.92201 7.45289 8.92218 7.45272C8.92213 7.45276 8.92205 7.4528 8.92201 7.45289C8.92205 7.4528 8.92218 7.45272 8.92226 7.45263C8.92239 7.4525 8.92243 7.45246 8.92231 7.45259C8.96377 7.41095 9.33691 7.03652 12.0218 4.34226L14.2245 3.66825L18.9838 8.42703L17.5002 10.5348ZM15.3179 2.93856L16.2138 2.04266L20.7188 6.54724L19.8229 7.44314L15.3179 2.93856Z" fill="#9FA3C0"/>
+                                    <path d="M8.92177 7.45215C8.92102 7.4529 8.9198 7.45412 8.91816 7.4558C8.91811 7.45585 8.91802 7.45594 8.91797 7.45599C8.91853 7.45538 8.92045 7.45346 8.92177 7.45215Z" fill="#9FA3C0"/>
+                                    <path d="M8.92221 7.45224L8.92212 7.45234L8.92226 7.45215L8.92221 7.45224Z" fill="#9FA3C0"/>
+                                    <path d="M8.00732 6.54412L8.0114 6.54004C8.01009 6.54135 8.0085 6.54295 8.00732 6.54412Z" fill="#9FA3C0"/>
+                                </svg>
+                                <span class="menu-collapsed">Partners</span>
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/report/my-team-time" class=" list-group-item list-group-item-action flex-column align-items-start active">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                        <path d="M1.2749 12C1.2749 12 5.2749 4 12.2749 4C19.2749 4 23.2749 12 23.2749 12C23.2749 12 19.2749 20 12.2749 20C5.2749 20 1.2749 12 1.2749 12Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.2749 15C13.9318 15 15.2749 13.6569 15.2749 12C15.2749 10.3431 13.9318 9 12.2749 9C10.618 9 9.2749 10.3431 9.2749 12C9.2749 13.6569 10.618 15 12.2749 15Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="24" height="24" fill="white" transform="translate(0.274902)"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="menu-collapsed">Reports</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.2749 4H5.2749C4.17033 4 3.2749 4.89543 3.2749 6V20C3.2749 21.1046 4.17033 22 5.2749 22H19.2749C20.3795 22 21.2749 21.1046 21.2749 20V6C21.2749 4.89543 20.3795 4 19.2749 4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16.2749 2V6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.2749 2V6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.2749 10H21.2749"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="menu-collapsed">Tasks</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.2749 4H20.2749C21.3749 4 22.2749 4.9 22.2749 6V18C22.2749 19.1 21.3749 20 20.2749 20H4.2749C3.1749 20 2.2749 19.1 2.2749 18V6C2.2749 4.9 3.1749 4 4.2749 4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22.2749 6L12.2749 13L2.2749 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="menu-collapsed">Campaigns</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.2749 3H21.2749V8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.2749 20L21.2749 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.2749 16V21H16.2749" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.2749 15L21.2749 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.2749 4L9.2749 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="menu-collapsed">Finance</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.1421 0.9H7.40771C6.99648 0.9 6.66318 1.2333 6.66318 1.64453V6.37109C6.66318 6.78233 6.99648 7.11562 7.40771 7.11562H15.1421C15.5533 7.11562 15.8866 6.78233 15.8866 6.37109V1.64453C15.8866 1.2333 15.5533 0.9 15.1421 0.9ZM14.3976 5.62656H8.15225V2.38906H14.3976V5.62656Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                    <path d="M15.1421 8.89219H7.40771C6.99648 8.89219 6.66318 9.22549 6.66318 9.63672V14.3633C6.66318 14.7745 6.99648 15.1078 7.40771 15.1078H15.1421C15.5533 15.1078 15.8866 14.7745 15.8866 14.3633V9.63672C15.8866 9.22549 15.5533 8.89219 15.1421 8.89219ZM14.3976 13.6188H8.15225V10.3813H14.3976V13.6188Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                    <path d="M15.1421 16.8844H7.40771C6.99648 16.8844 6.66318 17.2177 6.66318 17.6289V22.3555C6.66318 22.7667 6.99648 23.1 7.40771 23.1H15.1421C15.5533 23.1 15.8866 22.7667 15.8866 22.3555V17.6289C15.8866 17.2177 15.5533 16.8844 15.1421 16.8844ZM14.3976 21.6109H8.15225V18.3734H14.3976V21.6109Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                    <path d="M17.3335 4.25156H19.9116C21.27 4.25156 22.3749 5.35645 22.3749 6.71484V9.29297C22.3749 10.6514 21.27 11.7562 19.9116 11.7562H19.131L19.5786 12.204C19.5786 12.204 19.5787 12.2041 19.5787 12.2041C19.8695 12.4947 19.8695 12.9662 19.5787 13.2568C19.4335 13.4023 19.2427 13.475 19.0522 13.475C18.8618 13.475 18.6711 13.4023 18.5258 13.2569L17.3335 4.25156ZM17.3335 4.25156C16.9223 4.25156 16.589 4.58486 16.589 4.99609C16.589 5.40733 16.9223 5.74063 17.3335 5.74063H19.9116C20.4487 5.74063 20.8858 6.17774 20.8858 6.71484V9.29297C20.8858 9.83007 20.4487 10.2672 19.9116 10.2672H19.131L19.5786 9.81941C19.5786 9.8194 19.5787 9.81938 19.5787 9.81937C19.8695 9.52873 19.8695 9.05723 19.5787 8.76658C19.288 8.47572 18.8165 8.47572 18.5258 8.76658L16.8071 10.4853C16.8071 10.4853 16.8071 10.4853 16.8071 10.4853C16.5162 10.776 16.5163 11.2473 16.8071 11.5381L18.5258 13.2568L17.3335 4.25156Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                    <path d="M5.21631 13.7328H2.63818C2.10108 13.7328 1.66396 14.1699 1.66396 14.707V17.2852C1.66396 17.8223 2.10108 18.2594 2.63818 18.2594H3.41883L2.97114 17.8116C2.97114 17.8116 2.97114 17.8116 2.97113 17.8116C2.68035 17.5208 2.6803 17.0494 2.97112 16.7588C2.97114 16.7587 2.97115 16.7587 2.97117 16.7587M5.21631 13.7328L3.95326 16.8295C3.70166 16.5777 3.29346 16.5777 3.04185 16.8295L2.97117 16.7587M5.21631 13.7328C5.62754 13.7328 5.96084 13.3995 5.96084 12.9883C5.96084 12.577 5.62754 12.2437 5.21631 12.2437H2.63818C1.27979 12.2437 0.174902 13.3486 0.174902 14.707V17.2852C0.174902 18.6435 1.27979 19.7484 2.63818 19.7484H3.41883M5.21631 13.7328L3.41883 19.7484M2.97117 16.7587C3.26183 16.4679 3.73335 16.4679 4.024 16.7588M2.97117 16.7587L4.024 16.7588M4.024 16.7588L5.7427 18.4775C5.74271 18.4775 5.74272 18.4775 5.74272 18.4775C6.03355 18.7681 6.03355 19.2397 5.74272 19.5303C5.74272 19.5303 5.74271 19.5303 5.7427 19.5303L4.02402 21.249L4.024 16.7588ZM3.41883 19.7484L2.97117 20.1962C2.97116 20.1962 2.97115 20.1962 2.97113 20.1963C2.68034 20.4869 2.68032 20.9584 2.9711 21.249C3.11635 21.3945 3.30714 21.4672 3.49756 21.4672C3.68796 21.4672 3.87873 21.3945 4.02397 21.2491L3.41883 19.7484Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                </svg>
+                                <span class="menu-collapsed">Workflow</span>
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/data-points" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.1421 0.9H7.40771C6.99648 0.9 6.66318 1.2333 6.66318 1.64453V6.37109C6.66318 6.78233 6.99648 7.11562 7.40771 7.11562H15.1421C15.5533 7.11562 15.8866 6.78233 15.8866 6.37109V1.64453C15.8866 1.2333 15.5533 0.9 15.1421 0.9ZM14.3976 5.62656H8.15225V2.38906H14.3976V5.62656Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                    <path d="M15.1421 8.89219H7.40771C6.99648 8.89219 6.66318 9.22549 6.66318 9.63672V14.3633C6.66318 14.7745 6.99648 15.1078 7.40771 15.1078H15.1421C15.5533 15.1078 15.8866 14.7745 15.8866 14.3633V9.63672C15.8866 9.22549 15.5533 8.89219 15.1421 8.89219ZM14.3976 13.6188H8.15225V10.3813H14.3976V13.6188Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                    <path d="M15.1421 16.8844H7.40771C6.99648 16.8844 6.66318 17.2177 6.66318 17.6289V22.3555C6.66318 22.7667 6.99648 23.1 7.40771 23.1H15.1421C15.5533 23.1 15.8866 22.7667 15.8866 22.3555V17.6289C15.8866 17.2177 15.5533 16.8844 15.1421 16.8844ZM14.3976 21.6109H8.15225V18.3734H14.3976V21.6109Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                    <path d="M17.3335 4.25156H19.9116C21.27 4.25156 22.3749 5.35645 22.3749 6.71484V9.29297C22.3749 10.6514 21.27 11.7562 19.9116 11.7562H19.131L19.5786 12.204C19.5786 12.204 19.5787 12.2041 19.5787 12.2041C19.8695 12.4947 19.8695 12.9662 19.5787 13.2568C19.4335 13.4023 19.2427 13.475 19.0522 13.475C18.8618 13.475 18.6711 13.4023 18.5258 13.2569L17.3335 4.25156ZM17.3335 4.25156C16.9223 4.25156 16.589 4.58486 16.589 4.99609C16.589 5.40733 16.9223 5.74063 17.3335 5.74063H19.9116C20.4487 5.74063 20.8858 6.17774 20.8858 6.71484V9.29297C20.8858 9.83007 20.4487 10.2672 19.9116 10.2672H19.131L19.5786 9.81941C19.5786 9.8194 19.5787 9.81938 19.5787 9.81937C19.8695 9.52873 19.8695 9.05723 19.5787 8.76658C19.288 8.47572 18.8165 8.47572 18.5258 8.76658L16.8071 10.4853C16.8071 10.4853 16.8071 10.4853 16.8071 10.4853C16.5162 10.776 16.5163 11.2473 16.8071 11.5381L18.5258 13.2568L17.3335 4.25156Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                    <path d="M5.21631 13.7328H2.63818C2.10108 13.7328 1.66396 14.1699 1.66396 14.707V17.2852C1.66396 17.8223 2.10108 18.2594 2.63818 18.2594H3.41883L2.97114 17.8116C2.97114 17.8116 2.97114 17.8116 2.97113 17.8116C2.68035 17.5208 2.6803 17.0494 2.97112 16.7588C2.97114 16.7587 2.97115 16.7587 2.97117 16.7587M5.21631 13.7328L3.95326 16.8295C3.70166 16.5777 3.29346 16.5777 3.04185 16.8295L2.97117 16.7587M5.21631 13.7328C5.62754 13.7328 5.96084 13.3995 5.96084 12.9883C5.96084 12.577 5.62754 12.2437 5.21631 12.2437H2.63818C1.27979 12.2437 0.174902 13.3486 0.174902 14.707V17.2852C0.174902 18.6435 1.27979 19.7484 2.63818 19.7484H3.41883M5.21631 13.7328L3.41883 19.7484M2.97117 16.7587C3.26183 16.4679 3.73335 16.4679 4.024 16.7588M2.97117 16.7587L4.024 16.7588M4.024 16.7588L5.7427 18.4775C5.74271 18.4775 5.74272 18.4775 5.74272 18.4775C6.03355 18.7681 6.03355 19.2397 5.74272 19.5303C5.74272 19.5303 5.74271 19.5303 5.7427 19.5303L4.02402 21.249L4.024 16.7588ZM3.41883 19.7484L2.97117 20.1962C2.97116 20.1962 2.97115 20.1962 2.97113 20.1963C2.68034 20.4869 2.68032 20.9584 2.9711 21.249C3.11635 21.3945 3.30714 21.4672 3.49756 21.4672C3.68796 21.4672 3.87873 21.3945 4.02397 21.2491L3.41883 19.7484Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                </svg>
+                                <span class="menu-collapsed">Data-Points</span>
+                            </div>
+                        </a>
+                    </ul>
+                    <div class="bottom_menu">
+                        <ul class="list-group">
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M23.8528 7.12741L23.8528 7.12742L22.9687 7.45756V17.0435C23.3303 17.2556 23.6399 17.6128 23.8783 18.0896C24.2 18.7332 24.3749 19.5671 24.3749 20.4375V21.8438C24.3749 22.2873 24.0153 22.6469 23.5718 22.6469H20.7593C20.3157 22.6469 19.9562 22.2873 19.9562 21.8438V20.4375C19.9562 19.5671 20.131 18.7332 20.4528 18.0896C20.6912 17.6128 21.0007 17.2556 21.3624 17.0435V8.05738L19.2633 8.84126C19.7931 10.36 19.9961 11.5415 20.0706 12.4111C20.1086 12.8546 20.1131 13.2162 20.1107 13.4987C20.1099 13.5909 20.1085 13.6733 20.1072 13.7468C20.1044 13.9026 20.1023 14.0182 20.109 14.1014L20.1096 14.1094H20.1093C20.1093 14.3758 19.9771 14.625 19.7564 14.7744C19.5358 14.9238 19.2554 14.954 19.008 14.8551C19.0079 14.8551 19.0079 14.8551 19.0079 14.8551L19.0077 14.855L19.0066 14.8545L19.0026 14.853L18.9877 14.8472C18.9747 14.8423 18.9559 14.8352 18.9315 14.8262C18.8826 14.8082 18.8117 14.7827 18.722 14.7522C18.5425 14.6913 18.2879 14.6106 17.9843 14.5301C17.3762 14.3688 16.5759 14.2094 15.7905 14.2094C15.1925 14.2094 14.5481 14.4282 13.9941 14.695C13.4413 14.9611 12.9885 15.2701 12.7766 15.4396C12.4833 15.6742 12.0667 15.6743 11.7734 15.4398C11.7733 15.4397 11.7732 15.4397 11.7732 15.4396L11.7721 15.4388L11.7684 15.4359L11.7542 15.425C11.7419 15.4156 11.7239 15.402 11.7006 15.3848C11.6541 15.3504 11.5865 15.3018 11.501 15.2436C11.3301 15.1271 11.0881 14.9729 10.801 14.8192C10.2242 14.5102 9.47638 14.2094 8.75928 14.2094C7.1759 14.2094 5.5568 14.8491 5.54175 14.8551L5.50475 14.7622M23.8528 7.12741L11.994 1.40388L0.69709 5.62263C0.383074 5.73989 0.174902 6.03982 0.174902 6.375C0.174902 6.71017 0.383071 7.01011 0.697041 7.12737L0.732027 7.03369L0.697043 7.12737L5.28646 8.84125C4.7539 10.3674 4.55165 11.5388 4.47825 12.4015C4.44083 12.8414 4.43698 13.2002 4.43969 13.4833C4.44051 13.5691 4.44188 13.6469 4.44312 13.7173C4.44605 13.8831 4.44826 14.0081 4.44084 14.1015L4.44053 14.1014V14.1094C4.44053 14.3758 4.57272 14.625 4.79337 14.7744C5.01408 14.9239 5.29443 14.954 5.54187 14.8551L5.50475 14.7622M23.8528 7.12741C24.1667 7.0101 24.3749 6.71018 24.3749 6.375M23.8528 7.12741L24.3749 6.375M5.50475 14.7622C5.28809 14.8488 5.04265 14.8224 4.84943 14.6916L19.045 14.7622C19.0292 14.7559 17.3855 14.1094 15.7905 14.1094C14.5509 14.1094 13.1495 15.0133 12.7141 15.3615C12.4573 15.567 12.0925 15.567 11.8356 15.3615C11.8208 15.3497 10.2429 14.1094 8.75928 14.1094C7.15545 14.1094 5.52111 14.7557 5.50475 14.7622ZM12.5559 1.40388L12.5559 1.40388L12.5209 1.49754L12.5559 1.40388ZM12.5559 1.40388L23.8528 5.62263M12.5559 1.40388L23.8528 5.62263M24.3749 6.375C24.3749 6.03983 24.1667 5.73989 23.8528 5.62263M24.3749 6.375L23.8528 5.62263M12.2749 9.73644L3.27368 6.375L12.2749 3.01356L21.2761 6.375L12.2749 9.73644ZM12.5559 11.3461L17.7585 9.40323C18.2028 10.6745 18.442 11.6867 18.4928 13.0025C17.7755 12.8066 16.7904 12.6031 15.7905 12.6031C14.3594 12.6031 12.982 13.3647 12.2749 13.8283C11.5678 13.3647 10.1904 12.6031 8.75928 12.6031C7.75941 12.6031 6.77426 12.8066 6.05704 13.0025C6.10772 11.6867 6.34695 10.6745 6.79132 9.40323L11.9939 11.3461C11.994 11.3461 11.994 11.3461 11.994 11.3461C12.1751 11.4138 12.3747 11.4138 12.5559 11.3461ZM21.5624 21.0406V20.4375C21.5624 19.8133 21.6838 19.2195 21.8895 18.8079C21.9754 18.6362 22.0544 18.5372 22.1106 18.4827C22.1333 18.4607 22.1519 18.4463 22.1655 18.4372C22.1791 18.4463 22.1978 18.4607 22.2204 18.4827C22.2767 18.5372 22.3557 18.6362 22.4416 18.8079C22.6473 19.2195 22.7687 19.8133 22.7687 20.4375V21.0406H21.5624Z" fill="#9FA3C0" stroke-width="0.2"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="24" height="24" fill="white" transform="translate(0.274902)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="menu-collapsed">loan officer university</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M16.4932 21.332V19.332C16.4932 18.2712 16.0717 17.2538 15.3216 16.5036C14.5714 15.7535 13.554 15.332 12.4932 15.332H5.49316C4.4323 15.332 3.41488 15.7535 2.66474 16.5036C1.91459 17.2538 1.49316 18.2712 1.49316 19.332V21.332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.99316 11.332C11.2023 11.332 12.9932 9.54117 12.9932 7.33203C12.9932 5.12289 11.2023 3.33203 8.99316 3.33203C6.78402 3.33203 4.99316 5.12289 4.99316 7.33203C4.99316 9.54117 6.78402 11.332 8.99316 11.332Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M20.4932 8.33203V14.332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M23.4932 11.332H17.4932" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="24" height="24" fill="white" transform="translate(0.493164 0.332031)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="menu-collapsed">Refer a friend</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.2749 22C17.7978 22 22.2749 17.5228 22.2749 12C22.2749 6.47715 17.7978 2 12.2749 2C6.75205 2 2.2749 6.47715 2.2749 12C2.2749 17.5228 6.75205 22 12.2749 22Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.36487 8.99996C9.59997 8.33163 10.064 7.76807 10.6748 7.40909C11.2856 7.05012 12.0038 6.9189 12.702 7.03867C13.4003 7.15844 14.0337 7.52148 14.4899 8.06349C14.9462 8.60549 15.1959 9.29148 15.1949 9.99996C15.1949 12 12.1949 13 12.1949 13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.2749 17H12.2849" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+
+                                    <span class="menu-collapsed">Help Center</span>
+                                </div>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="expanded_menu content_wrapper" style="display:none;">
+                <div class="container-fluid bg_skyblue">
+                    <div class="top_body m_0">
+                        <div class="row">
+                            <div class="m_t_auto m_b_auto col-12">
+                                <div class="row">
+                                    <div class="col-12 col-sm-2 col-md-2 col-lg-3">
+                                        <div class="title">
+                                            <span>Reports</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row content_center align_item_bottom">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class="permissions_tabs">
+                                            <ul class="nav nav-tabs tab_selection content_center space_between">
+                                                <li class="nav-item" style="width:auto;">
+                                                    <a class="nav-link active" data-toggle="tab" href="#time">Time</a>
+                                                </li>
+                                                <li class="nav-item" style="width:auto;">
+                                                    <a class="nav-link" data-toggle="tab" href="#call">Call</a>
+                                                </li>
+                                                <li class="nav-item" style="width:auto;">
+                                                    <a class="nav-link" data-toggle="tab" href="#revenue">Revenue</a>
+                                                </li>
+                                                <li class="nav-item" style="width:auto;">
+                                                    <a class="nav-link" data-toggle="tab" href="#leads">Leads</a>
+                                                </li>
+                                                <li class="nav-item" style="width:auto;">
+                                                    <a class="nav-link" data-toggle="tab" href="#leaderboard">Leaderboard</a>
+                                                </li>
+                                                <li class="nav-item" style="width:auto;">
+                                                    <a class="nav-link" data-toggle="tab" href="#goals">Goals</a>
+                                                </li>
+                                                <li class="nav-item" style="width:auto;">
+                                                    <a class="nav-link" data-toggle="tab" href="#marketing">Marketing</a>
+                                                </li>
+                                                <li class="nav-item" style="width:auto;">
+                                                    <a class="nav-link" data-toggle="tab" href="#mailer">Mailer</a>
+                                                </li>
+                                                <li class="nav-item" style="width:auto;">
+                                                    <a class="nav-link" data-toggle="tab" href="#loanfinance">Loan Finance</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="m_t_20">
+                            <div class="tab-content">
+                                <div id="time" class="tab-pane active">
+                                    <div class="row content_center align_item_bottom m_t_20">
+                                        <div class="col">
+                                            <label class="m_b_0">Quick search</label>
+                                            <div class="form-group has-search">
+                                                <img src="images/search.png" class="img-fluid form-control-feedback"/>
+                                                <input type="text" class="form-control" placeholder="Search by team member">
+                                            </div>
+                                        </div>
+                                        <div class="col content_center integation_dropdown">
+                                            <label class="m_b_0">Role</label>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                    <ins>All</ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio">
+                                                    @foreach($role_list as $list)
+                                                    <label class="dropdown-item">
+                                                        <input class="role_jRadioDropdown" type="radio"
+                                                               value="{{ $list->id }}" name="alphabet_1">
+                                                        <i>{{ $list->role_name }}</i>
+                                                    </label>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+                                            <label class="m_b_0">Date</label>
+                                            <div class="date_selection light_blue content_center reportrange">
+                                                <img src="images/calendra.png" class="img-fluid m_r_15">
+                                                <span class="m_r_10"> Jun 01, 2020 - Nov 30, 2020 </span>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn_filter m_t_0 pull_left">
+                                                <img src="images/cross_circle.png" class="img-fluid m_r_5">Clear filter
+                                            </button>
+                                        </div>
+                                        <div class="col">
+                                            <div class="margin_auto">
+                                                <form method="post" name="report-csv" id="report-csv">
+                                                    <button class="blue_btn p_lr_20" type="submit">Export to CSV</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="team_code row">
+                                        <div class="col-12 m_t_30">
+                                            <div class="title">
+                                                <span>Logged time</span>
+                                            </div>
+                                            <div id="container2" style="width:100%;height:250px;"></div>
+                                            <div class="content_center m_t_30 m_b_20">
+                                                <div class="content_center m_t_10 line_width_15">
+                                                    <div class="color_filled blue_filled"></div>
+                                                    <div>
+                                                        <div class="chart_value">Total call time </div>
+                                                        <div class="chart_expenses">1080h 24m</div>
+                                                    </div>
+                                                </div>
+                                                <div class="content_center m_t_10">
+                                                    <div class="color_filled" style="background-color:#9FA3C0"></div>
+                                                    <div>
+                                                        <div class="chart_value">Daily Average</div>
+                                                        <div class="chart_expenses">8h 12m</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="m_t_30">
+                                                <table id="team_time" style="display:none;">
+                                                    <thead>
+                                                    <tr>
+                                                        <th><span>Name</span></th>
+                                                        <th><span>Job Title</span></th>
+                                                        <th><span>Today</span></th>
+                                                        <th><span>Daily Average</span></th>
+                                                        <th><span>Total</span></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>53.20%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Joseph Triyer</td>
+                                                        <td>Loan Officer</td>
+                                                        <td>100.00%</td>
+                                                        <td>8h 12m</td>
+                                                        <td>827h 24m</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="call" class="tab-pane"></div>
+                                <div id="revenue" class="tab-pane"></div>
+                                <div id="leads" class="tab-pane"></div>
+                                <div id="leaderboard" class="tab-pane"></div>
+                                <div id="goals" class="tab-pane"></div>
+                                <div id="marketing" class="tab-pane"></div>
+                                <div id="mailer" class="tab-pane"></div>
+                                <div id="loanfinance" class="tab-pane"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main> <!-- /content -->
+</body>
+
+<script type="text/javascript">
+    jQuery.noConflict();
+    jQuery(document).ready(function ($) {
+        //=============================================================================================================
+        // jQuery to set configuration
+        //=============================================================================================================
+        Highcharts.setOptions({
+            global: {
+                useUTC: false
+            },
+            credits: {
+                enabled: false
+            },
+            colors: [
+                '#3F68B8',
+                '#9FA3C0'
+            ],
+            chart: {
+                alignTicks: false,
+                zoomType: 'x',
+                type: 'line',
+            },
+            title: {
+                text: ''
+            },
+            subtitle: {
+                text: ''
+            },
+            legend: {enabled: false},
+            plotOptions: {
+                line: {
+                    lineWidth: 3,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 5
+                    }
+                },
+            },
+            xAxis: {
+                title: {
+                    text: '',
+                    rotation: 0,
+                    textAlign: 'center',
+                    style: {
+                        color: 'rgba(0,0,0,.9)'
+                    }
+                },
+                labels: {
+                    style: {
+                        color: '#9FA3C0',
+                        fontSize: '12px',
+                        fontWeight: '300',
+                        fontFamily: '"Inter",serif'
+                    }
+                },
+                lineWidth: .5,
+                lineColor: '#3F68B8',
+                tickWidth: .5,
+                tickLength: 6,
+                tickColor: 'rgba(0,0,0,.75)'
+            },
+            yAxis: {
+                minPadding: 0,
+                maxPadding: 0,
+                gridLineColor: 'rgba(204,204,204,.25)',
+                gridLineWidth: 0,
+                title: {
+                    text: '',
+                    rotation: 0,
+                    textAlign: 'right',
+                    style: {
+                        color: 'rgba(0,0,0,.9)',
+                    }
+                },
+                labels: {
+                    style: {
+                        color: '#9FA3C0',
+                        fontWeight: '300',
+                        fontFamily: '"Inter",serif',
+                        fontSize: '12px'
+                    }
+                },
+                lineWidth: .5,
+                lineColor: 'rgba(0,0,0,.5)',
+                tickWidth: .5,
+                tickLength: 12,
+                tickColor: 'rgba(0,0,0,.75)'
+            },
+            /*tooltip: {
+             xDateFormat: '%b, %Y'
+             },*/
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                borderWidth: 0,
+                backgroundColor: "rgba(255,255,255,0)",
+                borderRadius: 0,
+                shadow: false,
+                formatter: function () {
+                    var html = '' +
+                            '<div class="chart">' +
+                            '<div class="chart_title">'+moment(this.x).format("MMMM, Y")+'</div>' +
+                            '<div class="content_center m_t_10">' +
+                            '<div class="color_filled blue_filled"></div>' +
+                            '<div>' +
+                            '<div class="chart_value">' +
+                            'Total logged time' +
+                            '</div>' +
+                            '<div class="chart_expenses">' +
+                            this.points[0].y + 'h' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>' +
+                            '<div class="content_center m_t_10">' +
+                            '<div class="color_filled" style="background-color:#9FA3C0"></div>' +
+                            '<div>' +
+                            '<div class="chart_value">' +
+                            'Daily average' +
+                            '</div>' +
+                            '<div class="chart_expenses">' + +(this.points[1].y) + 'h' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>';
+                    return html;
+                }
+            },/**/
+        });
+
+        if ($('#container2').is(':visible')) {
+            // ============================================================================================================
+            // setup configuration for the time chart
+            //=============================================================================================================
+            var jsonString = '[{"date": "2019-10-1", "total": "100", "average": "420" },{ "date": "2019-11-01", "total": "75", "average": "325" },{ "date": "2019-12-01", "total": "25", "average": "300" },{ "date": "2020-01-01", "total": "125", "average": "150" }, { "date": "2020-02-01", "total": "95", "average": "175" }, { "date": "2020-03-01", "total": "50", "average": "340" }, { "date": "2020-04-01", "total": "100", "average": "175" }, { "date": "2020-05-01", "total": "75", "average": "360" }, { "date": "2020-06-01", "total": "40", "average": "400" }, { "date": "2020-07-01", "total": "40", "average": "400" }, { "date": "2020-08-01", "total": "50", "average": "350" }, { "date": "2020-09-01", "total": "50", "average": "400" }, { "date": "2020-10-01", "total": "50", "average": "300" }, { "date": "2020-11-01", "total": "30", "average": "400" }]';
+            var myData = JSON.parse(jsonString);
+            var dataArray = [];
+            var dataArray_a = [];
+            $.each(myData, function (i, obj) {
+                //console.log(obj.date);
+                var d = new Date(obj.date);
+                dataArray.push([Date.parse(d), parseInt(obj.average)]);
+                dataArray_a.push([Date.parse(d), parseInt(obj.total)]);
+            });
+            $('#container2').highcharts({
+                chart: {type: 'line'},
+                title: {},
+                subtitle: {},
+                legend: {enabled: false},
+                plotOptions: {
+                    series: {
+                        //pointStart: pointStart,
+                        pointInterval: 24 * 3600 * 1000 * 30
+                    }
+                },
+                xAxis: {
+                    min: Date.UTC(2019, 09, 0),
+                    max: Date.UTC(2020, 10, 1),
+                    //allowDecimals: false,
+                    type: 'datetime',
+                    tickInterval: 24 * 3600 * 1000 * 30, //one day
+                    labels: {
+                        rotation: 0,
+                        format: '{value:%b}'
+                    },
+
+                },
+                yAxis: {}
+            });
+            var chart = $('#container2').highcharts();
+            // add first series values
+            chart.addSeries({
+                data: dataArray,
+                name: 'Total'
+            });
+
+            // add second series values
+            chart.addSeries({
+                data: dataArray_a,
+                name: 'Average'
+            });
+        }
+        //jquery for the my team date range picker
+        var start = moment().subtract(30, 'days');
+        var end = moment();
+        var template =
+                '<div class="daterangepicker">' +
+                '<div class="custom_title">Select Period' +
+                '<a href="javascript:void(0)">'+
+                '<img src="../svg/loanofficer/dashboard/cross.png" align="right" class="img-fluid datepicker_close">' +
+                '</a>' +
+                '</div>' +
+                '<div class="ranges"></div>' +
+                '<div style="float: left;">' +
+
+                '<div class="drp-calendar left">' +
+                '<div class="calendar-table"></div>' +
+                '<div class="calendar-time"></div>' +
+                '</div>' +
+                '<div class="drp-calendar right">' +
+                '<div class="calendar-table"></div>' +
+                '<div class="calendar-time"></div>' +
+                '</div>' +
+                '<div class="drp-buttons">' +
+                '<span class="drp-selected" style=""></span>' +
+                '<button class="cancelBtn" type="button"></button>' +
+                '<button class="applyBtn" disabled="disabled" type="button"></button> ' +
+                '</div>' +
+
+                '</div>' +
+                '</div>';
+        $('.reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 days': [moment().subtract(6, 'days'), moment()],
+                'Last 14 weeks': [moment().subtract(14, 'weeks'), moment()],
+                'Last 30 weeks': [moment().subtract(30, 'weeks'), moment()],
+                'Last week': [moment().subtract(1, 'week'), moment()],
+                'This week': [moment().startOf('week'), moment()],
+                // 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+            showCustomRangeLabel: false,
+            template: template,
+            locale: {
+                applyLabel: 'Update',
+                daysOfWeek: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+            }
+        }, cb);
+
+        //customization of the Closing target date picker
+        $('.reportrange').on('showCalendar.daterangepicker', function (ev, picker) {
+            $('.ranges').find('.custom_data_preset_title').remove();
+            $('.ranges').prepend('<div class="custom_data_preset_title">Date Preset</div>');
+            bindClose();
+        });
+
+        //display full calendar on selecting any ranges
+        $('.reportrange').on('apply.daterangepicker', function (ev, picker) {
+            $('.daterangepicker').each(function () {
+                if (!$(this).hasClass('show-calendar')) {
+                    $(this).addClass('show-calendar');
+                }
+            });
+        });
+
+        //bind the calendar close event on the close icon.
+        function bindClose() {
+            $('.datepicker_close').on('click', function () {
+                $('.cancelBtn').click();
+            });
+        }
+
+        //trigger on page load
+        cb(start, end);
+
+        //bind the datepicker calender range UI text
+        function cb(start, end) {
+            $('span.reportrange').html(start.format('MMM D, YYYY') + ' - ' + end.format('MMM D, YYYY'));
+        }
+
+        function setEqualContainer() {
+            setTimeout(function () {
+                var highestBox = 0;
+                // Select and loop the elements you want to equalise
+                highestBox = $('.team_time').height();
+                console.log('height box ' + highestBox);
+
+                // Set the height of all those children to whichever was highest
+                $('.sidenav').css({'height': highestBox + 'px'});
+            }, 100);
+        }
+
+        //jquery to set equal height to both the containers
+        setEqualContainer();
+
+        // Change the button text & add active class
+        $('.jRadioDropdown').change(function() {
+            var dropdown = $(this).closest('.dropdown');
+            var thislabel = $(this).closest('label');
+
+            dropdown.find('label').removeClass('active');
+            if( $(this).is(':checked') ) {
+                thislabel.addClass('active');
+                dropdown.find('ins').html( thislabel.text() );
+            }
+
+        });
+
+        //Add tabindex on labels
+        $('label.dropdown-item').each(function (index, value){
+            $(this).attr('tabindex', 0 );
+            $(this).find('input').attr('tabindex', -1 );
+        });
+
+        //Add keyboard navigation
+        $('label.dropdown-item').keypress(function(e){
+            if((e.keyCode ? e.keyCode : e.which) == 13){
+                $(this).trigger('click');
+            }
+        });
+
+        //jquery to bind the datatable
+        $('#team_time').DataTable({
+            "scrollY":        "500px",
+            "scrollCollapse": true,
+            "pageLength": 25,
+            "dom": 'rt<"bottom right"ip><"clear">',
+            language: {
+                paginate: {
+                    next: '<img src="../svg/loanofficer/dashboard/right_arrow.png">',
+                    previous: '<img src="../svg/loanofficer/dashboard/left_arrow.png">'
+                }
+            },
+            "infoCallback": function( settings, start, end, max, total, pre ) {
+                return "Showing " + start +" - "+ end + " of " + total;
+            }
+        });
+        $('#team_time').fadeIn('slow');
+        $('table.dataTable').fadeIn('slow');
+        $('#team_time').DataTable().draw();
+
+        //jquery to reload the page on the page resize
+        $(window).resize(function () {
+            window.location.reload();
+        });
+    });
+</script>
+</html>

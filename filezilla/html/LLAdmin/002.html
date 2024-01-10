@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>LLAdmin</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet">
+
+<!-- Morris Charts CSS -->
+<link href="css/plugins/morris.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="font-awesome-4.1.0/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<!-- *********************************************************
+		********************************************************* -->
+		<nav class="navbar navbar-inverse side_nav_mobile" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div class="logo">
+					<img src="images/logo.png" width="157" height="44" alt="logo" />
+				</div>
+				<!-- Top Menu Items -->
+
+				<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav side-nav-menu">
+						<li class="active"><a href="index.html"> <i
+								class="fa fa-lg fa-home"></i> Dashboard
+						</a></li>
+						<li><a href="#"> <i class="fa fa-lg fa-check-square"></i>
+								Approval Centre
+						</a></li>
+						<li><a href="#"> <i class="fa fa-lg fa-file"></i>
+								Magazine Advertising
+						</a></li>
+						<li><a href="#"> <i class="fa fa-lg fa-wrench"></i>
+								Manage Businesses
+						</a></li>
+						<li><a href="#"> <i class="fa fa-lg fa-map-marker"></i>
+								Manage Events
+						</a></li>
+						<li><a href="#"> <i class="fa fa-lg fa-certificate"></i>
+								Manage Offers
+						</a></li>
+						<li><a href="#"> <i class="fa fa-lg fa-list-alt"></i>
+								Manage Jobs/CVs
+						</a></li>
+						<li><a href="#"> <i class="fa fa-lg fa-users"></i> Manage
+								Website Users
+						</a></li>
+						<li class="approve_center"><a href="#"> <i
+								class="fa fa-lg fa-key"></i> Admin Management
+						</a>
+							<ul>
+								<li><a href="#">Website Adverts</a></li>
+								<li><a href="#">Website Categories</a></li>
+								<li><a href="#">Account Types</a></li>
+							</ul></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+		</nav>
+		<!-- ************************************************************
+		************************************************************ -->
+		<div class="side-nav side_nav">
+			<div class="logo">
+				<img src="images/logo.png" width="157" height="44" alt="logo" />
+			</div>
+			<div class="user_profile">
+				<div class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
+						src="images/user.png" width="61" height="61" alt="user" /></a>
+					<ul class="dropdown-menu">
+						<li><a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+						</li>
+					</ul>
+				</div>
+				<div class="user_info">
+					<p>Welcome</p>
+					<span>Sarah Pulleyn <a href="#">(Log Out)</a></span>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<ul class="nav navbar-nav side-nav-menu">
+				<li class="active"><a href="index.html"> <i
+						class="fa fa-lg fa-home"></i> Dashboard
+				</a></li>
+				<li><a href="#"> <i class="fa fa-lg fa-check-square"></i>
+						Approval Centre
+				</a></li>
+				<li><a href="#"> <i class="fa fa-lg fa-file"></i> Magazine
+						Advertising
+				</a></li>
+				<li><a href="#"> <i class="fa fa-lg fa-wrench"></i> Manage
+						Businesses
+				</a></li>
+				<li><a href="#"> <i class="fa fa-lg fa-map-marker"></i>
+						Manage Events
+				</a></li>
+				<li><a href="#"> <i class="fa fa-lg fa-certificate"></i>
+						Manage Offers
+				</a></li>
+				<li><a href="#"> <i class="fa fa-lg fa-list-alt"></i>
+						Manage Jobs/CVs
+				</a></li>
+				<li><a href="#"> <i class="fa fa-lg fa-users"></i> Manage
+						Website Users
+				</a></li>
+				<li class="approve_center"><a href="#"> <i
+						class="fa fa-lg fa-key"></i> Admin Management
+				</a>
+					<ul>
+						<li><a href="#">Website Adverts</a></li>
+						<li><a href="#">Website Categories</a></li>
+						<li><a href="#">Account Types</a></li>
+					</ul></li>
+			</ul>
+			<!-- <ul class="admin_mgmt side-nav-menu">
+				<li><a href="#"> <i class="fa fa-lg fa-key"></i>
+						Approval Centre
+				</a></li>
+				<li><a href="#"> Magazine Advertising </a></li>
+				<li><a href="#"> Magazine Advertising </a></li>
+				<li><a href="#"> Magazine Advertising </a></li>
+			</ul> -->
+		</div>
+		<div class="panel_outer_wrapper">
+			<div class="row panel_header col-lg-12">
+				<div class="panel">
+					<p>
+						<span>Important alerts</span> This is where you can put an
+						important note to all of the web staff
+					</p>
+					<div class="panel_header_icons">
+						<a href="#" class="fa-stack stack-blue"><i
+							class="fa fa-circle fa-stack-2x"></i><i
+							class="fa fa-cog fa-stack-1x fa-inverse"></i></a> <a href="#"
+							class="fa-stack stack-pink"><i
+							class="fa fa-circle fa-stack-2x"></i><i
+							class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+			<div class="col-lg-12">
+							<div class="panel-top-head biz_head dropdown">
+								<h3 class="panel-title">Example Business</h3>
+								<form class="search head_search" action="/search" method="get">
+									<input type="text" placeholder="Input your Search..." size="40"
+										name="q">
+								</form>
+								<button class="btn btn-sm btn_pink" type="button">
+									<i class="fa fa-plus"></i> ADD
+								</button>
+								<!-- <button class="btn btn-sm gray dropdown-toggle" type="button" data-toggle="dropdown"> export</button>
+								<button class="btn btn-sm gray dropdown-toggle" type="button" data-toggle="dropdown"> import</button> -->
+								<ul class="nav navbar-right top-nav">
+									<li class="dropdown">
+										<button class="btn btn-sm gray dropdown-toggle" type="button"
+											data-toggle="dropdown">import</button>
+										<ul class="dropdown-menu alert-dropdown">
+											<li><a href="#">CSV</a> <a href="#">Excel</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<button class="btn btn-sm gray dropdown-toggle" type="button"
+											data-toggle="dropdown">export</button>
+										<ul class="dropdown-menu alert-dropdown">
+											<li><a href="#">CSV</a> <a href="#">Excel</a></li>
+										</ul>
+									</li>
+								</ul>
+
+								<div class="clear"></div>
+							</div>
+						</div>
+						</div>
+			<div id="page-wrapper">
+				<div class="container-fluid">
+					<div class="row biz_header_row ">
+						<!-- <div class="row"> -->
+							<div class="panel">
+								<div class="panel-body">
+									<div class="col-lg-12 col-sm-12">
+										<!-- <div class="table-responsive"> -->
+											<!-- <table class="table"> -->
+											<table class="table">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Category</th>
+														<th>Primary Contact</th>
+														<th>Primary Email</th>
+														<th>Account Type</th>
+														<th>Last Update</th>
+														<th></th>
+													</tr>
+													<tr>
+														<th>
+															<!-- <form class="search" action="" method="get">
+												<input type="submit" type="submit" value="" class="submit" name="q"/>
+												<input type="text" class="search_btn" name="q" value="Filter" onclick='value=""'/>
+											</form>  -->
+															<form class="search" action="/search" method="get">
+																<input type="text" placeholder="Filter..." size="40"
+																	name="q">
+															</form>
+														</th>
+														<th>
+															<form class="search" action="/search" method="get">
+																<input type="text" placeholder="Filter..." size="40"
+																	name="q">
+															</form>
+														</th>
+														<th>
+															<form class="search" action="/search" method="get">
+																<input type="text" placeholder="Filter..." size="40"
+																	name="q">
+															</form>
+														</th>
+														<th>
+															<form class="search" action="/search" method="get">
+																<input type="text" placeholder="Filter..." size="40"
+																	name="q">
+															</form>
+														</th>
+														<th>
+															<form class="search" action="/search" method="get">
+																<input type="text" placeholder="Filter..." size="40"
+																	name="q">
+															</form>
+														</th>
+														<th>
+															<form class="search" action="/search" method="get">
+																<input type="text" placeholder="Filter..." size="40"
+																	name="q">
+															</form>
+														</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Businesss name</td>
+														<td><span class="btn_bg sky">Builders</span></td>
+														<td>Alan Davis</td>
+														<td>Alan@example.com</td>
+														<td>Standard</td>
+														<td>29/04/2013</td>
+														<td><a href="#" class="btn_bg blue">View</a></td>
+													</tr>
+													<tr>
+														<td>Businesss name</td>
+														<td><span class="btn_bg sky">Plumbers</span></td>
+														<td>Alan Davis</td>
+														<td>Alan@example.com</td>
+														<td>Standard</td>
+														<td>29/04/2013</td>
+														<td><a href="#" class="btn_bg blue">View</a></td>
+													</tr>
+													<tr>
+														<td>Businesss name</td>
+														<td><span class="btn_bg sky">Salons</span></td>
+														<td>Alan Davis</td>
+														<td>Alan@example.com</td>
+														<td>Standard</td>
+														<td>29/04/2013</td>
+														<td><a href="#" class="btn_bg blue">View</a></td>
+													</tr>
+													<tr>
+														<td>Businesss name</td>
+														<td><span class="btn_bg sky">Builders</span></td>
+														<td>Alan Davis</td>
+														<td>Alan@example.com</td>
+														<td>Standard</td>
+														<td>29/04/2013</td>
+														<td><a href="#" class="btn_bg blue">View</a></td>
+													</tr>
+													<tr>
+														<td>Businesss name</td>
+														<td><span class="btn_bg sky">Plumbers</span></td>
+														<td>Alan Davis</td>
+														<td>Alan@example.com</td>
+														<td>Basic</td>
+														<td>29/04/2013</td>
+														<td><a href="#" class="btn_bg blue">View</a></td>
+													</tr>
+													<tr>
+														<td>Businesss name</td>
+														<td><span class="btn_bg sky">Salons</span></td>
+														<td>Alan Davis</td>
+														<td>Alan@example.com</td>
+														<td>Basic</td>
+														<td>29/04/2013</td>
+														<td><a href="#" class="btn_bg blue">View</a></td>
+													</tr>
+													<tr>
+														<td>Businesss name</td>
+														<td><span class="btn_bg sky">Builders</span></td>
+														<td>Alan Davis</td>
+														<td>Alan@example.com</td>
+														<td>Basic</td>
+														<td>29/04/2013</td>
+														<td><a href="#" class="btn_bg blue">View</a></td>
+													</tr>
+													<tr>
+														<td>Businesss name</td>
+														<td><span class="btn_bg sky">Plumbers</span></td>
+														<td>Alan Davis</td>
+														<td>Alan@example.com</td>
+														<td>Premium</td>
+														<td>29/04/2013</td>
+														<td><a href="#" class="btn_bg blue">View</a></td>
+													</tr>
+													<tr>
+														<td>Businesss name</td>
+														<td><span class="btn_bg sky">Salons</span></td>
+														<td>Alan Davis</td>
+														<td>Alan@example.com</td>
+														<td>Premium</td>
+														<td>29/04/2013</td>
+														<td><a href="#" class="btn_bg blue">View</a></td>
+													</tr>
+													<tr>
+														<td>Businesss name</td>
+														<td><span class="btn_bg sky">Salons</span></td>
+														<td>Alan Davis</td>
+														<td>Alan@example.com</td>
+														<td>Premium</td>
+														<td>29/04/2013</td>
+														<td><a href="#" class="btn_bg blue">View</a></td>
+													</tr>
+												</tbody>
+											</table>
+										<!-- </div> -->
+									</div>
+								</div>
+							</div>
+						<!-- </div> -->
+						<!-- /.row -->
+					</div>
+					<!-- /.container-fluid -->
+
+				</div>
+			</div>
+			<!-- /#page-wrapper -->
+			<div class="clear"></div>
+
+		</div>
+		<!-- /#wrapper -->
+
+		<!-- jQuery Version 1.11.0 -->
+		<script src="js/jquery-1.11.0.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Morris Charts JavaScript -->
+		<script src="js/plugins/morris/raphael.min.js"></script>
+		<script src="js/plugins/morris/morris.min.js"></script>
+		<script src="js/plugins/morris/morris-data.js"></script>
+</body>
+
+</html>

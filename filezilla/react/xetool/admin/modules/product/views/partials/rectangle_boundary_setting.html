@@ -1,0 +1,141 @@
+<!-- Select Decoration Type -->
+<div class="indentSec p-t-10" ng-hide="isAssignDesignArea">
+    <div class="d-a-type">
+        <xe-translate text-value="Select decoration area">
+        </xe-translate>
+        <i class="fa fa-info-circle info-module-icon" ng-click="showProductFaqDetails(1)"></i>
+    </div>
+    <div>
+        <button type="button" class="btn btn-default text-ellipsis text-left custom-icon dropdown-toggle"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #f8f8f8;">
+            <b>{{ selectedSize }}</b> <br> <span>({{actualWidth}} * {{actualHeight}})
+                {{productDimenssionUnit}}</span>
+        </button>
+
+        <ul class="dropdown-menu full-width" role="menu" ng-class="{'button-scroll':printSizeList.length> 4}" style="margin-left: 30px;
+                                width: calc(100% - 30px);">
+            <li ng-repeat="sizes in printSizeList" ng-click="selectPrintSize($index)">
+                <a href="">
+                    {{ sizes.name }}
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!-- Select Decoration Area -->
+<div class="indentSec p-t-10" ng-show="isAssignDesignArea">
+    <div class="d-a-type">
+        <xe-translate text-value="Select decoration area">
+        </xe-translate>
+    </div>
+    <div>
+        <button type="button" class="btn btn-default text-ellipsis text-left custom-icon dropdown-toggle"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #f8f8f8;">
+            <b>{{ selectedSize }}</b> <br> <span>({{actualWidth}} * {{actualHeight}})
+                {{productDimenssionUnit}}</span>
+        </button>
+
+        <ul class="dropdown-menu full-width" role="menu" ng-class="{'button-scroll':printSizeList.length> 4}" style="margin-left: 30px;
+                        width: calc(100% - 30px);">
+            <li ng-repeat="sizes in printSizeList" ng-click="selectPrintSize($index)">
+                <a href="" ng-click="selectPrintSize($index,true)">
+                    {{ sizes.name }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Create Decoration Area -->
+<div class="indentSec noAfter p-t-10 p-b-10">
+    <div class="dFlex alignCenter justify-left">
+        <div class="addLink" ng-click="openCustomSizeSetting()">
+            <i class="fa fa-plus"></i>
+            <xe-translate text-value="Create custom decoration area">
+            </xe-translate>
+        </div>
+    </div>
+</div>
+<!-- Enable custom decoration area -->
+<div class="indentSec customAfter" ng-class="{'height-twenty': !(boundary.name == 'bound' && ProductIdType == 'configurable' && productSideWiseSizevariations.length >1)}">
+    <div class="dFlex alignCenter justify-left">
+        <div class="checkbox check-info">
+            <input type="checkbox" id="customBoundry" ng-model="variable.isRectPrint" value="1"
+                ng-disabled="printAreaType.is_print_size" ng-change="variableRectBoundary(variable.isRectPrint)" />
+            <label class="bold" for="customBoundry">
+                <xe-translate text-value="Enable custom decoration area">
+                </xe-translate>
+            </label>
+            <i class="fa fa-info-circle info-module-icon" ng-click="showProductFaqDetails(6)"></i>
+        </div>
+    </div>
+    <ng-include src="'modules/product/views/partials/variable_boundary_setting.html'" ng-if="variable.isRectPrint">
+    </ng-include>
+</div>
+<!-- Associate design area based on their size variants -->
+<div class="indentSec customAfter" ng-class="{'height-twenty': (boundary.name == 'bound' && ProductIdType == 'configurable' && productSideWiseSizevariations.length >1)}">
+    <div class="dFlex alignCenter justify-left">
+        <div class="checkbox check-info"
+            ng-show="(boundary.name == 'bound') && (ProductIdType == 'configurable') && productSideWiseSizevariations.length >1">
+            <input type="checkbox" id="checkedArea" ng-model="printAreaType.is_print_size"
+                ng-change="assignDesignArea(printAreaType.is_print_size)" />
+            <label class="bold" for="checkedArea">
+                <xe-translate text-value="Associate Design Area">
+                </xe-translate>
+            </label>
+        </div>
+    </div>
+    <div class="xe-product-setting" ng-show="isAssignDesignArea">
+        <!-- Preloader -->
+        <div class="product-wrap-height text-center" ng-show="!isSizeLoaded">
+            <img class="image-responsive-height demo-mw-50 page-loader" src="assets/img/demo/progress.svg"
+                alt="Progress" />
+            <span class="loader-label">
+                <xe-translate text-value="Loading">
+                </xe-translate>
+                ...
+            </span>
+        </div>
+        <div class="setting-view">
+            <div class="row m-b-5" ng-repeat="(pIndex, productSize) in productSideWiseSizevariations" style="display:flex;align-items:center;">
+                <div class="col-md-2 col-padd">
+                    {{productSize.xe_size }}
+                </div>
+                <div class="col-md-10 col-padd">
+                    <div class="form-group mb-0">
+                        <div class="btn-group pull-left full-width assoc-size-dropdown">
+                            <button type="button" class="btn btn-default text-ellipsis text-left"
+                                data-toggle="dropdown">
+                                {{ selectedPrintSizes[sideIndex][pIndex].name }}
+                                ({{selectedPrintSizes[sideIndex][pIndex].width}} {{productDimenssionUnit}} x
+                                {{selectedPrintSizes[sideIndex][pIndex].height}} {{productDimenssionUnit}})
+                            </button>
+                            <button type="button" class="btn btn-default dropdown-toggle btn-group-caret"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret">
+                                </span>
+                                <span class="sr-only">
+                                    Toggle Dropdown
+                                </span>
+                            </button>
+                            <ul class="dropdown-menu full-width" role="menu"
+                                ng-class="{'button-scroll':printSizeList.length> 4}">
+                                <li ng-repeat="sizes in printSizeList"
+                                    ng-click="setPrintSize(pIndex,sizes,productSize)">
+                                    <a href="">
+                                        {{ sizes.name }} ({{sizes.width}} {{productDimenssionUnit}} x {{sizes.height}}
+                                        {{productDimenssionUnit}})
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-include src="'modules/product/doc/ps06.html'">
+</ng-include>
+<ng-include src="'modules/product/doc/ps01.html'">
+</ng-include>

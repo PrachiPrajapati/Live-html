@@ -1,0 +1,194 @@
+<div class="panel-heading separator p-t-0">
+    <div class="panel-title">
+        <h4 class ="xe-panel-title">
+            <xe-translate text-value="Choose Store Attributes">
+            </xe-translate>
+        </h4>
+    </div>
+</div>
+<div class="panel-body m-t-20" ng-if = "isShopify == false">
+    <form class="form-horizontal" role="form" autocomplete="off">
+        <div class="form-group b-b-none row">
+            <div class="col-sm-2">
+                <label class="control-label">
+                    <xe-translate text-value="Color" class="ng-isolate-scope"><span class="ng-binding">Color</span></xe-translate>
+                    <i class="fa fa-info-circle ng-scope" tooltip="{{ colorMessage }}" tooltip-placement="right" style=" margin-left: 7px; display: inline-block;">
+                    </i>
+                    <i class="fa fa-asterisk" aria-hidden="true" style="color: red;font-size: 6px;position: absolute;top: 7px;left: 41px;"></i>
+                </label>
+            </div>
+            <div class="col-sm-8">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" style="width: 117px" data-toggle="dropdown">
+                        {{ selectedColorAttr }}
+                    </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret">
+                        </span>
+                        <span class="sr-only">
+                            Toggle Dropdown
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" style="width: 143px" ng-class="{'button-scroll':store_attributes.length> 2}">
+                        <li ng-repeat="colorAttr in store_attributes" ng-click="colorAttrSelected(colorAttr)">
+                            <a href="">
+                                {{ colorAttr.attribute_code }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-group b-b-none row">
+            <div class="col-sm-2">
+                <label class="control-label">
+                    <xe-translate text-value="Size" class="ng-isolate-scope"><span class="ng-binding">Size</span></xe-translate>
+                    <i class="fa fa-info-circle ng-scope" tooltip="{{ sizeMessage }}" tooltip-placement="right" style=" margin-left: 7px; display: inline-block;">
+                    </i>
+                    <i class="fa fa-asterisk" aria-hidden="true" style="color: red;font-size: 6px;position: absolute;top: 6px;left: 27px;"></i>
+                </label>
+            </div>
+            <div class="col-sm-8">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" style="width: 117px" data-toggle="dropdown">
+                        {{ selectedSizeAttr }}
+                    </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret">
+                        </span>
+                        <span class="sr-only">
+                            Toggle Dropdown
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" style="width: 143px" ng-class="{'button-scroll':store_attributes.length> 2}">
+                        <li ng-repeat="sizeAttr in store_attributes" ng-click="sizeAttrSelected(sizeAttr)">
+                            <a href="">
+                                {{ sizeAttr.attribute_code }}
+                            </a>
+                        </li>
+                    </ul>
+                </div> 
+            </div> 
+        </div>
+        <div class="form-group b-b-none row">
+            <div class="col-sm-2">
+                <label class="control-label">
+                    <xe-translate text-value="Dimension" class="ng-isolate-scope"><span class="ng-binding">Dimension</span>
+                    </xe-translate>
+                    <i class="fa fa-info-circle ng-scope"  tooltip= "{{ dimensionMessage }}" tooltip-placement="right" style=" margin-left: 5px; display: inline-block;">
+                    </i>
+                </label>
+            </div>
+            <div class="col-sm-4">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" style="width: 117px" data-toggle="dropdown">
+                        {{ selectedDimensionAttr }}
+                    </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret">
+                        </span>
+                        <span class="sr-only">
+                            Toggle Dropdown
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" style="width: 143px" ng-class="{'button-scroll':store_attributes.length> 2}">
+                        <li ng-repeat="dimensionAttr in store_attributes" ng-click="dimensionAttrSelected(dimensionAttr)">
+                            <a href="">
+                                {{ dimensionAttr.attribute_code }}
+                            </a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        <div class="form-group b-b-none row"> 
+           
+            <div class="col-sm-2">
+                <label class="control-label">
+                    <xe-translate text-value="Dimension Format" class="ng-isolate-scope"><span class="ng-binding">Dimension Format</span>
+                    </xe-translate>
+                </label>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" style="width: 117px" data-toggle="dropdown">
+                        {{ selectedFormat }}
+                    </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret">
+                        </span>
+                        <span class="sr-only">
+                            Toggle Dropdown
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" style="width: 143px" ng-class="{'button-scroll':sortOrders.length> 4}">
+                        <li ng-repeat="order in sortOrders" ng-click="orderSelected(order)">
+                            <a href="">
+                                {{ order.value }}
+                            </a>
+                        </li>
+                    </ul>
+                </div> 
+            </div> 
+        </div> 
+    </form>
+</div>
+
+<div class="panel-body m-t-20" ng-if = "isShopify == true">
+    <form class="form-horizontal" role="form" autocomplete="off">
+        <div class="form-group b-b-none row">
+            <label class="col-sm-2 control-label">
+                <xe-translate text-value="Get Height And Width From Size Option">
+                </xe-translate>
+            </label>
+
+            <div class="col-sm-4">
+                <div class="checkbox check-info">
+                    <input type="checkbox" id="is_custom_height_width" ng-model="is_custom_height_width" ng-true-value="1" ng-false-value="0" ng-checked="is_custom_height_width == 1" ng-change="changedHeightWidth(is_custom_height_width)"/>
+                    <label for="is_custom_height_width">
+                        <xe-translate text-value="Enabled">
+                        </xe-translate>
+                    </label>
+                </div>
+            </div> 
+           
+            <label class="col-sm-2 control-label" ng-show = "is_custom_height_width == true" style="
+    padding-right: 15px;">
+                <xe-translate text-value="Format">
+                </xe-translate>
+                <span style="color:red;">*
+                </span>
+            </label>
+
+            <div class="col-sm-4" ng-show = "is_custom_height_width == true">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" style="width: 117px" data-toggle="dropdown">
+                        {{ selectedOrder }}
+                    </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret">
+                        </span>
+                        <span class="sr-only">
+                            Toggle Dropdown
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" style="width: 143px" ng-class="{'button-scroll':sortOrders.length> 4}">
+                        <li ng-repeat="order in sortOrders" ng-click="orderSelected(order)">
+                            <a href="">
+                                {{ order.value }}
+                            </a>
+                        </li>
+                    </ul>
+                </div> 
+            </div> 
+        </div> 
+    </form>
+</div>
+
+<div class="panel-footer wizard-ftr bg-white panel-footer-mg">
+    <button class="btn btn-sm btn-info pull-left m-r-10" ng-click="updateStoreAttributes()" ng-disabled="demoStatus">
+        <xe-translate text-value="Save">
+        </xe-translate>
+    </button>
+</div>

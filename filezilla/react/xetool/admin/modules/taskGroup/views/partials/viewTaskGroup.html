@@ -1,0 +1,67 @@
+<div class="Form_Details">
+    <div class="row">
+        <div class="col-sm-6">
+            <label class="pageTitle">{{task_group}}</label>
+            <button class="btn btn-default btn-sm m-l-10" type="button" ng-click="addSingleTask()">
+                <xe-translate text-value="Add Task"></xe-translate>
+            </button>
+        </div>
+        <div class="col-sm-6 text-right">
+            <button class="btn btn-default btn-sm" type="button" ng-click="singleGroupTaskListRefresh()">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-default btn-sm" type="button" ng-click="cancelTaskGroup('SingleTaskList')">
+                <i class="fa fa-caret-left" aria-hidden="true"></i>
+                <xe-translate text-value="Back"></xe-translate>
+            </button>
+        </div>
+    </div>
+    <div class="dxTable table-responsive m-t-15">
+        <table class="table table-striped">
+            <thead ng-hide="!TaskLists.length">
+                <tr>
+                    <th>Title</th>
+                    <th style="width:220px;">Assign</th>
+                    <th style="width:100px;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-show="taskListFound" ng-repeat="data in TaskLists">
+                    <td>{{data.task_title | removeHTMLTags}}</td>
+                    <td>
+                        <select class="form-control select" ng-model="data.assign_to" ng-options="item.id as item.name for item in userDataList" ng-change="onClickedUserDetails(data.assign_to,data.id)" ng-selected="true">
+                            <option value="">Assigned To </option>
+                        </select>
+                    </td>
+                    <td style="width:100px;">
+                        <button class="btn btn-link" ng-click="deleteSingleTask(data.id)" style="padding:0 6px;"><i class="fa fa-trash"></i></button>
+                        <button class="btn btn-link" ng-click="editTask(data.id,data.task_title)" style="padding:0 6px;"><i class="fa fa-edit"></i></button>
+                    </td>
+                </tr>
+                <tr ng-show="!TaskLists.length && !editViewTaskPreLoader">
+                    <td colspan="3" class="text-center">
+                        <xe-translate text-value="No Records"></xe-translate>
+                    </td>
+                </tr>
+                <tr ng-show="editViewTaskPreLoader">
+                    <td colspan="3">
+                        <div class="panel panel-default">
+                            <div class="graphics-wrap-height">
+                                <div class="panel-body text-center">
+                                    <img class="image-responsive-height demo-mw-50 page-loader" src="assets/img/progress/progress-circle-master.svg" alt="Progress" />
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--  <div class="preloader-trans" ng-show="editViewTaskPreLoader">
+        <div class="page-loader">
+            <img class="image-responsive-height demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+            <xe-translate text-value="Please wait"></xe-translate>...
+        </div>
+    </div> -->
+</div>

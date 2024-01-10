@@ -1,0 +1,810 @@
+<div class="container-fluid" ng-controller="QuoteCtrl" ng-init="init()">
+  <div class="quote-box" ng-show="quoteTableShow">
+    <div class="row">
+      <div class="col-sm-10">
+        <label class="pageTitle">
+          <xe-translate text-value="Quotations"></xe-translate>
+        </label>
+      </div>
+      <div class="col-sm-2 text-right">
+        <!-- notification -->
+        <div class="btn-notification" ng-click="showNotifications()">
+          <i class="fa fa-bell-o" aria-hidden="true"></i> 
+          <xe-translate text-value="Notifications"></xe-translate>
+          <span class="badge badge-danger">{{notificationCount}}</span>
+        </div>
+      </div>
+      <div class="col-md-12 text-left" style="padding-top: 12px">
+        <butoon class="btn  btn-sm m-l-8" ng-class="{'btn-info': kanbanViewActiveButton == true && listViewActiveButton == false}" ng-click="changeView('Grid')">
+          <i class="fa fa-th"></i>
+          <xe-translate text-value="Grid View"></xe-translate>
+        </butoon>
+        <butoon class="btn  btn-sm m-l-9" ng-class="{'btn-info': kanbanViewActiveButton == false && listViewActiveButton == true}" ng-click="changeView('List')">
+          <i class="fa fa-list"></i>
+          <xe-translate text-value="List View"></xe-translate>
+        </butoon>
+         <button class="btn btn-success btn-sm pull-right" type="button" ng-click="createNewQuoteForm()">
+          <xe-translate text-value="Generate Quote"></xe-translate>
+        </button>
+    </div>
+    </div>
+    <!-- Tab Start -->
+    <div ng-show="!kanbanViewActiveButton">
+      <div class="clearfix m-t-20" ng-show="totalQuoteCount > 0">
+        <ul class="nav nav-tabs quote-nav-tabs">
+          <li ng-class="{'active':tabModel == 'myQuotes'}" class="active">
+            <a data-toggle="tab" ng-disabled="dataLoaded" ng-click="changeTab('myQuotes')" href="">
+              <xe-translate text-value="My Quotes">
+              </xe-translate>
+            </a>
+          </li>
+          <li ng-class="{'active':tabModel == 'unassignedQuotes'}">
+            <a data-toggle="tab" ng-disabled="dataLoaded" ng-click="changeTab('unassignedQuotes')" href="">
+              <xe-translate text-value="Unassigned Quotes">
+              </xe-translate>
+            </a>
+          </li>
+          <li ng-class="{'active':tabModel == 'assignedQuotes'}" ng-if="isSuperAdmin">
+            <a data-toggle="tab" ng-disabled="dataLoaded" ng-click="changeTab('assignedQuotes')" href="">
+              <xe-translate text-value="Assigned Quotes">
+              </xe-translate>
+            </a>
+          </li>
+          <li ng-class="{'active':tabModel == 'orderedQuotes'}">
+            <a data-toggle="tab" ng-disabled="dataLoaded" ng-click="changeTab('orderedQuotes')" href="">
+              <xe-translate text-value="Ordered Quotes">
+              </xe-translate>
+            </a>
+          </li>
+        </ul>
+        <!-- Options Start -->
+        <div class="row m-b-10">
+          <div class="col-md-6">
+            <!-- tab 3 option -->
+            <div class="btn-group" ng-if="tabModel == 'assignedQuotes' && isSuperAdmin"
+              ng-show="isQuoteList == false && dataLoaded">
+              <button type="button" class="btn btn-default btn-sm text-ellipsis" data-toggle="dropdown">
+                {{ selectedSalesExecutive }} <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" ng-class="{'button-scroll-lang':salesExecutiveList.length> 4}">
+                <li ng-repeat="executive in salesExecutiveList" ng-click="selectedExecutive(executive)">
+                  <a href="">{{ executive.name }}</a>
+                </li>
+              </ul>
+            </div>
+            <!-- status -->
+            <div class="btn-group m-r-5">
+              <button type="button" class="btn btn-default btn-sm text-ellipsis" data-toggle="dropdown">
+                {{ selectedStatus }} <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" ng-class="{'button-scroll-lang':quoteStatusList.length> 4}">
+                <li ng-repeat="status in quoteStatusList" ng-click="selectedQuoteStatus(status)">
+                  <a href="" style="position:relative;padding-left:20px;">
+                    {{ status.name }}
+                    <span class="statusColor" style="background:{{status.color_code}};"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- remove -->
+            <button class="btn btn-default btn-sm" type="button" ng-click="deleteQuotList()"
+              ng-disabled="isDeleteBtnDisabled" ng-if="isSuperAdmin">
+              <xe-translate text-value="Delete"></xe-translate>
+            </button>
+          </div>
+          <div class="col-md-6 text-right">
+            <div class="d-flex" style="justify-content:flex-end;">
+              <!-- search -->
+              <div class="form-inline">
+                <input type="password" name="password" autocomplete="user-password" ng-hide="true">
+                <input type="text" placeholder="Type search value" class="form-control input-sm" name="start"
+                  id="searchId" pg-form-group="" ng-keyUp="searchByName(searchValue)" ng-model="searchValue" />
+                <button type="button" class="btn btn-primary btn-sm inline" id="searchBtn"
+                  ng-click="searchProductOnKeyUp(searchValue)" ng-disabled="!searchValue">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+              <!-- refresh -->
+              <button type="button" class="btn btn-default btn-sm m-l-5" ng-click="quoteRefreshList()">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+              </button>
+              <!-- table reorder -->
+              <div class="listShadowWrap">
+                <div class="listBtn customer-list-btn btn btn-default btn-sm m-l-5" id="quotColListDropBtn"
+                  ng-show="userType == 1">
+                  <i class="fa fa-gear"></i>
+                </div>
+                <div class="listShadowBox" id="quotColListDrop">
+                  <h4>
+                    <xe-translate text-value="Displayed column list"></xe-translate>
+                  </h4>
+                  <div ng-repeat="column in quotColumnList">
+                    <div class="checkbox check-success" ng-if="column.label != 'Agent Name'">
+                      <input type="checkbox" id="{{ column.column_name }}" ng-checked="column.status == 1 ? true : false"
+                        ng-model="colChecked[$index]" ng-change="columnSelected(column, colChecked[$index])"
+                        ng-disabled="column.is_required == 1" />
+                      <label for="{{ column.column_name }}" class="cust-col-over">
+                        <span>{{ column.label }}</span>
+                      </label>
+                    </div>
+                    <div class="checkbox check-success"
+                      ng-if="column.label == 'Agent Name' && (tabModel == 'assignedQuotes' || tabModel == 'unassignedQuotes')">
+                      <input type="checkbox" id="{{ column.column_name }}" ng-checked="column.status == 1 ? true : false"
+                        ng-model="colChecked[$index]" ng-change="columnSelected(column, colChecked[$index])"
+                        ng-disabled="column.is_required == 1" />
+                      <label for="{{ column.column_name }}" class="cust-col-over">
+                        <span>{{ column.label }}</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tab 1 (My Quotes) -->
+        <div class="m-h-400 tab-pane fade in" ng-if="tabModel == 'myQuotes'">
+          <div class="quote-table" ng-if="isQuoteList == false && dataLoaded">
+            <div class="custom-table" id="id_Table" ui-options="options">
+              <ul class="custom-table-head quot-head-content-manual">
+                <li class="checkCol" ng-if="isSuperAdmin">
+                  <div class="checkbox check-success customer-checkbox-heading">
+                    <input type="checkbox" value="allChecked.value" id="myQuotesAllChecked" ng-model="allChecked.value"
+                      ng-change="allCheckedClicked(allChecked.value)" />
+                    <label for="myQuotesAllChecked"></label>
+                  </div>
+                </li>
+                <li class="tColumns" ng-repeat="column in quotColumnList"
+                  ng-show="column.status == 1 && column.column_name!='agent_name'">
+                  <xe-translate text-value="{{column.label}}">
+                  </xe-translate>
+                </li>
+              </ul>
+              <div class="custom-table-body quot-scroll-content-manual">
+                <div class="custom-table-row" ng-repeat="quoteData in quotesData track by $index">
+                  <ul class="custom-table-content quot-body-content-manual">
+                    <li class="checkCol" ng-if="isSuperAdmin">
+                      <div class="checkbox check-success" style="margin: 0px">
+                        <input type="checkbox" value="{{ quoteData.quote_id }}" id="{{ quoteData.quote_id }}"
+                          ng-model="quoteCheck[$index]" ng-change="quoteSelected(quoteCheck[$index])" />
+                        <label for="{{ quoteData.quote_id }}">
+                        </label>
+                      </div>
+                    </li>
+                    <li class="tColumns cursor-pointer" ng-repeat="column in quotColumnList"
+                      ng-show="column.status == 1 && column.column_name!='agent_name'"
+                      ng-click="showQuoteDetails(quoteData.quote_id, quoteData.status, quoteData.prefix_quote_id, $parent.$parent.$index)"
+                      ng-if="column.column_name != 'status'">
+                      <span>
+                        {{ quoteData[column.column_name] }}
+                      </span>
+                    </li>
+                    <li class="tColumns" ng-repeat="column in quotColumnList"
+                      ng-show="column.status == 1 && column.column_name!='agent_name'"
+                      ng-if="column.column_name == 'status'">
+                      <div ng-if="column.column_name == 'status'">
+                        <!-- <select class="form-control select input-sm" ng-model="quoteData[column.column_name].name"
+                          ng-change="onQuoteStatusSelected(quoteData.quote_id, quoteData[column.column_name].name, $parent.$parent.$parent.$index, quoteData[column.column_name])">
+                          <option ng-repeat="status in statusLists">{{status.name}}</option>
+                        </select> -->
+                        <div class="q-r-status-drop dropdown" style="display:inline-block; width:100%;">
+                            <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" type="button" data-toggle="dropdown" data-disabled="true" style="min-width: 200px">
+                                <div>
+                                  <span class="statusColor q-r-status-color" style="background:{{quoteData[column.column_name].color_code}}">
+                                  </span>
+                                  <span style="padding-left: 20px;">
+                                    {{quoteData[column.column_name].name}} 
+                                  </span>
+                                </div>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" style="width: 100%">
+                                <div  ng-class="{'custom-scroll-menu-bar': statusLists.length > '10'}">  
+                                    <li ng-repeat="status in statusLists" ng-click="onQuoteStatusClicked(quoteData.quote_id, status, 'quoteListingPage', $parent.$parent.$parent.$parent.$parent.$index)" ng-if="status.name != 'Customize Statuses'">
+                                        <a href="#" ng-class="quoteDetailsForm.quote_status_id == status.id ? 'active':'' " style="position:relative;padding-left:20px;" class="status-adjust">
+                                            {{status.name}}
+                                            <span class="statusColor" style="background:{{status.color_code}};"></span>
+                                        </a>
+                                    </li>
+                                </div>
+                               
+                                <li ng-click="onCustomizeStatusClicked()">
+                                    <a href="#" class="btn btn-info m-t-10" style="color:#fff;text-align:center;">
+                                        <xe-translate text-value="Customize Statuses"></xe-translate>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-table">
+            <div class="custom-table-body quot-scroll-content-manual"
+              ng-show="isShowNoQuotsFound && !isShowBackToAllQuotes && dataLoaded">
+              <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                <xe-translate text-value="No Quotes found"></xe-translate>
+              </p>
+            </div>
+            <span ng-show="isQuoteList && dataLoaded && isShowBackToAllQuotes">
+              <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                <xe-translate text-value="No Quotes found"></xe-translate>
+                <a ng-click="selectedQuoteStatus('0')" class="cursor-pointer">
+                  <xe-translate text-value="Back to all quotes"></xe-translate>
+                </a>
+              </p>
+            </span>
+          </div>
+          <div class="row" ng-if="tabModel == 'myQuotes'">
+            <div class="col-lg-12" ng-hide="dataLoaded">
+              <div class="product-wrap-height">
+                <div class="panel-body text-center">
+                  <img class="demo-mw-50 page-loader" src="assets/img/demo/progress.svg"
+                    alt="Progress" />
+                  <span class="loader-label">
+                    <xe-translate text-value="Loading Designs"></xe-translate>...
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tab 2 -->
+        <div class="m-h-400 tab-pane fade in" ng-if="tabModel == 'unassignedQuotes'">
+          <div class="quote-table" ng-if="isQuoteList == false && tabModel == 'unassignedQuotes' && dataLoaded">
+            <div class="custom-table" id="id_Table" ui-options="options">
+              <ul class="custom-table-head quot-head-content-manual">
+                <li class="checkCol" ng-if="isSuperAdmin">
+                  <div class="checkbox check-success customer-checkbox-heading">
+                    <input type="checkbox" value="allChecked.value" id="unassignedQuotesAllChecked"
+                      ng-model="allChecked.value" ng-change="allCheckedClicked(allChecked.value)" />
+                    <label for="unassignedQuotesAllChecked"></label>
+                  </div>
+                </li>
+                <li class="tColumns" ng-repeat="column in quotColumnList" ng-show="column.status == 1">
+                  <xe-translate text-value="{{column.label}}">
+                  </xe-translate>
+                </li>
+              </ul>
+              <div class="custom-table-body quot-scroll-content-manual">
+                <div class="custom-table-row" ng-repeat="quoteData in quotesData">
+                  <ul class="custom-table-content quot-body-content-manual">
+                    <li class="checkCol" ng-if="isSuperAdmin">
+                      <div class="checkbox check-success" style="margin: 0px">
+                        <input type="checkbox" value="{{ quoteData.quote_id }}" id="{{ quoteData.quote_id }}"
+                          ng-model="quoteCheck[$index]" ng-change="quoteSelected(quoteCheck[$index])" />
+                        <label for="{{ quoteData.quote_id }}">
+                        </label>
+                      </div>
+                    </li>
+                    <li class="tColumns cursor-pointer" ng-repeat="column in quotColumnList"
+                      ng-show="column.status == 1 && column.column_name!='agent_name'"
+                      ng-click="showQuoteDetails(quoteData.quote_id, quoteData.status,quoteData.prefix_quote_id, $parent.$parent.$index)"
+                      ng-if="column.column_name != 'status'">
+                      <span>
+                        {{ quoteData[column.column_name] }}
+                      </span>
+                    </li>
+                    <li class="tColumns" ng-repeat="column in quotColumnList" ng-show="column.status == 1"
+                      ng-if="column.column_name == 'agent_name'">
+                      <div class="dropdown" ng-click="resetAgentSearchField()">
+                        <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                          data-disabled="true">
+                          {{ quoteData[column.column_name] }}
+                          <span class="caret"></span></button>
+                        <ul class="dropdown-menu" style="width:100%">
+                          <li>
+                            <input type="text" class="form-control q-r-drop-search-field"
+                              ng-model="agentSearchData.value">
+                          </li>
+                          <li>
+                            <ul ng-class="{'quote-drop-down-scroll':agentsAccounts.length > 5}" style="list-style:none;padding:10px 0 0 0;margin:0;">
+                              <li ng-click="selfAssign(quoteData)" ng-if="isSuperAdmin == false">
+                                <a href="" style="color:#333;">
+                                  <xe-translate text-value="Self assign">
+                                  </xe-translate>
+                                </a>
+                              </li>
+                              <li ng-click="superAdminSelfAssign(quoteData)" ng-if="isSuperAdmin">
+                                <a href="" style="color:#333;">
+                                  <xe-translate text-value="Self assign">
+                                  </xe-translate>
+                                </a>
+                              </li>
+                              <li ng-repeat="agent in agentsAccounts | filter:agentSearchData.value" ng-if="isSuperAdmin"
+                                ng-click="onAgentSelected(quoteData, agent.id, agent.name)">
+                                <a href="" style="color:#333;">
+                                  {{ agent.name }} ({{agent.number_of_quote}})
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="tColumns" ng-repeat="column in quotColumnList"
+                      ng-show="column.status == 1 && column.column_name!='agent_name'"
+                      ng-if="column.column_name == 'status'">
+                      <div ng-if="column.column_name == 'status'">
+                       <!--  <select class="form-control select input-sm" ng-model="quoteData[column.column_name].name"
+                          ng-change="onQuoteStatusSelected(quoteData.quote_id, quoteData[column.column_name].name, $parent.$parent.$parent.$index, quoteData[column.column_name])">
+                          <option ng-repeat="status in statusLists">{{status.name}}</option>
+                        </select> -->
+                        <div class="q-r-status-drop dropdown" style="display:inline-block; width:100%;">
+                            <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" type="button" data-toggle="dropdown" data-disabled="true">
+                                <div>
+                                  <span class="statusColor q-r-status-color" style="background:{{quoteData[column.column_name].color_code}}">
+                                  </span>
+                                  <span style="padding-left: 20px;">
+                                    {{quoteData[column.column_name].name}} 
+                                  </span>
+                                </div>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" style="width: 100%">
+                              <div  ng-class="{'custom-scroll-menu-bar': statusLists.length > '10'}">  
+                                <li ng-repeat="status in statusLists" ng-click="onQuoteStatusClicked(quoteData.quote_id, status, 'quoteListingPage', $parent.$parent.$parent.$parent.$parent.$index)" ng-if="status.name != 'Customize Statuses'">
+                                  <a href="#" ng-class="quoteDetailsForm.quote_status_id == status.id ? 'active':'' " style="position:relative;padding-left:20px;" class="status-adjust">
+                                      {{status.name}}
+                                      <span class="statusColor" style="background:{{status.color_code}};"></span>
+                                  </a>
+                                </li>
+                              </div>
+                                
+                                <li ng-click="onCustomizeStatusClicked()">
+                                    <a href="#" class="btn btn-info m-t-10" style="color:#fff;text-align:center;font-size: small;">
+                                        <xe-translate text-value="Customize Statuses"></xe-translate>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-table">
+            <div class="custom-table-body quot-scroll-content-manual"
+              ng-show="isShowNoQuotsFound && !isShowBackToAllQuotes && dataLoaded ">
+              <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                <xe-translate text-value="No Quotes found"></xe-translate>
+              </p>
+            </div>
+            <span ng-show="isQuoteList && dataLoaded && isShowBackToAllQuotes">
+              <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                <xe-translate text-value="No Quotes found"></xe-translate>
+                <a ng-click="selectedQuoteStatus('0')" class="cursor-pointer">
+                  <xe-translate text-value="Back to all quotes"></xe-translate>
+                </a>
+              </p>
+            </span>
+          </div>
+          <div class="row" ng-if="tabModel == 'unassignedQuotes'">
+            <div class="col-lg-12" ng-hide="dataLoaded">
+              <div class="product-wrap-height">
+                <div class="panel-body text-center">
+                  <img class="demo-mw-50 page-loader" src="assets/img/demo/progress.svg"
+                    alt="Progress" />
+                  <span class="loader-label">
+                    <xe-translate text-value="Loading Designs"></xe-translate>...
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tab 3 -->
+        <div class="m-h-400 tab-pane fade in" ng-if="tabModel == 'assignedQuotes' && isSuperAdmin">
+          <div class="quote-table m-t-10" ng-if="isQuoteList == false && dataLoaded">
+            <div class="custom-table" id="id_Table" ui-options="options">
+              <ul class="custom-table-head quot-head-content-manual">
+                <li class="checkCol" ng-if="isSuperAdmin">
+                  <div class="checkbox check-success customer-checkbox-heading">
+                    <input type="checkbox" value="allChecked.value" id="assignedQuotAllChecked"
+                      ng-model="allChecked.value" ng-change="allCheckedClicked(allChecked.value)" />
+                    <label for="assignedQuotAllChecked"></label>
+                  </div>
+                </li>
+                <li class="tColumns" ng-repeat="column in quotColumnList" ng-show="column.status == 1">
+                  <xe-translate text-value="{{column.label}}">
+                  </xe-translate>
+                </li>
+              </ul>
+              <div class="custom-table-body quot-scroll-content-manual">
+                <div class="custom-table-row" ng-repeat="quoteData in quotesData">
+                  <ul class="custom-table-content quot-body-content-manual">
+                    <li class="checkCol" ng-if="isSuperAdmin">
+                      <div class="checkbox check-success" style="margin: 0px">
+                        <input type="checkbox" value="{{ quoteData.quote_id }}" id="{{ quoteData.quote_id }}"
+                          ng-model="quoteCheck[$index]" ng-change="quoteSelected(quoteCheck[$index])" />
+                        <label for="{{ quoteData.quote_id }}">
+                        </label>
+                      </div>
+                    </li>
+                    <li class="tColumns cursor-pointer" ng-repeat="column in quotColumnList" ng-show="column.status == 1"
+                      ng-click="showQuoteDetails(quoteData.quote_id, quoteData.status,quoteData.prefix_quote_id, $parent.$parent.$index)"
+                      ng-if="column.column_name != 'status' && column.column_name != 'agent_name' "
+                      style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                      <span>
+                        {{ quoteData[column.column_name] }}
+                      </span>
+                    </li>
+                    <li class="tColumns" ng-repeat="column in quotColumnList" ng-show="column.status == 1"
+                      ng-if="column.column_name == 'agent_name'">
+                      <div class="dropdown" ng-click="resetAgentSearchField()">
+                        <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                          data-disabled="true">
+                          {{ quoteData[column.column_name] }}
+                          <span class="caret"></span></button>
+                        <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                          <li>
+                            <input type="text" class="form-control input-sm q-r-drop-search-field"
+                              ng-model="agentSearchData.value">
+                          </li>
+                          <li>
+                            <ul ng-class="{'quote-drop-down-scroll':agentsAccounts.length > 5}" style="list-style:none;padding:10px 0 0 0;margin:0;">
+                              <li ng-click="unassignAgent(quoteData)">
+                                <a href="" style="color:#333;">
+                                  <xe-translate text-value="Unassign">
+                                  </xe-translate>
+                                </a>
+                              </li>
+                              <li ng-repeat="agent in agentsAccounts | filter:agentSearchData.value"
+                                ng-click="onAgentSelected(quoteData, agent.id, agent.name)">
+                                <a href="" style="color:#333;">
+                                  {{ agent.name }} ({{agent.number_of_quote}})
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="tColumns" ng-repeat="column in quotColumnList"
+                      ng-show="column.status == 1 && column.column_name!='agent_name'"
+                      ng-if="column.column_name == 'status'">
+                      <div ng-if="column.column_name == 'status'">
+                        <!-- <select class="form-control select input-sm" ng-model="quoteData[column.column_name].name"
+                          ng-change="onQuoteStatusSelected(quoteData.quote_id, quoteData[column.column_name].name, $parent.$parent.$parent.$index, quoteData[column.column_name])">
+                          <option ng-repeat="status in statusLists">{{status.name}}</option>
+                        </select> -->
+                        <div class="q-r-status-drop dropdown" style="display:inline-block; width:100%;">
+                            <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" type="button" data-toggle="dropdown" data-disabled="true">
+                                <div>
+                                  <span class="statusColor q-r-status-color" style="background:{{quoteData[column.column_name].color_code}}">
+                                  </span>
+                                  <span style="padding-left: 20px;">
+                                    {{quoteData[column.column_name].name}} 
+                                  </span>
+                                </div>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" style="width: 100%">
+                              <div  ng-class="{'custom-scroll-menu-bar': statusLists.length > '10'}">  
+                                <li ng-repeat="status in statusLists" ng-click="onQuoteStatusClicked(quoteData.quote_id, status, 'quoteListingPage', $parent.$parent.$parent.$parent.$parent.$index)" ng-if="status.name != 'Customize Statuses'">
+                                  <a href="#" ng-class="quoteDetailsForm.quote_status_id == status.id ? 'active':'' " style="position:relative;padding-left:20px;" class="status-adjust">
+                                      {{status.name}}
+                                      <span class="statusColor" style="background:{{status.color_code}};"></span>
+                                  </a>
+                              </li>
+                              </div>
+                               
+                                <li ng-click="onCustomizeStatusClicked()">
+                                    <a href="#" class="btn btn-info m-t-10" style="color:#fff;text-align:center;font-size: small;">
+                                        <xe-translate text-value="Customize Statuses"></xe-translate>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-table">
+            <div class="custom-table-body quot-scroll-content-manual"
+              ng-show="isShowNoQuotsFound && !isShowBackToAllQuotes && dataLoaded ">
+              <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                <xe-translate text-value="No Quotes found"></xe-translate>
+              </p>
+            </div>
+            <span ng-show="isQuoteList && dataLoaded && isShowBackToAllQuotes">
+              <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                <xe-translate text-value="No Quotes found"></xe-translate>
+                <a ng-click="selectedQuoteStatus('0')" class="cursor-pointer">
+                  <xe-translate text-value="Back to all quotes"></xe-translate>
+                </a>
+              </p>
+            </span>
+          </div>
+          <div class="row" ng-if="tabModel == 'assignedQuotes'">
+            <div class="col-lg-12" ng-hide="dataLoaded">
+              <div class="product-wrap-height">
+                <div class="panel-body text-center">
+                  <img class="demo-mw-50 page-loader" src="assets/img/demo/progress.svg"
+                    alt="Progress" />
+                  <span class="loader-label">
+                    <xe-translate text-value="Loading Designs"></xe-translate>...
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tab 4 -->
+        <div class="m-h-400 tab-pane fade in" ng-if="tabModel == 'orderedQuotes'">
+          <div class="quote-table" ng-if="isQuoteList == false && dataLoaded">
+            <div class="custom-table" id="id_Table" ui-options="options">
+              <ul class="custom-table-head quot-head-content-manual">
+                <li class="checkCol" ng-if="isSuperAdmin">
+                  <div class="checkbox check-success customer-checkbox-heading">
+                    <input type="checkbox" value="allChecked.value" id="myQuotesAllChecked" ng-model="allChecked.value"
+                      ng-change="allCheckedClicked(allChecked.value)" />
+                    <label for="myQuotesAllChecked"></label>
+                  </div>
+                </li>
+                <li class="tColumns" ng-repeat="column in quotColumnList"
+                  ng-show="column.status == 1 && column.column_name!='agent_name'">
+                  <xe-translate text-value="{{column.label}}">
+                  </xe-translate>
+                </li>
+              </ul>
+              <div class="custom-table-body quot-scroll-content-manual">
+                <div class="custom-table-row" ng-repeat="quoteData in quotesData track by $index">
+                  <ul class="custom-table-content quot-body-content-manual">
+                    <li class="checkCol" ng-if="isSuperAdmin">
+                      <div class="checkbox check-success" style="margin: 0px">
+                        <input type="checkbox" value="{{ quoteData.quote_id }}" id="{{ quoteData.quote_id }}"
+                          ng-model="quoteCheck[$index]" ng-change="quoteSelected(quoteCheck[$index])" />
+                        <label for="{{ quoteData.quote_id }}">
+                        </label>
+                      </div>
+                    </li>
+                    <li class="tColumns cursor-pointer" ng-repeat="column in quotColumnList"
+                      ng-show="column.status == 1 && column.column_name!='agent_name'"
+                      ng-click="showQuoteDetails(quoteData.quote_id, quoteData.status, quoteData.prefix_quote_id, $parent.$parent.$index)"
+                      ng-if="column.column_name != 'status'">
+                      <span>
+                        {{ quoteData[column.column_name] }}
+                      </span>
+                    </li>
+                    <li class="tColumns" ng-repeat="column in quotColumnList"
+                      ng-show="column.status == 1 && column.column_name!='agent_name'"
+                      ng-if="column.column_name == 'status'">
+                      <div ng-if="column.column_name == 'status'">
+                       <!--  <select class="form-control select input-sm" ng-model="quoteData[column.column_name].name"
+                          ng-change="onQuoteStatusSelected(quoteData.quote_id, quoteData[column.column_name].name, $parent.$parent.$parent.$index, quoteData[column.column_name])">
+                          <option ng-repeat="status in statusLists">{{status.name}}</option>
+                        </select> -->
+                        <div class="q-r-status-drop dropdown" style="display:inline-block; width:100%;">
+                            <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" type="button" data-toggle="dropdown" data-disabled="true">
+                                <div>
+                                  <span class="statusColor q-r-status-color" style="background:{{quoteData[column.column_name].color_code}}">
+                                  </span>
+                                  <span style="padding-left: 20px;">
+                                    {{quoteData[column.column_name].name}} 
+                                  </span>
+                                </div>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" style="width: 100%">
+                              <div  ng-class="{'custom-scroll-menu-bar': statusLists.length > '10'}">  
+                              <li ng-repeat="status in statusLists" ng-click="onQuoteStatusClicked(quoteData.quote_id, status, 'quoteListingPage', $parent.$parent.$parent.$parent.$parent.$index)" ng-if="status.name != 'Customize Statuses'">
+                                <a href="#" ng-class="quoteDetailsForm.quote_status_id == status.id ? 'active':'' " style="position:relative;padding-left:20px;" class="status-adjust">
+                                    {{status.name}}
+                                    <span class="statusColor" style="background:{{status.color_code}};"></span>
+                                </a>
+                            </li>
+                              </div>
+                                
+                                <li ng-click="onCustomizeStatusClicked()">
+                                    <a href="#" class="btn btn-info m-t-10" style="color:#fff;text-align:center;">
+                                        <xe-translate text-value="Customize Statuses"></xe-translate>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-table">
+            <div class="custom-table-body quot-scroll-content-manual"
+              ng-show="isShowNoQuotsFound && !isShowBackToAllQuotes && dataLoaded ">
+              <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                <xe-translate text-value="No Quotes found"></xe-translate>
+              </p>
+            </div>
+            <span ng-show="isQuoteList && dataLoaded && isShowBackToAllQuotes">
+              <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                <xe-translate text-value="No Quotes found"></xe-translate>
+                <a ng-click="selectedQuoteStatus('0')" class="cursor-pointer">
+                  <xe-translate text-value="Back to all quotes"></xe-translate>
+                </a>
+              </p>
+            </span>
+          </div>
+          <div class="row" ng-if="tabModel == 'myQuotes'">
+            <div class="col-lg-12" ng-hide="dataLoaded">
+              <div class="product-wrap-height">
+                <div class="panel-body text-center">
+                  <img class="demo-mw-50 page-loader" src="assets/img/demo/progress.svg"
+                    alt="Progress" />
+                  <span class="loader-label">
+                    <xe-translate text-value="Loading Designs"></xe-translate>...
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tab 5 -->
+        <div class="m-h-400 tab-pane fade in p-t-20 p-b-20" ng-if="tabModel == 'addTask'">
+          {{newMessage}}<br>{{message}}
+        </div>
+        <div class="text-center b-t-none m-t-20" ng-show="isLoadMore && dataLoaded">
+          <button type="button" class="btn btn-default btn-sm btn-cons" ng-click="loadMore()"
+            ng-disabled="isLoadMorePreloader">
+            <xe-translate text-value="Load More"></xe-translate>
+          </button>
+          <img class="demo-mw-30 " src="assets/img/progress/progress-circle-master.svg"
+            alt="Progress" ng-show="isLoadMorePreloader" />
+        </div>
+      </div>
+      <div class="custom-table" ng-show="totalQuoteCount == 0 && dataLoaded">
+          <div class="custom-table-body quot-scroll-content-manual">
+              <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                  <xe-translate text-value="No Quotes found"></xe-translate>
+              </p>
+          </div>
+      </div>
+    </div>
+    <div class="clearfix m-t-18" ng-show="kanbanViewActiveButton">
+      <div class="custom-table" ng-show="!dndList.length && !kanbanViewPreLoader || !kanabanQuoteStatus">
+          <div class="custom-table-body quot-scroll-content-manual">
+              <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                  <xe-translate text-value="No Quotes found"></xe-translate>
+              </p>
+          </div>
+      </div>    
+      <div class="simpleDemo app" ng-show="dndList.length && kanabanQuoteStatus">
+            <div class="hs">
+                <div ng-repeat="list in dndList">
+                    <div class="panel panel-default">
+                        <div class="panel-heading panel-heading-kanabanview" style="background: {{list.status_color_code}};">
+                            <h3 class="panel-title">{{list.status_name}}</h3>
+                        </div>
+                        <div style="overflow-y: auto;/* height: 100%*/;max-height:400px" id="controllScroll">
+                            <div class="panel-body">
+                                <!-- The dnd-list directive allows to drop elements into it. The dropped data will be added to the referenced list -->
+                                <ul dnd-list="list.quote_details" class="ng-scope" dnd-drop="dropCallback(index, item, external, type,list)">
+                                    <li class="kanbanviewList" style="border-top: 6px solid {{list.status_color_code}};border-radius: 5px !important;" ng-repeat="quotes in list.quote_details" dnd-draggable="quotes" dnd-moved="list.quote_details.splice($index, 1)" dnd-effect-allowed="move" dnd-selected="models.selected = quotes.quote_id" ng-class="{'selected': models.selected == quotes.quote_id}"  dnd-dragstart="getCurrentIndex(list)" dnd-dragend="getUpdateIndex(list)" draggable="true">
+                                        <!--  <a class="close" ng-click="removeFromList(list, $index)">�</a>
+                                              <a class="close" ng-click="cloneItem(list, $index)">=</a> showQuoteDetails(quotes.quote_id,list.status_id,quotes.quote_id)-->
+                                        <div class="row">
+                                            <div class="text-left col-md-5" style="font-size: 10px;cursor: pointer;" ng-click="showQuoteDetails(quotes.quote_id,list.status_id,quotes.quote_id)" >
+                                                {{quotes.production_due_date}}
+                                            </div>
+                                            <div class="col-md-7 text-right">
+                                               
+                                           <!--  <div class="btn-group dropright dropdown">
+                                               <button class="btn btn-link " title="Send"><i class="fa fa-send"></i></button>
+                                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Add labels">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+
+                                                <ul class="dropdown-menu modified scrollable-menu" role="menu" style="width: 222px">
+                                                    <li ng-class="labelDisabeled[$index] ? 'kanban-disabeled' : ''" class="dropdown-item kanaban-drop" ng-repeat="labelDatas in labelList" ng-mouseenter="changeColor($index,labelDatas,true)" ng-mouseleave="changeColor($index,labelDatas,false)" ng-style="selectedColor[$index]" style="background-color: {{labelDatas.color_code}};color:white !important;margin:  5px;height: 33px;opacity: 0.8" ng-click="changeQuotelabel($index,checkBoxChecked[$index],labelDatas)">
+                                                        <div style="background-color: {{labelDatas.color_code}};cursor: hand;">
+                                                            <div class="col-md-9">
+                                                                {{labelDatas.label_name}}
+                                                            </div>
+                                                            <div class="col-md-3 text-right">
+                                                                <i ng-show="checkBoxChecked[$index]" class="fa fa-check text-right" style="font-size: 12px"></i>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                 
+                                                 
+                                            </div> -->
+                                            <button class="btn btn-link" ng-click="showQuoteDetails(quotes.quote_id,list.status_id,quotes.quote_id)" title="View details"><i class="fa fa-navicon"></i></button>
+                                            <div class="btn-group dropdown ">
+                                              <button type="button" class="btn btn-link btn-sm dropdown-toggle checkBtn"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Add labels" ng-click="showLabelDropDown(quotes,$event)">
+                                                  <i class="fa fa-plus"></i>
+                                              </button>
+                                              <ul  class="dropdown-menu modified scrollable-menu" role="menu" style="width: 222px;min-width: max-content;padding: 0px;overflow: hidden;" >
+                                               
+                                                   <li class="remove_kanaban_css" style="height: 40px; color:black"><h5 class="text-center" style="margin: 5px;"><span>Labels</span><button class="btn btn-sm btn-link pull-right" ng-click="removeBtn()" style="    padding: 0px;"><i class="fa fa-times"></i></button></h5>  <hr style="height: 3px;color:#333;margin: 0px"> </li>
+                                                  
+                                                  
+                                                   <div style="padding: 10px;" ng-class="{'scrollable-menu-ul': labelList.length >= '6'}">
+                                                      <li ng-class="labelDisabeled[$index] ? 'kanban-disabeled' : ''" class="dropdown-item kanaban-drop" ng-style="sideColor[$index]" ng-repeat="labelDatas in labelList" ng-mouseenter="changeColor($index,labelDatas,true)" ng-mouseleave="changeColor($index,labelDatas,false)" ng-style="selectedColor[$index]" style="color:white !important;margin:0px;padding:0px;opacity: 0.8;border: 0px" ng-click="changeQuotelabel($index,checkBoxChecked[$index],labelDatas)">
+                                                        
+                                                          <button class="btn btn-default btn-sm btn-block"  style="background-color: {{labelDatas.color_code}};color:white;opacity: 0.8 !important;    text-align: justify;">{{labelDatas.label_name}}<i ng-show="checkBoxChecked[$index]" class="fa fa-check pull-right" style="font-size: 12px;margin-top: 3px;"></i></button>
+                                                      </li>
+                                                  </div>
+                                                  <li  class="dropdown-item kanaban-drop" style="color:white !important;margin:0px;border: 0px" ng-click="addLables()">
+                                                        
+                                                    <button class="btn btn-info btn-sm btn-block" ng-click="addLablesFromQuote()"><i class="fa fa-plus" style="font-size: 12px"></i>
+                                                      <xe-translate text-value="label control"></xe-translate>
+                                                    </button>
+                                                </li>
+                                                  
+                                              </ul>
+                                          </div>  
+                                          </div>
+                                        </div>
+                                        <div style="padding: 6px 0px 10px 0px;">
+                                            <span ng-repeat="labelData in quotes.label_list" class="badge badge-info" style="background-color: {{labelData.label_color_code}};margin: 2px;text-transform: capitalize;">{{labelData.label_name}}</span>
+                                        </div>
+                                        <p style="padding-top: 6px;cursor: pointer;" ng-click="showQuoteDetails(quotes.quote_id,list.status_id,quotes.quote_id)" >
+                                            <b style="font-weight: bolder;">{{quotes.subject}}</b>
+                                        </p>
+                                        <div class="col-md-12 " style="padding: 12px 0px 0px 0px;font-size: 12px;cursor: pointer;" ng-click="showQuoteDetails(quotes.quote_id,list.status_id,quotes.quote_id)" >
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            {{quotes.customer_name}}
+                                        </div>
+                                       
+                                        <!-- <edit-in-place value="quotes.status_name"></edit-in-place> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+    <div class="preloader-trans" ng-show="kanbanViewPreLoader">
+        <div class="page-loader">
+            <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+            <span>
+                <xe-translate text-value="Please wait"></xe-translate>...
+            </span>
+        </div>
+    </div>
+  </div>
+  <ng-include src="'modules/quotes/views/partials/quotedetailsview.html'" ng-show="quoteDetailsShow">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/addquoteform.html'" ng-hide="quoteFormShow">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/createArtwork.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/quoteNotificationModal.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/quoteAssignmentModal.html'" ng-show="isOpenQuoteAssignModal">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/addShipAddressModal.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/addCustomStatus.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/deleteQuoteStatus.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/createArtworkConfirm.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/makepurchaseorder.html'" ng-show="createpurchaseorder">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/addPaymentData.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/addExpensesData.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/quoteImageViewModal.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/artworkHistoryImageViewModal.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/createArtworkJobModal.html'">
+  </ng-include>
+  <ng-include src="'modules/quotes/views/partials/createPurchaseOrderModal.html'">
+  </ng-include>
+</div>

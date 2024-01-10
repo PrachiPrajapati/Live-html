@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap');
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+* 						{ margin: 0px; padding: 0px; outline: none;}
+body 					{ font-family: 'Lato', sans-serif; font-size: 16px; line-height: 24px; font-display: swap;}
+.clear 					{ clear:both;}
+img 					{ border: 0px; max-width: 100%;}
+/* ul,ol 					{ list-style: none;} */
+a 						{ text-decoration: none; outline: none; color: inherit; transition: all 0.3s ease-in-out;}
+a:focus, a:active, a:visited, a:hover	{ text-decoration: none; outline: none; }
+/* a:hover				{  } */
+h1						{ margin: 0 0 40px; font-size: 46px; line-height: 56px; color: #2D0E43; font-weight: 900; text-align: center;}
+h2 						{ margin: 0 0 16px 0; font-size: 54px; line-height: 60px; color: #2D0E43; font-weight: 300; text-align: center;}
+h2 span 				{ font-weight: 900; }
+h3 						{ margin: 30px 0 12px; font-size: 32px; line-height: 42px; color: #2D0E43; font-weight: 900; }
+.h4,
+h4 						{ margin: 0 0 15px; font-size: 32px; line-height: 40px; color: #511966; font-weight: 900; text-transform: uppercase; }
+h4 span 				{ font-weight: 300;}
+h5 						{ margin: 0 0 15px; font-size: 20px; line-height: 30px; color: #2D0E43; }
+p 						{ margin-bottom: 14px;}
+button 					{ transition: all 0.3s ease-in-out; }
+.no-margin 				{ margin: 0;}
+hr 						{ margin: 40px 0 12px;} 
+/******* Common Element CSS End *********/
+/* -------- title style ------- */
+.common-title 			{ margin-bottom: 40px; text-align: center; }
+.white-color 			{ color: #fff;}
+
+/* -------- Button style ------- */
+
+/******* Header Section CSS Start *******/
+/******* Header Section CSS End *********/
+
+/******* Banner section CSS Start *******/
+/******* Banner section CSS End *********/
+
+/******* Middle section CSS Start ******/
+.common-section 				{ padding: 46px 0px;}
+
+/* -------- Home page ------- */
+figure,
+img 	{ margin: 0px auto 30px; display: block; max-width: 100%; height: auto; }
+figure img { margin-bottom: 0;}
+
+/****** Footer section CSS End *******/
+
+/***** responsive css Start ******/
+@media (min-width:1500px) {
+	.container 			{ max-width:1470px }
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+	h1						{ margin: 0 0 30px; font-size: 36px; line-height: 46px; }
+	h2 						{ margin: 0 0 14px 0; font-size: 44px; line-height: 50px;  }
+	h3						{ margin: 30px 0 12px; font-size: 30px; line-height: 40px; }
+	h4, .h4					{ margin: 0 0 15px; font-size: 24px; line-height: 32px; }
+	.common-section 		{ padding: 36px 0px;}
+}
+@media (max-width: 1199px) {
+	.common-section 		{ padding: 36px 0px;}
+	h5 						{ margin: 0 0 10px; font-size: 18px; line-height: 28px; }
+}	
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	h1 						{ margin: 0 0 32px; font-size: 32px; line-height: 42px; }
+	h2 						{ margin: 0 0 14px 0; font-size: 40px; line-height: 48px;  }
+	h3						{ margin: 30px 0 12px; font-size: 26px; line-height: 36px; }
+	h4, .h4 				{ margin: 0 0 15px; font-size: 22px; line-height: 30px; }
+	
+}
+
+@media (max-width: 991px) {
+	h4, .h4 				{ margin: 0 0 15px; font-size: 17px; line-height: 24px; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	body 					{ font-size: 15px; line-height: 24px;}
+	h1 						{ margin: 0 0 30px; font-size: 24px; line-height: 32px; }
+	h2 						{ margin: 0 0 8px 0; font-size: 30px; line-height: 38px;  }
+	h3						{ margin: 30px 0 12px; font-size: 22px; line-height: 30px; }
+	.common-section 		{ padding: 30px 0px;}
+}
+
+@media (max-width: 767px) {
+	body 					{ font-size: 15px; line-height: 24px;}
+	h1 						{ margin: 0 0 20px; font-size: 20px; line-height: 26px; }
+	h2 						{ margin: 0 0 8px 0; font-size: 18px; line-height: 32px;  }
+	h3						{ margin: 20px 0 12px; font-size: 17px; line-height: 24px; }
+	h5 						{ margin: 0 0 10px; font-size: 16px; line-height: 22px; }
+	hr 						{ margin: 30px 0 12px; }
+	p 						{ margin-bottom: 12px;}
+	.common-section 		{ padding: 20px 0px;}
+}
+
+@media (max-width: 575px) {
+	
+}

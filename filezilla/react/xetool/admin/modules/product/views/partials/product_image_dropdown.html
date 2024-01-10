@@ -1,0 +1,75 @@
+<div class="modal fade stick-up" id="productImagePopup" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="select-product-image-one" style="padding: 30px;">
+                <div class="section-heading">
+                    <div class="title">
+                        <h6>
+                            <xe-translate text-value="Select Product Image">
+                            </xe-translate>
+                        </h6>
+                    </div>
+                    <div class="admin-custom-search">
+                        <input type="text" class="form-control input-sm" placeholder="Search here..." ng-model="search">
+                        <i class="fa fa-search icon"></i>
+                    </div>
+                    <button type="button" class="close custom-modal-close" data-dismiss="modal" aria-hidden="true"
+                        style="    top: -20px;
+                    right: -23px;">
+                        <i class="pg-close"></i>
+                    </button>
+                </div>
+                <div style="min-height: 300px; max-height: 300px; overflow-y:auto; "
+                    ng-show="productTemplateDetails.length > 0 && !isApplyTemplateLoader">
+                    <div class="content-heading">
+                        <div class="p-face-name">
+                            <xe-translate text-value="Product face name">
+                            </xe-translate>
+                        </div>
+                        <div class="p-face-images">
+                            <xe-translate text-value="Product face images">
+                            </xe-translate>
+                        </div>
+                        <div class="p-face-action">
+                            <xe-translate text-value="Action">
+                            </xe-translate>
+                        </div>
+                    </div>
+                    <div class="section-content repeat" ng-repeat="template in productTemplateDetails | filter:search"
+                    ng-if="template.name !='No Template'">
+                        <div class="pfn-tct">{{ template.name }}</div>
+                        <div class="pfi-img">
+                            <div class="pfi-thumb" ng-repeat="image in template.temp_side_list">
+                                <img ng-src="{{ image.url }}">
+                            </div>
+                        </div>
+                        <div class="pfa-btn">
+                            <button class="btn btn-success btn-sm product-i-custom-button"
+                                ng-if="selectedTemplateId == template.product_temp_id">
+                                <xe-translate text-value="Applied">
+                                </xe-translate>
+                            </button>
+                            <button class="btn btn-blue btn-sm hover-show product-i-custom-button"
+                                ng-if="selectedTemplateId != template.product_temp_id"
+                                ng-click="assignProductTemplate(template.product_temp_id, true)">
+                                <xe-translate text-value="Apply">
+                                </xe-translate>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div ng-show="productTemplateDetails.length == 0 || isApplyTemplateLoader"
+                    style="min-height: 300px; max-height: 300px;display: flex;justify-content: center;align-items: center; ">
+                    <img class="image-responsive-height demo-mw-50 page-loader"
+                        src="assets/img/progress/progress-circle-master.svg" alt="Progress" />
+                    <span>
+                        <xe-translate text-value="Loading">
+                        </xe-translate>
+                        ...
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

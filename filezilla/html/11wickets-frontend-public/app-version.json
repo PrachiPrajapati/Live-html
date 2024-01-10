@@ -1,0 +1,8 @@
+{
+        "type": "success",
+        "android-version": 10029,
+        "android-force-version": 10027,
+        "ios-version": "1.0.8",
+        "ios-force-version": "1.0.7",
+        "inAppUpdate": true
+}

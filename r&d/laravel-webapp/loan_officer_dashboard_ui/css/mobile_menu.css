@@ -1,0 +1,142 @@
+.integation_dropdown .form-group.has-search {
+  z-index: 0;
+  position: absolute;
+  width: 90%;
+}
+
+nav.left_top_menu {
+  padding: 10px;
+  position: relative;
+  background: transparent;
+  z-index: 1;
+}
+
+nav.left_top_menu::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.left_top_menu aside {
+  left: -320px;
+}
+
+aside form.form-inline.my-2.my-lg-0 {
+  display: inline-grid;
+  flex-flow: column;
+}
+
+aside .form-inline.my-2.my-lg-0 img.m_r_15 {
+  margin-left: 10px;
+}
+
+aside .notification_dot{
+  position: relative;
+  right: 0;
+  top: -20px;
+  left: 22px;
+}
+aside .img-fluid.width_36 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.top_menu{
+  padding: 0!important;
+  margin-left: -5px;
+}
+aside {
+  position: absolute;
+  width: 320px;
+  height: 100vh;
+  background: #fff;
+  left: -335px;
+  top: 46px;
+  bottom: 0;
+  box-sizing: border-box;
+  padding-top: 0;
+  transition: all 0.4s ease;
+}
+aside.active {
+  left: -15px;
+  padding: 15px;
+  position: absolute;
+  z-index: 999;
+}
+.left_top_menu aside.active_menu {
+  left: 0;
+  padding: 15px;
+}
+li.nav-item {
+  list-style-type: none;
+}
+
+.toggle-wrap {
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  float: left;
+
+  /*disable selection*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.toggle-bar,
+.toggle-bar::before,
+.toggle-bar::after,
+.toggle-wrap.active_menu .toggle-bar,
+.toggle-wrap.active_menu .toggle-bar::before,
+.toggle-wrap.active_menu .toggle-bar::after,
+.toggle-wrap.active .toggle-bar,
+.toggle-wrap.active .toggle-bar::before,
+.toggle-wrap.active .toggle-bar::after {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.toggle-bar {
+  width: 38px;
+  margin: 10px 0;
+  position: relative;
+  border-top: 6px solid #303030;
+  display: block;
+}
+.toggle-bar::before,
+.toggle-bar::after {
+  content: "";
+  display: block;
+  background: #303030;
+  height: 6px;
+  width: 38px;
+  position: absolute;
+  top: -16px;
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -ms-transform-origin: 13%;
+  -webkit-transform-origin: 13%;
+  transform-origin: 13%;
+}
+.toggle-bar::after {
+  top: 4px;
+}
+.toggle-wrap.active_menu .toggle-bar,
+.toggle-wrap.active .toggle-bar {
+  border-top: 6px solid transparent;
+}
+.toggle-wrap.active_menu .toggle-bar::before,
+.toggle-wrap.active .toggle-bar::before {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.toggle-wrap.active_menu .toggle-bar::after,
+.toggle-wrap.active .toggle-bar::after {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

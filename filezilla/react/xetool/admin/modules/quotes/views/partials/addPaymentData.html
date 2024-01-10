@@ -1,0 +1,152 @@
+<div class="modal fade stick-up" id="addPaymentDataModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left">
+                 <div class="row" id="shipAddModalNotification">
+                    <div class="col-sm-6 text-left">
+                        <h5>
+                            <span class="semi-bold" ng-if="paymentData.id == ''">
+                               <xe-translate text-value="Add Payment">
+                               </xe-translate>
+                            </span>
+                             <span class="semi-bold" ng-if="paymentData.id != ''">
+                               <xe-translate text-value="Update Payment">
+                               </xe-translate>
+                            </span>
+                        </h5>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="m-t-10">
+                            <button type="button" class="close custom-modal-close" data-dismiss="modal" aria-hidden="true">
+                                <i class="pg-close fs-14"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body" id="addPaymentDataModalMsg">
+                  <div class="col-sm-6">
+                      <div class="form-group form-group-default required" aria-required="true">
+                          <label>
+                            <xe-translate text-value = "Amount">
+                            </xe-translate>
+                          </label>
+                          <input type="text" min="0" class="form-control" ng-model="paymentData.amount" placeholder="Amount" ng-blur="payRoundToTwoFraction()" money required>
+                      </div>
+                  </div>
+                  <div class="col-sm-6">
+                      <div class="form-group form-group-default input-group">
+                        <div class="form-input-group">
+                          <label>
+                            <xe-translate text-value="Transaction Date">
+                            </xe-translate>
+                          </label>
+                          
+                          <input readonly="" style=" z-index: 100000;" type="text" ui-date="dateOptions" class="form-control" ui-date-format id="payment_model_date"  ng-model="paymentData.transactionDate" onkeydown="return false">
+                        </div>
+                        <div class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-12">
+                      <div class="q-r-country-container">
+                        <span class="q-r-dropdown-star">*</span>
+                        <label class="control-label q-r-dropdown-btn-label">
+                          <xe-translate text-value="Payment Mode">
+                          </xe-translate>
+                        </label>
+                        <div class="btn-group" style="width: 100%; display: flex;">
+                          <button type="button" class="btn btn-default text-ellipsis"  data-toggle="dropdown" style="width: 100%; font-size: 12px; text-align: left;padding-top: 35px; background-color: transparent;">
+                              <span>
+                                {{ paymentData.category.name }}
+                              </span>
+                          </button>
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                              <span class="caret">
+                              </span>
+                              <span class="sr-only">
+                                  Toggle Dropdown
+                              </span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" style="width:100%;max-height:250px;overflow-y:auto;" ng-class="{'quote-drop-down-scroll':paymentModeList.length > 5}">
+                              <!-- <li ng-click="onPaymentModeSelected('Select')">
+                                  <a href="">
+                                    Select  
+                                  </a>
+                              </li> -->
+                              <li ng-repeat="paymentMode in paymentModeList" ng-click="onPaymentModeSelected(paymentMode)">
+                                  <a href="">
+                                    {{ paymentMode.name }}  
+                                  </a>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-12 m-t-10">
+                      <div class="form-group form-group-default required">
+                          <label  class="control-label">
+                            <xe-translate text-value="Description">
+                            </xe-translate>
+                          </label>
+                          <input type="text" class="form-control"  placeholder="Description" ng-model="paymentData.description" required>
+                      </div>
+                  </div>
+                  <div class="col-sm-12" style="margin-bottom:10px">
+                        <div class="q-r-status-drop dropdown" style="display:inline-block;width: 100%">
+                          <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" type="button" data-toggle="dropdown" data-disabled="true">
+                            <div>
+                              <span class="statusColor q-r-status-color" style="background:{{paymentData.colorCode}}">
+                              </span>
+                              <span style="padding-left: 20px;">
+                                  {{paymentData.selectedStatus}} 
+                              </span>
+                            </div>
+                              
+                              <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" style="width: 100%">
+                            <div  ng-class="{'custom-scroll-menu-bar': paymentStatusList.length > '10'}">  
+                                <li ng-repeat="status in paymentStatusList" ng-click="onPaymentStatusSelected(status)" ng-if="status.name != 'Customize Statuses'">
+                                    <a class="status-adjust" href="#" style="position:relative;padding-left:20px;">
+                                        {{status.name}}
+                                        <span class="statusColor" style="background:{{status.color_code}};"></span>
+                                    </a>
+                                </li>
+                            </div>
+                          </ul>
+                      </div>
+                      
+                  </div>
+                <div class="m-t-20 clearfix">
+                    <button type="button" class="btn btn-danger btn-sm pull-right m-l-5" ng-click="cancelPaymentData()">
+                        <span>
+                            <xe-translate text-value="Cancel">
+                            </xe-translate>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm pull-right" ng-click="addPaymentData()" ng-if="paymentData.id == ''">
+                        <span>
+                            <xe-translate text-value="Save">
+                            </xe-translate>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm pull-right" ng-click="updatePaymentData()" ng-if="paymentData.id != ''">
+                        <span>
+                            <xe-translate text-value="Update">
+                            </xe-translate>
+                        </span>
+                    </button>
+                </div>
+                <div class="preloader-trans" style="z-index: 999999; padding-left: 0px" ng-show="addPayExpPreloader">
+                    <div class="page-loader">
+                        <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                        <span><xe-translate text-value="Please wait"></xe-translate>...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

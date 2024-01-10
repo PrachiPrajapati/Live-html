@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="mail" transform="translate(2.000000, 6.000000)" stroke="#3246D3" stroke-width="2">
+            <path d="M1.6000008,2.84217094e-14 L14.3999992,2.84217094e-14 C15.2799996,2.84217094e-14 16,0.731248172 16,1.62499594 L16,11.3750041 C16,12.2687518 15.2799996,13 14.3999992,13 L1.6000008,13 C0.72000036,13 0,12.2687518 0,11.3750041 L0,1.62499594 C0,0.731248172 0.72000036,2.84217094e-14 1.6000008,2.84217094e-14 Z" id="Path"></path>
+            <polyline id="Path" points="16 2 7.999996 8 0 2"></polyline>
+        </g>
+    </g>
+</svg>

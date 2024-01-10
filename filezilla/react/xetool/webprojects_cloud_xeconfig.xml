@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config_detail>
+	<url_detail>
+		<appname>react</appname>
+		<base_url>http://webprojects.cloud/react/</base_url>
+		<admin_url>admin</admin_url>
+	</url_detail>
+	<SOAP_detail>
+		<apiuser/>
+		<apipass/>
+	</SOAP_detail>
+	<designer_tool_dbconnection>
+		<host>localhost</host>
+		<dbuser>xetool</dbuser>
+		<dbpass>fhSrlZu0AjX8LerA</dbpass>
+		<dbname>xetool</dbname>
+	</designer_tool_dbconnection>
+	<store_attribute>
+		<xe_color/>
+		<xe_size/>
+		<inkXE/>
+	</store_attribute>
+	<store_details>
+		<store_type>others</store_type>
+		<store_version>1.X</store_version>
+	</store_details>
+</config_detail>

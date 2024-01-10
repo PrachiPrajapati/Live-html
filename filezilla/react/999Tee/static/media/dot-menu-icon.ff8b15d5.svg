@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4px" height="16px" viewBox="0 0 4 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Combined Shape</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="11.1_Add-Products" transform="translate(-1198.000000, -1681.000000)" fill="#464546">
+            <g id="Group-8-Copy-4" transform="translate(373.000000, 1553.000000)">
+                <g id="Group-18" transform="translate(807.000000, 116.000000)">
+                    <path d="M20,24 C21.1045695,24 22,24.8954305 22,26 C22,27.1045695 21.1045695,28 20,28 C18.8954305,28 18,27.1045695 18,26 C18,24.8954305 18.8954305,24 20,24 Z M20,18 C21.1045695,18 22,18.8954305 22,20 C22,21.1045695 21.1045695,22 20,22 C18.8954305,22 18,21.1045695 18,20 C18,18.8954305 18.8954305,18 20,18 Z M20,12 C21.1045695,12 22,12.8954305 22,14 C22,15.1045695 21.1045695,16 20,16 C18.8954305,16 18,15.1045695 18,14 C18,12.8954305 18.8954305,12 20,12 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

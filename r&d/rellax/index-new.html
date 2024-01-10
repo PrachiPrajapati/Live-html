@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>:: Rellax js Demo ::</title>
+    <link type="text/css" href="css/bootstrap.css" rel="stylesheet" />
+    <link type="text/css" href="css/slick.css" rel="stylesheet" />
+    <link type="text/css" href="css/slick-theme.css" rel="stylesheet" />
+    <!--Main Js Included-->
+    <script src="js/lib/jquery.js" type="text/javascript"></script>
+    <script src="js/parallax.js" type="text/javascript"></script>
+    <style type="text/css">
+        :focus { outline: none;}
+        body { overflow: auto !important; overflow-x: hidden !important;height: 2500px;}
+        .main-banner { position: relative; overflow: hidden;}
+        .main-banner:after { position: absolute; bottom: 0; left: 0; display: block; width: 100%; height: 0; display: block; content: ""; -moz-box-shadow: 0 0px 50px 100px #ffffff; -webkit-box-shadow: 0 0px 50px 100px #ffffff; box-shadow: 0 0px 50px 100px #ffffff; z-index: 100;}
+        .slide-box > span { overflow: hidden; display: block;}
+        .slide-box > span > * { transform: translateY(100%); transition-duration: 1s; transition-delay: 0.5s; -webkit-transform: translateY(100%); -webkit-transition-duration: 1s; -webkit-transition-delay: 0.5s; -moz-transform: translateY(100%); -moz-transition-duration: 1s; -moz-transition-delay: 0.5s;}
+        .slick-current > .slide-box > span > * { transform: translateY(0);}
+        .banner-counter { position: absolute; top: 50%; right: 0; transform: translateY(-50%); display: block; z-index: 10000; display: inline-block; width: 225px; overflow: hidden;}
+        .banner-counter p { padding: 10px; padding-left: 0px; margin: 0px; font-size: 20px; line-height: 24px; color: rgba(0, 0, 0, 0.4); transform: scale(0.80); transform-origin: right center; transition-duration: 0.5s; cursor: pointer;}
+        .banner-counter p span { position: relative;}
+        .banner-counter p span:after { position: absolute; left: 100%; top: calc(50% - 1px); height: 2px; background: rgba(0, 0, 0, 0.1); display: block; width: 400px; content: ""; display: block; border-radius: 5px 0px 0px 5px;z-index: -1; transition-duration: 0.8s;}
+        .banner-counter .slick-current p { transform: scale(1); color: #1C2430; text-shadow: 2px 0px 0px #47EBC6;}
+        .banner-counter .slick-current p span:after { left: 15px; background: #47EBC6;}
+        .testing-slider-main .slick-slide { min-height: 100vh; display: flex; flex-direction: column; justify-content: center;}
+        .grid-line-container { position: fixed; top: 0; left: 0; width: 100%; background: -moz-linear-gradient(45deg,  rgba(234,234,234,0) 0%, rgba(234,234,234,0.81) 43%, rgba(71,235,198,0.92) 49%, rgba(4,135,255,1) 53%, rgba(71,235,198,0.91) 57%, rgba(234,234,234,0.78) 63%, rgba(234,234,234,0) 100%); background: -webkit-linear-gradient(45deg,  rgba(234,234,234,0) 0%,rgba(234,234,234,0.81) 43%,rgba(71,235,198,0.92) 49%,rgba(4,135,255,1) 53%,rgba(71,235,198,0.91) 57%,rgba(234,234,234,0.78) 63%,rgba(234,234,234,0) 100%); background: linear-gradient(45deg,  rgba(234,234,234,0) 0%,rgba(234,234,234,0.81) 43%,rgba(71,235,198,0.92) 49%,rgba(4,135,255,1) 53%,rgba(71,235,198,0.91) 57%,rgba(234,234,234,0.78) 63%,rgba(234,234,234,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00eaeaea', endColorstr='#00eaeaea',GradientType=1 ); background-size: 350% 150%; -webkit-animation: Gradient 15s linear infinite; -moz-animation: Gradient 15s linear infinite; animation: Gradient 15s linear infinite; }
+        @-webkit-keyframes Gradient {
+            0% {background-position: 0% 0% }
+            50% {background-position: 100% 50% } 
+            100% {background-position: 0% 0% }
+        }
+
+        @-moz-keyframes Gradient {
+            0% {background-position: 0% 0% }
+            50% {background-position: 100% 50% }
+            100% {background-position: 0% 0% }
+        }
+
+        @keyframes Gradient {
+            0% {background-position: 0% 0% }
+            50% {background-position: 100% 50% }
+            100% {background-position: 0% 0% }
+        }
+        .grid-line { height: 100vh; border-left: 1px solid transparent; position: relative;}
+        .grid-line:after { width:100%; height: 100%; position: absolute; top: 0; left: 0; content: ""; display: block; background: #ffffff;}
+        .banner-desc { height: calc(100vh); align-items: center; display: flex; position: relative;}
+        .banner-desc h1 { color: #1C2430; font-size: 160px; line-height: 160px; font-weight: bold;}
+        .banner-desc h6 { text-transform: none; padding: 24px 0 24px; color: #fff; max-width: 550px; font-weight: 300; color: #1c2530; font-family: 'Poppins', sans-serif; font-size: 20px; line-height: 30px;} 
+        .banner-desc a { font-size: 20px; line-height: 30px; text-transform: capitalize; font-weight: 500; letter-spacing: 1px; position: relative; color: #1C2430; overflow: hidden; display: inline-block; transition-duration: 0.5s;}
+        .banner-desc a:after { position: absolute; top: 0; left: -200px; width: 200px; height: 100%; display: block; background: #0487FF; content: "";transition-duration: 0.3s; transition-timing-function: ease-in-out;}
+        .banner-desc a:hover { color: #0487FF; text-decoration: none;}
+        .banner-desc a:hover:after { left: 100%; }
+        .obj { position: absolute; display: block; overflow: visible;}
+        .obj1 {top: 80%; left: 5%;}
+        .obj2 {top: 10%; left: 5%;}
+        .obj3 {top: 5%; left: 14%;}
+        .obj4 {top: 45%; left: 2%;}
+        .obj5 {top: 55%; left: 40%;}
+        .obj6 {top: 5%; left: 58%;}
+        .obj7 {top: 20%; left: 52%;}
+        .obj8 {top: 80%; left: 75%;}
+        .obj9 {top: 65%; left: 90%;}
+        .obj10 {top: 10%; left: 80%;}
+        .obj img { backface-visibility: visible !important;}
+    </style>
+</head>
+<body style="overflow: auto; overflow-x: hidden;">
+    <section class="main-banner" id="object-group">
+        <div class="grid-line-container">
+            <div class="container-fluid">
+                <div class="row"><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div><div class="col-sm-1 grid-line"></div></div>
+            </div>
+        </div>
+        <span class="obj obj3 rellax" data-rellax-speed="0.5"><img class="layer" data-depth="0.05" src="images/t3.svg" /></span>
+        <span class="obj obj4 rellax" data-rellax-speed="1.5"><img class="layer" data-depth="0.15" src="images/t4.svg" /></span>
+        <span class="obj obj7 rellax" data-rellax-speed="2"><img class="layer" data-depth="0.2" src="images/t7.svg" /></span>
+        <span class="obj obj8 rellax" data-rellax-speed="2"><img class="layer" data-depth="0.2" src="images/t8.svg" /></span>
+        <span class="obj obj9 rellax" data-rellax-speed="1"><img class="layer" data-depth="0.1" src="images/t9.svg" /></span>
+        <div class="banner-desc">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="row">
+                    <div class="testing-slider-main">
+                        <div>
+                            <div class="slide-box">
+                                <span><h1>UI/UX Design</h1></span>
+                                <span><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h6></span>
+                                <span><a href="#">Read More</a></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide-box">
+                                <span><h1>Web Development</h1></span>
+                                <span><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h6></span>
+                                <span><a href="#">Read More</a></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide-box">
+                                <span><h1>App Development</h1></span>
+                                <span><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h6></span>
+                                <span><a href="#">Read More</a></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide-box">
+                                <span><h1>Game Development</h1></span>
+                                <span><h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h6></span>
+                                <span><a href="#">Read More</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <span class="obj obj3 rellax" data-rellax-speed="0.5"><img class="layer" data-depth="0.05" src="images/t3.svg" /></span>
+        <span class="obj obj1 rellax" data-rellax-speed="2"><img class="layer" data-depth="0.3" src="images/t1.svg" /></span>
+        <span class="obj obj2 rellax" data-rellax-speed="2.5"><img class="layer" data-depth="0.25" src="images/t2.svg" /></span>
+        <span class="obj obj5 rellax" data-rellax-speed="3.5"><img class="layer" data-depth="0.35" src="images/t5.svg" /></span>
+        <span class="obj obj6 rellax" data-rellax-speed="3"><img class="layer" data-depth="0.30" src="images/t6.svg" /></span>
+        <span class="obj obj10 rellax" data-rellax-speed="4"><img class="layer" data-depth="0.4" src="images/t10.svg" /></span>
+        <div class="banner-counter">
+            <div class="testing-slider-thumb">
+                <div>
+                    <p><span>UI/UX Design</span></p>
+                </div>
+                <div>
+                    <p><span>Web Development</span></p>
+                </div>
+                <div>
+                    <p><span>App Development</span></p>
+                </div>
+                <div>
+                    <p><span>Game Development</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="common-section">
+    </section>
+    <!-- javascript -->
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/rellax.js"></script>
+
+    <script>
+        var scene = document.getElementById('object-group');
+        var parallax = new Parallax(scene);
+        var rellax = new Rellax('.rellax', {
+            // center: true
+            callback: function(position) {
+                // callback every position change
+                console.log(position);
+            }
+        });
+        jQuery(document).ready(function(){
+            jQuery('.testing-slider-main').slick({
+                fade: true,
+                arrows: false,
+                dots: false,
+                autoplay: false,
+                autoplaySpeed: 5000,
+                asNavFor: '.testing-slider-thumb'
+            });
+            jQuery('.testing-slider-thumb').slick({
+                vertical: true,
+                verticalSwiping:true,
+                infinite: true,
+                arrows: false,
+                dots: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.testing-slider-main',
+                focusOnSelect: true
+            });
+        });
+    </script>
+</body>
+</html>

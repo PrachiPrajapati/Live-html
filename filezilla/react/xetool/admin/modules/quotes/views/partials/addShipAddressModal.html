@@ -1,0 +1,163 @@
+<div class="modal fade stick-up" id="addShipAddressModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left">
+                 <div class="row" id="shipAddModalNotification">
+                    <div class="col-sm-6 text-left">
+                        <h5>
+                            <span class="semi-bold">
+                               <xe-translate text-value="Add New Address">
+                               </xe-translate>
+                            </span>
+                        </h5>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="m-t-10">
+                            <button type="button" class="close custom-modal-close" data-dismiss="modal" aria-hidden="true">
+                                <i class="pg-close fs-14"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="ship-add-add-form">
+                    <div class="col-sm-6">
+                        <div class="m-t-10">
+                          <div class="form-group form-group-default required">
+                            <label  class="control-label">
+                              <xe-translate text-value="ADDR">
+                              </xe-translate>
+                            </label>
+                            <input type="text" ng-model="newShippingAddress.address1" class="form-control"  placeholder="Address Line 1" required>
+                          </div>
+                        </div>
+                        <div class="m-t-3">
+                          <div class="form-group form-group-default required">
+                            <label  class="control-label">
+                              <xe-translate text-value = "City">
+                              </xe-translate>
+                            </label>
+                            <input type="text" ng-model="newShippingAddress.city" class="form-control"  placeholder="City" required>
+                          </div>
+                        </div>
+                        <div class="m-t-3">
+                          <div class="q-r-country-container" ng-click="resetShipSearchFieldData()">
+                            <span class="q-r-dropdown-star">*</span>
+                            <label class="control-label q-r-dropdown-btn-label">
+                              <xe-translate text-value="Country">
+                              </xe-translate>
+                            </label>
+                            <div class="btn-group" style="width: 100%; display: flex;">
+                              <button type="button" class="btn btn-default text-ellipsis"  data-toggle="dropdown" style="width: 100%; font-size: 12px; text-align: left;padding-top: 35px; background-color: transparent;">
+                                  <span>
+                                    {{ newShippingAddress.country }}
+                                  </span>
+                              </button>
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                                  <span class="caret">
+                                  </span>
+                                  <span class="sr-only">
+                                      Toggle Dropdown
+                                  </span>
+                              </button>
+                              <ul class="dropdown-menu" style="width:100%">
+                                <li>
+                                  <input type="text" class="form-control q-r-drop-search-field"
+                                    ng-model="shipSearchData.value">
+                                </li>
+                                <li>
+                                  <ul ng-class="{'quote-drop-down-scroll':countryList.length > 5}">
+                                    <li ng-repeat="country in countryList | filter:shipSearchData.value"
+                                      ng-click="onNewAddCountrySelected(country)">
+                                      <a href="">
+                                        {{ country.countries_name }}
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>  
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="m-t-10">
+                          <div class="form-group form-group-default">
+                            <label  class = "control-label">
+                              <xe-translate text-value = "Address">
+                              </xe-translate>
+                            </label>
+                            <input type="text" ng-model="newShippingAddress.address2" class="form-control"  placeholder="Address Line 2">
+                          </div>
+                        </div>
+                        <div class="m-t-3">
+                          <div class="form-group form-group-default required">
+                            <label  class="control-label">
+                              <xe-translate text-value = "Zip">
+                              </xe-translate>
+                            </label>
+                            <input type="text" ng-model="newShippingAddress.zip" class="form-control"  placeholder="Zip" numbers-only="numbers-only" required>
+                          </div>
+                        </div>
+                        <div class="m-t-3">
+                          <div class="q-r-country-container" ng-click="resetShipSearchFieldData()">
+                            <span class="q-r-dropdown-star">*</span>
+                            <label class="control-label q-r-dropdown-btn-label">
+                              <xe-translate text-value="State">
+                              </xe-translate>
+                            </label>
+                            <div class="btn-group" style="width: 100%; display: flex;">
+                              <button type="button" class="btn btn-default text-ellipsis"  data-toggle="dropdown" ng-disabled="newShippingAddress.country == 'Select'" style="width: 100%; font-size: 12px; text-align: left;padding-top: 35px; background-color: transparent;">
+                                  <span>
+                                    {{ newShippingAddress.state }}
+                                  </span>
+                              </button>
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-disabled="newShippingAddress.country == 'Select'" style="height: 64px;">
+                                  <span class="caret">
+                                  </span>
+                                  <span class="sr-only">
+                                      Toggle Dropdown
+                                  </span>
+                              </button>
+                              <ul class="dropdown-menu" style="width:100%">
+                                <li>
+                                  <input type="text" class="form-control q-r-drop-search-field"
+                                    ng-model="shipSearchData.value">
+                                </li>
+                                <li>
+                                  <ul ng-class="{'quote-drop-down-scroll':newStateList.length > 5}">
+                                    <li ng-repeat="state in newStateList | filter:shipSearchData.value"
+                                      ng-click="onNewAddStateSelected(state)">
+                                      <a href="">
+                                        {{ state.state_name }} 
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-t-20 clearfix">
+                    <button type="button" class="btn btn-danger btn-sm pull-right m-l-5" ng-click="cancelAddress()">
+                        <span>
+                            <xe-translate text-value="Cancel">
+                            </xe-translate>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm pull-right" ng-click="addAddress()">
+                        <span>
+                            <xe-translate text-value="Add">
+                            </xe-translate>
+                        </span>
+                    </button>
+                </div>
+                <img class="progress-img" src="assets/img/progress/progress-circle-success.svg" alt="Progress" ng-show="loadFormPreloader" class="progress-img">
+            </div>
+        </div>
+    </div>
+</div>
+</div>

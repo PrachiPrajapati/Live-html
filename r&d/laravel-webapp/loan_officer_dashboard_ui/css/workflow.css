@@ -1,0 +1,261 @@
+/* Bulk Adding Contact Modal Css */
+.map-identifiers table tbody td:first-child { width: 50% !important;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .close { top: 15px; right: 15px;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height { height: 850px;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline { align-items: center; -webkit-align-items: center;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .bg_skyblue.p35.border_ltb_20p,
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .display_block { height: 848px;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated, 
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2  { height: 775px;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated { overflow-y: auto;}
+.import-modal .bg_white { height: 600px !important;}
+.import-modal .width_50p,
+.import-modal .width_50p img { width: 50%;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated::-webkit-scrollbar-thumb,
+.add-filter-blk .ui.search.dropdown .menu::-webkit-scrollbar-thumb {
+	background: #3246D3;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	}
+	.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated::-webkit-scrollbar,
+	.add-filter-blk .ui.search.dropdown .menu::-webkit-scrollbar { 
+	height: 6px;
+	width: 6px;
+	}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .permissions_tabs .nav-item.width_25p { margin-right: 15px; width: auto !important;}
+.cancel-modal .modal-content { box-shadow: 0px 0px 8px #ddd;}
+.bulk-contact .upload_img_outer2 .dz-message { margin: 40px 0 !important;}
+.map-identifiers table.dataTable tbody tr:hover { background: #fff;}
+.map-identifiers button.btn.btn-light.dropdown-toggle { height: auto;}
+.map-identifiers .integation_dropdown .menu,
+.map-identifiers .integation_dropdown .dropdown-menu { margin: 5px !important;}
+.create-time,
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown,
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select-drop,
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select-drop-content { margin: 0 !important;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select { min-width: 100%; height: 35px;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select-text { line-height: 36px;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select-text span { font-size: 14px; line-height: 19px;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select .jcf-select-opener::before { top: 14px;}
+.modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select .jcf-list .jcf-option { padding: 9px;}
+
+/*workflow main css*/
+.move-blk { cursor: pointer;}
+.subscribe-btn .switch { width: 45px; height: 25px;}
+.subscribe-btn .slider:before { bottom: 1px; height: 22px; width: 22px;}
+.subscribe-btn input:checked + .slider:before { left: -5px; border: none;}
+table.dataTable.workflow-table {  border-spacing: 0 15px !important; border-collapse: separate;}
+.workflow-table tbody td { border: 2px solid #C7C7C7 !important; border-left: none !important; border-right: none !important;}
+table.dataTable.workflow-table thead th { padding-bottom: 0 !important;}
+.workflow-table tbody td:first-child { border-left: 2px solid #C7C7C7 !important; border-radius: 10px 0 0 10px;}
+.workflow-table tbody td:last-child { border-right: 2px solid #C7C7C7 !important; border-radius: 0 10px 10px 0;}
+.workflow-table thead th:first-child,
+.workflow-table tbody td:first-child { width: 3% !important; padding-left: 15px !important;}
+.workflow-table thead th:nth-child(2),
+.workflow-table tbody td:nth-child(2) { width: 5% !important;}
+.workflow-table thead th:nth-child(3),
+.workflow-table tbody td:nth-child(3) { width: 60% !important;}
+.workflow-table thead th:first-child span:after,
+.workflow-table thead th:nth-child(2) span:after,
+.workflow-table thead th:last-child span:after { display: none;}
+table.workflow-table tbody tr.show td { color: #9FA3C0;}
+    /*Create New Workflow*/
+    .create-new-workflow .content_wrapper { background: transparent;}
+    .filter-sec { background: #fff; border-radius: 20px;}
+    .create-new-workflow .dropdown .btn.btn-light.dropdown-toggle { min-width: 160px;}
+    .create-new-workflow .integation_dropdown.filled_dropdown .dropdown-menu.show { top: 35px !important; left: auto !important; right: 0 !important; width: 240px!important; min-width: 240px!important; transform: translate(0) !important; -webkit-transform: translate(0) !important;}
+    .create-new-workflow .integation_dropdown.filled_dropdown .dropdown.show .arrow { transform: rotate(180deg) !important; -webkit-transform: rotate(180deg) !important;}
+    .create-new-workflow .ui.fluid.dropdown { transition-duration: .3s; -webkit-transition-duration: .3s;}
+    .create-new-workflow .ui.fluid.dropdown>.dropdown.icon { display: none;}
+    .create-new-workflow .ui.fluid.dropdown:before { content: ''; background: url('../images/bluechevron-down.png') no-repeat; height: 20px; width: 20px; position: absolute; top: 7px; right: 7px;}
+    .create-new-workflow .ui.fluid.dropdown.visible::before { transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+    .create-new-workflow .ui.default.dropdown:not(.button)>.text,
+    .create-new-workflow .ui.dropdown:not(.button)>.default.text { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 19px; font-weight: 400; color: #CACCE1;}
+    .add-task-action-blk .dropdown-menu.show { box-shadow: none !important;}
+    .add-task-action-blk .integation_dropdown label { min-width: 50px;}
+    .add-task-action-blk .integation_dropdown label,
+    .create-new-workflow .content_wrapper .subscribe-btn label { font-family: 'Inter', sans-serif; font-size: 12px; line-height: 17px; font-weight: 400; color: #293A3E;}
+    .equal-dropdown { flex-grow: 1; -webkit-flex-grow: 1;}
+    .create-new-workflow .equal-dropdown .dropdown-menu.show, 
+    .create-new-workflow .equal-dropdown button.btn.btn-light.dropdown-toggle  {min-width: 350px !important;}
+    .create-new-workflow .when-dropdown .dropdown-menu.show, 
+    .create-new-workflow .when-dropdown button.btn.btn-light.dropdown-toggle { min-width: 200px !important;}
+    .delete-workflow-btn button { height: 32px; width: 32px; background: transparent; border: 2px solid #3246D3; border-radius: 6px; display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center;}
+    .delete-workflow-btn button:hover { background: #D33232; border-color: #D33232;}
+    .delete-workflow-btn button:hover img { filter: brightness(100); -webkit-filter: brightness(100);}
+    .add-task-action-blk .border_btn { min-width: 150px; margin: 0;}
+    .add-task-action-blk .border_btn:hover { background: #3246D3; color: #fff;}
+    .add-task-listing-table table { width: 100%; overflow-x: hidden; border-collapse: separate; border-spacing: 0 15px;}
+    .add-task-listing-table table th { padding-bottom: 0 !important; font-family:'Poppins', sans-serif; font-weight: 400; font-size: 12px; line-height: 18px; color: #60698B;}
+    .add-task-listing-table table th,
+    .add-task-listing-table table td { padding: 5px 10px; text-align: left;}
+    .add-task-listing-table table td { border: 1px solid #CACCE1; border-left-color: transparent; border-right-color: transparent; font-family: 'Inter', sans-serif; font-size: 13px; line-height: 17px; font-weight: 400; color: #293A3E;}
+    .add-task-listing-table table td label { font-size: 13px;}
+    .add-task-listing-table table th:first-child,
+    .add-task-listing-table table td:first-child { padding-left: 0; width: 10%; border: none;}
+    .add-task-listing-table table th:nth-child(2),
+    .add-task-listing-table table td:nth-child(2) { width: 60%;}
+    .add-task-listing-table table td:nth-child(2) { border-left-color: #CACCE1; border-radius: 10px 0 0 10px;}
+    .add-task-listing-table table td:last-child { border-right-color: #CACCE1; border-radius: 0 10px 10px 0;}
+    .add-task-listing-table table td.type-role { color: #9FA3C0;}
+    .add-task-listing-table table.without-dropdown th,
+    .add-task-listing-table table.without-dropdown td { padding: 10px;}
+    .add-task-listing-table table.without-dropdown th:first-child, 
+    .add-task-listing-table table.without-dropdown td:first-child { width: 70%;}
+    .add-task-listing-table table.without-dropdown td:first-child { border:1px solid #CACCE1; border-right: none; border-radius: 10px 0 0 10px;}
+    .add-task-listing-table table.without-dropdown td:nth-child(2){ border-left: none; border-radius: 0;}
+    .add-task-listing-table table.without-dropdown th:nth-child(2),
+    .add-task-listing-table table.without-dropdown td:nth-child(2) { width: 12%;}
+    .add-edit-workflow-action .modal-dialog { margin: 0 auto; max-width: 500px;}
+    .modal input.form-control { color: #293A3E !important;}
+    /*Workflow Loan App Css*/
+    .workflow-loanapp-sec .integation_dropdown.template-dropdown .dropdown .btn.btn-light.dropdown-toggle,
+    .edit-workflow-loanapp-sec .integation_dropdown.template-dropdown .dropdown .btn.btn-light.dropdown-toggle { min-width: 400px !important;}
+    .workflow-loanapp-sec .integation_dropdown.template-dropdown label { font-size: 14px;}
+    .warning-modal .close { position: absolute; top: -15px; right: -20px;}
+    .blue_btn { line-height: 20px !important;}
+    .add-task-action-blk h5 { margin-top: 10px; font-family:'Poppins', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px; color: #0C1347;}
+    .green-text  { color: #219653 !important;}
+    .red-text  { color: #FF0340 !important;}
+    .grey-text { color: #9FA3C0 !important;}
+    .workflow-task-table td span { color: #9FA3C0; font-size: 11px; display: block;}
+    .workflow-task-table table.without-dropdown th:first-child, 
+    .workflow-task-table table.without-dropdown td:first-child { width: 60%;}
+    /*History Modal*/
+    .history-modal .modal-dialog,
+    .history-modal .modal-dialog .ratewatch_modal_section { max-width: 800px; width: 800px; padding-bottom: 5px;}
+    .history-modal .modal-dialog .ratewatch_modal_section::before { z-index: 1; content: ''; height: 80px; width: 100%; background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%); position: absolute; bottom: 0; left: 0; border-radius: 0 0 20px 20px;}
+    .activities-blk  { padding-right: 10px; height: 500px; overflow-x: hidden; overflow-y: auto;}
+    .activites-dt { margin-top: 25px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; line-height: 19px; color: #293A3E;}
+    .activites-dt:first-child { margin: 0;}
+    .notes-list { margin-top: 15px; padding: 15px; background: #F9FBFF; border-radius: 10px;}
+    .notes-list .icon-style { margin-right: 15px; height: 35px; width: 35px; background: #9FA3C0; border-radius: 50%; display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center; flex-shrink: 0; -webkit-flex-shrink: 0;}
+    .notes-list .icon-style i  { font-size: 18px; color: #fff;}
+    .notes-list .loan-status { width: 100%;}
+    .notes-list .loan-status h5 { margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1.21882px solid #CACCE1; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 14px; line-height: 19px; color: #0C1347;}
+    .notes-list .loan-status h5 a { color: #3246D3;}
+    .notes-list .loan-status .notes-user-nm, 
+    .notes-list .loan-status .notes-create-dt { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 12px; line-height: 16px; color: #9FA3C0;}
+    .activities-blk::-webkit-scrollbar-thumb {
+        background: #3246D3;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+      }
+      .activities-blk::-webkit-scrollbar { 
+        height: 6px;
+        width: 6px;
+      }
+    /*Mark Task Modal*/
+    .mark-task-modal .close { position: relative; top: 0; right: 0;}
+
+/*Responsive*/
+@media ( min-width: 1500px) and ( max-width: 1699px) { 
+     /*Create New Workflow*/
+     .add-task-listing-table table.without-dropdown th:first-child, 
+     .add-task-listing-table table.without-dropdown td:first-child  { width: 72%;}
+     .workflow-loanapp-sec .add-task-listing-table table.without-dropdown th:first-child, 
+     .workflow-loanapp-sec .add-task-listing-table table.without-dropdown td:first-child { width: 55%;}
+}
+@media ( min-width: 1366px) and ( max-width: 1499px) { 
+    /*workflow main css*/
+    .workflow-table thead th:nth-child(3), 
+    .workflow-table tbody td:nth-child(3) { width: 55% !important;}
+    /*Create New Workflow*/
+    .create-new-workflow .dropdown .btn.btn-light.dropdown-toggle { min-width: 180px !important;}
+    .add-task-listing-table table th:nth-child(2),
+    .add-task-listing-table table td:nth-child(2) { width: 57%;}
+    /*Workflow Loan App Css*/
+    .workflow-loanapp-sec .add-task-listing-table table.without-dropdown th:first-child, 
+    .workflow-loanapp-sec .add-task-listing-table table.without-dropdown td:first-child { width: 50% !important;}
+    .workflow-loanapp-sec .add-task-listing-table table.without-dropdown th:nth-child(2), 
+    .workflow-loanapp-sec .add-task-listing-table table.without-dropdown td:nth-child(2) { width: 15%;}
+}
+@media ( min-width: 1200px) and ( max-width: 1365px) { 
+    /* Bulk Adding Contact Modal Css */
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 { height: calc(100vh - 140px);}
+    /*workflow main css*/
+    .workflow-table thead th:nth-child(3), 
+    .workflow-table tbody td:nth-child(3) { width: 50% !important;}
+    /*Create New Workflow*/
+    .create-new-workflow .dropdown .btn.btn-light.dropdown-toggle { min-width: 180px !important;}
+    .add-task-listing-table table th:nth-child(2),
+    .add-task-listing-table table td:nth-child(2) { width: 45%;}
+    .add-task-listing-table table.without-dropdown th:first-child, 
+    .add-task-listing-table table.without-dropdown td:first-child { width: 60%;}
+    .add-task-listing-table table.without-dropdown th:nth-child(2), 
+    .add-task-listing-table table.without-dropdown td:nth-child(2) { width: 20%;}   
+}
+@media ( min-width: 1200px) and ( max-width: 1399px) {
+    /* Bulk Adding Contact Modal Css */
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height { height: 700px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline { align-items: center; -webkit-align-items: center;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .bg_skyblue.p35.border_ltb_20p,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .display_block { height: 698px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 { height: 620px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 .close { margin-right: 0;}
+    .import-modal .bg_white { height: 600px !important;}
+    .import-modal .width_50p,
+    .import-modal .width_50p img { width: 50%;}
+    /*Workflow Loan App Css*/
+    .workflow-loanapp-sec .integation_dropdown.template-dropdown .dropdown .btn.btn-light.dropdown-toggle { min-width: 300px !important;}
+    .workflow-loanapp-sec .add-task-listing-table table.without-dropdown th:first-child, 
+    .workflow-loanapp-sec .add-task-listing-table table.without-dropdown td:first-child { width: 40%;}
+}
+@media ( min-width: 992px) and ( max-width: 1199px) { 
+    /* Bulk Adding Contact Modal Css */
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height { height: 700px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline { align-items: center; -webkit-align-items: center;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .bg_skyblue.p35.border_ltb_20p,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .display_block { height: 698px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 { height: 620px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 .close { margin-right: 0;}
+    .import-modal .width_50p { width: 50%;}
+    /*workflow main css*/
+    .workflow-table thead th:nth-child(3), 
+    .workflow-table tbody td:nth-child(3) { width: 38% !important;}
+    /*Create New Workflow*/
+    .add-task-action-blk .justify-space-between { display: block;}
+    .create-new-workflow .equal-dropdown .dropdown-menu.show, .create-new-workflow .equal-dropdown button.btn.btn-light.dropdown-toggle { min-width: 100% !important;}
+    .add-task-action-blk .border_btn { margin: 25px 0;}
+    .add-task-listing-table table th:first-child, 
+    .add-task-listing-table table td:first-child { width: 5%;}
+    .add-task-listing-table table th:nth-child(2),
+    .add-task-listing-table table td:nth-child(2) { width: 35%;}
+    .add-task-listing-table table.without-dropdown th:first-child, 
+    .add-task-listing-table table.without-dropdown td:first-child { width: 50%;}
+    .add-task-listing-table table.without-dropdown th:nth-child(2), 
+    .add-task-listing-table table.without-dropdown td:nth-child(2) { width: 25%;}
+    /*Workflow Loan App Css*/
+    .workflow-loanapp-sec .integation_dropdown.template-dropdown .dropdown .btn.btn-light.dropdown-toggle { min-width: 300px !important;}
+    .workflow-loanapp-sec .add-task-listing-table table.without-dropdown th:first-child, 
+    .workflow-loanapp-sec .add-task-listing-table table.without-dropdown td:first-child { width: 30%;}
+}
+@media ( min-width: 768px) and ( max-width: 991px) {
+    /* Bulk Adding Contact Modal Css */
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .bg_skyblue.p35 { padding: 10px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 .close { margin-right: 0;}
+    .import-modal .width_50p { width: 100%;}
+    /*workflow main css*/
+    .workflow-table thead th:nth-child(3), 
+    .workflow-table tbody td:nth-child(3) { width: 28% !important;}
+    /*Create New Workflow*/
+    .add-task-action-blk .justify-space-between { display: block;}
+    .create-new-workflow .equal-dropdown .dropdown-menu.show, .create-new-workflow .equal-dropdown button.btn.btn-light.dropdown-toggle { min-width: 100% !important;}
+    .add-task-action-blk .border_btn { margin: 25px 0;}
+    .add-task-listing-table table th:first-child, 
+    .add-task-listing-table table td:first-child { width: 5%;}
+    .add-task-listing-table table th:nth-child(2),
+    .add-task-listing-table table td:nth-child(2) { width: 20%;}
+    .add-task-listing-table table.without-dropdown th:first-child, 
+    .add-task-listing-table table.without-dropdown td:first-child { width: 45%;}
+    .add-task-listing-table table.without-dropdown th:nth-child(2), 
+    .add-task-listing-table table.without-dropdown td:nth-child(2) { width: 25%;}
+    /*Workflow Loan App Css*/
+    .workflow-loanapp-sec .integation_dropdown.template-dropdown .dropdown .btn.btn-light.dropdown-toggle { min-width: 150px !important;}
+    .workflow-loanapp-sec .add-task-listing-table table.without-dropdown th:first-child, 
+    .workflow-loanapp-sec .add-task-listing-table table.without-dropdown td:first-child { width: 30%;}
+    .history-modal .modal-dialog, .history-modal .modal-dialog .ratewatch_modal_section { max-width: 100%; width: 100%;}
+}

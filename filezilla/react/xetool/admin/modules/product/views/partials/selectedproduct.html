@@ -1,0 +1,552 @@
+<div class="panel panel-transparent">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs products-nav-tabs">
+        <li ng-class="{'active':tabModel == 'boundary'}">
+            <a data-toggle="tab" ng-click="changeTab('boundary')" href="">
+                <span>
+                    Printing Area
+                </span>
+            </a>
+        </li>
+        <li ng-class="{'active':tabModel == 'price'}">
+            <a data-toggle="tab" ng-click="changeTab('price')" href=""
+                ng-class="{'disable-click':prntMethodByProduct.length == 0}"
+                ng-hide=" (boundary.name == 'multipleBoundary') || (ProductIdType != 'configurable')">
+                <span>
+                    Price Rules
+                </span>
+            </a>
+        </li>
+        <!-- <li ng-class="{'active':tabModel == 'setting'}">
+            <a data-toggle="tab"   ng-click="changeTab('setting')" href="">
+                <span>
+                    Settings
+                </span>
+            </a>
+        </li> -->
+        <li ng-class="{'active':tabModel == 'configurator'}" ng-show ="openconfigtab">
+            <a data-toggle="tab"   ng-click="changeTab('configurator')" href="">
+                <span>
+                    Configurator
+                </span>
+            </a>
+        </li>   
+        <!-- <button type="button" ng-disabled="isPrintMethodPresent" class="btn btn-info btn-sm pull-right m-b-10"  ng-click="createTemplate()" 
+        ng-hide="(isPreDecorated || cstatus)"></button> -->
+
+        <i class="fa fa-info-circle pull-right info-module-icon m-r-15 m-t-10" ng-click="showProductFaqDetails(2)" ng-hide="(isPreDecorated || configStatus.cstatus) || (ProductIdType != 'configurable')"></i>
+        <button type="button" ng-disabled="isPrintMethodPresent" class="btn btn-info btn-sm pull-right m-b-10"
+            ng-click="createTemplate()" ng-hide="(isPreDecorated || configStatus.cstatus)">
+            <span>
+                <xe-translate text-value="Create Template">
+                </xe-translate>
+            </span>
+        </button>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content products-tab-content">
+        <div class="tab-pane fade in" ng-class="{'active':tabModel == 'boundary'}">
+            <div class="row" style="padding-left: 50px;">
+                <div class="col-md-7">
+                    <div class="card card-transparent">
+                        <div class="xe-product-preview-wrap">
+                            <!-- <div class="text-right m-b-10">
+                                <span class="custom-label">
+                                    Preview
+                                </span>
+                            </div> -->
+                            <div class="xe-product-preview">
+                                <div class="xe-product-thumb">
+                                    <ul class="xe-product-thumb-scroll">
+                                        <li ng-class="{'active': $index == selectedThumbIndex }"
+                                            ng-repeat="thumb in thumbSides">
+                                            <img class="img-responsive" ng-click="changeThumbSide($index)"
+                                                ng-src="{{ thumb }}" />
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="setting-view-text" ng-hide="boundary.name == 'multipleBoundary'">
+                                    <div class="icon-text" ng-click="tglSettingPopup()"><i class="fa fa-cog"
+                                            aria-hidden="true"></i>
+                                        <xe-translate text-value="Settings"></xe-translate>
+                                    </div>
+                                    <div class="setting-view-open" ng-if="isSettingPopup">
+                                        <div
+                                            ng-show="boundary.name == 'variableMask' || boundary.name == 'bound' || boundary.name == 'customBoundry' || boundary.name == 'mask'">
+                                            <span class="custom-label">
+                                                <xe-translate text-value="Side name"></xe-translate>
+                                            </span>
+                                            <div class="form-group input-group">
+                                                <input class="form-control"
+                                                    ng-model="tempPrintSizeData[selectedThumbIndex].side_name"
+                                                    placeholder="side name" type="text" />
+                                            </div>
+                                        </div>
+                                        <div ng-show="boundary.name == 'multipleBoundary '">
+                                            <input type="checkbox" name="disableCustomization" id="checkbox1"
+                                                ng-model="multiBoundData[selectedThumbIndex].is_visible"
+                                                ng-change="enableMarking(selectedThumbIndex)"
+                                                ng-checked="multiBoundData[selectedThumbIndex].is_visible == 0">
+                                            <label class="curser-hand" for="checkbox1">
+                                                <xe-translate text-value="Disable for customization"></xe-translate>
+                                            </label>
+                                        </div>
+                                        <div ng-if="thumbSides.length > 1"
+                                            ng-show="boundary.name != 'multipleBoundary'">
+                                            <input type="checkbox" name="disableCustomization" id="checkbox3"
+                                                ng-model="originalMaskData[selectedThumbIndex].is_visible"
+                                                ng-change="enableMarkingForSingleBundary(selectedThumbIndex)"
+                                                ng-checked="originalMaskData[selectedThumbIndex].is_visible == 0">
+                                            <label class="curser-hand" for="checkbox3">
+                                                <xe-translate text-value="Disable for customization"></xe-translate>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="eye-container d-none"
+                                    ng-class="multiBoundData[selectedThumbIndex].is_visible == 0 ? '' : 'eye-enable'"
+                                    ng-click="enableMarking(selectedThumbIndex)"
+                                    ng-show="boundary.name == 'multipleBoundary '">
+                                    <i class="eye-icon fa"
+                                        ng-class="multiBoundData[selectedThumbIndex].is_visible == 0 ? ' fa-eye-slash' : 'fa-eye'"></i>
+                                </div>
+                                <div ng-if="thumbSides.length > 1" class="eye-container d-none"
+                                    ng-class="originalMaskData[selectedThumbIndex].is_visible == 0 ? '' : 'eye-enable'"
+                                    ng-click="enableMarkingForSingleBundary(selectedThumbIndex)"
+                                    ng-show="boundary.name != 'multipleBoundary'">
+                                    <i class="eye-icon fa"
+                                        ng-class="originalMaskData[selectedThumbIndex].is_visible == 0 ? ' fa-eye-slash' : 'fa-eye'"></i>
+                                </div>
+                                <div class="xe-product-stage">
+                                    <div class="position-move-icon" ng-if="boundary.name != 'multipleBoundary'">
+                                        <div class="position-top" ng-click="onPositionChange('t')">
+                                            <i class="fa fa-angle-up" aria-hidden="true" tooltip="Up"
+                                                tooltip-placement="top"></i>
+                                        </div>
+                                        <div class="position-bottom" ng-click="onPositionChange('b')">
+                                            <i class="fa fa-angle-down" aria-hidden="true" tooltip="Down"
+                                                tooltip-placement="top"></i>
+                                        </div>
+                                        <div class="position-left" ng-click="onPositionChange('l')">
+                                            <i class="fa fa-angle-left" aria-hidden="true" tooltip="Left"
+                                                tooltip-placement="top"></i>
+                                        </div>
+                                        <div class="position-right" ng-click="onPositionChange('r')">
+                                            <i class="fa fa-angle-right" aria-hidden="true" tooltip="Right"
+                                                tooltip-placement="top"></i>
+                                        </div>
+                                        <div class="" ng-show="boundary.name == 'bound'">
+                                            <span class="pointer" ng-click="exchangeSize()"
+                                                tooltip="Rotate" tooltip-placement="top">
+                                                <img src="assets/images/rotate.png" style="width: 11px;">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="stageWrap" id="xe_product_editor">
+                                        <!-- <img class="img-responsive"
+                                            src="http://beta.inkxe.io/demo-store/xetool/assets/beta_inkxe_io/images/productTemplate/44/58.png"> -->
+                                    </div>
+                                </div>
+
+                                <div class="stageOptions">
+                                    <div class="dFlex">
+                                        <div class="d-col" style="width: 120px;">
+                                            <div class="checkbox "
+                                                ng-hide="boundary.name == 'multipleBoundary' || isAssignDesignArea">
+                                                <input type="checkbox" id="checkbox8" value="8"
+                                                    ng-model="isBleed.bleedStatus" ng-checked="isBleedMark"
+                                                    ng-change="enableBleed(isBleed.bleedStatus)"
+                                                    ng-click="enableBleed(isBleed.bleedStatus)">
+                                                <label for="checkbox8" style="margin-right: 0px;">
+                                                    <xe-translate text-value="Bleed Mark"></xe-translate>
+                                                </label>
+                                                <span class="linkBtn" ng-if="isBleedMark" ng-click="toggleBleedPopup()">
+                                                    <xe-translate text-value="Edit"></xe-translate>
+                                                </span>
+                                                <i class="fa fa-info-circle info-module-icon" ng-click="showProductFaqDetails(12)"></i>
+                                            </div>
+                                            <!-- Bleed Area -->
+                                            <div class="pops bleedBox" ng-show="isBleedMarkPopup">
+                                                <div class="dFlex">
+                                                    <div class="d-col">
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" id="checkbox9"
+                                                                ng-model="isCrop.cropStatus" value="9"
+                                                                ng-checked="tempMaskData[0].is_cropMark == '1'"
+                                                                ng-change="changeCropMark(isCrop.cropStatus)">
+                                                            <label for="checkbox9">
+                                                                <xe-translate text-value="Crop Mark"></xe-translate>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group form-group-default input-group">
+                                                            <div class="form-input-group">
+                                                                <input class="form-control input-sm"
+                                                                    ng-model="tempMaskData[0].cropValue"
+                                                                    placeholder="0.00"
+                                                                    ng-keyup="setCropValue(tempMaskData[0].cropValue)"
+                                                                    type="text" price-only="price-only">
+                                                            </div>
+                                                            <div class="input-group-addon">
+                                                                {{productUnit}}
+                                                                <!-- inch -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-col">
+                                                        <div class="checkbox">
+                                                            <input id="checkbox10" type="checkbox"
+                                                                ng-model="isSafe.safeStatus"
+                                                                ng-checked="tempMaskData[0].is_safeZone == '1'"
+                                                                ng-change="changeSafeZone(isSafe.safeStatus)"
+                                                                value="10">
+                                                            <label for="checkbox10">
+                                                                <xe-translate text-value="Safe Zone"></xe-translate>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group form-group-default input-group">
+                                                            <div class="form-input-group">
+                                                                <input type="text" class="form-control input-sm"
+                                                                    ng-model="tempMaskData[0].safeValue"
+                                                                    placeholder="0.00"
+                                                                    ng-keyup="setSafeValue(tempMaskData[0].safeValue)"
+                                                                    price-only="price-only">
+                                                            </div>
+                                                            <div class="input-group-addon">
+                                                                {{productUnit}}
+                                                                <!-- inch -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="d-col" style="display: flex; align-items: center;">
+                                        <div>
+                                            <div class="checkbox">
+                                                <input type="checkbox" ng-model="enable3D.is3DPreviewEnable" value="1" id="checkbox2"
+                                                    ng-click="preview3DEnabler()">
+                                                <label for="checkbox2" style="margin-right: 7px;">
+                                                    <xe-translate text-value="Enable Preview"></xe-translate>
+                                                </label>
+                                            </div>
+                                            <!-- 3D Box -->
+                                            <div class="pops threedBox" ng-if="is3DPreviewEnabled">
+                                                <div class="dFlex">
+                                                    <div class="d-col">
+                                                        <div class="fileUpload">
+                                                            <div class="left-image cust-temp">
+                                                                <img src="assets/images/upload-i.png" ng-file-change="upload3DObject($files)"
+                                                                    ng-file-select="" style="width:20px;">
+                                                                <div class="upload-icon-show">
+                                                                    <div><img src="assets/images/upload-ccm.png"
+                                                                            ng-file-change="upload3DObject($files)" ng-file-select=""
+                                                                            style="width:30px;">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <label>
+                                                                <xe-translate text-value="browse threed file">
+                                                                </xe-translate> <span>{{object3DFilename}}</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="dFlex">
+                                                            <div class="d-col">
+                                                                <p class="small" style="margin-bottom:0;">
+                                                                    <span class="small text-danger"
+                                                                        ng-show="showError3">{{ showMsg3dAdd }}</span><br>
+                                                                    <span class="small text-danger"
+                                                                        ng-show="!jsonisValid">{{ showjsonmessage }}</span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-col">
+                                                        <button class="btn btn-success btn-sm"
+                                                            ng-click="apply3DPreview()"><xe-translate text-value="Apply"></xe-translate></button>
+                                                    </div>
+                                                </div>
+                                                <textarea class="form-control" placeholder="JSON format" name="JSONDataFor3DObject"
+                                                    ng-model="jsonData.object3DData" ng-change="updateJsonObject()" required="" rows="3"
+                                                    ng-style="jsonformatting">
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                        <div class="edit-3d-p" ng-hide="productDataFor3D.templatePreviewData.length === 0 || productDataFor3D.templatePreviewData.is_3d_preview === '0'" >
+                                            <a class="edit3d" style="color: #0c81de;" ng-click="Edit3DPreview()">
+                                                <xe-translate text-value="edit"></xe-translate>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                        <div class="d-col">
+                                            <xe-translate text-value="Measurement Unit"></xe-translate>:&nbsp;
+                                            <span class="linkBtn"
+                                                ng-click="tglUnitsDropDown()">{{ selectedScaleUnit.name }}</span>
+                                            <!-- Unit Box -->
+                                            <div class="pops unitBox" ng-if="isUnitShow">
+                                                <ul ng-class="{'button-scroll':scaleUnitList.length> 4}">
+                                                    <li class="curser-hand" ng-repeat="unit in scaleUnitList"
+                                                        ng-disabled="true"
+                                                        ng-click="selectedUnit($index,true); tglUnitsDropDown()">
+                                                        {{ unit.name }}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ng-include src="'modules/product/doc/ps12.html'">
+                </ng-include>
+                <div class="col-md-5">
+                    <div class="panel-group" id="accordion-product">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="decorationArea">
+                                <h4 class="panel-title">
+                                    <a href="#" data-target="#decorationareaBox" data-toggle="collapse"
+                                        data-parent="#accordion-product" aria-expanded="true"
+                                        aria-controls="decorationareaBox">
+                                        <xe-translate text-value="Product Decoration Area"></xe-translate>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="decorationareaBox" class="panel-collapse collapse in" role="tabpanel"
+                                aria-labelledby="decorationArea">
+                                <div class="panel-body">
+                                    <div>
+                                        <div class="d-a-type">
+                                            <xe-translate text-value="Decoration area type"></xe-translate>
+                                        </div>
+                                        <ng-include src="'modules/product/views/partials/custom_dropdown.html'">
+                                        </ng-include>
+                                    </div>
+                                    <rectangle-setting container="{{ settingView }}"
+                                        ng-show="boundary.name != 'multipleBoundary'">
+                                    </rectangle-setting>
+                                    <ng-include src="'modules/product/views/partials/multiple_boundary_setting.html'"
+                                        ng-show="boundary.name == 'multipleBoundary'">
+                                    </ng-include>
+
+                                </div>
+                            </div>
+                            </div>
+                            <div class="panel panel-default" ng-class="{'disablediv': enableConfiguratorSettings.isenable}">
+                                <div class="panel-heading" role="tab" id="nameNumber" ng-class="{'disablespan': enableConfiguratorSettings.isenable}">
+                                    <h4 class="panel-title">
+                                        <a href="#" data-target="#namenumberBox" class="collapsed" role="button"
+                                            data-toggle="collapse" data-parent="#accordion-product"
+                                            aria-expanded="false" aria-controls="namenumberBox">
+                                            <xe-translate text-value="Product Name Image"></xe-translate>
+                                            <i class="fa fa-info-circle info-module-icon m-l-10" ng-click="showProductFaqDetails(14)"></i>
+                                        </a>
+                                    </h4>
+                                    
+                                    <img style="max-width: 25px;right: 32px;position: absolute;" ng-if="checkSettingLoader"
+                                    src="assets/img/progress/progress-circle-master.svg" alt="Apply..." />
+                                </div>
+                                <div id="namenumberBox" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="nameNumber" ng-if="!checkSettingLoader">
+                                    <div class="panel-body" ng-show="true">
+                                        <div class="custom-three-options" style="position:relative;">
+                                            <div class="text-left custom-icon-seven dropdown-toggle w-full"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                style="padding:0; border:0; background:transparent;cursor: pointer;">
+                                                <div class="configuration-dropdown-option">
+                                                    <div class="option-full">
+                                                        <div class="image-l"
+                                                            ng-if="initialSetting.imageflag == 'pimage'">
+                                                            <img
+                                                                ng-src="{{productList[selectedProductIndex].thumbnail}}">
+                                                        </div>
+                                                        <div class="image-l"
+                                                        ng-if="initialSetting.imageflag == 'cpimage'">
+                                                        <img ng-if="noTemplate">
+                                                        <img ng-if="!noTemplate" ng-src="{{sides[0]}}">
+                                                       </div>
+                                                        <div class="text-r">
+                                                            <span class="text-ellipsis heading">
+                                                                {{initialSetting.model}}
+                                                            </span>
+                                                            <span class="text-ellipsis sub-heading">
+                                                                {{initialSetting.details}}
+                                                            </span>
+                                                            <span class="text-ellipsis sub-heading"
+                                                                ng-hide="noTemplate">
+                                                                <div ng-show="initialSetting.templatestatus">
+                                                                    {{selectedTemplate}}</div>
+                                                            </span>
+                                                            <span class="text-ellipsis sub-heading"
+                                                                ng-hide="!noTemplate">
+                                                                <div ng-show="initialSetting.templatestatus">
+                                                                    <span class="notemplate">
+                                                                        <xe-translate text-value="No template assigned">
+                                                                        </xe-translate>
+                                                                    </span>
+                                                                </div>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="dropdown-menu full-width shape_print_dropdown" role="menu"
+                                                style="padding:0; margin:0; border:0; background:transparent;">
+                                                <li style="padding: 0;  margin: 0;    border: 0;cursor: pointer;"
+                                                    ng-repeat=" opt in productSetting" ng-model="selectedProductSetting"
+                                                    ng-click="changeProductSettings(opt)">
+                                                    <div class="configuration-dropdown-option">
+                                                        <div class="option-full">
+                                                            <div class="image-l"
+                                                                ng-show="opt.model == 'Original Product Image'">
+                                                                <img
+                                                                    ng-src="{{productList[selectedProductIndex].thumbnail}}">
+                                                            </div>
+                                                            <div class="image-l"
+                                                                ng-show="opt.model == 'Custom Product Image'">
+                                                                <img ng-if="noTemplate">
+                                                                    <img ng-if="!noTemplate"
+                                                                    ng-src="{{sides[0]}}">
+                                                            </div>
+                                                            <div class="text-r">
+                                                                <span class="text-ellipsis heading">
+                                                                    {{opt.model}}
+                                                                </span>
+                                                                <span class="text-ellipsis sub-heading">
+                                                                    {{opt.details}}
+                                                                </span>
+                                                                <span class="text-ellipsis sub-heading"
+                                                                    ng-hide="noTemplate">
+                                                                    <div ng-show="opt.model == 'Custom Product Image'">
+                                                                        {{selectedTemplate}}</div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="bottom-configurator-info full-width"
+                                                ng-if="initialSetting.model === 'Custom Product Image'">
+                                                <a ng-click="openProductImagePopup()" ng-if="noTemplate">
+                                                    <xe-translate text-value="Select Custom Product Image">
+                                                    </xe-translate>
+                                                </a>
+                                                <a ng-click="openProductImagePopup()" ng-if="!noTemplate">
+                                                <xe-translate text-value="Change custom product image">
+                                                </xe-translate>
+                                                </a>
+                                                <a ng-click="openProductImage()">
+                                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                                    <xe-translate text-value="Product image settings"></xe-translate>
+                                                </a>
+                                               
+                                            </div>
+                                            <div class="bottom-configurator-info full-width"
+                                                ng-if="initialSetting.model === 'Original Product Image'">
+                                                <div ng-if="!noTemplate">
+                                                <a ng-click="assignProductTemplate(0, true)"
+                                                    ng-if="!isApplyTemplateLoader">
+                                                    <xe-translate text-value="Use Original Product Image"></xe-translate></a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="configurator">
+                                    <h4 class="panel-title">
+                                        <a href="#" data-target="#configuratorbox" class="collapsed" role="button"
+                                            data-toggle="collapse" data-parent="#accordion-product"
+                                            aria-expanded="false" aria-controls="configuratorbox">
+                                            <xe-translate text-value="Product Configurator"></xe-translate>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="configuratorbox" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="configurator">
+                                    <div class="panel-body">
+                                        <p> <xe-translate text-value="configurator description"></xe-translate></p>
+                                        <div class="gray-line">
+                                        </div>
+                                        <div class="d-flex" style="align-items: center;">
+                                            <div class="checkbox">
+                                                    <input type="checkbox" style="width:50%" ng-model="enableConfiguratorSettings.isenable" 
+                                                        value="1" id="checkbox4" ng-click="enableConfiguratorSetting()">
+                                                    <label for="checkbox4" class="curser-hand">
+                                                        <xe-translate text-value="Enable Configurator">
+                                                            </xe-translate>
+                                                    </label>
+                                            </div>
+                                            <div class="bottom-configurator-info full-width" style="width:50%;margin-top: 0;" ng-show="enableConfiguratorSettings.isenable">
+                                                <a ng-click="enableConfiguratorTab()">
+                                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                                    <xe-translate text-value="Product Configurator Settings">
+                                                    </xe-translate>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="panel panel-default" ng-if="boundary.name != 'multipleBoundary'">
+                            <div class="panel-heading" role="tab" id="printProfile">
+                                <h4 class="panel-title">
+                                    <a href="#" data-target="#printprofileBox" class="collapsed" role="button"
+                                        data-toggle="collapse" data-parent="#accordion-product" aria-expanded="false"
+                                        aria-controls="printprofileBox">
+                                        <xe-translate text-value="Print Profile"></xe-translate>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="printprofileBox" class="panel-collapse collapse" role="tabpanel"
+                                aria-labelledby="printProfile">
+                                <div class="panel-body">
+                                    <p>Enable/disable print profile for the product. The assigned printing method will be limited to this specific product. 
+                                    To modify/create a print profile <a href="#" class="linkBtn" ng-click="gotoPrintProfile()" style="font-weight: 500; font-style: italic;">click here</a>.
+                                    </p>
+                                    <div class="gray-line">
+                                    </div>
+                                    <ng-include src="'modules/product/views/partials/printtypesetting.html'">
+                                    </ng-include>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-success btn-cons" type="button" ng-click="saveMaskBoundary(true)"
+                            ng-disabled="demoStatus">
+                            <span class="">
+                                <xe-translate text-value="Save"></xe-translate>
+                            </span>
+                        </button>
+                        <span class="text-danger m-l-10" ng-show="!isVariableAreaDimention.status">
+                            {{minErrMsg}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" ng-class="{'active':tabModel == 'configurator'}">
+            <ng-include src="'modules/product/views/partials/configurator.html'">
+            </ng-include>  
+        </div>
+        <div class="tab-pane" ng-class="{'active':tabModel == 'price'}">
+            <ng-include src="'modules/product/views/partials/price_rule.html'">
+            </ng-include>
+        </div>
+        <div class="tab-pane" ng-class="{'active':tabModel == 'setting'}">
+            <ng-include src="'modules/product/views/partials/product_setting.html'">
+            </ng-include>
+        </div>
+    </div>
+    <ng-include src="'modules/product/doc/ps02.html'">
+    </ng-include>
+    <ng-include src="'modules/product/doc/ps12.html'">
+    </ng-include>
+    <ng-include src="'modules/product/doc/ps14.html'">
+    </ng-include>
+    <ng-include src="'modules/product/views/partials/warningModal.html'"></ng-include>
+</div>

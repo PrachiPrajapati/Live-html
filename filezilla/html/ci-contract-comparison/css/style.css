@@ -1,0 +1,443 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,600i,700,700i,800,800i');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/********* Fonts Face CSS End **********/
+:root {
+    --base-color: #404040;
+	--primary-color: #00a7e5;
+	--primary-dark: #3d285f;
+	--light-color: #eaedf3;
+}
+/******* Common Element CSS Start ******/
+* 						{ margin: 0px; padding: 0px;}
+body 					{ font-family: 'Roboto', sans-serif; font-size: 14px; line-height: 20px; color: #404040;}
+.clear 					{ clear:both;}
+img 					{ border: 0px; max-width: 100%;}
+ul,ol 					{ list-style: none;}
+a 						{ text-decoration: none; outline: none; color: inherit; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out;}
+a:focus, a:active, a:visited, a:hover	{ text-decoration: none; outline: none; }
+a:hover					{ color: var(--primary-color); }
+h1 						{ margin-bottom: 5px; font-size: 24px; line-height: 32px; font-weight: 600; }
+/* h2 						{ }
+h3 						{ }
+h4 						{ }
+h5 						{ }
+h6 						{ } */
+p 						{ margin-bottom: 16px; }
+button 					{ transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+button:focus 			{ box-shadow: none; -webkit-box-shadow: none; outline: none;}
+.b-border 				{ border-bottom: 1px solid;}
+[data-toggle] 			{ cursor: pointer;}
+.dropdown-menu 			{ font-size: inherit; line-height: inherit; }
+.dropdown-item 			{ font-weight: 500; }
+
+/******* Common Element CSS End *********/
+/* -------- Custom Elemet Style ------- */
+.jcf-scrollbar 					{ background: #cdcdd0; z-index: 5; }
+.jcf-scrollbar-vertical .jcf-scrollbar-handle,
+.jcf-scrollbar-handle 			{ background: #a7a7a9; width: 100%; border-radius: 2em;}
+.jcf-scrollable-wrapper 							{ width: 100% !important; }
+.jcf-scrollable 									{ width: 100% !important; }
+.jcf-scrollbar-vertical 							{ width: 6px; border-radius: 2em; top: 5%; right: 20px; height: 90% !important;}
+.jcf-scrollbar-vertical .jcf-scrollbar-slider 		{ height: 100% !important; width: 100%;}
+.jcf-scrollbar-horizontal							{ height: 8px; border-radius: 2em; }
+.jcf-scrollbar .jcf-scrollbar-dec, 
+.jcf-scrollbar .jcf-scrollbar-inc 					{ display: none;}
+.jcf-scrollbar-horizontal 							{ left: auto; right: 0; top: -15px;}
+.jcf-scrollbar-horizontal .jcf-scrollbar-slider 	{ height: 100%; width: 100% !important; display: block; border-radius: 2em; }
+.jcf-scrollbar-horizontal .jcf-scrollbar-handle 	{ height: 100%; border-radius: 2em;}
+.custom-dropdown .dropdown-toggle			{ padding: 12px 16px; background: transparent; color: var(--base-color); font-weight: 500; text-transform: uppercase; border: 1px solid var(--light-color); border-radius: 0; position: relative; }
+.custom-dropdown .dropdown-menu 			{ padding: 0; background: transparent; width: 100% !important; top: 100% !important; transform: none !important; -webkit-transform: none !important; border-radius: 0; overflow: auto; border: none;}
+.custom-dropdown .dropdown-menu a 			{ padding: 12px 15px; background: var(--light-color);}
+.custom-dropdown .dropdown-menu a.active,
+.custom-dropdown .dropdown-menu a:hover 	{ background: var(--primary-dark); color: #fff; }
+.custom-dropdown .dropdown-toggle::after 	{ margin-left: 8px; content: "\f078"; font-size: 18px; color: rgba(0,0,0,0.3); font-weight: 900; font-family: 'Font Awesome 5 Free'; vertical-align: middle; border: none; }
+.custom-dropdown.dropdown .jcf-scrollable-wrapper 			{ margin: 0;}
+.scrollable-dropdown 						{ height: 226px; width: 100% !important;}
+
+/* -------- Button Style ------- */
+.theme-btn 				{ padding: 14px 34px ; min-width: 170px; color: #fff; background: var(--primary-color); font-weight: 600; border: none; border-radius: 2em; }
+.theme-btn:hover,
+.theme-btn:focus 		{ background: var(--base-color);}
+
+
+/******* Header Section CSS Start *******/
+.navbar 				{ padding: 14px 36px 14px; border-bottom: 1px solid var(--light-color); text-transform: uppercase;}
+.navbar-brand 			{ font-weight: 700; }
+.navbar .user-nav 		{ font-weight: 500; }
+.navbar .user-nav a .uname{ margin-left: 8px; opacity: 0.4;}
+.navbar .user-pic 		{ margin-right: 8px; height: 36px; width: 36px; display: inline-block; background: no-repeat center center / cover; border-radius: 50%; vertical-align: middle; }
+/******* Header Section CSS End *********/
+
+/******* Middle section CSS Start ******/
+.main-content 			{ min-height: calc(100vh - 80px); }
+.sidebar 				{ padding: 15px 12px; width: 70px; border-right: 1px solid var(--light-color); text-align: center; }
+.sidebar ul li a 		{ margin-bottom: 15px; display: block; }
+.sidebar ul li a img 	{ width: 100%; }
+.content-section 		{ width: calc(100% - 70px); padding: 32px 32px 32px 16px; background: #fbfbfd; }
+
+/* -------- Login page ------- */
+.login-section 				{ min-height: 100vh; font-family: 'Open Sans', sans-serif; }
+.login-section > div 		{ width: 50%; flex-shrink: 1; -webkit-flex-shrink: 1; }
+.login-section .form-block	{ padding: 32px 15px; width: 400px; max-width: 45%; min-width: 31%; margin: 0px auto; align-self: center;}
+.login-section .info 		{ margin-bottom: 24px; max-width: 340px;}
+.form-group 				{ margin-bottom: 18px;}
+.form-group label 			{ margin-bottom: 10px;}
+.form-control 				{ height: auto; padding: 10px 15px; font-size: 1rem; border-color: #eaeaea; }
+.form-control:focus 		{ box-shadow: none; -webkit-box-shadow: none; }
+.login-section .theme-btn 	{ margin: 10px 0 24px;}
+.login-section .img-block 	{ background: #e4e4e4 no-repeat center center / cover;}
+
+/* -------- Home page ------- */
+.home-table 							{ padding-left: 36px; position: relative; }
+.home-table .jcf-scrollbar-horizontal 	{ width: calc(100% - 340px) !important;}
+.scrollable-table 						{ height: calc(100vh - 144px); position: relative; }
+.theme-table 							{ display: table; background: #fff; font-weight: 500; border: 1px solid var(--light-color); box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.04); border-radius: 4px; position: relative; }
+.theme-table .toggle-row > ul > li,
+.theme-table > li						{ display: flex; display: -webkit-flex; position: relative;}
+.theme-table li:last-child				{ border: none; }
+.theme-table li > div 					{ padding: 11px 16px; min-width: 17vw; max-width: 17vw; background: #fff; color: #3e3f42; flex-shrink: 0; -webkit-flex-shrink: 0; text-align: center; border-bottom: 1px solid var(--light-color); transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+.theme-table > ul > li:last-child > div { border: none;}
+.theme-table li > div:nth-child(even)	{ background: #e5e5e5; border-bottom-color: #d2d5da; }
+.theme-table li > div:first-child 		{ position: sticky; position: -webkit-sticky; left: 0; padding-left: 30px; padding-right: 40px; min-width: 340px; max-width: 340px; color: #9ea0a5; text-transform: uppercase; text-align: left; z-index: 2; }
+.theme-table .table-head 				{ position: sticky; top: 0px; left: 0px; z-index: 5;}
+.theme-table .table-head > div 			{ padding-top: 32px; padding-bottom: 32px; display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center; }
+.theme-table .table-head > div:first-child { font-size: 18px; line-height: 24px; color: #3e3f42; justify-content: start; -webkit-justify-content: start; }
+.theme-table .table-head img 			{ max-height: 75px; width: auto; }
+.theme-table .input-row .form-control	{ padding-left: 0; padding-right: 0; text-align: center; }
+.theme-table .input-row > div:first-child .form-control { text-align: left;}
+.theme-table .toggle-row .collapse:not(.show) 	{ display: none !important;}
+.theme-table .close-toggle 				{ display: inline-block; height: 16px; width: 16px; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); opacity: 0.4; background: transparent url(../images/plus-icon.png) no-repeat center center / cover; }
+.theme-table .close-toggle.active		{ transform: translateY(-50%) rotate(45deg); -webkit-transform: translateY(-50%) rotate(45deg); filter: brightness(0) invert(1); -webkit-filter: brightness(0) invert(1); opacity: 1; }
+.theme-table .right-icon 				{ max-width: 22px; }
+.theme-table li > div li,
+.theme-table li > div p 				{ margin-bottom: 16px; text-align: left; font-weight: 400;}
+.theme-table li > div li::before		{ content: ""; margin: -2px 4px 0 0; display: inline-block; width: 4px; height: 4px; background: #3e3f42; vertical-align: middle; border-radius: 50%; }
+.theme-table .gray-toggle 				{ position: absolute; left: 0; top: 0; height: 100%; width: 100%; }
+.home-table .add-row 					{ height: 36px; width: 36px; background: #fff; position: absolute; top: 105px; left: 0px; border: 1px solid var(--light-color); z-index: 6; }
+.home-table .add-row::before			{ content: ""; display: block; height: 46%; width: 46%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); opacity: 0.4; background: transparent url(../images/plus-icon.png) no-repeat center center / cover; }
+.home-table .add-row.active,
+.home-table .add-row:hover 				{ background: var(--primary-color); border-color: #fff; }
+.home-table .add-row.active::before,
+.home-table .add-row:hover::before 		{ filter: brightness(0) invert(1); -webkit-filter: brightness(0) invert(1); opacity: 1; }
+/* Row Background */
+.theme-table .toggle-row li > div 		{ background: #21a6f4; color: #fff; }
+.theme-table .toggle-row li > div:nth-child(even) { background: #1e95db; }
+.theme-table .dark-blue > div:first-child,
+.theme-table .dark-blue > div 			{ background: #3d285f; color: #fff; }
+.theme-table .dark-blue > div:nth-child(even) { background: #372455; }
+.theme-table .toggle-row .cond-def-row > div 					{ background: #fff; color: #3e3f42;}
+.theme-table .toggle-row .cond-def-row > div:nth-child(even)	{ background: #e5e5e5; border-bottom-color: #d2d5da; }
+
+/* -------- Filter Section 5/6 screen  ------- */
+.open-full-section					{ overflow: hidden;}
+.full-section 						{ display: none; position: absolute; width: 100%; height: calc(100vh - 80px); left: 0; top: 80px; background: rgba(61, 40, 95, 0.88); z-index: 11; overflow: auto;}
+.full-section.active 				{ display: block; }
+.full-section .tab-section 			{ max-width: 740px; min-height: calc(100vh - 80px); background: #fff;}
+.full-section .tab-head 			{ padding: 0 24px 0 6px; background: var(--light-color); position: relative; }
+.full-section .tab-head .close-btn 	{ width: 22px; transform: rotate(45deg); -webkit-transform: rotate(45deg);}
+.full-section .nav-pills a 			{ margin: 0 20px; padding: 16px 0 12px; background: transparent; color: #101010; font-weight: 400; border-bottom: 4px solid transparent; border-radius: 0; text-transform: uppercase;}
+.full-section .nav-pills a.active 	{ background: transparent; color: #101010; font-weight: 500; border-bottom-color: var(--primary-dark);}
+.tab-content 						{ padding: 20px 24px; }
+.tab-content .jcf-scrollable-wrapper 	{ margin-bottom: 36px; }
+.check-list  						{ margin: 0;}
+.check-list li 						{ padding: 12px; border: 1px solid var(--light-color); border-bottom: none; font-weight: 500; transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out;}
+.check-list li:hover,
+.check-list li.active 				{ background: #f2f2f2; }
+.check-list li:last-child 			{ border-bottom: 1px solid var(--light-color);}
+.check-list .form-check 			{ padding: 0; flex-grow: 1; -webkit-flex-grow: 1; }
+.check-list .form-check-label 		{ vertical-align: middle;}
+.check-list li .delete-icon 		{ margin-right: 48px; width: 20px; flex-shrink: 0; -webkit-flex-shrink: 0; }
+.jcf-radio,
+.jcf-checkbox 						{ margin-right: 6px; height: 24px; width: 24px; border-color: #d8dce6; border-radius: 4px; box-shadow: 0px 2px 2px rgba(0,0,0,0.05); -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.05);  }
+.jcf-radio.jcf-checked,
+.jcf-checkbox.jcf-checked 			{ border-color: var(--primary-dark); background: #3d285f url(../images/check-icon.png) no-repeat center center / 60% auto; }
+.jcf-radio span,
+.jcf-checkbox span 					{ border: none; background: transparent; }
+.scrollable-list 					{ height: 295px; }
+.sub-title 							{ margin-bottom: 16px;}
+.sub-title a 						{ color: var(--primary-dark); font-weight: 500; text-transform: uppercase; border-bottom: 1px solid; }
+.selected-list 						{ margin: 0;}
+.selected-list li 					{ margin-bottom: 6px; padding: 12px 16px; background: #f2f2f2; color: #3e3f42; font-weight: 500; border: 1px solid var(--light-color); }
+.selected-list li:last-child 		{ margin-bottom: 0;}
+.selected-list li .delete-icon 		{ margin-right: 48px; width: 20px; }
+
+/* -------- Modal Block 7/8/3 screen------- */
+.modal-dialog 						{ margin: 0px auto; min-height: 100%; max-width: 70%; width: 800px;}
+.modal .action-button button 		{ margin-left: 48px; padding: 0; background: transparent; color: var(--primary-dark); font-weight: 500; border: none; border-bottom: 1px solid; text-transform: uppercase;}
+.modal .action-button button:hover,
+.modal .action-button button:focus 	{ color: var(--primary-color); }
+.modal-content 						{ padding: 36px 36px 24px; }
+.modal-body 						{ padding: 0;}
+.error-text 						{ margin-top: 24px; color: #e9322f;}
+.add-provider-modal .logo-preview 	{ margin-bottom: 8px; width: 160px; height: 160px; background: #faf5f5 no-repeat center center / 100% auto; border: 1px solid var(--light-color);}
+.add-provider-modal .custom-file 				{ display: inline-block; width: 160px; height: auto; }
+.add-provider-modal .custom-file-input 			{ position: absolute; height: 100%; cursor: pointer; z-index: 2;}
+.add-provider-modal .custom-file-label 			{ margin: 0; padding: 11px 29px; width: 100%; height: auto; background: var(--primary-dark); color: #fff; border-radius: 0; text-align: center;	position: relative; text-transform: uppercase; font-style: italic; border: none;}
+.add-provider-modal .custom-file:hover .custom-file-label 	{ background: var(--primary-color);}
+.add-provider-modal .custom-file-label::after 	{ display: none;}
+
+/* -------- Edit Section 2/3 screen  ------- */
+.common-input-list li					{ padding: 8px 16px; color: #9ea0a5; font-weight: 500; text-transform: uppercase; border: 1px solid var(--light-color); border-bottom: none; border-radius: 0;  position: relative; }
+.common-input-list li:last-child		{ border-bottom: 1px solid var(--light-color);}
+.edit-section .common-input-list.common-inputs li:last-child		{ border-bottom: none;}
+.new-provider							{ margin: 0; padding: 12px 36px 12px 15px; background: #fff; position: sticky; position: -webkit-sticky; top: 0; }
+.custom-dropdown .dropdown-menu .new-provider a { padding: 0; background: transparent; border-bottom: 1px solid;}
+.custom-dropdown .dropdown-menu .new-provider a:hover { color: var(--primary-color); }
+.common-input-list label 				{ padding: 4px 0; margin: 0; flex-shrink: 0; -webkit-flex-shrink: 0;}
+.common-input-list .dropdown 			{ position: static; }
+.common-input-list .dropdown-toggle 	{ padding: 0; background: transparent; border: none; font-weight: 700; }
+.common-input-list .form-control 		{ padding: 0; font-size: inherit; text-transform: uppercase; text-align: right; font-weight: 900; border: none; border-radius: 0; }
+.common-inputs.common-input-list .form-control 		{ padding-right: 24px; padding-left: 4px; }
+.common-inputs.common-input-list input[type="date"].form-control { padding-right: 4px; }
+.common-accordion 						{ margin-bottom: 20px;  }
+.common-accordion .card					{ border-radius: 0; border: none; }
+.common-accordion .card-link 			{ padding: 12px 36px 12px 16px; display: block; color: #9ea0a5; font-weight: 500; text-transform: uppercase; border: 1px solid var(--light-color); border-bottom: none; border-radius: 0;  position: relative;}
+.common-accordion > .card > .card-head > .card-link[aria-expanded="true"] 	{ background: var(--primary-dark); color: #fff;}
+.common-accordion .card-link:after 							{ content: ""; display: inline-block; height: 16px; width: 16px; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); opacity: 0.4; background: transparent url(../images/plus-icon.png) no-repeat center center / cover; transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; }
+.common-accordion .card-link[aria-expanded="true"]:after 	{ transform: translateY(-50%) rotate(45deg); -webkit-transform: translateY(-50%) rotate(45deg); filter: brightness(0) invert(1); -webkit-filter: brightness(0) invert(1); opacity: 1;}
+.common-accordion .card:last-child .card-link 				{ border-bottom: 1px solid var(--light-color);}
+.common-accordion .inner-collapse 		{ padding: 16px 20px;}
+.common-accordion .inner-collapse .card-head { position: relative;}
+.common-accordion .inner-collapse .card-link 					{ padding-left: 48px; pointer-events: none; }
+.common-accordion .inner-collapse .card.active .card-link,
+.common-accordion .inner-collapse .jcf-checked ~ .card-link 	{ pointer-events: initial; }
+.common-accordion .inner-collapse .card-link[aria-expanded="true"]:after 	{ filter: none; -webkit-filter: none; opacity: 0.4; }
+/* .common-accordion .inner-collapse .card:last-child .card-link 	{ border-bottom: none;} */
+.common-accordion .inner-collapse .card-head .jcf-checkbox 		{ position: absolute; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); left: 15px; z-index: 5; }
+.common-accordion .inner-accordion.jcf-scrollable				{ height: 230px; }
+.common-accordion .inner-accordion.jcf-scrollable.long-scroll 	{ height: 560px; max-height: 560px; }
+.inner-collapse .jcf-scrollbar-vertical 	{ right: -16px;}
+.inner-accordion .card.active			{ border: 2px solid var(--primary-dark); border-radius: 3px; }
+.simple-list .jcf-scrollable			{ margin: 0; height: 230px;}
+.simple-list li 						{ padding: 12px 24px; color: #9ea0a5; font-weight: 500; text-transform: uppercase; border: 1px solid var(--light-color); border-bottom: none;}
+.simple-list li:last-child 				{ border-bottom: 1px solid var(--light-color);}
+.jcf-textarea 							{ margin: 12px 0 16px; display: block; border: none;}
+.jcf-textarea textarea,
+span.jcf-textarea .jcf-scrollable-wrapper 	{ margin: 0; height: 200px !important; width: 100% !important; }
+.jcf-textarea textarea.form-control			{ padding: 12px 48px 12px 12px; border: none; background: var(--light-color); font-weight: 400; text-align: left; text-transform: none;}
+.jcf-textarea .jcf-resize 					{ display: none;}
+.jcf-textarea .jcf-scrollbar 				{ background: #fff; right: 20px; }
+.selected-edit-contract 					{ margin: 24px 0; }
+.selected-edit-contract .dropdown-toggle 	{ width: 100%; text-align: left; }
+
+/******** Middle section CSS End *******/
+
+/***** Bottom section CSS Start *******/
+
+/* -------- conatct section ------- */
+/****** Bottom section CSS End *******/
+
+/***** responsive css Start ******/
+
+@media (max-width: 1500px) {
+/* -------- Home page ------- */
+	.theme-table li > div 				{ min-width: 256px; max-width: 256px; }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+	body 					{ font-size: 13px; line-height: 19px; }
+/* -------- Home page ------- */
+	.home-table .jcf-scrollbar-horizontal { width: calc(100% - 300px) !important; }
+	.theme-table li > div 	{ padding: 10px 12px; }
+	.theme-table li > div:first-child { padding-left: 24px; padding-right: 32px; min-width: 300px; max-width: 300px; }
+	.theme-table .table-head > div:first-child { font-size: 17px; line-height: 23px; }
+	.theme-table li > div li, 
+	.theme-table li > div p 			{ margin-bottom: 14px;}
+/* -------- Filter Section 5/6 screen  ------- */
+	.full-section .tab-section { max-width: 700px;}
+
+}
+
+@media (max-width: 1199px) {
+
+}	
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	body 					{ font-size: 12px; line-height: 19px; }
+/* -------- Home page ------- */
+	.home-table .jcf-scrollbar-horizontal { width: calc(100% - 280px) !important; }
+	.theme-table li > div 				{ padding: 9px 11px; min-width: 244px; max-width: 244px; }
+	.theme-table li > div:first-child 	{ padding-left: 20px; padding-right: 28px; min-width: 280px; max-width: 280px; }
+	.theme-table .table-head > div:first-child { font-size: 16px; line-height: 22px; }
+	.theme-table .close-toggle 			{ height: 14px; width: 14px; right: 16px;}
+	.theme-table .right-icon 			{ max-width: 20px; }
+	.theme-table li > div li, 
+	.theme-table li > div p 			{ margin-bottom: 12px;}
+/* -------- Filter Section 5/6 screen  ------- */
+	.full-section .tab-section 			{ max-width: 640px;}
+	.full-section .tab-head .close-btn 	{ width: 20px;}
+	.scrollable-list 					{ height: 264px; }
+	.check-list li 						{ padding: 9px 12px;}
+	.selected-list li 					{ margin-bottom: 6px; padding: 10px 15px;}
+	.selected-list li .delete-icon 		{ margin-right: 40px; width: 18px;}
+	
+}
+
+@media (max-width: 991px) {
+	
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	body 					{ font-size: 12px; line-height: 18px; }
+	.scrollable-dropdown 	{ height: 216px;}
+/******* Middle section CSS Start ******/
+	.sidebar 				{ padding: 15px 8px; width: 54px; }
+	.sidebar ul li a 		{ margin-bottom: 13px; display: block; }
+	.content-section 		{ padding: 32px 24px 16px 14px; width: calc(100% - 54px); }
+/* -------- Home page ------- */
+	.scrollable-table 					{ height: calc(100vh - 132px); }
+	.home-table .jcf-scrollbar-horizontal { width: calc(100% - 280px) !important; }
+	.theme-table li > div 				{ padding: 9px 11px; min-width: 220px; max-width: 220px; }
+	.theme-table li > div:first-child 	{ padding-left: 20px; padding-right: 28px; min-width: 280px; max-width: 280px; }
+	.theme-table .table-head > div 		{ padding-top: 24px; padding-bottom: 24px; }
+	.theme-table .table-head img 		{ max-height: 60px;}
+	.theme-table .table-head > div:first-child { font-size: 16px; line-height: 22px; }
+	.theme-table .input-row .form-control 		{ padding: 6px 0;}
+	.theme-table .close-toggle 			{ height: 14px; width: 14px; right: 16px;}
+	.theme-table .right-icon 			{ max-width: 18px; }
+	.theme-table li > div li, 
+	.theme-table li > div p 			{ margin-bottom: 10px;}
+/* -------- Filter Section 5/6 screen  ------- */
+	.full-section .tab-section 			{ max-width: 580px;}
+	.full-section .nav-pills a 			{ margin: 0 16px; padding: 12px 0 10px;}
+	.full-section .tab-head .close-btn 	{ width: 18px;}
+	.scrollable-list 					{ height: 252px; }
+	.check-list li 						{ padding: 10px 12px;}
+	.check-list li .delete-icon 		{ margin-right: 36px; width: 18px; }
+	.selected-list li 					{ padding: 10px 14px;}
+	.selected-list li .delete-icon 		{ margin-right: 36px; width: 17px; }
+/* -------- Modal Block 7/8/3 screen------- */
+	.modal-content 						{ padding: 26px 26px 20px;}
+	.modal .action-button button 		{ margin-left: 36px; }
+	.add-provider-modal .logo-preview 	{ width: 130px; height: 130px; }
+	.add-provider-modal .custom-file 	{ width: 130px;}
+/* -------- Edit Section 2/3 screen  ------- */
+	.common-input-list li 				{ padding: 6px 14px;}
+	.common-accordion .inner-collapse .card-link { padding-left: 42px;}
+	.jcf-radio, .jcf-checkbox 			{ margin-right: 4px; height: 20px; width: 20px;}
+	.common-accordion .card-link 		{ padding: 10px 34px 10px 16px;}
+	.common-accordion .inner-accordion.jcf-scrollable { height: 200px;}
+		
+	
+}
+
+@media (max-width: 767px) {
+	body 								{ font-size: 12px; line-height: 18px; }
+	.jcf-scrollbar-horizontal 			{ height: 6px;}
+	.jcf-scrollbar-vertical 			{ right: 15px;}
+	.scrollable-dropdown 				{ height: 178px; }
+	.custom-dropdown .dropdown-menu a 	{ padding: 8px 15px;}
+	.custom-dropdown .dropdown-toggle::after { font-size: 14px;}
+/* -------- Button Style ------- */
+	.theme-btn 					{ padding: 11px 32px; min-width: 150px; }
+/******* Header Section CSS Start *******/
+	.navbar 				{ padding: 14px 16px 14px; }
+	.navbar-brand 			{ font-size: 16px;}
+	.navbar-toggler         { padding: 0; font-size: 14px; border-radius: 0; }
+    .navbar-toggler-icon    { display: block; width: 20px; height: 3px; background-color: var(--primary-dark); border-radius: 4px; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+    .navbar-toggler-icon:nth-child(2) { margin: 3px 0; }
+	.navbar-toggler:hover .navbar-toggler-icon { background-color: var(--primary-color); }
+	.navbar-collapse 		{ position: absolute; width: 100%; left: 0; top: calc(100% + 1px); padding: 0px 15px; background: #fff;  }
+/******* Middle section CSS Start ******/
+	.main-content 			{ min-height: calc(100vh - 57px); flex-direction: column; -webkit-flex-direction: column; }
+	.sidebar 				{ padding: 4px; width: 100%; border-right: none; border-bottom: 1px solid var(--light-color); }
+	.sidebar ul 			{ display: flex; display: -webkit-flex; justify-content: center; -webkit-justify-content: center; }
+	.sidebar ul li a 		{ margin: 6px; max-width: 32px; }
+	.content-section 		{ padding: 40px 15px 15px 15px; width: 100%;  }
+/* -------- Login page ------- */
+	.login-section 				{ min-height: initial; }
+	.login-section  			{ flex-direction: column-reverse; -webkit-flex-direction: column-reverse; }
+	.login-section > div 		{ width: 100%;}
+	.login-section .form-block 	{ max-width: 95%; }
+	.login-section .form-block 	{ padding: 24px 15px;}
+	.form-group 				{ margin-bottom: 14px;}
+	.form-group label 			{ margin-bottom: 8px;}
+	.form-control 				{ padding: 8px 15px; }
+	.login-section .theme-btn 	{ margin: 8px 0 16px;}
+	.login-section .img-block 	{ padding-top: 62%; }
+/* -------- Home page ------- */
+	.scrollable-table 					{ height: calc(100vh - 132px); }
+	.home-table 						{ padding-left: 0px; font-size: 11px; line-height: 18px;}
+	.home-table .jcf-scrollbar-horizontal { width: 100% !important; }
+	.home-table .jcf-scrollbar-vertical { right: 8px;}
+	.home-table .add-row 				{ height: 30px; width: 30px; top: -29px;}
+	.theme-table li > div 				{ padding: 7px 8px; min-width: 160px; max-width: 160px; }
+	.theme-table li > div:first-child 	{ padding-left: 7px; padding-right: 16px; min-width: 184px; max-width: 184px; }
+	.theme-table .table-head > div 		{ padding-top: 20px; padding-bottom: 20px; }
+	.theme-table .table-head img 		{ max-height: 50px;}
+	.theme-table .table-head > div:first-child { font-size: 14px; line-height: 20px; }
+	.theme-table .input-row .form-control 		{ padding: 4px 0; font-size: 14px;}
+	.theme-table .close-toggle 			{ height: 10px; width: 10px; right: 6px; }
+	.theme-table .right-icon 			{ max-width: 16px; }
+	.theme-table li > div li, 
+	.theme-table li > div p 			{ margin-bottom: 10px;}
+/* -------- Modal Block 7/8/3 screen------- */
+	.modal-dialog 						{ max-width: 80%; }
+	.modal-content 						{ padding: 15px 15px 10px;}
+	.modal .action-button 				{ margin-bottom: 10px;}
+	.modal .action-button button 		{ margin-left: 16px; }
+	.add-provider-modal .logo-preview 	{ width: 110px; height: 110px; }
+	.add-provider-modal .custom-file 	{ width: 110px;}
+/* -------- Filter Section 5/6 screen  ------- */
+	.full-section 						{ height: calc(100vh - 57px); top: 57px;}
+	.full-section .tab-section 			{ max-width: 580px;}
+	.full-section .nav-pills a 			{ margin: 0 16px; padding: 12px 0 10px;}
+	.full-section .tab-head .close-btn 	{ width: 18px;}
+	.tab-content .jcf-scrollable-wrapper { margin-bottom: 24px; }
+	.scrollable-list 					{ height: 252px; }
+	.check-list li 						{ padding: 10px 12px;}
+	.check-list li .delete-icon 		{ margin-right: 36px; width: 18px; }
+	.selected-list li 					{ padding: 10px 14px;}
+	.selected-list li .delete-icon 		{ margin-right: 36px; width: 18px; }
+/* -------- Edit Section 2/3 screen  ------- */
+	.common-input-list li 				{ padding: 6px 10px;}
+	.common-input-list label 			{ padding: 1px 0;}
+	.new-provider 						{ padding: 10px 28px 10px 14px;}
+	.selected-edit-contract .dropdown-toggle { padding: 10px 12px; white-space: normal;}
+	.common-accordion .card-link 		{ padding: 10px 34px 10px 16px;}
+	.common-accordion .inner-collapse .card-link { padding-left: 32px;}
+	.common-accordion .card-link::after { height: 14px; width: 14px; right: 10px; }
+	.jcf-radio, .jcf-checkbox 			{ margin-right: 4px; height: 18px; width: 18px;}
+	.common-accordion .inner-accordion.jcf-scrollable			{ height: 180px;}
+	.common-accordion .inner-collapse .card-head .jcf-checkbox 	{ left: 10px; }
+	.common-accordion .inner-accordion .common-input-list label { width: 65%; }
+	.inner-accordion .common-input-list .form-control 			{ width: 35%; }
+}
+
+@media (max-width: 575px) {
+/* -------- Custom Elemet Style ------- */
+	.jcf-scrollbar-vertical 			{ width: 5px; top: 5%; right: 10px;}
+/* -------- Filter Section 5/6 screen  ------- */
+	.full-section .tab-head 			{ padding: 0 16px 0 6px;}
+	.full-section .nav-pills a 			{ margin: 0 10px; padding: 10px 0 8px; }
+	.full-section .tab-head .close-btn 	{ width: 16px; }
+	.tab-content 						{ padding: 18px 16px; }
+	.scrollable-list 					{ height: 220px; }
+	.check-list li 						{ padding: 8px 12px; }
+	.check-list .form-check-label 		{ width: calc(100% - 30px); }
+	.check-list li .delete-icon 		{ margin-right: 12px; width: 15px; }
+	.selected-list li 					{ padding: 8px 14px;}
+	.selected-list li .delete-icon 		{ margin-right: 12px; width: 15px; }
+/* -------- Modal Block 7/8/3 screen------- */
+	.modal-dialog 						{ max-width: 90%; }
+/* -------- Edit Section 2/3 screen  ------- */
+	.common-accordion .inner-collapse 	{ padding: 15px 15px 15px 5px; }
+	.simple-list .jcf-scrollable 		{ height: 180px;}
+	.simple-list li 					{ padding: 8px 15px;}
+}
+
+@media (max-width: 359px) {
+	.home-table 						{ font-size: 10px; line-height: 17px;}
+	.theme-table li > div 				{ padding: 6px 7px; min-width: 142px; max-width: 142px; }
+	.theme-table li > div:first-child 	{ padding-left: 6px; padding-right: 16px; min-width: 152px; max-width: 152px; }
+/* -------- Filter Section 5/6 screen  ------- */
+	.full-section .nav-pills a 			{ margin: 0 8px; font-size: 11px; }
+/* -------- Edit Section 2/3 screen  ------- */
+	.common-accordion .card-link 		{ padding: 8px 26px 8px 10px; }
+	.common-accordion .card-link::after { height: 13px; width: 13px; right: 10px; }
+	
+}

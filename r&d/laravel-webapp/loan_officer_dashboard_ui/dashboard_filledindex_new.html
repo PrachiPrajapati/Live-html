@@ -1,0 +1,3916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/chart.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/vue-chartjs@3.4.0/dist/vue-chartjs.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+
+	<main class="content" role="content">
+		<section class="container-fluid bg_skyblue">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<a class="navbar-brand" href="#">
+							<img src="images/logo.png" class="img-fluid height_37" />
+						</a>
+
+						<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+								<li class="nav-item active">
+									<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Pipeline</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Proposals</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Lenders</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Partners</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Campaigns</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Reports</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Tasks</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Finance</a>
+								</li>
+							</ul>
+							<form class="form-inline my-2 my-lg-0">
+								<img src="images/bell.png" class="img-fluid m_r_15" />
+								<span class="notification_dot"></span>
+								<img src="images/user.png" class="img-fluid width_36" />
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="bg_white2 border_20p p_30 m_t_30 m_b_30">
+						<div class="row align_item_bottom">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-8">
+								<div class="content_center">
+									<div class="m_r_30">
+										<img src="images/ink_layer.png" class="img-fluid">
+									</div>
+									<div class="">
+										<div class="date_time">WED, Nov 5, 2020</div>
+										<div class="day_time">Good evening, Guilherme</div>
+										<div class="time">Breaking the boundaries of the 9-5 🕔 We're with you every step of the way.</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-4">
+								<div class="right_content_top">3 days left in Trial</div>
+								<div class="right_content_bottom">Time to close more deals, <span>upgrade now</span>.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid">
+			<div class="row p_40 collapsible_integration_content_row">
+				<div class="col-12">
+					<div class="row">
+						<div class="col-12">
+							<div class="title">
+								<span class="span_class">Set Up Your Account: <span class="fw_300">Continue</span></span>
+								<div class="arrow_down">
+									<img src="images/close_arrow.png" class="img-fluid collapsible_integration_section">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row content_center toggle_content">
+						<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							<div>
+								<div class="title_1">Did we mention you’re doing great?</div>
+								<div class="subtitle_1">Basic setup complete. Now get ready to book clients and get paid.</div>
+							</div>
+							<div class="content_center m_t_50p">
+								<div>
+									<img src="images/rocket.png" class="img-fluid" />
+								</div>
+								<div class="tip_text">
+									<strong>PRO TIP: </strong>You can always edit your brand elements (logo, color, etc) from your <span>company settings</span>.
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-lg-5">
+							<div class="content_center unactive">
+								<div class="number_circle">1</div>
+								<div class="">
+									<div class="pointer_title">
+										Update your company profile <img src="images/arrow.png" class="img-fluid" />
+									</div>
+									<div class="pointer_subtitle">Make your account stand out by updating your company profile.</div>
+								</div>
+							</div>
+							<div class="content_center m_t_30">
+								<div class="number_circle">2</div>
+								<div class="">
+									<div class="pointer_title">
+										Integrate with your favorite tools <img src="images/arrow.png" class="img-fluid" />
+									</div>
+									<div class="pointer_subtitle">Connect with all applications that make sense for your business.</div>
+								</div>
+							</div>
+							<div class="content_center m_t_30">
+								<div class="number_circle">3</div>
+								<div class="">
+									<div class="pointer_title">
+										Customize your workflow <img src="images/arrow.png" class="img-fluid" />
+									</div>
+									<div class="pointer_subtitle">Organize and control your business workflow in a single place.</div>
+								</div>
+							</div>
+							<div class="content_center m_t_30">
+								<div class="number_circle">4</div>
+								<div class="">
+									<div class="pointer_title">
+										Invite team members <img src="images/arrow.png" class="img-fluid" />
+									</div>
+									<div class="pointer_subtitle">Getting results is easier when everyone works in sync.</div>
+								</div>
+							</div>
+							<div class="content_center m_t_30">
+								<div class="number_circle">5</div>
+								<div class="">
+									<div class="pointer_title">
+										Upload your contacts <img src="images/arrow.png" class="img-fluid" />
+									</div>
+									<div class="pointer_subtitle">Add your contacts by uploading a single or bulk CSV or FNM 1003 files.</div>
+								</div>
+							</div>
+							<div class="content_center m_t_30">
+								<div class="number_circle">6</div>
+								<div class="">
+									<div class="pointer_title">
+										Set your finance goals <img src="images/arrow.png" class="img-fluid" />
+									</div>
+									<div class="pointer_subtitle">What’s your revenue goal? You set the goal, we help you get there.</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 d-sm-none col-md-2 col-lg-3 d-md-none d-lg-block">
+							<img src="images/opendoodles.png" class="img-fluid xs_m_tb_50">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid bg_skyblue p_b_30">
+			<div class="row">
+				<div class="col-12">
+					<div class="date_selection bg_white">
+						<img src="images/calendra.png" class="img-fluid m_r_15" />Jun 01, 2020 - Nov 30, 2020
+					</div>
+				</div>
+			</div>
+			<div class="row full_width">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9 column">
+					<div class="">
+						<div class="row column_width">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-6 m_t_30">
+								<div class="box_shadow column_2">
+									<div class="title">
+										Agenda 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a>
+									</div>
+									<div>
+										<div>
+											<div class="tabbable-responsive">
+												<div class="tabbable">
+													<ul class="nav nav-tabs" id="myTab" role="tablist">
+														<li class="nav-item">
+															<a class="nav-link" id="first-tab" data-toggle="tab" href="#first" role="tab" aria-controls="first" aria-selected="true">
+																<div class="fw_500">Sunday</div>
+																<div class="fw_600">11</div>
+															</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" id="second-tab" data-toggle="tab" href="#second" role="tab" aria-controls="second" aria-selected="false">
+																<div class="fw_500">Monday</div>
+																<div class="fw_600">11</div>
+															</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link active" id="third-tab" data-toggle="tab" href="#third" role="tab" aria-controls="third" aria-selected="false">
+																<div class="fw_500">Tuesday</div>
+																<div class="fw_600">11</div>
+															</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" id="fourth-tab" data-toggle="tab" href="#fourth" role="tab" aria-controls="fourth" aria-selected="false">
+																<div class="fw_500">Wednesday</div>
+																<div class="fw_600">11</div>
+															</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" id="fifth-tab" data-toggle="tab" href="#fifth" role="tab" aria-controls="fifth" aria-selected="false">
+																<div class="fw_500">Thursday</div>
+																<div class="fw_600">11</div>
+															</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" id="sixth-tab" data-toggle="tab" href="#sixth" role="tab" aria-controls="sixth" aria-selected="false">
+																<div class="fw_500">Friday</div>
+																<div class="fw_600">11</div>
+															</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" id="seventh-tab" data-toggle="tab" href="#seventh" role="tab" aria-controls="seventh" aria-selected="false">
+																<div class="fw_500">Saturday</div>
+																<div class="fw_600">11</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="card-body">
+											<div class="tab-content">
+												<div class="tab-pane fade" id="first" role="tabpanel" aria-labelledby="first-tab">
+													<div class="tab_title">
+														Overdue
+														<a href="#" class="reschedule">
+															Reschedule all
+														</a>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab_title">
+														Today - Tue Dec 10
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+													<div class="tab_title">
+														Overdue
+														<a href="#" class="reschedule">
+															Reschedule all
+														</a>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab_title">
+														Today - Tue Dec 10
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane fade show active" id="third" role="tabpanel" aria-labelledby="third-tab">
+													<div class="tab_title">
+														Overdue
+														<a href="#" class="reschedule">
+															Reschedule all
+														</a>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab_title">
+														Today - Tue Dec 10
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
+													<div class="tab_title">
+														Overdue
+														<a href="#" class="reschedule">
+															Reschedule all
+														</a>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab_title">
+														Today - Tue Dec 10
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane fade" id="fifth" role="tabpanel" aria-labelledby="fifth-tab">
+													<div class="tab_title">
+														Overdue
+														<a href="#" class="reschedule">
+															Reschedule all
+														</a>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab_title">
+														Today - Tue Dec 10
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane fade" id="sixth" role="tabpanel" aria-labelledby="sixth-tab">
+													<div class="tab_title">
+														Overdue
+														<a href="#" class="reschedule">
+															Reschedule all
+														</a>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab_title">
+														Today - Tue Dec 10
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane fade" id="seventh" role="tabpanel" aria-labelledby="seventh-tab">
+													<div class="tab_title">
+														Overdue
+														<a href="#" class="reschedule">
+															Reschedule all
+														</a>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab_title">
+														Today - Tue Dec 10
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="red_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html">
+																	<label for="html"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Nicholas Edmunds III & Sandra Edmunds
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_purple">
+																		Request Disclosure
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="yellow_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html2">
+																	<label for="html2"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		Robert & Deana Heard
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_grey">
+																		Lock Desk
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row m_t_10 border_bottom p_b_5">
+														<div class="col-sm-1 p_l_0">
+															<div class="grey_checkbox common_checkbox">
+																<div class="form-group">
+																	<input type="checkbox" id="html3">
+																	<label for="html3"></label>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-11 p_l_0">
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="tab_name">
+																		-
+																	</div>
+																</div>
+																<div class="col-sm-3 p_lr_0">
+																	<div class="tab_common_type tab_lightgreen">
+																		Custom task
+																	</div>
+																	<div class="tab_subtitle">Mon 12, 09:00 AM</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="tab_title2">In charge</div>
+																	<div class="tab_subtitle">Jared</div>
+																</div>
+																<div class="col-sm-3 p_l_0">
+																	<div class="tab_title2">Due date</div>
+																	<div class="tab_subtitle">1/21/2020 8:49am</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- END TABS DIV -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-6 m_t_30">
+								<div class="box_shadow column_2">
+									<div class="title">
+										Company Pipeline 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a>
+									</div>
+									<div>
+										<canvas id="mixed-chart"></canvas>
+									</div>
+									<div class="m_t_30">
+										<table class="table company_pipe">
+											<thead>
+												<tr>
+													<th><span>Milestone</span></th>
+													<th><span>Opportunities</span></th>
+													<th><span>Value</span></th>
+													<th><span>Trend since Last Period</span></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Funded</td>
+													<td>16</td>
+													<td>$220,000.00</td>
+													<td>
+														<div class="content_top">
+															<img src="images/green_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">+7.35%</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>Funded</td>
+													<td>16</td>
+													<td>$220,000.00</td>
+													<td>
+														<div class="content_top">
+															<img src="images/green_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">+7.35%</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>Submitted to UW</td>
+													<td>4</td>
+													<td>$39,580.00</td>
+													<td>
+														<div class="content_top">
+															<img src="images/green_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">+7.35%</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>Approved</td>
+													<td>2</td>
+													<td>$11,300.00</td>
+													<td>
+														<div class="content_top">
+															<img src="images/red_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">0.3%</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>Waiting on CTC</td>
+													<td>21</td>
+													<td>$11,300.00</td>
+													<td>
+														<div class="content_top">
+															<img src="images/green_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">7.25%</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>In Closing</td>
+													<td>3</td>
+													<td>$41,330.00</td>
+													<td>
+														<div class="content_top">
+															<img src="images/green_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">7.25%</div>
+														</div>
+													</td>
+												</tr>		
+												<tr>
+													<td>Closed</td>
+													<td>9</td>
+													<td>$60,000.00</td>
+													<td>
+														<div class="content_top">
+															<img src="images/green_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">7.25%</div>
+														</div>
+													</td>
+												</tr>	
+												<tr>
+													<td>Total</td>
+													<td>220</td>
+													<td>$3,800,000.00</td>
+													<td>
+														<div class="content_top">
+															<img src="images/green_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">7.25%</div>
+														</div>
+													</td>
+												</tr>								
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row column_width_2">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-6 m_t_30">
+								<div class="box_shadow column_3">
+									<div class="title">
+										Closing Targets 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a>
+									</div>
+									<div class="">
+										<table id="example" class="" style="width:100%">
+											<thead>
+												<tr>
+													<th class="hide_arrow">Status</th>
+													<th><span>Contact</span></th>
+													<th><span>Value</span></th>
+													<th><span>Date</span></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><div class="pink_dot common_dot"></div></td>
+													<td>Joseph Triyer</td>
+													<td>$310,000.00</td>
+													<td>11/16/2020</td>
+												</tr>
+												<tr>
+													<td><div class="pink_dot common_dot"></div></td>
+													<td>Roger Kenter</td>
+													<td>$220,000.00</td>
+													<td>11/17/2020</td>
+												</tr>
+												<tr>
+													<td><div class="pink_dot common_dot"></div></td>
+													<td>Makenna Korsgaard</td>
+													<td>$310,000.00</td>
+													<td>11/21/2020</td>
+												</tr>
+												<tr>
+													<td><div class="blue_dot common_dot"></div></td>
+													<td>Nolan Rosser</td>
+													<td>$320,000.00</td>
+													<td>11/21/2020</td>
+												</tr>
+												<tr>
+													<td><div class="blue_dot common_dot"></div></td>
+													<td>Zain Dias</td>
+													<td>$310,000.00</td>
+													<td>11/21/2020</td>
+												</tr>
+												<tr>
+													<td><div class="blue_dot common_dot"></div></td>
+													<td>Carla Botosh</td>
+													<td>$310,000.00</td>
+													<td>11/21/2020</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-6 m_t_30">
+								<div class="box_shadow column_3">
+									<div class="title">
+										Marketing ROI 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a>
+									</div>
+									<div>
+										<figure class="highcharts-figure">
+										    <div id="marketing-roi-container"></div>
+										</figure>
+										<input type="hidden" name="gree_arrow_img_url" id="gree_arrow_img_url"
+										       value="images/green_arrow.png" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row column_width_3">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-6 m_t_30 column_4">
+								<div class="box_shadow ">
+									<div class="title">
+										My team 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a>
+									</div>
+									<div class="">
+										<table id="myteam" class="" style="width:100%">
+											<thead>
+												<tr>
+													<th class="hide_arrow"></th>
+													<th><span>Variation</span></th>
+													<th><span>On track</span></th>
+													<th><span>Needs attention</span></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="bg_white2 border_20p">
+													<td>
+														<div class="number_text">
+															Number of calls
+														</div>
+														<div class="number_total">
+															458
+														</div>
+													</td>
+													<td>
+														<div class="content_top">
+															<img src="images/green_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">+7.35%</div>
+														</div>
+													</td>
+													<td>
+														<div>
+															<div class="noimg_available">
+																CC
+															</div>
+															<div class="green_dot"></div>
+														</div>
+														<div class="user_others">
+															+ 2 others
+														</div>
+													</td>
+													<td>
+														<div class="img_available">
+															<img src="images/user.png" class="img-fluid" />
+															<div class="grey_dot"></div>
+														</div>
+														<div class="user_others">
+															+ 3 others
+														</div>
+													</td>
+												</tr>
+												<tr class="bg_white2 border_20p">
+													<td>
+														<div class="number_text">
+															Submissions
+														</div>
+														<div class="number_total">
+															23
+														</div>
+													</td>
+													<td>
+														<div class="content_top">
+															<img src="images/red_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">+7.35%</div>
+														</div>
+													</td>
+													<td>
+														<div>
+															<div class="noimg_available">
+																FW
+															</div>
+															<div class="green_dot"></div>
+														</div>
+														<div class="user_others">
+															+ 2 others
+														</div>
+													</td>
+													<td>
+														<div class="img_available">
+															<img src="images/user.png" class="img-fluid" />
+															<div class="grey_dot"></div>
+														</div>
+														<div class="user_others">
+															+ 3 others
+														</div>
+													</td>
+												</tr>
+												<tr class="bg_white2 border_20p">
+													<td>
+														<div class="number_text">
+															Logged time
+														</div>
+														<div class="number_total">
+															27h 10m
+														</div>
+													</td>
+													<td>
+														<div class="content_top">
+															<img src="images/green_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">+7.35%</div>
+														</div>
+													</td>
+													<td>
+														<div>
+															<div class="noimg_available">
+																KW
+															</div>
+															<div class="green_dot"></div>
+														</div>
+														<div class="user_others">
+															+ 2 others
+														</div>
+													</td>
+													<td>
+														<div>
+															<div class="noimg_available">
+																AM
+															</div>
+															<div class="green_dot"></div>
+														</div>
+														<div class="user_others">
+															+ 3 others
+														</div>
+													</td>
+												</tr>
+												<tr class="bg_white2 border_20p">
+													<td>
+														<div class="number_text">
+															Call time
+														</div>
+														<div class="number_total">
+															23h01m
+														</div>
+													</td>
+													<td>
+														<div class="content_top">
+															<img src="images/green_arrow.png" class="img-fluid" />
+															<div class="percentage_cost">+7.35%</div>
+														</div>
+													</td>
+													<td>
+														<div>
+															<div class="noimg_available">
+																CF
+															</div>
+															<div class="green_dot badge badge-light"></div>
+														</div>
+														<div class="user_others">
+															+ 2 others
+														</div>
+													</td>
+													<td>
+														<div>
+															<div class="noimg_available">
+																WC
+															</div>
+															<div class="green_dot"></div>
+														</div>
+														<div class="user_others">
+															+ 3 others
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-6 column_4">
+								<div class="">
+									<div class="box_shadow m_t_30">
+										<div class="title">
+											Finance 
+											<a href="#">
+												<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+											</a>
+										</div>
+										<div class="js-btn-tooltip--custom" data-toggle="tooltip" data-placement="top" title="This forecast analysis is run daily based on pipeline data you provided, and it’s not a guarantee of results. It was last updated at 21:56 on 03/12/2021.">
+											Forecast <img src="images/question.png" class="img-fluid width_16p">
+										</div>
+										<div>
+											<canvas id="finance" style="width: 100%;"></canvas>
+										</div>
+									</div>
+									<div class="box_shadow m_t_30">
+										<div class="title">
+											Revenue target
+											<a href="#">
+												<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+											</a> 
+										</div>
+										<div class="set-size charts-container">
+											<div class="row">
+												<div class="col-12 col-sm-6 col-lg-6">
+													<div class="content_center">
+														<div>
+															<div class="green_slot">On Track</div>
+															<div class="goal">Monthly Goal</div>
+															<div class="blue_number">$10,000.00</div>
+															<div class="grey_number">$300,000.00</div>
+														</div>
+														<div>
+															<div class="pie-wrapper progress-80 style-2">
+																<span class="label">80<span class="smaller">%</span></span>
+																<div class="pie">
+																	<div class="left-side half-circle"></div>
+																	<div class="right-side half-circle"></div>
+																</div>
+																<div class="shadow"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-12 col-sm-6 col-lg-6">
+													<div class="content_center">
+														<div>
+															<div class="red_slot">OFF Track</div>
+															<div class="goal">Yearly Goal</div>
+															<div class="blue_number">$10,000.00</div>
+															<div class="grey_number">$300,000.00</div>
+														</div>
+														<div>
+															<div class="pie-wrapper progress-80 style-2">
+																<span class="label">80<span class="smaller">%</span></span>
+																<div class="pie">
+																	<div class="left-side half-circle"></div>
+																	<div class="right-side half-circle"></div>
+																</div>
+																<div class="shadow"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3 m_t_30">
+					<div class="box_shadow column">
+						<div class="title">
+							Activity Feed 
+							<a href="#">
+								<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+							</a>
+						</div>
+						<div class="">
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Jim Carter for <span>Joseph Triyer</span>
+										</div>
+										<div class="user_note">
+											<span>Added note: </span>
+											Lorem ipsum dolor sit amet adipiscing elit. Lorem ipsum dolor sit amet adipiscing elit. 
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:35</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Madelyn Kenter for <span>Joseph Triyer</span>
+										</div>
+										<div class="user_note">
+											<span>Call: </span>
+											5m 34s
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:29</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Adison George
+										</div>
+										<div class="user_note">
+											Logged in.
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:23</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Adison George
+										</div>
+										<div class="user_note">
+											<span>Call: </span>
+											5m 34s
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:29</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Haylie Levin
+										</div>
+										<div class="user_note">
+											<span>Call: </span>
+											5m 34s
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:29</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Jim Carter for <span>Joseph Triyer</span>
+										</div>
+										<div class="user_note">
+											<span>Added note: </span>
+											Lorem ipsum dolor sit amet adipiscing elit. Lorem ipsum dolor sit amet adipiscing elit. 
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:35</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Madelyn Kenter for <span>Joseph Triyer</span>
+										</div>
+										<div class="user_note">
+											<span>Call: </span>
+											5m 34s
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:29</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Adison George
+										</div>
+										<div class="user_note">
+											Logged in.
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:23</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Adison George
+										</div>
+										<div class="user_note">
+											<span>Call: </span>
+											5m 34s
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:29</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Haylie Levin
+										</div>
+										<div class="user_note">
+											<span>Call: </span>
+											5m 34s
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:29</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Jim Carter for <span>Joseph Triyer</span>
+										</div>
+										<div class="user_note">
+											<span>Added note: </span>
+											Lorem ipsum dolor sit amet adipiscing elit. Lorem ipsum dolor sit amet adipiscing elit. 
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:35</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Madelyn Kenter for <span>Joseph Triyer</span>
+										</div>
+										<div class="user_note">
+											<span>Call: </span>
+											5m 34s
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:29</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Adison George
+										</div>
+										<div class="user_note">
+											Logged in.
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:23</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Adison George
+										</div>
+										<div class="user_note">
+											<span>Call: </span>
+											5m 34s
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:29</div>
+							</div>
+							<div class="content_top m_b_20">
+								<div class="bg_white2 content_top border_10p p_tb_10 width_80p">
+									<div class="img_space width_20p">
+										<img src="images/user.png" class="img-fluid" />
+									</div>
+									<div class="p_5 width_80p">
+										<div class="user_name">
+											Haylie Levin
+										</div>
+										<div class="user_note">
+											<span>Call: </span>
+											5m 34s
+										</div>
+									</div>
+								</div>
+								<div class="chart_time width_20p">14:29</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main> <!-- /content -->
+<!-- 	<div class="chart">
+		<div class="chart_title">March</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled light_green_filled">
+			</div>
+			<div>
+				<div class="chart_value">
+					Revenue
+				</div>
+				<div class="chart_expenses">
+					$210,950.86
+				</div>
+			</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled light_pink_filled">
+			</div>
+			<div>
+				<div class="chart_value">
+					Expenses
+				</div>
+				<div class="chart_expenses">
+					$210,950.86
+				</div>
+			</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled blue_filled">
+			</div>
+			<div>
+				<div class="chart_value">
+					Profits
+				</div>
+				<div class="chart_expenses">
+					$210,950.86
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="chart">
+		<div class="content_center m_t_10">
+			<div class="color_filled light_green_filled">
+			</div>
+			<div>
+				<div class="chart_value">
+					Number of loans
+				</div>
+				<div class="chart_expenses">
+					21
+				</div>
+			</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled lightblue_filled">
+			</div>
+			<div>
+				<div class="chart_value">
+					Value
+				</div>
+				<div class="chart_expenses">
+					$320,000.00
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="chart">
+		<div class="content_center m_t_10">
+			<div class="color_filled_2 filled_blue">
+			</div>
+			<div class="number">1</div>
+			<div class="text_2">Repeat Customer</div>
+			<div class="content_center">
+				<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>
+				<div class="text_1">1</div>
+			</div>
+			<div class="text_3">1086%</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled_2 filled_lightblue">
+			</div>
+			<div class="number">2</div>
+			<div class="text_2">Facebook</div>
+			<div class="content_center">
+				<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>
+				<div class="text_1">1</div>
+			</div>
+			<div class="text_3">1086%</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled_2 filled_lightblue2">
+			</div>
+			<div class="number">3</div>
+			<div class="text_2">Google</div>
+			<div class="content_center">
+				<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>
+				<div class="text_1">1</div>
+			</div>
+			<div class="text_3">1086%</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled_2 filled_lightpink">
+			</div>
+			<div class="number">4</div>
+			<div class="text_2">Mailers</div>
+			<div class="content_center">
+				<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>
+				<div class="text_1">1</div>
+			</div>
+			<div class="text_3">1086%</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled_2 filled_lightpink2">
+			</div>
+			<div class="number">5</div>
+			<div class="text_2">XFR</div>
+			<div class="content_center">
+				<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>
+				<div class="text_1">1</div>
+			</div>
+			<div class="text_3">1086%</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled_2 filled_lightblue3">
+			</div>
+			<div class="number">6</div>
+			<div class="text_2">Zillow</div>
+			<div class="content_center">
+				<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>
+				<div class="text_1">1</div>
+			</div>
+			<div class="text_3">1086%</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled_2 filled_lightpink3">
+			</div>
+			<div class="number">7</div>
+			<div class="text_2">Referrals</div>
+			<div class="content_center">
+				<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>
+				<div class="text_1">1</div>
+			</div>
+			<div class="text_3">1086%</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled_2 filled_lightpink4">
+			</div>
+			<div class="number">8</div>
+			<div class="text_2">Rate table</div>
+			<div class="content_center">
+				<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>
+				<div class="text_1">1</div>
+			</div>
+			<div class="text_3">1086%</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled_2 filled_lightpink5">
+			</div>
+			<div class="number">9</div>
+			<div class="text_2">MSA</div>
+			<div class="content_center">
+				<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>
+				<div class="text_1">1</div>
+			</div>
+			<div class="text_3">1086%</div>
+		</div>
+		<div class="content_center m_t_10">
+			<div class="color_filled_2 filled_grey">
+			</div>
+			<div class="number">10</div>
+			<div class="text_2">FHA</div>
+			<div class="content_center">
+				<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>
+				<div class="text_1">1</div>
+			</div>
+			<div class="text_3">1086%</div>
+		</div>
+	</div> -->
+</body>
+<style>
+    .highcharts-figure, .highcharts-data-table table {
+        min-width: 310px;
+        max-width: 800px;
+        margin: 1em auto;
+    }
+
+    #marketing-roi-container {
+        height: 250px;
+    }
+
+    .highcharts-data-table table {
+        border-collapse: collapse;
+        border: 1px solid #EBEBEB;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+    .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+    .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+</style>
+
+
+<script type="text/javascript">
+    Highcharts.chart('marketing-roi-container', {
+        chart: {
+            type: 'spline'
+        },
+        credits: {
+            enabled: false
+        },
+
+        title: {
+            text: ''
+        },
+        xAxis: [{
+            categories: ["Jun", "Jul", "Aug",  "Sep", "Oct",  "Nov"],
+            crosshair: true,
+            lineWidth: 1
+        }],
+        yAxis: [{
+            lineWidth: 1,
+            title: {
+                text: null
+            }
+        }],
+        tooltip: {
+        	 outide: true,
+            shared: true,
+            useHTML: true,
+            borderWidth: 0,
+            backgroundColor: "rgba(255,255,255,0)",
+            borderRadius: 0,
+            positioner: function (labelWidth, labelHeight, point) {
+                return { x: point.plotX, y: 15 };
+            },
+            shadow: false,
+            formatter: function() {
+                var html = '<div class="chart">'+
+                        		'<div class="content_center m_t_10">'+
+                        			'<div class="width_100">'+
+                       				'<div class="color_filled_2 filled_blue">'+
+                        			'</div>'+
+                        			'</div>'+
+                        			'<div class="number">1</div>'+
+                        			'<div class="text_2">Repeat Customer</div>'+
+                					'<div class="content_center">'+
+                        				'<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>'+
+                        				'<div class="text_1">1</div>'+
+                        			'</div>'+
+                        			'<div class="text_3">'+this.points[0].y+'%</div>'+
+                        		'</div>'+
+                        '<div class="content_center m_t_10">'+
+                        			'<div class="width_100">'+
+                        '<div class="color_filled_2 filled_lightblue">'+
+                        '</div>'+
+                        	'</div>'+
+                        '<div class="number">2</div>'+
+                        '<div class="text_2">Facebook</div>'+
+                        '<div class="content_center">'+
+                        '<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>'+
+                        '<div class="text_1">1</div>'+
+                        '</div>'+
+                        '<div class="text_3">'+this.points[1].y+'%</div>'+
+                        '</div>'+
+                        '<div class="content_center m_t_10">'+
+                        			'<div class="width_100">'+
+                        '<div class="color_filled_2 filled_lightblue2">'+
+                        '</div>'+
+                        	'</div>'+
+                        '<div class="number">3</div>'+
+                        '<div class="text_2">Google</div>'+
+                        '<div class="content_center">'+
+                        '<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>'+
+                        '<div class="text_1">1</div>'+
+                        '</div>'+
+                        '<div class="text_3">'+this.points[2].y+'%</div>'+
+                        '</div>'+
+                        '<div class="content_center m_t_10">'+
+                        			'<div class="width_100">'+
+                        '<div class="color_filled_2 filled_lightpink">'+
+                        '</div>'+
+                        	'</div>'+
+                        '<div class="number">4</div>'+
+                        '<div class="text_2">Mailers</div>'+
+                        '<div class="content_center">'+
+                        '<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>'+
+                        '<div class="text_1">1</div>'+
+                        '</div>'+
+                        '<div class="text_3">'+this.points[3].y+'%</div>'+
+                        '</div>'+
+                        '<div class="content_center m_t_10">'+
+                        			'<div class="width_100">'+
+                        '<div class="color_filled_2 filled_lightpink2">'+
+                        '</div>'+
+                        	'</div>'+
+                        '<div class="number">5</div>'+
+                        '<div class="text_2">XFR</div>'+
+                        '<div class="content_center">'+
+                        '<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>'+
+                        '<div class="text_1">1</div>'+
+                        '</div>'+
+                        '<div class="text_3">'+this.points[4].y+'%</div>'+
+                        '</div>'+
+                        '<div class="content_center m_t_10">'+
+                        			'<div class="width_100">'+
+                        '<div class="color_filled_2 filled_lightblue3">'+
+                        '</div>'+
+                        	'</div>'+
+                        '<div class="number">6</div>'+
+                        '<div class="text_2">Zillow</div>'+
+                        '<div class="content_center">'+
+                        '<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>'+
+                        '<div class="text_1">1</div>'+
+                        '</div>'+
+                        '<div class="text_3">'+this.points[5].y+'%</div>'+
+                        '</div>'+
+                        '<div class="content_center m_t_10">'+
+                        			'<div class="width_100">'+
+                        '<div class="color_filled_2 filled_lightpink3">'+
+                        '</div>'+
+                        	'</div>'+
+                        '<div class="number">7</div>'+
+                        '<div class="text_2">Referrals</div>'+
+                        '<div class="content_center">'+
+                        '<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>'+
+                        '<div class="text_1">1</div>'+
+                        '</div>'+
+                        '<div class="text_3">'+this.points[6].y+'%</div>'+
+                        '</div>'+
+                        '<div class="content_center m_t_10">'+
+                        			'<div class="width_100">'+
+                        '<div class="color_filled_2 filled_lightpink4">'+
+                        '</div>'+
+                        	'</div>'+
+                        '<div class="number">8</div>'+
+                        '<div class="text_2">Rate table</div>'+
+                '<div class="content_center">'+
+                        '<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>'+
+                        '<div class="text_1">1</div>'+
+                        '</div>'+
+                        '<div class="text_3">'+this.points[7].y+'%</div>'+
+                        '</div>'+
+                        '<div class="content_center m_t_10">'+
+                        			'<div class="width_100">'+
+                        '<div class="color_filled_2 filled_lightpink5">'+
+                        '</div>'+
+                        	'</div>'+
+                        '<div class="number">9</div>'+
+                        '<div class="text_2">MSA</div>'+
+                        '<div class="content_center">'+
+                        '<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>'+
+                        '<div class="text_1">1</div>'+
+                        '</div>'+
+                        '<div class="text_3">'+this.points[8].y+'%</div>'+
+                        '</div>'+
+                        '<div class="content_center m_t_10">'+
+                        			'<div class="width_100">'+
+                        	'<div class="color_filled_2 filled_grey">'+
+                        	'</div>'+
+                        	'</div>'+
+                        	'<div class="number">10</div>'+
+                        	'<div class="text_2">FHA</div>'+
+                        	'<div class="content_center">'+
+                        		'<div class=""><img src="images/green_arrow.png" class="img-fluid"></div>'+
+                        		'<div class="text_1">1</div>'+
+                        	'</div>'+
+                        	'<div class="text_3">'+this.points[9].y+'%</div>'+
+                        '</div>'+
+                        '</div>';
+                return html;
+                //return '<b>'+this.x+'</b><br><b>No of loans </b>' + this.points[0].y + '<br> <b>Value </b>' + this.points[1].y;
+            }
+        },
+        legend: {
+            enabled: false,
+            layout: 'vertical',
+            align: 'left',
+            x: 120,
+            verticalAlign: 'top',
+            y: 100,
+            floating: true,
+            backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || // theme
+            'rgba(255,255,255,0.25)'
+        },
+        series: [{
+            name: '1 Repeat Customer',
+            //type: 'spline',
+            //yAxis: 1,
+            data: [500, 50, 2424, 14040,  14141,  4111],
+            color: '#657FDB',
+            marker: {
+                symbol: 'circle',
+                lineWidth: 2
+            }
+
+        }, {
+            name: '2 Facebook',
+            //type: 'spline',
+            data: [1288,  88942,  44545,  7588, 99, 242],
+            color: '#BDE2FF',
+            marker: {
+                symbol: 'circle',
+                lineWidth: 2
+            }
+        }, {
+            name: '3 Google',
+            //type: 'spline',
+            data: [1288,  98942,  44545,  7588, 199,  2242],
+            color: '#AED0FE',
+            marker: {
+                symbol: 'circle',
+                lineWidth: 2
+            }
+        }, {
+            name: '4 Mailiers',
+            //type: 'spline',
+            data: [2388,  78942,  64545,  5588, 3199,  6242],
+            color: '#DCCEFF',
+            marker: {
+                symbol: 'circle',
+                lineWidth: 2
+            }
+        }, {
+            name: '5 XFR',
+            //type: 'spline',
+            data: [6388,  8942,  94545,  7588, 8199,  8242],
+            color: '#FFD6FF',
+            marker: {
+                symbol: 'circle',
+                lineWidth: 2
+            }
+        }, {
+            name: '6 Zillow',
+            //type: 'spline',
+            data: [5388,  8942,  74545,  9588, 5199,  7242],
+            color: '#AEE2F5',
+            marker: {
+                symbol: 'circle',
+                lineWidth: 2
+            }
+        }, {
+            name: '7 Referrals',
+            //type: 'spline',
+            data: [7388,  48942,  84545,  3588, 9199,  3242],
+            color: '#D1B9D6',
+            marker: {
+                symbol: 'circle',
+                lineWidth: 2
+            }
+        }, {
+            name: '8 Rate table',
+            //type: 'spline',
+            data: [7388,  48942,  84545,  3588, 9199,  3242],
+            color: '#E7C6FF',
+            marker: {
+                symbol: 'circle',
+                lineWidth: 2
+            }
+        }, {
+            name: '9 MSA',
+            //type: 'spline',
+            data: [7388,  48942,  84545,  3588, 9199,  3242],
+            color: '#CC95C1',
+            marker: {
+                symbol: 'circle',
+                lineWidth: 2
+            }
+        }, {
+            name: '10 FHA',
+            //type: 'spline',
+            data: [7388,  48942,  84545,  3588, 9199,  3242],
+            color: '#BBCFFF',
+            marker: {
+                symbol: 'circle',
+                lineWidth: 2
+            }
+        },
+        ]
+    });
+</script>
+<script type="text/javascript">
+
+	function beforePrintHandler () {
+		for (var id in Chart.instances) {
+			Chart.instances[id].resize();
+		}
+	}	
+	new Chart(document.getElementById("mixed-chart"), {
+		type: 'bar',
+		data: {
+			labels: ["Funded", "Submitted to UW", "Approved", "Waiting on CTC","In Closing", "Closed", "Declined - Borrower"],
+//            toolTip:{
+
+//                content: "No of loans: 21"
+//            },
+datasets: [
+{
+	type: 'line',
+	label: 'No of loans ',
+	borderColor: "rgb(50,70,211)",
+	pointBackgroundColor: "rgb(50,70,211)",
+	backgroundColor: "rgb(50,70,211)",
+	pointBorderWidth: 2,
+	pointRadius: 6,
+	pointHoverRadius: 6,
+	fill: false,
+                    //data: [16,16,4,2,21,3,9,11],
+                    data: [220000.00,220000.00,39580.00,11300.00,11300.00,41330.00,60000.00,72000.00],
+                }, {
+                	type: 'bar',
+                	label: 'Value ',
+//                    borderColor: "rgb(255, 0, 0)",
+//                    pointBackgroundColor: 'rgb(255, 0, 0)',
+//                    backgroundColor: 'rgb(255, 0, 0)',
+fill: false,
+data: [220000.00,220000.00,39580.00,11300.00,11300.00,41330.00,60000.00,72000.00],
+                    //data: ['16:220000.00','16:220000.00','4:39580.00','2:11300.00','21:11300.00','3:41330.00','9:60000.00'],
+                    cornerRadius: "50"
+                }
+                ],
+//            datasets: [
+//                {
+//                    label: "Europe",
+//                    type: "line",
+//                    borderColor:  "rgb(50,70,211)",
+//                    pointBorderColor: "rgb(50,70,211)",
+//                    pointBackgroundColor: "rgb(50,70,211)",
+//                    pointBorderWidth: 2,
+//                    pointRadius: 6,
+//                    pointHoverRadius: 6,
+//                    //data: ['16:220000.00','16:220000.00','4:39580.00','2:11300.00','21:11300.00','3:41330.00','9:60000.00'],
+//                    data: [
+//                        {"x" : 16, "y" : 220000.00},
+//                        {"x" : 16, "y" : 220000.00},
+//                        {"x" : 4, "y" : 39580.00},
+//                        {"x" : 2, "y" : 11300.00},
+//                        {"x" : 21, "y" : 11300.00},
+//                        {"x" : 3, "y" : 41330.00},
+//                        {"x" : 9, "y" : 60000.00},
+//                        {"x" : 11, "y" : 72000.00}
+//                    ],
+//                    fill: false
+//                }, {
+//                    label: "Europe",
+//                    type: "bar",
+//                    backgroundColor: ["rgb(50 70 211 / 0.1)"],
+//                    //data: [500,675,734,608,450,675,734],
+//                    //data: ['16:220000.00','16:220000.00','4:39580.00','2:11300.00','21:11300.00','3:41330.00','9:60000.00'],
+//                    data: [
+//                        {"x" : 16, "y" : 220000.00},
+//                        {"x" : 16, "y" : 220000.00},
+//                        {"x" : 4, "y" : 39580.00},
+//                        {"x" : 2, "y" : 11300.00},
+//                        {"x" : 21, "y" : 11300.00},
+//                        {"x" : 3, "y" : 41330.00},
+//                        {"x" : 9, "y" : 60000.00},
+//                        {"x" : 11, "y" : 72000.00}
+//                    ],
+//                    cornerRadius: "50"
+//                }
+//            ]
+},
+options: {
+	title: {
+		display: false,
+		text: 'Population growth (millions): Europe & Africa'
+	},
+	cornerRadius: 10,
+	scales: {
+		xAxes: [{
+			stacked: true,
+			display: false,
+			label:false,
+			ticks: {
+				fontColor: "#9FA3C0",
+				labelFontSize: 8,
+				labelFontFamily: "Inter,sans-serif",
+                        labelFontWeight: "300",// this here
+                        autoSkip: false,
+                        rotate: 0,
+                        //labelDisplay: "auto",
+                    },
+                }],
+                yAxes: [{
+                	display: false,
+                	stacked: true,
+                	label: false,
+                	autoSkip: false
+                }],
+            },
+            legend: {
+            	display: false
+            },
+//            tooltips: {
+//                mode: 'index',
+//                callbacks: {
+//                    // Use the footer callback to display the sum of the items showing in the tooltip
+//                    footer: function(tooltipItems, data) {
+//                        var sum = 0;
+//
+//                        tooltipItems.forEach(function(tooltipItem) {
+//                            sum += data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+//                        });
+//                        return 'Sum: ' + sum;
+//                    },
+//                },
+//                footerFontStyle: 'normal'
+//            },
+//            tooltips: {
+//                // Disable the on-canvas tooltip
+//                enabled: false,
+//
+//                custom: function(tooltipModel) {
+//                    // Tooltip Element
+//                    var tooltipEl = document.getElementById('chartjs-tooltip');
+//
+//                    // Create element on first render
+//                    if (!tooltipEl) {
+//                        tooltipEl = document.createElement('div');
+//                        tooltipEl.id = 'chartjs-tooltip';
+//                        tooltipEl.innerHTML = '<table></table>';
+//                        document.body.appendChild(tooltipEl);
+//                    }
+//
+//                    // Hide if no tooltip
+//                    if (tooltipModel.opacity === 0) {
+//                        tooltipEl.style.opacity = 0;
+//                        return;
+//                    }
+//
+//                    // Set caret Position
+//                    tooltipEl.classList.remove('above', 'below', 'no-transform');
+//                    if (tooltipModel.yAlign) {
+//                        tooltipEl.classList.add(tooltipModel.yAlign);
+//                    } else {
+//                        tooltipEl.classList.add('no-transform');
+//                    }
+//
+//                    function getBody(bodyItem) {
+//                        return bodyItem.lines;
+//                    }
+//                    console.log(tooltipModel.body);
+//
+//                    // Set Text
+//                    if (tooltipModel.body) {
+//                        var titleLines = tooltipModel.title || [];
+//                        var bodyLines = tooltipModel.body.map(getBody);
+//
+//                        var innerHtml = '<thead>';
+//
+////                        titleLines.forEach(function(title) {
+////                            innerHtml += '<tr><th>' + title + '</th></tr>';
+////                        });
+//                        //innerHtml += '<tr><th>No of loans:</th></tr>';
+//                        innerHtml += '</thead><tbody>';
+//
+//                        bodyLines.forEach(function(body, i) {
+//                            //console.log(body);
+//                            var colors = tooltipModel.labelColors[i];
+//                            var style = 'background:rgb(255, 255, 255)';
+//                            style += '; border-color:' + colors.borderColor;
+//                            style += '; border-width: 2px';
+//                            var span = '<span style="' + style + '"></span>';
+//                            innerHtml += '<tr><td>' + span + body + '</td></tr>';
+//                            innerHtml += '<tr><td>' + span + body + '</td></tr>';
+//                        });
+//                        innerHtml += '</tbody>';
+//
+//                        var tableRoot = tooltipEl.querySelector('table');
+//                        tableRoot.innerHTML = innerHtml;
+//                    }
+//
+//                    // `this` will be the overall tooltip
+//                    var position = this._chart.canvas.getBoundingClientRect();
+//
+//                    // Display, position, and set styles for font
+//                    tooltipEl.style.opacity = 1;
+//                    tooltipEl.style.position = 'absolute';
+//                    tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+//                    tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+//                    tooltipEl.style.fontFamily = tooltipModel._bodyFontFamily;
+//                    tooltipEl.style.fontSize = tooltipModel.bodyFontSize + 'px';
+//                    tooltipEl.style.background = 'rgb(255, 255, 255)';
+//                    tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
+//                    tooltipEl.style.padding = tooltipModel.yPadding + 'px ' + tooltipModel.xPadding + 'px';
+//                    tooltipEl.style.pointerEvents = 'none';
+//                }
+//            }
+
+tooltips: {
+	backgroundColor : 'rgb(255, 255, 255)',
+	bodyFontColor : '#0C1347',
+	mode: 'index',
+	intersect: true
+                //shared: true
+//                callbacks: {
+//                    label: function(tooltipItem, data) {
+//                        //console.log(tooltipItem);
+//                        //console.log(data);
+//                        let value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+//                        var arr = ['No of loans: '+ value.x];
+//                        arr.push('value: '+ value.y);
+//                        return arr;
+//                        //return 'No of loans: ' + value.x+ '\r\nvalue: ' + value.y;
+//                        //return label;
+//                    },
+//                    labelColor: function(tooltipItem, chart, data) {
+////                        console.log(tooltipItem);
+//                        console.log(chart);
+//                        console.log(chart.tooltip._data.datasets[tooltipItem.datasetIndex].data);
+////                        console.log(data);
+////                        let value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+////                        console.log(value);
+////                        let value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+////                        var arr = ['No of loans: '+ value.x];
+////                        arr.push('value: '+ value.y);
+////                        console.log(arr);
+//                        return {
+//                            borderColor: 'rgb(255, 0, 0)',
+//                            backgroundColor: 'rgb(255, 0, 0)'
+//                        };
+//                    },
+//                }
+}
+}
+});
+var ctx = document.getElementById("finance");
+var myChart = new Chart(ctx, {
+	type: 'bar',
+	data: {
+		labels: ["Dec 2019", "Jan 2020", "Feb 2020" ,"Mar 2020" , "Apr 2020", "May 2020" ," Jun 2020"],
+		datasets: [{
+			label: 'Revenue ',
+                //data: [12, 19, 3, 5, 2, 3, 20, 3, 5, 6, 2, 1],
+                data: [
+                210950.86,
+                210950.86,
+                210950.86,
+                210950.86,
+                210950.86,
+                210950.86,
+                210950.86,
+                210950.86
+                ],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+//                    'rgba(54, 162, 235, 0.2)',
+//                    'rgba(255, 206, 86, 0.2)',
+//                    'rgba(75, 192, 192, 0.2)',
+//                    'rgba(153, 102, 255, 0.2)',
+//                    'rgba(255, 159, 64, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(54, 162, 235, 0.2)',
+//                    'rgba(255, 206, 86, 0.2)',
+//                    'rgba(75, 192, 192, 0.2)',
+//                    'rgba(153, 102, 255, 0.2)',
+//                    'rgba(255, 159, 64, 0.2)'
+],
+borderColor: [
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)',
+'rgba(255, 99, 132, 0.2)'
+//                    'rgba(54, 162, 235, 1)',
+//                    'rgba(255, 206, 86, 1)',
+//                    'rgba(75, 192, 192, 1)',
+//                    'rgba(153, 102, 255, 1)',
+//                    'rgba(255, 159, 64, 1)',
+//                    'rgba(255,99,132,1)',
+//                    'rgba(54, 162, 235, 1)',
+//                    'rgba(255, 206, 86, 1)',
+//                    'rgba(75, 192, 192, 1)',
+//                    'rgba(153, 102, 255, 1)',
+//                    'rgba(255, 159, 64, 1)'
+],
+stack: "s1",
+borderWidth: 0
+},
+{
+	label: 'Expenses ',
+                    //data: [-6, -9, -12, -15, -20, -13, -10, -19, -15, -16, -12, -10],
+                    data: [
+                    180450.00,
+                    180450.00,
+                    180450.00,
+                    180450.00,
+                    180450.00,
+                    180450.00,
+                    180450.00,
+                    180450.00
+                    ],
+                    backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                    ],
+                    stack: "s1",
+                    borderWidth: 0
+                },
+                {
+                	label: "Profits ",
+                	type: "line",
+                	borderColor:  "rgb(50,70,211)",
+                	pointBorderColor: "rgb(50,70,211)",
+                	pointBackgroundColor: "rgb(50,70,211)",
+                	pointBorderWidth: 2,
+                	pointRadius: 6,
+                	pointHoverRadius: 6,
+//                    pointBorderColor: "#fff",
+//                    boxShadow: "0px 1px 5px 0px #000000 25%;",
+//                    pointBackgroundColor: "#FF9900",
+//                    pointBorderWidth: 2,
+//                    pointRadius: 6,
+//                    pointHoverRadius: 6,
+                    //data: [6, 9.5, 1.5, 2.5, 1, 1.5, 10, 1.5, 2.5, 3, 1, 0.5],
+                    data: [
+                    30450.00,
+                    30450.00,
+                    30450.00,
+                    30450.00,
+                    30450.00,
+                    30450.00,
+                    30450.00,
+                    30450.00
+                    ],
+                    fill: false
+                }]
+//            datasets: [{
+//                label: '# of Tomatoes',
+//                //data: [12, 19, 3, 5, 2, 3, 20, 3, 5, 6, 2, 1],
+//                data: [
+//                    {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                    {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                    {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                    {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                    {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                    {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                    {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                    {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00}
+//                ],
+//                backgroundColor: [
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)'
+////                    'rgba(54, 162, 235, 0.2)',
+////                    'rgba(255, 206, 86, 0.2)',
+////                    'rgba(75, 192, 192, 0.2)',
+////                    'rgba(153, 102, 255, 0.2)',
+////                    'rgba(255, 159, 64, 0.2)',
+////                    'rgba(255, 99, 132, 0.2)',
+////                    'rgba(54, 162, 235, 0.2)',
+////                    'rgba(255, 206, 86, 0.2)',
+////                    'rgba(75, 192, 192, 0.2)',
+////                    'rgba(153, 102, 255, 0.2)',
+////                    'rgba(255, 159, 64, 0.2)'
+//                ],
+//                borderColor: [
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)',
+//                    'rgba(255, 99, 132, 0.2)'
+////                    'rgba(54, 162, 235, 1)',
+////                    'rgba(255, 206, 86, 1)',
+////                    'rgba(75, 192, 192, 1)',
+////                    'rgba(153, 102, 255, 1)',
+////                    'rgba(255, 159, 64, 1)',
+////                    'rgba(255,99,132,1)',
+////                    'rgba(54, 162, 235, 1)',
+////                    'rgba(255, 206, 86, 1)',
+////                    'rgba(75, 192, 192, 1)',
+////                    'rgba(153, 102, 255, 1)',
+////                    'rgba(255, 159, 64, 1)'
+//                ],
+//                stack: "s1",
+//                borderWidth: 0
+//            },
+//                {
+//                    label: '# of potatoes',
+//                    //data: [-6, -9, -12, -15, -20, -13, -10, -19, -15, -16, -12, -10],
+//                    data: [
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00}
+//                    ],
+//                    backgroundColor: [
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)'
+//                    ],
+//                    borderColor: [
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)'
+//                    ],
+//                    stack: "s1",
+//                    borderWidth: 0
+//                },
+//                {
+//                    label: "Europe",
+//                    type: "line",
+//                    borderColor:  "rgb(50,70,211)",
+//                    pointBorderColor: "rgb(50,70,211)",
+//                    pointBackgroundColor: "rgb(50,70,211)",
+//                    pointBorderWidth: 2,
+//                    pointRadius: 6,
+//                    pointHoverRadius: 6,
+////                    pointBorderColor: "#fff",
+////                    boxShadow: "0px 1px 5px 0px #000000 25%;",
+////                    pointBackgroundColor: "#FF9900",
+////                    pointBorderWidth: 2,
+////                    pointRadius: 6,
+////                    pointHoverRadius: 6,
+//                    //data: [6, 9.5, 1.5, 2.5, 1, 1.5, 10, 1.5, 2.5, 3, 1, 0.5],
+//                    data: [
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00},
+//                        {"x" : 210950.86, "y" : 180450.00, "z" : 30450.00}
+//                    ],
+//                    fill: false
+//                }]
+},
+options: {
+	responsive: false,
+	cornerRadius: 10,
+	legend: {
+		display: false
+	},
+            // scales: {
+            //   xAxes: [{
+            //     ticks: {
+            //       maxRotation: 90,
+            //       minRotation: 80
+            //     }
+            //     // },
+            //     //   gridLines: {
+            //     //   offsetGridLines: true // à rajouter
+            //     // }
+            //   },
+            //   {
+            //     //position: "top",
+            //     // ticks: {
+            //     //   maxRotation: 90,
+            //     //   minRotation: 80
+            //     // },
+            //     // gridLines: {
+            //     //   offsetGridLines: true // et matcher pareil ici
+            //     // }
+            //   }],
+            //   yAxes: [{
+            //     ticks: {
+            //       beginAtZero: true
+            //     }
+            //   }]
+            // }
+            tooltips: {
+            	backgroundColor : 'rgb(255, 255, 255)',
+            	bodyFontColor : '#0C1347',
+            	mode: 'index',
+            	intersect: true
+                //shared: true
+//                callbacks: {
+//                    label: function(tooltipItem, data) {
+//                        //console.log(tooltipItem.xLabel);
+//                        var month = tooltipItem.xLabel;
+//                        var res = month.split(' ');
+//                        //console.log(res);
+//                        let value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+//                        var arr = [res[0]];
+//                        arr.push('Revenue: ' + value.x);
+//                        arr.push('Expenses: ' + value.y);
+//                        arr.push('Profits: ' + value.z);
+//                        return arr;
+//                        //return res[0] + ' Revenue: ' + value.x+ '\r\nExpenses: ' + value.y + '\r\nProfits: ' + value.z;
+//                        //return label;
+//                    }
+//                }
+}
+}
+});
+//var ctx = document.getElementById("myChart").getContext('2d');
+
+var myChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: ["Jun", "Jul", "Aug",  "Sep", "Oct",  "Nov"],
+		datasets: [{
+                label: '1 Repeat Customer ', // Name the series
+                data: [500, 50, 2424, 14040,  14141,  4111, 4544, 47, 5555, 6811], // Specify the data values array
+//                data: [
+//                    {"x" : 1, "y" : 'Repeat Customer', "z" : 1086},
+//                    {"x" : 2, "y" : 'Facebook', "z" : 1086},
+//                    {"x" : 3, "y" : 'Google', "z" : 1086},
+//                    {"x" : 4, "y" : 'Mailiers', "z" : 1086},
+//                    {"x" : 5, "y" : 'XFR', "z" : 1086},
+//                    {"x" : 6, "y" : 'Zillow', "z" : 1086},
+//                    {"x" : 7, "y" : 'Referrals', "z" : 1086},
+//                    {"x" : 8, "y" : 'Rate table', "z" : 1086},
+//                    {"x" : 9, "y" : 'MSA', "z" : 1086},
+//                    {"x" : 10, "y" : 'FHA', "z" : 1086},
+//                ],
+fill: false,
+                borderColor: '#657FDB', // Add custom color border (Line)
+                backgroundColor: '#657FDB', // Add custom color background (Points and Fill)
+                borderWidth: 1 // Specify bar border width
+            },
+            {
+                    label: '2 Facebook ', // Name the series
+                    data: [1288,  88942,  44545,  7588, 99, 242,  1417, 5504, 75, 457], // Specify the data values array
+//                    data: [
+//                        {"x" : 1, "y" : 'Repeat Customer', "z" : 1086},
+//                        {"x" : 2, "y" : 'Facebook', "z" : 1086},
+//                        {"x" : 3, "y" : 'Google', "z" : 1086},
+//                        {"x" : 4, "y" : 'Mailiers', "z" : 1086},
+//                        {"x" : 5, "y" : 'XFR', "z" : 1086},
+//                        {"x" : 6, "y" : 'Zillow', "z" : 1086},
+//                        {"x" : 7, "y" : 'Referrals', "z" : 1086},
+//                        {"x" : 8, "y" : 'Rate table', "z" : 1086},
+//                        {"x" : 9, "y" : 'MSA', "z" : 1086},
+//                        {"x" : 10, "y" : 'FHA', "z" : 1086},
+//                    ],
+fill: false,
+                    borderColor: '#BDE2FF', // Add custom color border (Line)
+                    backgroundColor: '#BDE2FF', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                },
+                {
+                    label: '3 Google ', // Name the series
+                    data: [1288,  98942,  44545,  7588, 199,  2242, 1617, 5504, 7775, 5457], // Specify the data values array
+//                    data: [
+//                        {"x" : 1, "y" : 'Repeat Customer', "z" : 1086},
+//                        {"x" : 2, "y" : 'Facebook', "z" : 1086},
+//                        {"x" : 3, "y" : 'Google', "z" : 1086},
+//                        {"x" : 4, "y" : 'Mailiers', "z" : 1086},
+//                        {"x" : 5, "y" : 'XFR', "z" : 1086},
+//                        {"x" : 6, "y" : 'Zillow', "z" : 1086},
+//                        {"x" : 7, "y" : 'Referrals', "z" : 1086},
+//                        {"x" : 8, "y" : 'Rate table', "z" : 1086},
+//                        {"x" : 9, "y" : 'MSA', "z" : 1086},
+//                        {"x" : 10, "y" : 'FHA', "z" : 1086},
+//                    ],
+fill: false,
+                    borderColor: '#AED0FE', // Add custom color border (Line)
+                    backgroundColor: '#AED0FE', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                },
+                {
+                    label: '4 Mailiers ', // Name the series
+                    data: [2388,  78942,  64545,  5588, 3199,  6242, 5617, 8504, 7759, 4557], // Specify the data values array
+//                    data: [
+//                        {"x" : 1, "y" : 'Repeat Customer', "z" : 1086},
+//                        {"x" : 2, "y" : 'Facebook', "z" : 1086},
+//                        {"x" : 3, "y" : 'Google', "z" : 1086},
+//                        {"x" : 4, "y" : 'Mailiers', "z" : 1086},
+//                        {"x" : 5, "y" : 'XFR', "z" : 1086},
+//                        {"x" : 6, "y" : 'Zillow', "z" : 1086},
+//                        {"x" : 7, "y" : 'Referrals', "z" : 1086},
+//                        {"x" : 8, "y" : 'Rate table', "z" : 1086},
+//                        {"x" : 9, "y" : 'MSA', "z" : 1086},
+//                        {"x" : 10, "y" : 'FHA', "z" : 1086},
+//                    ],
+fill: false,
+                    borderColor: '#DCCEFF', // Add custom color border (Line)
+                    backgroundColor: '#DCCEFF', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                },
+                {
+                    label: '5 XFR ', // Name the series
+                    data: [6388,  8942,  94545,  7588, 8199,  8242, 9617, 5504, 6759, 3557], // Specify the data values array
+//                    data: [
+//                        {"x" : 1, "y" : 'Repeat Customer', "z" : 1086},
+//                        {"x" : 2, "y" : 'Facebook', "z" : 1086},
+//                        {"x" : 3, "y" : 'Google', "z" : 1086},
+//                        {"x" : 4, "y" : 'Mailiers', "z" : 1086},
+//                        {"x" : 5, "y" : 'XFR', "z" : 1086},
+//                        {"x" : 6, "y" : 'Zillow', "z" : 1086},
+//                        {"x" : 7, "y" : 'Referrals', "z" : 1086},
+//                        {"x" : 8, "y" : 'Rate table', "z" : 1086},
+//                        {"x" : 9, "y" : 'MSA', "z" : 1086},
+//                        {"x" : 10, "y" : 'FHA', "z" : 1086},
+//                    ],
+fill: false,
+                    borderColor: '#FFD6FF', // Add custom color border (Line)
+                    backgroundColor: '#FFD6FF', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                },
+                {
+                    label: '6 Zillow ', // Name the series
+                    data: [5388,  8942,  74545,  9588, 5199,  7242, 8617, 9504, 9759, 8557], // Specify the data values array
+//                    data: [
+//                        {"x" : 1, "y" : 'Repeat Customer', "z" : 1086},
+//                        {"x" : 2, "y" : 'Facebook', "z" : 1086},
+//                        {"x" : 3, "y" : 'Google', "z" : 1086},
+//                        {"x" : 4, "y" : 'Mailiers', "z" : 1086},
+//                        {"x" : 5, "y" : 'XFR', "z" : 1086},
+//                        {"x" : 6, "y" : 'Zillow', "z" : 1086},
+//                        {"x" : 7, "y" : 'Referrals', "z" : 1086},
+//                        {"x" : 8, "y" : 'Rate table', "z" : 1086},
+//                        {"x" : 9, "y" : 'MSA', "z" : 1086},
+//                        {"x" : 10, "y" : 'FHA', "z" : 1086},
+//                    ],
+fill: false,
+                    borderColor: '#AEE2F5', // Add custom color border (Line)
+                    backgroundColor: '#AEE2F5', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                },
+                {
+                    label: '7 Referrals ', // Name the series
+                    data: [7388,  48942,  84545,  3588, 9199,  3242, 9617, 2404, 8759, 9557], // Specify the data values array
+//                    data: [
+//                        {"x" : 1, "y" : 'Repeat Customer', "z" : 1086},
+//                        {"x" : 2, "y" : 'Facebook', "z" : 1086},
+//                        {"x" : 3, "y" : 'Google', "z" : 1086},
+//                        {"x" : 4, "y" : 'Mailiers', "z" : 1086},
+//                        {"x" : 5, "y" : 'XFR', "z" : 1086},
+//                        {"x" : 6, "y" : 'Zillow', "z" : 1086},
+//                        {"x" : 7, "y" : 'Referrals', "z" : 1086},
+//                        {"x" : 8, "y" : 'Rate table', "z" : 1086},
+//                        {"x" : 9, "y" : 'MSA', "z" : 1086},
+//                        {"x" : 10, "y" : 'FHA', "z" : 1086},
+//                    ],
+fill: false,
+                    borderColor: '#D1B9D6', // Add custom color border (Line)
+                    backgroundColor: '#D1B9D6', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                },
+                {
+                    label: '8 Rate table ', // Name the series
+                    data: [7388,  48942,  84545,  3588, 9199,  3242, 9617, 2404, 8759, 9557], // Specify the data values array
+//                    data: [
+//                        {"x" : 1, "y" : 'Repeat Customer', "z" : 1086},
+//                        {"x" : 2, "y" : 'Facebook', "z" : 1086},
+//                        {"x" : 3, "y" : 'Google', "z" : 1086},
+//                        {"x" : 4, "y" : 'Mailiers', "z" : 1086},
+//                        {"x" : 5, "y" : 'XFR', "z" : 1086},
+//                        {"x" : 6, "y" : 'Zillow', "z" : 1086},
+//                        {"x" : 7, "y" : 'Referrals', "z" : 1086},
+//                        {"x" : 8, "y" : 'Rate table', "z" : 1086},
+//                        {"x" : 9, "y" : 'MSA', "z" : 1086},
+//                        {"x" : 10, "y" : 'FHA', "z" : 1086},
+//                    ],
+fill: false,
+                    borderColor: '#E7C6FF', // Add custom color border (Line)
+                    backgroundColor: '#E7C6FF', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                },
+                {
+                    label: '9 MSA ', // Name the series
+                    data: [7388,  48942,  84545,  3588, 9199,  3242, 9617, 2404, 8759, 9557], // Specify the data values array
+//                    data: [
+//                        {"x" : 1, "y" : 'Repeat Customer', "z" : 1086},
+//                        {"x" : 2, "y" : 'Facebook', "z" : 1086},
+//                        {"x" : 3, "y" : 'Google', "z" : 1086},
+//                        {"x" : 4, "y" : 'Mailiers', "z" : 1086},
+//                        {"x" : 5, "y" : 'XFR', "z" : 1086},
+//                        {"x" : 6, "y" : 'Zillow', "z" : 1086},
+//                        {"x" : 7, "y" : 'Referrals', "z" : 1086},
+//                        {"x" : 8, "y" : 'Rate table', "z" : 1086},
+//                        {"x" : 9, "y" : 'MSA', "z" : 1086},
+//                        {"x" : 10, "y" : 'FHA', "z" : 1086},
+//                    ],
+fill: false,
+                    borderColor: '#CC95C1', // Add custom color border (Line)
+                    backgroundColor: '#CC95C1', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                },
+                {
+                    label: '10 FHA ', // Name the series
+                    data: [7388,  48942,  84545,  3588, 9199,  3242, 9617, 2404, 8759, 9557], // Specify the data values array
+//                    data: [
+//                        {"x" : 1, "y" : 'Repeat Customer', "z" : 1086},
+//                        {"x" : 2, "y" : 'Facebook', "z" : 1086},
+//                        {"x" : 3, "y" : 'Google', "z" : 1086},
+//                        {"x" : 4, "y" : 'Mailiers', "z" : 1086},
+//                        {"x" : 5, "y" : 'XFR', "z" : 1086},
+//                        {"x" : 6, "y" : 'Zillow', "z" : 1086},
+//                        {"x" : 7, "y" : 'Referrals', "z" : 1086},
+//                        {"x" : 8, "y" : 'Rate table', "z" : 1086},
+//                        {"x" : 9, "y" : 'MSA', "z" : 1086},
+//                        {"x" : 10, "y" : 'FHA', "z" : 1086},
+//                    ],
+fill: false,
+                    borderColor: '#BBCFFF', // Add custom color border (Line)
+                    backgroundColor: '#BBCFFF', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                }
+                ]
+            },
+            options: {
+            responsive: true, // Instruct chart js to respond nicely.
+            maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height
+            legend: {
+            	display: false
+            },
+            tooltips: {
+            	backgroundColor : 'rgb(255, 255, 255)',
+            	bodyFontColor : '#0C1347',
+            	mode: 'index',
+            	intersect: true,
+                //shared: true
+//                callbacks: {
+//                    label: function(tooltipItem, data) {
+//                        var strarr = [
+//                            'Repeat Customer',
+//                            'Facebook',
+//                            'Google',
+//                            'Mailiers',
+//                            'XFR',
+//                            'Zillow',
+//                            'Referrals',
+//                            'Rate table',
+//                            'MSA',
+//                            'FHA'
+//
+//                        ];
+//                            var arr = [1 + ' Repeat Customer ' + 1 + ' 1086%'];
+//                            arr.push(2 + ' Facebook ' + 1 + ' 1086%');
+//                            arr.push(3 + ' Googler ' + 1 + ' 1086%');
+//                            arr.push(4 + ' Mailiers ' + 1 + ' 1086%');
+//                            arr.push(5 + ' XFR ' + 1 + ' 1086%');
+//                            arr.push(6 + ' Zillow ' + 1 + ' 1086%');
+//                            arr.push(7 + ' Referrals ' + 1 + ' 1086%');
+//                            arr.push(8 + ' Rate table ' + 1 + ' 1086%');
+//                            arr.push(9 + ' MSA ' + 1 + ' 1086%');
+//                            arr.push(10 + ' FHA ' + 1 + ' 1086%');
+//                            return arr;
+//                        //console.log(tooltipItem.xLabel);
+////                        var month = tooltipItem.xLabel;
+////                        var res = month.split(' ');
+////                        //console.log(res);
+////                        let value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+//                        //return res[0] + ' Revenue: ' + value.x+ '\r\nExpenses: ' + value.y + '\r\nProfits: ' + value.z;
+//                        //return label;
+//                    }
+//                }
+}
+}
+});
+$(document).ready(function(){
+	$('.js-btn-tooltip').tooltip();
+	$('.js-btn-tooltip--custom').tooltip({
+		customClass: 'tooltip-custom'
+	});
+	$('.js-btn-tooltip--custom-alt').tooltip({
+		customClass: 'tooltip-custom-alt'
+	});
+	$('.arrow_down').click(function () {
+        if ($('.toggle_content').is(':visible') == false) {
+            $('.collapsible_integration_content_row').css('padding', '40px');
+            $('.title').removeClass('span_class');
+            $('.collapsible_integration_section').css({"margin-top":"0", "transform":"rotate(0deg)"});
+        } else {
+            $('.collapsible_integration_content_row').css('padding', '10px 40px');
+            $('.title').addClass('span_class');
+            $('.collapsible_integration_section').css({"margin-top":"-4px", "transform":"rotate(180deg)"});
+        }
+
+        $('.toggle_content').slideToggle('slow', function () {});
+    });
+	$('#example').DataTable( {
+		"scrollY":        "350px",
+		"scrollCollapse": true,
+		"paging":         false
+	});
+	$('#myteam').DataTable( {
+		"scrollY":        "350px",
+		"scrollCollapse": true,
+		"paging":         false
+	});
+	if ($(window).width() >= 1024) {
+		// Select and loop the container element of the elements you want to equalise
+		$('.full_width').each(function(){  
+
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.column', this).each(function(){
+
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			    	highestBox = $(this).height(); 
+			    }
+
+			});  
+
+			  // Set the height of all those children to whichever was highest 
+			  $('.column',this).height(highestBox);
+
+			}); 
+	}
+	if ($(window).width() >= 991) {
+		$('.column_width').each(function(){  
+
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.column_2', this).each(function(){
+
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			    	highestBox = $(this).height(); 
+			    }
+
+			});  
+
+			  // Set the height of all those children to whichever was highest 
+			  $('.column_2',this).height(highestBox);
+
+			}); 
+
+		$('.column_width_2').each(function(){  
+
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.column_3', this).each(function(){
+
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			    	highestBox = $(this).height(); 
+			    }
+
+			});  
+
+			  // Set the height of all those children to whichever was highest 
+			  $('.column_3',this).height(highestBox);
+
+			}); 
+
+		$('.column_width_3').each(function(){  
+
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.column_4', this).each(function(){
+
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			    	highestBox = $(this).height(); 
+			    }
+
+			});  
+
+			  // Set the height of all those children to whichever was highest 
+			  $('.column_4',this).height(highestBox);
+
+			}); 
+	}
+});
+</script>
+</html>

@@ -1,0 +1,7 @@
+version: 0.0
+os: linux
+
+hooks:
+  BeforeInstall:
+    - location: ./pull.sh
+      runas: ec2-user

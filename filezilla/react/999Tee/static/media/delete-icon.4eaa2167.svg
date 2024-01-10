@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>trash-2(24x24)@1x</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Table/Manage-Roles&amp;Permissions" transform="translate(-1394.000000, -24.000000)">
+            <g id="Group-54-Copy-6" transform="translate(1170.000000, 0.000000)">
+                <g id="Group-65" transform="translate(20.000000, 24.000000)">
+                    <g id="trash-2(24x24)@1x" transform="translate(204.000000, 0.000000)">
+                        <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                        <g id="Group-61" transform="translate(3.000000, 2.000000)" stroke="#FF5F48" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13.13,20 L4.87,20 C4.37,20 3.95,19.63 3.88,19.14 L2,6 L16,6 L14.12,19.14 C14.05,19.63 13.63,20 13.13,20 Z" id="Path"></path>
+                            <line x1="0.5" y1="6" x2="17.5" y2="6" id="Path"></line>
+                            <line x1="7" y1="10" x2="7" y2="16" id="Path"></line>
+                            <line x1="11" y1="10" x2="11" y2="16" id="Path"></line>
+                            <path d="M13,3 L5,3 L6.7,0.45 C6.89,0.17 7.2,0 7.54,0 L10.47,0 C10.8,0 11.12,0.17 11.3,0.45 L13,3 Z" id="Path"></path>
+                            <line x1="0" y1="3" x2="18" y2="3" id="Path"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

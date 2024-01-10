@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+* 						{ margin: 0px; padding: 0px;}
+body 					{ font-family: 'Open Sans', sans-serif; font-size:14px; background: #000; color: #fff; }
+.clear 					{ clear:both;}
+img 					{ border: 0px; max-width: 100%;}
+ul,ol 					{ list-style: none;}
+a 						{ text-decoration: none; outline: none; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out;}
+a:focus, a:active, a:visited, a:HOVER	{ text-decoration: none; outline: none; }
+a:HOVER					{ }
+h1 						{ margin-bottom: 36px; font-weight: 700; }
+h1 strong 				{ }
+h2 						{ }
+h3 						{ }
+h4 						{ margin-bottom: 160px; font-weight: 400; }
+h5 						{ }
+h6 						{ }
+p 						{ }
+button 					{ transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+/******* Common Element CSS End *********/
+/* -------- title style ------- */
+/* -------- Button style ------- */
+
+/******* Header Section CSS Start *******/
+
+/******* Header Section CSS End *********/
+
+/******* Banner section CSS Start *******/
+
+/******* Banner section CSS End *********/
+
+/******* Middle section CSS Start ******/
+/* -------- inner page ------- */
+.body-section                 	{ padding: 120px 0; }
+.body-section .human-anatomy  	{ position: fixed; max-width: 600px; right: 0; top: 10px }
+.body-section .human-anatomy .full-body { width: 100%; }
+.body-section [cuurrent-class="liver"] .full-body { transform: translateY(-15%); transition: 0.5s ease-in-out;  }
+.body-section [cuurrent-class="uterus"] .full-body { transform: translateY(-20%); transition: 0.5s ease-in-out;  }
+.body-section .human-anatomy .organ 	{ position: absolute; opacity: 0; transition: 0.5s ease-in-out;  }
+.body-section .human-anatomy .brain 	{ left: 25%; top: 0%; }
+.body-section .human-anatomy .lungs 	{ left: 23%; top: 11%; }
+.body-section .human-anatomy .liver 	{ left: 25%; top: 30%; }
+.body-section .human-anatomy .uterus 	{ left: 30%; top: 33%; }
+.body-section .human-anatomy .organ.active   { opacity: 1; }
+/******** Middle section CSS End *******/
+
+/***** Bottom section CSS Start *******/
+
+/* -------- conatct section ------- */
+/****** Bottom section CSS End *******/
+
+/***** responsive css Start ******/
+
+@media (max-width: 1199px) {
+
+}	
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+@media (max-width: 991px) {
+	
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	
+}
+
+@media (max-width: 767px) {
+	
+}

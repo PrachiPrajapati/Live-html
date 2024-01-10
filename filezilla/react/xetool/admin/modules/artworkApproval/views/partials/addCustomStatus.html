@@ -1,0 +1,75 @@
+<div class="modal fade stick-up" id="customArtworkStatusModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div style="margin: 0px 15px;">
+                    <div class="row" id="customArtworkStatusModalError">
+                        <div class="col-sm-6 text-left">
+                            <h4 class="semi-bold">
+                                <xe-translate text-value="Customize Statuses"></xe-translate>
+                            </h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" class="close custom-modal-close" data-dismiss="modal"
+                                aria-hidden="true"><i class="pg-close fs-14"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12" ng-class="{'status-scroll-bar': statusListPopup.length > '12'}">
+                            <div class="q-r-statuses-one">
+                                <p>
+                                    <xe-translate text-value="Artwork status info">
+                                    </xe-translate>
+                                </p>
+                                <ul dnd-list="statusListPopup" dnd-drop="dropSubCallback(index, item)">
+                                    <li ng-repeat="status in statusListPopup" dnd-draggable="status"
+                                        dnd-moved="statusListPopup.splice($index, 1)" dnd-effect-allowed="move"
+                                        dnd-selected="models.selected = status" dnd-dragstart="getCurrentIndex(status)"
+                                        dnd-dragend="getUpdateIndex(status)">
+                                        <ul>
+                                            <li>
+                                                <i class="fa fa-sort" ng-hide="status.id == '1'"
+                                                    style="cursor: row-resize;">
+                                                </i>
+                                            </li>
+                                            <li>
+                                               <div class="custom-status-color">
+                                                <div class="mini-colors">
+                                                    <div class="thumb-color">
+                                                       <!--  <input type="color" id="{{status.id}}"
+                                                            ng-model="status.color_code"> -->
+                                                        <spectrum-colorpicker ng-model="status.color_code"  options="{showInput: true,  showAlpha: false}" format="'hex'">
+                                                        </spectrum-colorpicker>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <input type="text" ng-model="status.name"
+                                                    ng-disabled="status.id == '1'">
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-close cursor-pointer" ng-click="onRemoveStusClicked($index, status)" ng-if="status.status == 'false'">
+                                                </i>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="clearfix">
+                                <button type="button" class="btn btn btn-success" ng-click="onSaveStusClicked()">
+                                    <xe-translate text-value="Save"></xe-translate>
+                                </button>
+                                <button type="button" class="btn btn-default" ng-click="onAddStusClicked()">
+                                    <xe-translate text-value="Add a Status"></xe-translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

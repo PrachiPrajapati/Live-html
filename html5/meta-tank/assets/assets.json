@@ -1,0 +1,405 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/images/regionbackground.png",
+                "type": "image",
+                "key": "reginionbanner"
+            },
+            {
+                "url": "assets/images/battleframeimg.png",
+                "type": "image",
+                "key": "borderimg"
+            },
+            {
+                "url": "assets/images/sign_in.png",
+                "type": "image",
+                "key": "signin"
+            },
+            {
+                "url": "assets/images/banner-img.png",
+                "type": "image",
+                "key": "homebanner"
+            },
+            {
+                "url": "assets/images/wallete-bg.png",
+                "type": "image",
+                "key": "walletbg"
+            },
+            {
+                "url": "assets/images/coin-base-btn.png",
+                "type": "image",
+                "key": "coninbasebtn"
+            },
+            {
+                "url": "assets/images/trust-wallet-btn.png",
+                "type": "image",
+                "key": "trustbasbtn"
+            },
+            {
+                "url": "assets/images/metamask-btn.png",
+                "type": "image",
+                "key": "metamaskbtn"
+            },
+            {
+                "url": "assets/images/welcomescreen.png",
+                "type": "image",
+                "key": "welcomebanner"
+            },
+            {
+                "url": "assets/images/playnow.png",
+                "type": "image",
+                "key": "playnowbtn"
+            },
+            {
+                "url": "assets/images/inventory-img.png",
+                "type": "image",
+                "key": "inventorybtn"
+            },
+            {
+                "url": "assets/images/settings-icon.png",
+                "type": "image",
+                "key": "settingbtn"
+            },
+            {
+                "url": "assets/images/recruit-btn.png",
+                "type": "image",
+                "key": "recurtbtn"
+            },
+            {
+                "url": "assets/images/wallet.png",
+                "type": "image",
+                "key": "wallet"
+            },
+            {
+                "url": "assets/images/reward-icon.png",
+                "type": "image",
+                "key": "rewardicon"
+            },
+            {
+                "url": "assets/images/popupbg.jpg",
+                "type": "image",
+                "key": "popupbg"
+            },
+            {
+                "url": "assets/images/popup-frame.png",
+                "type": "image",
+                "key": "popupframe"
+            },
+            {
+                "url": "assets/images/loading-bar.png",
+                "type": "image",
+                "key": "loading"
+            },
+            {
+                "url": "assets/images/slide-indicator.png",
+                "type": "image",
+                "key": "slideindicator"
+            },
+            {
+                "url": "assets/images/sound-icon.png",
+                "type": "image",
+                "key": "soundicon"
+            },
+            
+            {
+                "url": "assets/images/music-icon.png",
+                "type": "image",
+                "key": "musicicon"
+            },
+            {
+                "url": "assets/images/settings-close.png",
+                "type": "image",
+                "key": "settingclose"
+            },
+            {
+                "url": "assets/images/circle-bg.png",
+                "type": "image",
+                "key": "circlebg"
+            },
+            {
+                "url": "assets/images/cup-img.png",
+                "type": "image",
+                "key": "cupimg"
+            },
+            {
+                "url": "assets/images/story-icon.jpg",
+                "type": "image",
+                "key": "storyicon"
+            },
+            {
+                "url": "assets/images/storyscene1.png",
+                "type": "image",
+                "key": "storyscene1"
+            },
+            
+            {
+                "url": "assets/images/storyscene2.png",
+                "type": "image",
+                "key": "storyscene2"
+            },
+            {
+                "url": "assets/images/storyscene3.png",
+                "type": "image",
+                "key": "storyscene3"
+            },
+            
+            {
+                "url": "assets/images/mysqaud-bg.png",
+                "type": "images",
+                "key": "sqaudframe"
+            },
+            {
+                "url": "assets/images/homeicon.png",
+                "type": "images",
+                "key": "homeicon"
+            },
+            {
+                "url": "assets/images/troops-bg.png",
+                "type": "images",
+                "key": "troopsbg"
+            },
+            {
+                "url": "assets/images/troopslistbg.png",
+                "type": "images",
+                "key": "troopslistbg"
+            },
+            {
+                "url": "assets/images/gamebg.png",
+                "type": "images",
+                "key": "gamebg"
+            },
+            {
+                "url": "assets/images/napolis-img.jpg",
+                "type": "images",
+                "key": "napolisimg"
+            },
+            {
+                "url": "assets/images/temp2.jpg",
+                "type": "images",
+                "key": "temp1"
+            },
+            {
+                "url": "assets/images/temp2.jpg",
+                "type": "images",
+                "key": "temp2"
+            },
+            {
+                "url": "assets/images/temp3.jpg",
+                "type": "images",
+                "key": "temp3"
+            },
+            {
+                "url": "assets/images/Desert.png",
+                "type": "images",
+                "key": "desertBg"
+            },
+            {
+                "url": "assets/images/Grassland.png",
+                "type": "images",
+                "key": "grasslandBg"
+            },
+            {
+                "url": "assets/images/Snow.png",
+                "type": "images",
+                "key": "snowBg"
+            },
+            {
+                "url": "assets/images/wallet.png",
+                "type": "images",
+                "key": "wallet"
+            },
+            {
+                "url": "assets/images/settings-icon.png",
+                "type": "images",
+                "key": "settingbtn"
+            },
+            {
+                "url": "assets/images/white-arrow.png",
+                "type": "images",
+                "key": "whitearrow"
+            },
+            {
+                "url": "assets/images/red-arrow.png",
+                "type": "images",
+                "key": "redarrow"
+            },
+            {
+                "url": "assets/images/popup-frame.png",
+                "type": "images",
+                "key": "popupframe"
+            },
+            {
+                "url": "assets/images/btnplayAgain.png",
+                "type": "images",
+                "key": "btnPlayAgain"
+            },
+            {
+                "url": "assets/images/loading-bar.png",
+                "type": "images",
+                "key": "loading"
+            },
+            {
+                "url": "assets/images/slide-indicator.png",
+                "type": "images",
+                "key": "slideindicator"
+            },
+            {
+                "url": "assets/images/popup-tank1.png",
+                "type": "images",
+                "key": "popuptank1"
+            },
+            {
+                "url": "assets/images/popup-tank2.png",
+                "type": "images",
+                "key": "popuptank2"
+            },
+            {
+                "url": "assets/images/popup-tank3.png",
+                "type": "images",
+                "key": "popuptank3"
+            },
+            {
+                "url": "assets/images/life-btn.png",
+                "type": "images",
+                "key": "lifebtn"
+            },
+            {
+                "url": "assets/images/bomb-btn.png",
+                "type": "images",
+                "key": "bombbtn"
+            },
+            {
+                "url": "assets/images/shield-btn.png",
+                "type": "images",
+                "key": "shieldbtn"
+            },
+            {
+                "url": "assets/images/glow-card.png",
+                "type": "images",
+                "key": "glowcard"
+            },
+            {
+                "url": "assets/images/red-glow.png",
+                "type": "images",
+                "key": "redglow"
+            },
+            {
+                "url": "assets/images/active-highlight.png",
+                "type": "images",
+                "key": "highlight"
+            },
+            {
+                "url": "assets/images/fire.png",
+                "type": "images",
+                "key": "fire"
+            },
+            {
+                "url": "assets/images/broken-0.png",
+                "type": "images",
+                "key": "hit"
+            },
+            {
+                "url": "assets/images/broken.png",
+                "type": "images",
+                "key": "broken"
+            },
+            {
+                "url": "assets/images/explode-1.png",
+                "type": "images",
+                "key": "explode1"
+            },
+            {
+                "url": "assets/images/explode-2.png",
+                "type": "images",
+                "key": "explode2"
+            },
+            {
+                "url": "assets/images/explode-3.png",
+                "type": "images",
+                "key": "explode3"
+            },
+            {
+                "url": "assets/images/shield.png",
+                "type": "images",
+                "key": "shield"
+            },
+            {
+                "url": "assets/images/sparkle.png",
+                "type": "images",
+                "key": "sparkle"
+            },
+            {
+                "url": "assets/images/bomb.png",
+                "type": "images",
+                "key": "bomb"
+            },
+            {
+                "url": "assets/images/droneheal.png",
+                "type": "images",
+                "key": "healdrone"
+            },
+            {
+                "url": "assets/images/healflash.png",
+                "type": "images",
+                "key": "healflash"
+            },
+            {
+                "url": "assets/images/bomb-artillery.png",
+                "type": "images",
+                "key": "bombArtillery"
+            },
+            {
+                "url": "assets/images/bomb-artillery-blast.png",
+                "type": "images",
+                "key": "bombArtilleryBlast"
+            },
+            {
+                "url": "assets/sounds/clickSound.mp3",
+                "type": "audio",
+                "key": "clickSound"
+            },
+            {
+                "url": "assets/sounds/bombartillery.mp3",
+                "type": "audio",
+                "key": "bombArtillerySound"
+            },
+            {
+                "url": "assets/sounds/healTank.mp3",
+                "type": "audio",
+                "key": "healTank"
+            },
+            
+            {
+                "url": "assets/sounds/winSound.mp3",
+                "type": "audio",
+                "key": "winSound"
+            },
+            {
+                "url": "assets/sounds/loseSound.mp3",
+                "type": "audio",
+                "key": "loseSound"
+            },
+            {
+                "url": "assets/sounds/shieldTank.mp3",
+                "type": "audio",
+                "key": "shieldTank"
+            },
+            {
+                "url": "assets/sounds/shootTank.mp3",
+                "type": "audio",
+                "key": "shootTank"
+            },
+            {
+                "url": "assets/sounds/explosion.mp3",
+                "type": "audio",
+                "key": "explosion"
+            },
+            {
+                "url": "assets/sounds/ingameSound.mp3",
+                "type": "audio",
+                "key": "ingameSound"
+            }
+        ]
+    }
+}

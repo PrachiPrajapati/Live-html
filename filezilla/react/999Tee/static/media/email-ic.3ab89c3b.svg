@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>mail(24x24)@1x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Static-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Contact-Us" transform="translate(-206.000000, -293.000000)" stroke="#FFFFFF" stroke-width="1.1">
+            <g id="Group-30" transform="translate(65.000000, 281.000000)">
+                <g id="Group-14">
+                    <g id="Group-12">
+                        <g id="Group-8" transform="translate(131.000000, 0.000000)">
+                            <g id="mail(24x24)@1x" transform="translate(11.000000, 13.000000)">
+                                <path d="M19.8,17.6 L2.2,17.6 C0.99,17.6 0,16.61 0,15.4 L0,2.2 C0,0.99 0.99,0 2.2,0 L19.8,0 C21.01,0 22,0.99 22,2.2 L22,15.4 C22,16.61 21.01,17.6 19.8,17.6 Z" id="Path" stroke-linejoin="round"></path>
+                                <path d="M19.8,0 L2.2,0 C0.99,0 0,0.99 0,2.2 L11,9.9 L22,2.2 C22,0.99 21.01,0 19.8,0 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

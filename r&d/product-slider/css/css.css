@@ -1,0 +1,124 @@
+@keyframes floating {
+  0%, to            { transform: translate(0%, 0%) }
+  25%               { transform: translate(5px, calc(0 + 15px)) }
+  50%               { transform: translate(10px, calc(0% + 5px)) }
+  75%               { transform: translate(0%, calc(0% + 15px)) }
+}
+/*
+@keyframes hideTextLeft {
+  0%                { transform: translate3d(0, 0, 0); opacity: 1 }
+  to                { transform: translate3d(calc(-100% - 551px), 0, 0); opacity: 1 }
+}
+
+@keyframes hideTextToRight {
+  0%                { transform: translate3d(0, 0, 0); opacity: 1 }
+  to                { transform: translate3d(100%, 0, 0); opacity: 1 }
+}
+
+@keyframes revealTextFromRight {
+  0%                { transform: translate3d(100%, 0, 0); opacity: 0 }
+  to                { transform: translate3d(0, 0, 0); opacity: 1 }
+}
+
+@keyframes revealTextFromLeft {
+  0%                { jtransform: translate3d(calc(-100% - 551px), 0, 0); opacity: 0 }
+  to                { transform: translate3d(0, 0, 0); opacity: 1 }
+}
+
+@keyframes revealText {
+  0%                { transform: translate3d(0, 125%, 0); opacity: 0 }
+  to                { transform: translate3d(0, 0%, 0); opacity: 1 }
+}
+
+@keyframes hideText {
+  0%                { transform: translate3d(0, 0%, 0); opacity: 1 }
+  to                { transform: translate3d(0, 125%, 0); opacity: 1 }
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 80%, to { transform: translateY(0) }
+  40%                   { transform: translateY(-10px) }
+  50%                   { transform: translateY(5px) } 
+}
+
+@keyframes rubberBand {
+  0%, to  { -webkit-transform: scaleX(1); transform: scaleX(1) }
+  3%      { -webkit-transform: scale3d(1.25, .75, 1); transform: scale3d(1.25, .75, 1) }
+  20%     { -webkit-transform: scale3d(.75, 1.25, 1); transform: scale3d(.75, 1.25, 1) }
+  40%     { -webkit-transform: scale3d(1.15, .85, 1); transform: scale3d(1.15, .85, 1) }
+  55%     { -webkit-transform: scale3d(.95, 1.05, 1); transform: scale3d(.95, 1.05, 1) }
+  75%     { -webkit-transform: scale3d(1.05, .95, 1); transform: scale3d(1.05, .95, 1) }
+}
+*/
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+h1                      { font-weight: 900; font-size: 8em; }
+p, h1                   { font-family: 'Source Sans Pro', sans-serif; color: #000; }
+h1,p                    { animation-delay: 500ms; animation-timing-function: cubic-bezier(.52,.01,.16,1); animation-name: revealText; 
+                        animation-duration: 1550ms; animation-fill-mode: forwards; }
+.row-flex               { display: flex; align-items: center; }
+.slide .content         { text-align: left; padding: 0 35px; }
+#section0 .fp-slides + .fp-prev,
+#section1 .fp-slides + .fp-prev,
+#section2 .fp-slides + .fp-prev,
+#section0 .fp-slides + .fp-prev + .fp-next,
+#section1 .fp-slides + .fp-prev + .fp-next,
+#section2 .fp-slides + .fp-prev + .fp-next    { display: none; }
+.slider1                { background-image: url(../images/slider-1.svg); }
+.slider2                { background-image: url(../images/slider-2.svg); }
+.slider3                { background-image: url(../images/slider-3.svg); }
+.slider1,.slider2,
+.slider3                { background-position: 89% 50%; background-size: 42%; background-repeat: no-repeat; transition: opacity 500ms ease; }
+.content .fp-controlArrow.fp-prev { left: 50px; }
+.content .fp-controlArrow.fp-next:before,
+.content .fp-controlArrow.fp-prev:before { content: '<'; display: block; position: absolute; left: 50%; top: 0; transform: translateX(-50%);
+                         transition: transform .25s cubic-bezier(.4,0,.2,1);}
+.content .fp-controlArrow.fp-next:before { content: '>'; }
+.content .fp-controlArrow.fp-next { right: auto; left: 110px; }
+.content .fp-controlArrow.fp-next,
+.content .fp-controlArrow.fp-prev { border: 1px solid rgba(0,0,0,.4); line-height: 44px; width: 44px; height: 44px; border-radius: 50%;
+                        top: auto; bottom: -50px; }
+.fp-controlArrow.fp-next:not(.disabled)::after,
+.fp-controlArrow.fp-prev:not(.disabled)::after { transform: scaleX(0) translateX(0); content: ''; background-color: #000; height: 1px; width: 14px; 
+                        position: absolute; top: 50%; left: auto; right: 14px; display: block;transition: transform .25s cubic-bezier(.4,0,.2,1); }
+.fp-controlArrow.fp-prev:hover::after,
+.fp-controlArrow.fp-next:hover::after { transform: scaleX(1) translateX(0); }
+.fp-controlArrow.fp-prev:hover::before { transform: translateX(-10px); }
+.fp-controlArrow.fp-next:hover::before { transform: translateX(5px); }
+.shoes-img            { animation-name: floating; animation-delay: 1600ms; animation-iteration-count: infinite; animation-duration: 3s; 
+                      animation-timing-function: ease-in-out; }
+.content              { position: relative; }
+.content::before      { content: ""; display: block; top: -30px; position: absolute; height: 4px; background: #000; width: 175px; }
+
+
+@media screen and (max-width:768px) {
+
+h1                    { font-size: 4em; margin-bottom: 25px; }
+p                     { font-size: 1em; }
+.img-fuid             { width: 100%; max-width: 100%; }
+.row-flex             { display: block; }
+.slide .content       { padding: 0px; text-align: center; }
+.shoes-img .img-fuid  { max-height: 250px; width: auto; }
+.content .fp-controlArrow.fp-prev { left: calc(50% - 50px); }
+.content .fp-controlArrow.fp-next { left: auto; right: calc(50% - 50px);}
+}

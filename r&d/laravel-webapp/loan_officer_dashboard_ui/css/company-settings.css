@@ -1,0 +1,9 @@
+/* .company-setting-sec .permissions_tabs.reports .nav-tabs { border: none;} */
+.company-setting-sec .permissions_tabs.reports .nav-tabs .border-bottom-sec { border-bottom: 0.61px solid #EAEAEA; width: 100%;}
+.company-setting-sec .permissions_tabs.reports .nav-item { width: auto !important;}
+
+/*Company Setting Css*/
+.manage-user-new-sec #Image .dz-preview .dz-image,
+.manage-user-new-sec #Image .dz-preview .dz-image img, 
+.manage-user-new-sec #Image .upload_img_outer { border-radius: 10px !important;}
+.manage-user-new-sec #Image .custom_icon { left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%);}

@@ -1,0 +1,347 @@
+<div class="page-body" ng-if= "tabModel == 'address'">
+	<div class="form-horizontal form-content-cust-value">
+			<div class="row form-group">
+				<label for="text" class="col-sm-2 control-label">First Name
+					<span class="text-danger">
+                		*
+            		</span>
+				</label>
+				<div class="col-sm-10">
+				   	<input type="text" class="form-control" ng-keyup="quoteValidate(formData.first_name,'fName')" ng-model="formData.first_name" id="" placeholder="First Name" ng-style ="isFirstName == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+				</div>
+			</div>
+
+		  	<div class="row form-group">
+				<label for="text" class="col-sm-2 control-label">Last Name
+					<span class="text-danger">
+                		*
+            		</span>
+				</label>
+				<div class="col-sm-10">
+				  	<input type="text" class="form-control" ng-keyup="quoteValidate(formData.last_name,'lName')" ng-model="formData.last_name" id="" placeholder="Last Name" ng-style ="isLastName == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+				</div>
+			</div>
+
+		<div class="row">
+		    <div class="col-sm-6">
+				<div class="form-group">
+					<label for="text" class="col-sm-4 control-label">Email
+						<span class="text-danger">
+		            		*
+		        		</span>
+					</label>
+					<div class="col-sm-8">
+						<input type="email" ng-keyup="quoteValidate(formData.email,'email')" ng-model="formData.email" class="form-control" id="input1" ng-keyup ="validateEmail(formData.email)" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/"  placeholder="Email Address" ng-disabled="formData.email != '' && formData.email != undefined"  ng-style ="isInvalidEmail == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+					</div>
+				</div>
+		    </div>
+		  	<div class="col-sm-6">
+			  	<div class="form-group">
+					<label for="text" class="col-sm-4 control-label">Contact No
+						<span class="text-danger">
+		            		*
+		        		</span>
+					</label>
+					<div class="col-sm-8">
+						<!-- <input type="text" ng-keyup="quoteValidate(formData.contact_no,'cno')" ng-model="formData.contact_no" class="form-control" id="input1"  numbers-only="numbers-only" ng-pattern="/^\+?\d{10}$/" ng-class="{ errorinput: isContactNo }" ng-style ="isContactNo == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required> -->
+
+						<input type="text" ng-keyup="quoteValidate(formData.contact_no,'cno')" ng-model="formData.contact_no" class="form-control" id="input1"  numbers-only="numbers-only" ng-class="{ errorinput: isContactNo }" ng-style ="isContactNo == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+					</div>
+			  </div>
+		  	</div>
+	  	</div>
+
+	  	<div class="row form-group">
+			<label for="text" class="col-sm-2 control-label">Company
+			</label>
+			<div class="col-sm-10">
+
+				<input type="text" ng-model="formData.company" class="form-control" id="" placeholder="Company">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<hr/>
+			</div>
+		</div>
+		<form class="form-horizontal">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 class="head-title">Billing Address</h2>
+					</div>
+				</div>	
+				<div class="row">
+					<div class="col-sm-6">
+					  <div class="form-group">
+						<label for="text" class="col-sm-4 control-label">Address1
+							<span class="text-danger">
+				                *
+				            </span>
+						</label>
+						<div class="col-sm-8">
+							<input type="text" ng-keyup="quoteValidate(billingAddress.address1,'billad1')" ng-model="billingAddress.address1" class="form-control" placeholder="address1" ng-style ="isBillAddress1 == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+						</div>
+					  </div>
+					</div>
+					<div class="col-sm-6">
+					  	<div class="form-group">
+							<label for="text" class="col-sm-4 control-label">Address2
+							</label>
+							<div class="col-sm-8">
+							  	<input type="text"  ng-model="billingAddress.address2" class="form-control" placeholder="address2" required>
+							</div>
+					  </div>
+					</div>
+				</div>
+				<div class="row">
+					 <div class="col-sm-6">
+						  <div class="form-group">
+							<label for="text" class="col-sm-4 control-label">	 City
+								<span class="text-danger">
+					                *
+					            </span>
+							</label>
+							<div class="col-sm-8">
+							 <input type="text" ng-keyup="quoteValidate(billingAddress.city,'billCity')" ng-model="billingAddress.city" class="form-control" placeholder="City" ng-style ="isBillCity == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+							</div>
+						  </div>
+					</div>
+					<div class="col-sm-6">
+					  <div class="form-group">
+						<label for="text" class="col-sm-4 control-label">
+							State
+							<span class="text-danger">
+					            *
+					        </span>
+						</label>
+						<div class="col-sm-8">
+						  <input type="text" ng-keyup="quoteValidate(billingAddress.state,'billState')" ng-model="billingAddress.state" class="form-control" placeholder="State" ng-style ="isBillState == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+						</div>
+					  </div>
+					</div>
+				</div>
+				<div class="row">
+					 <div class="col-sm-6">
+						  <div class="form-group">
+							<label for="text" class="col-sm-4 control-label">Country
+								<span class="text-danger">
+						            *
+						        </span>
+							</label>
+							<div class="col-sm-8">
+							   <input type="text" ng-keyup="quoteValidate(billingAddress.country,'billCountry')" ng-model="billingAddress.country" class="form-control" placeholder="Country" ng-style ="isBillCountry == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+							</div>
+						  </div>
+					</div>
+					<div class="col-sm-6">
+					  <div class="form-group">
+						<label for="text" class="col-sm-4 control-label">
+							Zip
+							<span class="text-danger">
+					            *
+					        </span>
+						</label>
+						<div class="col-sm-8">
+						  <input type="text" ng-keyup="quoteValidate(billingAddress.zip,'billZip')" ng-model="billingAddress.zip" class="form-control" id="" placeholder="******"  ng-style ="isBillZip == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+						</div>
+					  </div>
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<hr/>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<h2 class="head-title">Shipping Address</h2>
+					</div>
+					<div class="col-sm-6">
+						<div class="checkbox check-success pull-left m-r-10">
+						  <input type="checkbox" id="is_checked" ng-model="enableCheckAddress.is_checked" ng-change="changedAddress(enableCheckAddress.is_checked)" ng-checked="enableCheckAddress.is_checked == 1" class="ng-pristine ng-valid">
+						  <label for="is_checked">
+							Same as billing address
+						  </label>
+						</div>
+					</div>
+				</div>
+			 	<div class="row">
+					<div class="col-sm-6">
+					  <div class="form-group">
+						<label for="text" class="col-sm-4 control-label">Address1
+							<span class="text-danger">
+					            *
+					        </span>
+						</label>
+						<div class="col-sm-8">
+						  <input type="text" ng-keyup="quoteValidate(shippingAddress.address1,'shipad1')" ng-model="shippingAddress.address1" class="form-control" id="" placeholder="address1"  ng-style ="isShipAddress1 == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+						</div>
+					  </div>
+					</div>
+					<div class="col-sm-6">
+					  <div class="form-group">
+						<label for="text" class="col-sm-4 control-label">		Address2
+						</label>
+						<div class="col-sm-8">
+						  <input type="text"  ng-model="shippingAddress.address2" class="form-control" id="" placeholder="address2" required>
+						</div>
+					  </div>
+					  </div>
+				</div>
+				 <div class="row">
+					 <div class="col-sm-6">
+						  <div class="form-group">
+							<label for="text" class="col-sm-4 control-label">  	   
+								City
+								<span class="text-danger">
+						            *
+						        </span>
+							</label>
+							<div class="col-sm-8">
+							 	<input type="text" ng-keyup="quoteValidate(shippingAddress.city,'shipCity')" ng-model="shippingAddress.city" class="form-control" id="" placeholder="City" ng-style ="isShipCity == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+							</div>
+						  </div>
+					</div>
+					<div class="col-sm-6">
+					  <div class="form-group">
+						<label for="text" class="col-sm-4 control-label">		
+							State
+							<span class="text-danger">
+					            *
+					        </span>
+						</label>
+						<div class="col-sm-8">
+						  <input type="text" ng-keyup="quoteValidate(shippingAddress.state,'shipState')" ng-model="shippingAddress.state" class="form-control" id="" placeholder="State" ng-style ="isShipState == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+						</div>
+					  </div>
+					</div>
+				</div>
+				<div class="row">
+					 <div class="col-sm-6">
+						  <div class="form-group">
+							<label for="text" class="col-sm-4 control-label">	 		Country
+								<span class="text-danger">
+						            *
+						        </span>
+							</label>
+							<div class="col-sm-8">
+							  <input type="text" ng-keyup="quoteValidate(shippingAddress.country,'shipCountry')" ng-model="shippingAddress.country" class="form-control" id="" placeholder="Country" ng-style ="isShipCountry == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+							</div>
+						  </div>
+					</div>
+					<div class="col-sm-6">
+					  <div class="form-group">
+						<label for="text" class="col-sm-4 control-label">				Zip
+							<span class="text-danger">
+						        *
+						    </span>
+						</label>
+						<div class="col-sm-8">
+						  <input type="text" ng-keyup="quoteValidate(shippingAddress.zip,'shipZip')" ng-model="shippingAddress.zip" class="form-control" id="" placeholder="******"  ng-style ="isShipZip == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+						</div>
+					  </div>
+					</div>
+				</div>
+			
+			</form>
+			<div class="col-sm-12">
+			<hr/>
+			</div>
+		</div>
+	<div class="row">
+		<div class="col-sm-12 text-right">
+				<small ng-show = "isFirstName" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                   Enter first name.
+	                </label>
+	            </small>
+	            <small ng-show = "isLastName" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter last name.
+	                </label>
+	            </small>
+	            <small ng-show = "isInvalidEmail" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter valid email address.
+	                </label>
+	            </small>
+	            <small ng-show = "isContactNo" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter contact number.
+	                </label>
+	            </small>
+	       		<small ng-show = "isBillAddress1" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                   Enter first billing address.
+	                </label>
+	            </small>
+	           <!--  <small ng-show = "isBillAddress2" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                   Enter second billing address
+	                </label>
+	            </small> -->
+	            <small ng-show = "isBillCity" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter billing city.
+	                </label>
+	            </small>
+	            <small ng-show = "isBillCountry" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter billing country.
+	                </label>
+	            </small>
+	            <small ng-show = "isBillState" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter billing state.
+	                </label>
+	            </small>
+	            <small ng-show = "isBillZip" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter billing zip number.
+	                </label>
+	            </small>
+
+	           <small ng-show = "isShipAddress1" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                   Enter first shipping address.
+	                </label>
+	            </small>
+	          <!--   <small ng-show = "isShipAddress2" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                   Enter second shipping address
+	                </label>
+	            </small> -->
+	            <small ng-show = "isShipCity" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter shipping city.
+	                </label>
+	            </small>
+	            <small ng-show = "isShipCountry" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter shipping country.
+	                </label>
+	            </small>
+	            <small ng-show = "isShipState" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter shipping state.
+	                </label>
+	            </small>
+	            <small ng-show = "isShipZip" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                    Enter shipping zip number.
+	                </label>
+	            </small>
+	            <small ng-show = "isFailed" class="text-right">
+	                <label class="text-danger quote-error-message">
+	                   Quote submission failed.
+	                </label>
+	            </small>
+	            <small ng-show = "isSuccess" class="text-right">
+	                <label class="text-success quote-error-message">
+	                   Quote submitted successfully.
+	                </label>
+	            </small>    
+		<button type="button" class="btn btn-info btn-sm m-r-5" ng-click = "changeTab('quoteDetails')">Previous</button>
+		<button type="button" class="btn btn-green btn-sm" ng-click = "changeTab('product&design', true)">Next</button>
+	</div>
+	</div>
+</div>

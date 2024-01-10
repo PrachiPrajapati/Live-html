@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="SV3lbr4cEgcpX4pOBAkdhZEvkuHN1iBFSLpS0Qrj">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/general.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/chart.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/mobile_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">    
+    <link rel="stylesheet" type="text/css" href="css/tabs.css">    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    
+    <!-- jQuery library -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script type="text/javascript" src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/dashboard/Chart.roundedBarCharts.min.js"></script>
+    
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="js/header.js"></script>
+
+    <script src="js/company_directory.js"></script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/custom_daterpicker.css">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+</head>
+<body>
+
+<div class="overlay">
+    <div class="line_top"></div>
+    <div id="panel">
+        <span id="loading5">
+            <span id="outerCircle"></span>
+        </span>
+    </div>
+</div>
+    <main class="content" role="content">
+        <section class="container-fluid bg_white">
+            <div class="row">
+                <div class="col-12 p_lr_0">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a href="#" data-toggle="sidebar-colapse">
+                            <div class="d-flex w-100 justify-content-start align-items-center menu_hover">
+                                <img  id="collapse-icon" src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/menu.png" class="img-fluid menu_style" />
+                                <div class="tool_tip">
+                                    Keep sidebar open
+                                </div>
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/home"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/logo.png" class="img-fluid height_37" /></a>
+                        <div class="search_contact effect-2">
+                            <div class="content_center">
+                                <div class="form-group has-search width_100p">
+                                    <img src="images/search.png"  class="img-fluid form-control-feedback" />
+                                    <input type="text" class="form-control" placeholder="Search by contact" id="text" onkeyup="searchBox();">
+                                </div>
+                                <div>
+                                    <img src="images/menu/grey_cross.png" class="img-fluid cross_icon cursor_pointer" />
+                                </div>
+                            </div>
+                            <span class="focus-border"></span>
+                            <div id="keyword_searcher">
+                                <div class="p_lr_20">
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Joseph <span>Tr</span>iyer & Charlotte <span>Tr</span>iyer
+                                        </div>
+                                        <div class="email_id">
+                                            Joseph_Triyer@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Emerson Dokidis & Joseph <span>Tr</span>iyer
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Cris<span>tr</span>ofer Bergson
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Erin Dorwa<span>tr</span>
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Emerson Dokidis & Joseph <span>Tr</span>iyer
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Cris<span>tr</span>ofer Bergson
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Erin Dorwa<span>tr</span>
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="search_noresult">
+                                            No search results found
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+                            <form class="form-inline my-2 my-lg-0">
+                                <div class="search_hover">
+                                    <img src="images/menu/disable_search.png" class="img-fluid search_icon search_code cursor_pointer disable_search" />
+                                    <img src="images/menu/search.png" class="img-fluid search_icon search_code cursor_pointer active_search" />
+                                    <div class="tool_tip">
+                                        Search by contact name, email, phone or investor loan number
+                                    </div>
+                                </div>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/bell.png" class="img-fluid m_r_15 notification" />
+                                <span class="notification_dot"></span>
+                                <ul class="dropdown-notification">
+                                    <div class="notification_title">
+                                        Notifications
+                                        <span class="pull-right">
+                                            <img src="images/menu/black_cross.png" class="img-fluid cursor_pointer notification_close">
+                                        </span>
+                                    </div>
+                                    <div class="content_center space_between p_tb_20 b_b_grey">
+                                        <div class="permissions_tabs w_50p">
+                                            <ul class="nav nav-tabs tab_selection content_center space_between">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="#all">
+                                                        All
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#unread">
+                                                        Unread
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="notification_readall">
+                                            <svg width="21" height="20" style="margin-right: 0" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.0415 7L6.39941 13.4167L3.38029 10.5" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.1821 7L10.54 13.4167" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            Mark all as read
+                                        </div>
+                                    </div>
+                                    <div class="tab-content ">
+                                        <div id="all" class="tab-pane active">
+                                            <div class="more_notification">
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                <label for="html_1">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="unread_notification"></div>
+                                                <label for="html_1">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="read_notification"></div>
+                                                <label for="html_2">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="read_notification"></div>
+                                                <label for="html_3">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="read_notification"></div>
+                                                <label for="html_4">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="read_notification"></div>
+                                                <label for="html_4">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="read_notification"></div>
+                                                <label for="html_4">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="read_notification"></div>
+                                                <label for="html_4">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div id="unread" class="tab-pane">
+                                    <div class="more_notification">
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="unread_notification"></div>
+                                                <!-- <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_1">
+                                                </div> -->
+                                                <label for="html_1">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="unread_notification"></div>
+                                                <!-- <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_1">
+                                                </div> -->
+                                                <label for="html_1">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="unread_notification"></div>
+                                                <!-- <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_2">
+                                                </div> -->
+                                                <label for="html_2">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="unread_notification"></div>
+                                                <label for="html_3">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="unread_notification"></div>
+                                                <label for="html_4">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36 user" />
+                        <ul class="dropdown-menu-profile">
+                            <div class="content_center">
+                                <div>
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36" />
+                                </div>
+                                <div class="m_l_10">
+                                    <div class="user_name">Ruchi Patel</div>
+                                    <div class="user_profile">Super admin</div>
+                                </div>
+                            </div>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/profile-page" class="dropdown-menu__link profilepage nav-link">
+                                    <img src="images/Pipeline_NA.svg" class="default-icon"/>
+                                    <img src="images/Pipeline_A.svg" class="hover-icon" />
+                                    My Account
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/Company_Profile_NA.svg" class="default-icon"/>
+                                    <img src="images/Company_Profile_A.svg" class="hover-icon" />
+                                    Company Profile
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/closing-targets" class="dropdown-menu__link profilepage nav-link">
+                                    <img src="images/Closing_Targets_NA.svg" class="default-icon"/>
+                                    <img src="images/Closing_Targets_A.svg" class="hover-icon" />
+                                    Closing Targets
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/Plan_Billing_NA.svg" class="default-icon"/>
+                                    <img src="images/Plan_Billing_A.svg" class="hover-icon" />
+                                    Plan & Billing
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-directory" class="dropdown-menu__link nav-link">
+                                    <img src="images/Company_Directory_NA.svg" class="default-icon"/>
+                                    <img src="images/Company_Directory_A.svg" class="hover-icon" />
+                                    Company Directory
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="#" class="dropdown-menu__link nav-link">
+                                    <img src="images/Commissions_NA.svg" class="default-icon"/>
+                                    <img src="images/Commissions_A.svg" class="hover-icon" />
+                                    Commissions
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/Integrations_NA.svg" class="default-icon"/>
+                                    <img src="images/Integrations_A.svg" class="hover-icon" />
+                                    Integrations
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/activity-feeds" class="dropdown-menu__link nav-link">
+                                    <img src="images/Activity_NA.svg" class="default-icon"/>
+                                    <img src="images/Activity_A.svg" class="hover-icon" />
+                                    Activity
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/manage_users" class="dropdown-menu__link nav-link">
+                                    <img src="images/Manage_users_NA.svg" class="default-icon"/>
+                                    <img src="images/Manage_users_A.svg" class="hover-icon" />
+                                    Manage users
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/View_Permissions_NA.svg" class="default-icon"/>
+                                    <img src="images/View_Permissions_A.svg" class="hover-icon" />
+                                    View Permissions
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/commission-schedule" class="dropdown-menu__link nav-link">
+                                    <img src="images/View_Commission_Schedule_NA.svg" class="default-icon"/>
+                                    <img src="images/View_Commission_Schedule_A.svg" class="hover-icon" />
+                                    View Commission Schedule
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/Lead_rotator_NA.svg" class="default-icon"/>
+                                    <img src="images/Lead_rotator_A.svg" class="hover-icon" />
+                                    Lead rotator
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/Custom_Fields_NA.svg" class="default-icon"/>
+                                    <img src="images/Custom_Fields_A.svg" class="hover-icon" />
+                                    Custom Fields
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+                                <a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <img src="images/log-out_NA.svg" class="default-icon"/>
+                                    <img src="images/log-out_A.svg" class="hover-icon" />
+                                    Logout
+                                </a>
+                                <form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+                                    <input type="hidden" name="_token" value="SV3lbr4cEgcpX4pOBAkdhZEvkuHN1iBFSLpS0Qrj">         
+                                </form>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</section>
+<section>
+    <div style="display: flex;" id="body-row">
+        <div id="sidebar-container" class="sidebar-collapsed" style="display:none;">
+            <div class="d-none d-md-block">
+                <ul class="list-group">
+                    <a href="http://sigmadev.beta.loanofficer.ai/home" class=" list-group-item list-group-item-action flex-column align-items-start collapsed_menu_option">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <img src="images/menu/new_account.png" class="default-icon" width="26px" />
+                        </div>
+                    </a>
+                    <a href="http://sigmadev.beta.loanofficer.ai/home" class=" list-group-item list-group-item-action flex-column align-items-start expanded_menu_option">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <button class="blue_btn">Create new contact</button>
+                        </div>
+                    </a>
+                    <a href="http://sigmadev.beta.loanofficer.ai/home" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <img src="images/Dashboard_NA.svg" class="default-icon"/>                                
+                            <img src="images/Dashboard_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Dashboard</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <img src="images/Pipeline_NA.svg" class="default-icon"/>
+                            <img src="images/Pipeline_A.svg" class="hover-icon" />
+                            <span class="menu-collapsed">Pipeline</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Proposals_NA.svg" class="default-icon"/>                                
+                            <img src="images/Proposals_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Proposals</span>
+                        </div>
+                    </a>
+                    <a href="http://sigmadev.beta.loanofficer.ai/rate-watches" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Rate_Watch_NA.svg" class="default-icon"/>                                
+                            <img src="images/Rate_Watch_A.svg" class="hover-icon" />
+
+
+                            <span class="menu-collapsed">Rate Watch</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Lenders_NA.svg" class="default-icon"/>                                
+                            <img src="images/Lenders_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Lenders</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Partners_NA.svg" class="default-icon"/>                                
+                            <img src="images/Partners_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Partners</span>
+                        </div>
+                    </a>
+                    <a href="http://sigmadev.beta.loanofficer.ai/report/my-team-time" class=" list-group-item list-group-item-action flex-column align-items-start active">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Reports_NA.svg" class="default-icon"/>                                
+                            <img src="images/Reports_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Reports</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Tasks_NA.svg" class="default-icon"/>                                
+                            <img src="images/Tasks_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Tasks</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Campaigns_NA.svg" class="default-icon"/>                                
+                            <img src="images/Campaigns_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Campaigns</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Finance_NA.svg" class="default-icon"/>                                
+                            <img src="images/Finance_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Finance</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+
+                            <img src="images/Workflow_NA.svg" class="default-icon"/>                                
+                            <img src="images/Workflow_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Workflow</span>
+                        </div>
+                    </a>
+                    <a href="http://sigmadev.beta.loanofficer.ai/data-points" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Workflow_NA.svg" class="default-icon"/>                                
+                            <img src="images/Workflow_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Data-Points</span>
+                        </div>
+                    </a>
+                </ul>
+                <div class="bottom_menu">
+                    <ul class="list-group">
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/loan_officer_university_NA.svg" class="default-icon"/>
+                                <img src="images/loan_officer_university_A.svg" class="hover-icon" />
+
+                                <span class="menu-collapsed">loan officer university</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Refer_a_friend_NA.svg" class="default-icon"/>
+                                <img src="images/Refer_a_friend_A.svg" class="hover-icon" />
+
+                                <span class="menu-collapsed">Refer a friend</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Help_Center_NA.svg" class="default-icon"/>
+                                <img src="images/Help_Center_A.svg" class="hover-icon" />
+
+
+                                <span class="menu-collapsed">Help Center</span>
+                            </div>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="expanded_menu_collapse content_wrapper main_div" style="display:none;">
+           <div class="container-fluid p_35">
+              <div class="row">
+                 <div class="col-12"><!-- top_body -->
+                    <div class="row">
+                       <div class="col-12 col-sm-6">
+                          <div class="title">
+                             Partners
+                         </div>
+                     </div>
+                     <div class="col-12 col-sm-6">
+                        <button class="blue_btn right">
+                            Add Partner
+                        </button>
+                    </div>
+                </div>
+                <div class="row m_t_20">
+                   <div class="col-12">
+                      <div class="row content_center align_item_bottom">
+                         <div class="col-md-6 col-xl-5">
+                            <label>Quick search</label>
+                            <div class="form-group has-search">
+                               <img src="images/search.png"  class="img-fluid form-control-feedback" />
+                               <input type="text" class="form-control success_input" placeholder="Search by Name, Work Phone, Cell Phone, Email">
+                               <img src="images/green_save.png" class="img-fluid save_success">
+                           </div>
+                       </div>
+                       <div class="col-md-6 col-xl-2 integation_dropdown">
+                        <label>Company</label>
+                        <div class="dropdown">
+                           <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                              <ins>All activities</ins>
+                              <span class="arrow"></span>
+                          </button>
+                          <div class="dropdown-menu radio">
+                              <label class="dropdown-item">
+                                 <input class="jRadioDropdown" type="radio" value="011" name="alphabet">
+                                 <i>Docs Out</i>
+                             </label>
+
+                             <label class="dropdown-item">
+                                 <input class="jRadioDropdown" type="radio" value="012" name="alphabet">
+                                 <i>Resubmission Required</i>
+                             </label>
+
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-5 col-xl-2 integation_dropdown">
+                    <label>Industry</label>
+                    <div class="dropdown">
+                       <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                          <ins>All users</ins>
+                          <span class="arrow"></span>
+                      </button>
+                      <div class="dropdown-menu radio">
+                          <label class="dropdown-item">
+                             <input class="jRadioDropdown" type="radio" value="001" name="alphabet_1">
+                             <i>All milestones</i>
+                         </label>
+                         <label class="dropdown-item">
+                             <input class="jRadioDropdown" type="radio" value="002" name="alphabet_1">
+                             <i>On Track</i>
+                         </label>
+                         <label class="dropdown-item">
+                             <input class="jRadioDropdown" type="radio" value="003" name="alphabet_1">
+                             <i>Off Track</i>
+                         </label>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-md-5 col-xl-2 integation_dropdown">
+                <label>Agent</label>
+                <div class="dropdown">
+                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                        <ins>All users</ins>
+                        <span class="arrow"></span>
+                    </button>
+                    <div class="dropdown-menu radio">
+                        <label class="dropdown-item">
+                            <input class="jRadioDropdown" type="radio" value="001" name="alphabet_1">
+                            <i>All milestones</i>
+                        </label>
+                        <label class="dropdown-item">
+                            <input class="jRadioDropdown" type="radio" value="002" name="alphabet_1">
+                            <i>On Track</i>
+                        </label>
+                        <label class="dropdown-item">
+                            <input class="jRadioDropdown" type="radio" value="003" name="alphabet_1">
+                            <i>Off Track</i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xl-1 custom_left">
+                <a class="filter_text m_b_10 m_l_0">
+                   <img src="images/blue_cross_circle.png" class="img-fluid m_r_5">Clear filter
+               </a>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+</div>
+<div class="panel-loading now-loading">
+    <div class="center_code">
+        Loading ...
+    </div>
+    <div class="panel">
+        <span class="loading5">
+            <span class="outerCircle"></span>
+        </span>
+    </div>
+</div>
+<div class="scroll_body margin_auto p_tb_50">
+    <div class="p_tb_50">
+        <img src="images/bussiness_noresult.png" class="img-fluid">
+        <div class="no_result">No results found</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body>
+<script type="text/javascript">
+    // JavaScript code 
+    function disableScrolling() { 
+        setTimeout(function() { 
+            document.body.style.overflow = 'hidden';
+            document.body.style.marginRight = '0';
+        }, 1000); 
+    } 
+
+    function enableScrolling() { 
+        document.body.style.overflow = ''; 
+        document.body.style.marginRight = '-6px';
+    } 
+    function toggleMainmenu(e) {
+        e.classList.toggle("active");
+        document.querySelector("aside").classList.toggle("active");
+    }
+
+    function beforePrintHandler () {
+        for (var id in Chart.instances) {
+            Chart.instances[id].resize();
+        }
+    }
+    jQuery.noConflict();
+    jQuery(document).ready(function($){
+        $(function(){
+            console.log('content 1: ' + $('body').hasScrollBar());
+            if(!$('body').hasScrollBar()){
+                console.log("we dont have scroll");
+            }
+            else{
+                console.log("we have scroll");
+                var body = document.getElementsByTagName("body")[0];
+                body.addEventListener("mousewheel", enableScrolling());
+                body.addEventListener("click", enableScrolling());
+                body.addEventListener("mousemove", disableScrolling());
+                body.addEventListener("mousemove", disableScrolling());
+            }
+        });
+
+        (function($) {
+            $.fn.hasScrollBar = function() {
+                return this.get(0).scrollHeight > this.height();
+            }
+        })(jQuery);
+        /* dropdown */
+        
+        $('.notification_close').click(function (e) {
+            e.preventDefault();
+            $('.dropdown-notification').hide();
+        });
+        $('.user').click(function (e) {
+            e.preventDefault();
+            //$(this).find('.dropdown-menu').toggle();
+            $('.dropdown-menu-profile').toggle();
+            $('.dropdown-notification').hide();
+        });
+        $('.top_menu').click(function (e) {
+            e.preventDefault();
+            //$(this).find('.dropdown-menu').toggle();
+            $('.dropdown-menu-profile').hide();
+            $('.nav-second-level').addClass('collapse').removeClass('show');
+        });
+        $('.notification').click(function (e) {
+            e.preventDefault();
+            //$(this).find('.dropdown-menu').toggle();
+            $('.dropdown-notification').toggle();
+            $('.dropdown-menu-profile').hide();
+        });
+        $('.notification_readall').click(function(){
+            $('input[name="notification_chk"]').prop('checked', true);
+        });
+
+        $(document).on("click", function (event) {
+            if (!$(event.target).closest(".notification").length) {
+                //console.log($(event.target).parents(".dropdown-notification").length);
+                if ($(event.target).parents(".dropdown-notification").length == 0) {
+                    $(".dropdown-notification").hide();
+                }
+            }
+            if (!$(event.target).closest(".user").length) {
+                //console.log($(event.target).parents(".dropdown-notification").length);
+                if ($(event.target).parents(".dropdown-menu-profile").length == 0) {
+                    $(".dropdown-menu-profile").hide();
+                }
+            }
+        });
+        $('#example').DataTable( {
+            "scrollY":        "350px",
+            "scrollCollapse": true,
+            "paging":         false,
+            'columnDefs': [{
+                'targets': 0,
+                'orderable': false,
+            }],
+            "order": [[ 3, "desc" ]]
+        });
+        $('#myteam').DataTable( {
+            "scrollY":        "350px",
+            "scrollCollapse": true,
+            "paging":         false
+        });
+        if ($(window).width() > 768) {
+            // Select and loop the container element of the elements you want to equalise
+            $('.full_width').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column', this).each(function(){
+                    $(this).css({'height':highestBox + 'px'});
+                });
+
+                //additional jquery to adjust the height for the activity section
+                var highestBox = highestBox;
+                $('.column').each(function(){
+                    if ($(this).hasClass('activityclass')) {
+                        $(this).css({'height': highestBox + 'px'});
+                        var new_height = highestBox - 30;
+                        $(this).find('.box_shadow').css({'height': new_height + 'px'});
+                    }
+                });
+            });
+
+            $('.column_width').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column_2', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column_2',this).height(highestBox);
+
+            });
+
+            $('.column_width_2').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column_3', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column_3',this).height(highestBox);
+
+            });
+
+            $('.column_width_3').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column_4', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column_4',this).height(highestBox);
+
+                //additional jquery to set the height for finance chart
+                //var child_div_height_finance_ui = highestBox-289;
+                //$('.column_4_inner_child', this).height(child_div_height_finance_ui);
+
+                //additional jquery to set the height for finance chart
+                var child_div_height_finance_ui = highestBox-281;
+                $('.column_4_inner_child', this).height(child_div_height_finance_ui);
+            });
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <g id="referral">
+    <path d="M25.2 21.6L18 21.6C10.71 21.6 4.8 15.69 4.8 8.4L0 8.4L8.4 0L16.8 8.4L12 8.4C12 15.69 17.91 21.6 25.2 21.6Z" transform="translate(7.200012 50.3999)" id="Path" fill="#FE4400" stroke="none" />
+    <path d="M36 16.8L36 12C36 5.3724 30.6276 0 24 0L12 0C5.3724 0 0 5.3724 0 12L0 16.8" transform="translate(0 28.80005)" id="Path" fill="#FE4400" stroke="none" />
+    <path d="M2.3532 12L8.3532 6L14.3532 12L16.7064 0.234C15.9456 0.0828 15.1596 0 14.3532 0L2.3532 0C1.548 0 0.7608 0.0828 0 0.234L2.3532 12Z" transform="translate(9.64679 28.80005)" id="Path" fill="#EBF7FE" stroke="none" />
+    <g id="Group" transform="translate(3.600006 14.3999)">
+      <path d="M0 0L4.8 6L9.6 0" transform="translate(9.6 14.4)" id="Path" fill="#DB9B7C" stroke="none" />
+      <path d="M0 0L4.8 6L9.6 0" transform="translate(9.6 14.4)" id="Path" fill="#FDBB1C" stroke="none" />
+      <path d="M6 7.2L3.6 7.2C1.6116 7.2 0 5.5884 0 3.6C0 1.6116 1.6116 0 3.6 0L6 0" id="Path" fill="#FDBB1C" stroke="none" />
+    </g>
+    <path d="M0 0L2.4 0C4.3884 0 6 1.6116 6 3.6C6 5.5884 4.3884 7.2 2.4 7.2L0 7.2" transform="translate(26.39999 14.3999)" id="Path" fill="#FDBB1C" stroke="none" />
+    <path d="M19.2 0L19.2 10.8C19.2 16.1016 14.9016 20.4 9.6 20.4C4.2984 20.4 0 16.1016 0 10.8L0 0" transform="translate(8.399994 8.399902)" id="Path" fill="#FDBB1C" stroke="none" />
+    <path d="M14.4 6L14.4 7.2C14.4 11.1768 11.1768 14.4 7.2 14.4L0 14.4L0 8.4C0 3.7608 3.7608 0 8.4 0L15.6 0C20.2392 0 24 3.7608 24 8.4L24 14.4L18 14.4C16.0116 14.4 14.4 12.7884 14.4 10.8L14.4 6Z" transform="translate(6 0)" id="Path" fill="#1D1C1B" stroke="none" />
+    <path d="M36 16.8L36 12C36 5.3724 30.6276 0 24 0L12 0C5.3724 0 0 5.3724 0 12L0 16.8" transform="translate(36 55.19995)" id="Path" fill="#FE4400" stroke="none" />
+    <path d="M2.3532 12L8.3532 6L14.3532 12L16.7064 0.234C15.9456 0.0828 15.1596 0 14.3532 0L2.3532 0C1.548 0 0.7608 0.0828 0 0.234L2.3532 12Z" transform="translate(45.64679 55.19995)" id="Path" fill="#EBF7FE" stroke="none" />
+    <path d="M0 0L4.8 6L9.6 0" transform="translate(49.20001 55.19995)" id="Path" fill="#FDBB1C" stroke="none" />
+    <path d="M6 7.2L3.6 7.2C1.6116 7.2 0 5.5884 0 3.6C0 1.6116 1.6116 0 3.6 0L6 0" transform="translate(39.60001 40.80005)" id="Path" fill="#FDBB1C" stroke="none" />
+    <path d="M0 0L2.4 0C4.3884 0 6 1.6116 6 3.6C6 5.5884 4.3884 7.2 2.4 7.2L0 7.2" transform="translate(62.39999 40.80005)" id="Path" fill="#FDBB1C" stroke="none" />
+    <path d="M19.2 0L19.2 10.8C19.2 16.1016 14.9016 20.4 9.6 20.4C4.2984 20.4 0 16.1016 0 10.8L0 0" transform="translate(44.39999 34.80005)" id="Path" fill="#FDBB1C" stroke="none" />
+    <path d="M14.4 6L14.4 7.2C14.4 11.1768 11.1768 14.4 7.2 14.4L0 14.4L0 8.4C0 3.7608 3.7608 0 8.4 0L15.6 0C20.2392 0 24 3.7608 24 8.4L24 14.4L18 14.4C16.0116 14.4 14.4 12.7884 14.4 10.8L14.4 6Z" transform="translate(42 26.3999)" id="Path" fill="#1D1C1B" stroke="none" />
+  </g>
+</svg>

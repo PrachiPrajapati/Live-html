@@ -1,0 +1,13 @@
+.minicolors-slider{
+	left: 200px!important;
+}
+
+.minicolors-opacity-slider {
+    left: 165px!important;
+}
+
+.minicolors-with-opacity .minicolors-panel {
+    width: auto!important;
+    background: transparent!important;
+    border: none!important;
+}

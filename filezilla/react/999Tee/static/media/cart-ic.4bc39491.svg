@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="22px" viewBox="0 0 26 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Cart Outline</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home-Page_17/09/2020" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Product-Detail-Page" transform="translate(-936.000000, -893.000000)">
+            <g id="Group-11" transform="translate(919.000000, 879.000000)">
+                <g id="Cart-Outline" transform="translate(16.000000, 11.000000)">
+                    <rect id="Rectangle-Copy" x="0" y="0" width="28" height="28"></rect>
+                    <g id="Group" transform="translate(2.333333, 4.666667)" stroke="#464546" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18.6666667,18.9583333 C19.3110167,18.9583333 19.8333333,18.4360167 19.8333333,17.7916667 C19.8333333,17.1473167 19.3110167,16.625 18.6666667,16.625 C18.0223167,16.625 17.5,17.1473167 17.5,17.7916667 C17.5,18.4360167 18.0223167,18.9583333 18.6666667,18.9583333 Z" id="Path" stroke-width="1.4"></path>
+                        <path d="M9.33333333,18.9583333 C9.97768333,18.9583333 10.5,18.4360167 10.5,17.7916667 C10.5,17.1473167 9.97768333,16.625 9.33333333,16.625 C8.68898333,16.625 8.16666667,17.1473167 8.16666667,17.7916667 C8.16666667,18.4360167 8.68898333,18.9583333 9.33333333,18.9583333 Z" id="Path" stroke-width="1.4"></path>
+                        <polyline id="Path" stroke-width="2" points="23.3333333 0.291666667 21 13.125 7 13.125 4.66666667 0.291666667"></polyline>
+                        <line x1="0" y1="0.291666667" x2="4.66666667" y2="0.291666667" id="Path" stroke-width="2"></line>
+                        <line x1="10.5" y1="8.45833333" x2="17.5" y2="8.45833333" id="Path" stroke-width="2"></line>
+                        <line x1="9.33333333" y1="3.79166667" x2="18.6666667" y2="3.79166667" id="Path" stroke-width="2"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

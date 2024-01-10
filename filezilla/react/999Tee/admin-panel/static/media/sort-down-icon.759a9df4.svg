@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>sort-up(24x24)@1x copy</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="14.0-B2C-User-Orders" transform="translate(-507.000000, -330.000000)" stroke="#0566FF" stroke-width="0.761904762">
+            <g id="Group-7" transform="translate(374.000000, 302.000000)">
+                <g id="sort-up(24x24)@1x-copy" transform="translate(142.000000, 36.000000) scale(1, -1) translate(-142.000000, -36.000000) translate(134.000000, 28.000000)">
+                    <line x1="3.04761905" y1="0" x2="3.04761905" y2="15.2380952" id="Path"></line>
+                    <polyline id="Path" points="6.0952381 3.04761905 3.04761905 0 0 3.04761905"></polyline>
+                    <line x1="6.0952381" y1="15.2380952" x2="9.14285714" y2="15.2380952" id="Path"></line>
+                    <line x1="6.0952381" y1="11.4285714" x2="12.1904762" y2="11.4285714" id="Path"></line>
+                    <line x1="6.0952381" y1="7.61904762" x2="15.2380952" y2="7.61904762" id="Path"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

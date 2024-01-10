@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>:: portfolio css Demo ::</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!--Main Js Included-->
+    <script src="js/lib/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+<!--    <div class="sky-brand"><a href="www.yudiz.com" target="_blank"><img src="images/yudiz-logo.png" alt="yudiz_logo" /></a></div>-->
+<section class="screen-1 active">
+    <div class="front-scene">
+        <div class="main-charector"><img src="images/main-charector.png" alt="yudiz-car-image"/></div>
+        <div class="road-tunnel"></div>
+    </div>
+    <div class="back-scene">
+        <div class="building-blocks">
+            <div class="back-building"></div>
+            <div class="front-building"></div>
+        </div>
+        <div class="road"></div>
+    </div>
+    <section class="interchange-effect"></section>
+</section>
+<section class="screen-2">
+    <div class="front-scene">
+        <div class="main-charector"><img src="images/main-charector.png" alt="yudiz-car-image"/></div>
+        <div class="road-tunnel"></div>
+        <div class="border-collapse-block"></div>
+    </div>
+    <div class="back-scene">
+        <div class="option-blocks">
+            <div class="main-selection-intro"></div>
+            <div class="option-tunnel">
+                <div class="option-tunnel-design"></div>
+                <div class="option-tunnel-web"></div>
+                <div class="option-tunnel-mobile"></div>
+            </div>
+        </div>
+        <div class="road"></div>
+    </div>
+    <section class="interchange-effect"></section>
+</section>
+    <script>
+        $(document).keydown(function(e) {
+            switch(e.which) {
+                case 37: // left
+                break;
+
+                case 38: // up
+                    
+                break;
+
+                case 39: // right
+                    $('.screen-1 .main-charector img').addClass('first-run-car');
+                    $('.screen-1 .interchange-effect').removeClass('active-interchange');
+                    setTimeout(function(){
+                        $('.screen-1 .main-charector img').removeClass('first-run-car');
+                        $('.screen-1').removeClass('active');
+                        $('.screen-2').addClass('active');
+                        $('.screen-1 .interchange-effect').addClass('active-interchange');
+                    },4000);
+                break;
+
+                case 66: // back
+                break;
+                
+                case 81: // quite
+                    $('.screen-2 .main-charector img').addClass('quite-run-car');
+                    $('.interchange-effect').removeClass('active-interchange');
+                    setTimeout(function(){
+                        $('.screen-2 .main-charector img').removeClass('quite-run-car');
+                        $('.interchange-effect').addClass('active-interchange');
+                    },5000);
+                break;
+                
+                case 68: // design
+                    $('.screen-2 .main-charector img').addClass('selection-design-car');
+                    $('.screen-2 .border-collapse-block').removeClass('design-active web-active mobile-active');
+                    $('.screen-2 .border-collapse-block').addClass('design-active');
+                    $('.interchange-effect').removeClass('active-interchange');
+                    setTimeout(function(){
+                        $('.screen-2 .main-charector img').removeClass('selection-design-car');
+                        $('.interchange-effect').addClass('active-interchange');
+                    },5000);
+                break;
+                
+                case 87: // web
+                    $('.screen-2 .main-charector img').addClass('selection-web-car');
+                    $('.screen-2 .border-collapse-block').removeClass('design-active web-active mobile-active');
+                    $('.screen-2 .border-collapse-block').addClass('web-active');
+                    $('.interchange-effect').removeClass('active-interchange');
+                    setTimeout(function(){
+                        $('.screen-2 .main-charector img').removeClass('selection-web-car');
+                        $('.interchange-effect').addClass('active-interchange');
+                    },5000);
+                break;
+                
+                case 77: // mobile
+                    $('.screen-2 .main-charector img').addClass('selection-mobile-car');
+                    $('.screen-2 .border-collapse-block').removeClass('design-active web-active mobile-active');
+                    $('.screen-2 .border-collapse-block').addClass('mobile-active');
+                    $('.interchange-effect').removeClass('active-interchange');
+                    setTimeout(function(){
+                        $('.screen-2 .main-charector img').removeClass('selection-mobile-car');
+                        $('.interchange-effect').addClass('active-interchange');
+                    },5000);
+                break;
+                
+                default: return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        });
+    </script>
+</body>
+</html>

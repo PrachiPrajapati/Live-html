@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Mobile</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle-17" x="0" y="0" width="44" height="44"></rect>
+            <g id="Group-25" transform="translate(8.800000, 3.666667)">
+                <rect id="Rectangle-51" stroke="#FFFFFF" stroke-width="0.825825826" x="0" y="0" width="26.1904762" height="36.6666667" rx="1.30952381"></rect>
+                <line x1="10.4761905" y1="3.92857143" x2="15.7142857" y2="3.92857143" id="Line" stroke="#FFFFFF" stroke-width="1.30952381" stroke-linecap="square"></line>
+                <rect id="Rectangle-53" stroke="#47EBC6" stroke-width="2.61904762" x="6.54761905" y="8.51190476" width="13.0952381" height="13.0952381"></rect>
+                <line x1="8.18452381" y1="25.2083333" x2="18.6607143" y2="25.2083333" id="Line-2" stroke="#FFFFFF" stroke-width="2.61904762" stroke-linecap="square"></line>
+                <polyline id="Rectangle-53-Copy" stroke="#47EBC6" stroke-width="1.30952381" points="24.4678897 22.9166667 22.2619048 22.9166667 22.2619048 7.20238095 24.4678897 7.20238095"></polyline>
+                <polyline id="Rectangle-53-Copy-2" stroke="#47EBC6" stroke-width="1.30952381" transform="translate(3.067278, 15.059524) scale(-1, 1) translate(-3.067278, -15.059524) " points="4.17027065 22.9166667 1.96428571 22.9166667 1.96428571 7.20238095 4.17027065 7.20238095"></polyline>
+                <circle id="Oval-5" fill="#47EBC6" cx="13.75" cy="32.0833333" r="1.96428571"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

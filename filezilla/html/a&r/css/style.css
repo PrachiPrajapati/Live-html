@@ -1,0 +1,2596 @@
+
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+
+@font-face {
+    font-family: 'Oswald-Light';
+    src: url('../fonts/Oswald-Light.eot');
+    src: url('../fonts/Oswald-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-Light.woff2') format('woff2'),
+        url('../fonts/Oswald-Light.woff') format('woff'),
+        url('../fonts/Oswald-Light.ttf') format('truetype'),
+        url('../fonts/Oswald-Light.svg#Oswald-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald-Bold';
+    src: url('../fonts/Oswald-Bold.eot');
+    src: url('../fonts/Oswald-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-Bold.woff2') format('woff2'),
+        url('../fonts/Oswald-Bold.woff') format('woff'),
+        url('../fonts/Oswald-Bold.ttf') format('truetype'),
+        url('../fonts/Oswald-Bold.svg#Oswald-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff'),
+        url('../fonts/Montserrat-Regular.ttf') format('truetype'),
+        url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.eot');
+    src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff'),
+        url('../fonts/Montserrat-Bold.ttf') format('truetype'),
+        url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald-Regular';
+    src: url('../fonts/Oswald-Regular.eot');
+    src: url('../fonts/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-Regular.woff2') format('woff2'),
+        url('../fonts/Oswald-Regular.woff') format('woff'),
+        url('../fonts/Oswald-Regular.ttf') format('truetype'),
+        url('../fonts/Oswald-Regular.svg#Oswald-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/Montserrat-Light.eot');
+    src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Light.woff2') format('woff2'),
+        url('../fonts/Montserrat-Light.woff') format('woff'),
+        url('../fonts/Montserrat-Light.ttf') format('truetype'),
+        url('../fonts/Montserrat-Light.svg#Montserrat-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('../fonts/Montserrat-SemiBold.eot');
+    src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+        url('../fonts/Montserrat-SemiBold.ttf') format('truetype'),
+        url('../fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-UltraLight';
+    src: url('../fonts/Montserrat-UltraLight.eot');
+    src: url('../fonts/Montserrat-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-UltraLight.woff2') format('woff2'),
+        url('../fonts/Montserrat-UltraLight.woff') format('woff'),
+        url('../fonts/Montserrat-UltraLight.ttf') format('truetype'),
+        url('../fonts/Montserrat-UltraLight.svg#Montserrat-UltraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold_1';
+    src: url('../fonts/Montserrat-Bold_1.eot');
+    src: url('../fonts/Montserrat-Bold_1.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Bold_1.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold_1.woff') format('woff'),
+        url('../fonts/Montserrat-Bold_1.ttf') format('truetype'),
+        url('../fonts/Montserrat-Bold_1.svg#Montserrat-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('../fonts/Montserrat-Black.eot');
+    src: url('../fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Black.woff2') format('woff2'),
+        url('../fonts/Montserrat-Black.woff') format('woff'),
+        url('../fonts/Montserrat-Black.ttf') format('truetype'),
+        url('../fonts/Montserrat-Black.svg#Montserrat-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('../fonts/Montserrat-ExtraBold.eot');
+    src: url('../fonts/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraBold.woff') format('woff'),
+        url('../fonts/Montserrat-ExtraBold.ttf') format('truetype'),
+        url('../fonts/Montserrat-ExtraBold.svg#Montserrat-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins-Regular.eot');
+    src: url('../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/Poppins-Regular.woff') format('woff'),
+        url('../fonts/Poppins-Regular.ttf') format('truetype'),
+        url('../fonts/Poppins-Regular.svg#Poppins-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('../fonts/Poppins-Light.eot');
+    src: url('../fonts/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-Light.woff2') format('woff2'),
+        url('../fonts/Poppins-Light.woff') format('woff'),
+        url('../fonts/Poppins-Light.ttf') format('truetype'),
+        url('../fonts/Poppins-Light.svg#Poppins-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Thin';
+    src: url('../fonts/Poppins-Thin.eot');
+    src: url('../fonts/Poppins-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-Thin.woff2') format('woff2'),
+        url('../fonts/Poppins-Thin.woff') format('woff'),
+        url('../fonts/Poppins-Thin.ttf') format('truetype'),
+        url('../fonts/Poppins-Thin.svg#Poppins-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-ExtraBold';
+    src: url('../fonts/Poppins-ExtraBold.eot');
+    src: url('../fonts/Poppins-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Poppins-ExtraBold.woff') format('woff'),
+        url('../fonts/Poppins-ExtraBold.ttf') format('truetype'),
+        url('../fonts/Poppins-ExtraBold.svg#Poppins-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins-Medium.eot');
+    src: url('../fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-Medium.woff2') format('woff2'),
+        url('../fonts/Poppins-Medium.woff') format('woff'),
+        url('../fonts/Poppins-Medium.ttf') format('truetype'),
+        url('../fonts/Poppins-Medium.svg#Poppins-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/Poppins-Bold.eot');
+    src: url('../fonts/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/Poppins-Bold.woff') format('woff'),
+        url('../fonts/Poppins-Bold.ttf') format('truetype'),
+        url('../fonts/Poppins-Bold.svg#Poppins-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../fonts/Poppins-SemiBold.eot');
+    src: url('../fonts/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-SemiBold.woff2') format('woff2'),
+        url('../fonts/Poppins-SemiBold.woff') format('woff'),
+        url('../fonts/Poppins-SemiBold.ttf') format('truetype'),
+        url('../fonts/Poppins-SemiBold.svg#Poppins-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-ExtraLight';
+    src: url('../fonts/Poppins-ExtraLight.eot');
+    src: url('../fonts/Poppins-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Poppins-ExtraLight.woff') format('woff'),
+        url('../fonts/Poppins-ExtraLight.ttf') format('truetype'),
+        url('../fonts/Poppins-ExtraLight.svg#Poppins-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('../fonts/Lato-Light.eot');
+    src: url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Light.woff2') format('woff2'),
+        url('../fonts/Lato-Light.woff') format('woff'),
+        url('../fonts/Lato-Light.ttf') format('truetype'),
+        url('../fonts/Lato-Light.svg#Lato-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../fonts/Lato-Bold.eot');
+    src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Bold.woff2') format('woff2'),
+        url('../fonts/Lato-Bold.woff') format('woff'),
+        url('../fonts/Lato-Bold.ttf') format('truetype'),
+        url('../fonts/Lato-Bold.svg#Lato-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../fonts/Lato-Regular.eot');
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato-Regular.woff') format('woff'),
+        url('../fonts/Lato-Regular.ttf') format('truetype'),
+        url('../fonts/Lato-Regular.svg#Lato-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+* { }
+body                            { font-family: "Oswald-Regular"; }
+h1                              { font-size: 74px; line-height: 85px; font-family: "Oswald-Bold";}
+h2                              { font-size: 48px; line-height: 60px; font-family: "Oswald-Regular"; }
+h3                              { font-size: 36px; }
+h4                              { font-size: 30px; line-height: 45px; font-family: "Oswald-Regular"; }
+h5                              { font-size: 28px; line-height: 35px; font-family: "Montserrat-UltraLight"; }
+h6                              { font-size: 26px; line-height: 33px; font-family: "Montserrat-Light"; }
+a                               { display: inline-block; }
+a:hover                         { color: inherit; text-decoration: none; }
+.comman-padding                 { padding: 125px 0px;  }
+ul                              { padding-left: 0; list-style-type: none; }
+p                               { font-size: 16px; line-height: 20px; }
+.right-align                    { float: right; }
+.right-align-text               { text-align: right; }
+.border-black                   { border-color: #221e20 !important; }
+.heading-text                   { font-size: 110px; line-height: 150px; text-transform: uppercase;}
+.sub-title                      { font-size: 16px; line-height: 24px; letter-spacing: 6px; font-family: "Oswald-Regular"; }
+.artist-section-sub-title       { font-size: 16px; line-height: 24px; letter-spacing: 8px; font-family: "Oswald-Regular"; }
+.color-white                    { color: #fff; }
+.color-red                      { color: #e9202d; }
+.color-black                    { color: #221e20; }
+.color-grey                     { color: #a7a2a3; }
+button:focus                    { outline: none; }
+input:focus                    { outline: none; }
+.form-control                   { padding: 0;font-size: inherit;line-height: inherit;color: inherit;background-color: transparent; background-clip: inherit; border: none; border-radius: 0; }
+
+
+/*--------------- Loader Overlay ---------------*/
+
+.loader {
+            display: block;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('../images/loader-1.gif') 50% 50% no-repeat #221e20;
+            
+        }
+
+
+
+/******* Common Element CSS End ******/
+
+/*************************** Home Page Start ***************************/
+
+/********* Sidebar start *********/
+.menu-backdrop { position: fixed; top: 0; left: 0;  height: 100vh; width: 100%; display: block; background: transparent;left: 100%; transition-duration: 0.3s; -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; }
+.main-menu-open .menu-backdrop { position: fixed; top: 0; left: 0; z-index: 6;  height: 100vh; width: 100%; display: block; background: transparent;left: 0%; transition-duration: 0.3s; -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; cursor: pointer;}
+.sidebar-menu-section           { padding: 20px 50px 20px 50px; z-index: 1;  position: fixed; top: 0; right: -400px; width: 370px; height: 100vh; overflow: auto; background-color: #221e20; display: block; transition-duration: 0.3s; -webkit-transition-duration: 0.3s;-moz-transition-duration: 0.3s; z-index: 10;}
+.main-menu-open .sidebar-menu-section { right: 0; z-index: 7; }
+.close-menu-icon                { margin: 40px 0px; text-align: right; }
+.close-menu-icon a              { width: 30px; height: 30px; z-index: 1; }
+.close-menu-icon a img          { max-width: 100%; }
+.menu-list                      { margin-bottom: 45px; }
+.menu-list li a                 { font-size:54px; line-height: 68px; font-family: "Oswald-Regular"; color: #fff; text-transform: uppercase; }
+.active-menu                    { color:#e9202d !important;  }
+.menu-list li a:hover           { color: #7A7677 !important; }
+.menu-logo                      { width: 95px; height: 55px; }
+.menu-logo img                  { max-width: 100%; }
+.menu-list li a span            { text-transform: lowercase; }
+/********* Sidebar end *********/
+
+/********* Home Banner start *********/
+
+.top-navbar                     { position: absolute; top: 0; left: 0; width: 100%; z-index: 5; }
+.top-navbar .dropdown-toggle::after { display: none; }
+.stickey-top-navbar             { background-color: rgba(0,0,0,0.7);  transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s;  }
+.stickey-top-navbar .logo-img img{ max-width: 70%; }
+.stickey-top-navbar .logo-img   { height: auto; }
+.stickey-top-navbar .navbar-right {padding: 20px 0px; }
+.home-banner                    {  z-index: 0; position: relative; width: 100%; min-height: 100vh;  }
+.primary-navbar                 { padding: 15px 0px 20px 10px; }
+.primary-navbar .user-dropdown  { background-color: transparent; display: inline-block; border: none; padding-right: 0; cursor: pointer;}
+.primary-navbar .user-dropdown img  { width: 17px; }
+.primary-navbar .dropdown  { background-color: transparent; display: inline-block; }
+.primary-navbar .dropdown .user-dropdown-angle  { color: #e9202d; display: inline-block; vertical-align: top; }
+.logged-in-navbar .sidebar-btn  { margin: 0; }
+.dropdown-menu.show             { left: unset !important; right: 0 !important; top: 5px !important; }
+.user-dropdown-content          { margin: 0; padding: 0; }
+.home-banner .primary-navbar:before    { height: auto; }
+/*.home-banner:after              { content: ''; z-index: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(34,30,31,0.15); }*/
+.logo-img                       { width: 184px; height: 113px; display: inline-block; }
+.logo-img img                   { max-width: 100%; }
+.login-icon                     { display: inline-block; width: 17px; height: 25px;  margin-left: 10px;}
+.sidebar-btn                    { display: inline-block; width: 47px; height: 47px; padding: 10px 14px; cursor: pointer; margin-left: 25px; background-color: #fff; border-radius: 50%; position: relative; }
+.navbar-right a                 { transition-duration: 0.3s; -webkit-transition-duration: 0.3s;-moz-transition-duration: 0.3s; }
+.navbar-right a:hover           { color: #e9202d; }
+.navbar-right                   { display: inline-block; float: right; padding: 30px 0px; }
+.navbar-right img               { width: 100%; }
+.home-banner-content            {padding-top: 150px; height: 100vh; display: flex; align-items: center; }
+.right-align-text               { text-align: right; }
+.banner-btn-grp                 { text-align: right; margin-top: 25px; }
+.common-btn                     { width: 175px; height: 60px; font-size: 18px; line-height: 60px; border-radius: 5px; text-align: center; margin-left: 5px; font-family: "Oswald-Regular"; transition-duration: 0.5s; -webkit-transition-duration: 0.5s;-moz-transition-duration: 0.5s; }
+.primary-btn                    { color: #fff; background-color:#e9202d;border: 1px solid #e9202d;  }
+.primary-btn:hover              { color: #fff; background-color: #221e20; border-color: #fff; }
+.secondary-btn                  { background-color: #fff; color: #221e20; border: 1px solid #fff; }
+.secondary-btn:hover            { color: #fff; background-color: #221e20; border-color: #fff; }
+.scroll-link-section            { position: absolute; bottom: 100px; }
+.scroll-link                    { margin-left: 10px; display: inline-block; color: #fff; font-family: "Montserrat-Light";transition-duration: 0.5s; -webkit-transition-duration: 0.5s;-moz-transition-duration: 0.5s;  }
+.scroll-link:hover              { color: #fff; }
+.arrow-down                     {display: inline-block; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid #f00; }
+.home-banner-content            { position: relative; z-index: 1; }
+
+.user-dropdown-content li       { margin: 5px 0px; }
+.user-dropdown-content .dropdown-item:hover    { background-color: transparent; }
+
+
+/*slider css*/
+.banner-slider.slick-dotted.slick-slider { margin-bottom: 0;touch-action: auto;-ms-touch-action: auto; }
+.banner-slider .slick-dots               { bottom: 100px; right: calc(50% - 560px); width: auto; display: inline-block; }
+.banner-slider .slick-dots li { width: 30px; height: auto; background: #4F4B4C;}
+.banner-slider .slick-dots li button { padding: 0px; width: 0%; height: 4px; background: #e9202d;}
+.banner-slider .slick-dots li button:before { display: none;}
+.banner-slider li.slick-active button { width: 100%; transition-duration: 5s; -webkit-transition-duration: 5s; transition-timing-function: linear; -webkit-transition-timing-function: linear;}
+
+/*slider css*/
+
+/********* Home Banner end *********/
+
+/********* How it works start *********/
+
+.how-it-works-section           {  background-image: url('../images/how-it-work-banner.png'); background-size: cover; background-position: top right; background-repeat: no-repeat;}
+.how-it-works-section  h1       { margin-bottom: 55px; }
+.working-step span              { background-color: #221e20; color: #e9202d;padding: 0px 5px; margin-right: 10px; display: inline-block; }
+.working-step h4                { text-transform: uppercase; margin-bottom: 35px; }
+.working-step p                 { line-height: 32px; font-family: "Montserrat-Light"; word-spacing: 3px; margin-bottom: 35px; max-width: 90%;  }
+.all-working-steps a            { background-color: #221e20; color: #fff; transition-duration: 0.5s; -webkit-transition-duration: 0.5s; }
+.all-working-steps a:hover      { color: #221e20; background-color: #fff;  }
+.how-it-works-section .common-btn { margin-left: 0; }
+
+/********* How it works end *********/
+
+/********* Artist Slider start *********/
+
+.artist-slider                  { padding: 25px 0px; background-color: #221e20;}
+.artist-slider .slick-track > div { padding: 25px;}
+.artist-slider .bg-slide        { position: relative; height: 550px; }
+.artist-slider .bg-slide:before { position: relative; width: 100%; height: 100%; display: block; content: ""; background: rgb(34,30,31); opacity: 0.8; transition-duration: 0.5s; -webkit-transition-duration: 0.5s; z-index: 1; cursor: pointer;  }
+/*.artist-slider .bg-slide:hover:before{ opacity: 0; } */
+.artist-slider .slick-current .bg-slide:before { opacity: 0 !important; }
+.artist-slide-content           { width: 100%; position: absolute; top: 50%; transform: translateY(-50%); text-align: center;   }
+.artist-slide-content p         { width: 100%; color: #fff; margin-bottom: 5px; }
+.artist-name                    { font-size: 20px; letter-spacing: 10px; line-height: 24px; font-family: "Montserrat-Bold"; width: 100%; text-transform: uppercase; }
+.artist-designation             { font-family: "Montserrat-Light"; font-size: 12px; line-height: 24px;  width: 100%;}
+.artist-slider .slick-next      { right: 20px; z-index: 0; background: rgba(0,0,0,0.6); color: #fff; width: 30px; height: 35px; }
+.artist-slider .slick-prev      { left: 15px;z-index: 1; background: rgba(0,0,0,0.6); color: #fff;width: 30px; height: 35px; }
+.artist-slider .slick-next:hover,
+.artist-slider .slick-prev:hover{ background: rgba(0,0,0,1); }
+.artist-slider .slick-next:hover:before,
+.artist-slider .slick-prev:hover:before{ color: #fff; }
+.artist-slider .slick-next:before { content: '\f105'; font-family: "FontAwesome"; right: 20px; color: #515051; font-size: 26px; }
+.artist-slider .slick-prev:before { content: '\f104'; font-family: "FontAwesome"; left: 20px; color: #515051; font-size: 26px; z-index: 1;}
+
+/********* Artist Slider end *********/
+
+/********* Member Section start *********/
+
+.member-section                 { min-height: 800px; color: #fff;  background: url('../images/member-bg.png')no-repeat center center / cover;}
+.member-section h5              { line-height: 42px; color: #fff; margin-bottom: 50px;}
+.red-seprator                   { border: 3px solid #e9202d; width: 100px; }
+.member-section h1              { color: #fff; margin-top: 60px;margin-bottom: 40px; }
+.membership-plans .col-md-4 > div { position: relative; margin-bottom: 48px;}
+.membership-plan                { position: relative; overflow: hidden; text-align: center;background-color: #221e20; padding-top: 20px;box-shadow: 15px 0px 30px rgba(0,0,0,0.15); border: 1px solid #221e20; border-radius: 5px; overflow: hidden; transition-duration:0.6s; -webkit-transition-duration:0.6s;-moz-transition-duration:0.6s; z-index: 5;}
+.membership-plans .col-md-4 > div:hover .membership-plan            { border-color: #e9202d; border-radius: 5px 5px 0px 0px;}
+.membership-plan p              { font-size: 20px; line-height: 30px; font-family: "Oswald-Regular"; position: relative;}
+.membership-plan h3             { line-height: 45px; position: relative;}
+.sign-up-btn                    { position: absolute; top: 0%; text-align: center; cursor: pointer; width: 100%; border: 1px solid#e9202d; background-color: #e9202d; padding: 10px 0px; transition-duration:0.6s; -webkit-transition-duration:0.6s; -moz-transition-duration:0.6s; z-index: 1; border-radius: 5px;}
+.sign-up-btn a                  { color: #fff; }
+.membership-plan:hover .sign-up-btn { bottom: 0; transition-duration:0.6s; -webkit-transition-duration:0.6s;-moz-transition-duration:0.6s; }
+.sign-up-btn:hover              { background-color: #fff; border-color: transparent;  }
+.sign-up-btn:hover a            { color: #221e20; }
+.membership-duration            { color: #221e20; background-color: #fff; display: inline-block; padding: 0px 5px; margin-right: 5px; }
+.membership-plans .col-md-4 > div:hover .sign-up-btn { top: 100%; border-radius: 0px 0px 5px 5px;}
+
+/********* Member Section end *********/
+
+/********* Testinomail slider start *********/
+
+.testinomail-slider-section     { position: relative; }
+.testinomail-slide              { min-height: 650px; width: 100%;  z-index: 0; position: relative;}
+.testinomail-slide:after        { content: ''; position: absolute;top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(34,30,31,0.6); }
+/*.testinomail-slide:before         {  position: absolute; width: 100%; height: 100%; display: block; content: ""; background: url('../images/black.jpg')no-repeat center center/cover; opacity: 0.7;  z-index: 0;}
+*/.testinomail-slide-content    { z-index: 1;position: relative; min-height: 650px; }
+.testinomail-slide-content .row { min-height: 400px; }
+.testinomail-slide-content .row .col-md-5 { display: flex; align-self: flex-end; }
+.testinomail-slide h2           { color: #fff; }
+.slider-navigation              { position: absolute; bottom: 165px; left: calc(50% - 570px); }
+.slider-navigation a            { color: #221e20 !important;}
+.slider-navigation .prev,.next  { margin-right: 5px; width: 20px;  }
+.slider-navigation img          { max-width: 100%; }
+.navigation-info,.navigation-arrow{ display: inline-block; }
+.navigation-info span           { display: inline-block; color: #fff; margin-left: 5px; font-size: 16px; line-height: 32px; font-family: "Oswald-Regular"; }
+.client-store                   { width: 100%; height: 100%;vertical-align: bottom; text-align: right; text-transform: uppercase; }
+.client-store a                 { color: #fff; border: 1px solid #fff; width: 87px; height: 33px; line-height: 33px; font-size: 14px; text-align: center; border-radius: 5px;transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s;}
+.client-store a:hover           { background-color: #fff; color: #221e20; }
+.client-logo                    { text-align: right; margin-bottom: 25px; }
+.client-logo img                { max-width: 100%; }
+.testinomail-slider .slick-slide img { display: inline-block; }
+
+
+/********* Testinomail slider end *********/
+
+/********* Label Section start *********/
+
+.label-banner                   { position: relative; }
+.label-banner:after             { position: absolute; top: 0; left: 0; width: 100%; background-color: rgba(34,30,31,0.65); content: ''; height: 100%; z-index: 0;}
+.label-banner-content           { position: relative; z-index: 1; }
+.registered-labels-section      { background: url('../images/registerd-label-bg.png')no-repeat center center /cover;}
+.label-title                    { font-size: 14px; line-height: 18px; font-family: "Montserrat-Bold"; letter-spacing: 6px; }
+.label-list                     { margin: 50px 0px; }
+.label-list li                  { display: inline-block; margin-right: 20px;width: 115px; text-align: center; }
+.label-list li img              { max-width: 100%; }
+.find-links                     { margin-top: 50px; overflow: hidden; }
+.find-links li                  {width: calc(100% / 4); float: left;  margin-bottom: 20px; color: #fff; }
+.find-links li a                { color: #fff; font-family: "Oswald-Regular"; text-transform: uppercase; font-size: 20px; line-height: 28px;transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; }
+.find-links li a:hover          { color: #221e20; }
+.subscribe-now-section          { color: #fff;  margin-top: 40px; }
+.subscribe-now-section p        { font-family: "Montserrat-Light"; font-size: 15px; line-height: 23px; }
+.subscribe-now-section input    { padding: 0px 5px;  height: 34px; width: 290px; margin-right: 10px; background-color: transparent; border: 1px solid #fff; font-family: "Montserrat-Light"; font-size: 13px; line-height: 30px; color: rgba(248,177,181,1) !important; }
+.subscribe-now-section input::placeholder { color: rgba(248,177,181,1); }
+.subscribe-now-section input:focus      { outline: none; box-shadow: none; }
+.subscribe-now-section button   { background-color: #fff; padding: 0px 25px; color: #e9202d; border:1px solid #fff; font-family: "Oswald-Regular"; cursor: pointer; font-size: 13px; line-height: 34px; text-transform: uppercase; height: 36px; }
+.subscribe-input-section        { display: inline-block; vertical-align: top; width: calc(100% - 130px); }
+.find-links li a span           { text-transform: lowercase; }
+
+
+/********* Label Section end *********/
+
+/********* footer Start *********/
+
+footer                          { height: 100px; background-color: #221e20;padding: 25px 0px; }
+.footer-links li                { display: inline-block;margin: 12px 0px; margin-right: 20px; }
+.footer-links li a              { font-size: 12px; line-height: 15px; color: #7A7677;  font-family: "Montserrat-Light"; position: relative;transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; }
+.footer-links li a:hover        { color: #fff; }
+.footer-links li a:after        { width: 2px; height: 100%; right: -13px; border-right: 1px solid#7A7677; position: absolute; content: ''; }
+.footer-links li:last-child a:after{ border: none;  }
+.footer-logo                    { width: 80px; height: 50px; margin: 0px auto; }
+.footer-logo img                { max-width: 100%; }
+.copyright-text                 { font-size: 12px; line-height: 20px; margin:15px 0px;  color: #7A7677;  font-family: "Montserrat-Light"; }
+.copyright-text a               { color: inherit; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+.copyright-text a:hover         { color: #fff; }
+/********* footer end *********/
+
+/*************************** Home Page end ***************************/
+
+/*************************** About us Page start ***************************/
+
+.secondary-banner               { position: relative; min-height: 800px; background: url('../images/about-us-banner.png')no-repeat center center/cover;}    
+.secondary-banner .primary-navbar:before    { height: auto; }  
+.secondary-banner-content       { position: absolute; width: 100%; bottom: 130px; }
+.secondary-banner-content h1    { font-size: 110px; line-height: 165px;  }
+.secondary-banner-content h6    { margin-left: 30px; }
+.about-us-details-section h1    { margin-bottom: 50px; }
+.our-story-section              { padding: 0px 55px 0px 0px;}
+.our-story-section-right        { padding: 0; padding-left: 80px; }     
+.our-story-section-right .banner-btn-grp { text-align: left; }
+.about-us-details-section .banner-btn-grp { text-align: left; }
+.our-story-section h5           { font-family: "Oswald-Regular"; color: #ACABAD; margin-bottom: 35px; line-height: 40px; }
+.our-story-section p            { font-family: "Montserrat-Light"; line-height: 32px; color: #221e20; margin-bottom: 35px; text-align: justify; }
+/*************************** About us Page start ***************************/
+
+/*************************** Label Page start ***************************/
+
+.label-banner                   {  position: relative; min-height: 800px; background: url('../images/label-banner.png')no-repeat center center/cover , url('../images/label-banner-1.png')no-repeat left/contain; }
+.all-labels                     { position: relative; z-index: 1;  }
+.all-labels:after               { position: absolute; content: ''; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; background: url('../images/all-labels-bg.png')no-repeat center center/cover; opacity: 0.15; }
+.label-section                  { background-color: #fff; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); width: 205px;height: 205px; padding: 30px 10px; float: left; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; margin-right: 20px;cursor: pointer; background-color: #fff;  text-align: center; border-radius: 5px; }
+.label-section:nth-child(5n)    { margin-right: 0; }
+.label-section img              { max-width: 100%; max-height: 100%; transition-duration: 0.3s; -webkit-transition-duration: 0.3s;-moz-transition-duration: 0.3s; }
+.label-section:hover img        { transform: scale(1.1); }
+.label-banner-content .secondary-btn:hover { border-color:#fff !important; }
+.label-banner-content h6        { margin-bottom: 30px; }
+
+/*************************** Label Page end ***************************/
+
+/*************************** Top 10 Page start ***************************/
+.top-10-navbar                  { background: url('../images/top-10-banner.png')no-repeat center center/cover;  }
+.top-10-navbar .container       { z-index: 2; position: relative; }
+/*.primary-navbar:before          { opacity: 0.65; z-index: 0; background: url('../images/black.jpg')no-repeat center center/cover; width: 100%; height: 100%; top: 0; left: 0; position: absolute;content: ''; }
+*/.tringle-navbar                 { position: relative; height: 350px;  overflow: hidden; }
+.tringle-navbar:after           {  z-index: 0; background-color: rgba(34,30,31,0.75); width: 100%; height: 100%; top: 0; left: 0; position: absolute;content: ''; }
+.tringle-navbar:before          { z-index: 1; content: ''; position: absolute; bottom: 0; left: 0; width: 100%; border: 100px solid #fff; border-right-color: transparent; border-top-color: transparent; border-width: 100px 50vw;}
+.top-10-section                 { padding-top: 10px; }
+.top-10-list .row .col-md-6     { display: flex; }
+.list-artist                    { min-width: 100%; margin-top: 50px; margin-right: 10px; border: 0px solid rgba(122, 118, 119, 0.5); box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); border-radius: 5px; }
+.list-artist-banner             { height: 270px; position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+.list-artist-name               { position: absolute; bottom: 20px; right: 20px; color: #fff; text-transform: uppercase; background-color: #221e20; }
+.list-artist-name span          { background-color: #e9202d; display: inline-block; padding: 0px 5px; }
+.list-artist-details            { padding: 40px 40px 40px 20px; }
+.list-artist-details-title      { font-size: 13px; line-height: 20px; font-family: "Oswald-Regular"; color: #221e20; display: inline-block; letter-spacing: 7px; }
+.list-artist-desc               { margin: 20px 0px; font-size: 14px; line-height: 22px; font-family: "Montserrat-Light";   }               
+.list-artist-btn-grp a          { width: 120px; height: 45px; font-size: 14px; text-transform: uppercase; color: #fff; text-align: center; line-height: 45px; border-radius: 5px; margin-right: 10px;transition-duration: 0.5s; -webkit-transition-duration: 0.5s;-moz-transition-duration: 0.5s; }
+.list-artist-btn-grp .profile-btn{ background-color: #e9202d; border: 1px solid #e9202d; }
+.list-artist-btn-grp .profile-btn:hover{ background-color: #221e20; border-color: #221e20;  }
+.list-artist-btn-grp .contact-btn{ background-color: #221e20; border: 1px solid #221e20; }
+.list-artist-btn-grp .contact-btn:hover{ background-color: #fff; border-color: #221e20;color: #221e20; }
+.common-help-section            { position: relative; display: flex; align-items: center; min-height: 325px; color: #fff; }
+.common-help-section:before     {  z-index: 0; background-color: rgba(34,30,31,0.65); width: 100%; height: 100%; top: 0; left: 0; position: absolute;content: '';  }
+.common-help-section-data       { position: relative; z-index: 1; display: flex; justify-content: space-between;  }
+.common-help-section-data h3    { font-size: 40px; line-height: 60px; font-family: "Oswald-Light"; margin-right: 10px; }
+.common-help-section-data a     { display: inline-block; color: #fff; background-color: transparent; border: 1px solid #fff; color: #fff; text-transform: uppercase;transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s;}
+.common-help-section-data a:hover { background-color: #fff; color: #221e20; }
+/*************************** Top 10 Page end ***************************/
+
+/*************************** faq Page start ***************************/
+
+.faq-navbar                     { position: relative; }
+.faq-navbar:after               { z-index: 0; background-color: rgba(34,30,31,0.8); width: 100%; height: 100%; top: 0; left: 0; position: absolute;content: ''; }
+.faq-navbar .container          { z-index: 2; position: relative; }
+.faq-section                    { padding-top: 10px;  }
+.faq-title                      { background-color: rgba(34, 30, 31, 0.05); padding: 0px 36px 0px 160px; font-family: "Poppins-Regular"; color: #221e20; min-height: 102px; font-size: 24px; line-height: 30px; display: flex; align-items: center;   color: #221e20; cursor: pointer; position: relative; }
+.faq-desc                       { display: none;  padding: 30px 40px 20px 40px; overflow: hidden; }
+.faq-no                         { display: flex; align-items: center;justify-content: center; position: absolute; top: 0; left: 0; transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s;text-align: center; font-size: 45px; font-family: "Oswald-Regular"; color: #fff;  margin-right: 36px;   width: 130px; background-color: rgba(34, 30, 31, 0.1); height: 100%; }
+.faq-item                       { margin: 15px 0px;  }
+.faq-item:hover .faq-no         { background-color: #e9202d; color: #fff; }
+.active-faq-color               { background-color: #e9202d; color: #fff; }
+.active-faq                     { display: block; }
+.active-faq p                   {  font-family: "Lato-Light"; font-size: 16px; line-height: 24px; }
+.faq-desc p                   {  font-family: "Lato-Light"; font-size: 16px; line-height: 24px; }
+.faq-section .heading-text span     { text-transform: lowercase; }
+/*************************** faq Page end ***************************/
+
+/*************************** Contact Page start ***************************/
+
+.social-icon-list               { width: 100%; padding: 0; margin: 0;  }
+.social-icon-list li            { width: 50px; height: 50px; margin-right: 13px; display: inline-block; }
+.contact-navbar                 { position: relative; }
+.contact-navbar:after           { z-index: 0; background-color: rgba(34,30,31,0.85); width: 100%; height: 100%; top: 0; left: 0; position: absolute;content: ''; }
+.social-icon-list li img        { max-width: 100%; }
+.contact-form                   { margin: 30px 0px 80px 0px; }
+.contact-form-input             { width: calc(50% - 10px); float: left; margin-right: 20px;   }
+.contact-form-input input       {margin-bottom: 15px; width: 100%; font-size: 15px; line-height: 21px; -webkit-appearance: none; padding: 15px 10px; font-family: "Poppins-ExtraLight"; -webkit-appearance: none; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15);-webkit-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); -moz-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); border-radius: 5px;  border: 1px solid transparent;}
+.contact-form-input:focus       { outline: none; }
+.contact-form input:hover,
+.contact-form input:focus       { background-color: rgba(242, 242, 242, 1); }
+.contact-form-input:nth-child(2n) { margin-right: 0; }
+.contact-form textarea          { width: 100%; font-family: "Poppins-ExtraLight"; -webkit-appearance: none; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15);-webkit-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); -moz-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); border-radius: 5px; font-size: 15px; line-height: 21px; padding: 15px 10px; border: 1px solid transparent; resize: none;}
+.contact-form textarea:hover    { background-color: rgba(242, 242, 242, 1); }
+.contact-form textarea:focus    { outline: none; }
+.contact-form-btn               { background: url('../images/contact-btn.svg')no-repeat right 30px top/50px 50px; border: none; text-transform: uppercase; width: 210px; height: 50px; cursor: pointer; background-color: #e9202d; color: #fff; margin: 20px 0px;font-family: "Oswald-Regular"; letter-spacing: 3px; text-align: left; padding-left: 45px;border-radius: 5px; } 
+.contact-form-btn:hover         { background-color: #221e20; }
+.contact-form-btn span          { display: inline-block; position: relative; }
+.contact-details-section        { margin-top: 50px; }
+.contact-section                { margin-bottom: 50px; }
+.contact-title                  { padding-left: 45px; font-size: 16px; margin-bottom: 20px; line-height: 33px;  font-family: "Oswald-Regular"; letter-spacing: 5px;}
+.contact-detaile                { font-size: 34px; line-height: 47px; font-family: "Lato-Light"; color: #222; transition-duration: 0.5s; -webkit-transition-duration: 0.5s;-moz-transition-duration: 0.5s; }
+.contact-detaile:hover          { color: #e9202d; }
+
+.contact-map                    { width: 100%; height: 420px; -webkit-filter: grayscale(100%);margin-top: 25px; -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); filter: grayscale(100%);}
+#map    { height: 100%; width: auto; height: 400px;}
+
+/*************************** Contact Page end ***************************/
+
+/*************************** Login Page start ***************************/
+
+.login-banner                   { position: relative; padding-top: 150px; padding-bottom: 30px; min-height: calc(100vh - 100px);width: 100%; background: url('../images/login-banner.png')no-repeat center center/cover; overflow: hidden;}
+.login-banner:before            {  z-index: 0; background-color: rgba(34,30,31,0.8); width: 100%; height: 100%; top: 0; left: 0; position: absolute;content: ''; }
+.login-banner .primary-navbar:before { height: auto; }
+.login-banner-content           { position: relative; z-index: 2;  }
+.login-section h1               { position: relative; color: #fff; margin-bottom: 50px; padding-bottom: 50px; text-align: center; font-size: 64px; line-height: 76px; font-family: "Oswald-Bold";}
+.login-section h1:after         { position: absolute; content: ''; bottom: 10px; left:calc(50% - 50px);  width: 100px; border-top: 5px solid#e9202d; }
+.login-section                  { padding: 0px 30px; }
+.login-input-grp input          { width: 100%; height: 60px; padding:10px; font-size: 20px; line-height: 40px; font-family: "Lato-Light";  height: 60px; text-align: center; background-color: #fff; border: 1px solid transparent; border-radius: 5px; margin-bottom: 20px; }
+.login-btn                      { width: 100%; height: 60px; margin-bottom: 20px; cursor: pointer; background-color: #e9202d; color: #fff; border: 1px solid #e9202d; margin-top: 35px; border-radius: 5px; font-size: 18px; line-height: 60px; font-family: "Oswald-Regular"; }
+.login-btn:hover                { border-color: #fff; background-color: #221e20; }
+.login-input-grp input:focus,.login-btn:focus { outline: none; } 
+.login-section .jcf-checkbox                   { padding: 20px;background-color: #7a7677 !important; border-radius: 5px;}
+.login-section .jcf-focus,.login-section .jcf-focus *        { border-color: transparent !important; }
+.login-section .jcf-checkbox span  { width: 25px; height: 12px; top: 35%; left: 30%; border-color: #e9202d !important; }
+.login-functionality            { margin-top: 10px; display: flex; justify-content: space-between; }
+.remember-section               { margin-right: 10px; color: #fff; font-size: 18px; line-height: 36px; font-family: "Lato-Light"; }
+.forget-password-link a         { font-size: 18px; line-height: 36px; font-family: "Lato-Light"; color: #fff; }
+.forget-password-link a:hover   { color: #e9202d; }
+.registration-link              { text-align: center; margin-top: 40px; font-style: italic; font-size: 16px; line-height: 32px; font-family: "Lato-Bold"; color: #fff; }
+.registration-link a            { color: #e9202d; text-decoration: underline; }
+.login-error                    { color: #e9202d; }
+
+/*************************** Login Page end ***************************/
+
+/*************************** Reset Password Page start ***************************/
+
+
+
+/*************************** Reset Password Page start ***************************/
+
+/*************************** sign up Page start ***************************/
+
+.sign-up-banner                 { padding-top: 150px; padding-bottom: 30px; min-height: calc(100vh - 100px);width: 100%; background: url('../images/sign-up-banner.png')no-repeat center center/cover; }
+.sign-up-banner .primary-navbar:before    { height: auto; }
+.sign-up-section                { display: flex; align-items: center; min-height:calc(100vh - 258px); color: #fff; }
+.sign-up-section .heading-text  { display: inline-block; letter-spacing: -3px; cursor: pointer; transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s;}
+.sign-up-section .heading-text span{ display: block;  font-size: 30px; letter-spacing: normal; line-height: 42px; font-family: "Oswald-Regular";}
+.artist-signup-text:hover       { color: #221e20; }
+.label-signup-text:hover        { color: #e9202d; }
+
+
+.label-modal-1 .modal-dialog    { min-width: 635px; background-color: #221e20;}
+.label-modal-1 .modal-content   { background-color: #221e20; color: #fff;border: none; }
+.signup-modal .modal-dialog     { padding:30px 40px 50px 40px; }
+.modal-backdrop                 { background-color:rgba(34, 30, 31, 0.85) !important;  }
+.modal-backdrop.show            { opacity: 1; }
+.signup-modal h1                { font-size: 60px; line-height: 84px; letter-spacing: -1px; font-family: "Oswald-Regular"; font-weight: 700;}
+.signup-modal h1 span           { font-size: 20px; line-height: 40px; letter-spacing: normal; letter-spacing: normal; font-family: "Oswald-Light"; }
+.signup-modal.show              {display: flex!important; flex-direction: column; justify-content: center; align-content: center; align-items: flex-start; }
+.signup-modal input:focus       { outline: none; }
+.sign-up-label   { font-size: 13px; line-height: 20px; font-family: "Oswald-Regular"; letter-spacing: 6.5px; color: #fff; display: block; }
+.registration-form-input        { width: calc(50% - 10px); margin-right: 20px;}
+.registration-form-input input  { width: 100%; margin-top: 7px; color: #000; border: 1px solid #fff; font-size: 15px; line-height: 22px; border-radius: 5px; font-family: "Montserrat-Light"; padding: 7px 10px; }
+.registration-form-input input::placeholder { color: #A7A2A3; font-family: "Montserrat-UltraLight"; }
+.registration-form-input:nth-child(2n){ margin-right: 0; }
+.registration-grp               { margin-top: 20px; }
+.registration-form-input-grp    { display: flex; align-items: flex-start;  }
+.registration-form-terms .jcf-checkbox  { padding: 15px; border: 1px solid transparent; background-color: #e9202d !important; border-radius: 5px;}
+.registration-form-terms .jcf-focus,.registration-form-terms .jcf-focus *        { border-color: transparent !important; }
+.registration-form-terms .jcf-checkbox span  { width: 20px; height: 10px; top: 35%; left: 30%; border-color: #221e20 !important; }
+.registration-form-terms p      { margin-left: 15px; display: inline-block; word-spacing: 3px; font-family: "Poppins-ExtraLight"; font-size: 16px; line-height: 30px; }
+.registration-form-terms p a    { color: #e9202d; text-decoration: underline; }
+.registration-grp .jcf-select   { display: block; }
+.signup-modal .common-btn       { margin-left: 0; margin-top: 20px; cursor: pointer; vertical-align: bottom; }
+
+.artist-modals .modal-dialog    { min-width: 635px; background-color: #e9202d;}
+.artist-modals .modal-content   { background-color: #e9202d; color: #fff; border: none;}
+.artist-modals h1                { letter-spacing: normal; }
+.artist-modals h1 span           { color: #221e20; letter-spacing: normal; font-family: "Oswald-Regular"; }
+.artist-modals button           { background-color: #221e20; color: #fff; border-color: #221e20; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; }
+.artist-modals button:hover    { color: #221e20; background-color: #fff; border-color: #fff; }
+.artist-modals .registration-form-terms .jcf-checkbox  { padding: 15px; border: 1px solid transparent; background-color: #221e20 !important; border-radius: 5px;}
+.artist-modals .registration-form-terms .jcf-focus,.artist-modals .registration-form-terms .jcf-focus *        { border-color: transparent !important; }
+.artist-modals .registration-form-terms .jcf-checkbox span  { width: 20px; height: 10px; top: 35%; left: 30%; border-color: #fff !important; }
+.artist-modals .registration-form-terms p { font-family: "Poppins-ExtraLight"; }
+.artist-modals .registration-form-terms p a    { color: #221e20; text-decoration: underline; font-family: "Poppins-Regular"; }
+.registration-full-width-input      { width: 100%; margin-right: 0; }
+.jcf-select-plan-selection.jcf-select .jcf-select-opener      { display: none; }
+.jcf-select-plan-selection.jcf-select .jcf-select-text        { color: #221e20; }
+.jcf-select-plan-selection.jcf-select-drop .jcf-hover, .jcf-list-box .jcf-selected { background-color: #221e20; color: #fff !important; }
+.jcf-select-plan-selection.jcf-select                         {position: relative; height: auto;border: none; margin-top: 7px;border-radius: 5px;  }
+.jcf-select-plan-selection.jcf-select .jcf-select-text         {  letter-spacing: normal; font-size: 15px; line-height: 32px; font-family: "Montserrat-Bold"; cursor: pointer; padding: 3px 0px; }
+.jcf-select-plan-selection.jcf-select:after   { position: absolute; right: 10px;cursor: pointer; top: calc(50% - 7px); border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 14px solid #e9202d; content: ''; }
+.jcf-select-plan-selection .jcf-list .jcf-option                { letter-spacing: normal; font-size: 15px; line-height: 32px; font-family: "Montserrat-Bold"; cursor: pointer; color: #221e20;}
+
+.subscription-plan-details          { display: flex; justify-content: space-between; border-bottom: 0.5px solid #fff; padding: 15px 0px 30px 0px;  }
+.subscription-plan-details h2       { font-size: 30px; line-height: 60px; font-family: "Oswald-Regular";  }
+.subscription-plan-details h2 span  { background-color: #fff; color: #221e20; padding-left: 5px; margin-right: 5px;  }
+.subscription-plan-details a        { font-size: 30px; line-height: 60px; color: #fff; }
+.plan-payment-section h5            { font-size: 24px; line-height: 34px; font-family: "Oswald-Regular"; margin-top: 25px;  }
+.plan-payment-section p             { font-size: 16px; line-height: 32px; font-family: "Poppins-Light"; margin-bottom: 20px; }
+.payment-input                      { width: calc(25% - 10px) !important; float: left; }
+.payment-input input                { width: 100%; }
+.payment-input-card-no              { width: calc(50% - 20px) !important; float: left; margin-right: 20px; }
+.payment-input-card-no input        { width: 100%; }
+.payment-input                      { margin-right: 20px; }
+.registration-form-input-grp .payment-input:nth-child(3n)        { margin-right: 0; }
+.all-cards-img                      { display: inline-block; margin:0px 10px 0px 20px; width: calc(100% - 325px); border-radius: 3px; }
+.all-cards-img img                  { max-width: 100%; }
+.registration-form-input-grp        { margin-bottom: 5px; }
+.paypal-section                     { margin-top: 30px;  }
+.paypal-section img                 { margin-top: 5px; }
+.close-modal                        { border: none !important; float: right; margin-bottom: 25px; cursor: pointer; background-color: transparent !important; width: 23px; right: 0; }
+.close-modal:focus                  { outline: none; }
+
+
+.label-modal-2 .modal-dialog    { min-width: 635px; background-color: #221e20;}
+.label-modal-2 .modal-content   { background-color: #221e20; color: #fff; border: none; }
+.thank-you-section              { text-align: center; } 
+.thank-you-section h6           { margin-bottom: 30px; font-size: 16px; line-height: 24px; letter-spacing: 8px; font-family: "Oswald-Regular"; color: #e9202d; text-align: center; }
+.thank-you-plane-img            { width: 70px; margin: 20px auto; }
+.thank-you-plane-img img        { width: 100%; }
+.thank-you-section p            { font-size: 18px;line-height: 36px; font-family: "Montserrat-Light" !important; text-align: center; margin-bottom: 35px; padding:0px 45px;  }
+.artist-modal-3 .thank-you-section h6 { color: #221e20; }
+
+
+
+/*************************** sign up Page end ***************************/
+
+/********************************** Artist Section start **********************************/
+
+/*************************** artist dashboard start ***************************/
+
+.common-banner                      { position: relative; padding-top: 150px; min-height: 246px; height: 100%;  background: url('../images/common-banner-bg.png')no-repeat center center/cover;}
+.common-banner .login-icon          {  }
+.common-banner .primary-navbar:before { height: auto; }
+.common-banner:before               {  position: absolute;top: 0; left: 0; width: 100%; height: 100%; content: '';  background-color:rgba(34, 30, 31, 0.9) }
+.common-banner-content              { position: relative; }
+.common-banner-title                { text-align: center; }
+.common-banner-title p              { margin-top: 10px; display: inline-block; background-color: #e9202d; color: #221e20; font-size: 16px; line-height: 24px; font-family: "Oswald-Regular"; letter-spacing: 8px; padding-left: 10px; }
+.common-navbar                      { width: 100%; background-color: #e9202d; color: #fff; font-family: "Oswald-Regular"; font-size: 14px; line-height: 20px; }
+.common-navbar ul                   {  width: 100%; padding: 0; margin: 0; min-height: 44px; }
+.artist-navbar li                   { width: calc(100% / 4); float: left; }
+.artist-inner-navbar li             { width: calc(100% / 5); float: left; }
+.common-navbar li a                 { font-size: 14px; display: block; text-align: center; line-height: 44px; color: #fff; font-family: "Oswald-Regular";transition-duration: 0.4s; -webkit-transition-duration: 0.4s;-moz-transition-duration: 0.4s; }
+.common-navbar li a:hover           { background-color: #221e20; color: #fff; }
+.active-navbar                      { background-color: #fff;color: #221e20 !important; }
+.active-navbar:hover                { background-color: #fff !important;color: #221e20 !important;  }
+.artist-mobile-navbar               { display: none; }
+.jcf-select-artist-mobile-navbar           { display: none !important; }
+
+.artist-dashboard                   { padding: 70px 0px; }
+.artist-dashboard h1                { margin: 0; }
+.artist-dashboard-header            { display: flex;justify-content: space-between; }
+.artist-dashboard-title             { margin-right: 10px; }
+.artist-dashboard .sub-title        { letter-spacing: 8px; }
+.my-profile-btn-section             { padding-top: 35px; }
+.my-profile-btn                     { color: #fff;padding: 20px; padding-left: 60px; font-family: "Oswald-Regular"; font-size: 18px; line-height: 30px; background: url('../images/my-profile-icon.svg')no-repeat left 20px center/25px 25px;background-color: #221e20; border-radius: 5px;}
+.my-profile-btn:hover               { color: #221e20; background-color: #fff; }
+
+.artist-section                     { position: relative; height: 250px; width: 100%; overflow: hidden; border-radius: 10px;display: flex;align-items: center; justify-content: center; background: url('../images/general-info-bg.png')no-repeat center center/cover; margin-top: 30px; z-index: 0;}
+.artist-section:before              { position: absolute; top: 0; left: 0; content: ''; width: 100%; height: 100%; z-index: -1; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+
+
+.artist-section:hover > a           { opacity: 0; }  
+.artist-section:hover:before        { background: none; }           
+
+.artist-section a                   { position: relative; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; font-size: 35px; line-height: 72px; font-family: "Oswald-Regular";color: #fff; }
+.artist-section-details { display: flex; height: 100%; align-items: center; text-align: center;transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s;  background: rgba(0, 0, 0, 0.65);}
+.artist-section-details h5 { font-size: 35px; line-height: 40px; font-family: "Oswald-Regular";color: #fff; }
+.artist-section-details > div > div { max-height: 0; overflow: hidden; transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s;}
+.artist-section:hover .artist-section-details > div > div { max-height: 500px; }
+.artist-section:hover .artist-section-details          { background-color: rgba(233, 33, 45, 0.77);}
+.artist-section-details a           { width: 119px; height: 44px; line-height: 44px; font-size: 14px; border-radius: 5px; background-color: #221e20; color: #fff; }
+.artist-section-details a:hover     { background-color: #e9202d; }
+.artist-section-details p           { font-family: "Montserrat-Light"; font-size: 14px; line-height: 28px; margin: 15px 50px; color: #fff; }
+
+.logged-in-navbar .navbar-right p   { display: inline-block;width: 100px; text-align: right; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: middle; margin: 0; }
+
+
+/*.artist-section-details             { position: absolute;  opacity: 1; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; align-items: center; top: 0; width: 100%; height: 100%; background-color: rgba(233, 33, 45, 0.77); text-align: center; padding: 0px 75px; color: #fff; width: 100%;}
+.artist-section-details > div       { display: flex; align-items: center; width: 100%; height: 100%; }
+.artist-section-details h5          { font-size: 35px; line-height: 40px; font-family: "Oswald-Regular";color: #fff; }
+.artist-section-details a           { width: 119px; height: 44px; line-height: 44px; font-size: 14px; border-radius: 5px; background-color: #221e20; color: #fff; }
+.artist-section-details a:hover     { background-color: #e9202d; }
+.artist-section:hover .artist-section-details {  opacity: 1 } */
+
+.profile-setup-modal.show           {display: flex!important; flex-direction: column; justify-content: center; align-content: center; align-items: flex-start; }
+.profile-setup-modal .modal-dialog    { min-width: 635px; background-color: #e9202d;}
+.profile-setup-modal .modal-content   { background-color: #e9202d; color: #fff;border: none; }
+.profile-setup-modal .modal-dialog     { padding:30px 40px 50px 40px; }
+.profile-setup-modal h1             { font-size: 50px; line-height: 60px; font-family: "Oswald-Bold";  margin: 20px 0px; }
+.profile-setup-modal p              { font-family: "Montserrat-Light"; font-size: 16px; line-height: 22px; margin: 0px;}
+.profile-setup-modal                { text-align: center; color: #221e20; }
+.artist-get-started-btn             { margin-top: 30px; background-color: #221e20; color: #fff; border-color: #221e20; cursor: pointer; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; }
+.artist-get-started-btn:hover       { background-color: #fff; border-color: transparent !important; color: #221e20!important; }
+/*************************** artist dashboard end ***************************/
+
+
+
+/*************************** audio page start ***************************/
+
+.audio-upload-section-title         { font-size: 14px; line-height: 26px; font-family: "Oswald-Regular"; text-transform: uppercase; color: #221e20; letter-spacing: 6.5px; margin-bottom: 5px; }
+.audio-upload-section               { display: flex; position: relative; align-items: center; margin-bottom: 30px;   }
+.audio-upload                       { border: 1px solid #f2f2f2; padding: 20px 10px 20px 70px; min-width: 240px; max-width: 240px;  min-height: 65px; border-radius: 10px; background: url('../images/desc-gery.svg')no-repeat 25px center/33px 33px !important; position: relative; }
+.audio-upload input                 { opacity: 0; -webkit-appearance : none;  position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; }
+.audio-upload span                  { font-size: 15px; line-height: 19px; font-family: "Lato-Light"; color: #a7a2a3;text-overflow: ellipsis; white-space: nowrap; display: inline-block; width: 100%; overflow: hidden; }
+.track-title                        { margin: 0px 10px; font-size: 10px; line-height: 20px; letter-spacing: 5px; color: #d3cecf; }
+.audio-title-input                  { border: 1px solid #f2f2f2; border-radius: 10px; padding: 10px 10px 10px 20px; min-width: 255px; min-height: 55px; font-size: 16px; line-height: 32px; font-family: "Montserrat-Light"; }
+.audio-title-input::placeholder     { color: #d3cecf; }
+.audio-upload-section .audio-cancel-icon { display: inline-block; background: url('../images/add-icon.svg')no-repeat center center/cover; width: 26px; height: 26px; margin-left: 15px;  }
+.uploaded-audio .audio-cancel-icon  { display: inline-block; background: url('../images/cancel-icon-red.svg')no-repeat center center/cover; width: 26px; height: 26px; margin-left: 15px;}
+.uploaded-audio .audio-title-input  { background-color: #f2f2f2; border: 1px solid #f2f2f2; border-radius: 10px; }
+.uploaded-audio .audio-upload  { background-color: #f2f2f2; border: 1px solid #f2f2f2;  }
+.uploaded-audio .track-title        { color: #e9202d; }
+.uploaded-audio .audio-upload       { background: #f2f2f2 url('../images/desc.svg')no-repeat 25px center/33px 33px !important; border-color: #f2f2f2;  }
+#audio_title-error                  { margin: 0px 5px; }
+.audio-error-msg                    { position: absolute; top: calc(100% + 5px); margin-bottom: 0; color: #e9202d;}
+.uploaded-audio .audio-upload span  { color: #222; }
+.audio-part                         { display: flex; position: relative; align-items: center; }
+.audio-loader                       { background: url('../images/loader-1.gif') 50% 50% no-repeat #fff; position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 999;}
+
+/*************************** audio page end ***************************/
+
+
+/*************************** video page start ***************************/
+
+.video-section-title                {  font-size: 14px; line-height: 26px; letter-spacing: 6.5px; font-family: "Oswald-Regular"; margin-bottom: 5px;  }
+.artist-video-upload                 { width: 100%; height: 140px; position: relative; border-radius: 10px; border: 1px solid rgba(211, 206, 207, 1); display: flex; align-items: center; justify-content: center; }
+.artist-video-upload input           { opacity: 0; -webkit-appearance : none; cursor: pointer;  position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.artist-video-upload span            { font-size: 15px; line-height: 19px; font-family: "Lato-Light"; width: 200px; display: inline-block; text-overflow: ellipsis; overflow: hidden;white-space: nowrap; text-align: center; }
+.video-play-btn                      { width: 33px; height:33px; display: block; z-index: 1; margin: 5px auto;  background: url('../images/video-play-btn-grey.svg')no-repeat center center/cover;  }
+.video-upload                       { padding: 0px 10px; width: 100%;  }
+.video-upload-section               { padding: 0px 10px;  }
+.video-title-section                { margin-top: 15px; }
+.video-title-section p              { font-size: 10px; line-height: 20px; color: #D3CECF; letter-spacing: 5px; margin-bottom: 5px;  }
+.artist-video-title                 { border: 1px solid #f2f2f2; border-radius: 10px; padding: 5px 10px 5px 20px;width: 100%; min-height: 45px; font-size: 18px; line-height: 32px; font-family: "Montserrat-Light"; }
+.artist-video-title::placeholder    { color: #d3cecf; font-family: "Lato-Light"; }
+.video-thumbnaile-section           { margin-top: 15px; }
+.video-thumbnaile-section p         { font-size: 10px; line-height: 20px; color: #D3CECF; letter-spacing: 5px; margin-bottom: 5px;  }
+.video-thumbnaile-section > div     { position: relative; width: 100%; height: 138px; border: 1px solid rgba(211, 206, 207, 1); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+.video-thumbnaile-section > div > input { opacity: 0; -webkit-appearance : none; cursor: pointer;  position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-thumbnaile-section > div img  { width: 35px; height: 35px; margin: 5px auto; display: block;  }
+.video-thumbnaile-section > div span { font-size: 15px; line-height: 19px; font-family: "Lato-Light"; width: 200px; display: inline-block; text-overflow: ellipsis; overflow: hidden;white-space: nowrap; text-align: center;}
+.add-video-btn                      {  width: 100%; margin-top: 25px; height: 45px; line-height: 45px; background: transparent; border:1px solid rgba(211, 206, 207, 1);  border-radius: 10px; font-size: 16px; font-family: "Oswald-Regular"; color: #221e20; text-align: center; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s;}
+.add-video-btn:hover                { background: #e9202d; color: #fff; border-color: #e9202d; }
+
+.uploaded-video-section .artist-video-upload input { display: none !important; }
+.uploaded-video-section .video-play-btn { background: url('../images/video-play-icon-white.svg')no-repeat center center/cover;  }
+.uploaded-video-section .artist-video-upload span { display: none; }
+.uploaded-video-section .video-thumbnaile-section { display: none; }
+.uploaded-video-section .video-title-section p { color: #e9202d; }
+.uploaded-video-section .artist-video-title { color: #221e1f !important; background-color: #f1f1f1; }
+.uploaded-video-section .artist-video-title::placeholder { color: #221e1f !important;  }
+
+.video-loader                       { background: url('../images/loader-1.gif') 50% 50% no-repeat #fff; position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 999; border-radius: 10px;}
+.video-loader-bg                    { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1000; }
+
+/*************************** video page end ***************************/
+
+/*************************** general info start ***************************/
+
+.artist-back-link                   { font-size: 18px; line-height: 25px; font-family: "Oswald-Regular"; color: #221e20; margin-right: 15px; }
+.artist-back-link i                 { margin-right: 5px; font-weight: bold; }
+.artist-back-link:hover             { color: #e9202d; }
+.general-info-title                 { padding-left: 50px; background: url('../images/edit-icon.svg')no-repeat left center/40px 40px; font-size: 40px;line-height: 56px; font-family: "Oswald-Regular"; color: #221e20; margin-bottom: 15px; }
+.general-info-subtitle              { font-size: 16px; line-height: 32px; font-family: "Montserrat-UltraLight"; }
+.general-information-section        { margin-top: 50px; }
+.dotted-seprator                    { border-top: 2px dotted rgba(242, 242, 242, 1); margin: 35px 0px;  }
+.general-info                       { width: calc(100% / 3 - 30px); float: left; margin-right: 45px; }
+.general-info-grp                   { margin-bottom: 25px; }
+.general-info-grp .general-info:nth-child(3n) { margin-right: 0; }
+.general-info input, .general-info label{ width: 100%; }
+.general-info label                 { font-size: 13px; line-height: 26px; font-family: "Oswald-Regular"; letter-spacing: 6.5px; margin: 0;margin-bottom: 8px;  }
+.general-info input                 { height: 45px; font-family: "Lato-Light"; font-weight: 700 !important; color: #221e20; padding: 0px 15px; border: 1px solid rgba(211, 206, 207, 1); border-radius: 10px; }
+.general-info input:focus           { border: 1px solid rgba(34, 30, 31, 1); outline: none; }
+.input-error input                  { border-color: #e9202d !important; border-width: 2px !important; color:#e9202d !important; font-family: "Lato-Light"; padding: 0px 15px; }
+.input-error input:focus            { border-color: #e9202d !important; }
+.jcf-select-general-info-select           { width: 100%;height: 45px; min-width: 0; border: 1px solid rgba(211, 206, 207, 1); border-radius: 10px; font-family: "Lato-Light";  }
+.jcf-select-general-info-select .jcf-select-opener { display: none; }
+.jcf-select-general-info-select .jcf-option { font-size: 18px; text-overflow: ellipsis; line-height: 45px; padding-left: 15px; cursor: pointer;}
+.jcf-select-general-info-select .jcf-select-text { font-size: 18px; line-height: 45px; margin: 0; color: #221e20; padding-left: 15px;cursor: pointer; background: url('../images/arrows.svg')no-repeat right 5px center/20px 20px; }
+.month-selct .jcf-select-general-info-select .jcf-select-text span { overflow: hidden; text-overflow: ellipsis; height: auto;  display: block;  }
+.jcf-select-general-info-select.jcf-focus    { border-color:#000 !important; }
+.jcf-select-general-info-select.jcf-select-drop .jcf-hover { background-color: #221e20; color: #fff; }
+.jcf-select-general-info-select.jcf-select-drop .jcf-select-drop-content { border: 1px solid #000;border-radius: 10px; overflow: hidden;  }
+.jcf-select-general-info-select .jcf-list .jcf-list-content    { max-height: 300px !important; overflow: auto !important; }
+.info-textarea                    { width: 100% !important; float: none; }
+.info-textarea textarea           { width: 100%; border: 1px solid rgba(211, 206, 207, 1); border-radius: 10px; height: 115px; padding: 15px; font-family: "Lato-Light"; font-size: 16px;}
+.info-textarea textarea:focus     { outline: none; border: 1px solid rgba(34, 30, 31, 1);}
+.general-info textarea::-webkit-input-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.general-info textarea::-moz-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.general-info textarea:-ms-input-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.general-info textarea:-moz-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.dob-select                         { width: calc(100% / 3 - 10px); margin-right: 15px; float: left; }
+.dob-select:nth-child(3n)              { margin-right: 0; }
+.dob-select .jcf-select-general-info-select .jcf-select-text { padding:0px 10px; }
+.music-catogories                   { width: 100% !important; float: none; margin: 0; }
+.music-catogory                     { position: relative; display: inline-block;margin-right: 5px; margin-bottom: 10px;}
+.music-catogory label               { margin: 0;min-width: 87px; border: 1px solid rgba(211, 206, 207, 1);letter-spacing: normal;cursor: pointer;   border-radius: 5px; padding: 0px 10px; height: 33px; text-align: center; line-height: 33px; font-family: "Oswald-Light"; font-size: 14px; color: #D3CECF}
+.music-catogory input[type="checkbox"] { opacity: 0; position: absolute;width: 100%; height: 100%; cursor: pointer; }
+.music-catogory input[type=checkbox]:checked + label { background-color: rgba(167, 162, 163, 1); color: #fff; }
+.music-catogory input[type=checkbox]:checked:hover + label { border-color: rgba(167, 162, 163, 1); }
+.music-catogory:hover label         { background-color: #e9202d; color: #fff; border-color: #e9202d; }
+.general-info-btns .secondary-btn   { border-color: #221e20; margin-left: 0; }
+.general-info-btns                  { float: left; }
+.heght-input-section .height-feet,.heght-input-section .height-inch            { float: left; width: calc(100% / 3 - 10px); margin-right: 50px; }
+.heght-input-section input          { width: 100%; }
+.height-feet                        { position: relative; }
+.height-feet:before                  { position: absolute;content: 'ft'; font-size: 14px; width: 20px; height: 100%; line-height: 28px; font-family: "Montserrat-Bold"; top: calc(50% - 14px); right: -30px; }
+.height-inch                        { position: relative; }
+.height-inch:before                  { position: absolute;content: 'in'; font-size: 14px; width: 20px; height: 100%; line-height: 28px; font-family: "Montserrat-Bold"; top: calc(50% - 14px); right: -30px; }
+/*************************** general info end ***************************/
+
+.music-title                         { padding-left: 50px; background: url('../images/sound-bars-pulse.svg')no-repeat left center/40px 40px; font-size: 40px;line-height: 56px; font-family: "Oswald-Regular"; color: #221e20; margin-bottom: 15px; }
+
+.gallery-title                      { padding-left: 50px; background: url('../images/photo-camera.svg')no-repeat left center/40px 40px; font-size: 40px;line-height: 56px; font-family: "Oswald-Regular"; color: #221e20; margin-bottom: 15px; }
+
+.video-title                        { padding-left: 50px; background: url('../images/video-camera.svg')no-repeat left center/40px 40px; font-size: 40px;line-height: 56px; font-family: "Oswald-Regular"; color: #221e20; margin-bottom: 15px; }
+
+/*************************** artist-profile start ***************************/
+
+.artist-profile-details-section .artist-dashboard-header     { margin-bottom: 40px; }
+.go-back-btn                        { color: #221e20; border: 1px solid #221e20;transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s;}
+.go-back-btn:hover                  { color: #fff; background-color: #221e20; }
+.artist-profile-slider-for  div     { min-height: 300px; }
+.artist-profile-slider-nav .slick-slide > div {  margin: 0px 3px; }
+.inner-slider-nav                   { border-radius: 5px; cursor: pointer; }          
+.inner-slider-nav:after { position: relative; content: ''; width: 100%; height: 100%; padding-top: 60%; display: block; }
+.artist-profile-slider-for .slick-next      { right: 20px; z-index: 1; top: calc(50% - 20px); }
+.artist-profile-slider-for .slick-prev      { left: 15px;z-index: 1; top: calc(50% - 20px); }
+.artist-profile-slider-for .slick-next:before { content: '\f105'; font-family: "FontAwesome"; right: 20px; color: #fff; font-size: 40px; opacity: 1; }
+.artist-profile-slider-for .slick-prev:before { content: '\f104'; font-family: "FontAwesome"; left: 20px; color: #fff; font-size: 40px; z-index: 1; opacity: 1;}
+audio                               { margin-bottom: 20px; }
+audio:focus                         { outline: none; }
+.artist-personal-info h3            { text-transform: uppercase; font-size: 44px; line-height: 62px; margin: 0; letter-spacing: 4.4px; font-family: "Oswald-Bold"; }
+.artist-personal-info h4            { font-family: "Oswald-Regular";font-size: 24px; line-height: 34px; letter-spacing:  2.4px; }
+.artist-personal-info h4 span       { display: inline-block; margin-right: 3px; }
+.artist-personal-info h4 span.color-black { text-transform: uppercase; }
+.light-font                         { font-family: "Oswald-Light";letter-spacing: 2.4px; }
+.artist-common-margin               { margin-top: 35px; }
+.artist-sub-title                   { font-size: 13px; line-height: 20px; margin-bottom: 25px; font-family: "Oswald-Regular"; letter-spacing: 6.5px; }
+.arttist-music-catogery label       { background-color: rgba(167, 162, 163, 1); color: #fff; border-color: rgba(211, 206, 207, 1); min-width: 87px; padding:0px 25px; text-align: center; }
+.arttist-music-catogery label:hover { background-color: rgba(167, 162, 163, 1); color: #fff; border-color: rgba(211, 206, 207, 1); }
+.artist-interact-section            { margin: 20px 0px; display: flex; justify-content: space-between; }
+.artist-top-10-listing,.artist-fav-option              { display: inline-block;}
+.artist-fav-section li a            { width: 25px; height: 25px; cursor:pointer; display: inline-block; vertical-align: middle; background-image: url('../images/star-icon-white.svg'); background-repeat: no-repeat; background-position: center; background-size: cover;}
+.fill-star                          { background-image: url('../images/star-icon.svg') !important; }
+.artist-fav-option span             {  display: inline-block; vertical-align: middle;  }
+.artist-fav-section                 { flex-grow: 1; }
+.artist-top-10-listing              { flex-shrink: 0; margin-right: 20px; padding-right: 25px;background: url('../images/top-10-badge.svg')no-repeat right top/contain;}
+.artist-fav-section                 { text-align: right; display: flex; justify-content: flex-end; align-items: center;  }
+.artist-fav-section li              { display: inline-block; vertical-align: middle;   }
+.artist-top-10-listing p            { margin: 0;  }
+.artist-fav-text                    { font-size: 12px; line-height: 20px;font-family: "Montserrat-Bold"; }
+.artist-send-btn .primary-btn                   { margin-left: 0; }
+.artist-profile-desc                { font-size: 16px; line-height: 24px; font-family: "Montserrat-UltraLight";text-align: justify; word-wrap: break-word; }
+.artist-profile-desc-section        { margin-top: 50px; }
+.contact-person-info h5             { text-transform: uppercase; font-size: 16px; line-height: 37px; font-family: "Oswald-Regular"; letter-spacing: 8px; }
+.contact-person-info                {  padding-left: 60px; background: url('../images/contact-icon.svg')no-repeat left top/contain; margin: 50px 0px 40px 0px; }
+.artist-profile-details-section .contact-form { margin: 0; }
+.artist-video-section               { width: calc(50% - 5px);float: left;margin-right: 10px; margin-bottom: 10px; }
+.artist-video                       { position: relative; border-radius: 10px; min-height: 125px;     }
+.artist-video a                     { position: absolute; background: url('../images/video-play-icon-white.svg')no-repeat left top/contain; width: 34px; height: 34px;top: calc(50% - 17px); left: calc(50% - 17px); }
+.artist-video a:hover               { background: url('../images/video-play-icon.svg')no-repeat left top/contain; }
+.artist-video-section:nth-child(2n) { margin-right: 0; }
+.artist-video-section p             { font-size: 16px; line-height: 32px; font-family: "Montserrat-Light"; text-align: center; margin-top: 10px; }
+.artist-profile-details-section .music-catogory label { cursor: default; }
+
+.artist-profile-slider-for > div    { position: relative; }
+.artist-img-popup                   { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/*Audio Styling*/
+
+/*#audioplayer                        { height: auto; vertical-align: middle;  padding: 10px 0px; padding-left: 20px;  border: 1px solid #e5e5e5; border-radius: 5px; display: inline-block; padding-left: 10px; min-width: 240px;  }
+.audioplayer-data                   { display: flex; align-items: center; }
+#pButton                            { margin-right: 5px; margin-left: 10px; cursor: pointer; height:20px; width: 15px; border: none; background-size: cover; background-repeat: no-repeat; background-position: center; float:left; outline:none; }
+#start                              { margin-left: 10px; margin-right: 4px; float: left; }
+#end                                { float: left; }
+.audio-time                         { display: inline-block; }
+.audio-time div                     { font-size: 12px; line-height: 16px; font-family: "Montserrat-Light"; }
+.play                               { background: url('../images/play-black.svg')no-repeat center center/cover; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; }
+.play:hover                         { background: url('../images/play.svg')no-repeat center center/cover; }
+.pause                              { background: url('../images/pause.png')no-repeat center center/cover ;transition-duration: 0.4s; -webkit-transition-duration: 0.4s;-moz-transition-duration: 0.4s;  }
+.pause:hover                        { background: url('../images/pause-red.png')no-repeat center center/cover; }
+#timeline                           { width: 100px; height: 4px;  float: left; background: rgba(0,0,0,.3); border-radius: 30px;transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; cursor: pointer; outline: none; } 
+#playhead                           { width: 1px; height: 4px; background: rgba(0, 0, 0,1); border-radius: 30px; position: relative; } 
+#playhead:after                     { content: ''; width: 4px; height: 4px; right: -2px; border-radius: 50%; position: absolute; background-color: black; }
+#timeline:hover #playhead:after     { transform: scale(2.5);   }
+#timeline:focus #playhead:after     { transform: scale(2.5);   }
+#timeline:active #playhead:after    { transform: scale(2.5);   }
+#timeline:hover #playhead           { background: #e9202d; }
+#timeline:active #playhead          { background: #e9202d; }
+.audio-name                         { display: inline-block; width: calc(100% - 260px); white-space:nowrap; overflow: hidden; text-overflow: ellipsis; height: auto; vertical-align: middle; font-size: 16px; line-height: 40px;  font-family: "Montserrat-UltraLight"; margin: 0;margin-left: 15px; }
+.artist-audio-player                { margin-bottom: 20px; }*/
+
+
+.audioplayer                        { height: auto; vertical-align: middle;  padding: 10px 0px; padding-left: 20px; /*border: dashed #a1a1a1;*/ border: 1px solid #e5e5e5; border-radius: 5px; display: inline-block; padding-left: 10px; min-width: 240px;  }
+.audioplayer-data                   { display: flex; align-items: center; }
+.pButton                            { margin-right: 10px; margin-left: 10px; cursor: pointer; height:20px; width: 15px; border: none; background-size: cover; background-repeat: no-repeat; background-position: center; float:left; outline:none; }
+.start                              { margin-left: 10px; margin-right: 4px; float: left; }
+.end                                { float: left; }
+.audio-time                         { display: inline-block; }
+.audio-time div                     { font-size: 12px; line-height: 16px; font-family: "Montserrat-Light"; }
+.play                               { background: url('../images/play-black.svg')no-repeat center center/cover; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; }
+.play:hover                         { background: url('../images/play.svg')no-repeat center center/cover; }
+.pause                              { background: url('../images/pause.png')no-repeat center center/cover ;transition-duration: 0.4s; -webkit-transition-duration: 0.4s;-moz-transition-duration: 0.4s;  }
+.pause:hover                        { background: url('../images/pause-red.png')no-repeat center center/cover; }
+.timeline                           { width: 175px;margin-left: 5px; height: 4px;  float: left; background: rgba(0,0,0,.3); border-radius: 30px;transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; cursor: pointer; outline: none; } 
+.playhead                           { width: 1px; height: 4px; background: rgba(0, 0, 0,1); border-radius: 30px; position: relative; } 
+.playhead:after                     { content: ''; width: 4px; height: 4px; right: -2px; border-radius: 50%; position: absolute; background-color: black; }
+.timeline:hover .playhead:after     { transform: scale(2.5);   }
+.timeline:focus .playhead:after     { transform: scale(2.5);   }
+.timeline:active .playhead:after    { transform: scale(2.5);   }
+.timeline:hover .playhead           { background: #e9202d; }
+.timeline:active .playhead          { background: #e9202d; }
+.audio-name                         { display: inline-block; width: calc(100% - 260px); white-space:nowrap; overflow: hidden; text-overflow: ellipsis; height: auto; vertical-align: middle; font-size: 16px; line-height: 40px;  font-family: "Montserrat-UltraLight"; margin: 0;margin-left: 15px; }
+.artist-audio-player                { margin-bottom: 20px; }
+
+.audio-modal.show                   { display: flex !important; align-items: center; justify-content: center; }
+.audio-modal .modal-dialog          { background-color: #221e20; }
+.audio-modal .modal-content         { background-color: #221e20;  }
+.audio-model-div                    { min-height: 350px; display: flex;align-items: center; justify-content: center; }
+.audio-model-div div                { width: 100%; text-align: center; }
+.audio-model-div audio              { width: 80%; }
+.audio-model-div p                  { font-size: 16px; line-height: 20px; margin-bottom: 20px; font-family: "Oswald-Regular"; }
+
+
+
+.slider.slider-horizontal .slider-track { height: 4px; width: 95px; }
+.slider.slider-horizontal               { width: 95px; }
+.slider-handle                      { width: 4px; height: 4px; border-radius: 50%; background : #221e20; cursor: pointer; border-radius: 0; top: 5px;   }
+.slider-handle:focus                { outline: none; }
+/*.slider-track:hover ~ .slider-handle {display: block; }
+.slider-track:focus ~ .slider-handle {display: block; }*/
+
+.slider-track:active .slider-selection { background: #e9202d !important; }
+.slider-track:hover ~ .slider-handle,
+.slider-track:focus ~ .slider-handle,
+.slider-track:active ~ .slider-handle,
+.slider-handle:hover {transform: scale(2.5);}
+.slider-handle:focus ~ .slider-track { background: #e9202d; }
+.slider-handle:focus,
+.slider-handle:active                 {transform: scale(2.5);  }
+.slider-handle:focus .slider-selection { background: #e9202d !important; }
+.slider-track ~ .slider-handle:focus:active { transform: scale(2.5); }
+.slider-handle:focus:active.slider-track { background: #e9202d; }
+.slider-track:focus:active .slider-handle { transform: scale(2.5); }
+.slider-selection                   { background: #221e20; }
+.slider-track:hover .slider-selection,
+.slider-track:active .slider-selection,
+.slider-track:focus .slider-selection { background: #e9202d !important; }
+.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle { margin-left: -2px; }
+
+
+
+/*Audio Styling*/
+
+
+/*************************** artist-profile end ***************************/
+
+/*************************** Noticeboard start ***************************/
+.noticeboard-section                     { padding: 75px 0px 50px 0px; }
+.noticeboard-post                       { min-width: 100%; }
+.noticeboard-section .my-profile-btn    { background: none; background-color: #221e20; border: 1px solid #221e20; padding: 0; text-align: center; line-height: 60px; transition-duration: 0.4s; -webkit-transition-duration: 0.4s;}
+.noticeboard-section .my-profile-btn:hover { background: transparent; color: #221e20;  }
+.noticeboard-post-img               { min-height: 208px; position: relative;border-top-right-radius: 5px; border-top-left-radius: 5px; }
+.noticeboard-post-date              { position: absolute; bottom: 10px; left: 20px; padding:3px 5px; font-size: 24px; line-height: 33px; font-family: "Oswald-Regular"; color: #fff; background-color: #e9202d; }
+.noticeboard-post-details           { padding: 15px; }
+.noticeboard-post-heading           { font-size: 24px; line-height: 33px; font-family: "Oswald-Bold";letter-spacing: 2.4px;  word-break: break-all; }
+.noticeboard-post-desc              { font-size: 14px; line-height: 28px; font-family: "Montserrat-Light"; }
+.noticeboard-post                   { margin-bottom: 50px; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); background-color: #fff;border: 0px solid rgba(122, 118, 119, 0.5); border-radius: 5px; }
+.noticeboard-all-posts              { padding: 50px 0px; }
+.blue-seprator                      { border-top: 1px solid rgba(206, 217, 237, 1); margin-bottom: 20px; }
+.noticeboard-post-footer            { display: flex; justify-content: space-between; }
+.noticeboard-post-person            { margin-right: 10px; }
+.noticeboard-post-person span       { display: inline-block; font-size: 14px; line-height: 21px; font-family: "Poppins-SemiBold"; }
+.noticeboard-post-person p          {  font-size: 14px; line-height: 21px; font-family: "Montserrat-Light"; }
+.noticeboard-post-view a            { width: 120px; height: 45px; background-color: #e9202d; color: #fff; text-align: center; font-size: 14px; line-height: 45px; font-family: "Oswald-Regular"; border-radius: 5px; transition-duration: 0.4s; -webkit-transition-duration: 0.4s;}
+.noticeboard-post-view a:hover      { background-color: #221e20;  }
+.noticeboard-all-posts .col-md-6,.noticeboard-all-posts .col-lg-6    { display: flex; }
+.load-more-btn                      { width: 100%; text-align: center; }
+.load-more-btn .common-btn          { border: 1px solid#221e20; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s;}
+.load-more-btn .common-btn:hover    { background-color: #221e20; color: #fff; }
+.noticeboard-post-date              { font-size: 20px; line-height: 30px; }
+
+.noticeboard-post-action a          { color: #e9202d; font-size: 30px; line-height: 40px; margin-left: 10px; vertical-align: middle; }
+.my-post-footer                     { align-items: center; }
+.bootbox-confirm .bootbox-body      {  font-size: 20px; line-height: 27px; font-family: "Montserrat-Bold"; margin-top: 25px; }
+.bootbox-confirm .bootbox-close-button  { font-size: 30px; line-height: 40px; font-family: "Oswald-Bold"; opacity: 1; }
+.bootbox-confirm .modal-footer .btn-danger { width: 100px; height: 40px; background-color: transparent !important; color: #221e20; border-color: #221e20; }
+.bootbox-confirm .modal-footer .btn-danger:hover {  background-color: #221e20 !important; color: #fff; border-color: #221e20; }
+.bootbox-confirm .modal-footer .btn-success { width: 100px; height: 40px; background-color: #221e20 !important; color: #fff; border-color: #221e20; }
+.bootbox-confirm .modal-footer .btn-success:hover { background-color: #e9202d !important; color: #fff; border-color: #e9202d; }
+.delete-post-btn i                  { line-height: 40px; }
+
+/*************************** Noticeboard end ***************************/
+
+/*************************** My Sunscription start ***************************/
+
+.my-subscription-section                     { padding: 75px 0px 50px 0px; }
+.my-subscription-section .heading-text      { line-height: 140px; }
+.my-subscription-section .artist-dashboard-title { margin-right: 0; }
+.subscription-deails                        { margin-top: 40px; }
+.subscription-title                         { vertical-align: middle; }
+.subscription-title h3                      { font-family: "Oswald-Regular"; font-size: 30px; line-height: 60px;  }
+.subscription-title span                    { display: inline-block; vertical-align: middle; }
+.subscription-title .my-subscription-type   { font-size: 10px; line-height: 20px; font-family: "Oswald-Regular"; letter-spacing: 5px; margin-right: 10px; }
+.subscription-title .my-subscription-duration{ background-color: #e9202d; padding: 0px 5px; line-height: 50px; }
+.subscription-details                       { margin: 20px 0px; }
+.subscription-details p                     { font-size: 16px; line-height: 32px; font-family: "Montserrat-UltraLight"; }
+.subscription-package-info h4               { font-size: 40px; line-height: 60px; }
+.my-subscription-section .jcf-select-plan-selection.jcf-select    { width: 48%; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); }
+.jcf-select-artist-plan-selection.jcf-select-drop .jcf-select-drop-content { border: 1px solid transparent !important; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15);}
+.jcf-select-artist-plan-selection.jcf-select .jcf-select-text       { padding: 7px 0px; }
+.my-subscription-section .jcf-select-plan-selection.jcf-select:after { right: 20px; }
+.my-subscription-section .artist-regestration-terms .jcf-checkbox  { padding: 15px; border: 1px solid transparent; background-color: rgba(211, 206, 207, 1) !important; border-radius: 5px;}
+.artist-regestration-terms .jcf-checkbox span  { width: 20px; height: 10px; top: 35%; left: 30%; border-color: #e9202d !important; }
+.artist-regestration-terms                  { margin-top: 35px; }
+.artist-subscription-btn                    { margin: 10px 0px 30px 0px; width: 175px; cursor: pointer;  height: 65px; border: 1px solid #221e20; font-size: 18px; line-height: 65px; color: #221e20; background-color: transparent; font-family: "Oswald-Regular"; border-radius: 5px;transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+.artist-regestration-terms p                { font-size: 16px; line-height: 32px; font-family: "Montserrat-UltraLight"; word-spacing: 0; }
+.artist-update-package-form .artist-subscription-btn { background-color: #221e20; color: #fff; }
+.artist-update-package-form .artist-subscription-btn:hover { background-color: transparent; color: #221e20; border: 1px solid transparent; }
+.artist-cancel-package-form .artist-subscription-btn:hover { background-color: #221e20; color: #fff; }
+
+/*************************** My Sunscription end ***************************/
+
+
+/*************************** Account Settings start ***************************/
+
+
+.account-settings-section           { padding: 75px 0px 50px 0px; }
+.account-info                       { width: calc(100% / 3 - 30px); float: left; margin-right: 45px; }
+.account-info-grp                   { margin-top: 25px; display: flex; align-items: flex-start;}
+.account-info-grp .account-info:nth-child(3n) { margin-right: 0; }
+.account-info input, .account-info label{ width: 100%; }
+.account-info label                 { font-size: 13px; line-height: 26px; font-family: "Oswald-Regular"; letter-spacing: 6.5px; margin: 0;margin-bottom: 8px;  }
+.account-info input                 { height: 45px; font-family: "Lato-Light"; font-weight: 700 !important; color: #221e20; padding: 0px 15px; border: 1px solid rgba(211, 206, 207, 1); border-radius: 10px; }
+.account-info input:focus           { border: 1px solid rgba(34, 30, 31, 1); }
+.account-info input::placeholder    { color: rgb(211, 206, 207); }
+.filled-account-input input         { border: 1px solid rgba(34, 30, 31, 1); }
+.account-password-input label       { color: #e9202d; }
+.account-save-changes-btn           { margin-bottom: 50px; width: 177px; height: 65px; font-size: 18px; font-family: "Oswald-Regular";border-radius: 5px; cursor: pointer; line-height: 65px; background-color: #e9202d; color: #fff;transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; }
+.account-save-changes-btn:hover     { background-color: #221e20; }
+.account-settings-section .subscription-details { margin-top: 40px; }
+
+.account-payment-section            { width: 100%; }
+.payment-card-details               { width: 30%; display: flex; justify-content: space-between; border: 1px solid rgba(211, 206, 207, 1); padding: 10px 15px 10px 40px; background: url('../images/card-img.svg')no-repeat left 10px center/20px 20px; border-radius: 5px; margin-left: 10px; }
+.payment-card-details span          { display: inline-block; font-family: "Lato-Regular"; font-size: 14px; line-height: 22px; color: #8c8c8c; }
+.payment-card-no                    {/* margin-right: 15px;*/ }
+.payment-card-expiry                {/* margin-right: 15px;*/ }
+.payment-card-inputs                { display: flex; align-items: center; }
+.payment-card-inputs .jcf-radio                          { border-width: 2px; width: 20px; height: 20px; border-radius: 50%; margin: 0;}
+.payment-card-inputs .jcf-radio input                   { cursor: pointer; }
+.payment-card-inputs .jcf-radio.jcf-focus               { border-color: #e9202d; }
+.payment-card-inputs .jcf-checked                        { border-color: #e9202d !important; background-color: #e9202d !important;  }
+.payment-card-inputs .jcf-radio.jcf-checked span         { background-color: #e9202d; width: 20px; height: 20px; top: 0; left: 0; }
+.payment-card-inputs .jcf-checked + .payment-card-details { border-color: #000; background: url('../images/card-img-red.svg')no-repeat left 10px center/20px 20px; }
+.payment-card-inputs .jcf-checked + .payment-card-details span { color: #221e20; }
+.payment-card-grp                   { margin-bottom: 25px; }
+.remove-card-link                   {  margin-left: 15px; width: 25px; height: 25px;  background: url('../images/cicular-close.png')no-repeat center center/cover; transition-duration: 0.4s; -webkit-transition-duration: 0.4s;-moz-transition-duration: 0.4s; }
+.remove-card-link:hover             { background: url('../images/cicular-close-dark.png')no-repeat center center/cover; }
+.payment-card-details input         { float: left; border:none; font-family: "Lato-Regular"; padding: 0px 5px; font-size: 14px; line-height: 22px; color: #8c8c8c; }
+.payment-card-input-grp             { display: block; margin-left: 30px; }
+.input-payment-card-no              { width: 60%; }
+.input-payment-card-expiry          { width: 25%; text-align: right; }
+.input-payment-card-cvv             { width: 15%; text-align: right;}
+.paymen-card-btn-section            { margin-left: 30px; margin-top: 25px; }
+.paymen-card-btn-section button     { display: inline-block; width: 130px; border-radius: 5px; margin-right: 10px; height: 50px;  text-align: center;line-height: 50px; border: 1px solid #221e20; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; cursor: pointer;}
+.add-card-btn                       { color: #fff; background-color: #221e20;  }
+.payment-btn                        { color: #fff; background-color: #e9202d;border:1px solid#e9202d !important; }
+.add-card-btn:hover                 { background-color: transparent; color: #221e20; }
+.payment-btn:hover                  { background-color: #221e20; border:1px solid #221e20 !important; color: #fff; }
+
+.subscription-package-info          { margin-bottom: 40px; }
+.subscription-package-info h4       { text-transform: uppercase; }
+.payment-error-block                { border-color: #e9202d; }
+/*************************** Account Settings end ***************************/
+
+
+/*************************** Post Page start ***************************/
+
+.noticeboard-post-detailes-section  { margin-top: 50px; }
+.post-contact-person-info           { background: url('../images/contact-icon-black.svg')no-repeat left top/contain; margin-top: 70px;}
+.post-image-section                 { min-height: 300px; width: 100%; position: relative; }
+.post-date                          { position: absolute; bottom: 20px; left: 25px; padding: 0px 5px; color: #fff; background-color: #e9202d; font-size: 40px; line-height: 60px; font-family: "Oswald-Regular"; }
+.artist-post-title                  { font-family: "Oswald-Bold"; font-size: 40px; line-height: 56px; letter-spacing: 4px;margin-bottom: 35px; }
+.artist-post-desc                   { font-size: 16px; line-height: 32px; font-family: "Montserrat-UltraLight"; margin-bottom: 35px; }
+.artist-post-by-section             { width: 80%; border-top: 1px solid rgba(206, 217, 237, 1); padding-top: 20px; }
+.artist-post-by-section span        { font-family: "Poppins-SemiBold"; font-size: 16px; line-height: 24px; color: #e9202d; }
+.artist-post-by-section p           { font-family: "Montserrat-Light"; font-size: 16px; line-height: 24px; color: #221e20; }
+.noticeboard-post-detailes-section .contact-form-btn { background-color: #221e20; border: 1px solid #221e20;transition-duration: 0.4s; -webkit-transition-duration: 0.4s;-moz-transition-duration: 0.4s; }
+/*.noticeboard-post-detailes-section .contact-form-btn:hover {border:solid transparent 1px; }*/
+
+/*************************** Post Page end ***************************/
+
+/*************************** New Post Page start ***************************/
+
+.new-post-section                   { margin-top: 50px; }
+.new-post-section h4                { font-size: 40px; line-height: 56px; margin-bottom: 15px; }
+.new-post-section p a               { text-decoration: underline; color: #221e20; }
+.new-post-section p                 { font-size: 16px; line-height: 32px; font-family: "Montserrat-UltraLight"; margin-bottom: 35px; }
+.new-post-section h5                { font-size: 24px; line-height: 33px; font-family: "Oswald-Regular"; margin-bottom: 20px; }
+.post-form-group                    { margin-bottom: 30px; }
+.post-form-group label              { font-size: 13px; line-height: 19px;font-family: "Oswald-Regular"; letter-spacing: 6.5px; color: #221e20; }
+.post-form-group input              { width: 100%; height: 45px; font-family: "Lato-Light"; font-weight: 700 !important; color: #221e20; padding: 0px 15px; border: 1px solid rgba(211, 206, 207, 1); border-radius: 10px; }
+.post-form-group textarea           { width: 100%; border: 1px solid rgba(211, 206, 207, 1); resize: none; border-radius: 10px; height: 150px; padding: 10px 20px; font-family: "Lato-Light"; font-size: 16px;}
+.post-form-group textarea:focus     { outline: none; border: 1px solid rgba(34, 30, 31, 1);}
+.post-form-group input::-webkit-input-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.post-form-group input::-moz-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.post-form-group input:-ms-input-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.post-form-group input:-moz-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.post-form-group textarea::-webkit-input-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.post-form-group textarea::-moz-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.post-form-group textarea:-ms-input-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.post-form-group textarea:-moz-placeholder     { color: #d3cecf; font-family: "Lato-Light"; }
+.post-img-upload                    { width: 230px; height: 150px;  border: 1px solid rgba(211, 206, 207, 1); cursor: pointer; position: relative; border-radius: 10px; }
+.post-img-upload input              { position: absolute; top: 0; letter-spacing: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 1;}
+.post-submit-btn                    { margin: 30px 0px; background-color: #e9202d; border-color: #e9202d; cursor: pointer; color: #fff; border-radius: 5px; transition-duration: 0.4s; -webkit-transition-duration: 0.4s;-moz-transition-duration: 0.4s; }
+.post-submit-btn:hover              { background-color: #221e20; border-color: #221e20; }
+.new-post-terms                     { background-color: #fbfbfb; }
+.new-post-terms-title               { font-size: 16px; line-height: 24px; letter-spacing: 8px;margin-bottom: 25px; display: inline-block; }
+.new-post-terms p                   { font-size: 16px; line-height: 24px; font-family: "Montserrat-UltraLight"; color: #313032; margin-bottom: 25px;  }
+.new-post-terms ul                  { margin-bottom: 25px; padding-left: 20px; }
+.new-post-terms ul li               { font-family: "Montserrat-UltraLight"; font-size: 16px; line-height: 24px; list-style-type: disc;  }
+.new-post-terms h6                  { font-size: 16px; line-height: 24px; font-family: "Montserrat-Bold"; margin-bottom: 25px; }
+.post-img-upload-placeholder        { display: flex;align-items: center; text-align: center; height: 100%; }
+.post-img-upload-placeholder span   { display: block; width: 100%; color: #d3cecf; font-size: 15px; line-height: 24px; font-family: "Lato-Light"; }
+.new-post-section div.input-error label { color: #e9202d; }
+.new-post-section div.input-error p { font-family: "Lato-Bold"; }
+span#error-image p { font-family: "Lato-Bold"; }
+
+
+/*************************** New Post Page end ***************************/
+
+/********************************** Artist Section end **********************************/
+
+
+/********************************** Label Section start **********************************/
+
+.label-dashboard                   { padding: 70px 0px; }
+.form-submitting-text               { margin-top: 20px; display: inline-block; font-size: 14px; line-height: 60px; color: #e9202d; font-family: "Poppins-SemiBold"; }
+.my-subscription-section .jcf-select-plan-selection.jcf-select    { width: 48%; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); }
+.jcf-select-artist-plan-selection.jcf-select-drop .jcf-select-drop-content { border: 1px solid transparent !important; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15);}
+.jcf-select-artist-plan-selection.jcf-select .jcf-select-text       { padding: 7px 0px; }
+.my-subscription-section .jcf-select-plan-selection.jcf-select:after { right: 20px; }
+
+
+.top-10-list                        { min-height: 40vh; }
+.label-dashboard                    { min-height: 65vh; }
+.noticeboard-section                    { min-height: 65vh; }
+
+
+/*************************** Terms Page start ***************************/
+
+.terms-privacy-navbar                  { background: url('../images/terms-bg.png')no-repeat center center/cover;  }
+.terms-privacy-navbar .container       { position: relative; }
+.terms-privacy-section                 { padding-top: 10px; }
+.all-terms-privacy-detailes p          { font-size: 16px; line-height: 32px; font-family: "Montserrat-UltraLight"; margin-top: 40px; }
+
+/*************************** Terms Page end ***************************/
+
+/*************************** Talent Search start ***************************/
+
+.talenet-search-select-section          { display: flex; justify-content: space-between; }
+.jcf-select-genere-select           { width: 100%;height: 45px;  min-width: 320px; max-width: 330px; border: none; border-radius: 10px; font-family: "Lato-Light";  }
+.jcf-select-genere-select .jcf-select-opener { display: none; }
+.jcf-select-genere-select .jcf-option { font-size: 18px; text-overflow: ellipsis; line-height: 45px; padding-left: 15px; cursor: pointer; border: none;}
+.jcf-select-genere-select .jcf-select-text { font-size: 18px; line-height: 45px;border: 0px solid rgba(155, 22, 30, 1) !important;border-radius: 5px; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); margin: 0; color: #221e20; padding-left: 50px;cursor: pointer; background: url('../images/arrows.svg')no-repeat right 5px center/20px 20px,url('../images/sound-icon.svg')no-repeat left 15px center/17px 21px; }
+.jcf-select-genere-select.jcf-select-drop .jcf-hover { background-color: #221e20; color: #fff; }
+.jcf-select-genere-select.jcf-select-drop .jcf-select-drop-content { border: none; }
+.jcf-select-genere-select .jcf-list ul    { max-height: 300px !important;}
+.talenet-search-select-title h4          { font-size: 40px; line-height: 56px; color: #221e20; padding-left:55px; background: url('../images/search-icon.svg')no-repeat center left/42px 38px; }
+.search-list-title                  { margin: 10px 20px 0px 0px;  display: inline-block; color: #e9202d; font-size: 13px; line-height: 26px; letter-spacing: 6.5px; }
+
+.talenet-search-select-title        { flex-basis: 50%; flex-shrink: 0; }
+.talenet-search-select-options      { display: flex; flex-basis: 50%; flex-grow: 1;justify-content: flex-end; }
+.all-search-results                 { margin-top: 20px; }
+
+.talent-search-result               { position: relative; width: calc(100% / 4 - 12px); float: left; margin-right: 16px;  border-radius: 5px; margin-top: 35px;  box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15);}
+.talent-search-result:before { position: absolute; top: -2px; left: -2px; display: block; content: ''; width: calc(100% + 4px); height: calc(100% + 4px); border: 2px solid rgba(233, 33, 45, 1); border-radius: 5px; opacity: 0; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s;}    
+.talent-search-result:hover:before { opacity: 1;}
+.talent-search-result > div { position: relative; z-index: 1;  border-radius: 5px; overflow: hidden;}
+
+.talent-search-result:nth-child(4n) { margin-right: 0; }
+.fav-stat-btn                       { position:absolute;  top: 5px;left: 10px; width: 25px; height: 25px; cursor:pointer; display: inline-block; vertical-align: middle; background-image: url('../images/star-icon-white-border.svg'); background-repeat: no-repeat; background-position: center; background-size: cover;}
+.talent-artist-img                  { min-height: 170px; width: 100%; display: flex; align-items: flex-end; }
+.artist-top-10-label              { display: block; background-color: #e9202d; color: #fff; text-align: center; font-size: 12px; line-height: 27px; font-family: "Oswald-Bold"; width: 100%;  letter-spacing: 6px; }
+.talent-artist-details              { padding:15px 20px; background-color: #fff; }
+.talent-artist-name                 { text-transform: uppercase; margin: 0; font-family: "Oswald-Bold"; font-size: 24px; line-height: 32px; color: #221e20; letter-spacing: 2.4px; text-align: left; width: 100%;white-space:nowrap; overflow: hidden; text-overflow: ellipsis; }
+.talent-artist-info                { margin: 0; white-space:nowrap; overflow: hidden; text-overflow: ellipsis;}
+.talent-artist-info .light-font     { font-size: 14px; line-height: 21px; font-family: "Oswald-Light"; letter-spacing: 1.4px; color: #221e20; }
+.talent-artist-info .color-black    { text-transform: uppercase; font-size: 14px; line-height: 21px; font-family: "Oswald-Regular"; letter-spacing: 1.4px; color: #221e20; }
+.talent-artist-info .color-red      { font-size: 14px; line-height: 21px; font-family: "Oswald-Regular"; letter-spacing: 1.4px; color: #e9202d; }
+.talent-artist-info .color-grey    { font-size: 14px; line-height: 21px; font-family: "Oswald-Regular"; letter-spacing: 1.4px; color: #a7a2a3; }
+.all-search-results .load-more-btn { margin-top: 60px; }
+
+
+/*************************** Talent Search end ***************************/
+
+
+.favourite-search-select-title h4          { font-size: 40px; line-height: 56px; color: #221e20; padding-left:55px; background: url('../images/favourite-star-icon.svg')no-repeat center left/42px 42px; }
+
+
+/********************************** Label Section end **********************************/
+
+/**********************************Devlopment changes start **********************************/
+
+/*************************** Login Page start ***************************/
+
+.help-block                         { color: #e9202d; margin: 0; margin: 5px 0px;}
+.artist-registration-form .help-block        { color: #000 !important; line-height: 22px !important; }
+.label-registration-form .help-block        { color: #e9202d !important; line-height: 22px !important; }
+
+
+/*************************** Login Page end ***************************/
+
+.add-img {
+        margin: 0px -8px;
+    }
+    .add-img .box {
+        margin: 0px 8px;
+        display: block;
+        width: calc(100% / 7 - 16px);
+        float: left;
+    }
+    .add-img .box > label {
+        border-radius: 10px;
+        border: 1px solid #d3cecf;
+        position: relative;
+        padding-top: 100%;
+        min-width: 100%;
+    }
+    .add-img-blk > div {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        left: 50%;
+        width: 100%;
+    }
+    .add-img .box label img {
+        width: 35px;
+    }
+    .add-img .box label p {
+        padding-top: 5px;
+        color: #d3cecf;
+        letter-spacing: 0;
+        text-transform: none;
+        font-size: 12px; 
+        font-family: "Montserrat-UltraLight";
+        display: block;
+        margin: 0;
+    }
+    .add-img .box h2 {
+        font-size: 10px;
+        line-height: 20px;
+        color: #7a7677;
+        letter-spacing: 5px;
+        text-align: center;
+        margin: 0;
+        font-family: "Oswald-Regular";  
+    }
+    input[type="file"] {
+        display: none;
+    }
+    .add-img-blk {
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+    }
+    .gallery-page label {
+        padding-bottom: 5px;
+        display: block;
+        font-family: 'Oswald-Regular';
+        font-size: 13px;
+        line-height: 26px;
+        color: #221e1f;
+        letter-spacing: 6.5px;
+        text-transform: uppercase;
+    }
+    .delete-ic {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        background: url('../images/gellary-img-close.svg')no-repeat center center/cover;
+        width: 20px; height: 20px;
+    }
+    .artist-gallery-section label 
+    {
+
+    }
+    .general-information-section .form-group
+    {
+        margin: 0;
+    }
+    .primary-navbar .navbar-right a {
+display: inline-block;
+    width: auto;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0;
+
+}
+.noticeboard-add-img            { padding: 0; }
+/********************************** Devlopment changes end **********************************/
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px)
+{
+
+    h1                              { font-size: 70px; line-height: 80px; }
+    h2                              { font-size: 40px; line-height: 50px;  }
+    h3                              { font-size: 32px; }
+    h4                              { font-size: 28px; line-height: 37px; }
+    h5                              { font-size: 26px; line-height: 33px; }
+    .comman-padding                 { padding: 100px 0px; }
+    p                               { font-size: 16px; line-height: 20px; }
+
+/*************************** Home Page start ***************************/
+
+    .sidebar-menu-section           { z-index: 1; }
+    .menu-list li a                 {   }
+    .logo-img                       {width: 164px; height: 100px; }
+    .how-it-works-section           { background-position: center; }
+    .working-step h4                { margin-bottom: 30px; }
+    .working-step p                 { margin-bottom: 30px; }
+
+
+/*************************** Home Page end ***************************/
+
+/*************************** Top 10 Page start ***************************/
+
+    .top-10-section                 { padding-top: 10px; }
+
+/*************************** Top 10 Page end ***************************/
+
+/*************************** faq Page start ***************************/
+
+    .faq-section                    { padding-top: 10px; }
+
+/*************************** faq Page end ***************************/
+
+/*************************** Noticeboard start ***************************/
+
+    .noticeboard-section            { padding: 75px 0px 50px 0px; }
+
+/*************************** Noticeboard end ***************************/
+
+/*************************** Terms Page start ***************************/
+
+    .terms-privacy-section                 { padding-top: 10px; }
+    .all-terms-privacy-detailes p     { font-size: 16px; line-height: 32px; font-family: "Montserrat-UltraLight"; margin-top: 40px; }
+
+/*************************** Terms Page end ***************************/
+
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px)
+{
+    h1                              { font-size: 60px; line-height: 70px; }
+    h2                              { font-size: 35px; line-height: 40px;  }
+    h3                              { font-size: 30px; }
+    h4                              { font-size: 26px; line-height: 35px; }
+    h5                              { font-size: 24px; line-height: 31px; }
+    .comman-padding                 { padding: 70px 0px; }
+    p                               { font-size: 16px; line-height: 20px; }
+    h6                              { font-size: 22px;line-height:30px; } 
+    .heading-text                   { font-size: 80px; line-height: 125px; }
+
+/*************************** Home Page start ***************************/
+    .stickey-top-navbar .navbar-right { padding: 10px 0px; }
+    .logo-img                       {width: 140px; height: 90px; }
+    .home-banner                    { min-height: 100vh; }
+    .how-it-works-section           { background-position: center; }
+    .sidebar-menu-section           { z-index: 1; width: 250px; }
+    .menu-list li a                 { font-size:40px; line-height: 52px;  }
+    .working-step h4                { margin-bottom: 25px; }
+    .working-step p                 { margin-bottom: 25px; }
+    .common-btn                     { width: 140px; height: 50px; font-size: 16px; line-height: 50px; }
+    .artist-slider                  { padding: 15px; }
+    .artist-slider .bg-slide        { height: 400px; }
+    .artist-slider .slick-track > div{ padding: 15px; }
+    .artist-slider .slick-next      { right: 5px; }
+    .artist-slider .slick-prev      { left: 5px; } 
+    .member-section h1              { margin-top: 50px; margin-bottom: 30px; font-size: 50px; }
+    .membership-plan p              { font-size: 18px;  }
+    .membership-plan h3             {line-height: 35px;}
+    .member-section                 { min-height: auto; }
+    .member-section h5              { line-height: 35px; }
+    .slider-navigation              { left: calc(50% - 470px); }
+    .label-list li                  { margin-right: 10px; width: 100px; }
+    .label-list li img              { width: 90%; }
+    .subscribe-now-section p        { font-size: 14px; }
+    .subscribe-now-section input    { width: 245px; }
+    .scroll-link-section            { bottom: 80px; }
+    .subscribe-input-section        { width: calc(100% - 120px); }
+
+    /*slider*/
+    .banner-slider .slick-dots      { right: calc(50% - 460px); }
+    /*slider*/
+
+/*************************** Home Page end ***************************/
+
+/*************************** About us Page start ***************************/
+    .secondary-banner               {  min-height: 600px; }       
+    .secondary-banner-content       { bottom: 75px; }
+    .secondary-banner-content h1     { font-size: 80px; line-height: 125px;  }
+    .about-us-details-section h1    { margin-bottom: 40px; }
+    .our-story-section              { padding: 0px 45px 0px 0px;}
+    .our-story-section-right        { padding: 0; padding-left: 60px; }     
+    .our-story-section h5           { font-family: "Oswald-Regular"; color: #ACABAD; margin-bottom: 30px; line-height: 35px; }
+    .our-story-section p            { line-height: 32px; color: #221e20; margin-bottom: 30px; }
+
+/*************************** About us Page end ***************************/
+
+/*************************** Label Page start ***************************/
+
+    .label-section                  { width: 170px; height: 170px; }
+
+/*************************** Label Page start ***************************/
+/*************************** Top 10 Page start ***************************/
+
+    .top-10-section                 { padding-top: 10px; }
+    .heading-text                   { font-size: 90px; line-height: 130px; }
+    .tringle-navbar                 { height: 300px; }
+    .common-help-section-data h3    { font-size: 30px; line-height: 45px; }
+
+/*************************** Top 10 Page end ***************************/
+/*************************** faq Page start ***************************/
+
+    .faq-section                    { padding-top: 10px; }
+
+/*************************** faq Page end ***************************/
+
+/*************************** Contact Page start ***************************/
+
+    .contact-detaile                { font-size: 24px; line-height: 35px; }
+
+/*************************** Contact Page end ***************************/
+
+/*************************** Login Page start ***************************/
+
+    .login-section h1               { padding-bottom: 30px; margin-bottom: 30px; font-size: 56px; }
+    .login-input-grp                { padding-top: 20px; }
+
+/*************************** Login Page end ***************************/
+
+
+/*************************** Sign up Page end ***************************/
+
+.all-cards-img                      {  width: calc(100% - 350px);  }
+
+/*************************** Sign up Page end ***************************/
+
+/*************************** Account Settings start ***************************/
+
+.payment-card-details              { width: 35%; }
+/*************************** Account Settings end ***************************/
+
+
+/*************************** general info start ***************************/
+
+.dob-select .jcf-select-general-info-select .jcf-select-text        { padding-right: 15px; background: url('../images/arrows.svg')no-repeat right center/20px 20px }
+
+/*************************** general info end ***************************/
+
+/*************************** Noticeboard start ***************************/
+
+    .noticeboard-section            { padding: 75px 0px 50px 0px; }
+    .noticeboard-section .my-profile-btn { line-height: 50px; }
+    .noticeboard-post-heading       { font-size: 20px; line-height: 30px; }
+    .noticeboard-post-view a        { width: 100px; height: 40px; line-height: 40px; }
+
+/*************************** Noticeboard end ***************************/
+
+/*************************** Terms Page start ***************************/
+
+.terms-privacy-section                 { padding-top: 10px; }
+
+/*************************** Terms Page end ***************************/
+
+/*************************** Talent Search start ***************************/
+
+    .talent-search-result           { width: calc(100% / 3 - 10px); margin-right: 15px; }
+    .talent-search-result:nth-child(4n) { margin-right: 15px; }
+    .talent-search-result:nth-child(3n) { margin-right: 0px; }
+
+/*************************** Talent Search end ***************************/
+
+
+/*************************** Audio & Video page start ***************************/
+
+.artist-video-upload span               { width: 175px; }
+.video-thumbnaile-section > div span    { width: 175px; }
+
+
+/*************************** Audio & Video page end ***************************/
+
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
+    h1                              { font-size: 50px; line-height: 60px; }
+    h2                              { font-size: 32px; line-height: 37px;  }
+    h3                              { font-size: 28px; }
+    h4                              { font-size: 24px; line-height: 33px; }
+    h5                              { font-size: 22px; line-height: 29px; }
+    .comman-padding                 { padding: 50px 0px; }
+    p                               { font-size: 14px; line-height: 18px; } 
+    h6                              { font-size: 20px; line-height: 27px; }
+    .heading-text                   { font-size: 70px; line-height: 110px; }
+
+/*************************** Home Page start ***************************/
+    
+    .stickey-top-navbar .navbar-right { padding: 10px 0px; }
+    .stickey-top-navbar .logo-img img   { max-width: 80%; }    
+    .logo-img                       { width: 120px; height: 80px; }
+    .home-banner                    { min-height: 100vh; }
+    .how-it-works-section           { background-position: center; }
+    .sidebar-menu-section           { padding: 10px 25px 10px 25px; z-index: 1; width: 250px; }
+    .menu-list li a                 { font-size:40px; line-height: 52px;  }
+    .working-step h4                { margin-bottom: 20px; }
+    .working-step p                 { margin-bottom: 20px; max-width: 100%; }
+    .common-btn                     { width: 140px; height: 50px; font-size: 16px; line-height: 50px; }
+    .artist-slider                  { padding: 15px; }
+    .artist-slider .bg-slide        { height: 300px; }
+    .artist-slider .slick-track > div{ padding: 15px; }
+    .artist-slider .slick-next      { right: 5px; }
+    .artist-slider .slick-prev      { left: 5px; } 
+    .member-section h1              { margin-top: 40px; margin-bottom: 30px; font-size: 45px; }
+    .membership-plan p              { font-size: 18px;  }
+    .membership-plan h3             {line-height: 30px;}
+    .member-section                 { min-height: 600px; }
+    .member-section h5              { line-height: 30px; margin-bottom: 40px; }
+    .slider-navigation              { left: calc(50% - 360px); }
+    .testinomail-slide-content      { min-height: auto; }
+    .label-list li                  { margin-right: 10px; width: 70px; }
+    .label-list li img              { width: 90%; }
+    .subscribe-now-section p        { font-size: 12px; }
+    .subscribe-now-section input    { width: 205px; }
+    .subscribe-now-section button   { padding: 0px 20px; }
+    .how-it-works-section h1        { margin-bottom: 30px; }
+    .testinomail-slide              { min-height: auto; }
+    .find-links li a                { font-size: 18px; line-height: 25px; }
+    .footer-links li a              { font-size: 10px; }
+    .copyright-text                 { font-size: 10px; }
+    .scroll-link-section            { bottom: 65px; }
+    .subscribe-input-section        { width: calc(100% - 110px); }
+    /*slider*/
+    .banner-slider .slick-dots      { right: calc(50% - 350px); }
+    .navbar-right                   { padding: 20px 0px; }
+    /*slider*/
+/*************************** Home Page end ***************************/
+
+/*************************** About us Page start ***************************/
+    .secondary-banner               {  min-height: 500px; }       
+    .secondary-banner-content       { bottom: 50px; }
+    .secondary-banner-content h6     { margin-left: 0px; }
+    .secondary-banner-content h1     { font-size: 70px; line-height: 110px;  }
+    .about-us-details-section h1    { margin-bottom: 40px; }
+    .our-story-section              { padding: 0px 25px 0px 0px;}
+    .our-story-section-right        { padding: 0; padding-left: 20px; }     
+    .our-story-section h5           { margin-bottom: 20px; line-height: 30px; }
+    .our-story-section p            { line-height: 24px; margin-bottom: 20px; }
+
+/*************************** About us Page end ***************************/
+
+/*************************** Label Page start ***************************/
+
+
+    .label-section                  { width: 157px; height: 157px; }
+    .label-section:nth-child(5n)    { margin-right: 20px; }
+    .label-section:nth-child(4n)    { margin-right: 0; }
+
+/*************************** Label Page start ***************************/
+/*************************** Top 10 Page start ***************************/
+
+    .top-10-section                 { padding-top: 10px; }
+    .heading-text                   { font-size: 65px; line-height: 100px; }
+    .tringle-navbar                 { height: 250px; }
+    .common-help-section-data h3    { font-size: 26px; line-height: 50px; }
+    .list-artist-btn-grp a          { width: 100px; height: 40px; line-height: 40px; font-size: 12px; }
+    .list-artist-banner             { height: 220px; }
+    .list-artist-details            { padding: 20px 20px 20px 10px; }
+    .list-artist-desc               { font-size: 12px; }
+
+/*************************** Top 10 Page end ***************************/
+
+/*************************** faq Page start ***************************/
+
+    .faq-section                    { padding-top: 10px; }
+    .faq-title                      { font-size: 18px; line-height: 27px; padding: 0px 25px 0px 115px; }
+    .faq-no                         { font-size: 30px; line-height: 45px; width: 90px; line-height: 45px; }
+
+/*************************** faq Page end ***************************/
+
+/*************************** Contact Page start ***************************/
+
+    .contact-title                  { line-height: 24px; padding-left: 40px; margin-bottom: 10px; }
+    .contact-detaile                { font-size: 22px; line-height: 32px; }
+    .contact-form                   { margin: 20px 0px 40px 0px; }
+    .contact-map                    { height: 320px; }
+    .contact-form-btn               { width: 175px; padding-left: 25px; }
+
+/*************************** Contact Page end ***************************/
+/*************************** Login Page start ***************************/
+
+    .login-section h1               { padding-bottom: 30px; margin-bottom: 30px; font-size: 56px; }
+    .login-input-grp                { padding-top: 20px; }
+    .login-btn                      { margin-top: 30px; }
+
+/*************************** Login Page end ***************************/
+
+/*************************** Sign up Page end ***************************/
+
+.all-cards-img                      {  width: calc(100% - 350px);  }
+
+/*************************** Sign up Page end ***************************/
+
+/********************************** Artist Section start **********************************/
+
+/*************************** artist dashboard start ***************************/
+
+    .artist-section-details             { padding: 0px 15px; }
+    .my-profile-btn-section             { padding-top: 20px; }
+    .artist-section-details p           { margin: 10px 0px; }
+    .profile-setup-modal .modal-dialog    { min-width: 435px; }
+    .profile-setup-modal .modal-dialog     { padding:30px 20px 50px 20px; }
+    .profile-setup-modal h1             { font-size: 40px; line-height: 50px; }
+    .my-profile-btn                     { background: url('../images/my-profile-icon.svg')no-repeat left 10px center/20px 20px; padding-left: 40px; background-color: #221e20; }
+    .artist-back-link                   { margin-right: 5px; }
+
+/*************************** artist dashboard end ***************************/
+/*************************** general info start ***************************/
+
+    .dob-select .jcf-select-general-info-select .jcf-select-text        { padding-right: 15px; font-size: 14px; padding-left: 5px; text-align: left; background: url('../images/arrows.svg')no-repeat right 0px center/15px 15px !important; }
+    .jcf-select-general-info-select .jcf-option             { padding-left: 10px; font-size: 14px; }
+    .general-info                         { width: calc(100% / 3 - 10px); margin-right: 15px; }
+    .heght-input-section div              { margin-right: 30px; }
+    .dotted-seprator                      { margin: 25px 0px; }
+    .general-info-subtitle                { font-size: 14px; }
+    .general-information-section          { margin-top: 35px; }
+    .heght-input-section .height-feet, .heght-input-section .height-inch    { margin-right: 35px; }
+/*************************** general info end ***************************/
+
+
+/*************************** video page start ***************************/
+
+    .artist-video-title                   { font-size: 14px; } 
+    .artist-video-upload span             { width: 140px; } 
+    .video-thumbnaile-section > div span { width: 140px; }   
+
+/*************************** video page end ***************************/
+
+
+/*************************** artist-profile start ***************************/
+
+    .artist-personal-info h3              { font-size: 40px; line-height: 55px; }
+    .artist-interact-section              { margin: 15px 0px; }
+    .artist-profile-desc-section          { margin-top: 30px; }
+    .artist-sub-title                     { margin-bottom: 20px; }
+    .artist-common-margin                 { margin-top: 30px; }
+    .artist-profile-desc                  { font-size: 14px; line-height: 22px; }
+    .artist-video                         { min-height: 100px; }
+    .artist-video-section p               { font-size: 14px; line-height: 20px; }
+    .audio-name                           { width: calc(100% - 185px);font-size: 14px; line-height: 26px; margin-left: 5px; }
+    #audioplayer                          { padding-left: 0; min-width: 150px; }
+    .audio-time div                       { font-size: 10px; line-height: 16px; }
+    #start                                { margin-left: 5px; }
+    #timeline                             { width: 100px; }
+/*************************** artist-profile end ***************************/
+
+
+/*************************** Noticeboard start ***************************/
+
+    .noticeboard-section            { padding: 75px 0px 50px 0px; }
+    .noticeboard-section .my-profile-btn { line-height: 50px; }
+    .noticeboard-post-heading       { font-size: 20px; line-height: 30px; }
+    .noticeboard-post-view a        { width: 100px; height: 40px; line-height: 40px; }
+
+/*************************** Noticeboard end ***************************/
+
+
+/*************************** My Sunscription start ***************************/
+
+    .my-subscription-section .heading-text      { line-height: 100px; }
+    .subscription-deails                        { margin-top: 30px; }
+    .my-subscription-section .jcf-select-plan-selection.jcf-select { width: 70%; }
+    .subscription-package-info h4               { font-size: 30px; line-height: 45px; }
+
+/*************************** My Sunscription end ***************************/
+
+/*************************** Account Settings start ***************************/
+
+    .account-info label                { letter-spacing: 5px;}
+    .payment-card-details              { width: 45%; }
+/*************************** Account Settings end ***************************/
+
+/*************************** Post Page start ***************************/
+
+    .artist-post-title              { font-size: 28px; line-height: 40px; }
+    .artist-post-desc               { font-size: 14px; line-height: 26px; }
+    .post-contact-person-info       { margin-top: 40px; }
+
+/*************************** Post Page end ***************************/
+
+
+/********************************** Artist Section end **********************************/
+
+
+/********************************** Label Section start **********************************/
+
+.form-submitting-text               { margin-top: 20px; font-size: 12px; line-height: 60px; color: #e9202d; font-family: "Poppins-SemiBold"; }
+
+/********************************** Label Section end **********************************/
+
+/*************************** Terms Page start ***************************/
+
+.terms-privacy-section                 { padding-top: 10px; }
+
+/*************************** Terms Page end ***************************/
+
+/*************************** Talent Search start ***************************/
+
+    .talent-search-result           { width: calc(100% / 2 - 10px); margin-right: 20px; }
+    .talent-search-result:nth-child(4n) { margin-right: 15px; }
+    .talent-search-result:nth-child(2n) { margin-right: 0px; }
+    .talenet-search-select-section      { display: block; }
+    .talenet-search-select-options      { justify-content: flex-start; margin-top: 10px; }
+    .talent-search-result           { margin-top: 30px; }
+
+/*************************** Talent Search end ***************************/
+/*gallery*/
+
+.add-img .box                   { width: calc(100% / 4 - 16px); margin-bottom: 10px; }
+/*gallery*/
+
+}
+@media only screen and (min-width: 576px) and (max-width: 767px)
+{
+    h1                              { font-size: 50px; line-height: 60px; }
+    h2                              { font-size: 32px; line-height: 37px;  }
+    h3                              { font-size: 28px; }
+    h4                              { font-size: 24px; line-height: 33px; }
+    h5                              { font-size: 22px; line-height: 29px; }
+    .comman-padding                 { padding: 35px 0px; }
+    p                               { font-size: 14px; line-height: 18px; } 
+    h6                              { font-size: 18px; line-height: 25px; }
+    .heading-text                   { font-size: 60px; line-height: 80px; }
+
+/*************************** Home Page start ***************************/
+    
+    .stickey-top-navbar .navbar-right   { padding: 0; }
+    .close-menu-icon                { margin: 25px 0px; }
+    .logo-img                       {width: 120px; height: 80px; }
+    .home-banner                    { min-height: 100vh; }
+    .how-it-works-section           { background-position: center; }
+    .sidebar-menu-section           { padding: 10px 25px 10px 25px; z-index: 1; width: 200px; }
+    .menu-list li a                 { font-size:30px; line-height: 42px;  }
+    .working-step h4                { margin-bottom: 15px; }
+    .working-step p                 { margin-bottom: 15px; max-width: 100%; line-height: 22px; }
+    .common-btn                     { width: 120px; height: 40px; font-size: 14px; line-height: 40px; }
+    .artist-slider                  { padding: 15px; }
+    .artist-slider .bg-slide        { height: 400px; }
+    .artist-slider .bg-slide:before { background: transparent; }
+    .artist-slider .slick-track > div{ padding: 15px; }
+    .artist-slider .slick-next      { right: 5px; }
+    .artist-slider .slick-prev      { left: 5px; } 
+    .member-section h1              { margin-top: 40px; margin-bottom: 30px; font-size: 45px; }
+    .membership-plan                { margin-bottom: 20px; padding-top: 10px; }
+    .membership-plans .col-md-4     { margin-bottom: 15px; }
+    .membership-plan p              { font-size: 18px;  }
+    .membership-plan h3             {line-height: 30px;}
+    .member-section                 { min-height: 600px; }
+    .member-section h5              { line-height: 30px; margin-bottom: 40px; }
+    .slider-navigation              { left: calc(50% - 255px); }
+    .client-store                   { display: block; width: 100%; text-align: right; }
+    .client-logo img                { max-width: 50%; }
+    .testinomail-slide-content      { min-height: auto; }
+    .label-list                     { margin: 30px 0px; }
+    .label-list li                  { margin-right: 10px; margin-bottom: 15px; }
+    .label-list li img              { width: 90%; }
+    .subscribe-now-section          { margin-bottom: 20px;margin-top: 20px;}
+    .subscribe-now-section p        { font-size: 12px; }
+    .subscribe-now-section input    { width: 205px; }
+    .subscribe-now-section button   { padding: 0px 20px; }
+    .how-it-works-section h1        { margin-bottom: 30px; }
+    .testinomail-slide              { min-height: auto; }
+    .footer-links                  { margin: 0; text-align: center; }
+    .find-links                     { margin-top: 30px; }
+    .find-links li                  { margin: 0; margin-bottom: 10px; }
+    .find-links li a                { font-size: 18px; line-height: 25px; }
+    .footer-links li a              { font-size: 10px; }
+    .copyright-text                 { font-size: 10px; margin: 0; text-align: center; }
+    footer                          { height: auto;padding: 15px 0px; }
+    .footer-mobile-logo             { order: -1; }
+    .scroll-link-section            { bottom: 65px; }
+    .navbar-right                   { padding: 20px 0px; }
+    /*slider*/
+    .banner-slider .slick-dots      { right: calc(50% - 250px); }
+    .banner-slider .slick-dots      { bottom: 65px; }
+    /*slider*/
+
+/*************************** Home Page end ***************************/
+
+/*************************** About us Page start ***************************/
+
+    .secondary-banner               {  min-height: 450px; }
+    .label-banner                   { min-height: 500px; }       
+    .secondary-banner-content       { bottom: 30px; }
+    .secondary-banner-content h6     { margin-left: 0px; }
+    .secondary-banner-content h1     { font-size: 60px; line-height: 80px;  }
+    .about-us-details-section h1    { margin-bottom: 30px; }
+    .our-story-section              { padding: 0;}
+    .our-story-section-right        { padding: 0; }     
+    .our-story-section h5           { margin-bottom: 20px; line-height: 30px; }
+    .our-story-section p            { line-height: 24px; margin-bottom: 20px; }
+
+/*************************** About us Page end ***************************/
+
+/*************************** Label Page start ***************************/
+
+    .label-section                  { width: 245px; height: 245px; }
+    .label-section:nth-child(5n)    { margin-right: 20px; }
+    .label-section:nth-child(2n)    { margin-right: 0; }
+    .label-banner-content h6        { margin-bottom: 15px; }
+
+/*************************** Label Page start ***************************/
+
+/*************************** Top 10 Page start ***************************/
+
+    .top-10-section                 { padding-top: 10px; }
+    .heading-text                   { font-size: 70px; line-height: 110px; }
+    .tringle-navbar                 { height: 250px; }
+    .common-help-section-data h3    { font-size: 20px; line-height: 40px; }
+    .list-artist-btn-grp a          { width: 100px; height: 40px; line-height: 40px; font-size: 12px; }
+    .list-artist-banner             { height: 220px; }
+    .list-artist-details            { padding: 20px 20px 20px 10px; }
+    .list-artist-desc               { font-size: 12px; }
+
+/*************************** Top 10 Page end ***************************/
+
+/*************************** faq Page start ***************************/
+
+    .faq-section                    { padding-top: 10px; }
+    .faq-title                      { font-size: 18px; line-height: 27px; padding: 0px 25px 0px 115px; }
+    .faq-no                         { font-size: 30px; line-height: 45px; width: 90px; line-height: 45px; }
+    .active-faq                     { padding: 20px 30px 15px 30px; }
+
+/*************************** faq Page end ***************************/
+/*************************** Contact Page start ***************************/
+
+    .contact-title                  { line-height: 24px; padding-left: 40px; margin-bottom: 10px; }
+    .contact-detaile                { font-size: 22px; line-height: 32px; }
+    .contact-form                   { margin: 20px 0px 40px 0px; }
+    .contact-map                    { height: 320px; }
+    .mobile-contact-form            { order: -1; }
+
+
+/*************************** Contact Page end ***************************/
+/*************************** Login Page start ***************************/
+
+    .login-section h1               { padding-bottom: 30px; margin-bottom: 30px; font-size: 56px; }
+    .login-input-grp                { padding-top: 20px; }
+    .login-btn                      { margin-top: 30px; }
+
+/*************************** Login Page end ***************************/
+
+/*************************** sign up Page start ***************************/
+
+    .label-modal-1 .modal-dialog    { min-width: 350px;max-width: calc(100% - 50px); max-height: calc(100vh - 50px) !important;-webkit-overflow-scrolling: touch;  overflow-y: scroll; margin: 0px auto; -webkit-overflow-scrolling: touch;}
+    .label-modal-1 .modal-dialog .modal-content    { max-height: 100% !important; }
+    .artist-modals .modal-dialog    { min-width: 350px;max-width: calc(100% - 50px);max-height: calc(100vh - 50px) !important;  -webkit-overflow-scrolling: touch; overflow-y: scroll; margin: 0px auto; -webkit-overflow-scrolling: touch;}
+    .artist-modals .modal-dialog .modal-content    { max-height: 100% !important; }
+    .label-modal-2 .modal-dialog    { min-width: 350px;max-width: calc(100% - 50px);max-height: calc(100vh - 50px) !important; -webkit-overflow-scrolling: touch; overflow-y: scroll; margin: 0px auto; -webkit-overflow-scrolling: touch;}
+    .label-modal-2 .modal-dialog .modal-content    { max-height: 100% !important;}
+    .signup-modal .modal-dialog     { padding: 20px 20px 20px 20px; }
+    .signup-modal h1                { font-size: 45px; line-height: 55px; }
+    .subscription-plan-details      { padding: 0; }
+    .subscription-plan-details h2   { font-size: 25px; line-height: 50px; }
+    .paypal-section                 { margin-top: 10px; }
+    .registration-form-terms        { margin-top: 15px; }
+    .signup-modal .common-btn       { margin-top: 10px; }
+
+/*************************** sign up Page end ***************************/
+
+/********************************** Artist Section start **********************************/
+
+/*************************** artist dashboard start ***************************/
+
+    .artist-section-details             { padding: 0px 20px; }
+    .artist-mobile-navbar               { display: block !important; width: 100%; }
+    .jcf-select-artist-mobile-navbar    { display: block !important; width: 100%;height: 45px; border: none; font-family: "Lato-Light"; margin: 0; }
+    .jcf-select-artist-mobile-navbar .jcf-select-opener { display: none; }
+    .jcf-select-artist-mobile-navbar .jcf-option { font-size: 18px;  text-overflow: ellipsis; line-height: 45px; padding: 0px 40px; cursor: pointer; border: none;}
+    .jcf-select-artist-mobile-navbar .jcf-select-text { font-size: 18px; line-height: 45px;border: 0px solid rgba(155, 22, 30, 1) !important; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); padding: 0px 40px; margin: 0; background-color: #e9202d; color: #fff;cursor: pointer;  }
+    .jcf-select-artist-mobile-navbar .jcf-select-text:after { content: '\f107'; position: absolute; width: 20px; height: 20px; color: #fff; right: 20px; top: 0px; font-size: 20px; font-family: "FontAwesome"; }
+    .jcf-select-artist-mobile-navbar.jcf-select-drop .jcf-hover { background-color: #221e20; color: #fff; }
+    .jcf-select-artist-mobile-navbar.jcf-select-drop .jcf-select-drop-content { border: none; }
+    .jcf-select-artist-mobile-navbar .jcf-list ul    { overflow: auto; max-height: 300px !important;}
+    .artist-navbar                      { display: none; }
+    .artist-inner-navbar                { display: none; }
+    .common-navbar li a                 { font-size: 12px; }
+    .artist-dashboard .heading-text     { font-size: 60px; line-height: 100px; }
+    .artist-dashboard-header            { display: block; }
+    .my-profile-btn-section             { padding-top: 10px; }
+    .artist-section-details p           { margin: 10px 0px; }
+    .profile-setup-modal .modal-dialog    { min-width: 435px; }
+    .profile-setup-modal .modal-dialog     { padding:30px 20px 50px 20px; }
+    .profile-setup-modal h1             { font-size: 40px; line-height: 50px; }
+    .profile-setup-modal p              { margin: 0; }
+/*************************** artist dashboard end ***************************/
+
+/*************************** general info start ***************************/
+
+    .dob-select .jcf-select-general-info-select .jcf-select-text        { padding-right: 15px; font-size: 14px; padding-left: 5px; text-align: center; background: url('../images/arrows.svg')no-repeat right center/15px 15px; }
+    .jcf-select-general-info-select .jcf-option             { padding-left: 10px; font-size: 14px; }
+    .jcf-select-general-info-select .jcf-select-text        { font-size: 14px; }
+    .general-info                         { width: 100%; margin-right: 15px; }
+    .heght-input-section div              { margin-right: 30px; }
+    .dotted-seprator                      { margin: 25px 0px; }
+    .general-info-subtitle                { font-size: 14px; }
+    .general-information-section          { margin-top: 35px; }
+/*************************** general info end ***************************/
+
+
+/*************************** audio page start ***************************/
+
+    .audio-upload                       { min-width: 180px; max-width: 180px; background-position: 5px center !important; background-size: 25px 25px !important; padding: 20px 10px 20px 40px; }
+    .audio-title-input                  { min-width: 140px; max-width: 158px; }
+    .audio-upload-section .audio-cancel-icon  { width: 35px; height: 35px; }
+    .uploaded-audio .audio-upload       { background: url('../images/desc.svg')no-repeat 5px center/25px 25px !important;  }
+
+
+
+/*************************** audio page end ***************************/
+
+
+
+
+
+/*************************** artist-profile start ***************************/
+
+    .artist-personal-info h3              { font-size: 40px; line-height: 55px; }
+    .artist-interact-section              { margin: 15px 0px; }
+    .artist-profile-desc-section          { margin-top: 30px; }
+    .artist-sub-title                     { margin-bottom: 20px; }
+    .artist-common-margin                 { margin-top: 30px; }
+    .artist-profile-desc                  { font-size: 14px; line-height: 22px; }
+    .artist-video                         { min-height: 140px; }
+    .artist-video-section p               { font-size: 14px; line-height: 20px; }
+    .artist-profile-details-section .artist-dashboard-header .sub-title { margin-bottom: 10px; }
+    .artist-profile-details-section .go-back-btn { margin-left: 0; margin-bottom: 20px; }
+
+    .audio-model-div audio              { width: 90%; }
+
+/*************************** artist-profile end ***************************/
+
+/*************************** Noticeboard start ***************************/
+
+    .noticeboard-section            { padding: 75px 0px 50px 0px; }
+    .noticeboard-section .my-profile-btn { line-height: 40px; }
+    .noticeboard-post-heading       { font-size: 20px; line-height: 30px; }
+    .noticeboard-post-view a        { width: 100px; height: 40px; line-height: 40px; }
+
+/*************************** Noticeboard end ***************************/
+
+/*************************** My Sunscription start ***************************/
+
+    .my-subscription-section .heading-text      { line-height: 90px; font-size: 60px; }
+    .subscription-deails                        { margin-top: 30px; }
+    .my-subscription-section .jcf-select-plan-selection.jcf-select { width: 70%; }
+    .subscription-package-info h4               { font-size: 30px; line-height: 45px; }
+    .subscription-title h3                      { font-size: 22px; line-height: 45px; }
+    .subscription-title .my-subscription-type   { margin-right: 5px; }
+    .subscription-details p                     { font-size: 14px; line-height: 26px; }
+
+/*************************** My Sunscription end ***************************/
+
+/*************************** Account Settings start ***************************/
+    .account-info                      { width: 100%; }
+    .account-info label                { letter-spacing: 5px;}
+    .account-info-grp                   { margin: 0;display: block; }
+    .account-settings-section .subscription-package-info h4  { margin-bottom: 20px; }
+    .payment-card-details              { width: 65%; }
+/*************************** Account Settings end ***************************/
+
+/*************************** Post Page start ***************************/
+
+    .artist-post-title              { font-size: 28px; line-height: 40px; }
+    .artist-post-desc               { font-size: 14px; line-height: 26px; }
+    .post-contact-person-info       { margin-top: 40px; }
+
+/*************************** Post Page end ***************************/
+
+/*************************** New Post Page start ***************************/
+
+    .new-post-section h4             { font-size: 30px; line-height: 40px; }
+    .new-post-section p              { font-size: 14px; line-height: 26px; }
+    .post-form-group                 { margin-bottom: 20px; }
+    .post-submit-btn                 { margin: 20px 0px; }
+    .new-post-terms p                { font-size: 14px; line-height: 22px; }
+    .new-post-terms ul li            { font-size: 14px; line-height: 22px; }
+
+/*************************** New Post Page end ***************************/
+
+/********************************** Artist Section end **********************************/
+
+/********************************** Label Section start **********************************/
+
+    .form-submitting-text               { margin-top: 20px; font-size: 14px; line-height: 60px; color: #e9202d; font-family: "Poppins-SemiBold"; }
+
+/*************************** Terms Page start ***************************/
+
+    .terms-privacy-section                 { padding-top: 10px; }
+    .all-terms-privacy-detailes p     { font-size: 14px; line-height: 26px;  margin-top: 20px; }
+
+/*************************** Terms Page end ***************************/
+
+/*************************** Talent Search start ***************************/
+
+    .talent-search-result           { width: calc(100% / 2 - 10px); margin-right: 20px; }
+    .talent-search-result:nth-child(4n) { margin-right: 15px; }
+    .talent-search-result:nth-child(2n) { margin-right: 0px; }
+    .talenet-search-select-section      { display: block; }
+    .talenet-search-select-options      { justify-content: flex-start; margin-top: 10px; }
+    .talent-search-result           { margin-top: 30px; }
+    .all-search-results .load-more-btn { margin-top: 25px; }
+/*************************** Talent Search end ***************************/
+
+/********************************** Label Section end **********************************/
+/*gallery*/
+
+.add-img .box                   { width: calc(100% / 4 - 16px); margin-bottom: 10px; }
+/*gallery*/
+}
+@media only screen and (max-width: 575px)
+{
+    h1                              { font-size: 35px; line-height: 45px; }
+    h2                              { font-size: 25px; line-height: 32px;  }
+    h3                              { font-size: 23px; }
+    h4                              { font-size: 20px; line-height: 27px; }
+    h5                              { font-size: 18px; line-height: 25px; }
+    .comman-padding                 { padding: 35px 0px; }
+    p                               { font-size: 14px; line-height: 18px; } 
+    h6                              { font-size: 16px; line-height: 22px; }
+    .heading-text                   { font-size: 40px; line-height: 60px; }
+
+/*************************** Home Page start ***************************/
+    .stickey-top-navbar .logo-img img { max-width: 80%; }
+    .stickey-top-navbar .navbar-right   { padding: 0; } 
+    .sidebar-btn                    { width: 40px; height: 40px; padding: 5px 14px;  margin-left: 10px;}
+    .logged-in-navbar .dropdown-menu { min-width: auto; }
+    .navbar-right                   { padding:0; }
+    .primary-navbar .navbar-right a.dropdown-item   { text-overflow: none !important; overflow: initial; }
+    .primary-navbar .navbar-right .dropdown-menu { min-width: 100px; }
+    .logo-img                       {width: 80px; height: 60px; }
+    .scroll-link-section            { bottom: 50px; }
+    .scroll-link                    { font-size: 12px; margin-left: 5px;}
+    .arrow-down                     { border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; }
+    .home-banner                    {  min-height: 100vh; }
+    .home-banner-content            { padding-top: 95px; }
+    .how-it-works-section           { background-position: left; }
+    .sidebar-menu-section           { z-index: 1; width: calc(100% - 50px); text-align: left; right:calc(-100% + 50px);   }
+    .menu-list li a                 { font-size:25px; line-height: 42px;  }
+    .close-menu-icon                { margin: 15px 0px; }
+    .menu-list                      { margin-bottom: 30px; }
+    .menu-logo                      { width: 75px; height: 50px;  }
+    .working-step h4                { margin-bottom: 15px; }
+    .working-step p                 { margin-bottom: 15px; max-width: 100%; line-height: 22px; }
+    .common-btn                     { width: 120px; height: 40px; font-size: 14px; line-height: 40px; }
+    .artist-slider                  { padding: 15px; }
+    .artist-slider .bg-slide        { height: 300px; }
+    .artist-slider .bg-slide:before { background: transparent; }
+    .artist-slider .slick-track > div{ padding: 15px; }
+    .artist-slider .slick-next      { right: 5px; }
+    .artist-slider .slick-prev      { left: 5px; } 
+    .member-section h1              { margin-top: 35px; margin-bottom: 30px; font-size: 35px; }
+    .membership-plan                { margin-bottom: 20px; padding-top: 10px; }
+    .membership-plans .col-md-4     { margin-bottom: 15px; }
+    .membership-plan p              { font-size: 18px;  }
+    .membership-plan h3             {line-height: 30px;}
+    .member-section                 { min-height: 600px; }
+    .member-section h5              { line-height: 25px; margin-bottom: 35px; }
+    .slider-navigation              { left: 0; bottom: 20px; }
+    .client-logo img                { max-width: 60%; }
+    .client-store                   { text-align: left; margin-left: 20px; }
+    .client-logo                    { text-align: left; }
+    .testinomail-slide-content      { min-height: auto; }
+    .testinomail-slide-content .row { min-height: 300px; }
+    .testinomail-slide-content .row .col-md-5{ display: block; align-self: auto; text-align: left;  }
+    .label-list                     { margin: 30px 0px; text-align: center; }
+    .label-list li                  { margin-right: 10px; margin-bottom: 30px; width: 80px; }
+    .label-list li img              { width: 90%; }
+    .subscribe-now-section          { margin-bottom: 25px;margin-top: 25px;}
+    .subscribe-now-section p        { font-size: 12px; }
+    .subscribe-now-section input    { width: 150px; }
+    .subscribe-now-section button   { padding: 0px 15px; }
+    .how-it-works-section h1        { margin-bottom: 30px; }
+    .testinomail-slide              { min-height: auto; }
+    .footer-links                   { margin: 0; text-align: center; }
+    .find-links                     { margin-top: 30px; }
+    .find-links li                  { margin: 0; margin-bottom: 10px; }
+    .find-links li a                { font-size: 18px; line-height: 25px; }
+    .footer-links li a              { font-size: 10px; }
+    .copyright-text                 { font-size: 10px; margin: 0; text-align: center; }
+    footer                          { height: auto;padding: 15px 0px; }
+    .footer-mobile-logo             { order: -1; }
+    .user-dropdown-content .dropdown-item { width: auto !important; }
+
+.subscribe-input-section            { width: calc(100% - 125px); }
+
+    /*slider*/
+    .banner-slider .slick-dots      { right: 15px; }
+    .banner-slider .slick-dots      { bottom: 55px; }
+    /*slider*/
+
+/*************************** Home Page end ***************************/
+
+/*************************** About us Page start ***************************/
+
+    .secondary-banner               {  min-height: 300px; }  
+    .label-banner                   { min-height: 450px; }     
+    .secondary-banner-content       { bottom: 30px; }
+    .secondary-banner-content h6     { margin-left: 0px; }
+    .secondary-banner-content h1     { font-size: 40px; line-height: 60px;  }
+    .about-us-details-section h1    { margin-bottom: 20px; }
+    .our-story-section              { padding: 0;}
+    .our-story-section-right        { padding: 0; }     
+    .our-story-section h5           { margin-bottom: 20px; line-height: 30px; }
+    .our-story-section p            { line-height: 22px; margin-bottom: 20px; }
+
+/*************************** About us Page end ***************************/
+
+/*************************** Label Page start ***************************/
+
+    .label-section                  { width: calc(50% - 10px); height: 135px; margin-bottom: 15px;}
+    .label-section:nth-child(5n)    { margin-right: 20px; }
+    .label-section:nth-child(2n)    {margin-right: 0; }
+    .label-banner-content h6        { margin-bottom: 15px; }
+
+    /*************************** Label Page start ***************************/
+    /*************************** Top 10 Page start ***************************/
+
+    .top-10-section                 { padding-top: 10px; }
+    .heading-text                   { font-size: 50px; line-height: 80px; }
+    .sub-title                      { font-size: 14px; }
+    .tringle-navbar                 { height: 200px; }
+    .tringle-navbar:before          { border-width: 30px 50vw; }
+    .common-help-section-data h3    { font-size: 20px; line-height: 30px;margin-bottom: 20px; }
+    .list-artist-name               { bottom: 10px; right: 10px; margin:0;}
+    .list-artist-btn-grp a          { width: 100px; height: 40px; line-height: 40px; font-size: 12px; }
+    .list-artist-banner             { height: 220px; }
+    .list-artist-details            { padding: 20px 20px 20px 10px; }
+    .list-artist-desc               { font-size: 12px; margin: 15px 0px; }
+    .common-help-section            { min-height: 225px; }
+    .common-help-section-data       { display: block; text-align: center; }
+
+/*************************** Top 10 Page end ***************************/
+
+/*************************** faq Page start ***************************/
+
+    .faq-section                    { padding-top: 10px; }
+    .faq-title                      { font-size: 14px; line-height: 22px; min-height: 65px; padding: 0px 15px 0px 60px; }
+    .faq-no                         { font-size: 30px; width: 50px; line-height: 45px; font-size: 24px; margin: 0;  }
+    .active-faq                     { padding: 10px; font-size: 12px; line-height: 20px; }
+
+/*************************** faq Page end ***************************/
+
+/*************************** Contact Page start ***************************/
+
+    .contact-title                  { line-height: 24px; padding-left: 40px; margin-bottom: 10px; }
+    .contact-detaile                { font-size: 22px; line-height: 32px; }
+    .contact-form                   { margin: 20px 0px; }
+    .contact-map                    { height: 320px; }
+    .mobile-contact-form            { order: -1; }
+    .contact-form-input             { width: 100%; margin-bottom: 10px; }
+    .contact-form                   { padding: 0px 20px; }
+    .contact-form-btn               { font-size: 14px; width: 170px; float: none; display: inherit;  background-position: right 5px top;  margin: 20px auto;}
+    .social-icon-list li            { width: 35px; height: 35px; margin-right: 10px; }
+    .social-icon-list               { margin: 20px 0px; }
+
+/*************************** Contact Page end ***************************/
+
+/*************************** Login Page start ***************************/
+    .login-banner                   { padding-top: 95px; }
+    .login-section                  { padding: 0px 10px; }
+    .login-section h1               { padding-bottom: 20px; margin-bottom: 20px; font-size: 35px; line-height: 55px; }
+    .login-input-grp                { padding-top: 20px; }
+    .login-btn                      { margin-top: 15px; height: 45px; line-height: 45px; }
+    .login-input-grp input          { font-size: 18px; line-height: 25px; height: 40px; }
+    .login-section .jcf-checkbox    { padding: 15px; }
+    .login-section .jcf-checkbox span { width: 20px; height: 10px; }
+    .remember-section               { font-size: 14px; line-height: 28px; }
+    .forget-password-link a         { font-size: 14px; line-height: 28px; }
+    .registration-link              { font-size: 14px; line-height: 28px; }
+
+
+/*************************** sign up Page start ***************************/
+
+    .sign-up-banner                 { padding-top: 95px; }
+    .label-modal-1 .modal-dialog    { min-width: 280px;max-width: calc(100% - 50px); max-height: calc(100vh - 50px) !important;-webkit-overflow-scrolling: touch;  overflow-y: scroll; margin: 0px auto; -webkit-overflow-scrolling: touch;}
+    .label-modal-1 .modal-dialog .modal-content    { max-height: 100% !important; }
+    .artist-modals .modal-dialog    { min-width: 280px;max-width: calc(100% - 50px);max-height: calc(100vh - 50px) !important;  -webkit-overflow-scrolling: touch; overflow-y: scroll; margin: 0px auto; -webkit-overflow-scrolling: touch;}
+    .artist-modals .modal-dialog .modal-content    { max-height: 100% !important; }
+    .label-modal-2 .modal-dialog    { min-width: 280px;max-width: calc(100% - 50px);max-height: calc(100vh - 50px) !important; -webkit-overflow-scrolling: touch; overflow-y: scroll; margin: 0px auto; -webkit-overflow-scrolling: touch;}
+    .label-modal-2 .modal-dialog .modal-content    { max-height: 100% !important;  }
+    .registration-form-input-grp    { display: block; margin-top: 0; }
+    .registration-form-input        { width: 100%; margin-right: 0; margin-bottom: 20px; }
+    .signup-modal .modal-dialog     { padding:20px 5px 15px 5px; min-width: 280px;max-width: calc(100% - 50px); max-height: calc(100vh - 50px) !important;-webkit-overflow-scrolling: touch;  overflow-y: scroll; margin: 0px auto;  }
+    .signup-modal h1                { font-size: 43px; line-height: 55px; }
+    .close-modal                    {margin-bottom: 10px; }
+    .subscription-plan-details      { padding: 0; }
+    .subscription-plan-details h2   { font-size: 23px; line-height: 40px; }
+    .paypal-section                 { margin-top: 10px; }
+    .registration-form-terms        { margin-top: 15px; }
+    .signup-modal .common-btn       { margin-top: 10px; }
+    .registration-form-terms p      { margin-left: 0; font-size: 14px; line-height: 25px; word-spacing: normal; }
+    .registration-form-terms .jcf-checkbox { padding: 10px; }
+    .registration-form-terms .jcf-checkbox span     { width: 15px; height: 8px; }
+    .signup-modal .common-btn       {margin: 0px auto; display: block; margin-top: 15px;}
+    .registration-form-input input  { font-size: 14px; }
+    .jcf-select-plan-selection.jcf-select .jcf-select-text  {   font-size: 14px; line-height: 28px; }
+    .jcf-select-plan-selection .jcf-list .jcf-option  {  font-size: 14px; line-height: 28px; }
+    .artist-modals .registration-form-terms .jcf-checkbox { padding: 10px }
+    .artist-modals .registration-form-terms .jcf-checkbox span { width: 15px; height: 8px; }
+    .plan-payment-section h5        { margin-top: 10px; }
+    .plan-payment-section p         { font-size: 14px; line-height: 26px; }
+    .payment-input-card-no          { width: 100% !important; margin-right: 0;  margin-top: 10px !important ;}
+    .payment-input                  { width: calc(50% - 5px) !important; margin-right: 10px; margin-top: 10px !important; }
+    .all-cards-img                  { width: 50%; margin: 0px auto;display: block; margin-top: 15px; }
+    .thank-you-section p            { font-size: 14px; line-height: 26px; margin-bottom: 15px; padding: 0; }
+    .thank-you-section h6           { font-size: 16px; line-height: 24px; letter-spacing: 6px; }
+    .sign-up-section .heading-text  { display: block; text-align: center; font-size: 40px; line-height: 70px; letter-spacing: 0; }
+    .sign-up-section .heading-text span { text-align: center !important; font-size: 20px; line-height: 27px; }
+    .payment-input                  { margin-bottom: 20px; }
+
+    .sign-up-section .col-sm-6      { width: 50%; }
+
+/*************************** sign up Page end ***************************/
+
+/********************************** Artist Section start **********************************/
+
+/*************************** artist dashboard start ***************************/
+
+    .artist-navbar li                   { width: calc(100% / 2); }
+    .artist-navbar                      { display: none; }
+    .artist-inner-navbar                { display: none; }
+    .artist-mobile-navbar               { display: block !important; width: 100%; }
+    .jcf-select-artist-mobile-navbar    { display: block !important; width: 100%;height: 45px; border: none; font-family: "Lato-Light"; margin: 0; }
+    .jcf-select-artist-mobile-navbar .jcf-select-opener { display: none; }
+    .jcf-select-artist-mobile-navbar .jcf-option { font-size: 14px;  text-overflow: ellipsis; line-height: 45px; padding: 0px 20px; cursor: pointer; border: none;}
+    .jcf-select-artist-mobile-navbar .jcf-select-text { font-size: 14px; line-height: 45px;border: 0px solid rgba(155, 22, 30, 1) !important; box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.15); padding: 0px 20px; margin: 0; background-color: #e9202d; color: #fff;cursor: pointer;  }
+    .jcf-select-artist-mobile-navbar .jcf-select-text:after { content: '\f107'; position: absolute; width: 20px; height: 20px; color: #fff; right: 10px; top: 0px; font-size: 20px; font-family: "FontAwesome"; }
+    .jcf-select-artist-mobile-navbar.jcf-select-drop .jcf-hover { background-color: #221e20; color: #fff; }
+    .jcf-select-artist-mobile-navbar.jcf-select-drop .jcf-select-drop-content { border: none; }
+    .jcf-select-artist-mobile-navbar .jcf-list ul    { overflow: auto; max-height: 300px !important;}
+    .artist-section-details             { padding: 0px 15px; }
+    .common-navbar li a                 { font-size: 12px; }
+    .artist-dashboard .heading-text     { font-size: 50px; line-height: 80px; }
+    .artist-dashboard .sub-title        { letter-spacing: 4px; }
+    .artist-dashboard-header            { display: block; }
+    .common-banner                      { min-height: 175px; }
+    .my-profile-btn-section             { padding-top: 10px; }
+    .artist-section-details p           { margin: 10px 0px; }
+    .artist-section-sub-title           { line-height: 30px; }
+    .common-banner                      { padding-top: 95px; }
+    .logged-in-navbar .navbar-right p   { display: inline-block;width: 60px; text-align: right; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: middle; margin: 0; } 
+
+
+    .profile-setup-modal .modal-dialog  { min-width: auto; max-width: 300px; margin: 0px auto; }
+    .profile-setup-modal .modal-dialog  { padding:10px; }
+    .profile-setup-modal h1             { font-size: 30px; line-height: 40px; }
+    .profile-setup-modal p              { margin: 0; font-size: 14px; line-height: 20px; }
+    .artist-get-started-btn             { margin-top: 30px; }
+
+/*************************** artist dashboard end ***************************/
+
+/*************************** audio page start ***************************/
+
+    .audio-upload                       { min-width: 180px; min-height: 50px; background: url('../images/desc-gery.svg')no-repeat 5px center/33px 33px !important; padding: 15px 10px 15px 45px; margin-bottom: 10px; }
+    .audio-title-input                  { min-width: 140px; vertical-align: middle; }
+    .audio-upload-section .audio-cancel-icon  { width: 30px; height: 30px; vertical-align: middle; }
+    .audio-upload-section               { display: block; margin-bottom: 40px; position: relative; }
+    .audio-upload-section:after         { width: 100%; height: 2px; box-sizing: border-box;    border: 1px dashed #f1f1f1; left: 0; bottom: -20px; position: absolute; content: ''; }
+    .audio-upload-section:last-child:after { display: none; }
+    .uploaded-audio .audio-upload       { background: url('../images/desc.svg')no-repeat 5px center/30px 30px !important;  }
+    .audio-title-input-section          { display: inline-block; }
+    .audio-part                         { display: block; }
+    .track-title                        { margin: 10px 0px; }
+
+
+/*************************** audio page end ***************************/
+
+/*************************** general info start ***************************/
+
+    .dob-select .jcf-select-general-info-select .jcf-select-text        { padding-right: 15px; font-size: 14px; padding-left: 5px; text-align: center; background: url('../images/arrows.svg')no-repeat right center/15px 15px; }
+    .jcf-select-general-info-select .jcf-option             { padding-left: 10px; font-size: 14px; }
+    .jcf-select-general-info-select .jcf-select-text        { font-size: 14px; }
+    .general-info                         { width: 100%; margin-right: 0px; margin-bottom: 15px; }
+    .heght-input-section div              { margin-right: 30px; }
+    .dotted-seprator                      { margin: 15px 0px; }
+    .general-info-subtitle                { font-size: 14px; }
+    .general-information-section          { margin-top: 35px; }
+    .my-profile-btn                       { font-size: 16px; line-height: 24px; padding: 15px; padding-left: 55px; }
+    .artist-back-link                     { font-size: 16px; line-height: 24px; margin-bottom: 10px; }
+    .general-info-grp                     { margin-bottom: 0; }
+    .general-info-title                   { font-size: 35px; line-height: 50px; }
+/*************************** general info end ***************************/
+
+/*************************** video page start ***************************/
+
+    .artist-video-title                   { font-size: 14px; } 
+    .video-upload                         { margin-bottom: 40px; position: relative; }
+    .video-upload-section .row .col-md-3 .video-upload:after                   { width: 100%; height: 2px; box-sizing: border-box;border: 1px dashed #f1f1f1; left: 0; bottom: -20px; position: absolute; content: ''; }    
+    .video-upload-section .row .col-md-3:last-child .video-upload:after        { width: 0; }
+    .artist-video-upload span           { width: 250px; }
+    .video-thumbnaile-section > div span   { width: 250px; }
+
+/*************************** video page end ***************************/
+
+    .music-title                          { font-size: 35px; line-height: 50px; }
+    .gallery-title                        { font-size: 35px; line-height: 50px; }
+    .video-title                          { font-size: 35px; line-height: 50px; }
+
+/*************************** artist-profile start ***************************/
+
+    .artist-personal-info h3              { font-size: 36px; line-height: 40px; }
+    .artist-personal-info h4              { font-size: 20px; line-height: 28px; }
+    .artist-interact-section              { margin: 15px 0px; }
+    .artist-profile-desc-section          { margin-top: 30px; }
+    .artist-sub-title                     { margin-bottom: 20px; }
+    .artist-common-margin                 { margin-top: 25px; }
+    .artist-profile-desc                  { font-size: 14px; line-height: 22px; }
+    .artist-video                         { min-height: 120px; }
+    .artist-video-section p               { font-size: 14px; line-height: 20px; }
+    .artist-profile-details-section .artist-dashboard-header .sub-title { margin-bottom: 10px; }
+    .artist-profile-details-section .go-back-btn { margin-left: 0; margin-bottom: 20px; }
+    .artist-profile-slider-for div        { min-height: 200px; }
+    .artist-profile-details-section .arttist-music-catogery label { min-width: 75px; }
+    .artist-profile-details-section .heading-text { font-size: 42px; }
+    .artist-inner-navbar li:nth-child(5) { width: 100%; }
+    .artist-profile-details-section .artist-dashboard-header     { margin-bottom: 20px; }
+    .audio-name                           { width: calc(100% - 185px);font-size: 12px; line-height: 26px; margin-left: 5px; }
+    .slider.slider-horizontal .slider-track { width: 60px; }
+    .slider.slider-horizontal               { width: 60px; }
+    #audioplayer                          { padding-left: 0; min-width: 176px; padding-right: 3px; }
+    .audio-time div                       { font-size: 10px; line-height: 16px; }
+    #start                                { margin-left: 5px; }
+    #timeline                             { width: 100px; }
+
+    .audio-model-div                    { min-height: 250px; width: 100%;  }
+    .audio-model-div audio              { width: 100%; }
+    .contact-person-info                { padding-left: 85px; }
+    .contact-person-info h5             { line-height: 30px; }
+
+/*************************** artist-profile end ***************************/
+/*************************** Noticeboard start ***************************/
+
+    .noticeboard-section            { padding: 45px 0px 50px 0px; }
+    .noticeboard-section .my-profile-btn { line-height: 40px; }
+    .noticeboard-post-heading       { font-size: 20px; line-height: 30px; }
+    .noticeboard-post-view a        { width: 100px; height: 40px; line-height: 40px; }
+
+    .bootbox-confirm .bootbox-body      {  font-size: 16px; line-height: 22px; font-family: "Montserrat-Bold"; margin-top: 25px; }
+    .bootbox-confirm .bootbox-close-button  { font-size: 30px; line-height: 40px; font-family: "Oswald-Bold"; opacity: 1; }
+    .bootbox-confirm .modal-footer .btn-danger { width: 100px; height: 40px; background-color: transparent !important; color: #221e20; border-color: #221e20; }
+    .bootbox-confirm .modal-footer .btn-success { width: 100px; height: 40px; background-color: #221e20 !important; color: #fff; border-color: #221e20; }
+
+
+/*************************** Noticeboard end ***************************/
+
+/*************************** My Sunscription start ***************************/
+
+    .my-subscription-section .heading-text      { line-height: 60px; font-size: 35px;  }
+    .my-subscription-section .artist-section-sub-title { font-size: 14px; line-height: 26px;  }
+    .subscription-deails                        { margin-top: 30px; }
+    .my-subscription-section .jcf-select-plan-selection.jcf-select { width: 100%; }
+    .subscription-package-info h4               { font-size: 27px; line-height: 40px;  }
+    .subscription-package-info                  { margin-bottom: 30px; }
+    .subscription-title h3                      { font-size: 20px; line-height: 30px; }
+    .subscription-title .my-subscription-duration { line-height: 30px; }
+    .subscription-title .my-subscription-type   { margin-right: 5px; display: block;  margin-bottom: 10px;  }
+    .subscription-details p                     { font-size: 14px; line-height: 22px;  }
+    .artist-subscription-btn                    { width: 140px; height: 50px; line-height: 50px; font-size: 16px; }
+    .my-subscription-section .artist-regestration-terms .jcf-checkbox { padding: 10px }
+    .artist-regestration-terms .jcf-checkbox span { width: 15px; height: 8px; }
+
+/*************************** My Sunscription end ***************************/
+
+/*************************** Account Settings start ***************************/
+    .account-info                      { width: 100%; }
+    .account-settings-section .artist-section-sub-title { font-size: 14px; line-height: 26px;  }
+    .account-info label                { letter-spacing: 5px;}
+    .account-info-grp                   { margin: 0;display: block; }
+    .account-settings-section .subscription-package-info h4  { margin-bottom: 20px; }
+    .account-save-changes-btn           {  width: 140px; height: 50px; line-height: 50px; font-size: 16px; margin: 15px 0px; }
+    .payment-card-details              { width: 75%; }
+    .payment-card-details               { display: block; }
+    .payment-card-details span            { }
+    .payment-card-expiry                { width: 50%; }
+    .input-payment-card-no              { width: 100%;margin-bottom: 5px; }
+    .input-payment-card-expiry          { width: 50%; text-align: left;}
+    .input-payment-card-cvv             { width: 50%;text-align: left; }
+    .paymen-card-btn-section button     { width: 100px; height: 40px; line-height: 40px; font-size: 12px; }
+/*************************** Account Settings end ***************************/
+
+/*************************** Post Page start ***************************/
+
+    .artist-post-title              { font-size: 23px; line-height: 35px; margin-bottom: 20px; }
+    .artist-post-desc               { font-size: 14px; line-height: 26px; margin-bottom: 25px; }
+    .post-contact-person-info       { margin-top: 40px; }
+    .artist-post-details            { margin-top: 25px; }
+    .post-image-section             { min-height: 200px;  }
+    .post-date                      { font-size: 30px; line-height: 45px; bottom: 15px; left: 20px; }
+
+/*************************** Post Page end ***************************/
+
+/*************************** New Post Page start ***************************/
+
+    .new-post-section h4             { font-size: 30px; line-height: 40px; }
+    .new-post-section p              { font-size: 14px; line-height: 26px; }
+    .post-form-group                 { margin-bottom: 20px; }
+    .post-submit-btn                 { margin: 20px 0px; }
+    .new-post-terms p                { font-size: 14px; line-height: 22px; }
+    .new-post-terms ul li            { font-size: 14px; line-height: 22px; }
+    .post-img-upload                 { width: 175px; height: 100px; }
+
+/*************************** New Post Page end ***************************/
+
+/********************************** Artist Section end **********************************/
+
+/********************************** Label Section start **********************************/
+
+    .form-submitting-text               { margin-top: 20px; font-size: 14px; display: block; text-align: center; margin: 0; line-height: 60px; color: #e9202d; font-family: "Poppins-SemiBold"; }
+
+/*************************** Terms Page start ***************************/
+
+    .terms-privacy-section                 { padding-top: 10px; }
+    .all-terms-privacy-detailes p     { font-size: 14px; line-height: 26px;  margin-top: 20px; }
+
+/*************************** Terms Page end ***************************/
+
+/*************************** Talent Search start ***************************/
+
+    .talent-search-result           { width: 100%; margin:0; }
+    .talent-search-result:nth-child(4n) { margin-right: 0px; }
+    .talenet-search-select-section      { display: block; }
+    .talenet-search-select-options      { display: block; justify-content: flex-start; margin-top: 10px; }
+    .talent-search-result           { margin-top: 30px; }
+    .all-search-results .load-more-btn { margin-top: 25px; }
+    .jcf-select-genere-select       { min-width: 100%; max-width: 100%; }
+    .jcf-select-genere-select .jcf-option { font-size: 14px; line-height: 30px; }
+    .jcf-select-genere-select .jcf-select-text { font-size: 14px; }
+    .all-search-results             { margin: 0; }
+    .search-list-title              { margin-top: 0; margin-bottom: 15px; }
+    .talenet-search-select-title h4     { font-size: 24px;line-height: 36px; }
+/*************************** Talent Search end ***************************/
+
+/********************************** Label Section end **********************************/
+/*gallery*/
+
+.add-img .box                   { width: calc(100% / 2 - 16px); margin-bottom: 10px; }
+/*gallery*/
+    
+    .primary-navbar .navbar-right a {
+    width: 70px;
+}
+}

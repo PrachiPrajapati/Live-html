@@ -1,0 +1,86 @@
+<div class="xe-card-block">
+    <div class="head-section m-b-30">
+        <h4 class="pull-left">
+            Additional price for size variants
+        </h4>
+        <i class="fa fa-info-circle info-module-icon m-l-10 m-t-10" ng-click="showProductFaqDetails(9)"></i>
+        <p>
+            Here you can set extra price to a particular size variant for print method.
+        </p>
+    </div>
+    <div class="col-lg-12 bg-white" ng-show="!isPriceLoaded">
+        <div class="product-wrap-height">
+            <div class="panel-body text-center">
+                <img class="image-responsive-height demo-mw-50 page-loader"  src="assets/img/demo/progress.svg" alt="Progress"/>
+                <span class="loader-label">
+                    <xe-translate text-value="Loading">
+                    </xe-translate>
+                    ...
+                </span>
+            </div>
+        </div>
+    </div>
+    <div style="overflow-x:auto;">
+    <table class="table table-sm table-striped custom-2019 size-variants" ng-show = "isPriceLoaded">
+        <thead>
+          <tr>
+            <th width="100px" style="padding-left: 8px!important;">
+                
+                        <xe-translate text-value="Size">
+                            </xe-translate>
+               
+            </th>
+            <th ng-repeat="item in prntMethodByProduct">
+                {{ item.name }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="sizeprice in sizeAdditionalPrice track by $index">
+            <td width="100px">
+                    <div style="display: flex;                align-items: center;                height: 35px;     font-weight: 600;">
+                {{ sizeprice.sizeName }}
+                </div>
+            </td>
+            <td ng-repeat="p in sizeprice.sizePrice track by $index">
+                <div class="form-group input-group m-b-0 m-w-100">
+                    <input class="form-control br-0" ng-model="p.percentage" percent-only="percent-only" placeholder="0" type="text"/>
+                    <span class="input-group-addon">
+                        %
+                    </span>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- <table class="table table-bordered table-sm m-b-70" ng-show = "isPriceLoaded">
+        <thead>
+            <tr>
+                <th width="96">
+                    <xe-translate text-value="Size">
+                    </xe-translate>
+                </th>
+                <th ng-repeat="item in prntMethodByProduct">
+                    {{ item.name }}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="sizeprice in sizeAdditionalPrice track by $index">
+                <td width="100" class="text-center">
+                    {{ sizeprice.sizeName }}
+                </td>
+                <td ng-repeat="p in sizeprice.sizePrice track by $index">
+                    <div class="form-group input-group m-b-0">
+                        <input class="form-control" ng-model="p.percentage" percent-only="percent-only" placeholder="0" type="text"/>
+                        <span class="input-group-addon">
+                            %
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+</div>

@@ -1,0 +1,126 @@
+/****font-face included*****/
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../fonts/LibreFranklin-SemiBold.eot');
+    src: url('../fonts/LibreFranklin-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LibreFranklin-SemiBold.woff2') format('woff2'),
+        url('../fonts/LibreFranklin-SemiBold.woff') format('woff'),
+        url('../fonts/LibreFranklin-SemiBold.ttf') format('truetype'),
+        url('../fonts/LibreFranklin-SemiBold.svg#LibreFranklin-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../fonts/LibreFranklin-Regular.eot');
+    src: url('../fonts/LibreFranklin-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LibreFranklin-Regular.woff2') format('woff2'),
+        url('../fonts/LibreFranklin-Regular.woff') format('woff'),
+        url('../fonts/LibreFranklin-Regular.ttf') format('truetype'),
+        url('../fonts/LibreFranklin-Regular.svg#LibreFranklin-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lobster Two';
+    src: url('../fonts/LobsterTwo-BoldItalic.eot');
+    src: url('../fonts/LobsterTwo-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LobsterTwo-BoldItalic.woff2') format('woff2'),
+        url('../fonts/LobsterTwo-BoldItalic.woff') format('woff'),
+        url('../fonts/LobsterTwo-BoldItalic.ttf') format('truetype'),
+        url('../fonts/LobsterTwo-BoldItalic.svg#LobsterTwo-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+/*typography Strat*/
+h1                                          { font-size: 52px; line-height: 65px; font-weight: bold; font-style: italic; font-family: 'Lobster Two'; color:#761EC9;  }
+h2                                          { font-size: 24px; line-height: 32px; font-weight: bold; color: #310D54; text-align: center;}
+h3                                          { font-size: 22px; line-height: 27px; font-weight: normal; color: #310D54; text-align: center;}
+h5                                          { margin: 10px 0 12px;  font-size: 18px; line-height: 30px; font-weight: bold;}
+p                                           { margin:16px auto 5px; max-width: 68%; font-size: 18px;  line-height: 25px; text-align: center; color: #000; font-weight: normal;}
+/*typography End*/
+/*****common section start****/
+*                                           { margin: 0px; padding: 0px; box-sizing: border-box; }
+body                                        { font-family: 'Libre Franklin'; font-size:18px; line-height:21px; }
+img                                         { border: 0px;}
+a:hover, a:active,a:focus                   { text-decoration: none; color:#fff;}
+a:focus, a:active, a:visited                { outline: none; border: 0px;}
+/*****common section End****/
+/*****main page Css start*******/
+.home-section                               { padding-bottom: 10px; height:100vh; background: url('../images/dancing-img.png')no-repeat center top 55% /100% auto, url('../images/shape-bg.png')no-repeat center bottom/100% auto; }
+.logo-box                                   { padding-top: 24px;}
+.logo-img                                   { max-width: 25%; }   
+.info-box                                   { margin: 15px 0 0; }
+.participate-btn                            { padding: 21.5px 45px; margin:15px 0 5px; display:inline-block; border-radius: 37px; overflow: hidden;  background-color: #761EC9; color: #fff; font-weight: 600; text-align: center; position: relative; transition: all 0.5s ease; box-shadow: 0 8px 12px 0 #310D54;   }
+.participate-btn:hover,.participate-btn:focus,.participate-btn:active    { box-shadow: 0 0 30px 0 #761EC9; }
+.participate-btn span                       { position: relative; z-index: 5; }
+.participate-btn::after                     { content: ""; position: absolute; width: 150%; height: 150%; left: 50%; transform: translate(-50%); top: 84%; border-radius: 50%; background-color: #310D54; transition: all 0.5s ease;}
+body .copyright-box p ,body .copyright-box p a { margin-bottom: 0; font-size: 12px; line-height: 17px; color: #fff; }
+.copyright-box p a                          { margin-left: 10px; transition: all 0.3s ease;}
+.copyright-box p a:hover,.copyright-box p a:focus,.copyright-box p a:active { color: #310D54;}
+/****main page Css End******/
+/* terms-condition-page */
+.terms-section                              { padding-bottom: 300px; background: url('../images/dancing-img.png')no-repeat center top 98% /100% auto, url('../images/shape-bg.png')no-repeat center bottom/100% auto;}
+.terms-section p                            { margin:0px 0 25px;  max-width: 100%; font-size: 16px; line-height: 26px; text-align: justify; color:#000; }
+.terms-section p.title                      { margin: 10px 0 12px; }
+.terms-content                              { padding:20px 30px; margin-top: 15px; background-color: #fff; box-shadow: 0 10px 29px 0 rgba(64, 80, 124, 0.1);}
+.terms-content ul                           { margin-left: 20px;}
+.terms-content ul li                        { margin: 10px 0; font-size: 16px; line-height: 26px;  text-align: justify; color:#000;}
+.terms-section .copyright-box               { position: absolute; left:50%; transform: translate(-50%); bottom: 0px;}
+.terms-section .copyright-box p             { padding-bottom: 10px; margin-bottom:0; color:#fff;}
+/******Responsive Css Sstart*/
+@media(min-height:600px) and (max-height:650px)
+{
+    h1                                      { line-height: 55px;}
+    p                                       { margin-bottom:0 ;}
+}
+@media(min-height:320px) and (max-height:500px)  /* for landscape */
+{ 
+    .home-section { min-height: 100vh; height: auto; } 
+    .bottom-section { padding-top: 200px;}
+}
+@media(min-width:992px) and (max-width:1199px)/* laptop */
+{
+    .participate-btn                        { padding: 18px 32px; }
+    p                                       { max-width: 81%; }
+}
+@media(min-width:768px) and (max-width:991px)/* for tablet */
+{
+    body                                    { font-size: 17px; line-height: 20px;}
+  /*typography Strat*/
+h1                                          { font-size: 48px; line-height: 58px;  }
+p                                           { max-width: 100%; }
+/*typography End*/
+.participate-btn                            { padding: 18px 30px; margin: 30px 0 0px;  }
+.logo-img                                   { max-width: 35%; } 
+.copyright-box p ,.copyright-box p a        { font-size: 12px; line-height: 15px; }  
+}
+@media(max-width:767px)/* for mobile */
+{
+    body                                    { font-size: 14px; line-height: 21px;}
+    /*typography Strat*/
+    h1                                      { font-size: 34px; line-height: 42px;  }
+    h2                                      { font-size: 22px; line-height: 30px; }
+    h3                                      { font-size: 19px; line-height: 27px; }
+    h5                                      { font-size: 16px; line-height: 26px;}
+    p                                       { margin:20px auto; max-width: 100%; font-size: 15px;  line-height: 22px; }
+    /*typography End*/ 
+    .home-section                           { background-size: 100% auto, auto auto; background-position: center top 75%, center bottom; min-height: 100vh; height:auto;}
+    .logo-img                               { max-width: 55%; } 
+    .bottom-section                         { padding-top:200px; }
+    .participate-btn                        { padding: 15px 25px; margin: 25px 0 0px; }
+    .copyright-box p ,.copyright-box p a    { padding-bottom: 10px;  }
+    .info-box                               { margin: 30px 0 0; }
+    .terms-content                          { padding:0; box-shadow: none;}         
+    .terms-content ul li, .terms-content p  { font-size: 14px; line-height: 24px; }
+    .terms-section                          { padding-bottom:100px; background: url('../images/dancing-img.png')no-repeat center top 99.5% /100% auto, url('../images/shape-bg.png')no-repeat center bottom/100% auto; }
+}
+@media(min-width:576px) and (max-width:767px)/* for fablet */
+{
+    .logo-img                                   { max-width: 40%; } 
+    .terms-content                              { padding:10px; }
+}
+/****Responsive Css End******/

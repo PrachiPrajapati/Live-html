@@ -1,0 +1,1551 @@
+<div class="Quote_Details">
+    <div class="row">
+        <div class="col-sm-8">
+            <label class="pageTitle">
+                <xe-translate text-value="Quotation Details"></xe-translate>
+            </label>
+            <button type="button" class="btn btn-default btn-sm m-l-10" ng-click="createQuotePurchaseOrder()" ng-disabled=" productSelectStatus == false || vendorList.length == 0 || printShopAddList.length == 0 " ng-if=" quoteDetailsModel == 'quotePricing' "> 
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <xe-translate text-value="Create Purchase Order"></xe-translate>
+            </button>
+            <span ng-show=" quoteDetailsModel == 'quotePricing' && vendorLoadStatus && printShopLoadStatus">
+                <span ng-show=" vendorList.length == 0 && printShopAddList.length > 0 ">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <xe-translate text-value="Please add a vendor to place a purchase order">
+                    </xe-translate>
+                </span>
+                <span ng-show=" vendorList.length > 0 && printShopAddList.length == 0 ">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <xe-translate text-value="Please add a printshop address to place a purchase order">
+                    </xe-translate>
+                </span>
+                <span ng-show=" vendorList.length == 0 && printShopAddList.length == 0 ">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <xe-translate text-value="Please add a vendor and printshop address to place a purchase order">
+                    </xe-translate>
+                </span>  
+            </span>
+        </div>
+        <div class="col-sm-4 text-right">
+            <div class="q-r-status-drop dropdown" style="display:inline-block;">
+                <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" style="min-width:200px" type="button" data-toggle="dropdown" data-disabled="true">
+                    <span class="statusColor q-r-status-color" style="background:{{quoteDetailsForm.color_code}}">
+                    </span>
+                    <span style="padding-left: 20px;">
+                        {{quoteDetailsForm.status}} 
+                    </span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <div  ng-class="{'custom-scroll-menu-bar': statusLists.length > '10'}">  
+                        <li ng-repeat="status in statusLists" ng-click="onQuoteStatusClicked(table_id, status, 'quoteDetailsPage')" ng-if="status.name != 'Customize Statuses'">
+                            <a href="#" class="status-adjust" ng-class="quoteDetailsForm.quote_status_id == status.id ? 'active':'' " style="position:relative;padding-left:20px;">
+                                {{status.name}}
+                                <span class="statusColor" style="background:{{status.color_code}};"></span>
+                            </a>
+                        </li>
+                    </div>
+                    
+                    <li ng-click="onCustomizeStatusClicked()">
+                        <a href="#" class="btn btn-info m-t-10" style="color:#fff;text-align:center;">
+                            <xe-translate text-value="Customize Statuses"></xe-translate>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--   <button type="reset" class="btn btn-default btn-sm" ng-click="openAgentsList()"
+        ng-if="isQuoteAssignedBySuperAdmin == false && isSuperAdmin && tabModel == 'unassignedQuotes'">
+        <xe-translate text-value="Assign to"></xe-translate>
+      </button>
+      <button type="button" class="btn btn-default btn-sm" ng-click="selfAssign()"
+        ng-if="isQuoteAssignedBySuperAdmin == false && !isSuperAdmin && tabModel == 'unassignedQuotes'">
+        <xe-translate text-value="Self assign"></xe-translate>
+      </button>
+      <button type="button" class="btn btn-default btn-sm" ng-click="superAdminSelfAssign()"
+        ng-if="isQuoteAssignedBySuperAdmin == false && isSuperAdmin && tabModel == 'unassignedQuotes'">
+        <xe-translate text-value="Self assign"></xe-translate>
+      </button> -->
+            <button type="button" class="btn btn-default btn-sm" ng-click="quoteRefreshPriceDetails()" ng-if="tabModel != 'unassignedQuotes'">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+            </button>
+            <button type="reset" class="btn btn-default btn-sm" ng-click="cancelQuoteDetails()">
+                <i class="fa fa-caret-left"></i>
+                <xe-translate text-value="Back"></xe-translate>
+            </button>
+        </div>
+    </div>
+    <!-- Tabbing Start -->
+    <div class="clearfix m-t-20">
+        <ul class="nav nav-tabs quote-nav-tabs">
+            <li id="quoteDetails" ng-class="{'active':quoteDetailsModel == 'quoteDetails'}" class="active">
+                <a data-toggle="tab" ng-click="changeQuoteDetailsTab('quoteDetails')" href="">
+                    <xe-translate text-value="Quote Details"></xe-translate>
+                </a>
+            </li>
+            <li id="quotePricing" ng-class="{'active':quoteDetailsModel == 'quotePricing'}">
+                <a data-toggle="tab" ng-click="changeQuoteDetailsTab('quotePricing')" href="">
+                    <xe-translate text-value="Quote Pricing"></xe-translate>
+                </a>
+            </li>
+            <li id="paymentExpenses" ng-class="{'active':quoteDetailsModel == 'paymentExpenses'}">
+                <a data-toggle="tab" ng-click="changeQuoteDetailsTab('paymentExpenses')" href="">
+                    <xe-translate text-value="Payments Or Expenses"></xe-translate>
+                </a>
+            </li>
+            <li id="quoteConvo" ng-class="{'active':quoteDetailsModel == 'quoteConvo'}">
+                <a data-toggle="tab" ng-click="changeQuoteDetailsTab('quoteConvo')" href="">
+                    <xe-translate text-value="Quote Conversation"></xe-translate>
+                </a>
+            </li>
+            <li id="internalNotes" ng-class="{'active':quoteDetailsModel == 'internalNotes'}">
+                <a data-toggle="tab" ng-click="changeQuoteDetailsTab('internalNotes')" href="">
+                    <xe-translate text-value="Internal Notes"></xe-translate>
+                </a>
+            </li>
+            <!-- <li ng-class="{'active':quoteDetailsModel == 'artworkHistory'}">
+                <a data-toggle="tab" ng-click="changeQuoteDetailsTab('artworkHistory')" href="">
+                  <xe-translate text-value="Artwork History"></xe-translate>
+                </a>
+            </li> -->
+            <li id="quoteHistory" ng-class="{'active':quoteDetailsModel == 'quoteHistory'}">
+                <a data-toggle="tab" ng-click="changeQuoteDetailsTab('quoteHistory')" href="">
+                    <xe-translate text-value="History"></xe-translate>
+                </a>
+            </li>
+            <li id="addTask" ng-class="{'active':quoteDetailsModel == 'addTask'}">
+                <a data-toggle="tab" ng-click="changeQuoteDetailsTab('addTask')" href="">
+                    <xe-translate text-value="Task"></xe-translate>
+                </a>
+            </li>
+            <li id="invoiceDetails" ng-class="{'active':quoteDetailsModel == 'invoiceDetails'}">
+                <a data-toggle="tab" ng-click="changeQuoteDetailsTab('invoiceDetails')" href="">
+                    <xe-translate text-value="invoice"></xe-translate>
+                </a>
+            </li>
+
+            <li id="shipment" ng-class="{'active':quoteDetailsModel == 'shipment'}" ng-if="quoteDetailsForm.quote_status_id == 8 || quoteDetailsForm.quote_status_id == 9">
+                <a data-toggle="tab" ng-click="changeQuoteDetailsTab('shipment')" href="">
+                    <xe-translate text-value="Shipping"></xe-translate>
+                </a>
+            </li>
+        </ul>
+        <!-- Tab 1 -->
+        <div class="m-h-400 tab-pane fade in" ng-show="quoteDetailsModel == 'quoteDetails'">
+            <div class="product-wrap-height" ng-show="qDetailsPreloader">
+                <img class="demo-mw-50 page-loader" src="assets/img/demo/progress.svg" alt="Progress" />
+                <span class="loader-label">
+                    <xe-translate text-value="Loading"></xe-translate>...
+                </span>
+            </div>
+            <div class="row" ng-show="qDetailsPreloader == false">
+                <div class="col-sm-12">
+                    <h4 style="margin-top:0;font-size:16px;line-height:inherit;font-weight:400;">
+                        <xe-translate text-value="Quote Info"></xe-translate>
+                    </h4>
+                    <div class="dxTable table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <xe-translate text-value="Quote ID">
+                                        </xe-translate>
+                                    </th>
+                                    <th>
+                                        <xe-translate text-value="Subject">
+                                        </xe-translate>
+                                    </th>
+                                    <th>
+                                        <xe-translate text-value="Description">
+                                        </xe-translate>
+                                    </th>
+                                    <th>
+                                        <xe-translate text-value="Created Date">
+                                        </xe-translate>
+                                    </th>
+                                    <th>
+                                        <xe-translate text-value="Production Due Date">
+                                        </xe-translate>
+                                    </th>
+                                    <th>
+                                        <xe-translate text-value="Customer Due Date">
+                                        </xe-translate>
+                                    </th>
+                                    <th>
+                                        <xe-translate text-value="Convert to order">
+                                        </xe-translate>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{quoteDetailsForm.prefix_quote_id}}</td>
+                                    <td>{{quoteDetailsForm.subject}}</td>
+                                    <td>{{quoteDetailsForm.description}}</td>
+                                    <td>{{quoteDetailsForm.created_date}}</td>
+                                    <td>
+                                        <span ng-if="!isProDueDateEditView"> {{quoteDetailsForm.production_due_date}}
+                                        </span>
+                                        <div class="input-group" ng-if="isProDueDateEditView">
+                                            <input type="text" id="date1picker" ui-date="dateOptionsQuote" class="form-control" ui-date-format ng-model="quoteDetailsForm.production_due_date_ori" ng-change="updateDueDate()" onkeydown="return false">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </div>
+                                        <i class="fa fa-pencil text-info cursor-pointer m-l-10 m-t-5" ng-if="!isProDueDateEditView" ng-click="onProductionDueDtEditClicked()">
+                                        </i>
+                                        <i class="pg-close_line text-danger cursor-pointer m-l-10 m-t-10" ng-if="isProDueDateEditView" ng-click="onProductionDueDtCloseClicked()" style="position:absolute;top:20px;right:0;"></i>
+                                    </td>
+                                    <td>
+                                        <span ng-if="!isCustDueDateEditView">
+                                            {{quoteDetailsForm.customer_due_date}}
+                                        </span>
+                                        <div class="input-group" ng-if="isCustDueDateEditView">
+                                            <input type="text" ui-date="custDueDateOptionsQuote" class="form-control" ui-date-format id="custom_created_date" ng-model="quoteDetailsForm.customer_due_data_ori" ng-change="updateCustomerDueDate()" onkeydown="return false" ng-focus="setQuotDetCustDueDateMin()">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </div>
+                                        <i class="fa fa-pencil text-info cursor-pointer m-l-10 m-t-5" ng-if="!isCustDueDateEditView" ng-click="onCustomerDueDtEditClicked()"></i>
+                                        <i class="pg-close_line text-danger cursor-pointer m-l-10 m-t-10" ng-if="isCustDueDateEditView" ng-click="onCustomerDueDtCloseClicked()" style="position:absolute;top:20px;right:0;"></i>
+                                    </td>
+                                    <td>
+                                        <div class="material-switch">
+                                            <input id="someSwitchOptionSuccess" ng-model="quoteDetailsForm.is_order" ng-checked="quoteDetailsForm.is_order" name="someSwitchOption001" ng-change="quoteToOrder(quoteDetailsForm.is_order,table_id)" type="checkbox" />
+                                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-12 m-b-20">
+                    <h4 style="margin-top:20px;font-size:16px;line-height:inherit;font-weight:400;">
+                        <xe-translate text-value="Customer Info"></xe-translate>
+                    </h4>
+                    <div class="dxTable table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <xe-translate text-value="Customer Id"></xe-translate>
+                                    </th>
+                                    <th>
+                                        <xe-translate text-value="Name"></xe-translate>
+                                    </th>
+                                    <th>
+                                        <xe-translate text-value="Email Address"></xe-translate>
+                                    </th>
+                                    <th>
+                                        <xe-translate text-value="Contact Number"></xe-translate>
+                                    </th>
+                                    <th>
+                                        <xe-translate text-value="Company"></xe-translate>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{quoteDetailsForm.customer_id}}</td>
+                                    <td>{{quoteDetailsForm.first_name}} {{quoteDetailsForm.last_name}}</td>
+                                    <td>{{quoteDetailsForm.email}}</td>
+                                    <td ng-if="quoteDetailsForm.contact_no != '123'">{{quoteDetailsForm.contact_no}}</td>
+                                    <td>{{quoteDetailsForm.company_name}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading separator">
+                            <div class="panel-title">
+                                <xe-translate text-value="Billing Address">
+                                </xe-translate>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="prduct-details-section">
+                                <ul>
+                                    <li>
+                                        {{quoteDetailsForm.billing_address_1}}
+                                    </li>
+                                    <li>
+                                        {{quoteDetailsForm.billing_address_2}}
+                                    </li>
+                                    <li>
+                                        <span ng-if="quoteDetailsForm.billing_city">
+                                            {{quoteDetailsForm.billing_city}}
+                                        </span> 
+                                        <span ng-if="quoteDetailsForm.billing_city && quoteDetailsForm.billing_zip">
+                                            - 
+                                        </span>
+                                        <span ng-if="quoteDetailsForm.billing_zip">
+                                            {{quoteDetailsForm.billing_zip}}
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span ng-if="quoteDetailsForm.billing_state">
+                                            {{quoteDetailsForm.billing_state}}
+                                        </span>
+                                        <span ng-if="quoteDetailsForm.billing_state && quoteDetailsForm.billing_country">
+                                            , 
+                                        </span>
+                                        <span ng-if="quoteDetailsForm.billing_country">
+                                            {{quoteDetailsForm.billing_country}}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading separator">
+                            <div class="panel-title">
+                                <xe-translate text-value="Shipping Address">
+                                </xe-translate>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="prduct-details-section">
+                                <ul>
+                                    <li>
+                                        {{quoteDetailsForm.shipping_address_1}}
+                                    </li>
+                                    <li>
+                                        {{quoteDetailsForm.shipping_address_2}}
+                                    </li>
+                                    <li>
+                                        <span ng-if="quoteDetailsForm.shipping_city">
+                                            {{quoteDetailsForm.shipping_city}} 
+                                        </span>
+                                        <span ng-if="quoteDetailsForm.shipping_city && quoteDetailsForm.shipping_zip">
+                                            - 
+                                        </span>
+                                        <span ng-if="quoteDetailsForm.shipping_zip">
+                                            {{quoteDetailsForm.shipping_zip}}
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span ng-if="quoteDetailsForm.shipping_state">
+                                            {{quoteDetailsForm.shipping_state}}
+                                        </span>
+                                        <span ng-if="quoteDetailsForm.shipping_state && quoteDetailsForm.shipping_country">
+                                            , 
+                                        </span>
+                                        <span ng-if="quoteDetailsForm.shipping_country">
+                                            {{quoteDetailsForm.shipping_country}}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tab 2 -->
+        <div class="m-h-400 tab-pane fade in" ng-show="quoteDetailsModel == 'quotePricing'">
+            <div class="panel panel-default qrPanelCustom" ng-repeat="quote_price in quoteDesignDetailsForm track by $index">
+                <div class="panel-body">
+                    <div class="qrTitle">
+                        <div class="flexRow">
+                            <div class="flexCol d-flex">
+                                <div class="checkbox check-success customer-checkbox-heading">
+                                    <input type="checkbox" value="" id="lineItem_{{ $index }}" ng-model="productChecked[$index]" ng-change="onProductChecked(productChecked[$index])" ng-disabled=" pricing[$index].product_status != 'Need To Order' "/>
+                                    <label for="lineItem_{{ $index }}"></label>
+                                </div>
+                                <h5 style="margin:0;font-weight:500;font-size:18px;line-height:inherit;">
+                                    <span ng-click="openPricingAccPanel($index)" ng-if="quote_price.accPanelStatus == false" class="cursor-pointer">
+                                        {{quote_price.product_name}}
+                                    </span>
+                                    <span ng-click="closePricingAccPanel($index)" ng-if="quote_price.accPanelStatus == true" class="cursor-pointer">
+                                        {{quote_price.product_name}}
+                                    </span>
+                                    <a class="accordion" ng-click="openPricingAccPanel($index)" ng-if="quote_price.accPanelStatus == false" style="display:inline-block;"></a>
+                                    <a class="accordion customer-active" ng-click="closePricingAccPanel($index)" ng-if="quote_price.accPanelStatus == true" style="display:inline-block;"></a>
+                                </h5>
+                            </div>
+                            <div class="flexCol" ng-if="quote_price.accPanelStatus == false">
+                                <b>
+                                    <xe-translate text-value="Qty"></xe-translate>:
+                                </b>
+                                <span>{{pricing[$index].quantity}}</span>
+                            </div>
+                            <div class="flexCol" ng-if="quote_price.accPanelStatus == false" style="min-width:120px;max-width:120px;">
+                                <b>
+                                    <xe-translate text-value="Total"></xe-translate>:
+                                </b>
+                                <span>{{quoteCurrency}}{{pricing[$index].calculatedPrice}}</span>
+                            </div>
+                            <div class="flexCol alignRight" style="max-width:375px;min-width:285px;text-align:right;">
+                                <div class="ship-artwork-btn-cont">
+                                    <button type="button" class="btn btn-primary btn-sm" ng-click="createArtworkJob($index, quote_price.jobs_details.artwork_job_status)" ng-disabled="quote_price.jobs_details.artwork_job_status != 'new'">
+                                        <xe-translate text-value="Create Artwork Job"></xe-translate>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-sm" ng-click="deleteArtwork($index)" ng-if="quoteDesignDetailsForm.length > 1" ng-disabled="quoteDetailsForm.quote_status_id == 8 || quoteDetailsForm.quote_status_id == 9">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panelWrap" ng-if="quote_price.accPanelStatus == true">
+                        <div class="qrBody">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label style="font-family:Montserrat;font-size:10px;text-transform:uppercase;font-weight:600;">
+                                        <xe-translate text-value="Product Images">
+                                        </xe-translate>
+                                    </label>
+                                    <div class="qrimgWrap">
+                                        <div class="qrThumb">
+                                            <div class="qrImg" ng-repeat="imageurl in quote_price.image track by $index" ng-click="onThumbSelected(imageurl, $parent.$index, $index)">
+                                                <img class="img-responsive" ng-src="{{ imageurl.thumb }}" />
+                                            </div>
+                                        </div>
+                                        <div class="qrImgPreview qrImgPreviewContent" ng-click="openImageModal(quote_price.image, quote_price.selectedThumb.original, quote_price.selectedIndex)">
+                                            <img class="img-responsive" ng-src="{{ quote_price.selectedThumb.original }}" />
+                                        </div>
+                                    </div>
+                                    <div class="qrOtherImgWrap" ng-if="quote_price.assets_image">
+                                        <label style="font-family:Montserrat;font-size:10px;text-transform:uppercase;font-weight:600;">
+                                            <xe-translate text-value="Attached Files">
+                                            </xe-translate>
+                                        </label>
+                                        <div class="qrOtherImgWrapBox" ng-class="quote_price.assets_image.length > 6 ? 'attached-file-scroll':''">
+                                            <a class="qrImg d-flex-item-center" href="{{ imageurl.original }}" ng-repeat="imageurl in quote_price.assets_image track by $index" download>
+                                                <img class="img-responsive" ng-src="{{ imageurl.thumbnail }}" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="infoWrap">
+                                        <div class="flexRow">
+                                            <div class="flexCol">
+                                                <div class="infoBox">
+                                                    <strong>
+                                                        <xe-translate text-value="Color"></xe-translate>
+                                                    </strong>: {{quote_price.color | capitalize}}
+                                                </div>
+                                            </div>
+                                            <div class="flexCol">
+                                                <div class="infoBox">
+                                                    <strong>
+                                                        <xe-translate text-value="Size"></xe-translate>
+                                                    </strong>: {{quote_price.size}}
+                                                </div>
+                                            </div>
+                                            <div class="flexCol">
+                                                <div class="infoBox" style="padding:0;height:100%;display:flex;align-items:center;width:100%;background:transparent;">
+                                                    <div class="q-r-product-container" style="margin-right:0px;width:100%;">
+                                                        <label class="control-label q-r-dropdown-btn-label" style="width:130px;font-size:14px;top:12px;left:12px;text-transform:capitalize;">
+                                                            <xe-translate text-value="Printing Process"></xe-translate>:
+                                                        </label>
+                                                        <div class="btn-group" style="width:100%;display:flex;">
+                                                            <button type="button" class="btn btn-default text-ellipsis qrSelect" data-toggle="dropdown">{{quote_price.print_profile_name}}</button>
+                                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:transparent;border:0;">
+                                                                <span class="caret"></span>
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <ul class="dropdown-menu quote-drop-down quote-drop-down-pad" role="menu" style="width:100%;" ng-class="{'quote-drop-down-scroll':pricePrintMethods.length > 5}">
+                                                                <li ng-repeat="printMethod in quote_price.print_methods" ng-click="selectPrintMethod(printMethod, $parent.$index)">
+                                                                    <a href="">{{ printMethod.name }}</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="qrInputWrap">
+                                        <div class="flexRow">
+                                            <div class="flexCol">
+                                                <div class="form-group form-group-default required" aria-required="true">
+                                                    <label>
+                                                        <xe-translate text-value="Product price"></xe-translate>
+                                                    </label>
+                                                    <input type="text" min="0" ng-model="pricing[$index].unit_price_without_design" class="form-control" ng-change="calculateUnitPrice($index)" ng-disabled="tabModel == 'unassignedQuotes'" price-only="price-only" required>
+                                                </div>
+                                            </div>
+                                            <div class="flexCol">
+                                                <div class="form-group form-group-default" aria-required="true">
+                                                    <label>
+                                                        <xe-translate text-value="Customization price"></xe-translate>
+                                                    </label>
+                                                    <input type="text" min="0" class="form-control" ng-model="pricing[$index].design_price" ng-change="calculateUnitPrice($index)" ng-disabled="tabModel == 'unassignedQuotes' || !quote_price.product_design_status" price-only="price-only">
+                                                </div>
+                                            </div>
+                                            <div class="flexCol">
+                                                <div class="form-group form-group-default required" aria-required="true">
+                                                    <label>
+                                                        <xe-translate text-value="Quantity"></xe-translate>
+                                                    </label>
+                                                    <input type="text" min="0" class="form-control" ng-model="pricing[$index].quantity" ng-change="calculateTotalOrderPrice($index)" ng-disabled="tabModel == 'unassignedQuotes'" numbers-only="numbers-only" required>
+                                                </div>
+                                            </div>
+                                            <div class="flexCol">
+                                                <div class="q-r-product-container" style="margin-right: 0px;">
+                                                    <label class="control-label q-r-dropdown-btn-label">
+                                                        <xe-translate text-value="Discount Type"></xe-translate>
+                                                    </label>
+                                                    <div class="btn-group" style="width:100%;display:flex;">
+                                                        <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown" ng-disabled="tabModel == 'unassignedQuotes'" style="width:100%;font-size:12px;text-align:left;padding-top:35px;background-color:transparent;">
+                                                            {{ pricing[$index].discounttype}}
+                                                        </button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-disabled="tabModel == 'unassignedQuotes'" style="height: 64px;">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu quote-drop-down quote-drop-down-pad" role="menu" style="width:100%;" ng-class="{'quote-drop-down-scroll':discounts.length > 5}">
+                                                            <li ng-repeat="discount in discounts" ng-click="selectChoices(discount, $parent.$index)" ng-disabled="discount.disabled">
+                                                                <a href="">{{ discount.name }}</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flexCol">
+                                                <div class="form-group form-group-default" aria-required="true">
+                                                    <label>
+                                                        <xe-translate text-value="Discount Per Unit"></xe-translate>
+                                                    </label>
+                                                    <input type="text" min="0" ng-disabled="pricing[$index].isShowDiscount || tabModel == 'unassignedQuotes'" ng-model="pricing[$index].discountamount" class="form-control" ng-blur="calculateUnitPrice($index)" price-only="price-only">
+                                                </div>
+                                            </div>
+                                            <div class="flexCol">
+                                                <div class="form-group form-group-default input-group">
+                                                    <div class="form-input-group">
+                                                        <label>
+                                                            <xe-translate text-value="Rush surchage"></xe-translate>
+                                                        </label>
+                                                        <input type="text" min="0" class="form-control" ng-model="pricing[$index].surchageAmount" ng-blur="calculateUnitPrice($index)" ng-disabled="tabModel == 'unassignedQuotes'" price-only="price-only" required>
+                                                    </div>
+                                                    <div class="input-group-addon">
+                                                        ({{quoteCurrency}} {{pricing[$index].optional_price}})
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flexCol">
+                                                <div class="form-group form-group-default" aria-required="true">
+                                                    <label>
+                                                        <xe-translate text-value="Tax"></xe-translate>
+                                                    </label>
+                                                    <input type="text" min="0" ng-disabled="true" ng-model="pricing[$index].taxAmount" class="form-control" ng-blur="calculateUnitPrice($index)" price-only="price-only">
+                                                </div>
+                                            </div>
+                                            <div class="flexCol">
+                                                <div class="q-r-product-container" style="margin-right:0px;">
+                                                    <label class="control-label q-r-dropdown-btn-label">
+                                                        <xe-translate text-value="Product Status"></xe-translate>
+                                                    </label>
+                                                    <div class="btn-group" style="width:100%;display:flex;">
+                                                        <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown" ng-disabled="tabModel == 'unassignedQuotes'" style="width:100%;font-size:12px;text-align:left;padding-top:35px;background-color:transparent;">
+                                                            {{ pricing[$index].product_status}}
+                                                        </button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-disabled="tabModel == 'unassignedQuotes'" style="height: 64px;">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu quote-drop-down quote-drop-down-pad" role="menu" style="width:100%;" ng-class="{'quote-drop-down-scroll':productAvailableStatus.length > 5}">
+                                                            <li ng-repeat="status in productAvailableStatus" ng-click="onProductStatusSelected(status, $parent.$index)">
+                                                                <a href="">{{ status.name }}</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="qrPriceWrap add_fee d-flex">
+                                        <div class="d-col">
+                                            <div class="d-flex">
+                                                <h4>Additional Fees</h4>
+                                                <button class="btn btn-primary" type="button" ng-click="addAdditionalLineItemFee($index)">
+                                                    <xe-translate text-value="Fee"></xe-translate>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="d-col m-t-10" ng-if="quote_price.additional_fee.length > 0">
+                                            <!-- Hide this when no content -->
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th width="70%">
+                                                        <xe-translate text-value="Fee Description"></xe-translate>
+                                                    </th>
+                                                    <th width="30%">
+                                                        <xe-translate text-value="Amount"></xe-translate>
+                                                    </th>
+                                                </tr>
+                                                <tr ng-repeat="fee in quote_price.additional_fee">
+                                                    <td class="m-0 p-0">
+                                                        <input type="text" class="form-control b-0" autocomplete="off" ng-model="fee.fee_description">
+                                                    </td>
+                                                    <td class="p-r m-0 p-0">
+                                                        <input type="text" class="form-control b-0" autocomplete="off" ng-model="fee.fee_amount" ng-blur="calculateUnitPrice($parent.$index)" price-only="price-only">
+                                                        <div class="additional-line-items" ng-click="removeAdditionalLineItemFee(fee, $parent.$index, $index)">
+                                                            <i class="fa fa-times"></i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="qrPriceWrap">
+                                        <label>
+                                            <span>
+                                                <xe-translate text-value="Final Price"></xe-translate>
+                                            </span>
+                                            <span>
+                                                <span class="qoute-subunit-price">{{quoteCurrency}}{{pricing[$index].unitprice}}</span>
+                                                (<xe-translate text-value="Unit Price"></xe-translate>) x
+                                                <span class="qoute-subunit-price">{{pricing[$index].quantity}}</span>
+                                                (<xe-translate text-value="Quantity"></xe-translate>)=
+                                            </span>
+                                            <strong>{{quoteCurrency}}{{pricing[$index].calculatedPrice}}</strong>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn btn-success m-t-15 m-b-20" ng-click="ShowAddProductSection()" ng-if="!isShowAddProductSection" ng-disabled="quoteDetailsForm.quote_status_id == 8 || quoteDetailsForm.quote_status_id == 9">
+                <i class="fa fa-plus"></i>
+                <span>
+                    <xe-translate text-value="Add Product">
+                    </xe-translate>
+                </span>
+            </button>
+            <div class="panel panel-default qrPanelCustom" ng-if="isShowAddProductSection">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <xe-translate text-value="Add Product"></xe-translate>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="flexRow" ng-repeat="productAndQtys in productAndQtyDetailsData track by $index">
+                        <div class="flexCol">
+                            <div class="q-r-products-container" ng-click="resetProductSearchFieldData($index)">
+                                <label class="control-label q-r-dropdown-btn-label">
+                                    <xe-translate text-value="Products"></xe-translate>
+                                </label>
+                                <div class="btn-group" style="width:100%;display:flex;">
+                                    <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown" style="width:100%;font-size:12px;text-align:left;padding-top:35px;background-color:transparent;">
+                                        {{ productAndQtys.selectedProduct }}
+                                    </button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu" style="width:100%">
+                                        <li>
+                                            <input type="text" class="form-control q-r-drop-search-field" ng-model="productAndQtys.searchItem">
+                                        </li>
+                                        <li>
+                                            <ul ng-class="{'quote-drop-down-scroll':productAndQtys.productList.product.length > 5}" class="quote-drop-down" style="padding: 12px 0;">
+                                                <li ng-repeat="product in productAndQtys.productList.product | filter:productAndQtys.searchItem" ng-click="onPricingSectionProductSelected(product, $parent.$index)">
+                                                    <a href="">
+                                                        {{ product.name }}
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexCol">
+                            <div class="q-r-quantity-container" ng-if="productAndQtys.selectedProduct != 'Select'">
+                                <div class="form-group-default">
+                                    <label class="control-label">
+                                        <xe-translate text-value="Quantity">
+                                        </xe-translate>
+                                    </label>
+                                    <input type="number" ng-model="productAndQtys.qty" class="form-control" placeholder="Quantity" ng-blur="pricingSectionCheckQuantity(productAndQtys.qty, $index)" min="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexCol" ng-if="productAndQtys.color.length > 0">
+                            <div class="q-r-colors-container" ng-if="productAndQtys.selectedProduct != 'Select'">
+                                <label class="control-label q-r-dropdown-btn-label">
+                                    <xe-translate text-value="Colors">
+                                    </xe-translate>
+                                </label>
+                                <div class="btn-group" style="width: 100%; display: flex;">
+                                    <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown" style="width:100%;font-size:12px;text-align:left;padding-top:35px;background-color:transparent;">
+                                        {{ productAndQtys.selectedcolor | capitalize }}
+                                    </button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu quote-drop-down quote-drop-down-pad" role="menu" style="width: 100%;" ng-class="{'quote-drop-down-scroll':productAndQtys.color.length > 5}">
+                                        <li ng-click="onPricingSectionColorSelected('Select', $index)">
+                                            <a href="">Select</a>
+                                        </li>
+                                        <li ng-repeat="color in productAndQtys.color" ng-click="onPricingSectionColorSelected(color, $parent.$index)">
+                                            <a href="">{{ color.xeColor | capitalize }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexCol" ng-if="productAndQtys.size.length > 0 && productAndQtys.size[0].xe_size_id != 0">
+                            <div class="q-r-size-container" ng-if="productAndQtys.selectedProduct != 'Select'">
+                                <label class="control-label q-r-dropdown-btn-label">
+                                    <xe-translate text-value="Size">
+                                    </xe-translate>
+                                </label>
+                                <div class="btn-group" style="width: 100%; display: flex;">
+                                    <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown" style="width: 100%; font-size: 12px; text-align: left;padding-top: 35px; background-color: transparent;">
+                                        {{ productAndQtys.selectedsize }}
+                                    </button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                                        <span class="caret">
+                                        </span>
+                                        <span class="sr-only">
+                                            Toggle Dropdown
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu quote-drop-down quote-drop-down-pad" role="menu" style="width: 100%;padding-left: 20px" ng-class="{'quote-drop-down-scroll':productAndQtys.size.length > 5}">
+                                        <li ng-click="onPricingSectionSizeSelected('Select', $index)">
+                                            <a href="">
+                                                Select
+                                            </a>
+                                        </li>
+                                        <li ng-repeat="size in productAndQtys.size" ng-click="onPricingSectionSizeSelected(size, $parent.$index)">
+                                            <a href="">
+                                                {{ size.xe_size }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexCol">
+                            <div class="q-r-print-process-container" ng-if="productAndQtys.selectedProduct != 'Select'">
+                                <label class="control-label q-r-dropdown-btn-label">
+                                    <xe-translate text-value="Printing Process">
+                                    </xe-translate>
+                                </label>
+                                <div class="btn-group" style="width: 100%; display: flex;">
+                                    <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown" style="width: 100%; font-size: 12px; text-align: left;padding-top: 35px; background-color: transparent;">
+                                        {{ productAndQtys.selectedPrintProcess }}
+                                    </button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                                        <span class="caret">
+                                        </span>
+                                        <span class="sr-only">
+                                            Toggle Dropdown
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu quote-drop-down quote-drop-down-pad" role="menu" style="width: 100%;" ng-class="{'quote-drop-down-scroll':productAndQtys.printProcess.length > 5}">
+                                        <li ng-click="onPricingSectionPrintProfileSelected('Select', $index)">
+                                            <a href="">
+                                                Select
+                                            </a>
+                                        </li>
+                                        <li ng-repeat="printProfile in productAndQtys.printProcess" ng-click="onPricingSectionPrintProfileSelected(printProfile, $parent.$index)">
+                                            <a href="">
+                                                {{ printProfile.name }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexCol" style="flex:inherit;">
+                            <button class="btn btn-default btn-sm btn-cons" multiple ng-file-select ng-file-change="pricingSectionUpload($files, $index)" tooltip="{{ attachFileInfo }}" tooltip-placement="top">
+                                <i class="fa fa-info"></i>
+                                <xe-translate text-value="Attach File"></xe-translate>
+                            </button>
+                            <span class="block" ng-show="productAndQtys.isUploadFileCount">
+                                {{ productAndQtys.uploadFileCount }}
+                            </span>
+                            <span class="block" ng-show="productAndQtys.isValidFileFormat == false">
+                                <small>
+                                    <label class="text-danger">
+                                        {{fileFormatMsg}}
+                                    </label>
+                                </small>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body" style="padding-top:0;">
+                    <button type="reset" class="btn btn-danger btn-sm" ng-click="cancelProduct()">
+                        <xe-translate text-value="Cancel">
+                        </xe-translate>
+                    </button>
+                    <button type="button" class="btn btn btn-success btn-sm" ng-click="saveProduct()">
+                        <span>
+                            <xe-translate text-value="Save Product">
+                            </xe-translate>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="qrFooter">
+                <div class="qrFooterWrap">
+                    <div class="qoute-total-price">
+                        <label>
+                            <xe-translate text-value="Total Price"></xe-translate>
+                        </label>
+                        <strong>{{quoteCurrency}}{{totalPrice}}</strong>
+                    </div>
+                    <div class="quote-message-submit">
+                        <div class="form-group form-group-default input-group">
+                            <div class="form-input-group">
+                                <textarea class="form-control" rows="3" placeholder="Type a message here" ng-model="billing.notes" ng-disabled="tabModel == 'unassignedQuotes' || quoteDetailsForm.status == 'Paid'"></textarea>
+                            </div>
+                            <div class="input-group-addon d-flex justify-content-flex-end">
+                                <button class="btn btn-success btn-cons m-r-5" ng-click="saveBillingDetails()" ng-disabled="tabModel == 'unassignedQuotes' || quoteDetailsForm.status == 'Paid' || isPricePreloader || quoteDetailsForm.status == 'Approved' || billing.notes != ''" style="margin-left: 0;">
+                                    <xe-translate text-value="Save Quote"></xe-translate>
+                                    <img ng-show="isSavePricePreloader" class="demo-mw-50 quote-loader" src="assets/img/progress/progress-circle-lg-white.svg" alt="Progress">
+                                </button>
+                                <button class="btn btn-success btn-cons"  ng-click="sendBillingDetails()" ng-disabled="tabModel == 'unassignedQuotes' || quoteDetailsForm.status == 'Paid' || isPricePreloader || quoteDetailsForm.status == 'Approved' || billing.notes == ''" style="margin: 0;">
+                                    <xe-translate text-value="Save And Send Quote"></xe-translate>
+                                    <img ng-show="isPricePreloader" class="demo-mw-50 quote-loader" src="assets/img/progress/progress-circle-lg-white.svg" alt="Progress">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="preloader-trans" ng-show="addProductPreloader">
+                <div class="page-loader">
+                    <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                    <xe-translate text-value="Please wait"></xe-translate>...
+                </div>
+            </div>
+        </div>
+        <!-- Tab 3 -->
+        <div class="m-h-400 tab-pane fade in" ng-show="quoteDetailsModel == 'paymentExpenses'">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div ng-if="payExpDetails && payExpDetails.quote_price > 0 && payExpDetails.payment.length != 0">
+                        <xe-translate text-value="Total Amount"></xe-translate>
+                        <span class="qoute-subunit-price">  
+                            {{quoteCurrency}}<span ng-bind="roundToTwoFraction(payExpDetails.quote_price)">
+                            </span>
+                        </span>
+                        <span ng-if="roundToTwoFraction(payExpDetails.total_paid) > 0">
+                            ,
+                            <xe-translate text-value="Paid"></xe-translate>
+                            <span class="qoute-subunit-price">
+                                {{quoteCurrency}}<span ng-bind="roundToTwoFraction(payExpDetails.total_paid)">
+                                </span>
+                            </span>
+                        </span> 
+                        <span ng-if="roundToTwoFraction(payExpDetails.quote_price - payExpDetails.total_paid) > 0">
+                            ,   
+                            <xe-translate text-value="Pending"></xe-translate>
+                            <span class="qoute-subunit-price">
+                                {{quoteCurrency}}<span ng-bind="roundToTwoFraction(payExpDetails.quote_price - payExpDetails.total_paid)">
+                                </span>
+                            </span>
+                        </span>.
+                    </div>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <button class="btn btn-default btn-sm" type="button" ng-click="onAddPaymentClicked()" ng-disabled="payExpDetails.quote_price == 0 || (payExpDetails.quote_price == payExpDetails.total_paid)">
+                        <xe-translate text-value="Add Payment"></xe-translate>
+                    </button>
+                    <button class="btn btn-default btn-sm" type="button" ng-click="onAddExpensesClicked()" ng-disabled="payExpDetails.quote_price == 0">
+                        <xe-translate text-value="Add Expense"></xe-translate>
+                    </button>
+                </div>
+            </div>
+            <div class="dxTable table-responsive m-t-20" ng-hide="payExpDetails.payment.length == 0 && payExpDetails.expense.length == 0">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                <xe-translate text-value="Date"></xe-translate>
+                            </th>
+                            <th>
+                                <xe-translate text-value="Payment Mode"></xe-translate>
+                            </th>
+                            <th width="40%">
+                                <xe-translate text-value="Description"></xe-translate>
+                            </th>
+                            <th width="20%">
+                                <xe-translate text-value="Status"></xe-translate>
+                            </th>
+                            <th>
+                                <xe-translate text-value="Amount"></xe-translate>
+                            </th>
+                            <th>
+                                <xe-translate text-value="Action"></xe-translate>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="payment in payExpDetails.payment track by $index">
+                            <td>{{ payment.payment_date }}</td>
+                            <td>{{ payment.payment_mode_name }}</td>
+                            <td>{{ payment.payment_description }}</td>
+                            <td> <div class="q-r-status-drop dropdown" style="display:inline-block; width:100%;">
+                            <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" type="button" data-toggle="dropdown" data-disabled="true">
+                                <div>
+                                  <span class="statusColor q-r-status-color" style="background:{{payment.color_code}}">
+                                  </span>
+                                  <span style="padding-left: 20px;">
+                                    {{payment.payment_status_name}} 
+                                  </span>
+                                </div>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" style="width: 100%">
+                                <div  ng-class="{'custom-scroll-menu-bar': paymentStatusList.length > '10'}">  
+                                    <li ng-repeat="status in paymentStatusList" ng-click="onPaymentStatusSelected(status,payment.payment_id,'allowedChangeStatus')" ng-if="status.name != 'Customize Statuses'">
+                                        <a href="#" class="status-adjust" ng-class="quoteDetailsForm.quote_status_id == status.id ? 'active':'' " style="position:relative;padding-left:20px;">
+                                            {{status.name}}
+                                            <span class="statusColor" style="background:{{status.color_code}};"></span>
+                                        </a>
+                                    </li>
+                                </div>
+                                
+                                <li ng-click="onCustomizePaymentStatusClicked()" ng-show="isSuperAdmin">
+                                    <a href="#" class="btn btn-info m-t-10" style="color:#fff;text-align:center;">
+                                        <xe-translate text-value="Customize Statuses"></xe-translate>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div></td>
+                            <td><span class="text-success">{{quoteCurrency}}{{ payment.amount_paid }}</span></td>
+                            <td>
+                                <button class="btn btn-link" type="button" ng-click="editPayment(payment)" style="padding:0 8px;">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="btn btn-link" type="button" ng-hide="User.userType == 1" ng-click="deletePayment(payment)" style="padding:0 8px;">
+                                    <i class="fa fa-trash-o"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="expense in payExpDetails.expense track by $index">
+                            <td>{{ expense.expense_date }}</td>
+                            <td>{{ expense.expense_mode_name }}</td>
+                            <td>{{ expense.expense_description }}</td>
+                            <td></td>
+                            <td><span class="text-danger">-{{quoteCurrency}}{{ expense.expense_paid }}</span></td>
+                            <td>
+                                <button class="btn btn-link" type="button" ng-click="editExpense(expense)" style="padding:0 8px;">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="btn btn-link" type="button" ng-hide="User.userType == 1" ng-click="deleteExpense(expense)" style="padding:0 8px;">
+                                    <i class="fa fa-trash-o"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="dxTable table-responsive m-t-20 bg-white" ng-show="payExpDetails.payment.length == 0 && payExpDetails.expense.length == 0">
+                <p class="font-normal text-lg text-center m-t-20 m-b-20">
+                    <xe-translate text-value="No data found"></xe-translate>
+                </p>
+            </div>
+        </div>
+        <!-- Tab 4 -->
+        <div class="m-h-400 tab-pane fade in" ng-show="quoteDetailsModel == 'quoteConvo'">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <div class="conversation-body">
+                    <!-- <div id="conversations" ng-show="customerConversationList.length >0">
+            <div class="row" ng-repeat="custConvert in customerConversationList track by $index">
+              <div class="col-md-12" ng-if="custConvert.type == 'admin'">
+                <div class="admin-section">
+                  <div class="admin-text-sec">
+                    <div class="admin-left-text">
+                      {{custConvert.notes}}
+                    </div>
+                    <div class="admin-top-text">
+                      <span class="user-name">
+                        {{custConvert.agent_name}}
+                      </span> -
+                      <span>
+                        {{custConvert.created_date}}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12" ng-if="custConvert.type == 'customer'">
+                <div class="user-section">
+                  <div class="user-text-sec">
+                    <div class="user-right-text">
+                      {{custConvert.notes}}
+                    </div>
+                    <div class="user-top-text">
+                      <span class="user-name">
+                        {{quoteDetailsForm.first_name}}
+                      </span> -
+                      <span>
+                        {{custConvert.created_date}}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div ng-show="customerConversationList.length == 0"
+            style="display: flex; align-items: center; justify-content: center; height: 400px;">
+            <p class="font-normal text-lg text-center">
+              <xe-translate text-value="No Conversations found">
+              </xe-translate>
+            </p>
+          </div> -->
+                    <div id="conversations" ng-show="artworkHistoryList.artwork_history.length > 0">
+                        <div class="row" ng-repeat="artworkHistory in artworkHistoryList.artwork_history track by $index">
+                            <div class="col-md-12 admin-section-cont" ng-if="artworkHistory.type == 'admin'">
+                                <div class="admin-section">
+                                    <div class="admin-text-sec">
+                                        <div class="admin-left-text">
+                                            {{artworkHistory.message}}
+                                        </div>
+                                        <div class="admin-top-text">
+                                            <span class="user-name">
+                                                {{artworkHistory.agent_name}}
+                                            </span> -
+                                            <span>
+                                                {{artworkHistory.artwork_sent_date}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="artworkHistory-line-item">
+                                    <div ng-repeat="lineItem in artworkHistory.line_items">
+                                        <label class="no-margin">
+                                            <div class="artworkHistory-img-name-cont">
+                                                <div class="artworkHistory-img-cont cursor-pointer" ng-click="openArtworkHistoryImgModal(lineItem.image)">
+                                                    <img ng-src="{{ lineItem.image[0].thumb }}" width="100" height="100" style=" vertical-align:middle;" />
+                                                </div>
+                                                <div class="artworkHistory-Product-name text-center">
+                                                    <b>{{lineItem.product_name}}</b>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" ng-if="artworkHistory.type == 'customer'">
+                                <div class="user-section">
+                                    <div class="user-text-sec">
+                                        <div class="user-right-text">
+                                            {{artworkHistory.message}}
+                                        </div>
+                                        <div class="user-top-text">
+                                            <span class="user-name">
+                                                {{quoteDetailsForm.first_name}}
+                                            </span> -
+                                            <span>
+                                                {{artworkHistory.artwork_sent_date}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="artworkHistoryList.artwork_history.length == 0" style="display: flex; align-items: center; justify-content: center; height: 400px;">
+                        <p class="font-normal text-lg text-center">
+                            <xe-translate text-value="No Conversations found">
+                            </xe-translate>
+                        </p>
+                    </div>
+                </div>
+                <div class="conversation-footer">
+                    <div class="col-md-12" style="padding-left: 0; padding-right: 0">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Type a message here..." ng-model="quoteConversation.message" ng-disabled="tabModel == 'unassignedQuotes' || quoteDetailsForm.status == 'Paid'" id="conversationTextBox" ng-keyup="onConvEnterBtnClicked($event)">
+                            <button type="button" class="btn btn-primary" ng-click="sendConversation()" ng-disabled="tabModel == 'unassignedQuotes' || isConvoPreloader || quoteDetailsForm.status == 'Paid'" id="conversationSendBtn">
+                                <i class="fa fa-send"></i>
+                                <img ng-show="isConvoPreloader" class=" demo-mw-50 page-loader" src="assets/img/progress/progress-circle-lg-white.svg" alt="Progress" style="position: absolute;top: 5px;width: 28px;right: 10px;">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+        <!-- Tab 5 -->
+        <div class="m-h-400 tab-pane fade in" ng-show="quoteDetailsModel == 'internalNotes'">
+            <div class="row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <div class="form-group internal-note-send-box">
+                        <textarea class="form-control ng-pristine ng-valid" rows="6" placeholder="Type note here" ng-model="quoteInternalNotes.note" ng-disabled="tabModel == 'unassignedQuotes' || quoteDetailsForm.status == 'Paid'" style="resize: none;"></textarea>
+                        <button class="btn btn-block btn-success btn-cons" ng-click="sendInternalNote()" ng-disabled="tabModel == 'unassignedQuotes' || isInternalNotePreloader || quoteDetailsForm.status == 'Paid'">
+                            <span>
+                                <xe-translate text-value="Send"></xe-translate>
+                                <img ng-show="isInternalNotePreloader" class="demo-mw-50 page-loader" src="assets/img/progress/progress-circle-lg-white.svg" alt="Progress" style="position: absolute;top: 5px;width: 28px;right: 10px;">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <div class="panel panel-default m-t-20" id="intNotes" ng-show="internalNotesList.length >0" ng-repeat="note in internalNotesList track by $index">
+                        <div class="panel-body">
+                            <div class="msg internal-note-msg">{{note.notes}}</div>
+                            <div class="msg-meta internal-note-name-date">
+                                <small style="color: #999">by, {{note.agent_name}}</small> | <small style="color: #999">{{note.created_date}}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <span ng-show="internalNotesList.length == 0">
+                        <p class="font-normal text-lg text-center m-t-50 m-r-80">
+                            <xe-translate text-value="No notes found">
+                            </xe-translate>
+                        </p>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Tab 6 -->
+        <!-- <div class="m-h-400 tab-pane fade in" ng-show="quoteDetailsModel == 'artworkHistory'">
+          <ul class="list-group">
+            <li class="list-group-item" ng-repeat="artworkHistory in artworkHistoryList.artwork_history">
+              <div class="artworkHistory-line-item-date">
+                <span class="badge artworkHistory-line-item-date-cont">
+                  <small>
+                      {{artworkHistory.artwork_sent_date}}
+                  </small>
+                </span>
+              </div>
+              <div class="artworkHistory-line-item">
+                <div ng-repeat="lineItem in artworkHistory.line_items">
+                    <label class="no-margin">
+                      <div class="artworkHistory-img-name-cont">
+                        <div class="artworkHistory-img-cont cursor-pointer" ng-click="openArtworkHistoryImgModal(lineItem.image)">
+                            <img ng-src="{{ lineItem.image[0].thumb }}" width="100" height="100" style=" vertical-align:middle;"/>
+                        </div>
+                        <div class="artworkHistory-Product-name text-center">
+                            <b>{{lineItem.product_name}}</b>
+                        </div>
+                      </div>  
+                    </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" ng-show = "!artworkHistoryList.artwork_history || artworkHistoryList.artwork_history.length == 0 ">
+              <span>
+                <p class="font-normal text-lg text-center artworkHistory-m-t-b-100">
+                    <xe-translate text-value="No artwork history found">
+                    </xe-translate>
+                </p>
+              </span>
+            </li>
+          </ul>
+        </div> -->
+        <!-- Tab 7 -->
+        <div class="m-h-400 tab-pane fade in" ng-show="quoteDetailsModel == 'quoteHistory'">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="history in quoteHistoryList">
+                    <span class="badge">
+                        <small>
+                            {{history.created_date | date:'dd MMM yyyy'}} - {{history.created_time | date:"shortTime"}}
+                        </small>
+                    </span>
+                    {{history.notes}}
+                </li>
+            </ul>
+            <div ng-show="quoteHistoryList.length == 0">
+                <p class="font-normal text-lg text-center m-b-40 m-t-150">
+                    <xe-translate text-value="No History found">
+                    </xe-translate>
+                </p>
+            </div>
+        </div>
+        <!-- Tab 8 -->
+        <div class="m-h-400 tab-pane fade in" ng-show="quoteDetailsModel == 'addTask'">
+            <div class="row" ng-show="taskTabelShow">
+                <div class="col-md-12 text-right">
+                    <button class="btn btn-default btn-sm btn-cons" type="button" ng-click="addTask()">
+                        <xe-translate text-value="Add Task"></xe-translate>
+                    </button>
+                    <div class="btn-group" ng-if="taskGrouplist != ''" style="width:200px;">
+                        <button type="button" class="btn btn-default btn-sm m-r-10" data-toggle="dropdown" style="  display: flex;
+                        align-items: center;">
+                            <span class="text-ellipsis" style="width: calc(200px - 20px);">{{taskGroupSelected}}</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" style="max-height:194px;overflow:hidden;overflow-y:auto;max-width: 300px;">
+                            <li ng-repeat="status in taskGrouplist" ng-click="selectedTaskGroup(status)">
+                                <a href="">{{ status.task_group_title }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="m-t-20" ng-show="taskTabelShow">
+                <div class="dxTable table-responsive">
+                    <table class="table table-striped" ng-hide="!TaskList.length">
+                        <thead>
+                            <tr>
+                                <th style="width:100px;">Task ID</th>
+                                <th>
+                                    <xe-translate text-value="Task"></xe-translate>
+                                </th>
+                                <th style="width:220px;">Assign To</th>
+                                <th style="width:200px;">Due Date</th>
+                                <th style="width:220px;">Status</th>
+                                <th style="width:110px">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-show="dataFound" ng-repeat="task in TaskList | filter: {status : filterStatusId}">
+                                <td>
+                                    #{{task.task_ref_id}}
+                                </td>
+                                <td>
+                                    {{task.task_title | removeHTMLTags}}
+                                </td>
+                                <td>
+                                    <select class="form-control select" ng-model="task.assign_to" ng-options="item.id as item.name for item in userDataList" ng-change="onClickedUserDetails(task.assign_to,task.id)" ng-selected="true">
+                                        <option value="" ng-disabled="true">Assigned To </option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span ng-if="!isTaskDateEditView[$index]"> {{task.formated_due_date}}
+                                    </span>
+                                    <div class="input-group" style="position: relative;" ng-if="isTaskDateEditView[$index]">
+                                        <input type="text" ui-date="dateOptions" class="form-control" ui-date-format id="task_id{{task.id}}" ng-model="task.task_due_date" ui-date-format='yy-mm-dd' ng-change="updateDate(task.id,task.task_due_date)" placeholder="{{task.date_format}}" onkeydown="return false">
+                                        <i class="pg-close_line text-danger cursor-pointer m-l-10 m-t-10" ng-if="isTaskDateEditView[$index]" style="position:absolute;top:1px;right:6px;z-index:9;" ng-click="onTaskDudateChangeClickCancel($index)"></i>
+                                    </div>
+                                    <i class="fa fa-pencil text-info cursor-pointer m-l-10 m-t-5" ng-if="!isTaskDateEditView[$index]" ng-click="onTaskDudateChangeClick($index)"></i>
+                                </td>
+                                <td>
+                                    <div class="q-r-status-drop dropdown" style="display:inline-block; width:100%;">
+                                        <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" type="button" data-toggle="dropdown" data-disabled="true">
+                                            <div>
+                                                <span class="statusColor q-r-status-color" style="background:{{task.task_status_color_code}}">
+                                                </span>
+                                                <span style="padding-left: 20px;">
+                                                    {{task.task_status_title}}
+                                                </span>
+                                            </div>
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" style="width: 100%">
+                                            <li ng-repeat="status in actionTaskStatuses" ng-click="onTaskStatusChange(status.id,task.id)" ng-if="status.name != 'Customize Statuses'">
+                                                <a href="#" ng-class="task.task_status_id == status.id ? 'active':'' " style="position:relative;padding-left:20px;">
+                                                    {{status.name}}
+                                                    <span class="statusColor" style="background:{{status.color_code}};"></span>
+                                                </a>
+                                            </li>
+                                            <li ng-click="showCustomizeTaskStatusModal()">
+                                                <a href="#" class="btn btn-info m-t-10" style="color:#fff;text-align:center;">
+                                                    <xe-translate text-value="Customize Statuses"></xe-translate>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-link" ng-click="editTask(task.id, task.task_title, task.assign_to)" style="padding:0 6px;"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-link" ng-click="deleteTask(task.id)" style="padding:0 6px;"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="dxTable table-responsive m-t-20 bg-white" ng-show="!TaskList.length && !taskMainPreLoader">
+                <p class="font-normal text-lg text-center m-t-20 m-b-20">
+                   <xe-translate text-value="No Records"></xe-translate>
+                </p>
+            </div>
+               <!--  <div class="text-center" ng-show="!TaskList.length && !taskMainPreLoader">
+                    <p class="m-t-20 m-b-20">
+                        <xe-translate text-value="No data found"></xe-translate>
+                    </p>
+                </div> -->
+                <!--  <div class="panel panel-default" ng-show="taskMainPreLoader">
+                            <div class="graphics-wrap-height">
+                                <div class="panel-body text-center">
+                                    <img class="image-responsive-height demo-mw-50 page-loader" src="assets/img/progress/progress-circle-master.svg" alt="Progress" />
+                                    <span style="position: absolute;top:45%;right:40%;">
+                                        <xe-translate text-value="Loading">
+                                        </xe-translate>
+                                        ...
+                                    </span>
+                                </div>
+                            </div>
+                        </div> -->
+                <div class="preloader-trans" ng-show="taskMainPreLoader && taskTabelShow">
+                    <div class="page-loader">
+                        <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                        <span>
+                            <xe-translate text-value="Please wait">
+                            </xe-translate>
+                            ...
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center m-b-20" ng-show="isLoadMoreTask && !isEditCustomerPage && !isAddCustomTaskPage">
+                <button type="button" class="btn btn-default btn-sm btn-cons" ng-click="loadMoreTasks()" ng-disabled="isLoadMorePreloader">
+                    <xe-translate text-value="Load More"></xe-translate>
+                </button>
+                <img class="demo-mw-30 " src="assets/img/progress/progress-circle-master.svg" alt="Progress" ng-show="isLoadMorePreloader" />
+            </div>
+            <ng-include src="'modules/quotes/views/partials/addTaskDetails.html'" ng-show="isAddCustomTaskPage"></ng-include>
+            <ng-include src="'modules/quotes/views/partials/editTaskDetails.html'" ng-show="isEditCustomerPage"></ng-include>
+            <ng-include src="'modules/quotes/views/partials/taskStatusModal.html'"></ng-include>
+        </div>
+        <!-- Tab 9 -->
+        <div class="m-h-400 tab-pane fade in" ng-show="quoteDetailsModel == 'invoiceDetails'">
+            <div ng-show="invoiceTableShow">
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        
+                        <button class="btn btn-default btn-sm m-l-10" ng-click="generateInvoice()" type="button" ng-disabled="invoiceGenerateButtonDisabled || !isquotePriceSubmited">
+                            <xe-translate text-value="Generate Invoice"></xe-translate>
+                        </button>
+                    </div>
+                    <!-- <div class="col-md-6 text-right">
+                    <button class="btn btn-default btn-sm" ng-click="invoiceListRefresh()" type="button">
+                      <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </button>
+                    </div> -->
+                </div>
+                <div class="custom-table invoice-table m-t-20" id="id_Table" ui-options="options">
+                    <ul class="custom-table-head invoice-head-content-manual" ng-show="invoiceList.length > 0">
+                        <li class="checkCol" style="max-width:90px;">Invoice No.</li>
+                        <li class="tColumns">Quote Id</li>
+                        <li class="tColumns">Send To</li>
+                        <li class="tColumns">Customer Email</li>
+                        <li class="tColumns">Created On</li>
+                        <li class="settingCol" style="max-width:114px;">Action</li>
+                    </ul>
+                    <div class="custom-table-body invoice-scroll-content-manual">
+                        <div class="custom-table-row customerList" ng-repeat="invoiceDetails in invoiceList | orderBy:'-invoice_updated'">
+                            <ul class="custom-table-content invoice-body-content-manual" ng-show="invoiceList.length != ''">
+                                <li class="checkCol" style="max-width:90px;" ng-click="getSingleViewDetails(invoiceDetails.invoice_id,invoiceDetails.quote_ref_id)">
+                                    {{invoiceDetails.invoice_number}}
+                                </li>
+                                <li class="tColumns" ng-click="getSingleViewDetails(invoiceDetails.invoice_id,invoiceDetails.quote_ref_id)">
+                                    {{invoiceDetails.quote_ref_id}}
+                                </li>
+                                <li class="tColumns" ng-click="getSingleViewDetails(invoiceDetails.invoice_id,invoiceDetails.quote_ref_id)">
+                                    {{invoiceDetails.cust_name}}
+                                </li>
+                                <li class="tColumns" ng-click="getSingleViewDetails(invoiceDetails.invoice_id,invoiceDetails.quote_ref_id)">
+                                    {{invoiceDetails.cust_mail}}
+                                </li>
+                                <li class="tColumns" ng-click="getSingleViewDetails(invoiceDetails.invoice_id,invoiceDetails.quote_ref_id)">
+                                    {{invoiceDetails.invoice_date | date:'MM/dd/yyyy'}}
+                                </li>
+                                <li class="settingCol" style="max-width:114px;">
+                                    <div class="btn-group">
+                                        <div class="dropdown open">
+                                            <button type="button" class="btn btn-default btn-sm" data-toggle="dropdown">Action <span class="caret"></span></button>
+                                            <ul class="dropdown-menu" role="menu" style="left:auto;right:0;">
+                                                <li ng-click="invoiceSelectedAction('Download',invoiceDetails.invoice_id)">
+                                                    <a href=""><i class="fa fa-download"></i> <xe-translate text-value="DOWNLOAD FILE"></xe-translate></a>
+                                                </li>
+                                                <li ng-click="invoiceSelectedAction('view',invoiceDetails.invoice_id)">
+                                                    <a href=""><i class="fa fa-eye"></i> <xe-translate text-value="PREVIEW"></xe-translate></a>
+                                                </li>
+                                                <li ng-click="invoiceSelectedAction('mail',invoiceDetails.invoice_id)">
+                                                    <a href=""><i class="fa fa-envelope"></i> <xe-translate text-value="Email"></xe-translate></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="custom-table-row customerList" ng-show="invoiceMainPreLoader">
+                            <ul class="custom-table-content customer-body-content-manual">
+                                <li style="flex:auto;">
+                                    <div class="product-wrap-height">
+                                        <img class="demo-mw-50 page-loader" src="assets/img/demo/progress.svg" alt="Progress" />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                       <div class="dxTable table-responsive m-t-20 bg-white" ng-show="!invoiceList.length && !invoiceMainPreLoader">
+                            <p class="font-normal text-lg text-center m-t-20 m-b-20">
+                                 <xe-translate text-value="No invoices"></xe-translate>
+                            </p>
+                        </div>
+                        <!-- <div class="custom-table-row customerList" ng-show="!invoiceList.length && !invoiceMainPreLoader">
+                            <ul class="custom-table-content customer-body-content-manual">
+                                <li style="flex:auto;">
+                                    <p class="font-normal text-lg m-t-10 text-center">
+                                        <xe-translate text-value="No invoices"></xe-translate>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="text-center b-t-none m-t-20" ng-show="isLoadMoreInvoice && dataLoadedInvoice">
+                    <button type="button" class="btn btn-default btn-sm btn-cons" ng-click="loadMoreInvoice()" ng-disabled="isLoadMorePreloaderInvoice">
+                        <xe-translate text-value="Load More"></xe-translate>
+                    </button>
+                    <img class="demo-mw-30 " src="assets/img/progress/progress-circle-master.svg" alt="Progress" ng-show="isLoadMorePreloaderInvoice" />
+                </div>
+                <!--  <div class="preloader-trans" ng-show="invoiceMainPreLoader">
+                    <div class="page-loader">
+                      <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                      <xe-translate text-value="Please wait"></xe-translate>...
+                    </div>
+                </div> -->
+            </div>
+            <ng-include src="'modules/quotes/views/partials/generateInvoice.html'" ng-show="isInvoiceGenerateClicked">
+            </ng-include>
+            <ng-include src="'modules/quotes/views/partials/singleInvoiceDetails.html'" ng-show="isEditInvoiceClicked">
+            </ng-include>
+        </div>
+        <!-- Tab 10 -->
+        <div ng-if="quoteDetailsForm.quote_status_id == 8 || quoteDetailsForm.quote_status_id == 9" class="m-h-400 tab-pane fade in" ng-show="quoteDetailsModel == 'shipment'">
+            <div class="panel panel-default qrPanelCustom">
+                <div class="panel-body">
+                    <div class="qrTitle">
+                        <div class="flexRow">
+                            <div class="flexCol">
+                                <h5 style="margin:0;font-weight:500;font-size:18px;line-height:inherit;">
+                                    <span>{{quoteDetailsForm.subject}}</span> : <span>#{{quoteDetailsForm.prefix_quote_id}}</span>
+                                </h5>
+                            </div>
+                            <div ng-show="shippingRecorded" class="flexCol alignRight">
+                                <button type="button" class="btn btn-default btn-sm btn-cons m-r-5" ng-click="downloadSlip(shipingLabel)">
+                                    <xe-translate text-value="Print Shipping Label"></xe-translate>
+                                </button>
+                            </div>
+                            <div ng-show="shippingRecorded" class="flexCol alignRight">
+                                <button type="button" class="btn btn-default btn-sm btn-cons m-r-5" ng-click="downloadSlip(packingSlip)">
+                                    <xe-translate text-value="Print Packing Slip"></xe-translate>
+                                </button>
+                            </div>
+                            <div ng-show="shippingRecorded" class="flexCol alignRight">
+                                <button type="button" class="btn btn-default btn-sm btn-cons m-r-5" ng-click="emailToCustomer(1,quoteDetailsForm.quote_id)">
+                                    <xe-translate text-value="Email Customer"></xe-translate>
+                                </button>
+                            </div>
+                            <div ng-show="!shippingRecorded" class="flexCol alignRight">
+                                <button type="button" class="btn btn-default btn-sm btn-cons m-r-5" ng-click="showRecordShipmentModal()">
+                                    <xe-translate text-value="Record Shipment"></xe-translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panelWrap">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading separator">
+                                        <div class="panel-title">
+                                            <xe-translate text-value="Ship To">
+                                            </xe-translate>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body min-h-150">
+                                        <div class="prduct-details-section">
+                                            <ul>
+                                                <li ng-if="quoteDetailsForm.shipping_address_1" shipFromAddress_1>{{quoteDetailsForm.shipping_address_1}},</li>
+                                                <li ng-if="quoteDetailsForm.shipping_address_2">{{quoteDetailsForm.shipping_address_2}},</li>
+                                                <li ng-if="quoteDetailsForm.shipping_city || quoteDetailsForm.shipping_zip">
+                                                {{quoteDetailsForm.shipping_city}} -
+                                                {{quoteDetailsForm.shipping_zip}},
+                                                </li>
+                                                <li ng-if="quoteDetailsForm.shipping_state">{{quoteDetailsForm.shipping_state}},</li>
+                                                <li ng-if="quoteDetailsForm.shipping_country">{{quoteDetailsForm.shipping_country}}.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading separator">
+                                        <div class="panel-title">
+                                            <xe-translate text-value="Ship From">
+                                            </xe-translate>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body min-h-150">
+                                        <div class="prduct-details-section">
+                                            <ul>
+                                                <li ng-if="storeName">{{storeName}},</li>
+                                                <li ng-if="shipFromAddress_1">{{shipFromAddress_1}},</li>
+                                                <li ng-if="shipFromAddress_2">{{shipFromAddress_2}},</li>
+                                                <li ng-if="shipFromCity || shipFromPostcode">
+                                                    {{shipFromCity}} - {{shipFromPostcode}},
+                                                </li>
+                                                <li ng-if="shipFromState">{{shipFromState}}, </li>
+                                                <li ng-if="shipFromCountry">{{shipFromCountry}}.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 m-t-20">
+                                <h4 style="margin-top:20px;font-size:16px;line-height:inherit;font-weight:400;">
+                                    <xe-translate text-value="Items"></xe-translate>
+                                </h4>
+                                <div class="dxTable table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <xe-translate text-value="Product Image"></xe-translate>
+                                                </th>
+                                                <th>
+                                                    <xe-translate text-value="Name"></xe-translate>
+                                                </th>
+                                                <th>
+                                                    <xe-translate text-value="Options"></xe-translate>
+                                                </th>
+                                                <th>
+                                                    <xe-translate text-value="Quantity"></xe-translate>
+                                                </th>                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="quoteItems in quoteDesignDetailsForm track by $index">
+                                                <td>
+                                                    <img class="img-responsive mw-50" ng-src="{{ quoteItems.image.0.thumb }}" />
+                                                </td>
+                                                <td>
+                                                    {{quoteItems.product_name}}
+                                                </td>
+                                                <td>
+                                                    <span><b>Size :</b> {{quoteItems.size}}</span>, 
+                                                    <span><b> Color:</b> {{quoteItems.color}}</span>
+                                                </td>
+                                                <td>{{quoteItems.quantity}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-include src="'modules/quotes/views/partials/recordShipmentModal.html'"></ng-include>
+            <ng-include src="'modules/quotes/views/partials/sendshipmentmailtoCustomer.html'"></ng-include>
+        </div>
+    </div>
+    <ng-include src="'modules/quotes/views/partials/addPayment.html'">
+    </ng-include>
+    <ng-include src="'modules/quotes/views/partials/paymentRequest.html'">
+    </ng-include>
+    <ng-include src="'modules/quotes/views/partials/warningQuotesPricingModal.html'">
+    </ng-include>
+    <ng-include src="'modules/quotes/views/partials/addCustomPaymentStatus.html'">
+    </ng-include>
+</div>

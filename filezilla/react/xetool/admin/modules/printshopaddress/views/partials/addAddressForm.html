@@ -1,0 +1,148 @@
+<div class="Form_Details newCustomerField">
+  <div class="row m-b-20">
+    <div class="col-sm-12">
+      <label class="pageTitle">
+        <xe-translate text-value="Add Printshop Address"></xe-translate>
+      </label>
+    </div>
+  </div>
+  <div class="panel panel-default" style="margin-bottom:6px;">
+    <div class="panel-body">
+      <div class="flexRow">
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="Printshop Name">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="newAddress.name" class="form-control" placeholder="Enter Printshop Name"
+              required>
+          </div>
+        </div>
+      </div>
+        <div class="flexRow">
+        <div class="flexCol">
+            <div class="form-group form-group-default required">
+              <label class="control-label">
+                <xe-translate text-value="Addr">
+                </xe-translate>
+              </label>
+              <input type="text" ng-model="newAddress.address1" class="form-control" placeholder="Address Line 1" required>
+            </div>
+          </div>
+          <div class="flexCol">
+            <div class="form-group form-group-default ">
+              <label class="control-label">
+                <xe-translate text-value="Address">
+                </xe-translate>
+              </label>
+              <input type="text" ng-model="newAddress.address2" class="form-control" placeholder="Address Line 2">
+            </div>
+          </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="City">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="newAddress.city" class="form-control" placeholder="City" required>
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="Zip">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="newAddress.postcode" class="form-control" placeholder="Zip" required>
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="q-r-products-container" ng-click="resetPrintShopCountrySearchField()">
+            <span class="q-r-dropdown-star" style="right: 10px">*</span>
+            <label class="control-label q-r-dropdown-btn-label">
+              <xe-translate text-value="Country">
+              </xe-translate>
+            </label>
+            <div class="btn-group" style="width:100%;display:flex;">
+              <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown">
+                {{ newAddress.country }}
+              </button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                <li>
+                  <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="countrySearch.value">
+                </li>
+                <li>
+                  <ul class="quote-drop-down" ng-class="{'quote-drop-down-scroll':countryList.length > 5}" style="padding: 12px 0;">
+                    <li ng-repeat="country in countryList | filter:countrySearch.value" ng-click="onCountrySelected(country)">
+                      <a href="" style="color:#333;">
+                          {{ country.countries_name }}
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flexCol form-group">
+          <div class="q-r-products-container" ng-click="resetPrintShopStateSearchField()">
+            <span class="q-r-dropdown-star" style="right: 10px">*</span>
+            <label class="control-label q-r-dropdown-btn-label">
+              <xe-translate text-value="State">
+              </xe-translate>
+            </label>
+            <div class="btn-group" style="width:100%;display:flex;">
+              <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown" ng-disabled="newAddress.country == 'Select'">
+                {{ newAddress.state }}
+              </button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="height: 64px;" ng-disabled="newAddress.country == 'Select'">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                <li>
+                  <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="stateSearch.value">
+                </li>
+                <li>
+                  <ul class="quote-drop-down" ng-class="{'quote-drop-down-scroll':StateList.length > 5}" style="padding: 12px 0;">
+                    <li ng-repeat="state in StateList | filter:stateSearch.value" ng-click="onStateSelected(state)">
+                      <a href="" style="color:#333;">
+                          {{ state.state_name }}
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default" style="margin-bottom:0px;background:transparent;border:0;">
+    <div class="panel-body" style="padding:15px 0;">
+      <div class="row">
+        <div class="col-sm-12 text-right">
+          <button type="reset" class="btn btn-danger" ng-click="cancelNewAddress()">Cancel</button>
+          <button type="submit" class="btn btn-success" ng-click="saveNewAddress()">Save</button>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="preloader-trans" ng-show="newAddressPreloader">
+    <div class="page-loader">
+      <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+      <span>
+        <xe-translate text-value="Please wait"></xe-translate>...
+      </span>
+    </div>
+  </div>
+</div>

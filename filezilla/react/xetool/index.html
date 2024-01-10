@@ -1,0 +1,169 @@
+<!doctype html>
+
+<!--
+ *
+ * inkXE (with addons) v8.5.0
+ *
+ * The Designer Tool is powered by inkXE.
+ *
+ * // ==========================================================
+ *
+ * https://www.inkxe.com
+ * Copyright 2013-2019 : inkXE, Online designer tool for print shops.
+ * All rights reserved by Riaxe Systems Private limited.
+ *
+ * // ==================================================================
+ *
+ * This source code is licensed under non-distrbutable rights of inkXE.
+ * https://inkxe.com/terms-and-conditions/
+ *
+ -->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+
+    <title>Product Designer</title>
+
+    <style>
+        #xe-page-preload {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            background: #fff;
+        }
+        
+        #xe-page-preload img {
+            position: absolute;
+            left: 48%;
+            top: 42%;
+            width: 80px;
+        }
+    </style>
+    <script src="offline.js"></script>
+    <script src="reconnect.js"></script>
+    <script src="requests.js"></script>
+    <script src="ui.js"></script>
+    <script src="head.load.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="appMain" id="toolId">
+        <div id="xe-page-preload">
+            <!-- <div class="xepreloader"></div> -->
+            <img class="nx-pre-loader" src="assets/images/preloader.svg">
+        </div>
+        <section id="nx-tool-box" class="w-100 h-100" ng-controller="MainController">
+            <section id="nx-tool-wrap" class="h-100 d-flex flex-column flex-md-row flex-nowrap" ng-if="isAppInit" ng-include="'views/view.html'">
+            </section>
+        </section>
+        <section id="landscapeMode" class="w-100 h-100"></section>
+        <!-- Added for external use -->
+        <div class="printTypeContainer" ng-controller="PrintTypeController" ng-hide="hidePopup">
+            <ng-include class="m-print-profile" src="'views/printTypePopup.html'">
+            </ng-include>
+        </div>
+    </div>
+    <div ng-app="templateOnLoadApp" id="designId" style="background-color: #fff;">
+        <div ng-controller="TemplateOnLoadController">
+            <ng-include src="'templateOnLoad/templateOnLoad.html'">
+            </ng-include>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script type="text/javascript">
+        var devTemp = window.location.href.indexOf("template");
+        if(devTemp == -1){
+            document.getElementById("toolId").style.display = "block";
+            document.getElementById("designId").style.display = "none";
+        } else {
+            document.getElementById("toolId").style.display = "none";
+            document.getElementById("designId").style.display = "block";
+        }
+        var vn = '?vn=1613384865';
+        if(sessionStorage.getItem('revision') && vn != sessionStorage.getItem('revision')){
+            sessionStorage.setItem('revision',vn);
+            sessionStorage.setItem('productDetails','');
+        }else if(!sessionStorage.getItem('revision')) sessionStorage.setItem('revision',vn);
+        var xeloadjscssfile = function(filename, filetype) {
+            if (filetype == "js") { /*if filename is a external JavaScript file*/
+                var fileref = document.createElement('script');
+                fileref.setAttribute("type", "text/javascript");
+                fileref.setAttribute("src", filename);
+            } else if (filetype == "css") { /*if filename is an external CSS file*/
+                var fileref = document.createElement("link");
+                fileref.setAttribute("rel", "stylesheet");
+                fileref.setAttribute("type", "text/css");
+                fileref.setAttribute("href", filename);
+            }
+            if (typeof fileref != "undefined")
+                document.getElementsByTagName("head")[0].appendChild(fileref);
+        };
+
+        if (window.location.href.indexOf("xedev") > -1) {
+            var cssfilename = "dev_inkxe_com/allless.css" + vn;
+            var customcssname = "dev_inkxe_com/style.css" + vn;
+            var adminSettingsfilename = "dev_inkxe_com/adminsettings.js" + vn;
+        } else {
+            var hostNameCssPath = window.location.hostname.replace(/\./g, '_');
+            hostNameCssPath = hostNameCssPath.replace(/www_/g, '');
+            var cssfilename = hostNameCssPath + "/allless.css" + vn;
+            var customcssname = hostNameCssPath + "/style.css" + vn;
+            var adminSettingsfilename = hostNameCssPath + "/adminsettings.js" + vn;
+        }
+
+        head.load('localsettings.js' + vn);
+        head.load('xeloader.js' + vn, function() {
+            head.load('all.css' + vn, cssfilename, customcssname);
+            head.load(adminSettingsfilename);
+            head.load('lib/xelib001.js');
+            head.load('lib/xelib0015.js');
+            head.load('lib/xelib0022.js');
+            head.load('lib/xelib0023.js');
+            head.load('lib/xelib003.js');
+            head.load('lib/xelib002.js');
+            head.load('xeapp.js' + vn);
+            if(devTemp > -1)
+                head.load('templateOnLoad/templateOnLoad.js');
+            // head.load('xecustom.js' + vn);
+            // head.load('extension/extension-controller.js');
+        });
+
+        Offline.check();
+        if(location.href.indexOf("&pdp") >= 0){
+            window.onbeforeunload = null;
+        
+        }else if(devTemp == -1){
+            window.onbeforeunload = function(e) {
+            message = "Are you sure to leave?";
+            e.returnValue = message;
+            return message;
+        };
+        }
+        
+        //disable pinch zoom for safari
+        document.addEventListener('gesturestart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+/* The webpage overall styling */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: grey;
+}
+
+
+/*  This is for styling the main container that holds everything */
+
+#container {
+    width: 100%;
+    position: relative;
+    background: #f7f7f7;
+}
+
+
+
+
+
+/* This styles the social media icons logos images*/
+
+#icons #iconsLogo i {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    margin: 10px;
+    color: grey;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+
+/* This styles the aside container */
+
+#aSide {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%);
+}
+
+
+/* This styles the 3D object inserted in the aside container */
+
+#aSide model-viewer {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+}

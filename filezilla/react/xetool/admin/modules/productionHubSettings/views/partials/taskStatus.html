@@ -1,0 +1,41 @@
+<div class="panel-heading separator p-t-0">
+    <div class="panel-title">
+        <h4 class="xe-panel-title pull-left">
+            <xe-translate text-value="Control task Status">
+            </xe-translate>
+        </h4>
+        <i class="fa fa-info-circle info-module-icon m-l-10" ng-click="showSettingsFaqDetails(3)">
+        </i>
+    </div>
+</div>
+<div class="panel-body">
+    <form  role="form" autocomplete="off">
+        <div class="form-group">
+            <div class="form-group no-border no-margin">
+                <div class="col-sm-10">
+                    <div class="row">
+                        <div class="col-md-4 m-b-10" style="padding-left:0px;"
+                            ng-repeat="status in taskList track by $index">
+                            <div class="checkbox check-success" style="margin: 0px">
+                                <input type="checkbox" value="{{status.id}}" id="{{status.id}}"
+                                    ng-checked="{{status.kanban_status}}" ng-model="taskStatusChange"
+                                    ng-change="switchTaskStatus($index,status,taskStatusChange)">
+                                <label for="{{status.id}}">
+                                    {{status.name}}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="panel-footer wizard-ftr bg-white ">
+    <button class="btn btn-sm btn-info pull-left" ng-click="saveTaskStatus()">
+        <xe-translate text-value="Save">
+        </xe-translate>
+    </button>
+</div>
+<ng-include src="'modules/productionHubSettings/docs/s3.html'">
+</ng-include>

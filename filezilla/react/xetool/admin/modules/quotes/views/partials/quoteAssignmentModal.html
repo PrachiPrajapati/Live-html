@@ -1,0 +1,76 @@
+<div class="modal fade stick-up" id="quoteAssignModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-quoteassign">
+        <div class="modal-content" style="min-height: 200px;">
+            <div class="modal-header clearfix text-left">
+                <button type="button" class="close custom-modal-close"  data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14"></i>
+                </button>
+              
+            </div>
+            <div class="modal-body" id="quoteAssignModal">
+                <div class="clearfix" ng-show = "agentPreloader">
+                    <img class="demo-mw-50 agent-loader" src="assets/img/demo/progress.svg" alt="Progress">
+                </div>
+                <div class="btn-group" style="margin-bottom: 10px;">
+                    <input type="text" placeholder="Type search value" style="width:250px" class="input-sm form-control pull-left m-r-10 ng-pristine ng-valid" name="start" id="searchAgentId" pg-form-group="" ng-model="agentSearch.value">
+                    <div class="pull-left" style="margin-bottom: 10px;">
+                        <button type="button" class="btn btn-default btn-sm" id="searchAgentBtn" ng-click="agentSearchOnKeyUp(agentSearch.value)" ng-disabled="!agentSearch.value" style="cursor: pointer;">
+                            <span>
+                                <xe-translate text-value="Search" class="ng-isolate-scope"><span class="ng-binding">Search</span></xe-translate>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="clearfix" ng-show="agentsAccounts.length > 0 && !agentPreloader">     
+                    <table class="table table table-quote">
+                        <thead>
+                            <tr>
+                                <th width="20%">
+                                    Select
+                                </th>
+                                <th width="80%">
+                                    <xe-translate text-value="Agent name">
+                                    </xe-translate>
+                                    (NO. OF QUOTATIONS)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="quote-admin-box-wrap">
+                            <tr ng-repeat="agent in agentsAccounts">
+                                <td width="20%">
+                                    <input type="checkbox" value="{{ agent.id }}" id="{{ agent.id }}""  ng-model="agentCheck[$index]" ng-change = "agentSelected(agentCheck[$index],$index, agent.id, agent.name)"/>
+                                </td>
+                                <td width="80%">
+                                    <label for="{{agent.id}}" style="cursor: pointer;">
+                                       {{ agent.name }} ({{agent.number_of_quote}})
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>  
+                <span ng-show = "agentsAccounts.length == 0 && !agentPreloader">
+                    <p class="font-normal text-lg text-center m-t-150">
+                      <xe-translate text-value="No Agents found">
+                      </xe-translate>
+                    </p>
+               </span>
+            </div>
+            <div class="modal-footer" ng-show = "agentsAccounts.length > 0 && !agentPreloader">
+                <button type="button" data-dismiss="modal" class="btn btn-success btn-cons btn-sm" ng-click="assignQuoteToAgent()" ng-class="{'disabled': !isAgentSelected}" ng-show = "tabModel == 'unassignedQuotes'">
+                    <span>
+                        <xe-translate text-value="Proceed">
+                        </xe-translate>
+                    </span>
+                </button>
+                <button type="button" data-dismiss="modal" class="btn btn-success btn-cons btn-sm" ng-click="reassignQuoteToAgent()" ng-class="{'disabled': !isAgentSelected}" ng-show = "tabModel == 'assignedQuotes' && isSuperAdmin">
+                    <span>
+                        <xe-translate text-value="Proceed">
+                        </xe-translate>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

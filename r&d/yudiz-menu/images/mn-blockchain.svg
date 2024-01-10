@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Blockchain</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Blockchain" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle-17" x="0" y="0" width="44" height="44"></rect>
+            <g id="Group-83" transform="translate(3.666667, 4.400000)">
+                <path d="M8.41975309,20.1775481 L2.6558108,23.5053617 L2.6558108,30.160989 L8.41975309,33.4888026 L14.1836954,30.160989 L14.1836954,23.5053617 L8.41975309,20.1775481 Z" id="Polygon" stroke="#47EBC6" stroke-width="3.05555556"></path>
+                <path d="M28.2469136,20.1775481 L22.4829713,23.5053617 L22.4829713,30.160989 L28.2469136,33.4888026 L34.0108559,30.160989 L34.0108559,23.5053617 L28.2469136,20.1775481 Z" id="Polygon-Copy" stroke="#47EBC6" stroke-width="3.05555556"></path>
+                <path d="M18.3503086,1.76412582 L12.5863664,5.09193945 L12.5863664,11.7475667 L18.3503086,15.0753804 L24.1142509,11.7475667 L24.1142509,5.09193945 L18.3503086,1.76412582 Z" id="Polygon-Copy-2" stroke="#47EBC6" stroke-width="3.05555556" transform="translate(18.350309, 8.419753) scale(1, -1) translate(-18.350309, -8.419753) "></path>
+                <line x1="11.4583333" y1="18.0232014" x2="15.1758236" y2="18.0397543" id="Path-36-Copy" stroke="#FFFFFF" stroke-width="1.52777778" transform="translate(13.317078, 18.031478) scale(1, -1) rotate(58.000000) translate(-13.317078, -18.031478) "></line>
+                <line x1="21.3888889" y1="17.2593125" x2="25.1063792" y2="17.2758654" id="Path-36-Copy-2" stroke="#FFFFFF" stroke-width="1.52777778" transform="translate(23.247634, 17.267589) scale(1, -1) rotate(-58.000000) translate(-23.247634, -17.267589) "></line>
+            </g>
+        </g>
+    </g>
+</svg>

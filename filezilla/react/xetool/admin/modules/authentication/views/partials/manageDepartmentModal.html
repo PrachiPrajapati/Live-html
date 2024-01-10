@@ -1,0 +1,85 @@
+<div class="modal fade slide-right" id="manageDepartmentModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14">
+                    </i>
+                </button>
+                <div class="container-xs-height full-height">
+                    <div class="row-xs-height">
+                        <div class="modal-body col-xs-height text-center" id="departmentManageModal">
+                            <div class="clearfix">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="category-head" style="width: auto; font-size:18px;">
+                                            <xe-translate text-value="Manage Departments">
+                                            </xe-translate>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category-modal" style="width: 100%;">
+                                <div class="clearfix category-list modal-scroll-height m-t-10">
+                                    <div class="col-sm-12 m-b-10">
+                                        <button type="button" class="btn btn-info btn-sm pull-right" ng-click="onAddDepartmentClicked()">
+                                            <i class="fa fa-plus"></i>
+                                            <span>
+                                                <xe-translate text-value="Add Department">
+                                                </xe-translate>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <ul> 
+                                        <li style="padding-left: 0; padding-right: 0;">
+                                            <div style="width:100%; display: flex;  justify-content: space-between;     padding: 10px; font-weight: 600; background-color: #eee; ">
+                                                <div style="flex: 3;">Department</div>
+                                                <div style="flex: 1; text-align: right;">Status</div>
+                                                <div style="flex: 1; text-align: right;">Action</div>
+                                            </div>
+                                        </li>
+                                        <li ng-repeat="department in departmentList">
+                                           <div style="width:100%; display: flex; justify-content: space-between;">
+                                                <div style="flex: 3;">
+                                                    {{ department.name }}
+                                                </div>
+                                                <div style="flex: 1; text-align: right;">
+                                                    <xe-switchbox ng-model="selectedStatus[$index]" checked="depSwitchCbx[$index]" on-click="updateDepartmentStatus(selectedStatus[$index], $index, department)">
+                                                    </xe-switchbox>
+                                                </div>
+                                                <div style="flex: 1; text-align: right;">
+                                                    <a href="" ng-click="editDepartment(department)">
+                                                        <i class="fa fa-pencil text-info m-r-5 m-l-5">
+                                                        </i>
+                                                    </a>
+                                                    <a href="" ng-click="deleteDepartment(department)">
+                                                        <i class="pg-close_line m-r-5 m-l-5">
+                                                        </i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <span ng-show="departmentList.length == 0">
+                                            <p class="font-normal text-lg text-center m-t-150 m-b-150">
+                                                <xe-translate text-value="No Department">
+                                                </xe-translate>
+                                            </p>
+                                        </span>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-include src="'modules/authentication/views/partials/addDepartmentModal.html'">
+</ng-include>
+<ng-include src="'modules/authentication/views/partials/updateDepartment.html'">
+</ng-include>
+<ng-include src="'modules/authentication/views/partials/deleteDepartment.html'">
+</ng-include>
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        html, body {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+        }
+
+        .wrapper {
+          background: #fff;
+          overflow: hidden;
+          width: 100%;
+          padding: 800px 0;
+          min-height: 100%;
+        }
+
+        .pan {
+          cursor: grab;
+          background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+          width: 500%;
+          height: 500px;
+          transform: translateX(calc(var(--x, 0) * 1px));
+          /*transform: translateY(0); */
+        }
+
+        .pan.panning {
+          cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+      <div class="pan"></div>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<script type="text/javascript">
+    (function() {
+
+        let element             = document.querySelector('.pan');
+        let mc                      = new Hammer.Manager(element, {
+            recognizers: [
+                [Hammer.Pan,{ direction: Hammer.DIRECTION_HORIZONTAL }],
+            ]
+        });
+        let currentOffset = 0;
+
+        mc.add(new Hammer.Pan());
+        mc.get( 'pan' ).set({
+          direction   : Hammer.DIRECTION_HORIZONTAL,
+        });
+        var isScrolling = false;
+        mc.on("pan", (event) => {
+          console.log(isScrolling);
+        if (isScrolling) {
+            return;
+        }
+        if(event.pointerType == 'touch' && (Math.abs(event.deltaY) > Math.abs(event.deltaX))){ return false; }
+        element.classList.add('panning');
+        const transform = currentOffset + event.deltaX;
+          element.style.setProperty("--x", transform);
+        if (event.isFinal) {
+            element.classList.remove('panning');
+          currentOffset = transform;
+        }
+      });
+    })();
+</script>
+</html>

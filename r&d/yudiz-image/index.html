@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Yudiz Team</title>
+  <!--Favicon Included-->
+
+  <!--Font Awsome Included-->
+  <link href="css/fontawesome.css" type="text/css" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Slick -->
+  <link href="css/slick.css" rel="stylesheet">
+  <link href="css/slick-theme.css" rel="stylesheet">
+  <!--Main Style Included-->
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+  <!--Extra Style Included-->
+  <!--Main Js Included-->
+  <script src="js/lib/jquery.js" type="text/javascript"></script>
+  <script src="js/modernizr.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>
+  <!--Extra Js Included-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <script type="text/javascript">
+
+  </script>
+</head>
+
+<body>
+
+  <!--******************* Header Section Start *********************-->
+  <header>
+    <div class="container">
+    </div>
+  </header>
+  <!--******************* Header Section End *********************-->
+
+  <!--******************* Banner Section Start *********************-->
+  <!--******************* Banner Section End *********************-->
+
+  <!--******************* Middle Section Start ******************-->
+  <main>
+    <section class="common-section">
+      <img src="#" class="icon" hidden="hidden" id="template" />
+      <div id="img-list"></div>
+      <div class="img-block" id="div_template">
+      </div>
+    </section>
+  </main>
+  <!--******************* Middle Section End ******************-->
+
+  <!--******************* Footer Section Start ******************-->
+  <footer>
+    <p>asdasdghasjd asdhas</p>
+  </footer>
+  <!--******************* Footer Section End ******************-->
+
+  <script>
+    ; (function (window, document, undefined) {
+      "use strict";
+      var init = function () {
+        var canvas = document.querySelector('#img-list');
+        var div_template = document.querySelector('#div_template');
+        var icon_template = document.querySelector('#template');
+        var icon_width = 40;
+        var icon_height = 30;
+        var the_images = [
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+          'images/headshot-1.jpg',
+          'images/headshot-2.jpg',
+          'images/headshot-3.jpg',
+        ];
+        var pickRandomImage = function () {
+          var i = Math.floor(Math.random() * the_images.length);
+          return the_images[i];
+        };
+        var total_number_of_images = 41;
+        var max_height = canvas.offsetHeight - icon_height;
+        var max_width = canvas.offsetWidth - icon_width;
+        var randomCoordinate = function () {
+          var r = [];
+          var maxW = 9 * max_width / 10;
+          var minW = 1 * max_width / 20;
+          var maxH = 7 * max_height / 10;
+          var minH = 1 * max_height / 10;
+          var x = Math.floor(Math.random() * (maxW - minW) + minW);
+          var y = Math.floor(Math.random() * (maxH - minH) + minH);
+          r = [x, y];
+          return r;
+        };
+        var createImage = function () {
+          var node = icon_template.cloneNode(true);
+          var div_node = div_template.cloneNode(true);
+          var xy = randomCoordinate();
+          node.removeAttribute('id');
+          node.removeAttribute('hidden');
+          div_node.style.top = xy[1] + 'px';
+          div_node.style.left = xy[0] + 'px';
+          node.setAttribute('src', pickRandomImage());
+          div_node.appendChild(node);
+          canvas.appendChild(div_node);
+        };
+        for (var i = 0; i < total_number_of_images; i++) {
+          createImage();
+        };
+      };
+      window.addEventListener('load', init);
+    })(window, document);
+  </script>
+  <!-- <script>
+    $(".icon").hover(function () {
+      $(this).addClass('.active');
+    });
+  </script> -->
+
+  <script>
+    $(document).ready(function () {
+      setTimeout(function () {
+        $(".img-block").hover(function () {
+          $(".img-block").toggleClass('blur-img');
+          $(this).toggleClass('active-img');
+        }, function () {
+          $(".img-block").removeClass('active-img');
+          $(".img-block").removeClass('blur-img');
+        });
+      }, 1000);
+    });
+  </script>
+
+  <!--*********************** All End ************************-->
+</body>
+
+</html>

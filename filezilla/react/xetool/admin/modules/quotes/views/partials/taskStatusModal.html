@@ -1,0 +1,81 @@
+<div class="modal fade stick-up" id="customTaskStatusModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body" id="customSizeModal">
+                <div style="margin: 0px 15px;">
+                    <div class="row" id="customTaskStatusModalMsg">
+                        <div class="col-sm-6 text-left">
+                            <h4 class="semi-bold">
+                                <xe-translate text-value="Customize Statuses"></xe-translate>
+                            </h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" class="close custom-modal-close" data-dismiss="modal"
+                                aria-hidden="true"><i class="pg-close fs-14"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="q-r-statuses-one">
+                                <p>
+                                    Add/edit statuses to keep track of your tasks. You can rename, recolor, sort
+                                    and create new statuses.
+                                </p>
+                                <ul dnd-list="taskStatusList" 
+                                    dnd-drop="dropTaskStatusSubCallback(index, item)">
+                                    <li ng-repeat="status in taskStatusList" 
+                                        dnd-draggable="status"
+                                        dnd-moved="taskStatusList.splice($index, 1)" 
+                                        dnd-effect-allowed="move"
+                                        dnd-selected="models.selected = status" 
+                                        dnd-dragstart="getTaskStatusCurrentIndex(status)"
+                                        dnd-dragend="getTaskStatusUpdateIndex(status)">
+                                        <ul>
+                                            <li>
+                                                <i class="fa fa-sort" ng-hide="status.id == '1'"
+                                                    style="cursor: row-resize;">
+                                                </i>
+                                            </li>
+                                            <li>
+                                               <div class="custom-status-color">
+                                                <div class="mini-colors">
+                                                    <div class="thumb-color">
+                                                       <!--  <input type="color" id="{{status.id}}"
+                                                            ng-model="status.color_code"> -->
+                                                        <spectrum-colorpicker ng-model="status.color_code"  options="{showInput: true,  showAlpha: false}" format="'hex'">
+                                                        </spectrum-colorpicker>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <input type="text" ng-model="status.name">
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-close" ng-hide="status.is_fixed == 'true'"
+                                                    style="cursor: pointer;"
+                                                    ng-click="deleteTaskStatus($index, status.id)"
+                                                    ng-if="status.is_fixed == 'false'">
+                                                </i>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="clearfix">
+                                <button type="button" class="btn btn btn-success" ng-click="saveTaskStatus()">
+                                    <xe-translate text-value="Save"></xe-translate>
+                                </button>
+                                <button type="button" class="btn btn-default" ng-click="addTaskStatus()">
+                                    <xe-translate text-value="Add a Status"></xe-translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+<div class="modal fade slide-right" id="p17" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body info-module">
+                <div class="panel-group" id="accordion1" role="tablist">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOn">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion1"  href="#collapseOn" target="_self" aria-expanded="false" aria-controls="collapseOn">
+                                  How to enable team price?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOn">
+                            <hr>
+                            <div class="panel-body">
+                                To enable team price,
+                                <ol>
+                                    <li>Open inkXE Admin.</li>
+                                    <li>Go to <b>Print Profile</b> in the toolbar towards the left.</li>
+                                    <li>Select your print profile and click on the edit icon.<img src="modules/printSettingWizard/doc/assets/editProfile.png" /></li>
+                                    <li>In the new page, select <b>Price Sheet</b>.<img src="modules/printSettingWizard/doc/assets/p10_1.png" style="width: auto" /></li>
+                                    <li>Under price settings, click <b>Side Price</b> tab.<img src="modules/printSettingWizard/doc/assets/p10_2.png" /></li>
+                                    <li>Under <b>Side Price</b>, find <b>Enable Team Price</b> and enable it.</li>
+                                    <li>After enabling team price, assign print quantity range and team price each for name and number.<img src="modules/printSettingWizard/doc/assets/p10_3.png" /></li>
+                                </ol>
+                                You have enabled team price.<br>
+                                <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                                    Note: Similarly you can add multiple print quantity range and team price for each range by clicking on the <b>+ Add Range</b> button 
+                                </div>
+                                <br>
+                                <b>Example</b>:<br>
+                                <b>Hypothetical Question 1</b>:<br> For an order placed for 39 tshirts priced at $11 each, using name in front and number in back, what should be the Total Price of the product?<br>
+                                <img src="modules/printSettingWizard/doc/assets/p10_4.png" />
+                                <b>Answer</b>:
+                                Here,<br>
+                                Order Quantity = 39<br>
+                                Name Price  = $0.42<br>
+                                Number Price = $0.52<br><br>
+                                So, Name & Number Price = Name Price + Number Price<br>
+                                                                           = $0.42 + $0.52<br>
+                                                                           = $0.94<br><br>
+                                The price will be shown to the customer is :<br><br>
+                                Total Price  = Product Price + Name & Number price<br>
+                                                   = ($11 * 39) + $0.94<br>
+                                                   = $429 + $0.94<br>
+                                                   = $429.94<br><br>
+                                <b>Hypothetical Question 2</b><br>
+                                For an order placed for 150 tshirts priced at $16 each, using name and number in front as well as in back, what should be the Total Price of the product?<br>
+                                <img src="modules/printSettingWizard/doc/assets/p10_5.png" />
+                                <b>Answer</b>:
+                                Here,<br>
+                                Order Quantity = 150<br>
+                                Name is used twice so name price = 0.82 + 0.82 =1.64<br>
+                                Number is used twice so number price = 0.92 + 0.92 = 1.84<br><br>
+                                So, Name & Number Price = Name Price + Number Price<br>
+                                                                           = $1.64 + $1.84<br>
+                                                                           = $3.48<br>
+                                The price will be shown to the customer is :<br><br>
+                                Total Price  = Product Price + Name & Number price<br>
+                                                   = ($16 * 150) + $3.48<br>
+                                                   = $2400+ $3.48<br>
+                                                   = $2403.48<br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTw">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseTw" target="_self" aria-expanded="false" aria-controls="collapseTw">
+                                  How to enable side price?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTw" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTw">
+                            <hr>
+                            <div class="panel-body">
+                                To enable side price,
+                                <ol>
+                                    <li>Open inkXE Admin.</li>
+                                    <li>Go to <b>Print Profile</b> in the toolbar towards the left.</li>
+                                    <li>Select your print profile and click on the edit icon.<img src="modules/printSettingWizard/doc/assets/editProfile.png" /></li>
+                                    <li>In the new page, select <b>Price Sheet</b>.<img src="modules/printSettingWizard/doc/assets/p10_1.png" style="width: auto;" /></li>
+                                    <li>Under <b>Side Price</b>, find <b>Enable Side Price</b> and enable it.<img src="modules/printSettingWizard/doc/assets/p10_6.png" style="width: auto;" /></li>
+                                    <li>Enter the required number of sides and click Update. Set print quantity range and price per side.<img src="modules/printSettingWizard/doc/assets/p10_7.png" /></li>
+                                </ol>
+                                You have enabled side price.<br>
+                                <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                                    Note: Similarly you can add multiple print quantity range and team price for each range by clicking on the <b>+ Add Range</b> button 
+                                </div>
+                                <br>
+                                <b>Example</b>:<br>
+                                <b>Hypothetical Question 1</b>:<br> For an order placed for 5 t-shirts priced at $16 each and number of sides customized is 2, what should be the Total Price of the product?<br>
+                                <img src="modules/printSettingWizard/doc/assets/p10_8.png" />
+                                <b>Answer</b>:
+                                Here,<br>
+                                Order Quantity = 5<br>
+                                Number of Sides = 2<br><br>
+                                So, side price = Side 1 + Side 2<br>
+                                                      = $0.26 + $0.58<br>
+                                                      = $0.84<br><br>
+                                The price will be shown to the customer is :<br><br>
+                                Total price = Product Price + Extra Side Price <br>
+                                  = ( $16 * 5) + $0.84<br>
+                                  = $80 + $0.84<br>
+                                  = $80.84<br><br>
+                                <b>Hypothetical Question 2</b><br><br>
+                                For an order placed for 50 tshirts priced at $15 each and number of sides customized is 4, what should be the Total Price of the product?<br>
+                                <img src="modules/printSettingWizard/doc/assets/p10_9.png" />
+                                <b>Answer</b>:
+                                Here,<br>
+                                Order Quantity = 50<br>
+                                Number of sides = 4<br><br>
+                                So, Extra Side Price = Side 1 + Side 2 + Side 3 + Side 4<br>
+                                                                = 0.69 + 0.55 + 0.20 + 0.10<br>
+                                                                = 1.54<br><br>
+                                The price will be shown to the customer is :<br><br>
+                                Total price = Product Price + Extra Side Price <br>
+                                                = ($15 * 50) + $1.54<br>
+                                                = $750 + $1.54<br>
+                                                  = $751.54<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

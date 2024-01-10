@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en-US" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en-US%22%7D%7D">
+    <head>
+        <title>Web Graphic Experiments</title>
+        <meta data-n-head="ssr" charset="utf-8" />
+        <meta data-n-head="ssr" name="description" content="A series of graphic design experiments" />
+        <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1" />
+        <meta data-n-head="ssr" property="og:locale" content="en_US" />
+        <meta data-n-head="ssr" property="og:type" content="website" />
+        <meta data-n-head="ssr" property="og:title" content="Web Graphic Experiments" />
+        <meta data-n-head="ssr" property="og:site_name" content="Web Graphic Experiments" />
+        <meta data-n-head="ssr" property="og:description" content="A series of graphic design experiments" />
+        <meta data-n-head="ssr" property="og:url" content="https://experiments.p5aholic.me/" />
+        <meta data-n-head="ssr" property="og:image" content="https://experiments.p5aholic.me/og-image.png" />
+        <meta data-n-head="ssr" property="og:image:type" content="image/png" />
+        <meta data-n-head="ssr" property="og:image:width" content="1200" />
+        <meta data-n-head="ssr" property="og:image:height" content="630" />
+        <meta data-n-head="ssr" name="twitter:card" content="summary_large_image" />
+        <meta data-n-head="ssr" name="twitter:title" content="Web Graphic Experiments" />
+        <meta data-n-head="ssr" name="twitter:description" content="A series of graphic design experiments" />
+        <meta data-n-head="ssr" name="twitter:image" content="https://experiments.p5aholic.me/og-image.png" />
+        <link data-n-head="ssr" rel="icon" href="/favicon.png" type="image/png" />
+        <link data-n-head="ssr" rel="apple-touch-icon" href="/favicon.png" type="image/png" />
+        <link data-n-head="ssr" rel="canonical" href="https://experiments.p5aholic.me/" />
+        <link data-n-head="ssr" rel="preload" href="/fonts/Aventa-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+        <link data-n-head="ssr" rel="preload" href="/fonts/Arges-BlackCondensed.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+        <link data-n-head="ssr" rel="preload" href="/fonts/Oroban-MasuriaItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+        <script data-n-head="ssr" src="https://www.googletagmanager.com/gtag/js?id=UA-130568860-1" async></script>
+        <link rel="preload" href="/_nuxt/a8a5486.js" as="script" />
+        <link rel="preload" href="/_nuxt/ced9faf.js" as="script" />
+        <link rel="preload" href="/_nuxt/7c1f0e9.js" as="script" />
+        <link rel="preload" href="/_nuxt/b9d6174.js" as="script" />
+        <style data-vue-ssr-id="a07579c2:0 cae92bd4:0 01f3e718:0 1e432257:0 5627b8a0:0 0b937134:0 8f1c1020:0 6bb35bb4:0 182bdc52:0 013267a2:0 050c3dec:0">
+            *,
+            :after,
+            :before {
+                box-sizing: inherit;
+                -webkit-user-select: inherit;
+                user-select: inherit;
+                -webkit-user-drag: inherit;
+                -webkit-tap-highlight-color: transparent;
+                -webkit-backface-visibility: inherit;
+                backface-visibility: inherit;
+            }
+            html {
+                box-sizing: border-box;
+                line-height: 1;
+                -webkit-user-select: none;
+                user-select: none;
+                -webkit-user-drag: none;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+            body {
+                margin: 0;
+            }
+            canvas,
+            main,
+            svg {
+                display: block;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-weight: inherit;
+                margin: 0;
+                padding: 0;
+            }
+            p {
+                margin: 0;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            ol,
+            ul {
+                list-style: none;
+            }
+            ol,
+            ol li,
+            ul,
+            ul li {
+                margin: 0;
+                padding: 0;
+            }
+            @font-face {
+                font-family: Aventa;
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+                src: url(/fonts/Aventa-Regular.woff2) format("woff2");
+            }
+            @font-face {
+                font-family: "Arges Condensed Black";
+                font-style: normal;
+                font-display: swap;
+                src: url(/fonts/Arges-BlackCondensed.woff2) format("woff2");
+            }
+            @font-face {
+                font-family: "Oroban Masuria";
+                font-style: italic;
+                font-display: swap;
+                src: url(/fonts/Oroban-MasuriaItalic.woff2) format("woff2");
+            }
+            body {
+                font-family: Aventa, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                overscroll-behavior: none;
+                color: #fff;
+            }
+            body.no-cursor {
+                cursor: none;
+            }
+            a {
+                cursor: inherit;
+            }
+            @keyframes cover-in {
+                0% {
+                    transform: translate3d(0, 101%, 0);
+                }
+                to {
+                    transform: translateZ(0);
+                }
+            }
+            @keyframes cover-out {
+                0% {
+                    transform: translateZ(0);
+                }
+                to {
+                    transform: translate3d(0, -101%, 0);
+                }
+            }
+            @keyframes cover-wrap-in {
+                0% {
+                    opacity: 0;
+                    transform: translate3d(0, 10%, 0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateZ(0);
+                }
+            }
+            @keyframes cover-wrap-out {
+                0% {
+                    opacity: 1;
+                    transform: translateZ(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translate3d(0, -10%, 0);
+                }
+            }
+            @keyframes fade-in {
+                0% {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes fade-out {
+                0% {
+                    opacity: 1;
+                }
+                to {
+                    opacity: 0;
+                }
+            }
+            .cover-wrap {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                overflow: hidden;
+            }
+            .enter-active .cover-wrap {
+                animation-name: cover-wrap-in;
+                animation-duration: 0.8s;
+                animation-timing-function: cubic-bezier(0.6, 0.1, 0.1, 1);
+                animation-fill-mode: forwards;
+            }
+            .leave-active .cover-wrap {
+                animation-name: cover-wrap-out;
+                animation-duration: 0.4s;
+                animation-delay: 0.8s;
+                animation-timing-function: cubic-bezier(0.6, 0.1, 0.1, 1);
+                animation-fill-mode: forwards;
+            }
+            .cover-wrap .cover-text {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .cover-wrap:after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                pointer-events: none;
+                opacity: 0;
+            }
+            .enter-active .cover-wrap:after {
+                opacity: 1;
+                animation-name: cover-out;
+                animation-duration: 0.8s;
+                animation-delay: 0.4s;
+                animation-timing-function: cubic-bezier(0.6, 0.1, 0.1, 1);
+                animation-fill-mode: forwards;
+            }
+            .leave-active .cover-wrap:after {
+                opacity: 1;
+                animation-name: cover-in;
+                animation-duration: 0.8s;
+                animation-timing-function: cubic-bezier(0.3, 0.1, 0.2, 1);
+                animation-fill-mode: forwards;
+            }
+            .siteWrap[data-v-31f7f112] {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: #0f0f0f;
+                overflow: hidden;
+            }
+            @supports (-webkit-touch-callout: none) {
+                .siteWrap[data-v-31f7f112] {
+                    height: -webkit-fill-available;
+                }
+            }
+            .pageWrap[data-v-31f7f112] {
+                position: relative;
+                z-index: 1;
+                isolation: isolate;
+                width: 100%;
+                height: 100%;
+            }
+            .warning[data-v-510db4e6] {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                visibility: hidden;
+            }
+            .warning_text[data-v-510db4e6] {
+                padding: 0 20px;
+                font-size: 18px;
+                line-height: 1.4;
+                text-transform: uppercase;
+            }
+            .cursor[data-v-60e93eb7] {
+                position: absolute;
+                z-index: 10000;
+                left: -7.5px;
+                top: -7.5px;
+                pointer-events: none;
+                mix-blend-mode: difference;
+            }
+            .cursor_dot[data-v-60e93eb7] {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #fff;
+                opacity: 0;
+                transition-property: transform, opacity;
+                transition-duration: 0.3s;
+                transition-timing-function: cubic-bezier(0.3, 0.1, 0.2, 1);
+            }
+            .cursor.show .cursor_dot[data-v-60e93eb7] {
+                opacity: 1;
+            }
+            .cursor.on-title .cursor_dot[data-v-60e93eb7] {
+                transform: scale3d(3.5, 3.5, 1);
+            }
+            .cursor.on-text .cursor_dot[data-v-60e93eb7] {
+                transform: scale3d(2.5, 2.5, 1);
+            }
+            .cursor.on-color .cursor_dot[data-v-60e93eb7] {
+                transform: scale3d(3.5, 3.5, 1);
+                opacity: 0.15;
+            }
+            .loading[data-v-7ff8de84] {
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 9999;
+                width: 100%;
+                height: 100%;
+            }
+            .loading_title[data-v-7ff8de84] {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+            }
+            .loading_title div[data-v-7ff8de84] {
+                position: relative;
+                padding: 0 0 5px;
+                font-size: 32px;
+            }
+            .loading_title div[data-v-7ff8de84]:after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                animation-name: loading-data-v-7ff8de84;
+                animation-duration: 1.6s;
+                animation-iteration-count: infinite;
+                animation-play-state: running;
+                animation-timing-function: cubic-bezier(0.4, 0.1, 0.2, 1);
+            }
+            @keyframes loading-data-v-7ff8de84 {
+                0% {
+                    transform: translate3d(-100%, 0, 0);
+                }
+                48% {
+                    transform: translateZ(0);
+                }
+                52% {
+                    transform: translateZ(0);
+                }
+                to {
+                    transform: translate3d(100%, 0, 0);
+                }
+            }
+            .canvasContainer[data-v-235237a1] {
+                position: absolute;
+                z-index: 1;
+                right: 0;
+                top: 0;
+                pointer-events: none;
+                contain: strict;
+            }
+            .canvasContainer canvas[data-v-235237a1],
+            .canvasContainer[data-v-235237a1] {
+                width: 100%;
+                height: 100%;
+            }
+            .canvasContainer[data-v-99f09c82] {
+                position: absolute;
+                z-index: 1;
+                right: 0;
+                top: 0;
+                pointer-events: none;
+                contain: strict;
+                opacity: 0;
+            }
+            .canvasContainer canvas[data-v-99f09c82],
+            .canvasContainer[data-v-99f09c82] {
+                width: 100%;
+                height: 100%;
+            }
+            .colorPresets[data-v-48444fe3] {
+                position: absolute;
+                z-index: 10;
+                left: 3.3333333333vw;
+                bottom: 0;
+                width: 43.3333333333vw;
+                height: 110px;
+                white-space: nowrap;
+                transition-property: opacity;
+                transition-duration: 1.2s;
+                transition-timing-function: cubic-bezier(0.3, 0.1, 0.2, 1);
+            }
+            .colorPresets.hide[data-v-48444fe3] {
+                opacity: 0;
+                pointer-events: none;
+            }
+            .colorPresets_list[data-v-48444fe3] {
+                position: absolute;
+                left: 0;
+                bottom: calc(5vh - 14px);
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 14px 20px;
+                border-radius: 23px;
+                background-color: hsla(0, 0%, 100%, 0.01);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+                transform: scale3d(0.9, 0.9, 1);
+                transform-origin: left bottom;
+                pointer-events: none;
+                transition-property: transform;
+                transition-duration: 0.3s;
+                transition-timing-function: cubic-bezier(0.3, 0.1, 0.2, 1);
+            }
+            .colorPresets_list.active[data-v-48444fe3] {
+                pointer-events: auto;
+                transform: none;
+            }
+            .colorPresets_item[data-v-48444fe3] {
+                width: 24px;
+                height: 24px;
+                transform: scale3d(0.8, 0.8, 1);
+                transition-property: transform, margin;
+                transition-duration: 0.3s;
+                transition-timing-function: cubic-bezier(0.3, 0.1, 0.2, 1);
+            }
+            .colorPresets_item + .colorPresets_item[data-v-48444fe3] {
+                margin-left: 35px;
+            }
+            .colorPresets_list.active .colorPresets_item[data-v-48444fe3] {
+                transform: none;
+            }
+            .colorPresets_list.active .colorPresets_item + .colorPresets_item[data-v-48444fe3] {
+                margin-left: 40px;
+            }
+            .colorBtn[data-v-2876f952] {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .colorBtn_area[data-v-2876f952] {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+            }
+            .colorBtn_inner[data-v-2876f952] {
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+            .colorBtn_inner div[data-v-2876f952] {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+            .home[data-v-91221118] {
+                display: flex;
+                align-items: flex-start;
+            }
+            .home.hide[data-v-91221118] {
+                visibility: hidden;
+            }
+            .home.hide[data-v-91221118],
+            .home.leave-active[data-v-91221118] {
+                pointer-events: none;
+            }
+            .home_column[data-v-91221118] {
+                width: 50vw;
+            }
+            .home_column-left[data-v-91221118] {
+                position: relative;
+                padding: calc(6.66667vh - 0.5vw) 3.3333333333vw 0;
+                white-space: nowrap;
+            }
+            .home_title[data-v-91221118] {
+                font-size: 3.14vw;
+                line-height: 1.15;
+                text-transform: uppercase;
+                margin-left: -0.04em;
+            }
+            .home_title .align-right[data-v-91221118] {
+                text-align: right;
+            }
+            .home_title > div[data-v-91221118] {
+                overflow: hidden;
+            }
+            .home_title div + div[data-v-91221118] {
+                margin-top: 3px;
+            }
+            .home_link[data-v-91221118] {
+                position: relative;
+                display: block;
+                margin-top: 30px;
+                font-size: 18px;
+                line-height: 1.2;
+                text-align: right;
+            }
+            .home_link .cover-text[data-v-91221118] {
+                border-bottom: 1px solid #fff;
+            }
+            .home_twitter[data-v-91221118] {
+                position: absolute;
+                left: 3.3333333333vw;
+                top: calc(50% + 68px);
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                transform-origin: left top;
+                transform: rotate(-90deg);
+            }
+            .home_twitter[data-v-91221118]:before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: -10px;
+                top: -10px;
+                width: calc(100% + 20px);
+                height: calc(100% + 20px);
+            }
+            .home_twitter svg[data-v-91221118] {
+                display: block;
+                width: 22px;
+                transform: rotate(90deg);
+                fill: #fff;
+                pointer-events: none;
+            }
+            .home_twitter .text[data-v-91221118] {
+                margin-left: 20px;
+                font-size: 18px;
+                pointer-events: none;
+            }
+            .enter-active .home_twitter[data-v-91221118] {
+                animation-name: fade-in;
+                animation-duration: 0.8s;
+                animation-timing-function: cubic-bezier(0.6, 0.1, 0.1, 1);
+                animation-fill-mode: forwards;
+            }
+            .leave-active .home_twitter[data-v-91221118] {
+                animation-name: fade-out;
+                animation-duration: 0.4s;
+                animation-delay: 0.8s;
+                animation-timing-function: cubic-bezier(0.6, 0.1, 0.1, 1);
+                animation-fill-mode: forwards;
+            }
+            .works[data-v-2afb5be7] {
+                padding: calc(6.66667vh - 2px) 1.6666666667vw;
+                will-change: transform;
+            }
+            .works_item[data-v-2afb5be7] {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 10.5vw;
+                overflow: hidden;
+            }
+            .works_item + .works_item[data-v-2afb5be7] {
+                margin-top: 1vw;
+            }
+            .works_titleWrap[data-v-2afb5be7] {
+                position: relative;
+                display: inline-flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                height: 100%;
+            }
+            @media (hover: hover) {
+                .works_titleWrap:hover .outline[data-v-2afb5be7] {
+                    opacity: 0.35;
+                }
+                .works_titleWrap:hover .fill[data-v-2afb5be7] {
+                    opacity: 0;
+                }
+            }
+            .works_title[data-v-2afb5be7] {
+                position: relative;
+                font-family: "Arges Condensed Black";
+                font-size: 12.5vw;
+                text-transform: uppercase;
+                white-space: nowrap;
+                margin-top: -1.3vw;
+            }
+            .works_title .outline[data-v-2afb5be7] {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: transparent;
+                text-stroke: 1.5px #fff;
+                -webkit-text-stroke: 1.5px #fff;
+                opacity: 0;
+            }
+            .works_title .fill[data-v-2afb5be7],
+            .works_title .outline[data-v-2afb5be7] {
+                transition-property: opacity;
+                transition-duration: 0.3s;
+                transition-timing-function: cubic-bezier(0.3, 0.1, 0.2, 1);
+            }
+            .works_title .fill[data-v-2afb5be7] {
+                position: relative;
+            }
+            .works_index[data-v-2afb5be7] {
+                font-family: "Oroban Masuria";
+                font-style: italic;
+                font-size: 22px;
+                letter-spacing: 0.04em;
+                margin-left: 1.6666666667vw;
+                padding-right: 5px;
+            }
+        </style>
+        <link rel="preload" href="/_nuxt/static/1611444209/state.js" as="script" />
+        <link rel="preload" href="/_nuxt/static/1611444209/payload.js" as="script" />
+        <link rel="preload" href="/_nuxt/static/1611444209/manifest.js" as="script" />
+    </head>
+    <body>
+        <div data-server-rendered="true" id="__nuxt">
+            <div id="__layout">
+                <div class="siteWrap" data-v-31f7f112>
+                    <div class="warning" data-v-510db4e6 data-v-31f7f112>
+                        <p class="warning_text" data-v-510db4e6>
+                            This site is not viewable on mobile devices.<br data-v-510db4e6 />
+                            Please use your desktop browser.
+                        </p>
+                    </div>
+                    <!---->
+                    <div id="jsCursor" class="cursor" data-v-60e93eb7 data-v-31f7f112><div class="cursor_dot" data-v-60e93eb7></div></div>
+                    <div class="loading" data-v-7ff8de84 data-v-31f7f112>
+                        <div class="loading_title" data-v-7ff8de84><div data-v-7ff8de84>LOADING</div></div>
+                    </div>
+                    <div class="canvasContainer" style="visibility: visible;" data-v-235237a1 data-v-31f7f112><canvas id="BackCanvas" data-v-235237a1></canvas></div>
+                    <div class="canvasContainer" style="visibility: hidden;" data-v-99f09c82 data-v-31f7f112><canvas id="MainCanvas" data-v-99f09c82></canvas></div>
+                    <div class="colorPresets hide" data-v-48444fe3 data-v-31f7f112>
+                        <ul class="colorPresets_list" data-v-48444fe3>
+                            <li class="colorPresets_item" data-v-48444fe3>
+                                <div class="colorBtn" data-v-2876f952 data-v-48444fe3>
+                                    <div data-stick-area class="colorBtn_area" data-v-2876f952></div>
+                                    <div data-stick-element class="colorBtn_inner" data-v-2876f952><div style="background-color: #0f0f0f;" data-v-2876f952 data-v-48444fe3></div></div>
+                                </div>
+                            </li>
+                            <li class="colorPresets_item" data-v-48444fe3>
+                                <div class="colorBtn" data-v-2876f952 data-v-48444fe3>
+                                    <div data-stick-area class="colorBtn_area" data-v-2876f952></div>
+                                    <div data-stick-element class="colorBtn_inner" data-v-2876f952><div style="background-color: #646464;" data-v-2876f952 data-v-48444fe3></div></div>
+                                </div>
+                            </li>
+                            <li class="colorPresets_item" data-v-48444fe3>
+                                <div class="colorBtn" data-v-2876f952 data-v-48444fe3>
+                                    <div data-stick-area class="colorBtn_area" data-v-2876f952></div>
+                                    <div data-stick-element class="colorBtn_inner" data-v-2876f952><div style="background-color: #050d19;" data-v-2876f952 data-v-48444fe3></div></div>
+                                </div>
+                            </li>
+                            <li class="colorPresets_item" data-v-48444fe3>
+                                <div class="colorBtn" data-v-2876f952 data-v-48444fe3>
+                                    <div data-stick-area class="colorBtn_area" data-v-2876f952></div>
+                                    <div data-stick-element class="colorBtn_inner" data-v-2876f952><div style="background-color: #a3b1bf;" data-v-2876f952 data-v-48444fe3></div></div>
+                                </div>
+                            </li>
+                            <li class="colorPresets_item" data-v-48444fe3>
+                                <div class="colorBtn" data-v-2876f952 data-v-48444fe3>
+                                    <div data-stick-area class="colorBtn_area" data-v-2876f952></div>
+                                    <div data-stick-element class="colorBtn_inner" data-v-2876f952><div style="background-color: #bfa3aa;" data-v-2876f952 data-v-48444fe3></div></div>
+                                </div>
+                            </li>
+                            <li class="colorPresets_item" data-v-48444fe3>
+                                <div class="colorBtn" data-v-2876f952 data-v-48444fe3>
+                                    <div data-stick-area class="colorBtn_area" data-v-2876f952></div>
+                                    <div data-stick-element class="colorBtn_inner" data-v-2876f952><div style="background-color: #f00a0a;" data-v-2876f952 data-v-48444fe3></div></div>
+                                </div>
+                            </li>
+                            <li class="colorPresets_item" data-v-48444fe3>
+                                <div class="colorBtn" data-v-2876f952 data-v-48444fe3>
+                                    <div data-stick-area class="colorBtn_area" data-v-2876f952></div>
+                                    <div data-stick-element class="colorBtn_inner" data-v-2876f952><div style="background-color: #0a0af0;" data-v-2876f952 data-v-48444fe3></div></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!---->
+                    <div class="pageWrap" style="mix-blend-mode: normal;" data-v-31f7f112>
+                        <div class="home hide" data-v-91221118 data-v-31f7f112>
+                            <div class="home_column home_column-left" data-v-91221118>
+                                <h1 class="home_title" data-v-91221118>
+                                    <div data-v-91221118>
+                                        <div class="cover-wrap" data-v-91221118><span class="cover-text" data-v-91221118>A collection of</span></div>
+                                    </div>
+                                    <div data-v-91221118>
+                                        <div class="cover-wrap" data-v-91221118><span class="cover-text" data-v-91221118>web graphic experiments</span></div>
+                                    </div>
+                                    <div class="align-right" data-v-91221118>
+                                        <div class="cover-wrap" data-v-91221118><span class="cover-text" data-v-91221118>by keita yamada</span></div>
+                                    </div>
+                                </h1>
+                                <div class="home_link" data-v-91221118>
+                                    <div class="cover-wrap" data-v-91221118><a href="/about/" class="cover-text" data-v-91221118>More info about this project</a></div>
+                                </div>
+                            </div>
+                            <div class="home_column home_column-right" data-v-91221118>
+                                <div class="works" data-v-2afb5be7 data-v-91221118>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/034/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Noise Addict</span><span class="fill" data-v-2afb5be7>Noise Addict</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>34</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/033/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Euphoria</span><span class="fill" data-v-2afb5be7>Euphoria</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>33</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/032/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>EXIT</span><span class="fill" data-v-2afb5be7>EXIT</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>32</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/031/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Madness</span><span class="fill" data-v-2afb5be7>Madness</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>31</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/030/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Irony</span><span class="fill" data-v-2afb5be7>Irony</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>30</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/029/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Hypothesis</span><span class="fill" data-v-2afb5be7>Hypothesis</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>29</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/028/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Zero To One</span><span class="fill" data-v-2afb5be7>Zero To One</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>28</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/027/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Corpses</span><span class="fill" data-v-2afb5be7>Corpses</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>27</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/026/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Forget Everything ...</span><span class="fill" data-v-2afb5be7>Forget Everything ...</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>26</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/025/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Fake</span><span class="fill" data-v-2afb5be7>Fake</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>25</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/024/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>I‘m Not The One You Want</span><span class="fill" data-v-2afb5be7>I‘m Not The One You Want</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>24</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/023/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Breaking The Habit</span><span class="fill" data-v-2afb5be7>Breaking The Habit</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>23</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/022/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Hello Friend</span><span class="fill" data-v-2afb5be7>Hello Friend</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>22</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/021/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Harmony</span><span class="fill" data-v-2afb5be7>Harmony</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>21</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/020/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Escape</span><span class="fill" data-v-2afb5be7>Escape</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>20</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/019/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Division</span><span class="fill" data-v-2afb5be7>Division</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>19</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/018/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Deprecated</span><span class="fill" data-v-2afb5be7>Deprecated</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>18</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/017/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Lost And Found</span><span class="fill" data-v-2afb5be7>Lost And Found</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>17</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/016/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Black Out</span><span class="fill" data-v-2afb5be7>Black Out</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>16</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/015/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Insomnia</span><span class="fill" data-v-2afb5be7>Insomnia</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>15</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/014/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Think</span><span class="fill" data-v-2afb5be7>Think</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>14</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/013/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Day Dream</span><span class="fill" data-v-2afb5be7>Day Dream</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>13</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/012/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>No Meaning</span><span class="fill" data-v-2afb5be7>No Meaning</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>12</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/011/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>No More</span><span class="fill" data-v-2afb5be7>No More</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>11</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/010/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Simplicity</span><span class="fill" data-v-2afb5be7>Simplicity</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>10</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/009/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Predawn</span><span class="fill" data-v-2afb5be7>Predawn</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>09</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/008/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Isolation</span><span class="fill" data-v-2afb5be7>Isolation</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>08</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/007/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Reverberation</span><span class="fill" data-v-2afb5be7>Reverberation</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>07</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/006/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Losing Control</span><span class="fill" data-v-2afb5be7>Losing Control</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>06</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/005/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Keep Coding</span><span class="fill" data-v-2afb5be7>Keep Coding</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>05</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/004/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>This Data is Corrupted</span><span class="fill" data-v-2afb5be7>This Data is Corrupted</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>04</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/003/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Fraction</span><span class="fill" data-v-2afb5be7>Fraction</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>03</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/002/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>Melt</span><span class="fill" data-v-2afb5be7>Melt</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>02</div>
+                                        </a>
+                                    </div>
+                                    <div class="works_item" data-v-2afb5be7>
+                                        <a href="/day/001/" class="works_titleWrap cover-wrap" data-v-2afb5be7>
+                                            <h2 class="works_title cover-text" data-v-2afb5be7><span class="outline" data-v-2afb5be7>BEGINNING</span><span class="fill" data-v-2afb5be7>BEGINNING</span></h2>
+                                            <div class="works_index" data-v-2afb5be7>01</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://twitter.com/P5_keita" target="_blank" rel="noopener" class="home_twitter" data-v-91221118>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 28" class="icon" data-v-91221118>
+                                    <path data-v-91221118>
+                                        d="M25.312 6.375c-0.688 1-1.547 1.891-2.531 2.609 0.016 0.219 0.016 0.438 0.016 0.656 0 6.672-5.078 14.359-14.359 14.359-2.859 0-5.516-0.828-7.75-2.266 0.406 0.047 0.797 0.063 1.219 0.063 2.359 0
+                                        4.531-0.797 6.266-2.156-2.219-0.047-4.078-1.5-4.719-3.5 0.313 0.047 0.625 0.078 0.953 0.078 0.453 0 0.906-0.063 1.328-0.172-2.312-0.469-4.047-2.5-4.047-4.953v-0.063c0.672 0.375 1.453 0.609 2.281
+                                        0.641-1.359-0.906-2.25-2.453-2.25-4.203 0-0.938 0.25-1.797 0.688-2.547 2.484 3.062 6.219 5.063 10.406 5.281-0.078-0.375-0.125-0.766-0.125-1.156 0-2.781 2.25-5.047 5.047-5.047 1.453 0 2.766 0.609 3.687
+                                        1.594 1.141-0.219 2.234-0.641 3.203-1.219-0.375 1.172-1.172 2.156-2.219 2.781 1.016-0.109 2-0.391 2.906-0.781z"
+                                    </path>
+                                </svg>
+                                <div class="text" data-v-91221118>@P5_keita</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script defer src="/_nuxt/static/1611444209/state.js"></script>
+        <script src="/_nuxt/a8a5486.js" defer></script>
+        <script src="/_nuxt/ced9faf.js" defer></script>
+        <script src="/_nuxt/7c1f0e9.js" defer></script>
+        <script src="/_nuxt/b9d6174.js" defer></script>
+    </body>
+</html>

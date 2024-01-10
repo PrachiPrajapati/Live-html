@@ -1,0 +1,1087 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+:root {
+    --primary-color : #19F7FF;
+    --light-muted-color : #C3C7CB;
+    --btn-color : #1C3F5F;
+    --light-color : #ffffff;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap'); */
+ 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Open Sans', sans-serif; background: #071018; }
+model-viewer {
+  --progress-bar-color: var(--primary-color);
+}
+
+h1 { margin-bottom: 24px; font-size: 72px; line-height: 90px; font-weight: 700; color: var(--light-color); text-transform: capitalize;  }
+h2 { font-size: 56px; line-height: 64px; font-weight: 600; color: var(--light-color);   }
+h3 { margin-bottom: 16px; font-size: 46px; line-height: 54px; font-weight: 700; color: var(--light-color);  }
+h4 { font-size: 30px; line-height: 40px; font-weight: 700; color: var(--light-color);  }
+h5 { font-size: 24px; line-height: 34px; font-weight: 600; color: var(--light-color);  }
+h6 { font-size: 20px; line-height: 30px; font-weight: 800; color: var(--primary-color); }
+
+p,.content-description a,
+ul li                                   { font-size: 18px; line-height: 26px; font-weight: 400; color: var(--light-color); }
+.p-small,a,input,
+table td                                { font-size: 16px; line-height: 22px; font-weight: 700; color: var(--light-color); }
+span,table th,
+.fixed-price-card .card-title a         { font-size: 14px; line-height: 22px; font-weight: 500; color: var(--light-muted-color); }
+input                                   { font-weight: 600;}
+table td                                { font-weight: 400;}
+a                                       { text-decoration: none; transition: all 0.4s;}
+button:focus                            { box-shadow: none;}
+.common-btn:focus-visible,button:focus-visible { outline: none;}
+ul,ol           { list-style-type: none;} 
+input:focus     { box-shadow: none;} 
+.form-control:disabled { background: transparent; cursor: not-allowed; }
+*:focus                                           { outline: none !important;}
+
+.common-btn                                         { padding: 8px 16px; font-size: 16px; line-height: 22px; font-weight: 600; display: block; width: fit-content; color: var(--light-color); border-radius: 8px; border-color: transparent; background-color: transparent; transition: 0.4s; }
+.navbar .common-btn:hover,.user-btn:hover           { background : #00B1B8;  } 
+/* color-pallate  */
+.theme-color        { color: var(--primary-color);}
+.light-muted-color  { color: var(--light-muted-color);}
+
+/* flex-style  */
+.card-details ,.section-head,
+.card-footer,.card-details-wrapper,
+footer .container,
+.buy-title,.filter-dropdown,.collection-detail-wrap { display: flex; justify-content: space-between; align-items: center; }
+/* header  */
+.sticky                                     { padding: 24px 0; background: #071018;}
+.bg-change                                  { background: #0F2233;}
+header                                      { padding: 30px 0; position: fixed; top: 0; left: 0; width: 100%; z-index: 100; transition: all 0.4s; }
+.navbar-nav .nav-item .nav-link             { margin-right: 40px; padding: 0; font-weight: 600; color: #9EA5AB; white-space: nowrap;}
+.navbar-nav .nav-item .nav-link:hover       { color: var(--light-color); }          
+.navbar-collapse                            { justify-content: end; flex-grow: unset; }
+.navbar-toggler:focus                       { box-shadow: none;}
+.header-sercher                             {margin-right: 56px; justify-content: flex-end;}
+.header-sercher         input               {min-width: 300px;}
+.navbar                                     { padding: 0;}
+.navbar-brand                               { padding: 0; margin: 0; max-width: 190px; }
+.navbar-brand:focus                         { outline: none;}
+.navbar-brand img                           { width: 100%; }
+.navbar .common-btn                         { padding: 12px 16px; display: flex; align-items: center; background: var(--primary-color); color: #0F2233; }
+.navbar .common-btn svg                     { margin-left: 13px; color: #0F2233; transition: 0.4s;}
+.navbar .input-group .input-group-text      { background: transparent; padding: 10px 6px 10px 16px; color: #00E2EB; border: 1px solid #00E2EB;  border-right: 0; border-radius: 8px; } 
+.navbar input                               { background: transparent; padding: 10px 8px 10px 6px; color: var(--primary-color); border: 1px solid #00E2EB; color: #00E2EB; border-left: 0; border-radius: 8px;}
+.navbar input:focus                         { background-color: transparent; box-shadow: none; border-color: #00E2EB;}
+.navbar input:focus-visible                 { outline: none;}
+.navbar input::placeholder                  { color: #00E2EB;}
+.user-btn                                   { padding: 11px 14px; background: var(--primary-color); border-radius: 8px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-color: transparent; transition: 0.4s; }
+.navbar form .input-group,
+.navbar form .user-btn,
+.navbar form .common-btn                    { margin-left: 12px; }
+
+/* mobile-menu  */
+.mobile-nav                                   { display: flex; align-items: center; }
+.mobile-nav .common-btn                       { margin-right: 14px; display: none;}
+.mobile-search                                { display: none; position: absolute; width: 100%; top: 96px; z-index: 16; }
+.mobile-search input                          { flex-grow: 1;}
+.mobile-search form                           { width: 100%;}
+               
+
+/* banner section  */
+
+  .banner                                     { min-height: 100vh; position: relative; } 
+  .circle-group               { position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; z-index: 0;}
+  .circle-group > div         { border-radius: 50%; position: absolute;}
+  .circle-1                   { width: 519px; height: 519px; background-color: #00E2EB; opacity: 0.2; bottom: 0%; left: -10%;}
+  .circle-2                   { width: 519px; height: 519px; background-color: #19F7FF; opacity: 0.2; bottom: 0%; right: -10%;}
+  .circle-3                   { width: 962px; height: 962px; background: url('../images/blur-circle.png') no-repeat center/100% 100%; top: 10%; left: -40%; }
+  .circle-4                   { width: 733px; height: 733px; background: url('../images/blur-circle.png') no-repeat center/100% 100%; top: 14%; right: -25%; }
+  .circle-5                   { width: 962px; height: 962px; background: url('../images/blur-circle.png') no-repeat center/100% 100%;  bottom: -15%; right: -26%; } 
+  .banner .circle-group       { top: 0; bottom: -15%; }
+  .banner::before,
+  .banner::after,
+  .banner-inner::before,
+  main::before,
+  main::after                 { content: none; display: block; position: absolute; height: 100%; width: 100%; top: 0; left: 0;}
+  .banner::before             { background: rgba(7, 16, 24, 0.5); z-index: 1;}
+  .banner .circle-group > div { filter: blur(150px);}
+  .banner::after              { background: linear-gradient(180deg, rgba(7, 16, 24, 0) 0%, #19F7FF 100%); mix-blend-mode: screen; opacity: 0.1; z-index: 2;}  
+  /* .banner-inner               { height: 100vh; position: relative; background: url('../images/pattern.png') repeat center / cover;} */
+  /* main::after                 { background: url('../images/pattern.png') repeat center / cover;} */
+  main                        { position: relative; background-color: #0C1A27; }
+  main::before                { background: rgba(12, 26, 39, 0.5); backdrop-filter: blur(150px); z-index: 1;}
+  main::after                 { z-index: 2;}
+  
+  .mountain-bg                                  { z-index: 8; position: absolute; left: 50%; bottom: 0; width: 100%; height: 100%; transform: translateX(-50%); background: url('../images/mountain.png') no-repeat center bottom/100% 70%; }
+
+   .banner .container                           { position: relative; z-index: 10;  display: flex; align-items: center; justify-content: center; height: 100vh; min-height: 730px; }
+   h1 span                                      { font-size: inherit; line-height: inherit; font-weight: inherit; }
+   .banner-content                              { text-align: center; justify-content: center; }
+   .banner-content p                            { opacity: 0.8;}
+   .banner-content .nav-img                     { margin-top: 24px; display: inline-block; }
+   .nav-img img                                 { max-width: 124px; }
+   .nav-img:focus                               { outline: none;}
+
+/* fixed-price section  */
+/* .wrap                                       { background: url('../images/section-bg.png') no-repeat center/cover ; } */
+.fixed-price                                { padding: 100px 0 70px; position: relative; z-index: 3; }
+.section-head                               { margin-bottom: 40px;  }
+.section-head h4                            { margin-bottom: 0;}
+.common-btn.view-btn                                   { border: 1px solid #1C3F5F; color: var(--primary-color); transition: 0.4s; }
+.common-btn.view-btn:hover                             { background : #1C3F5F;}
+.fixed-price .view-btn.responsive                      { display: none;}
+.fixed-price-card                           { padding: 16px; height: 100%; background-color: rgba(7, 16, 24, 0.7);  transition-property: background-color, border-color; -webkit-transition-property: background-color, border-color; transition-duration: 0.4s; -webkit-transition-duration: 0.4s;  border: 1px solid transparent; border-radius: 16px; }
+.fixed-price-card:hover .common-btn         { background-color: #008085; color: var(--light-color); }
+.fixed-price-card:hover                     { background-color: #071018; border-color: #3374AD;  box-shadow: 0px 10px 20px rgba(0, 49, 51, 0.5);}
+.card-img                                   { margin-bottom: 16px; padding-top: 75%; width: 100%; display: block; position: relative; }
+.card-img img,
+.card-img .card-modal-viewer,
+.card-img video                             { position:absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: contain; object-position: center; }
+.card-img video                             { object-fit: cover;}
+.card-img svg                               { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 56px; height: 56px;  }
+.card-img:hover,
+.fixed-price-card .card-title a:hover       { color: white;}
+.card-details span                          { display: block;}
+.card-title                                 { margin: 0; padding-bottom: 12px;} 
+.fixed-price-card .card-title h6 a                            { font-size: inherit; line-height: inherit; font-weight: inherit; color: inherit; }
+.card-details                               { padding: 12px 0; border-top: 1px solid #132A3F;}
+.card-details-wrapper span                  { display: block; } 
+.fixed-price-card h6 span                   { color: inherit;}
+.card-footer h6                             { margin: 0; }
+.fixed-price-card .common-btn               {  background-color: var(--btn-color); transition: all 0.4s; font-weight: 700; }
+/* .fixed-price-card .card-footer span         { color: var(--light-color);} */
+.fixed-price-card .card-footer:last-child   { padding: 8px 8px 8px 12px; background: #0C1A27; border-radius: 12px; } 
+.card-wrapper>div:nth-child(n+4)            { margin-top: 24px;}
+
+/* auction section  */
+.auction                                    { padding: 130px 0 100px;}
+footer                                      { padding: 40px 0; position: relative; z-index: 3; background: rgba(19, 42, 63, 0.5); backdrop-filter: blur(150px); border-top: 1px solid #3374AD;}
+.footer-nav                                 { padding: 0; margin: 0; display: flex; align-items: center;}
+footer a,footer .p-small                    { font-weight: 600; color: #9EA5AB;}
+.footer-nav li:not(:last-child)             { margin-right: 40px; }
+footer .p-small                             { margin: 0;}
+.footer-nav a:hover                         { color: var(--light-color);}
+
+/* common-page  */ 
+/* .common-page                                 { padding: 198px 0 100px; min-height: 100vh; position: relative; z-index: 5; } */
+.common-page                                  { padding: 198px 0 100px; flex: 1; position: relative; z-index: 5; }
+main                                          { min-height: 100vh; display: flex; flex-direction: column ; margin: 0;} 
+.border-btm                                   { position: relative ;}
+.border-btm::after                            { position: absolute; content: ''; background-color: #132A3F; width: 100%; height: 1px; left: 0; bottom: -24px;  }
+/* explore_collection_detail  */
+.collection-banner                           { justify-content: center;}
+.collection-wrapper                          { align-items: center;}
+.collection-img                              { max-width: 270px; margin-left: auto; }
+.collection-img img                          { width: 100%; object-fit: cover; }
+.collection-content h2                       { margin-bottom: 16px;}
+.collection-content p                        { opacity: 0.8; }
+.collection-cards                            { padding: 100px 0 0;}
+
+/* nft_detail_buy_now section  */
+.buy-detail-wrapper                             { margin-bottom: 64px; }
+/* .buy-now-img                                    { padding: 20px 17px; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(7, 16, 24, 0.7); backdrop-filter: blur(50px); border-radius: 16px; } */
+/* .buy-now-img img,
+.buy-now-img video,
+.buy-now-img .card-modal-viewer                  { width: 93%; object-fit: cover; } */
+.buy-now-img                                    { position: relative; padding-top: 99%;  width: 99%; display: flex; align-items: center; justify-content: center; background: rgba(7, 16, 24, 0.7); backdrop-filter: blur(50px); border-radius: 16px; }
+.buy-now-img img,
+.buy-now-img video,
+.buy-now-img .card-modal-viewer                  { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: contain; }
+/* .buy-now-img video,
+.buy-now-img .card-modal-viewer                  { height: 100%;}
+.buy-now-img video                              { width: 100%;} */
+.buy-now-content                                { padding-top: 32px; }
+.buy-now-content>.content-group:not(:last-child) { margin-bottom: 28px; }
+.buy-now-head                                   { padding-bottom: 32px; border-bottom: 1px solid #132A3F;}
+.author-detail                                  { margin-bottom: 32px; display: flex; align-items: center; }
+.author-detail img                              { width: 24px; height: 24px; margin-right: 8px; border-radius: 50%; }
+.author-detail .p-small                         { font-weight: 500;}
+.content-group                                  { display: flex; align-items: center; }
+.content-group p                                { margin: 0;}
+.content-group .buy-title                       { width: 33.33%; }
+.buy-title p,.buy-title span                    { color: var(--light-muted-color);}
+.content-group .content-description             { padding-left: 20px; width: 66.67%;}
+
+.description-block                              { padding: 24px; background: rgba(25, 247, 255, 0.02); border: 1px solid #132A3F;  border-radius: 16px; }
+.description-block h5                           { margin-bottom: 48px; }
+.description-content p                          { margin-bottom: 16px; }
+.description-block ul                           { list-style-type: disc; margin: 0; }
+.description-block ul li                        { opacity: 0.8; }
+.description-block ul li:not(:last-child)       { margin-bottom: 16px;}
+
+/* explore page  */
+.filter-dropdown                { display: none;}
+.explore-page .section-head     { margin-bottom: 24px;}
+/* filter-block  */
+.filter-content { padding: 24px; background: rgba(25, 247, 255, 0.03); border: 1px solid #1C3F5F; border-radius: 16px; }
+
+/* custom-pagination  */
+.custom-pagination                      { margin-top: 40px;}
+.custom-pagination ul                   { margin: 0; display: flex; align-items: center; justify-content: end; } 
+.custom-pagination li:not(:last-child)  { margin-right: 12px;}
+.custom-pagination a                    { width: 34px; height: 34px; color: var(--light-muted-color); display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid #008085; }
+.custom-pagination a:hover,
+.custom-pagination a.active             { color: #0D1E2C; background: #00E2EB; border-color: #00E2EB; }
+.custom-pagination a svg                { width: 18px; height: 18px; }
+
+/* dynamic pagination  */
+.dynamic-pagination { display: flex; align-items: center; justify-content: end; }
+.dynamic-pagination .page-link,.dynamic-pagination span { margin-right: 12px; width: 34px; height: 34px; color: var(--light-muted-color); display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid #008085; background: transparent; }
+.dynamic-pagination .page-link:last-child,.dynamic-pagination span:last-child { margin-right: 0;} 
+.dynamic-pagination .current:not(.current.next,.current.prev) { color: #0D1E2C; background: #00E2EB; border-color: #00E2EB; }
+.dynamic-pagination .page-link.next,
+.dynamic-pagination .current.next { background: url('../images/right-arrow-icon.svg') no-repeat center/42% auto;}
+.dynamic-pagination .page-link.prev,
+.dynamic-pagination .current.prev { background: url('../images/left-arrow-icon.svg') no-repeat center/42% auto;}
+/* nft-detail-bid-now page  */
+.bid-table                                { padding-top: 80px;}
+.bid-table .section-head                  { margin-bottom: 24px; }
+.bid-table .table-responsive              { border: 1px solid #132A3F; border-radius: 16px; background: rgba(25, 247, 255, 0.02);}
+.bid-table table                          { border: 1px solid #132A3F; overflow: hidden; }
+.bid-table table th                       { padding: 16px 0; min-width: 180px; width: 25%; text-align: center; color: #00B1B8; border-color: #132A3F !important;}
+.bid-table table td                       { padding: 18px 0 16px; color: var(--light-color); text-align: center; border-color: #132A3F;}
+.bid-table table tbody tr:first-child td  { padding: 34px 0 16px;}
+.bid-now .author-detail                   { margin-bottom: 0;}
+/* common-modal style  */
+.common-modal                   { max-width: 470px; }
+.modal-backdrop                 { background: #071018; backdrop-filter: blur(100px);}
+.common-modal .modal-content    { padding: 24px; position: relative; background: #071018; backdrop-filter: blur(50px); border-radius: 16px; }
+.close-btn                      { position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: transparent; border: 0; }
+.close-btn svg                  { font-size: 16px; color: var(--light-muted-color);}
+.common-modal hr                { margin: 24px 0; height: 1px; background-color: #132A3F;}
+.custom-modal-header            { text-align: center;}
+.custom-modal-body              { display: flex; align-items: center; }
+.modal-img                      { max-width: 120px; padding: 10px 4px; background: #071018; border: 1px solid #00B1B8; border-radius: 12px; }
+.modal-img img                  { width: 100%; object-fit: cover; }
+.modal-details                  { margin-left: 12px; }
+.modal-details h6               { margin-bottom: 8px; }
+.modal-details .author-detail   { margin-bottom: 0;}
+.bid-details                    { display: flex; align-items: center; justify-content: space-between;}
+/* .bid-details input              { flex-grow: 1;} */
+.custom-modal-footer p          { color: #7C868D; font-weight: 600;}
+.modal-btn                      { margin-left: 12px; padding: 12px 24px; flex-shrink: 0; background: #00E2EB; border-radius: 8px; font-size: 16px ; line-height: 22px; font-weight: 700; color: #0D1E2C; border: 0; transition: 0.4s; }
+.modal-btn:hover                { background: #00B1B8;}
+.input-block                    { width: 100%;}
+.form-control                   { padding: 12px; border: 1px solid #008085; border-radius: 12px; color: var(--light-color); background: transparent;}
+.form-control:focus             { background: #071018; border: 1px solid #00B1B8; box-shadow: 0px 0px 10px rgba(0, 49, 51, 0.5); color: var(--light-muted-color);}
+.form-control:focus~svg         { color: var(--light-color) !important;}
+.form-control::placeholder      { color: #7C868D; }
+/* buy modal  */
+.buy-modal .bid-details h6        { margin: 0; color : var(--light-color); }
+.buy-modal .custom-modal-footer p { margin-bottom: 4px; }
+/* sign in modal  */
+.common-header                  { margin-bottom: 40px; }
+.common-header h4               { margin-bottom: 12px;}
+.common-header span             { display: block; color: #9EA5AB;}
+.form-block .form-control       { padding: 12px 12px 12px 40px; }
+.form-block .input-wrap         { position: relative; }
+.form-block .input-wrap .left-icon,
+.form-block .input-wrap .right-icon   { position: absolute; top: 50%; transform: translateY(-50%); font-size: 20px; color: #7C868D; }
+.form-block .input-wrap .left-icon    { left: 12px; }
+.form-block .input-wrap .right-icon   { right: 14px; }
+.forget-code                          { margin-top: 8px; font-weight: 500; color: #7C868D; text-align: right; display: block; }
+.forget-code:hover                    { color: var(--light-color); }
+.form-block .input-block:not(:last-child) { margin-bottom: 24px; }
+.form-block .modal-btn                    { margin-top: 40px; margin-inline: auto; display: block; }
+.close-btn.top-close                      { top: 24px; right: 24px; border-radius: 50%; background: #071018;  border: 1px solid #00B1B8;  box-shadow: 0px 0px 10px rgba(0, 49, 51, 0.5); }
+.new-account                              { margin: 0; opacity: 0.9; position: absolute; bottom: -38px; left: 50%; transform: translateX(-50%); width: 100%; text-align: center; }
+.new-account a                            { margin-left: 8px; color: #00E2EB; font-weight: inherit; opacity: inherit; }
+.wrap-block                               { display: flex; justify-content: space-between;}
+.wrap-block .input-block                  { width: calc(50% - 15px);}
+/* otp modal  */
+.otp-block                                { margin-inline: auto; max-width: 256px; display: flex; justify-content: space-between; align-items: center;}
+.otp-block .input-wrap                    { width: 46px; height: 46px;}
+.otp-block .input-wrap input              { padding: 0; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; text-align: center;}
+
+.profile-image                            { min-height: 124px; position: relative; padding: 24px 0; width: 100%; text-align: center; background: linear-gradient(180deg, rgba(0, 226, 235, 0.1) 0%, rgba(0, 226, 235, 0) 100%); border: 1px dashed #008085; border-radius: 12px; background-size: cover; background-position: center center; background-repeat: no-repeat;  }
+.profile-image > input                    { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;}
+
+ 
+.modal-backdrop-modal-bg-change       { background: url('../images/modal-bg.png') no-repeat center/cover; }
+.modal-backdrop-modal-bg-change.show  { opacity: 1;}
+
+
+/* explore page  */
+/* dropdown   */
+.filter-details                       { display: flex; justify-content: space-between;}
+.filter-btns                          { min-width: 168px; display: flex; align-items: end;}
+.filter-btns button:not(:last-child)  { margin-right: 16px;}
+.filter-block                         { max-width: 278px; min-width: 278px; }
+.drop-btn,.custom-dropdown a          { font-size: 16px; line-height: 22px; font-weight: 500; color: var(--light-color); }
+.filter-title                         { margin-bottom: 8px; font-weight: 500; color: var(--light-muted-color);}
+.drop-btn                             { padding: 12px; width: 100%;  text-align: left; border: 1px solid #008085; filter: drop-shadow(0px 0px 10px rgba(0, 49, 51, 0.5));  border-radius: 12px; background: transparent; }
+.drop-btn::after                      { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); content: ''; background: url('../images/caret-down-solid.svg') no-repeat center/70% auto; width: 20px; height: 20px; font-family: "Font Awesome 5 free"; font-weight: 900; border: 0; font-size: 20px; color: #9EA5AB; }
+.custom-dropdown .dropdown-menu       { margin-top: 12px !important; padding: 16px; min-width: 345px; background: #071018; border: 1px solid #008085; box-shadow: 0px 0px 10px rgba(0, 49, 51, 0.5); border-radius: 12px;}
+.custom-dropdown .dropdown-menu li:not(:last-child)               { margin-bottom: 16px; }
+.custom-dropdown li                                               { display: flex; align-items: center; }
+.box-check-wrap li                                                { float: left; width: calc(100%/2);}
+.box-check-wrap li:nth-child(2n+1)                                {clear: both;}
+.box-check-wrap.dropdown-menu li:nth-last-child(-n+2)             { margin-bottom: 0;}
+.custom-dropdown input                              { margin-top: 0; margin-right: 8px; width: 20px; height: 20px; flex-shrink: 0; border: 2px solid #00E2EB; background: transparent; }
+.custom-dropdown input:checked                      { background-color: #00E2EB;}
+.form-check-input:focus                             { box-shadow: none; border-color: white; }
+.form-check-input:checked[type=checkbox]            { background-image: url('../images/check-solid.svg'); border-color: #00E2EB;} 
+/* cards  */
+.explore-page .collection-cards { padding-top: 40px;}
+.filter-content-mobile          { display: none;}
+
+/*------ mynft page ------*/
+.wrap-icon                    { display: flex; align-items: center; }
+.wrap-icon .common-btn        { display: flex; align-items: center; }
+.wrap-icon .common-btn img    { width: 16px;  margin-right: 8px; }
+.wrap-icon>img                { width: 24px; margin-left: 8px;}
+
+/* custom tab  */
+.custom-nav                               { margin-bottom: 40px; border-bottom: 2px solid #1C3F5F; }
+.custom-nav .nav-link                     { padding: 16px 32px; color: #9EA5AB; font-size: 20px; line-height: 30px; font-weight: 500; }
+.custom-nav .nav-link.active,
+.custom-nav .nav-link:hover               { background-color: transparent; color: #52F9FF; border-bottom: 1px solid #52F9FF; border-top-color: transparent; border-left-color: transparent; border-right-color: transparent; }
+.custom-nav .nav-link:focus               { border-bottom: 1px solid #52F9FF;}
+#not-on-sale .card-details                { padding-bottom: 0;}
+.common-btn.my-nft-btn                    { width: 100%; padding: 13px 16px; background: transparent; border: 2px solid #1C3F5F; color: #00E2EB; display: flex; align-items: center; justify-content: center; }
+.common-btn.my-nft-btn img                { margin-right: 8px;}
+.fixed-price-card:hover .common-btn.my-nft-btn                        { background: #1C3F5F; color: #00E2EB;}
+.metamask-img           { margin-bottom: 24px; margin-inline: auto; width: 96px; height: 96px;}
+.metamask-img img       { width: 100%; object-fit: cover;}
+.meta-title             { font-weight: 600; color: var(--light-color); text-align: center;}
+.wallet-modal .custom-modal-body   { flex-direction: column;}
+.wallet-modal .modal-content       { padding: 40px 32px;}
+.wallet-modal .custom-modal-footer { text-align: center;}
+.wallet-modal .modal-btn           { width: fit-content; margin-inline: auto;}
+/* modal sizes  */
+.small-modal                      { max-width: 384px; }
+.withdraw-modal .metamask-img     { margin-bottom: 8px; width: 120px; }
+.withdraw-modal .meta-title       { margin: 0;}
+.withdraw-modal .modal-btn        { margin-top: 24px;}
+
+/* mynft not on sale page  */
+.contnet-btn-group { gap: 16px;}
+/* withdraw fees modal  */
+.price-list p               { margin-bottom: 0; font-weight: 500;}
+.price-list                 { display: flex; justify-content: space-between; align-items: center;}
+.price-list .menu-title     { color: var(--light-muted-color);}
+.price-list .menu-price     { color: var(--light-color); }
+.price-menu-list .price-list:not(:last-child) { margin-bottom: 8px; }
+.price-menu-list~hr                           { margin: 8px 0;}
+.custom-modal-footer .menu-title              { font-weight: 600; }
+.custom-modal-footer .menu-price              { font-weight: 700; color: #00E2EB;}
+.price-list~.modal-btn                        { margin-top: 24px;}
+/* nft-detail-fixed-price page  */
+.invoice-btn                                  { margin-top: 32px;}
+.bid-table svg                                { width: 24px; height: 24px; }
+.wright-icon                                  { color: #46C007;}
+.wrong-icon                                   { color: #E01515;}
+.remove-table                                 { margin-top: 24px; }
+.common-btn:disabled                          { opacity: 0.5; cursor: not-allowed; }
+.common-btn:disabled:hover                    { background-color: unset;}
+
+/* manage-bids page  */
+.section-head .custom-dropdown                { width: 15%;}
+.section-head .custom-dropdown .dropdown-menu { min-width: unset;}
+.section-head .custom-dropdown li             { display: block;}
+.section-head .custom-dropdown li a           { display: block;}
+.section-head .custom-dropdown li a:hover     { color: var(--primary-color);}
+
+/* badges style  */
+.badge            { padding: 0 8px; font-size: 14px; line-height: 22px; font-weight: 600; border-radius: 4px;}
+.badge.active     { color: #ADCAED; background: rgba(173, 202, 237, 0.2); }
+.badge.rejected   { color: #E01515; background: rgba(224, 21, 21, 0.2); }
+.badge.withdrawn  { color: #BE6CF0; background: rgba(169, 65, 233, 0.2); }
+.badge.accepted   { color: #46C007; background: rgba(70, 192, 7, 0.2); }
+.bid-table table td.active            { color: #ADCAED;}
+.bid-table table td.rejected          { color: #E01515;}
+.bid-table table td.accepted          { color: #46C007;}
+.bid-table table td.withdrwan         { color: #BE6CF0;}
+
+/* invoice page  */
+.invoice-card-wrap            { justify-content: center;}
+.invoice-card                 { background: rgba(25, 247, 255, 0.02); border: 1px solid #132A3F; border-radius: 16px; overflow: hidden;}
+.invoice-header .section-head { padding: 24px 0; margin-bottom: 0; border-bottom: 1px solid #132A3F;}
+.invoice-header               { padding: 0 31px 0 24px; }
+.invoice-header h5            { margin-bottom: 0;}
+/* invoice body  */
+.invoice-body                             { padding: 0 40px; }
+.invoice-description                      { padding: 40px 0; border-bottom: 1px solid #132A3F; }
+.invoice-description p                    { margin-bottom: 0;}
+.invoice-detail-wrap p:first-child        { margin-bottom: 4px;}
+.invoice-title                            { color: var(--light-muted-color); font-weight: 400;}
+.invoice-description>div:nth-child(n+3)   { margin-top: 40px;}
+.invoice-description .theme-color         { font-weight: 700;}
+.invoice-content-wrapper                  { padding: 40px 0 56px;}
+.invoice-content-wrapper h6               { margin-bottom: 24px; font-weight: 600; color: var(--light-color);}
+.invoice-content-wrapper .buy-detail-wrapper  { display: flex; } 
+.invoice-content-wrapper .buy-now-img     { padding: 0 8px; max-width: 280px; display: block; width: 100%; position: relative; } 
+.invoice-content-wrapper .buy-now-img::before { content: ""; display: block; padding-top: 100%; }
+.invoice-content-wrapper .buy-now-img img { object-fit: contain; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.invoice-content-wrapper .buy-now-detail      { flex-grow: 1;}
+.invoice-content-wrapper .buy-now-content     { padding-top: 0; padding-left: 40px;}
+.invoice-content-wrapper p,
+.invoice-content-wrapper a                    { font-size: 16px; line-height: 22px; font-weight: 400;}
+.invoice-content-wrapper .buy-detail-wrapper  { margin-bottom: 0;}
+/* invoice-footer  */
+.invoice-footer                               { padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; background: rgba(25, 247, 255, 0.02); border: 1px solid #132A3F;}
+.invoice-contact-detail                       { display: flex; align-items: center;}
+.invoice-logo                                 { max-width: 132px; }
+.invoice-logo img                             { width: 100%;}
+.invoice-contacts                             { display: flex; align-items: center; gap: 24px;}
+.invoice-contact-detail svg                   { margin-right: 8px; color: #00E2EB;}
+.invoice-contact-detail a:hover               { color: #00E2EB; }
+.invoice-contact-detail a                     { font-size: 14px; line-height: 20px; font-weight: 400;}
+
+/* profile-modal  */
+.profile-modal                                { margin-right: 13%; margin-top: 5%;  max-width: 292px;}
+.myprofile-header                             { padding: 16px; border-bottom: 1px solid #132A3F;}
+.profile-modal .modal-content                 { padding: 0;}
+.myprofile-img                                { margin-bottom: 8px; width: 56px; height: 56px;; background: url('../images/collection-img.png') no-repeat center/cover; border-radius: 12px; backdrop-filter: blur(50px);}
+.myprofile-title p                            { margin-bottom: 2px;}
+.copy-url                                     { margin-top: 16px; padding: 8px; font-size: 16px; line-height: 22px; font-weight: 500; background: #132A3F; border-radius: 8px; border: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; color: #00E2EB; word-break: break-all;}
+.copy-url svg                                 { margin-left: 4px; display: block; font-size: 24px;} 
+.myprofile-nav                                { margin: 0; padding: 16px;}
+.myprofile-nav li                             { padding: 12px 0;}
+.myprofile-nav li a                           { color: var(--light-muted-color); display: inline-flex; align-items: center; font-weight: 500;}
+.myprofile-nav li a:hover                     { color: var(--light-color);}
+.myprofile-nav li a svg                       { font-size: 20px; margin-right: 8px;}
+
+/* edit profile page  */
+.edit-profile-wrapper                                           { justify-content: center;}
+.page-title                                                     { margin-bottom: 40px;}
+.edit-profile-img                                               { display: inline-block; width: 96px; height: 96px; border-radius: 12px; background: url('../images/collection-img.png') no-repeat center / cover; position: relative; }
+.edit-profile-img > input                                       { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;}
+.edit-profile-img a                                             { display: inline-block; position: absolute; bottom: 0; right: 0; }
+.form-block .input-wrap textarea                                { min-height: 90px; resize: none;}
+.form-block .input-wrap textarea~.left-icon                     { top: 13px; transform: unset;}
+.edit-profile-form                                              { margin-top: 30px;}
+.edit-profile-form>div:nth-child(n+3)                           { margin-top: 32px; }
+.edit-profile-form .modal-btn                                   { width: fit-content; margin-left: 12px; }
+
+/* my-wallet page  */
+.wallet-box                                     { margin-bottom: 40px; padding: 40px; background: rgba(25, 247, 255, 0.02); border: 1px solid #132A3F; border-radius: 16px;}
+.wallet-block h2                                { margin-bottom: 8px; font-weight: 700; color: #00E2EB; }
+.wallet-block p                                 { margin-bottom: 0; color: var(--light-muted-color); font-weight: 500;}
+.wallet-box-wrapper                             { display: flex; align-items: center; flex-grow: 1;}
+.wallet-box-wrapper .wallet-block:first-child   { width: 27%; border-right: 1px solid #132A3F;}
+.wallet-box-wrapper .wallet-block:last-child    { padding-left: 40px;}
+.wallet-btn-wrap                                { display:flex; flex-direction: column; gap: 24px; }
+.wallet-btn-wrap .common-btn                    { min-width: 166px;}
+.wallet-box                                     { display: flex; justify-content: space-between; align-items: center; }
+
+.my-wallet-page .bid-table                          { padding-top: 0;}
+.my-wallet-page .bid-table table                    { border-bottom: 0;}
+.my-wallet-page .bid-table table th                 { width: 20%; }
+.my-wallet-page .bid-table table tr:last-child td   { border: 0;}
+.my-wallet-page .custom-pagination                  { margin-top: 14px; margin-right: 24px;}
+/* change password page  */
+.change-password-page .modal-btn { margin-inline: unset;}
+/* faq page  */
+.faq-page .page-title                                         { margin-bottom: 48px; }
+.custom-accordion .accordion-item                             { margin-bottom: 16px; padding: 12px 16px; background: rgba(25, 247, 255, 0.02); border: 1px solid #132A3F; border-radius: 8px; overflow: hidden; }
+.custom-accordion .accordion-button                           { font-size: 18px; line-height: 26px; font-weight: 500; color: var(--light-color); border-radius: 0;}
+.custom-accordion .accordion-body                             { padding: 0; color: #DEDEDE; font-size: 14px; line-height: 24px; font-weight: 400;}
+.custom-accordion .accordion-button                           { color: var(--light-color); }
+.custom-accordion .accordion-button:not(.collapsed)           { color: #00E2EB ;}
+.custom-accordion .accordion-button,
+.custom-accordion .accordion-button:not(.collapsed)           { padding: 0; border-radius: 0; background: transparent; box-shadow: none;}
+.custom-accordion .accordion-collapse                         { margin-top: 10px; }
+.custom-accordion .accordion-button:not(.collapsed)::after    { background : url('../images/accordion-up-icon.svg') no-repeat center/cover; width: 18px; height: 18px;}
+.custom-accordion .accordion-button::after                    { background : url('../images/accordion-down-icon.svg') no-repeat center/cover; width: 18px; height: 18px; }
+
+/* contact us  */
+.contact-us-wrapper .contact-us-block:not(:last-child) { margin-bottom: 24px; }
+.contact-us-block       { display: flex; align-items: flex-start; }
+.contact-us-block svg   { margin-right: 16px; padding-top: 0px; width: 28px; height: 28px; color: #00E2EB; }
+.contact-us-block h6,
+.contact-us-block a     { font-weight: 400; margin-bottom: 0; color: var(--light-color); opacity: 0.9; }
+.contact-us-block a { font-size: inherit; line-height: inherit; }
+.contact-us-page .form-control.text-area{padding: 12px; min-height: 112px;}
+.contact-us-page .border-btm                     {padding-bottom: 24px; border-bottom: 2px solid #132A3F; margin-bottom: 24px;}
+.contact-us-page .form-block .modal-btn          {margin: 0px;}
+.contact-us-page .contact-us              {max-width: 570px; margin: 0 auto;}
+.follow-us                                {margin-top: 40px;}
+.follow-us ul                             {padding: 24px 0px 0px; display: flex;}
+.follow-us  li a                          {width: 56px ; transition: 0.3s; height: 56px; background: rgb(0, 43, 44); display: flex; align-items: center; justify-content: center; border-radius: 16px; border: 1px solid #132A3F;}
+.follow-us li:not(:last-child)            {margin-right: 24px;}
+.follow-us  li a:hover                    {background: rgba(25, 247, 255, 0.319);}
+
+/* Changes css start here  */
+.wallet-btn span        {line-height: 22px; font-size: 16px; font-weight: 600; color: var(--btn-color);}
+.wallet-btn             {padding-left: 0px;}
+header .dropdown-menu[data-bs-popper]{margin-top: 18px; left: unset; right: 0;}
+.doller-crrn                  {padding-right: 10px;}
+header .dropdown-menu         {padding: 0px; background-color: #071018; border-radius: 16px; overflow: hidden; }
+header .dropdown-menu .modal-content{ background-color: transparent; min-width: 292px; }
+header .dropdown-toggle::after  {display: none;}
+.error-popover                  {padding: 0px; margin-left: 10px; background-color: transparent; border: none;}
+.error-popover:hover            {background-color: transparent;}
+.popover                        {border-color: #132A3F; background-color: var(--btn-color); color: #C3C7CB; border-radius: 6px;}
+.popover .popover-body          {color: #C3C7CB; padding: 8px; border-radius: 6px; text-align: center;}
+.bs-popover-auto[data-popper-placement^=top]>.popover-arrow::after, .bs-popover-top>.popover-arrow::after{    border-top-color: var(--btn-color) !important;}
+.bs-popover-auto[data-popper-placement^=left]>.popover-arrow::after, .bs-popover-start>.popover-arrow::after{border-left-color: var(--btn-color);}
+  /* search page  */
+  .serach-tag                               {display: inline-flex;}
+  .tag                                       {padding: 16px 18px; display: flex; align-items: center; gap: 17px;  background: rgba(25, 247, 255, 0.02); border: 1px solid #132A3F; border-radius: 16px;}
+  .tag p                                    {margin: 0px; }
+
+/* 404-page  */
+.error-page-body                  { max-height: 100vh; display: flex; flex-direction: column; }
+.error-page                       { flex-grow: 1; height: calc(100vh - 108px); }
+.error-page .container            { height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; }
+.error-page a                     { margin-inline: auto; color: var(--primary-color);}
+.error-page a:hover               { color: var(--light-color);}
+/* footer  */
+footer { margin-top: auto; }
+/* explore page change  */
+.custom-container { padding: 0 40px; margin-inline: auto; }
+.filter-icon svg                { display: none; width: 24px; height: 24px; color: var(--light-color);}
+.custom-btn-grp { display: flex; align-items: center; }
+.custom-btn-grp .custom-tab-btn { margin-left: 8px; padding: 8px; display: flex; align-items:center; background: rgba(25, 247, 255, 0.02); border: 1px solid #132A3F; border-radius: 8px; transition: 0.4s;}
+.custom-btn-grp .custom-tab-btn img { filter: brightness(0) invert(1); transition: 0.4s; }
+.custom-btn-grp .custom-tab-btn:hover img,
+.custom-btn-grp .custom-tab-btn.active img { filter: unset; background: rgba(25, 247, 255, 0.06); }
+
+.explore-new .section-head          { margin-bottom: 40px; padding-bottom: 16px; border-bottom: 1px solid #132A3F; }
+.explore-parts                      { display: flex; align-items: flex-start; margin: 0 -15px; }
+.explore-parts .collection-cards    { padding-top: 0;}
+.first-part                         { min-width: 250px; flex:1; }
+.second-part                        { flex-grow: 1; } 
+.first-part,.second-part            { padding: 0 15px; }
+
+/* first part  */
+.first-part .explore-filter { padding: 24px 16px;background: rgba(25, 247, 255, 0.03); border: 1px solid #1C3F5F; border-radius: 12px; }
+.explore-filter .filter-dropdown { padding-bottom: 16px; border-bottom: 1px solid #132A3F; display: flex; align-items: center;}
+.explore-filter .filter-dropdown h5 { margin-bottom: 0;}
+.explore-filter .filter-dropdown a { font-size: 14px; line-height: 22px; font-weight: 500; color: var(--primary-color); }
+.explore-filter .filter-mobile-list { padding: 0; margin: 0; }
+.explore-filter .custom-dropdown li { justify-content: space-between; }
+.explore-filter .custom-dropdown li:not(:last-of-type) { margin-bottom: 12px; }
+.explore-filter label { padding-right: 5px; font-size: 16px; line-height: 22px; }
+
+.explore-filter .custom-dropdown.status                 { padding-top: 16px;}
+.explore-filter .check-collection.custom-dropdown       { margin-top: 46px; }
+.explore-filter .custom-dropdown p                      { font-weight: 600; color: var(--primary-color); }
+.load-more-btn                                          { padding: 0; margin-top: 12px; color: #71A6D5; background: transparent; border: 0; transition: 0.4s; }
+.load-more-btn:hover                                    { color: var(--light-color);}
+.custom-dropdown.sort-by                                { margin-top: 43px;}
+.more-text { display: none;}
+.card-wrapper.child-four>div:nth-child(n+4) { margin-top: 0;}
+.card-wrapper.child-four>div:nth-child(n+5) { margin-top: 24px;} 
+
+.fixed-price-card .card-details:last-of-type { padding: 0; margin-bottom: 12px; border: 0;}
+
+.explore-nft-btn.common-btn { padding: 11px 8px; width: 100%; background: #0C1A27; border-radius: 12px;}
+.card-details-wrapper span a { display: flex; align-items: center; gap: 2px; font-size: inherit; line-height: inherit; font-weight: inherit; color: inherit; }
+.card-details-wrapper span a img { transition: 0.4s;}
+.card-details-wrapper span a:hover { color: white;  }
+.card-details-wrapper span a:hover img { filter: brightness(0) invert(1); }
+.fade-in-image-3 { animation: fadeIn 2s; }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.fade-in-image-4 { animation: zoomOut 2s; }
+@keyframes zoomOut {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* media queries  */
+@media (min-width: 1400px) {
+  .navbar-brand { min-width: 190px; }
+}
+@media (min-width: 1400px) and (max-width: 1599px){
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  max-width: 1200px;
+}
+.header-sercher { margin-right: 34px; }
+}
+
+ @media (min-width: 1600px){
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  max-width: 1440px;
+}
+}
+
+@media (min-width: 1200px) and (max-width: 1399px){
+  /* typography  */
+  h1 { margin-bottom: 22px; font-size: 68px; line-height: 86px; }
+  h2 { font-size: 50px; line-height: 58px; }
+  h3 { margin-bottom: 12px; font-size: 42px; line-height: 50px;}
+  h4 { font-size: 28px; line-height: 38px; }
+
+  /* header  */
+  .navbar-brand                     { max-width: 185px; min-width: 155px; }
+  header                            { padding: 28px 0;}
+  .sticky                           { padding: 22px 0; }
+  .navbar input                     { padding: 9px 8px 9px 6px; }
+  .navbar .common-btn               { padding: 9px 16px; }
+  .user-btn                         { padding: 11px 14px;}
+  .navbar-nav .nav-item .nav-link   { margin-right: 36px; }
+  .header-sercher                   { margin-right: 32px;}
+  .custom-container                 { padding: 0 12px; }
+  .first-part .explore-filter       { padding: 22px 12px;}
+  .first-part                       { width: 15%; }
+
+  /* fixed price  */
+  .fixed-price        { padding: 95px 0 65px; } 
+  .fixed-price-card   { padding: 14px; } 
+  footer              { padding: 36px 0;}
+  /* nft-detail-buy-now */
+  .author-detail      { margin-bottom: 28px; }
+  .buy-now-head       { padding-bottom: 30px;}
+  /* nft-detail-bid-now page  */
+  .bid-table                { padding-top: 75px;}
+  /* explore page  */
+  .custom-nav               { margin-bottom: 36px;}
+  .custom-nav .nav-link     { font-size: 18px; line-height: 28px;}
+  /* contact-us page  */
+  .contact-us-block svg   { padding-top: 2px; width: 22px; height: 22px; }
+  .follow-us  li a                          {width: 50px ;  height: 50px;}
+  .follow-us li:not(:last-child)            {margin-right: 20px;}
+
+
+  
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  /* typography  */
+  h1                                    { margin-bottom: 20px; font-size: 60px; line-height: 78px; }
+  h2                                    { font-size: 42px; line-height: 50px; }
+  h3                                    { margin-bottom: 10px; font-size: 36px; line-height: 46px;}
+  h4                                    { font-size: 26px; line-height: 36px; }
+  p, .content-description a, ul li      { font-size: 16px; line-height: 24px; }
+.p-small,a,input,.common-btn            { font-size: 14px; line-height: 20px;}
+.common-btn                             { padding: 8px 14px; }
+  /* header  */
+  .navbar-brand                           { max-width: 165px; min-width: 120px; }
+.header-sercher  input                    { min-width: 260px;}
+.header-sercher                           {margin-right: 10px;}
+
+  .navbar-nav .nav-item .nav-link         { margin-right: 26px; }
+  .navbar input                           { padding: 8px 8px 8px 4px;}
+  .navbar .input-group .input-group-text  { padding: 8px 4px 8px 10px; font-size: 14px;}
+  .navbar .common-btn                     { padding: 8px 14px; }
+  .user-btn                               { padding: 8px 12px; width: 40px; }
+  header                                  { padding: 26px 0;}
+  .sticky                                 { padding: 20px 0; }
+  /* banner  */
+  .nav-img img                            { max-width: 116px;}
+  /* fixed price  */
+  .fixed-price                            { padding: 85px 0 55px; } 
+  .fixed-price-card                       { padding: 12px; } 
+  .fixed-price-card h6                    { font-size: 18px; line-height: 28px; }
+  .fixed-price-card .card-footer:last-child { padding: 6px 6px 6px 10px;}
+  /* footer  */
+  footer                                    { padding: 28px 0;}
+  .footer-nav li:not(:last-child)           { margin-right: 32px; }
+  /* common page  */
+  .common-page        { padding: 182px 0 90px;}
+  .collection-cards   { padding: 90px 0 0;}
+  /* nft-detail-buy-now */
+  .author-detail                                { margin-bottom: 26px; }
+  .buy-now-head                                 { padding-bottom: 26px;}
+  .buy-now-content                              { padding-top: 26px;}
+  .buy-detail-wrapper                           { margin-bottom: 60px;}
+  .description-block h5                         { margin-bottom: 34px;}
+  .description-block ul li:not(:last-child)     { margin-bottom: 14px;}
+  /* nft-detail-bid-now page  */
+  .bid-table                { padding-top: 65px;}
+  /* explore page  */
+  .filter-block             { min-width: 220px; }
+  /* mynft page  */
+  .custom-nav               { margin-bottom: 34px;}
+  .custom-nav .nav-link     { font-size: 18px; line-height: 28px;}
+  .common-btn.my-nft-btn    { padding: 12px 16px; }
+  /* nft-detail-fixed-price-new  */
+  .invoice-btn                    { margin-top: 28px;}
+  /* invoice-page  */
+  .invoice-body                   { padding: 0 36px;}
+  .invoice-header .section-head   { padding: 22px 0;}
+  .invoice-description            { padding: 36px 0;}
+  .invoice-content-wrapper        { padding: 36px 0 50px;}
+  .buy-now-content>.content-group:not(:last-child) { margin-bottom: 24px;}
+  /* mywallet page  */
+  .page-title                     { margin-bottom: 34px;}
+  /* faq page  */
+  .faq-page .page-title           { margin-bottom: 40px; }
+  .faq-page .border-btm::after    { bottom: -16px; }
+  /* contact-us page  */
+  .contact-us-block svg   { padding-top: 4px; width: 20px; height: 20px; }
+  .follow-us  li a                          {width: 48px ;  height: 48px;}
+  .follow-us li:not(:last-child)            {margin-right: 20px;}
+  .follow-us ul                             {padding: 10px 0px 0px;}
+
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  /* typography  */
+  h1                                    { margin-bottom: 18px; font-size: 54px; line-height: 72px; }
+  h2                                    { font-size: 36px; line-height: 46px; }
+  h3                                    { margin-bottom: 10px; font-size: 30px; line-height: 40px;}
+  h4                                    { font-size: 24px; line-height: 34px; }
+  h5                                    { font-size: 22px; line-height: 32px; }
+  h6                                    { font-size: 18px; line-height: 28px; }
+  p, .content-description a, ul li      { font-size: 14px; line-height: 22px; }
+  .p-small,a,input,.common-btn            { font-size: 14px; line-height: 20px;}
+  .common-btn                             { padding: 8px 14px; font-size: 14px; line-height: 20px;  }
+
+  /* header  */
+  
+  header                                        { padding: 24px 0;}
+  .sticky                                       { padding: 20px 0;}
+  header .dropdown-menu                         {position: relative;}
+  /* banner  */
+  .nav-img img                                  { max-width: 106px; }
+  /* fixed price  */
+  .section-head                                 { margin-bottom: 36px; }
+  .fixed-price                                  { padding: 75px 0 45px; } 
+  .fixed-price-card                             { padding: 12px; }
+  .card-wrapper>div:nth-child(n+3)              { margin-top: 22px; } 
+  .fixed-price-card .card-footer:last-child     { padding: 6px 6px 6px 10px;}
+  /* footer  */
+  footer                                        { padding: 22px 0;}
+  footer .container                             { flex-direction: column; }
+  .footer-nav                                   { margin-bottom: 8px;}
+  .footer-nav li:not(:last-child)               { margin-right: 24px; }
+  footer li, footer p                           { font-size: 12px; line-height: 20px;}
+  /* explore-collection-details  */
+  .collection-cards                             { padding: 75px 0 0;}
+  .collection-content h2                        { margin-bottom: 12px;}
+  /* common page  */
+  .common-page                                  { padding: 167px 0 75px;}
+  /* nft-detail-buy-now */
+  .author-detail                                { margin-bottom: 22px; }
+  .buy-now-detail                               { margin-top: 42px;}
+  .buy-now-head                                 { padding-bottom: 22px;}
+  .buy-now-content                              { padding-top: 22px;}
+  .buy-detail-wrapper                           { margin-bottom: 54px;}
+  .description-block h5                         { margin-bottom: 28px;}
+  .description-block ul li:not(:last-child)     { margin-bottom: 14px;}
+  .description-block                            { padding: 20px;}
+  .buy-now-img                                  { padding-top: 65%; width: 65%; }
+  /* nft-detail-bid-now page  */
+  .bid-table { padding-top: 65px;}
+  /* explore page  */
+  .filter-block                         { min-width: 155px; max-width: 155px; }
+  .filter-btns                          { min-width: 150px;}
+  .filter-btns button:not(:last-child)  { margin-right: 10px;}
+  /* mynft page  */
+  .custom-nav               { margin-bottom: 32px;}
+  .custom-nav .nav-link     { font-size: 16px; line-height: 26px; padding: 14px 30px;}
+  .common-btn.my-nft-btn    { padding: 10px 14px; }
+  /* common-modal style  */
+  .common-modal hr                { margin: 20px 0;}
+  .withdraw-modal .metamask-img   { width: 100px; }
+  /* nft-detail-fixed-price-new  */
+  .invoice-btn    { margin-top: 26px;}
+  /* invoice page */
+  .invoice-description>div:nth-child(n+3)   { margin-top: 30px;}
+  .buy-detail-wrapper                       { flex-direction: column;}
+  .invoice-content-wrapper .buy-now-content { padding-left: 0;}
+  .invoice-content-wrapper .buy-now-detail  { margin-top: 32px;}
+  /* edit-profile page  */
+  .page-title                             { margin-bottom: 32px;}
+  .edit-profile-form>div:nth-child(n+3)   { margin-top: 28px;}
+  .edit-profile-form .modal-btn           { margin-top: 32px;}
+  /* faq page  */
+  .faq-page .page-title           { margin-bottom: 36px; }
+  .faq-page .border-btm::after    { bottom: -14px; }
+
+  /* contact us  */
+  .follow-us  li a                          {width: 46px ;  height: 46px;}
+  .follow-us li:not(:last-child)            {margin-right: 18px;}
+  .follow-us ul                             {padding: 10px 0px 0px;}
+  
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+  /* typography  */
+  body                                  { font-family: 'Noto Sans', sans-serif; }
+  h1                                    { margin-bottom: 18px; font-size: 40px; line-height: 58px; }
+  h2                                    { font-size: 32px; line-height: 42px; }
+  h3                                    { margin-bottom: 8px; font-size: 26px; line-height: 36px; }
+  h4                                    { font-size: 20px; line-height: 30px; }
+  h5                                    { font-size: 20px; line-height: 30px; }
+  h6                                    { font-size: 16px; line-height: 26px; }
+  p, .content-description a, ul li      { font-size: 14px; line-height: 22px; }
+  .p-small,a,input,.common-btn            { font-size: 14px; line-height: 20px;}
+  .common-btn                             { padding: 8px 14px; font-size: 16px; line-height: 22px;  }
+  /* hwader  */
+  header                                        { padding: 22px 0;}
+  .sticky                                       { padding: 18px 0;}
+  header .dropdown-menu                         {position: relative;}
+
+  /* banner  */
+  .banner-content .nav-img              { margin-top: 20px;}
+  .nav-img img                          { max-width: 110px;}
+  /* fixed price  */
+  .mobile-responsive .view-btn                  { display: none; }
+  .fixed-price .view-btn.responsive             { margin-top: 24px; margin-inline: auto; display: block; }
+  .section-head                                 { margin-bottom: 32px; }
+  .fixed-price                                  { padding: 65px 0 40px; } 
+  .fixed-price-card                             { padding: 12px; }
+  .card-wrapper>div:nth-child(n+2)              { margin-top: 26px; } 
+  .fixed-price-card .card-footer:last-child     { padding: 6px 6px 6px 10px;} 
+  /* footer  */
+  footer                                        { padding: 20px 0;}
+  .footer-nav li:not(:last-child)               { margin-right: 20px; }
+  footer li, footer p                           { font-size: 12px; line-height: 20px;}
+  footer .container                             { flex-direction: column; justify-content: center; }
+  .footer-nav                                   { flex-direction: column;}
+  .footer-nav li:not(:last-child)               { margin-bottom: 20px; margin-right: 0; }
+  .footer-nav                                   { margin-bottom: 40px;}
+  /* common page  */
+  .common-page                                  { padding: 158px 0 70px;}
+  /* explore-collection-details  */
+  .collection-content h2                        { margin-bottom: 12px;}
+  .collection-img                               { margin-inline: auto; margin-bottom: 20px; }
+  .collection-cards                             { padding: 70px 0 0;}
+  /* nft-detail-buy-now */
+  .author-detail                                { margin-bottom: 20px; }
+  .buy-now-detail                               { margin-top: 38px;}
+  .buy-now-head                                 { padding-bottom: 20px;}
+  .buy-now-content                              { padding-top: 20px;}
+  .buy-detail-wrapper                           { margin-bottom: 50px;}
+  .description-block h5                         { margin-bottom: 22px;}
+  .description-block ul li:not(:last-child)     { margin-bottom: 12px;}
+  .description-block                            { padding: 18px;} 
+  .buy-now-img                                  { padding-top: 66.5%; width: 66.5%; }
+  /* nft-detail-bid-now page  */
+  .bid-table                                    { padding-top: 60px;}
+  /* mynft page  */
+  .custom-nav               { margin-bottom: 32px;}
+  .custom-nav .nav-link     { font-size: 16px; line-height: 26px; padding: 12px 30px;}
+  /* invoice page  */
+  .invoice-content-wrapper .buy-now-img { width: 60%; display: flex;}
+    /* contact us  */
+    .follow-us  li a                          {width: 44px ;  height: 44px;}
+    .follow-us li:not(:last-child)            {margin-right: 16px;}
+    .follow-us ul                             {padding: 0px;}
+}
+
+
+
+@media (max-width: 991px){
+  /* header  */ 
+  .navbar-toggler               { padding: 0;}
+  .navbar-toggler-icon          { font-size: 28px; line-height: 34px; display: flex; align-items: center; justify-content: center;} 
+  .navbar-collapse              { margin-top: 24px;}
+  .navbar-nav .nav-item         { margin-bottom: 18px;}
+  header .dropdown-menu         {position: relative;}
+  .header-sercher               {display: none;}
+
+  .navbar-collapse .common-btn,
+  .navbar-collapse .input-group                 { display: none; }
+  .mobile-nav .common-btn                       { display: block; padding: 8px 12px;}
+  .navbar form .user-btn                        { margin-left: 0px;}
+  .navbar-brand                                 { max-width: 170px; } 
+  .mobile-search input                          { padding: 8px 14px 8px 4px;}
+  .mobile-search .input-group-text              { padding: 8px 6px 8px 12px; font-size: 14px; line-height: 20px;}
+  .mobile-search                                { display: block;} 
+  /* invoice-page  */
+  .invoice-body                   { padding: 0 36px;}
+  .invoice-header .section-head   { padding: 22px 0;}
+  .invoice-content-wrapper h6     { margin-bottom: 20px;}
+  .invoice-description            { padding: 36px 0;}
+  .invoice-content-wrapper        { padding: 36px 0 50px;}
+  .buy-now-content>.content-group:not(:last-child)  { margin-bottom: 24px;}
+  .invoice-footer                                   { flex-direction: column; gap: 12px;}
+}    
+
+@media (max-width: 575px){
+  /* typography  */
+  body                                  { font-family: 'Noto Sans', sans-serif; }
+  h1                                    { margin-bottom: 16px; font-size: 30px; line-height: 48px; }
+  h2                                    { font-size: 26px; line-height: 36px; }
+  h3                                    { margin-bottom: 8px; font-size: 24px; line-height: 34px; }
+  h4                                    { font-size: 20px; line-height: 30px; }
+  h5                                    { font-size: 20px; line-height: 30px; }
+  h6                                    { font-size: 16px; line-height: 26px; }
+  p, .content-description a, ul li      { font-size: 14px; line-height: 22px; }
+  .p-small,a,input,.common-btn            { font-size: 14px; line-height: 20px;}
+  .common-btn                             { padding: 6px 16px; font-size: 16px; line-height: 22px;  }
+  /* header  */
+  header                                  { padding: 20px 0;}
+  .sticky                                 { padding: 18px 0;}
+  .navbar-brand                           { max-width: 113px;}
+  .mobile-nav .common-btn                 { margin-right: 2px; padding: 6px 8px; font-size: 13px; line-height: 19px;}
+  .navbar .common-btn svg                 { margin-left: 8px;}
+  .navbar-toggler-icon                    { font-size: 24px; line-height: 30px;}
+  .navbar form .input-group               { margin-left: 0;}
+  .mobile-search                          { top: 78px;}
+  .user-btn                               { padding: unset; width: 34px; }
+  /* banner  */
+  .mountain-bg                            { height: 53%;}
+  .banner-content .nav-img                { margin-top: 24px;}
+  .nav-img img                            { max-width: 100px;}
+  /* fixed price  */
+  .fixed-price                                  { padding: 32px 0 42px;}
+  .auction                                      { padding: 32px 0 64px;}
+  .mobile-responsive .view-btn                  { display: none; }
+  .fixed-price .view-btn.responsive             { margin-top: 24px; margin-inline: auto; display: block; }
+  .section-head                                 { margin-bottom: 24px; }
+  .card-wrapper>div:nth-child(n+2)              { margin-top: 26px; } 
+  .fixed-price-card                             { padding: 14px; max-width: 380px; margin-inline: auto; }
+  .fixed-price-card .card-footer:last-child     { padding: 6px 6px 6px 10px;}
+  /* footer  */
+  footer                                        { padding: 20px 0;}
+  .footer-nav li:not(:last-child)               { margin-right: 20px; }
+  footer li, footer p                           { font-size: 12px; line-height: 20px;}
+  footer .container                             { flex-direction: column; justify-content: center; }
+  .footer-nav                                   { flex-direction: column;}
+  .footer-nav li:not(:last-child)               { margin-bottom: 20px; margin-right: 0; }
+  .footer-nav                                   { margin-bottom: 40px;} 
+  .banner-inner                                 { min-height: 595px}
+  .fixed-price-card h6                          { margin-bottom: 4px;}
+  /* common page  */
+  .common-page                                  { padding: 158px 0 70px;}
+  /* explore-collection-details  */
+  .collection-content h2                        { margin-bottom: 12px;}
+  .collection-img                               { margin-inline: auto; margin-bottom: 20px; }
+  .collection-cards                             { padding: 70px 0 0;}
+  .collection-banner>div                        { width: 100%;}
+  /* nft-detail-buy-now */
+  /* .buy-now-img                                  { padding: 57px 10px;} */
+  .author-detail                                { margin-bottom: 18px; }
+  .buy-now-detail                               { margin-top: 24px;}
+  .buy-now-head                                 { padding-bottom: 18px;}
+  .buy-now-content                              { padding-top: 18px;}
+  .buy-detail-wrapper                           { margin-bottom: 40px;}
+  .description-block h5                         { margin-bottom: 32px;}
+  .description-block ul li:not(:last-child)     { margin-bottom: 16px;}
+  .description-block                            { padding: 16px;}
+  .content-group                                { flex-wrap: wrap;}
+  .content-group .buy-title,
+  .content-group .content-description           { width: 100%;}
+  .buy-title                                    { margin-bottom: 6px;}
+  .content-description p                        { font-size: 16px; line-height: 22px; }
+  .buy-title span                               { display: none;}
+  .content-group .content-description           { padding-left: 0px;}
+  .content-description a,
+  .content-description p                            { word-break: break-all; }
+  .buy-now-content>.content-group:not(:last-child)  { margin-bottom: 22px; }
+  /* nft-detail-bid-now page  */
+  .bid-table                                    { padding-top: 50px;}
+  /* mynft page  */
+  .custom-nav               { margin-bottom: 32px;}
+  .custom-nav .nav-link     { font-size: 16px; line-height: 26px; padding: 12px 30px;}
+  /* common-modal style  */
+  .common-modal                 { margin-inline: auto;}
+  .common-modal hr              { margin: 18px 0;}
+  .withdraw-modal .metamask-img { width: 80px; }
+  /* invoice page  */
+  .invoice-contacts           { flex-direction: column; gap: 8px;}
+  .invoice-header             { padding: 0 16px 0 16px;}
+  .invoice-body               { padding: 0 24px;}
+  .invoice-description        { padding: 26px 0;}
+  .invoice-content-wrapper    { padding: 26px 0 40px;}
+  .invoice-content-wrapper .buy-now-img { width: 100%; display: flex;}
+  .follow-us  li a                          {width: 40px ;  height: 40px;}
+  .follow-us li:not(:last-child)            {margin-right: 12px;}
+  .follow-us ul                             {padding: 0px;}
+  /* common- modal  */
+  .modal-img { max-width: 100px; }
+  /* nft-detail-buy-now  */
+  .buy-now-img                                  { margin-inline: auto; padding-top: 97.725%; width: 97.725%; }
+}
+
+@media (max-width: 767px){
+  .serach-tag                               {margin-bottom: 16px;}
+  .tag                                      {padding: 10px;}
+  .filter-content                           { display: none; }
+  .filter-icon svg                          { display: block;}
+  .filter-dropdown                          { display: flex;}
+  .mobile-filter-block>span                 { display: block; margin-bottom: 12px;}
+  .filter-mobile-list                       { padding-left: 0; padding-bottom: 14px; margin: 0; border-bottom: 1px solid #132A3F;  }
+  .filter-mobile-list li                    { display: flex; align-items: center;}
+  .filter-mobile-list li:not(:last-child)   { margin-bottom: 16px;}
+  .filter-mobile-list li .jcf-radio         { margin-right: 8px;}
+
+  .filter-mobile-list li                            { font-size: 16px; line-height: 22px; font-weight: 500;}
+  .filter-mobile-list .jcf-radio                    { width: 20px; height: 20px; display: block;}
+  /* .filter-mobile-list .jcf-radio.jcf-checked span { width: 4px; height: 4px;} */
+  .filter-mobile-list .jcf-radio span               { background: black; top: 2px; left: 2px; right: 2px; bottom: 2px; display: block;}
+  .filter-mobile-list .jcf-radio.jcf-checked span   { top: 5px; left: 5px; right: 5px; bottom: 5px;}
+  .filter-mobile-list .jcf-focus                    { border-color: white !important;}
+
+  .mobile-filter-block.status               { padding-top: 24px; }
+  .mobile-filter-block .filter-mobile-list  { padding-bottom: 18px; }
+  .check-collection                         { padding: 24px 0 32px; }
+  .check-collection .filter-mobile-list     { border-bottom: 0; padding-bottom: 0;}
+  .check-collection ul                      { display: flex; justify-content: space-between; flex-wrap: wrap; }
+  .check-collection li                      { width: calc(100%/2 - 5px);}
+  .check-collection li:nth-last-child(-n+2) { margin-bottom: 0;}
+  .mobile-btn-group                         { display: flex; align-items: center; gap: 23px; }
+  .mobile-btn-group .common-btn             { padding: 6px 16px; min-width: 160px; border-radius: 8px; background: #00E2EB; color: #0D1E2C; }
+  .mobile-btn-group .common-btn.view-btn    { border: 2px solid #1C3F5F; background: transparent; color: #00E2EB;}
+  .filter-content-mobile                    { display: block;     position: fixed; top: 0; left: 0; transform: translateX(-100%); padding: 18px; background: #071018; height: 100%; z-index: 999; overflow: scroll; transition: all 0.5s;}
+  .filter-content-mobile.slide-left         { transform: translateX(0); width: 100%; }
+  /* .custom-pagination ul                     { padding-left: 0; justify-content: center;} */
+  /* .custom-pagination a                      { width: 32px;} */
+  .dynamic-pagination                                     { padding-left: 0; justify-content: center; }
+  .dynamic-pagination .page-link,.dynamic-pagination span { width: 32px; }
+  /* collection card in explore page  */
+  .explore-page .collection-cards { padding-top: 0;}
+  .common-page.explore-page       { padding-bottom: 62px;}
+  .wrap-icon .common-btn          { display: block;}
+  /* mynft page  */
+  .common-btn.my-nft-btn    { padding: 10px 14px; }
+  .modal-btn                { padding: 10px 20px;}
+  .common-modal hr          { margin: 18px 0;}
+  .metamask-img             { width: 90px; margin-bottom: 20px; }
+  /* nft-detail-fixed-price-new  */
+  .invoice-btn              { margin-top: 24px; }
+  .remove-table             { margin-top: 20px; }
+  /* invoice page  */
+  .invoice-description>div:nth-child(n+2)   { margin-top: 24px;}
+  .invoice-header .section-head             { padding: 18px 0;}
+  .invoice-description                      { padding: 30px 0;}
+  .buy-detail-wrapper                       { flex-direction: column;}
+  .invoice-content-wrapper .buy-now-content { padding-left: 0;}
+  .invoice-content-wrapper .buy-now-detail  { margin-top: 32px;}
+  .invoice-content-wrapper p                { font-size: 14px; line-height: 22px;}
+  .invoice-content-wrapper .buy-now-content>.content-group:not(:last-child) { margin-bottom: 20px;}
+  /* edit-profile page  */
+  .page-title                           { margin-bottom: 28px;}
+  .edit-profile-form>div:nth-child(n+2) { margin-top: 24px;}
+  .edit-profile-form .modal-btn         { margin-top: 28px;}
+  /* my wallet page  */
+  .wallet-box                                     { padding: 16px; flex-direction: column; gap: 22px;}
+  .wallet-box-wrapper                             { width: 100%; gap: 26px;}
+  .wallet-box-wrapper .wallet-block               { width: 50%; text-align: center;}
+  .wallet-box-wrapper .wallet-block:first-child   { width: 50%;}
+  .wallet-box-wrapper .wallet-block:last-child    { padding-left: 0;}
+  .wallet-btn-wrap                                { gap: 20px;}
+  /* faq page  */
+  .faq-page .page-title           { margin-bottom: 32px; }
+  .faq-page .border-btm::after    { bottom: -12px; }
+  .custom-accordion .accordion-button:not(.collapsed)::after,
+  .custom-accordion .accordion-button::after                    { width: 16px; }
+  /* contact-us page  */
+  .contact-us-block svg           { padding-top: 5px; width: 18px; height: 18px; }
+  .contact-us-page .border-btm::after { bottom: -8px;} 
+}
+
+@media (max-width: 375px){
+  .mobile-btn-group             { gap: 15px; }
+  .mobile-btn-group .common-btn { min-width: 135px; }
+  .wrap-icon .common-btn        { padding: 6px 14px; font-size: 14px; line-height: 20px;}
+}
+
+@media (max-width: 1399px){
+  .filter-icon svg  { display: block;}
+  .custom-btn-grp,
+  .first-part { display: none;}
+  .filter-content-mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    padding: 18px;
+    background: #071018;
+    height: 100%;
+    z-index: 999;
+    overflow: scroll;
+    transition: all 0.5s;
+}
+.filter-content-mobile.slide-left {
+  transform: translateX(0);
+  width: 100%;
+}
+.filter-dropdown { display: flex;}
+.mobile-btn-group { display: flex; align-items: center; gap: 12px;}
+}

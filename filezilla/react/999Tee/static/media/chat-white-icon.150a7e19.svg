@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 4</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="09.0_Project-Artwork-Deatils" transform="translate(-1656.000000, -424.000000)">
+            <g id="chat" transform="translate(1636.000000, 416.000000)">
+                <g id="Group-4" transform="translate(20.000000, 8.000000)">
+                    <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="24" height="24"></rect>
+                    <g id="Group" transform="translate(4.000000, 4.571429)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.68">
+                        <path d="M4,4 L4,11.2 C4,11.64 4.36,12 4.8,12 L12.8,12 L16,15.2 L16,4 C16,3.56 15.64,3.2 15.2,3.2 L4.8,3.2 C4.36,3.2 4,3.56 4,4 Z" id="Path"></path>
+                        <path d="M4,4 C4,3.56 4.36,3.2 4.8,3.2 L12,3.2 L12,0.8 C12,0.36 11.64,0 11.2,0 L0.8,0 C0.36,0 0,0.36 0,0.8 L0,8 C0,8.44 0.36,8.8 0.8,8.8 L4,8.8 L4,4 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

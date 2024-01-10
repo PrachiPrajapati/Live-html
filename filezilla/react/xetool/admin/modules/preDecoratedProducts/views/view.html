@@ -1,0 +1,218 @@
+<div class="container-fluid" ng-controller="preDecoratedProductCtrl">
+    <div class="row" ng-init="init()">
+        <div class="col-sm-12">
+            <ng-include src="'modules/preDecoratedProducts/views/partials/addPreDecoratedProduct.html'"
+                ng-show="isAddViewActive">
+            </ng-include>
+            <ng-include src="'modules/preDecoratedProducts/views/partials/addNewVariant.html'" ng-show="isNewColor">
+            </ng-include>
+            <div class="panel panel-default" ng-hide="isAddViewActive">
+                <div class="panel-heading separator">
+                    <div class="w-full">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="m-r-10 pull-left">
+                                    <button type="button" class="btn btn-info btn-sm btn-cons" ng-click="refreshList()">
+                                        <i class="fa fa-refresh" aria-hidden="true">
+                                        </i>
+                                        <span>
+                                            <xe-translate text-value="Refresh">
+                                            </xe-translate>
+                                        </span>
+                                    </button>
+                                    <i class="fa fa-info-circle info-module-icon m-l-10" ng-click="showProductFaqDetails(1)"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div style="display: flex; justify-content: flex-end; align-items: center;">
+                                    <div class="m-r-10">
+                                        <input type="text" placeholder="Enter search tag" style="width:150px"
+                                            class="input-sm form-control pull-left m-r-10" name="start" id="searchId"
+                                            pg-form-group="" ng-model="searchValue"
+                                            ng-keypress="searchPrredecoOnKeyUp($event,searchValue)" />
+                                        <div class="pull-left">
+                                            <button type="button" class="btn btn-default btn-sm" id="searchBtn"
+                                                ng-click="searchPrredecoOnKeyUp('',searchValue)">
+                                                <span>
+                                                    <xe-translate text-value="Search">
+                                                    </xe-translate>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body m-t-20">
+                    <!--preloader-->
+                    <div class="row">
+                        <div class="col-lg-12 bg-white" ng-show="preloader">
+                            <div class="product-wrap-height">
+                                <div class="panel-body text-center">
+                                    <img class="image-responsive-height demo-mw-50 page-loader"
+                                        src="assets/img/demo/progress.svg" alt="Progress" />
+                                    <span class="loader-label">
+                                        <xe-translate text-value="Loading">
+                                        </xe-translate>
+                                        ...
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 col-xs-6" ng-hide="preloader" id="preProductGallery"
+                            ng-repeat="data in decoratedProductList" ng-if="decoratedProductList.length> 0">
+                            <div class="gallery-box pos-rlt w-full">
+                                <label class="no-margin cursor-pointer w-full" for="{{ data.id }}">
+                                    <div class="d-p-group w-full">
+                                        <div class="top">
+                                            <div class="content">
+                                                <div class="top-double">
+                                                </div>
+                                                <div><button class="btn btn-success btn-sm" ng-model="tempCheck[$index]"
+                                                        ng-click="editTemplate(true,$index)"><span>
+                                                            <xe-translate text-value="Edit Product">
+                                                            </xe-translate>
+                                                        </span></button></div>
+                                                <div><button class="btn btn-blue btn-sm"
+                                                        ng-click="addAsProduct(true,$index)"><span>
+                                                            <xe-translate text-value="Add As Product">
+                                                            </xe-translate>
+                                                        </span></button></div>
+                                                <div><button class="btn btn-danger btn-sm"
+                                                        ng-click="deleteTemplate(true,$index)"><span>
+                                                            <xe-translate text-value="Delete">
+                                                            </xe-translate>
+                                                        </span></button></div>
+                                            </div>
+                                            <img ng-src="{{data.template_image_json[0]}}" class="p-img">
+                                        </div>
+                                        <div class="btm">
+                                                {{data.name}}
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <span ng-if="decoratedProductList.length == 0">
+                            <p class="font-normal text-lg text-center product-wrap-height">
+                                <xe-translate text-value="Template Not found">
+                                </xe-translate>
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <div ng-show="isLoadMore" class="panel-footer text-center b-t-none">
+                    <button type="button" class="btn btn-default btn-sm btn-cons from-top" ng-click="loadMore()"
+                        ng-show="isLoadMore" ng-disabled="isLoadMorePreloader">
+                        <span>
+                            <xe-translate text-value="Load More">
+                            </xe-translate>
+                        </span>
+                    </button>
+                    <img class="image-responsive-height demo-mw-30 "
+                        src="assets/img/progress/progress-circle-master.svg" alt="Progress"
+                        ng-show="isLoadMorePreloader" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-include src="'modules/preDecoratedProducts/doc/pd01.html'">
+    </ng-include>
+    <ng-include src="'modules/preDecoratedProducts/views/partials/editPreDeco.html'">
+    </ng-include>
+</div>
+<style>
+    .decorated-products h5 {
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .d-p-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .d-p-group .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 165px;
+        background-color: #fff;
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .d-p-group .top img {
+        max-width: 100%;
+        max-height: 100%;
+        min-height: 100%;
+    }
+
+    .d-p-group .top .content {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px !important;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: .3s ease;
+    }
+
+    .d-p-group .top:hover .content {
+        opacity: 1;
+    }
+
+    .d-p-group .top .content .top-double {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .d-p-group .top .content .top-double .icon {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .d-p-group .btm {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #646a7e;
+    }
+
+    .btn-blue,
+    .btn-blue:focus {
+        color: #ffffff;
+        background-color: #4d88fc;
+        border-color: #4d88fc;
+    }
+
+    .btn-blue.hover,
+    .btn-blue:hover,
+    .open .dropdown-toggle.btn-blue {
+        background-color: #3876f0;
+        border-color: #3876f0;
+        color: #ffffff;
+    }
+</style>

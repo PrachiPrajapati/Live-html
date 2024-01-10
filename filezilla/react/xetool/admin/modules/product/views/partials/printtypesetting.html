@@ -1,0 +1,103 @@
+<!-- <div class="row">
+    <div class="col-sm-6">
+        <div class="checkbox check-info" ng-repeat="printmthd in printMthdList1">
+            <input type="checkbox" id="printmthd_{{ printmthd.id }}" ng-model="status1"
+                ng-change="changePrintMethod(status1,printmthd)" ng-checked="printmthd.status"
+                ng-disabled="printmthd.fetched_from == 'category'" />
+            <label for="printmthd_{{ printmthd.id }}" ng-class="{'disabled':printmthd.fetched_from=='category'}">
+                {{ printmthd.name }}
+                <span ng-show="printmthd.fetched_from == 'category'">
+                    (
+                    <xe-translate text-value="Category">
+                    </xe-translate>
+                    )
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="checkbox check-info" ng-repeat="printmthd in printMthdList2">
+            <input type="checkbox" id="printmthd_{{ printmthd.id }}" ng-model="status2"
+                ng-change="changePrintMethod(status2,printmthd)" ng-checked="printmthd.status"
+                ng-disabled="printmthd.fetched_from == 'category'" />
+            <label for="printmthd_{{ printmthd.id }}" ng-class="{'disabled':printmthd.fetched_from=='category'}">
+                {{ printmthd.name }}
+                <span ng-show="printmthd.fetched_from == 'category'">
+                    (
+                    <xe-translate text-value="Category">
+                    </xe-translate>
+                    )
+                </span>
+            </label>
+        </div>
+    </div>
+</div> -->
+
+<div class="printing-profile-section">
+   <div class="p-p-one" ng-repeat="printmthd in printMthdList1">
+        <div class="checkbox">
+            <input type="checkbox" id="printmthd_{{ printmthd.id }}" ng-model="status1"
+                ng-change="changePrintMethod(status1,printmthd)" ng-checked="printmthd.status">
+            <label for="printmthd_{{ printmthd.id }}">
+                {{ printmthd.name }}
+                <span ng-show="printmthd.fetched_from == 'category'">
+                    (
+                    <xe-translate text-value="Category">
+                    </xe-translate>
+                    )
+                </span>  
+            </label>
+        </div>
+    </div>  
+    <div class="p-p-one" ng-repeat="printmthd in printMthdList2">
+        <div class="checkbox">
+            <input type="checkbox" id="printmthd_{{ printmthd.id }}" ng-model="status2"
+                ng-change="changePrintMethod(status2,printmthd)" ng-checked="printmthd.status"
+                ng-disabled="printmthd.fetched_from == 'category'">
+            <label for="printmthd_{{ printmthd.id }}" ng-class="{'disabled':printmthd.fetched_from=='category'}">
+                {{ printmthd.name }}
+                <span ng-show="printmthd.fetched_from == 'category'">
+                    (
+                    <xe-translate text-value="Category">
+                    </xe-translate>
+                    )
+                </span>
+            </label>
+        </div>
+    </div>
+</div>
+
+<div class="printing-profile-section down" ng-show="sidewisePrintSheetAssign">
+      <div class="size_cust">
+        <div class="d-a-type">
+            <xe-translate text-value="Select Paper Size">
+            </xe-translate>
+        </div>
+        <div>
+            <button type="button" class="btn btn-default text-ellipsis text-left custom-icon dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #f8f8f8;">
+                <b>{{selectedPaperSize}}</b>
+            </button>
+    
+            <ul class="dropdown-menu full-width" role="menu" ng-class="{'button-scroll':allPagesList.length> 4}" style="width: calc(100% - 30px);height:100px;">
+                <li ng-repeat="page in allPagesList" ng-click="selectPrintPaperSize($index)">
+                    <a href="">
+                        {{page.name}}
+                    </a>
+                </li>
+            </ul>
+        </div>    
+    </div>
+    <div class="indentSec noAfter p-t-10 p-b-10">
+        <div class="dFlex alignCenter justify-left">
+            <div class="addLink" ng-click="openCustomPaperSizeSetting()">
+                <i class="fa fa-plus"></i>
+                <xe-translate text-value="Create custom paper size">
+                </xe-translate>
+            </div>
+            <!-- <div class="infoLink" ng-click="showProductFaqDetails(1)">
+                <i class="fa fa-info-circle ng-scope info-module-icon"></i>
+            </div> -->
+        </div>
+    </div>
+    </div>

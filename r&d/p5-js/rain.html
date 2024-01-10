@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js rain</title>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="js/p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+  </head>
+  <body>
+      <script type="text/javascript">
+        class Drop{
+        constructor(){
+        this.x = random(width);
+        this.y = random(-100, -300);
+        this.yspeed = random(4, 10);
+        } 
+
+        fall(){
+          this.y = this.y + this.yspeed;
+          // this.yspeed = this.yspeed + 0.02;
+          if (this.y > height){
+            this.y = random(-100, -300);
+          }
+        }
+
+        show(){
+          var trans = (height - this.y) / height ;
+          stroke('rgba(255,255,255,' + trans + ')');
+          strokeWeight(2);
+          line ( this.x, this.y, this.x, this.y + 10);
+        }
+      }
+
+      var drops = new Array(500);
+
+      function setup() {
+        createCanvas(1920, 970);
+        for(var i = 0; i < drops.length; i++){
+          drops[i] = new Drop();
+        }
+      } 
+
+      function draw() {
+        background(0);
+        for(var i = 0; i < drops.length; i++){
+        drops[i].fall();
+        drops[i].show();
+        }
+      }  
+      </script>
+  </body>
+</html>

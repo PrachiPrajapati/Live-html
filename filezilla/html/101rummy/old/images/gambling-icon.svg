@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="71px" height="73px" viewBox="0 0 71 73" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <g id="gambling">
+    <g id="Group" transform="translate(9.703125 0)">
+      <path d="M21.1375 0L0 56.7221L19.6408 64.0413L31.7929 38.6641L40.7784 7.31925L21.1375 0Z" transform="translate(0.05667188 0)" id="Path" fill="#FE4400" stroke="none" />
+      <path d="M0 0L60.5256 0L60.5256 20.9579L0 20.9579L0 0Z" transform="matrix(0.3490402 -0.9371077 0.9371077 0.3490402 19.69199 64.03664)" id="Path" fill="#FE4400" stroke="none" />
+    </g>
+    <g id="Group" transform="translate(19.6875 11.67188)">
+      <path d="M13.9977 3.04087L0 40.6032L12.339 45.2014L21.1421 26.1222L28.143 2.79183L20.6512 0C18.0529 1.18744 16.5961 1.8533 13.9977 3.04087Z" transform="translate(0.04078125 0.0118125)" id="Path" fill="#FFFFFF" stroke="none" />
+      <path d="M23.9358 3.03033L15.804 0L0 42.4097L8.13178 45.44C10.3871 44.4092 11.6515 43.8314 13.9068 42.8006L26.5752 8.80552C25.5444 6.55017 24.9666 5.28567 23.9358 3.03033Z" transform="translate(12.37992 2.8035)" id="Path" fill="#FFFFFF" stroke="none" />
+    </g>
+    <g id="Group" transform="translate(0 11.39063)">
+      <path d="M0 1.9984e-15L0 60.5326L20.9603 60.5326L23.4859 32.5094L20.9603 0L0 1.9984e-15Z" transform="translate(0.1334531 0.07678125)" id="Path" fill="#FDBB1C" stroke="none" />
+      <path d="M0 0L20.9603 0L20.9603 60.5326L0 60.5326L0 0Z" transform="translate(21.09375 0.07678125)" id="Path" fill="#FDBB1C" stroke="none" />
+    </g>
+    <path d="M10.1767 1.74347C7.85162 -0.581203 4.06853 -0.581203 1.74371 1.74375C-0.581238 4.0687 -0.581238 7.85166 1.74371 10.1766L11.0209 19.4536L13.2678 10.3212L11.0209 2.58778L10.1767 1.74347Z" transform="translate(10.07286 32.72656)" id="Path" fill="#E02020" stroke="none" />
+    <path d="M0 0L4.22058 0L4.22058 4.2203L0 4.2203L0 0Z" transform="translate(7.004953 18.27832)" id="Path" fill="#FFFFFF" stroke="none" />
+    <path d="M0 0L4.22058 0L4.22058 4.2203L0 4.2203L0 0Z" transform="translate(30.68058 60.72192)" id="Path" fill="#FFFFFF" stroke="none" />
+    <path d="M9.27717 1.74656C8.1509 0.620297 6.65353 0 5.06067 0C3.46809 0 1.97058 0.620297 0.844312 1.74656L0 2.59073L0 19.4566L9.27717 10.1794C11.6021 7.85461 11.6021 4.07166 9.27717 1.74656Z" transform="translate(21.09375 32.72363)" id="Path" fill="#E02020" stroke="none" />
+  </g>
+</svg>

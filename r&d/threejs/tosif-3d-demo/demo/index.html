@@ -1,0 +1,884 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>::- 3d Model Demo -::</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="http://webprojects.cloud/r&d/threejs/tosif-3d-demo/uploads/style.css"> -->
+
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+    <div id="container"> -->
+        <!-- An aside -->
+        <!-- This is for holding the 3D object -->
+        <!-- <div class="demo-wrap">
+            <model-viewer src="http://webprojects.cloud/r&d/threejs/tosif-3d-demo/uploads/Pillow.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="http://webprojects.cloud/r&d/threejs/tosif-3d-demo/uploads/Pillow.glb">
+            </model-viewer>
+        </div> -->
+    <!-- </div>
+</body> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link asnyc rel="stylesheet" media="screen" href="http://webprojects.cloud/r&d/threejs/tosif-3d-demo/theme.min.css">
+<style>
+        body {
+            margin: 0em;
+            padding: 0;
+            font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
+            color: #244376;
+            background-color: transparent;
+        }
+        #card {
+            margin: 0em auto;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            border-radius: 0px;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+        model-viewer {
+            width: 100%;
+            height: 100%;
+        }
+        #progress {
+            position: absolute;
+            width: calc(100% / 3);
+            height: 3px;
+            color: rgba(236, 212, 93, 0.75);
+            box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.25);
+            border: 1px solid currentColor;
+            border-radius: 10px;
+            top: calc(50% - 5px);
+            left: calc(50% - 100% / 6);
+            opacity: 0;
+            transition: opacity 0.3s 0.3s;
+        }
+
+        #progress.show {
+            transition-delay: 0s;
+            opacity: 1;
+        }
+
+        #progress > .bar {
+            width: 100%;
+            height: 100%;
+            background-color: currentColor;
+            transform-origin: top left;
+            transform: scaleX(0);
+        }
+
+        .Hotspot {
+            background: #fff;
+            border-radius: 16px;
+            border: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            cursor: pointer;
+            height: 16px;
+            padding: 2px;
+            position: relative;
+            transition: opacity 0.3s;
+            width: 16px;
+        }
+
+        .Hotspot:not([data-visible]) {
+            background: transparent;
+            border: 2px solid #fff;
+            box-shadow: none;
+            height: 16px;
+            pointer-events: none;
+            width: 16px;
+        }
+
+        .Hotspot:focus {
+            border: 2px solid rgb(0, 128, 200);
+            height: 16px;
+            outline: none;
+            width: 16px;
+        }
+
+        .Hotspot > * {
+            opacity: 1;
+            transform: translateY(-50%);
+        }
+
+        .HotspotAnnotation{
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            color: rgba(0, 0, 0, 0.8);
+            display: block;
+            font-family: Futura, Helvetica Neue, sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            left: calc(100% + 1em);
+            max-width: 128px;
+            overflow-wrap: break-word;
+            padding: 0.5em 1em;
+            position: absolute;
+            top: 50%;
+            width: max-content;
+        }
+
+        .Hotspot:not([data-visible]) > * {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(calc(-50% + 4px));
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .slider {
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+            position: absolute;
+            bottom: 8px;
+        }
+
+        .slider-top {
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+            position: absolute;
+            top: 8px;
+        }
+
+        .slider-left {
+            width: 100%;
+            text-align: left;
+            overflow: hidden;
+            position: absolute;
+            top: 8px;
+        }
+
+        .slider-right {
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+            position: absolute;
+            top: 8px;
+            left: 80%;
+        }
+
+        .product-gallery-thumblist-item {
+            display: block;
+            position: relative;
+            width: 3.2rem;
+            height: 3.2rem;
+            margin: 0.75rem;
+            -webkit-transition: border-color 0.2s ease-in-out;
+            transition: border-color 0.2s ease-in-out;
+            border: 0.5px solid #E4E6EF;
+            border-radius: 0.65rem;
+            text-decoration: none !important;
+            overflow:hidden;
+        }
+
+        .product-gallery-thumblist-item.active{
+            border: 2.0px solid;
+        }
+
+        .ar-button {
+            background-color: unset;
+            border-radius: 4px;
+            border: none;
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+        }
+
+        .ar-button-top {
+            background-color: unset;
+            border-radius: 4px;
+            border: none;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+
+        .ar-button-left {
+            background-color: unset;
+            border-radius: 4px;
+            border: none;
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+        }
+
+        .hide{
+            display: none;
+        }
+        /* This keeps child nodes hidden while the element loads */
+        :not(:defined) > * {
+            display: none;
+        }
+
+    </style>
+<script type="module" src="https://modelviewer.dev/node_modules/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+<div>
+<div id="card">
+<model-viewer class="d-flex" id="iframe-viewer" src="http://webprojects.cloud/r&d/threejs/tosif-3d-demo/uploads/Pillow.glb" poster="http://webprojects.cloud/r&d/threejs/tosif-3d-demo/uploads/brand-logo1.jpg" reveal="manual" loading="eager" rel="ar" ar camera-controls ar-placement="floor" ar-scale="auto" ar-modes="webxr scene-viewer quick-look fallback" quick-look-browsers="safari chrome" environment-image="neutral" background-color="#70BCD1" shadow-intensity="0" alt="Converted 3D Model by CartMagician.com">
+<button slot="ar-button" class="ar-button-top" id="cmArButton">
+<!-- <img class="size-full" src="/assets/hotlink-ok/SVG/cartmagician-AR-badge.svg" alt="Activate AR" width="32" height="32" /> -->
+</button>
+<div id="progress" slot="progress-bar">
+<div class="bar"></div>
+</div>
+<div class="ps-2" id="iFrameModelSwitcher">
+<div id="colourVariants" class="d-none d-flex">
+<div class="d-none fs-sm mb-2">
+<span class="fw-medium text-heading">Choose color - </span>
+<span class="ms-1" id="colorOptionText">Blue</span>
+</div>
+</div>
+<div id="textureVariantsContainer" class="d-none d-flex product-gallery-thumblist">
+<p class="d-none">Texture variants</p>
+</div>
+<div id="productVariants" class="d-none d-flex product-gallery-thumblist">
+<p class="d-none">Product variants</p>
+<a id="baseProductModel" class="product-gallery-thumblist-item active" onclick="switchSrc(this, 'Default')" data-src="http://webprojects.cloud/r&d/threejs/tosif-3d-demo/uploads/Pillow-1.glb" data-poster="http://webprojects.cloud/r&d/threejs/tosif-3d-demo/uploads/brand-logo2.jpg">
+<img id="baseProductPoster" src="http://webprojects.cloud/r&d/threejs/tosif-3d-demo/uploads/" alt="Product thumb" />
+</a>
+</div>
+<div id="hotspotsControl" class="d-none d-flex">
+<label class="custom-control-label" for="show-hotspots">Show Hotspots: </label>
+ <input id="show-hotspots" type="checkbox" class="form-check-input" checked="true">
+</div>
+<div id="animationControl" class="d-none d-flex" data-bs-toggle="tooltip" data-bs-trigger="manual" data-bs-placement="top" title="Model has no animation">
+<label class="custom-control-label" for="playAnimation">Play Animation: </label>
+<input id="playAnimation" type="checkbox" class="form-check-input">
+</div>
+</div>
+</model-viewer>
+</div>
+</div>
+<script>
+
+    (function () {
+        let presetBaseColor = [
+            {material: -1, value: ''},
+        ]
+        let presetTexture = [
+            {material: -1, value: ''},
+        ]
+
+        window.addEventListener("DOMContentLoaded", function() {
+
+            function displayMessage (evt) {
+                var message;
+                var actionType;
+                var messageDecode;
+                var targetMaterial;
+                var newSettingValue;
+                message = "I got " + evt.data + " from " + evt.origin;
+                messageDecode = evt.data.split("#");
+                targetMaterial = messageDecode[1];
+                newSettingValue = messageDecode[2];
+                //console.log('[iframe] ' + message);
+                //const base = "../../assets/ShopifyModels/" + name;
+                // Decode message type for action
+                if (message.indexOf('cmColourVariant') !== -1) {
+                    actionType = 'colourVariant';
+                } else if (message.indexOf('cmTextureVariant') !== -1) {
+                    actionType = 'textureVariant';
+                } else if (message.indexOf('cmModelVariant') !== -1) {
+                    actionType = 'modelVariant';
+                } else if (message.indexOf('cmMaterialVisible') !== -1) {
+                    actionType = 'materialVisible';
+                } else if (message.indexOf('cmControlAnimation') !== -1) {
+                    actionType = 'animationControl';
+                } else {
+                    console.log('[displayMessage] Unhandling message: ' + message);
+                    actionType = 'unknown';
+                }
+                // Switch texture material
+                switch (actionType) {
+                    case 'colourVariant':
+                        changeMaterialBaseColourByValue(targetMaterial, newSettingValue)
+                        break;
+                    case 'textureVariant':
+                        //changeMaterialTexture(vr2Material, evt.data)
+                        //let textureUrl = evt.data.substr(17, evt.data.length-17)
+                        changeMaterialTextureByUrl(targetMaterial, newSettingValue)
+                        break;
+                    case 'modelVariant':
+                        //changeModelSource(evt.data)
+                        //let modelUrl = evt.data.substr(15, evt.data.length-15)
+                        let posterUrl = null
+                        changeModelSourceByUrl(newSettingValue, posterUrl)
+                        break;
+                    case 'materialVisible':
+                        changeMaterialVisibility(targetMaterial, newSettingValue)
+                        break;
+                    case 'animationControl':
+                        changeAnimationStatus(targetMaterial, newSettingValue) ;// 0: pause, 1: play
+                        break;
+                    default:
+                        console.log('[actionType] default')
+                        break;
+                }
+            }
+
+            function changeAnimationStatus(selectedAnimation, status) {
+                let availableAnimations = modelViewer.availableAnimations
+
+                if (modelViewer.loaded && availableAnimations.includes(selectedAnimation)) {
+                    modelViewer.animationName = selectedAnimation
+                    if (status === '1') {
+                        modelViewer.play()
+                    } else if (status === '0') {
+                        modelViewer.pause()
+                    } else {
+                        console.log('[changeAnimationStatus] unknown status control, ' + status)
+                    }
+                } else {
+                    console.log('[changeAnimationStatus] selected animation (' + selectedAnimation + ') not available, available: ' + availableAnimations)
+                }
+
+            }
+
+            function changeMaterialVisibility(modelMaterial, visible) {
+                let material = modelViewer.model.materials[modelMaterial]
+
+                if (modelViewer.loaded && material) {
+                    if (visible === '1') {
+                        material.pbrMetallicRoughness.setBaseColorFactor([1,1,1,1]); //visible
+                    } else {
+                        material.pbrMetallicRoughness.setBaseColorFactor([1,1,1,0]); // hide
+                    }
+                    console.log("[changeMaterialVisibility] material: " + modelMaterial + ", visibility: " + visible)
+                }
+            }
+
+            function changeMaterialBaseColourByValue(modelMaterial, colourRgb) {
+                let material = modelViewer.model.materials[modelMaterial]
+                var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(colourRgb);
+                var red = parseInt(result[1], 16) / 255; //red
+                var green = parseInt(result[2], 16) / 255; //green
+                var blue = parseInt(result[3], 16) / 255; //blue
+                var alpha = 1;
+                var colorString = red + ',' + green + ',' + blue + ',' + alpha;
+
+                const color = colorString.split(',')
+                    .map(numberString => parseFloat(numberString));
+
+                //console.log('[changeMaterialBaseColourByValue] modelViewer loaded: ' + modelViewer.loaded)
+                if (modelViewer.loaded && material) {
+                    material.pbrMetallicRoughness.setBaseColorFactor(color);
+                    console.log("[changeMaterialBaseColourByValue] colourRgb: " + colourRgb)
+                } else {
+                    // Push the setting to be applied after model is loaded
+                    // push the setting to be applied after model is loaded
+                    var settingFound = false
+                    presetTexture.forEach((setting) => {
+                        if (setting.material === modelMaterial) {
+                            // update current setting
+                            setting.value = textureUrl
+                            settingFound = true
+                        }
+                    })
+                    if (!settingFound) {
+                        // push new setting to the queue
+                        presetTexture.push({material: modelMaterial, value: colourRgb})
+                    }
+                    console.log('[changeMaterialBaseColour] undefined material ' + modelMaterial );
+                }
+            }
+
+            function changeMaterialBaseColour(modelMaterial, element) {
+                let material = modelViewer.model.materials[modelMaterial]
+                let colourElement = document.getElementById(element);
+                const opt = colourElement.dataset.color;
+                if (!opt) {
+                    console.log('[changeMaterialBaseColour] undefined colour setting')
+                    return;
+                }
+                var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(opt);
+                var red = parseInt(result[1], 16) / 255; //red
+                var green = parseInt(result[2], 16) / 255; //green
+                var blue = parseInt(result[3], 16) / 255; //blue
+                var alpha = 1;
+                var colorString = red + ',' + green + ',' + blue + ',' + alpha;
+
+                const color = colorString.split(',')
+                    .map(numberString => parseFloat(numberString));
+
+                if (material) {
+                    material.pbrMetallicRoughness.setBaseColorFactor(color);
+                } else {
+                    console.log('[changeMaterialBaseColour] undefined material ' + modelMaterial );
+                }
+            }
+
+            async function changeMaterialTextureByUrl(modelMaterial, textureUrl) {
+                let material = modelViewer.model.materials[modelMaterial]
+
+                if (modelViewer.loaded && material) {
+                    let baseColorTexture = material.pbrMetallicRoughness['baseColorTexture'];
+
+                    if (baseColorTexture.texture) {
+                        baseColorTexture.texture.source.setURI(textureUrl);
+                        console.log("[changeMaterialTextureByUrl] modelMaterial: " + modelMaterial + ", textureUrl: ")
+                    } else {
+                        // Creates a new texture.
+                        let texture = await modelViewer.createTexture(textureUrl);
+                        baseColorTexture.setTexture(texture);
+                        console.log('[changeMaterialTextureByUrl] create and apply new texture');
+                    }
+                } else {
+                    // push the setting to be applied after model is loaded
+                    var settingFound = false
+                    presetTexture.forEach((setting) => {
+                        if (setting.material === modelMaterial) {
+                            // update current setting
+                            setting.value = textureUrl
+                            settingFound = true
+                        }
+                    })
+                    if (!settingFound) {
+                        // push new setting to the queue
+                        presetTexture.push({material: modelMaterial, value: textureUrl})
+                    }
+                    //presetTexture[0] = {material: modelMaterial, value: textureUrl}
+                    console.log('[changeMaterialTextureByUrl] model not loaded, save the setting to apply later')
+                }
+            }
+
+            function changeMaterialTexture(modelMaterial, element) {
+                let material = modelViewer.model.materials[modelMaterial]
+                let baseColorTexture = material.pbrMetallicRoughness['baseColorTexture'];
+                let textureElement = document.getElementById(element);
+                if (baseColorTexture) {
+                    baseColorTexture.texture.source.setURI(textureElement.getAttribute('data-src'));
+                } else {
+                    console.log('[changeMaterialTexture] undefined material ' + modelMaterial );
+                }
+            }
+
+            function changeModelSourceByUrl(modelUrl, posterUrl=null) {
+                //console.log("[changeModelSourceByUrl] modelUrl: " + modelUrl)
+                modelViewer.src = modelUrl
+                modelViewer.poster = posterUrl
+            }
+
+            function changeModelSource(elementId) {
+                let modelElement = document.getElementById(elementId)
+                modelViewer.src = modelElement.getAttribute('data-src')
+                modelViewer.poster = modelElement.getAttribute('data-poster');
+                const slides = document.querySelectorAll(".product-gallery-thumblist-item");
+                slides.forEach((element) => {element.classList.remove("active");});
+                modelElement.classList.add("active");
+            }
+
+            if (window.addEventListener) {
+                // For standards-compliant web browsers
+                window.addEventListener("message", displayMessage, false);
+            }
+            else {
+                window.attachEvent("onmessage", displayMessage);
+            }
+
+            modelViewer.addEventListener('load', (event) => {
+                // Apply preset base colour
+                presetBaseColor.forEach((setting)=> {
+                    if (setting.material !== -1) {
+                        console.log('[applyPresetBaseColour] material:' + setting.material + ' value: ' + setting.value)
+                        changeMaterialBaseColourByValue(setting.material, setting.value)
+                    }
+                })
+                // clear the setting queue
+                presetBaseColor.splice(0, presetBaseColor.length)
+                // Apply preset texture
+                presetTexture.forEach((setting)=>{
+                    if (setting.material !== -1) {
+                        console.log('[applyPresetTexture] material:' + setting.material + ' value: ' + setting.value)
+                        changeMaterialTextureByUrl(setting.material, setting.value)
+                    }
+                })
+                // clear the setting queue
+                presetTexture.splice(0, presetTexture.length)
+
+                // Show model
+                setTimeout(function () {
+                    console.log('[modelViewer] finished setting up')
+                    modelViewer.dismissPoster();
+                }, 500)
+            })
+
+        }, false)
+
+        let modelViewer = document.getElementById('iframe-viewer');
+
+        // Model viewer loading progress
+        progress = document.querySelector('#progress');
+        bar = progress.querySelector('.bar');
+
+        modelViewer.addEventListener('progress', (event) => {
+            const {totalProgress} = event.detail;
+            progress.classList.toggle('show', totalProgress < 1);
+            bar.style.transform = `scaleX(${totalProgress})`;
+        });
+
+        let params = new URL(window.location.href).searchParams;
+        // CSS loading test
+        let cssUrl = params.get('css');
+        if ((cssUrl !== null) && (cssUrl !== undefined)) {
+            //console.log("css url: " + cssUrl);
+            // Load external CSS for iFrame
+            const new_style_sheet = document.createElement("link");
+            new_style_sheet.rel = "stylesheet";
+            new_style_sheet.href = cssUrl;
+            //console.log("document loaded: " + new_style_sheet);
+            document.head.appendChild(new_style_sheet);
+        }
+
+        //Switcher position
+        let switcherPos = params.get('swPos');
+
+        //let switcherDir = params.get('swDir');
+        let switchSlider = document.getElementById('iFrameModelSwitcher');
+        let arButton = document.getElementById('cmArButton');
+        switch (String(switcherPos)) {
+            case 'top':
+                switchSlider.classList.add('slider-top');
+                arButton.classList.remove('ar-button-top');
+                arButton.classList.add('ar-button');
+                break;
+            case 'left':
+                switchSlider.classList.add('slider-left');
+                arButton.classList.remove('ar-button-top');
+                arButton.classList.add('ar-button');
+                break;
+            case 'right':
+                switchSlider.classList.add('slider-right');
+                arButton.classList.remove('ar-button-top');
+                arButton.classList.add('ar-button-left');
+                break;
+            case 'none': // for API controlled mode
+                switchSlider.classList.add('d-none')
+                break;
+            default: // switcher bottom
+                switchSlider.classList.add('slider');
+                //arButton at bottom-right
+                break;
+        }
+
+        // Animation control
+        let animationControl = params.get('animation');
+        let animationControlBtn = document.getElementById('animationControl')
+        if ('1' === animationControl) {
+            animationControlBtn.classList.remove('d-none');
+        } else {
+            animationControlBtn.classList.add('d-none');
+        }
+
+        const playAnimationCheckbox = modelViewer.querySelector('#playAnimation');
+        playAnimationCheckbox.addEventListener('change', () => {
+            if (playAnimationCheckbox.checked) {
+                if (modelViewer.availableAnimations.length > 0) {
+                    modelViewer.play();
+                    console.log('[modelViewer] play animation ' + modelViewer.availableAnimations);
+                } else {
+                    //modelViewer.play();
+                    console.log('[modelViewer] model has no animation to play');
+                }
+            } else {
+                modelViewer.pause();
+                console.log('[modelViewer] pause animation');
+            }
+        });
+
+        // "Shadow on/off"
+
+        let modelShadow = params.get('shadow');
+        //console.log(params);
+        let textureVariants = params.get('textureVariants');
+        let modeVariant1 = params.get('vr1');
+        let vr1Type = params.get('vr1type');
+        let vr1Name = params.get('vr1name');
+        let vr1Material = params.get('vr1mat');
+        let vr1Opt1 = params.get('vr1opt1');
+        let vr1Opt2 = params.get('vr1opt2');
+        let vr1Opt3 = params.get('vr1opt3');
+        let vr1Opt4 = params.get('vr1opt4');
+        let modeVariant2 = params.get('vr2');
+        let vr2Type = params.get('vr2type');
+        let vr2Name = params.get('vr2name');
+        let vr2Material = params.get('vr1Txt');
+        let vr2Opt1 = params.get('vr2opt1');
+        let vr2Opt2 = params.get('vr2opt2');
+        let vr2Opt3 = params.get('vr2opt3');
+        let vr2Opt4 = params.get('vr2opt4');
+
+        modelViewer.setAttribute("shadow-intensity", modelShadow);
+
+
+        // Adding hotspots
+        let hotSpots = params.get('hotspots');
+        let hotspot1Position = params.get('hotspot1-position');
+        let hotspot1Normal = params.get('hotspot1-normal');
+        let hotspot1Label = params.get('hotspot1-label')
+        let hotspot2Position = params.get('hotspot2-position');
+        let hotspot2Normal = params.get('hotspot2-normal');
+        let hotspot2Label = params.get('hotspot2-label');
+        let hotspot3Position = params.get('hotspot3-position');
+        let hotspot3Normal = params.get('hotspot3-normal');
+        let hotspot3Label = params.get('hotspot3-label');
+        let hotspot4Position = params.get('hotspot0-position');
+        let hotspot4Normal = params.get('hotspot0-normal');
+        let hotspot4Label = params.get('hotspot0-label');
+        //console.log(hotspot1Label);
+        let hotSpotsOptions = [
+            {"position": hotspot1Position, "normal": hotspot1Normal, "label": hotspot1Label},
+            {"position": hotspot2Position, "normal": hotspot2Normal, "label": hotspot2Label},
+            {"position": hotspot3Position, "normal": hotspot3Normal, "label": hotspot3Label},
+            {"position": hotspot4Position, "normal": hotspot4Normal, "label": hotspot4Label}];
+
+        let hotspotControl = document.getElementById('hotspotsControl');
+
+        if ('1' === hotSpots) {
+            hotspotControl.classList.remove('d-none');
+            if ((switcherPos === 'left') || (switcherPos === 'right')) {
+                hotspotControl.classList.add('flex-column', 'align-items-start');
+            } else {
+                hotspotControl.classList.add('flex-row', 'justify-content-center');
+            }
+            hotSpotsOptions.forEach(function (opt, id) {
+                if ((opt.position != null) && (opt.position != 'undefined')) {
+                    var hotspot;
+                    //console.log(opt.label);
+                    if ((opt.label != null) && (opt.label != '') && (opt.label != 'undefined')) {
+                        hotspot =
+                            '<button class="Hotspot" slot="hotspot-' + id + '"\n' +
+                            'data-position="' + opt.position + '"\n' +
+                            'data-normal="' + opt.normal + '"\n' +
+                            'data-visibility-attribute="visible">\n' +
+                            '<div class="HotspotAnnotation">' + opt.label + '</div>\n' +
+                            '</button>\n';
+                    } else { //Hotspot without annotation
+                        hotspot =
+                            '<button class="Hotspot" slot="hotspot-' + id + '"\n' +
+                            'data-position="' + opt.position + '"\n' +
+                            'data-normal="' + opt.normal + '"\n' +
+                            'data-visibility-attribute="visible">\n' +
+                            '</button>\n';
+                    }
+
+                    modelViewer.insertAdjacentHTML("afterbegin", hotspot);
+                }
+            });
+        } else {
+            hotspotControl.classList.add('d-none');
+        }
+
+        const checkbox = modelViewer.querySelector('#show-hotspots');
+        checkbox.addEventListener('change', () => {
+            modelViewer.querySelectorAll('.Hotspot').forEach((hotspot) => {
+                if (checkbox.checked) {
+                    hotspot.classList.remove('hide');
+                } else {
+                    hotspot.classList.add('hide');
+                }
+            });
+        });
+
+        // Adding texture Variants
+        var variant3_select = document.getElementById('textureVariantsContainer')
+        if ('1' === textureVariants) {
+            variant3_select.classList.remove('d-none');
+            if ((switcherPos === 'left') || (switcherPos === 'right')) {
+                variant3_select.classList.add('flex-column');
+            } else { // top and bottom
+                variant3_select.classList.add('flex-row', 'justify-content-center');
+            }
+            let vr2Src1 = params.get('txt1');
+            let vr2Src2 = params.get('txt2');
+            let vr2Src3 = params.get('txt3');
+            let vr2Src4 = params.get('txt4');
+            let vr2Opt1 = {"src": vr2Src1};
+            let vr2Opt2 = {"src": vr2Src2};
+            let vr2Opt3 = {"src": vr2Src3};
+            let vr2Opt4 = {"src": vr2Src4};
+
+            let vr2Options = [vr2Opt1, vr2Opt2, vr2Opt3, vr2Opt4];
+            //console.log(vr2Options);
+            vr2Options.forEach(function (opt, id) {
+                if ((opt.src !== null) && (opt.src !== '') && (opt.src !== 'undefined')) {
+                    var element =
+                        '<a id="cmTextureVariant' + id + '" class="product-gallery-thumblist-item" onclick="switchTxt(this, \'Texture ' + id + '\')"\n' +
+                        '    data-src="' + opt.src + '">\n' +
+                        '    <img src="' + opt.src + '" alt="Material Texture thumbnail" />\n' +
+                        '</a>';
+                    variant3_select.insertAdjacentHTML("beforeend", element);
+                }
+            });
+            //variant3_select.classList.remove('d-none');
+            //document.querySelector('.slider').classList.remove('d-none');
+        } else {
+            variant3_select.classList.add('d-none');
+        }
+
+        // Adding colour variants
+        let variant1 = document.getElementById('colourVariants');
+
+        if (modeVariant1 == '1') {
+            variant1.classList.remove('d-none');
+            if ((switcherPos === 'left') || (switcherPos === 'right')) {
+                variant1.classList.add('flex-column', 'align-items-start');
+            } else {
+                variant1.classList.add('flex-row', 'justify-content-center');
+            }
+            // Update variant name
+            //console.log(vr1Opt1);
+            if ((vr1Name != '') && (vr1Name != 'undefined')) {
+                variant1.querySelector('p').innerText = vr1Name;
+            }
+            let vr1Options = [vr1Opt1, vr1Opt2, vr1Opt3, vr1Opt4];
+            vr1Options.forEach(function (opt, id) {
+                //console.log(opt);
+                if ((opt !== null) && (opt !== 'undefined')) {
+                    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(opt);
+                    var red = parseInt(result[1], 16) / 255; //red
+                    var green = parseInt(result[2], 16) / 255; //green
+                    var blue = parseInt(result[3], 16) / 255; //blue
+                    var alpha = 1;
+                    var colorString = red + ',' + green + ',' + blue + ',' + alpha;
+                    //console.log("Colorstring: " + colorString);
+                    var variant1_select = document.getElementById("colourVariants");
+                    var element =
+                        '<div class="form-check form-option form-option-color mb-0">\n' +
+                        '  <input class="form-check-input" type="radio" name="color" id="cmColourVariant' + id + '" value="' + id + '"' +
+                        ' data-color=' + opt + ' data-label="colorOptionText">\n' +
+                        '  <label class="form-option-label rounded-circle" for="cmColourVariant' + id + '">\n' +
+                        '    <span class="form-option-color-indicator rounded-circle" data-color=' + opt + ' style="background-color: #' + opt + ';"></span>\n' +
+                        '  </label>\n' +
+                        '</div>';
+                    variant1_select.insertAdjacentHTML("beforeend", element);
+                }
+            });
+        } else {
+            variant1.classList.add('d-none');
+        }
+
+        // Adding model variants
+        let variant3 = params.get('model-variants');
+        let vr3img0 = params.get('img0');
+        let vr3src1 = params.get('src1');
+        let vr3img1 = params.get('img1');
+        let vr3src2 = params.get('src2');
+        let vr3img2 = params.get('img2');
+        let vr3src3 = params.get('src3');
+        let vr3img3 = params.get('img3');
+        let vr3Opt1 = {"src": vr3src1, "poster": vr3img1};
+        let vr3Opt2 = {"src": vr3src2, "poster": vr3img2};
+        let vr3Opt3 = {"src": vr3src3, "poster": vr3img3};
+
+        let vr3Options = [vr3Opt1, vr3Opt2, vr3Opt3];
+        //console.log(vr3Options);
+        if ('1' === variant3) {
+            var variant3_select = document.getElementById('productVariants')
+            if ((vr3img0 !== null) && (vr3img0 !== '') && (vr3img0 !== 'undefined')) {
+                // Update product base model place holder
+                let baseProductModel = document.getElementById('baseProductModel')
+                let baseProductPoster = document.getElementById('baseProductPoster')
+                baseProductModel.setAttribute('data-poster', vr3img0)
+                baseProductPoster.setAttribute('src', vr3img0)
+            }
+            vr3Options.forEach(function (opt, id) {
+                if ((opt.src !== null) && (opt.src !== '') && (opt.src !== 'undefined')) {
+                    var element =
+                        '<a id="cmModelVariant' + id + '" class="product-gallery-thumblist-item" onclick="switchSrc(this, \'Variant ' + id + '\')"\n' +
+                        '    data-src="' + opt.src + '" data-poster="' + opt.poster + '">\n' +
+                        '    <img src="' + opt.poster + '" alt="Product thumbnail" />\n' +
+                        '</a>';
+                    variant3_select.insertAdjacentHTML("beforeend", element);
+                }
+            });
+            variant3_select.classList.remove('d-none');
+            if ((switcherPos === 'left') || (switcherPos === 'right')) {
+                variant3_select.classList.add('flex-column');
+            } else {
+                variant3_select.classList.add('flex-row', 'justify-content-center');
+            }
+            //document.querySelector('.slider').classList.remove('d-none');
+        }
+
+        // Apply model color variant setting to model-viewer
+        document.querySelector('#colourVariants').addEventListener('click', (event) => {
+            const opt = event.target.dataset.color;
+            if (!opt) {
+                return;
+            }
+            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(opt);
+            var red = parseInt(result[1], 16) / 255; //red
+            var green = parseInt(result[2], 16) / 255; //green
+            var blue = parseInt(result[3], 16) / 255; //blue
+            var alpha = 1;
+            var colorString = red + ',' + green + ',' + blue + ',' + alpha;
+
+            const color = colorString.split(',')
+                .map(numberString => parseFloat(numberString));
+
+            //console.log('Changing color to: ', color);
+            const material = modelViewer.model.materials[vr1Material];
+            material.pbrMetallicRoughness.setBaseColorFactor(color);
+        });
+
+        // Switch model when user click on image placeholder
+        window.switchSrc = (element) => {
+            //const base = "../../assets/ShopifyModels/" + name;
+            modelViewer.src = element.getAttribute('data-src');
+            modelViewer.poster = element.getAttribute('data-poster');
+            const slides = document.querySelectorAll(".product-gallery-thumblist-item");
+            slides.forEach((element) => {element.classList.remove("active");});
+            element.classList.add("active");
+        };
+
+        // Switch model when user click on image placeholder
+        window.switchTxt = async (element) =>  {
+            //const base = "../../assets/ShopifyModels/" + name;
+            // Switch texture material
+            let material = modelViewer.model.materials[vr2Material];
+            let baseColorTexture = material.pbrMetallicRoughness['baseColorTexture'];
+            if (baseColorTexture.texture) {
+                baseColorTexture.texture.source.setURI(element.getAttribute('data-src') + '?t=' + Date.now());
+            } else {
+                // Creates a new texture.
+                let texture = await modelViewer.createTexture(element.getAttribute('data-src')+ '?t=' + Date.now());
+                baseColorTexture.setTexture(texture);
+                console.log('[changeMaterialTextureByUrl] create and apply new texture');
+            }
+            // Update texture selection thumbnail
+            const slides = document.querySelectorAll(".product-gallery-thumblist-item");
+            slides.forEach((element) => {element.classList.remove("active");});
+            element.classList.add("active");
+        }
+
+    })();
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"69a708914df20e88","token":"540bcc5786314b19bc3ee808f54cf7ab","version":"2021.9.0","si":100}'></script>
+</body>
+</html>

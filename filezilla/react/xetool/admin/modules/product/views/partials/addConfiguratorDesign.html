@@ -1,0 +1,105 @@
+<div class="preloader-trans" ng-hide="adddesignpreloader">
+    <div class="page-loader">
+        <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+    </div>
+</div>
+<div class="panel panel-default" ng-show="adddesignpreloader">
+     <div class="loader-OnUpdate" pg-portlet on-refresh="refreshTest('.loader-OnUpdate')">
+        <div class="panel-body" style="padding:20px !important">
+            <div class="">
+                
+                <form id="form-personal" name="form-personal" role="form" autocomplete="off" class="p-l-10 p-r-20">
+                    <div class="row clearfix">
+                        <div class="col-sm-4">
+                            <div class="form-group form-group-default required" pg-form-group>
+                                <label>
+                                    <xe-translate text-value="design name">
+                                    </xe-translate>
+                                </label>
+                                <input type="text" class="form-control" name="designName" ng-model="design.name"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group form-group-default required" pg-form-group>
+                                <label>
+                                    <xe-translate text-value="design image">
+                                    </xe-translate>
+                                </label>
+                                <div class="custom-mask-thumb m-l-5 pull-left" ng-show="design.base_image_url !='' && design.base_image_url !=null">
+                                                <img class="img-responsive" ng-src="{{ design.base_image_url}}" name="baseImage" required/>
+                                </div>
+                                <button class="btn btn-success btn-xs btn-browse" ng-file-select ng-file-change="uploadTemplateImage($files,$index,'design_base_image')">
+                                    <xe-translate text-value="Browse">
+                                    </xe-translate>
+                                </button>
+                                <p class="file-extension" ng-show="isDesignBaseError1">
+                                    .png .jpg .jpeg
+                                </p>
+                                <p class="file-extension text-danger" ng-show="showDesignBaseError1">
+                                    {{ showMsg }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group form-group-default required" pg-form-group>
+                                <label>
+                                    <xe-translate text-value="Thumb Image">
+                                    </xe-translate>
+                                </label>
+                                <div class="custom-mask-thumb m-l-5 pull-left" ng-show="design.thumb_image_url !='' && design.thumb_image_url !=null">
+                                                <img class="img-responsive" ng-src="{{ design.thumb_image_url}}" name="thumbImage" required/>
+                                </div>
+                                <button class="btn btn-success btn-xs btn-browse" ng-file-select ng-file-change="uploadTemplateImage($files,$index,'design_thumb_image')">
+                                    <xe-translate text-value="Browse">
+                                    </xe-translate>
+                                </button>
+                                <p class="file-extension" ng-show="isDesignThumError1">
+                                    .png .jpg .jpeg
+                                </p>
+                                <p class="file-extension text-danger" ng-show="showDesignThumbError1">
+                                    {{ showMsg }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <!-- <div class="col-sm-4">
+                            <div class="form-group form-group-default required" pg-form-group>
+                                <label>
+                                    <xe-translate text-value="Price">
+                                    </xe-translate>
+                                </label>
+                                <input type="text" class="form-control" name="price" ng-model="design.price" numbers-only="numbers-only"/>
+                            </div>
+                        </div> -->
+                        <!-- New Field -->
+                        <div class="col-sm-4">
+                            <div class="form-group form-group-default required" pg-form-group>
+                                <label>
+                                    <xe-translate text-value="Sort Order">
+                                    </xe-translate>
+                                </label>
+                                <input type="text" class="form-control" name="sortOrder" ng-model="design.sort_order" required numbers-only="numbers-only"/>
+                            </div>
+                        </div>
+                        
+                    </div>             
+            </div>       
+        </div>
+        <div class="panel-footer padding-10 b-t-none clearfix">
+            <div class="pull-right">
+                <button class="btn btn-info btn-sm" type="button" ng-click="saveDesign()" ng-class="{'disabled': !design.name || !design.base_image_url || !design.sort_order}" ng-disabled="demoStatus">
+                    <xe-translate text-value="Save" ng-show='saveIcon'>
+                    </xe-translate>
+                    <xe-translate text-value="Update" ng-show='updateIcon'>
+                    </xe-translate>
+                </button>
+                <button class="btn btn-info btn-sm" type="button" ng-click="cancelAddDesign()">
+                    <xe-translate text-value="Cancel">
+                    </xe-translate>
+                </button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>

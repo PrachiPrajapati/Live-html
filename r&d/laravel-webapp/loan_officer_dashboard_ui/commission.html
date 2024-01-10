@@ -1,0 +1,1608 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="JHMzUPUhejnkeCuYVx5Y7LI5MU8zDsP0Iun6ySBB">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://bootcamp.beta.loanofficer.ai/css/loanofficer/dashboard/general.css">
+    <link rel="stylesheet" type="text/css" href="http://bootcamp.beta.loanofficer.ai/css/loanofficer/dashboard/chart.css">
+    <link rel="stylesheet" type="text/css" href="http://bootcamp.beta.loanofficer.ai/css/loanofficer/dashboard/mobile_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://bootcamp.beta.loanofficer.ai/css/loanofficer/dashboard/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://bootcamp.beta.loanofficer.ai/css/loanofficer/dashboard/header.css">
+    <link rel="stylesheet" type="text/css" href="http://bootcamp.beta.loanofficer.ai/css/loanofficer/dashboard/checkbox.css">
+
+    
+
+    
+    <link rel="stylesheet" type="text/css" href="http://bootcamp.beta.loanofficer.ai/css/loanofficer/dashboard/sidebar.css">
+    
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    
+   <!--  <link rel="stylesheet" type="text/css" href="http://bootcamp.beta.loanofficer.ai/css/loanofficer/dashboard/main.css"> -->
+    <!-- jQuery library -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script type="text/javascript" src="http://bootcamp.beta.loanofficer.ai/js/loanofficer/dashboard/Chart.roundedBarCharts.min.js"></script>
+    
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="http://bootcamp.beta.loanofficer.ai/js/loanofficer/header.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://bootcamp.beta.loanofficer.ai/css/loanofficer/dashboard/modal.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="http://bootcamp.beta.loanofficer.ai/js/loanofficer/commission_schedule/commission_schedule.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="http://bootcamp.beta.loanofficer.ai/css/loanofficer/dashboard/toaster.css">
+    <script src="http://bootcamp.beta.loanofficer.ai/js/loanofficer/jquery.autoSave.min.js"></script>
+    <script src="http://bootcamp.beta.loanofficer.ai/js/loanofficer/jquery.formatCurrency-1.4.0.min.js"></script>
+    
+    
+</head>
+<body>
+
+    <main class="content" role="content">
+        <section class="container-fluid bg_white">
+            <div class="row">
+                <div class="col-12 p_lr_0">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a href="#" data-toggle="sidebar-colapse">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <img  id="collapse-icon" src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/menu.png" class="img-fluid" />
+                            </div>
+                        </a>
+                        <a href="http://bootcamp.beta.loanofficer.ai/home"><img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/logo.png" class="img-fluid height_37" /></a>
+                        <div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+                            <form class="form-inline my-2 my-lg-0">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/bell.png" class="img-fluid m_r_15 notification" />
+                                <span class="notification_dot"></span>
+                                <ul class="dropdown-notification">
+                                    <div class="notification_title">
+                                        Notifications
+                                    </div>
+                                    <div class="content_center space_between p_tb_20 b_b_grey">
+                                        <div class="notification_readall">
+                                            <svg width="21" height="20" style="margin-right: 0" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.0415 7L6.39941 13.4167L3.38029 10.5" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.1821 7L10.54 13.4167" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+
+                                            Mark all as read
+                                        </div>
+                                        <div class="integation_dropdown">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                    <ins>All</ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio">
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="001" name="alphabet">
+                                                        <i>option 1</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="002" name="alphabet">
+                                                        <i>option 2</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="more_notification">
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="notification_chk" id="html_1">
+                                                </div>
+                                                <label for="html_1">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="notification_chk" id="html_2">
+                                                </div>
+                                                <label for="html_2">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="notification_chk" id="html_3">
+                                                </div>
+                                                <label for="html_3">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="notification_chk" id="html_4">
+                                                </div>
+                                                <label for="html_4">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36 user" />
+                                <ul class="dropdown-menu-profile">
+                                    <div class="content_center">
+                                        <div>
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36" />
+                                        </div>
+                                        <div class="m_l_10">
+                                            <div class="user_name">harsh soni</div>
+                                            <div class="user_profile">Super admin</div>
+                                        </div>
+                                    </div>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://bootcamp.beta.loanofficer.ai/profile-page" class="dropdown-menu__link profilepage nav-link">
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_NA.svg" class="default-icon"/>
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_A.svg" class="hover-icon" />
+
+                                            My Account
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Company_Profile_NA.svg" class="default-icon"/>
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Company_Profile_A.svg" class="hover-icon" />
+
+                                            Company Profile
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://bootcamp.beta.loanofficer.ai/closing-targets" class="dropdown-menu__link profilepage nav-link ">
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Closing_Targets_NA.svg" class="default-icon"/>
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Closing_Targets_A.svg" class="hover-icon" />
+
+                                            Closing Targets
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Plan_Billing_NA.svg" class="default-icon"/>
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Plan_Billing_A.svg" class="hover-icon" />
+
+                                            Plan & Billing
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://bootcamp.beta.loanofficer.ai/company-directory"
+                                        class="dropdown-menu__link nav-link ">
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Company_Directory_NA.svg" class="default-icon"/>
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Company_Directory_A.svg" class="hover-icon" />
+
+                                        Company Directory
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="#" class="dropdown-menu__link nav-link">
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Commissions_NA.svg" class="default-icon"/>
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Commissions_A.svg" class="hover-icon" />
+
+                                        Commissions
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://bootcamp.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link ">
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Integrations_NA.svg" class="default-icon"/>
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Integrations_A.svg" class="hover-icon" />
+
+                                        Integrations
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://bootcamp.beta.loanofficer.ai/activity-feeds" class="dropdown-menu__link nav-link">
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Activity_NA.svg" class="default-icon"/>
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Activity_A.svg" class="hover-icon" />
+
+                                        Activity
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://bootcamp.beta.loanofficer.ai/manage_users" class="dropdown-menu__link nav-link">
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Manage_users_NA.svg" class="default-icon"/>
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Manage_users_A.svg" class="hover-icon" />
+
+                                        Manage users
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://bootcamp.beta.loanofficer.ai/permissions" class="dropdown-menu__link nav-link">
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Permissions_NA.svg" class="default-icon"/>
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Permissions_A.svg" class="hover-icon" />
+
+                                        View Permissions
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://bootcamp.beta.loanofficer.ai/commission-schedule" class="dropdown-menu__link nav-link active">
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Commission_Schedule_NA.svg" class="default-icon"/>
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Commission_Schedule_A.svg" class="hover-icon" />
+
+                                        View Commission Schedule
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lead_rotator_NA.svg" class="default-icon"/>
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lead_rotator_A.svg" class="hover-icon" />
+
+                                        Lead rotator
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Custom_Fields_NA.svg" class="default-icon"/>
+                                        <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Custom_Fields_A.svg" class="hover-icon" />
+
+                                        Custom Fields
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+                                    <a href="http://bootcamp.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/log-out_NA.svg" class="default-icon"/>
+                                    <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/log-out_A.svg" class="hover-icon" />
+
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </form>
+                    <form id="logout-form" action="http://bootcamp.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+                        <input type="hidden" name="_token" value="JHMzUPUhejnkeCuYVx5Y7LI5MU8zDsP0Iun6ySBB">                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div style="display: flex;" id="body-row">
+            <div id="sidebar-container" class="container_company_setting" style="display:none;">
+                <div class="d-none d-md-block">
+                    <ul class="list-group">
+                        <a href="http://bootcamp.beta.loanofficer.ai/home" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Dashboard_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Dashboard_A.svg" class="hover-icon" />
+
+                                <span class="menu-collapsed">Dashboard</span>
+                            </div>
+                        </a>
+                        <a href="http://bootcamp.beta.loanofficer.ai/contact" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_A.svg" class="hover-icon" />
+
+                                <span class="menu-collapsed">Pipeline</span>
+                                <span class="submenu-icon ml-auto"></span>
+                            </div>
+                        </a>
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Proposals_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Proposals_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Proposals</span>
+                            </div>
+                        </a>
+                        <a href="http://bootcamp.beta.loanofficer.ai/rate-watches" class=" list-group-item list-group-item-action flex-column align-items-start ">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Rate_Watch_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Rate_Watch_A.svg" class="hover-icon" />
+
+                                <span class="menu-collapsed">Rate Watch</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lenders_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lenders_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Lenders</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Partners_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Partners_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Partners</span>
+                            </div>
+                        </a>
+                        <a href="http://bootcamp.beta.loanofficer.ai/report/all" class=" list-group-item list-group-item-action flex-column align-items-start ">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Reports_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Reports_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Reports</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Tasks_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Tasks_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Tasks</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Campaigns_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Campaigns_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Campaigns</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Finance_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Finance_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Finance</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Workflow</span>
+                            </div>
+                        </a>
+                        <a href="http://bootcamp.beta.loanofficer.ai/data-points" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_NA.svg" class="default-icon"/>
+                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Data-Points</span>
+                            </div>
+                        </a>
+                    </ul>
+                    <div class="bottom_menu">
+                        <ul class="list-group">
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                    <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/loan_officer_university_NA.svg" class="default-icon"/>
+                                    <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/loan_officer_university_A.svg" class="hover-icon" />
+                                    <span class="menu-collapsed">loan officer university</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                    <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Refer_a_friend_NA.svg" class="default-icon"/>
+                                    <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Refer_a_friend_A.svg" class="hover-icon" />
+                                    <span class="menu-collapsed">Refer a friend</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                    <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Help_Center_NA.svg" class="default-icon"/>
+                                    <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Help_Center_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Help Center</span>
+                                </div>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="expanded_menu content_wrapper main_div" style="display:none;">
+
+
+
+
+
+                <input type="hidden" name="commission_schedule_list_page" id="commission_schedule_list_page"
+                value="http://bootcamp.beta.loanofficer.ai/api/commission_schedule_list_paginate"/>
+                <input type="hidden" name="toaster_cross_img" id="toaster_cross_img"
+                value="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/toast_cross.png">
+                <input type="hidden" name="api_token" id="api_token" value="aGFyc2hAbWFpbGluYXRvci5jb20=">
+                <input type="hidden" name="add_commission_url" id="add_commission_url" value="http://bootcamp.beta.loanofficer.ai/api/add-commission-schedule">
+                <input type="hidden" name="edit_commission_url" id="edit_commission_url" value="http://bootcamp.beta.loanofficer.ai/api/update-commission-schedule">
+                <input type="hidden" name="delete_commission_url" id="delete_commission_url" value="http://bootcamp.beta.loanofficer.ai/api/delete-commission-schedule">
+
+                <div class="commission_schedule">
+                    <div class="container-fluid p_35">
+                        <div class="container_company_setting">
+                            <div class="row">
+                                <div class="m_t_auto m_b_auto col-12 commission_integration_content_row">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-10 col-md-10 col-lg-9">
+                                            <div class="title">
+                                                <span>Commission Schedule</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-2 col-md-2 col-lg-3">
+                                            <button class="blue_btn right" type="button"  data-toggle="modal" data-target="#add_commission">
+                                                Create new
+                                            </button>
+                                            <button class="blue_btn right" type="button" style="display:none;" id="edit_commission_btn"  data-toggle="modal" data-target="#edit_commission">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row commission_toggle_content content_center align_item_bottom">
+                                        <div class="col-12 col-md-9 col-lg-9 col-xl-5">
+                                            <label>Quick search</label>
+                                            <div class="form-group has-search">
+                                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/search.png" class="img-fluid form-control-feedback"/>
+                                                <input type="text" class="form-control commission_schedule_search" placeholder="Search by source">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-3 col-xl-2">
+                                            <label>Lead source</label>
+                                            <div class="content_center integation_dropdown">
+                                                <div class="dropdown">
+                                                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                        <ins>All</ins>
+                                                        <span class="arrow"></span>
+                                                    </button>
+                                                    <div class="dropdown-menu radio">
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_lead_source" type="radio" value="A"
+                                                            name="filter_lead_source">
+                                                            <i>A</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_lead_source" type="radio" value="B"
+                                                            name="filter_lead_source">
+                                                            <i>B</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_lead_source" type="radio" value="C"
+                                                            name="filter_lead_source">
+                                                            <i>C</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_lead_source" type="radio" value="D"
+                                                            name="filter_lead_source">
+                                                            <i>D</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_lead_source" type="radio" value="E"
+                                                            name="filter_lead_source">
+                                                            <i>E</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_lead_source" type="radio" value="F"
+                                                            name="filter_lead_source">
+                                                            <i>F</i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4 col-lg-4 col-xl-2">
+                                            <label>Touches</label>
+                                            <div class="content_center integation_dropdown">
+                                                <div class="dropdown">
+                                                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                        <ins>All</ins>
+                                                        <span class="arrow"></span>
+                                                    </button>
+                                                    <div class="dropdown-menu radio">
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_touches" type="radio" value="0"
+                                                            name="filter_touches">
+                                                            <i>0</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_touches" type="radio" value="1"
+                                                            name="filter_touches">
+                                                            <i>1</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_touches" type="radio" value="2"
+                                                            name="filter_touches">
+                                                            <i>2</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_touches" type="radio" value="<3"
+                                                            name="filter_touches">
+                                                            <i><3</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_touches" type="radio" value="4"
+                                                            name="filter_touches">
+                                                            <i>4</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_touches" type="radio" value="5"
+                                                            name="filter_touches">
+                                                            <i>5</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_touches" type="radio" value="6"
+                                                            name="filter_touches">
+                                                            <i>6</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_touches" type="radio" value="7"
+                                                            name="filter_touches">
+                                                            <i>7</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_touches" type="radio" value="8+"
+                                                            name="filter_touches">
+                                                            <i>8+</i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-5 col-lg-5 col-xl-2">
+                                            <label>Criteria</label>
+                                            <div class="content_center integation_dropdown">
+                                                <div class="dropdown">
+                                                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                        <ins>All</ins>
+                                                        <span class="arrow"></span>
+                                                    </button>
+                                                    <div class="dropdown-menu radio">
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_criteria" type="radio" value="1"
+                                                            name="filter_criteria">
+                                                            <i>BPS</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_criteria" type="radio" value="2"
+                                                            name="filter_criteria">
+                                                            <i>Percentage</i>
+                                                        </label>
+                                                        <label class="dropdown-item">
+                                                            <input class="jRadioDropdown filter_criteria" type="radio" value="3"
+                                                            name="filter_criteria">
+                                                            <i>Number of Units</i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-3 col-xl-1">
+                                            <a class="filter_text right m_b_10">
+                                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/blue_cross_circle.png" class="img-fluid m_r_5">Clear filter
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_boxshadow m_t_20">
+                                <table id="commission_schedule" style='display:none; width:100%'>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>
+                                                <span>Source Name</span>
+                                            </th>
+                                            <th>
+                                                <span>Lead Source</span>
+                                            </th>
+                                            <th>
+                                                <span>Touches</span>
+                                            </th>
+                                            <th>
+                                                <span>Criteria</span>
+                                            </th>
+                                            <th>
+                                                <span>Criteria value</span>
+                                            </th>
+                                            <th>
+                                                <span>Commission amount</span>
+                                            </th>
+                                            <th>
+                                                <span>Actions</span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+
+
+                            <div class="height_constant relative empty_commission_schedule_listing" style='display:none;'>
+                                <div class="row center_page">
+                                    <div class="col-12">
+                                        <div class="text-center">
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/empty_closing.png" class="img-fluid">
+                                            <div class="empty_text">
+                                                No results found
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="add_commission" tabindex="-1" role="dialog" aria-labelledby="add_commissionTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content custom_modal">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="space_between content_center">
+                                            <h4 class="modal-title">Add Commission Schedule</h4>
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/cross.png" class="img-fluid close" data-dismiss="modal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="form-horizontal m_t_30" action="#" method="POST" id="add_commission_schedule_form">
+                                    <input type="hidden" name="_token" value="JHMzUPUhejnkeCuYVx5Y7LI5MU8zDsP0Iun6ySBB">                        <div class="row">
+                                        <div class="col-12 col-sm-12">
+                                            <label>Source Name</label>
+                                            <input type="text" name="source_name" id="source_name" class="input_text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6  m_b_10 integation_dropdown">
+                                            <label>Lead Source</label>
+                                            <div class="dropdown custom_radio">
+                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                    <ins></ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio">
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="A"
+                                                        name="lead_source" id="lead_source">
+                                                        <i>A</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="B"
+                                                        name="lead_source" id="lead_source">
+                                                        <i>B</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="C"
+                                                        name="lead_source" id="lead_source">
+                                                        <i>C</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="D"
+                                                        name="lead_source" id="lead_source">
+                                                        <i>D</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="E"
+                                                        name="lead_source" id="lead_source">
+                                                        <i>E</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="F"
+                                                        name="lead_source" id="lead_source">
+                                                        <i>F</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label>Touches</label>
+                                            <input type="text" name="touches" id="touches" class="input_text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6  m_b_10 integation_dropdown">
+                                            <label>Criteria</label>
+                                            <div class="dropdown custom_radio">
+                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                    <ins></ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio">
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="1"
+                                                        name="criteria_id" id="criteria_id">
+                                                        <i>BPS</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="2"
+                                                        name="criteria_id" id="criteria_id">
+                                                        <i>Percentage</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="3"
+                                                        name="criteria_id" id="criteria_id">
+                                                        <i>Number of Units</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6  m_b_10 integation_dropdown">
+                                            <label>Criteria Value</label>
+                                            <div class="dropdown custom_radio">
+                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                    <ins></ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio height_250">
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="10"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>10</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="15"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>15</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="20"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>20</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="25"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>25</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="30"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>30</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="35"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>35</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="40"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>40</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="45"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>45</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="50"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>50</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="55"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>55</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="60"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>60</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="65"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>65</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="70"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>70</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="75"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>75</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="80"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>80</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="85"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>85</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="90"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>90</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="95"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>95</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="100"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>100</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="105"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>105</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="110"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>110</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="115"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>115</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="120"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>120</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="125"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>125</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="130"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>130</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="135"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>135</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="140"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>140</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="145"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>145</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="150"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>150</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="155"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>155</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="160"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>160</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="165"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>165</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="170"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>170</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="175"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>175</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="180"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>180</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="185"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>185</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="190"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>190</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="195"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>195</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="200"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>200</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="205"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>205</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="210"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>210</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="215"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>215</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="220"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>220</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="225"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>225</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="230"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>230</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="235"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>235</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="240"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>240</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="245"
+                                                        name="criteria_value" id="criteria_value">
+                                                        <i>245</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label>Commission Amount</label>
+                                            <input type="text" name="commission_amount" id="commission_amount" class="input_text currency"
+                                            placeholder="$">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 align_center">
+                                            <input class="border_btn" value="Cancel"  type="button"  data-toggle="modal" data-target="#next_user"  data-dismiss="modal">
+                                        </div>
+                                        <div class="col-6 align_center">
+
+                                            <input class="common_btn default_btn" value="Save Schedule"  type="submit">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="edit_commission" tabindex="-1" role="dialog" aria-labelledby="edit_commissionTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content custom_modal">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="space_between content_center">
+                                            <h4 class="modal-title">Edit Commission Schedule</h4>
+                                            <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/cross.png" class="img-fluid close" data-dismiss="modal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="form-horizontal m_t_30" action="#" method="POST" id="edit_commission_schedule_form">
+                                    <input type="hidden" name="_token" value="JHMzUPUhejnkeCuYVx5Y7LI5MU8zDsP0Iun6ySBB">                        
+                                    <input type="hidden" name="commission_schedule_id" id="commission_schedule_id">
+                                    <input type="hidden" name="criteria_types" id="criteria_types" value="[{&quot;id&quot;:1,&quot;name&quot;:&quot;BPS&quot;,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;created_by&quot;:null,&quot;updated_by&quot;:null,&quot;deleted_at&quot;:null,&quot;deleted_by&quot;:null},{&quot;id&quot;:2,&quot;name&quot;:&quot;Percentage&quot;,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;created_by&quot;:null,&quot;updated_by&quot;:null,&quot;deleted_at&quot;:null,&quot;deleted_by&quot;:null},{&quot;id&quot;:3,&quot;name&quot;:&quot;Number of Units&quot;,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;created_by&quot;:null,&quot;updated_by&quot;:null,&quot;deleted_at&quot;:null,&quot;deleted_by&quot;:null}]">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12">
+                                            <label>Source Name</label>
+                                            <input type="text" name="edit_source_name" id="edit_source_name" class="input_text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6  m_b_10 integation_dropdown custom_radio">
+                                            <label>Lead Source</label>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                    <ins class="lead_source_label"></ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio">
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="A"
+                                                        name="edit_lead_source" id="edit_lead_source">
+                                                        <i>A</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="B"
+                                                        name="edit_lead_source" id="edit_lead_source">
+                                                        <i>B</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="C"
+                                                        name="edit_lead_source" id="edit_lead_source">
+                                                        <i>C</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="D"
+                                                        name="edit_lead_source" id="edit_lead_source">
+                                                        <i>D</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="E"
+                                                        name="edit_lead_source" id="edit_lead_source">
+                                                        <i>E</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="F"
+                                                        name="edit_lead_source" id="edit_lead_source">
+                                                        <i>F</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label>Touches</label>
+                                            <input type="text" name="edit_touches" id="edit_touches" class="input_text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6  m_b_10 integation_dropdown custom_radio">
+                                            <label>Criteria</label>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                    <ins class="criteria_id_label"></ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio">
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="1"
+                                                        name="edit_criteria_id" id="edit_criteria_id">
+                                                        <i>BPS</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="2"
+                                                        name="edit_criteria_id" id="edit_criteria_id">
+                                                        <i>Percentage</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="3"
+                                                        name="edit_criteria_id" id="edit_criteria_id">
+                                                        <i>Number of Units</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6  m_b_10 integation_dropdown custom_radio">
+                                            <label>Criteria Value</label>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                    <ins class="criteria_value_label"></ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio height_250">
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="10"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>10</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="15"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>15</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="20"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>20</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="25"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>25</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="30"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>30</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="35"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>35</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="40"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>40</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="45"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>45</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="50"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>50</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="55"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>55</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="60"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>60</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="65"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>65</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="70"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>70</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="75"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>75</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="80"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>80</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="85"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>85</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="90"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>90</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="95"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>95</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="100"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>100</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="105"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>105</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="110"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>110</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="115"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>115</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="120"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>120</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="125"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>125</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="130"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>130</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="135"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>135</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="140"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>140</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="145"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>145</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="150"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>150</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="155"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>155</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="160"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>160</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="165"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>165</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="170"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>170</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="175"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>175</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="180"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>180</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="185"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>185</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="190"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>190</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="195"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>195</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="200"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>200</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="205"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>205</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="210"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>210</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="215"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>215</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="220"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>220</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="225"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>225</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="230"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>230</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="235"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>235</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="240"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>240</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="245"
+                                                        name="edit_criteria_value" id="edit_criteria_value">
+                                                        <i>245</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label>Commission Amount</label>
+                                            <input type="text" name="edit_commission_amount" id="edit_commission_amount" class="input_text currency">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 align_center">
+                                            <input class="border_btn" value="Cancel"  type="button"  data-toggle="modal" data-target="#next_user"  data-dismiss="modal">
+                                        </div>
+                                        <div class="col-4 align_center p_lr_0">
+                                            <input class="red_btn delete_commission_schedule" value="Delete " type="button">
+                                        </div>
+                                        <div class="col-4 align_center">
+                                            <input class="common_btn default_btn" value="Save"  type="submit">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main> <!-- /content -->
+<script type="text/javascript">
+
+    function toggleMainmenu(e) {
+        e.classList.toggle("active");
+        document.querySelector("aside").classList.toggle("active");
+    }
+
+    function beforePrintHandler () {
+        for (var id in Chart.instances) {
+            Chart.instances[id].resize();
+        }
+    }
+    jQuery.noConflict();
+    jQuery(document).ready(function($){
+        /* dropdown */
+        $('.user').click(function (e) {
+            e.preventDefault();
+            //$(this).find('.dropdown-menu').toggle();
+            $('.dropdown-menu-profile').toggle();
+            $('.dropdown-notification').hide();
+        });
+        $('.top_menu').click(function (e) {
+            e.preventDefault();
+            //$(this).find('.dropdown-menu').toggle();
+            $('.dropdown-menu-profile').hide();
+            $('.nav-second-level').addClass('collapse').removeClass('show');
+        });
+        $('.notification').click(function (e) {
+            e.preventDefault();
+            //$(this).find('.dropdown-menu').toggle();
+            $('.dropdown-notification').toggle();
+            $('.dropdown-menu-profile').hide();
+        });
+        $('.notification_readall').click(function(){
+            $('input[name="notification_chk"]').prop('checked', true);
+        });
+
+        $(document).on("click", function (event) {
+            if (!$(event.target).closest(".notification").length) {
+                //console.log($(event.target).parents(".dropdown-notification").length);
+                if ($(event.target).parents(".dropdown-notification").length == 0) {
+                    $(".dropdown-notification").hide();
+                }
+            }
+            if (!$(event.target).closest(".user").length) {
+                //console.log($(event.target).parents(".dropdown-notification").length);
+                if ($(event.target).parents(".dropdown-menu-profile").length == 0) {
+                    $(".dropdown-menu-profile").hide();
+                }
+            }
+        });
+        $('#example').DataTable( {
+            "scrollY":        "350px",
+            "scrollCollapse": true,
+            "paging":         false,
+            'columnDefs': [{
+                'targets': 0,
+                'orderable': false,
+            }],
+            "order": [[ 3, "desc" ]]
+        });
+        $('#myteam').DataTable( {
+            "scrollY":        "350px",
+            "scrollCollapse": true,
+            "paging":         false
+        });
+        if ($(window).width() > 768) {
+            // Select and loop the container element of the elements you want to equalise
+            $('.full_width').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column', this).each(function(){
+                    $(this).css({'height':highestBox + 'px'});
+                });
+
+                //additional jquery to adjust the height for the activity section
+                var highestBox = highestBox;
+                $('.column').each(function(){
+                    if ($(this).hasClass('activityclass')) {
+                        $(this).css({'height': highestBox + 'px'});
+                        var new_height = highestBox - 30;
+                        $(this).find('.box_shadow').css({'height': new_height + 'px'});
+                    }
+                });
+            });
+
+            $('.column_width').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column_2', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column_2',this).height(highestBox);
+
+            });
+
+            $('.column_width_2').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column_3', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column_3',this).height(highestBox);
+
+            });
+
+            $('.column_width_3').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column_4', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column_4',this).height(highestBox);
+
+                //additional jquery to set the height for finance chart
+                //var child_div_height_finance_ui = highestBox-289;
+                //$('.column_4_inner_child', this).height(child_div_height_finance_ui);
+
+                //additional jquery to set the height for finance chart
+                var child_div_height_finance_ui = highestBox-281;
+                $('.column_4_inner_child', this).height(child_div_height_finance_ui);
+            });
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="12px" viewBox="0 0 22 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>measurement(24x24)@1x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home-Page_17/09/2020" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Product-Detail-Page" transform="translate(-1260.000000, -640.000000)" stroke="#0566FF">
+            <g id="Group-36" transform="translate(1259.000000, 634.000000)">
+                <g id="Group-67">
+                    <g id="measurement(24x24)@1x" transform="translate(2.000000, 7.000000)">
+                        <polygon id="Path" stroke-linecap="round" points="0 0 0 10 20 10 20 0"></polygon>
+                        <line x1="4" y1="0" x2="4" y2="3" id="Path"></line>
+                        <line x1="8" y1="0" x2="8" y2="4" id="Path"></line>
+                        <line x1="12" y1="0" x2="12" y2="3" id="Path"></line>
+                        <line x1="16" y1="0" x2="16" y2="4" id="Path"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

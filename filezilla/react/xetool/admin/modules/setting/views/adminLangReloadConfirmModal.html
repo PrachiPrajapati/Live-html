@@ -1,0 +1,44 @@
+<div class="modal fade stick-up" id="changeAdminLang" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14">
+                    </i>
+                </button>
+                <h5>
+                    <span class="semi-bold">
+                        <xe-translate text-value="Are You Sure Want To Change The Language Of Designer Admin">
+                        </xe-translate>
+                    </span>
+                </h5>
+            </div>
+            <div class="modal-body" id="changeAdminLang">
+             <!--    <div class="row">
+                    <div class="col-sm-1">
+                        <div class="checkbox check-info pull-left w-50per">
+                            <input type="checkbox" id="isLang" ng-model="changeLang.isLang" ng-true-value="1" ng-false-value="0" ng-change="changedAdminLang(changeLang.isLang)" ng-checked="changeLang.isLang == '1'"/>
+
+                            <label for="isLang"><xe-translate text-value="Change Admin Language"></xe-translate></label>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="m-t-20 clearfix">
+                    <button type="button" class="btn btn-success btn-sm" ng-click="changeDesignerAdminLanguage()" ng-disabled="demoStatus">
+                        <span>
+                            <xe-translate text-value="Ok">
+                            </xe-translate>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm" ng-click="cancelChangeAdminlang()" ng-disabled="demoStatus">
+                        <span>
+                            <xe-translate text-value="Cancel">
+                            </xe-translate>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

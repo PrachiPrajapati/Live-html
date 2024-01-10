@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quotation Form</title>
+      <script src="lib.js"></script>
+      <script src="xequote.js"></script>
+      
+      <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/css/style.css" rel="stylesheet">
+      <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body ng-app="myApp" ng-controller="myCtrl" ng-init="init()">
+    <img ng-show = "isQuoteDetailsFetched" class="image-responsive-height demo-mw-50 quoteForm-loader " src="assets/progress.svg" alt="Progress">
+
+  <ng-include src = "'views/partials/quotationProfile.html'">
+    </ng-include>
+  <ng-include src = "'views/partials/quote_form.html'">
+   </ng-include>
+   <ng-include src = "'views/partials/login.html'">
+   </ng-include>
+    <ng-include src = "'views/partials/signUp.html'">
+    </ng-include>
+    <ng-include src = "'views/partials/quotationDetailsView.html'">
+    </ng-include>
+    <ng-include src = "'views/partials/quoteRequestInvalid.html'">
+    </ng-include>
+    <ng-include src="'views/partials/quoteImageView.html'" ng-show = "isImagePopUpOpen">
+    </ng-include>
+  </body>
+</html>

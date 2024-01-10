@@ -1,0 +1,111 @@
+<div class="container-fluid" ng-controller="invoiceController" ng-init="init()">
+    <div class="invoiceTable" ng-show="invoiceTableShow">
+        <div class="row">
+            <div class="col-md-6">
+                <label class="pageTitle"> <xe-translate text-value="Invoice"></xe-translate></label>
+                <button class="btn btn-default btn-sm m-l-10" ng-click="generateInvoice()" type="button"
+                    ng-disabled="generateQuoteButton">
+                    <xe-translate text-value="Generate Invoice"></xe-translate>
+                </button>
+            </div>
+            <div class="col-md-6 text-right">
+                <button class="btn btn-default btn-sm" ng-click="invoiceListRefresh()" type="button">
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-default btn-sm m-l-5" type="button" ng-click="settings()">
+                    <i class="fa fa-cog"></i>
+                </button>
+            </div>
+        </div>
+        <div class="custom-table invoice-table m-t-20" id="id_Table" ui-options="options">
+            <ul class="custom-table-head invoice-head-content-manual" ng-show="invoiceList.length">
+                <li class="checkCol" style="max-width:150px;"><xe-translate text-value="invoice number"></xe-translate></li>
+                <li class="tColumns"><xe-translate text-value="Quote id"></xe-translate></li>
+                <li class="tColumns"><xe-translate text-value="customer name"></xe-translate></li>
+                <li class="tColumns"><xe-translate text-value="customer email"></xe-translate></li>
+                <li class="tColumns"><xe-translate text-value="created date"></xe-translate></li>
+                <li class="settingCol" style="max-width:114px;"><xe-translate text-value="action"></xe-translate></li>
+            </ul>
+            <div class="custom-table-body invoice-scroll-content-manual">
+                <div class="custom-table-row customerList"
+                    ng-repeat="invoiceDetails in invoiceList | orderBy:'-invoice_updated'">
+                    <ul class="custom-table-content invoice-body-content-manual">
+                        <li class="checkCol" style="max-width:150px;"
+                            ng-click="getSingleViewDetails(invoiceDetails.invoice_id,invoiceDetails.quote_ref_id)">
+                            {{invoiceDetails.invoice_number}}
+                        </li>
+                        <li class="tColumns"
+                            ng-click="getSingleViewDetails(invoiceDetails.invoice_id,invoiceDetails.quote_ref_id)">
+                            {{invoiceDetails.quote_ref_id}}
+                        </li>
+                        <li class="tColumns"
+                            ng-click="getSingleViewDetails(invoiceDetails.invoice_id,invoiceDetails.quote_ref_id)">
+                            {{invoiceDetails.cust_name}}
+                        </li>
+                        <li class="tColumns"
+                            ng-click="getSingleViewDetails(invoiceDetails.invoice_id,invoiceDetails.quote_ref_id)">
+                            {{invoiceDetails.cust_mail}}
+                        </li>
+                        <li class="tColumns"
+                            ng-click="getSingleViewDetails(invoiceDetails.invoice_id,invoiceDetails.quote_ref_id)">
+                            {{invoiceDetails.invoice_date | date:'MM/dd/yyyy'}}
+                        </li>
+                        <li class="settingCol" style="max-width:114px;">
+                            <div class="btn-group">
+                                <div class="dropdown open">
+                                    <button type="button" class="btn btn-default btn-sm" data-toggle="dropdown"> <xe-translate text-value="action"></xe-translate> <span
+                                            class="caret"></span></button>
+                                    <ul class="dropdown-menu" role="menu" style="left:auto;right:0;">
+                                        <li ng-click="invoiceSelectedAction('Download',invoiceDetails.invoice_id)">
+                                            <a href=""><i class="fa fa-download"></i>  <xe-translate text-value="DOWNLOAD FILE"></xe-translate></a>
+                                        </li>
+                                        <li ng-click="invoiceSelectedAction('view',invoiceDetails.invoice_id)">
+                                            <a href=""><i class="fa fa-eye"></i> <xe-translate text-value="PREVIEW"></xe-translate></a>
+                                        </li>
+                                        <li ng-click="invoiceSelectedAction('mail',invoiceDetails.invoice_id)">
+                                            <a href=""><i class="fa fa-envelope"></i> <xe-translate text-value="Email"></xe-translate></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="custom-table-row customerList" ng-show="!invoiceList.length && !isDataLoaded && !invoiceMainPreLoader">
+                    <ul class="custom-table-content customer-body-content-manual">
+                        <li style="flex:auto;">
+                            <p class="font-normal text-lg m-t-10 text-center">
+                                <xe-translate text-value="No invoices"></xe-translate>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center b-t-none m-t-20" ng-show="isLoadMore && dataLoaded">
+            <button type="button" class="btn btn-default btn-sm btn-cons" ng-click="loadMore()"
+                ng-disabled="isLoadMorePreloader">
+                <xe-translate text-value="Load More"></xe-translate>
+            </button>
+            <img class="image-responsive-height demo-mw-30 " src="assets/img/progress/progress-circle-master.svg"
+                alt="Progress" ng-show="isLoadMorePreloader" />
+        </div>
+        <div class="preloader-trans" ng-show="invoiceMainPreLoader">
+            <div class="page-loader">
+                <img class="demo-mw-50 block" src="assets/img/demo/progress.svg"
+                    alt="Progress" />
+                <span>
+                    <xe-translate text-value="Please wait"></xe-translate>...
+                </span>
+            </div>
+        </div>
+    </div>
+    <ng-include src="'modules/invoices/views/partials/generateInvoice.html'" ng-show="isInvoiceGenerateClicked">
+    </ng-include>
+    <ng-include src="'modules/invoices/views/partials/singleInvoiceDetails.html'" ng-show="isEditInvoiceClicked">
+    </ng-include>
+    <ng-include src="'modules/invoices/views/partials/settingModal.html'">
+    </ng-include>
+    <ng-include src="'modules/invoices/views/partials/warningSettingModel.html'">
+    </ng-include>
+</div>

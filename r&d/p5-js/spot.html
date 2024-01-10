@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Spot</title>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="js/p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+  </head>
+  <body>
+  <script type="text/javascript">
+  
+    var r = 255;
+    var g = 0;
+    var b = 0;
+
+    function setup() {
+      createCanvas(1920, 970);
+      background(0);
+    } 
+    function draw() {
+  /*********************************/
+      r = random(100,255);
+      g = 0
+      b = random(100, 190);
+      x = random( 0, width);
+      y = random( 0, height);
+      fill (r, g, b);
+      ellipse(x, y, 24, 24);
+
+  // /*********************************/
+  //     background(0);
+  //     stroke(255);
+  //     strokeWeight(4);
+  //     noFill();
+  //     if (mouseX > 100){
+  //       fill (255, 0, 200);
+  //     }
+  //     ellipse(900, 500, 100, 100);
+    }
+  </script>
+  </body>
+</html>

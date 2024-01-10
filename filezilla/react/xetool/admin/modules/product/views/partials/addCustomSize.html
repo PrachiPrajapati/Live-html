@@ -1,0 +1,165 @@
+<div class="modal fade stick-up" id="customPrintSizeModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left">
+                <div class="row configure-custom-print-area section-header">
+                    <div class="col-md-12">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h4 style="font-weight: 400;">
+                                    <xe-translate text-value="Configure custom Boundary">
+                                    </xe-translate>
+                                </h4>
+                            </div>
+                            <div class="admin-custom-search">
+                                <input type="text" class="form-control input-sm" placeholder="Search here..."
+                                    ng-model="find.name">
+                                <i class="fa fa-search icon"></i>
+                            </div>
+                            <button type="button" class="close custom-modal-close" data-dismiss="modal"
+                                aria-hidden="true">
+                                <i class="pg-close"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body custom-size-modal-alert" id="customSizeModal">
+                <div class="row configure-custom-print-area section-body">
+                    <div class="col-md-12" ng-if="printSizeListDefault.length != 0">
+                        <div class="in-table">
+                            <div class="in-table-head">
+                                <ul class="in-table-tr">
+                                    <li class="in-table-th" style="width:40%">
+                                        <div>
+                                            <xe-translate text-value="Size Name">
+                                            </xe-translate>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-th" style="width:25%">
+                                        <div>
+                                            Width
+                                        </div>
+                                    </li>
+                                    <li class="in-table-th" style="width:25%">
+                                        <div>
+                                            Height
+                                        </div>
+                                    </li>
+                                    <li class="in-table-th text-center" style="width:10%">
+                                        <div>Action</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="in-table-body">
+                                <ul class="in-table-tr" ng-show="addNewSize.status">
+                                    <li class="in-table-td" style="width:40%">
+                                        <div>
+                                            <input type="text" id="name_{{printSizeListDefault.length}}"  class="form-control" placeholder="Enter size name"
+                                                ng-model="print.sizeName" remove-spl-chars="remove-spl-chars">
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:25%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="custom.width"
+                                                price-only="price-only">
+                                            <div class="in-table-measurement">{{ productUnit }}</div>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:25%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="custom.height"
+                                                price-only="price-only">
+                                            <div class="in-table-measurement">{{ productUnit }}</div>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td text-center" style="width:10%">
+                                        <div class="d-flex align-items-center justify-content-between" style="max-width: 35px; margin:0 auto;">
+                                        <button type="button" class="btn custom-btn-xxs" ng-click="saveCustomSize()"
+                                            ng-disabled="demoStatus"
+                                            ng-class="{'disabled':!custom.height || !custom.width || !print.sizeName || saveSizeButton}">
+                                            <span>
+                                                <i class="fa fa-floppy-o text-info cursor-pointer" aria-hidden="true">
+                                                </i>
+                                            </span>
+                                        </button>
+                                        <button type="button" class="btn custom-btn-xxs"
+                                            ng-click="addNewSize.status = false;cancelPrintAreaList()"
+                                            ng-disabled="demoStatus">
+                                            <span>
+                                                <i class="fa fa-trash-o text-danger cursor-pointer"
+                                                    aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    </li>
+                                </ul>
+                                <ul class="in-table-tr"
+                                    ng-repeat="printArea in printSizeListDefault | filter:find:strict">
+                                    <li class="in-table-td" style="width:40%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="printArea.name"
+                                                ng-disabled="printArea.is_user_defined != 1"
+                                                remove-spl-chars="remove-spl-chars">
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:25%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="printArea.width"
+                                                price-only="price-only" ng-disabled="printArea.is_user_defined != 1">
+                                            <div class="in-table-measurement">
+                                                {{ productUnit }}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td" style="width:25%">
+                                        <div>
+                                            <input type="text" class="form-control" ng-model="printArea.height"
+                                                price-only="price-only" ng-disabled="printArea.is_user_defined != 1">
+                                            <div class="in-table-measurement">
+                                                {{ productUnit }}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="in-table-td text-center" style="width:10%">
+                                        <div ng-show="printArea.is_user_defined == '1'">
+                                            <i class="fa fa-trash-o text-danger cursor-pointer" aria-hidden="true"
+                                                ng-click="deleteSizeById(printArea.id)"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="in-table-tr" ng-show="(printSizeListDefault | filter:find).length == 0">
+                                    <li class="in-table-td" style="width:100%">
+                                            <xe-translate text-value="No data found">
+                                            </xe-translate>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row configure-custom-print-area section-footer">
+                    <div class="col-md-12">
+                        <div class="d-flex align-items-center justify-content-between m-t-20">
+                            <div><button class="btn btn-info" ng-click="addSize()">+
+                                    <xe-translate text-value="Add New Size">
+                                    </xe-translate>
+                                </button></div>
+                            <div>
+                                <button class="btn btn-danger" data-dismiss="modal" ng-click="cancelPrintAreaList()">
+                                    <xe-translate text-value="Cancel">
+                                    </xe-translate>
+                                </button>
+                                <button class="btn btn-success m-l-10" ng-click="updateCustomSize()"
+                                    ng-disabled="demoStatus || addNewSize.status">
+                                    <xe-translate text-value="Update">
+                                    </xe-translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

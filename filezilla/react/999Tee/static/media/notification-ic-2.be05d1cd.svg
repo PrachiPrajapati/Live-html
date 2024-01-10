@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="71px" height="71px" viewBox="0 0 71 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/notifications/cart&amp;order">
+            <g id="Group">
+                <rect id="Rectangle" fill="#F0F6FF" x="0" y="0" width="71" height="71" rx="35.5"></rect>
+                <g id="Group-10" transform="translate(13.000000, 20.000000)" stroke="#0566FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.36666667">
+                    <path d="M31.5555556,32.5416667 C32.6448139,32.5416667 33.5277778,31.6587028 33.5277778,30.5694444 C33.5277778,29.4801861 32.6448139,28.5972222 31.5555556,28.5972222 C30.4662972,28.5972222 29.5833333,29.4801861 29.5833333,30.5694444 C29.5833333,31.6587028 30.4662972,32.5416667 31.5555556,32.5416667 Z" id="Path"></path>
+                    <path d="M15.7777778,32.5416667 C16.8670361,32.5416667 17.75,31.6587028 17.75,30.5694444 C17.75,29.4801861 16.8670361,28.5972222 15.7777778,28.5972222 C14.6885194,28.5972222 13.8055556,29.4801861 13.8055556,30.5694444 C13.8055556,31.6587028 14.6885194,32.5416667 15.7777778,32.5416667 Z" id="Path"></path>
+                    <polyline id="Path" points="39.4444444 0.986111111 35.5 22.6805556 11.8333333 22.6805556 7.88888889 0.986111111"></polyline>
+                    <line x1="0" y1="0.986111111" x2="7.88888889" y2="0.986111111" id="Path"></line>
+                    <line x1="17.75" y1="14.7916667" x2="29.5833333" y2="14.7916667" id="Path"></line>
+                    <line x1="15.7777778" y1="6.90277778" x2="31.5555556" y2="6.90277778" id="Path"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

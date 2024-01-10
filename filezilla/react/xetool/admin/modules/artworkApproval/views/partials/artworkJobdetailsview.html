@@ -1,0 +1,193 @@
+<div class="Quote_Details">
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="pageTitle">
+        <xe-translate text-value="Artwork Job Details">
+        </xe-translate>
+      </label>
+    </div>
+    <div class="col-sm-6 text-right">
+      <div class="q-r-status-drop dropdown" style="display:inline-block;">
+          <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" type="button" data-toggle="dropdown" data-disabled="true" style="min-width: 200px">
+              <div>
+                <span class="statusColor q-r-status-color" style="background:{{artwokJobDetails.color_code}}">
+                </span>
+                <span style="padding-left: 20px;">
+                  {{artwokJobDetails.job_status | capitalize}}
+                </span>
+              </div>
+              <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" style="width: 100%">
+              <div  ng-class="{'custom-scroll-menu-bar': statusLists.length > '10'}">  
+                  <li ng-repeat="status in statusLists" ng-click="onArtworkJobStatusClicked(artwokJobDetails.job_id, status, 'jobDetails')" ng-if="status.name != 'Customize Statuses'">
+                      <a href="#" style="position:relative;padding-left:20px;" class="status-adjust">
+                          {{status.name | capitalize}}
+                          <span class="statusColor" style="background:{{status.color_code}};"></span>
+                      </a>
+                  </li>
+                </div>
+             
+              <li ng-click="onCustomizeStatusClicked()" ng-show="isSuperAdmin">
+                  <a href="#" class="btn btn-info m-t-10" style="color:#fff;text-align:center; font-size: 12px">
+                      <xe-translate text-value="Customize Statuses"></xe-translate>
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <button type="button" class="btn btn-default btn-sm" ng-click="reloadArtworkJobDetails()">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      </button>
+      <button type="reset" class="btn btn-default btn-sm" ng-click="backToJobListing()">
+        <i class="fa fa-caret-left"></i>
+        <xe-translate text-value="Back">
+        </xe-translate>
+      </button>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="tab-pane fade in">
+      <div class="panel panel-default qrPanelCustom artwork-m-b-0">
+        <div class="panel-body">
+          <div class="qrTitle">
+            <div class="flexRow">
+              <div class="flexCol">
+                <h5 style="margin:0;font-weight:500;font-size:18px;line-height:inherit;">
+                  {{artwokJobDetails.product_name}}
+                </h5>
+              </div>
+              <div class="flexCol alignRight" style="max-width:375px;min-width:240px;text-align:right;">
+                <button type="button" class="btn btn-primary btn-sm" ng-click="createArtworkItemWise($index)"
+                  ng-if="artwokJobDetails.product_design_status == false" ng-disabled="artwokJobDetails.job_status =='approved'">
+                  <xe-translate text-value="Create Artwork"></xe-translate>
+                </button>
+                <button type="button" class="btn btn-success btn-sm" ng-click="updateArtwork($index)"
+                  ng-if="artwokJobDetails.product_design_status == true" ng-disabled="artwokJobDetails.job_status =='approved'">
+                  <xe-translate text-value="Update Artwork"></xe-translate>
+                </button>
+                <button type="button" class="btn btn-primary btn-sm" ng-click="sendArtwork($index)"
+                  ng-disabled="artwokJobDetails.product_design_status == false || sendArtworkPreloader || artwokJobDetails.job_status !='designed'">
+                  <xe-translate text-value="Send Artwork"></xe-translate>
+                  <img ng-show="sendArtworkPreloader" class="image-responsive-height demo-mw-50 quote-loader" src="assets/img/progress/progress-circle-lg-white.svg" alt="Progress">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="panelWrap">
+            <div class="qrBody">
+              <div class="row">
+                <div class="col-sm-3">
+                  <label style="font-family:Montserrat;font-size:10px;text-transform:uppercase;font-weight:600;">
+                    <xe-translate text-value="Product Images">
+                    </xe-translate>
+                  </label>
+                  <div class="qrimgWrap">
+                    <div class="qrThumb">
+                      <div class="qrImg" ng-repeat="imageurl in artwokJobDetails.image track by $index"
+                        ng-click="onThumbSelected(imageurl, $index)">
+                        <img class="img-responsive" ng-src="{{ imageurl.thumb }}" />
+                      </div>
+                    </div>
+                    <div class="qrImgPreview qrImgPreviewContent"
+                      ng-click="openImageModal(artwokJobDetails.image, artwokJobDetails.selectedThumb.original, artwokJobDetails.selectedIndex)">
+                      <img class="img-responsive" ng-src="{{ artwokJobDetails.selectedThumb.original }}" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <label style="font-family:Montserrat;font-size:10px;text-transform:uppercase;font-weight:600;">
+                    <xe-translate text-value="Description">
+                    </xe-translate>
+                  </label>
+                  <p>
+                    {{artwokJobDetails.job_description | removeHTMLTags}}
+                  </p>
+                </div>
+                <div class="col-sm-2">
+                  <label style="font-family:Montserrat;font-size:10px;text-transform:uppercase;font-weight:600;">
+                    <xe-translate text-value="Created Date">
+                    </xe-translate>
+                  </label>
+                  <p>
+                    {{artwokJobDetails.job_created_date}}
+                  </p>
+                </div>
+                <div class="col-sm-2">
+                  <label style="font-family:Montserrat;font-size:10px;text-transform:uppercase;font-weight:600;">
+                    <xe-translate text-value="Due Date">
+                    </xe-translate>
+                  </label>
+                  <p>
+                    {{artwokJobDetails.job_due_date}}
+                  </p>
+                </div>
+              </div>
+              <div class="row" ng-if="artwokJobDetails.assets_image">
+                <div class="col-sm-12">
+                  <div class="qrOtherImgWrap art-attach-file-cont">
+                    <label class="art-attach-file-label">
+                      <xe-translate text-value="Attached Files">
+                      </xe-translate>
+                    </label>
+                    <div class="qrOtherImgWrapBox">
+                      <a class="qrImg d-flex-item-center" style="max-width: 8%; margin: 0.5%" href="{{ imageurl.original }}"
+                        ng-repeat="imageurl in artwokJobDetails.assets_image track by $index" download>
+                        <img class="img-responsive" ng-src="{{ imageurl.thumbnail }}" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-repeat="prevData in artwokJobDetails.previous_data track by $index">
+    <div class="clearfix">
+      <div class="tab-pane fade in">
+        <div class="panel panel-default qrPanelCustom artwork-m-b-0">
+          <div class="panel-body">
+            <div class="panelWrap">
+              <div class="qrBody">
+                <div ng-if="prevData.img" class="artworkjob-image-wrap">
+                    <a href="" ng-repeat="imageurl in prevData.img track by $index" ng-click="openImageModal(prevData.img, imageurl.original, $index)" class="qrImgPreviewFile">
+                      <img class="img-responsive" ng-src="{{ imageurl.thumb }}" />
+                    </a>
+                </div>
+                <div ng-if="prevData.comment" class="msg internal-note-msg">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        {{ prevData.comment | removeHTMLTags}}
+                      </div>
+                    </div>
+                    <div class="row" ng-if="prevData.artwork_assets">
+                      <div class="col-sm-12">
+                        <div class="attachedImgWrapBox">
+                          <a class="attachedImg d-flex-item-center" ng-repeat="attachedImgUrl in prevData.artwork_assets track by $index" href="{{ attachedImgUrl.original }}" download>
+                              <img class="img-responsive" ng-src="{{ attachedImgUrl.thumbnail }}" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="msg-meta internal-note-name-date">
+                  <small class="pull-right" style="color: #999">{{ prevData.date }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="preloader-trans" ng-show="artwokJobDetLoader">
+    <div class="page-loader">
+      <img class="image-responsive-height demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+      <xe-translate text-value="Please wait"></xe-translate>...
+    </div>
+  </div>
+</div>

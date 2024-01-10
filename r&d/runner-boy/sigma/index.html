@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>:: Runner boy css Demo ::</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!--Main Js Included-->
+    <script src="js/lib/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="sky-brand"><a href="www.yudiz.com" target="_blank"><img src="images/yudiz-logo.png" alt="yudiz_logo" /></a></div>
+    <div class="front-scene">
+        <div class="runner-boy">
+            <div class="top">
+                <div class="face">
+                    <div class="hair">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="drop">
+                            <b></b>
+                            <b></b>
+                            <b></b>
+                            <b></b>
+                        </div>
+                    </div>
+                    <div class="ear"></div>
+                    <div class="nose"></div>
+                    <div class="eye"></div>
+
+                </div>
+                <div class="neck"></div>
+            </div>
+            <div class="middle">
+                <div class="hand-with-sleev back">
+                    <div class="hand-sleev"></div>
+                    <div class="hand">
+                        <div class="upper-part"></div>
+                        <div class="lower-part">
+                            <div class="finger-block">
+                                <div class="thumb"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mid-body"></div>
+                <div class="mid-bottom">
+                    <div class="belt-holder">
+                        <div class="belt"></div>
+                        <span class="belt-buckle"></span>
+                    </div>
+                </div>
+                <div class="hand-with-sleev front">
+                    <div class="hand-sleev"></div>
+                    <div class="hand">
+                        <div class="upper-part"></div>
+                        <div class="lower-part">
+                            <div class="hand-watch"></div>
+                            <div class="finger-block">
+                                <div class="thumb"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="leg-with-cover back">
+                    <div class="leg-cover"></div>
+                    <div class="leg">
+                        <div class="upper-part"></div>
+                        <div class="lower-part">
+                            <div class="shoe-block"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-body"></div>
+                <div class="leg-with-cover front">
+                    <div class="leg-cover"></div>
+                    <div class="leg">
+                        <div class="upper-part"></div>
+                        <div class="lower-part">
+                            <div class="shoe-block"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="back-scene">
+        <div class="building-block">
+            <div class="sky-brand"><a href="www.yudiz.com" target="_blank"><img src="images/yudiz-logo.png" alt="yudiz_logo" /></a></div>
+            <div class="baloon1"><img src="images/space-capsule.png" alt="yudiz-image"/></div>
+            <div class="baloon2"><img src="images/space-capsule.png" alt="yudiz-image"/></div>
+            <div class="building-back"></div>
+            <div class="choper"><img src="images/helicopter.png" alt="yudiz-image"/> <span class="back-wing"></span></div>
+            <div class="airbus"><img src="images/airplane.png" alt="yudiz-image"/></div>
+            <div class="building-front"></div>
+        </div>
+        <div class="track">
+            <div class="hurdles"></div>
+        </div>
+    </div>
+    <div class="back-vehical">
+        <div class="car"><img src="images/automobile.png" alt="yudiz-image"/></div>
+        <div class="racing-car"><img src="images/racing.png" alt="yudiz-image"/></div>
+    </div>
+    <div class="front-vehical">
+        <div class="truck"><img src="images/trucking.png" alt="yudiz-image"/></div>
+    </div>
+    <canvas id="canvas"></canvas>
+<!--    <audio id="foot-audio" controls autoplay>
+        <source src="sound/foot-sound.ogg" type="audio/ogg">
+        <source src="sound/foot-sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+     </audio>
+    <audio id="jump-audio" controls>
+        <source src="sound/jump.ogg" type="audio/ogg">
+        <source src="sound/jump.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+     </audio> 
+    
+    <script>
+        $(document).keydown(function(e) {
+            switch(e.which) {
+                case 37: // left
+                break;
+
+                case 38: // up
+                    $('.leg-with-cover.front, .leg-with-cover.back, .leg-with-cover.front .lower-part, .leg-with-cover.back .lower-part, .hand-with-sleev').addClass('pause-animate');
+                    $('.runner-boy').addClass('jump-up');
+                    document.getElementById('foot-audio').muted = true;
+                    document.getElementById('jump-audio').play();
+                    setTimeout(function(){
+                        $('.leg-with-cover.front, .leg-with-cover.back, .leg-with-cover.front .lower-part, .leg-with-cover.back .lower-part, .hand-with-sleev').removeClass('pause-animate');
+                        $('.runner-boy').removeClass('jump-up');
+                        document.getElementById('foot-audio').muted = false;
+                    },700);
+                break;
+
+                case 39: // right
+                break;
+
+                case 40: // down
+                break;
+
+                default: return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        });
+        
+        var audioControl = document.getElementById("foot-audio");
+            audioControl.onended = function(){
+            this.currentTime = 0;
+            var delay = setTimeout(function(){
+              audioControl.play();
+              clearTimeout(delay);
+            }, 180);
+        };
+    </script>-->
+    <script>
+        window.onload = function(){
+            //canvas init
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            //canvas dimensions
+            var W = window.innerWidth;
+            var H = window.innerHeight;
+            canvas.width = W;
+            canvas.height = H;
+            var mp = 65; 
+            var particles = [];
+            for(var i = 0; i < mp; i++)
+            {
+                particles.push({
+                    x: Math.random()*W, //x-coordinate
+                    y: Math.random()*H, //y-coordinate
+                    r: Math.random()*4+1, //radius
+                    d: Math.random()*mp //density
+                });
+            }
+            function draw()
+            {
+                ctx.clearRect(0, 0, W, H);
+                ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+                ctx.beginPath();
+                for(var i = 0; i < mp; i++)
+                {
+                    var p = particles[i];
+                    ctx.moveTo(p.x, p.y);
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+                }
+                ctx.fill();
+                update();
+            }
+            var angle = 0;
+            function update()
+            {
+                angle += 0.01;
+                for(var i = 0; i < mp; i++)
+                {
+                    var p = particles[i];
+                    p.y += Math.cos(angle+p.d) + 1 + p.r/2;
+                    p.x += Math.sin(angle) * 2;
+                    if(p.x > W+5 || p.x < -5 || p.y > H)
+                    {
+                        if(i%3 > 0)
+                        { particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d}; }
+                        else
+                        {
+                            if(Math.sin(angle) > 0)
+                            { particles[i] = {x: -5, y: Math.random()*H, r: p.r, d: p.d}; }
+                            else
+                            { particles[i] = {x: W+5, y: Math.random()*H, r: p.r, d: p.d}; }
+                        }
+                    }
+                }
+            }
+            setInterval(draw, 33);
+        };
+    </script>
+</body>
+</html>

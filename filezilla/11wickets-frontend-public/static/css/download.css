@@ -1,0 +1,71 @@
+.landing-section           					{ padding: 30px 0px 0px; display: flex; display: -webkit-flex; position: relative; min-height: 100vh; background: #6e1696 url(../img/landing-banner.jpg) no-repeat center center / cover; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center; text-align: center; font-family:'Open Sans', sans-serif;}
+.landing-section .landing-inner 			{ transform: translateY(-2%); -webkit-transform: translateY(-2%);}
+.landing-section .logo img					{ margin-bottom: 68px; max-width: 270px;}
+.landing-section .logo-icon img				{ margin-bottom: 35px; max-width: 280px;}
+.landing-section .btn-list 					{ padding: 0px; list-style: none; margin: 0px; }
+.landing-section .btn-list li 				{ margin-bottom: 24px;}
+.landing-section .btn-list li:last-child 	{ margin: 0px;}
+.landing-section .download-btn 				{ padding: 8px 60px 8px 32px; display: inline-block; background: #fff; font-size: 22px; line-height: 30px; font-weight: bold; border-radius: 2em; border: none; position: relative; }
+.landing-section .download-btn img 			{ margin-right: 24px; max-width: 48px; vertical-align: middle; }
+.landing-section .download-btn span 		{ display: inline-block; background: -webkit-linear-gradient(left, #2f40c4 , #6e1696); background: -o-linear-gradient(right, #2f40c4, #6e1696); background: -moz-linear-gradient(right, #2f40c4, #6e1696); background: linear-gradient(to right, #2f40c4 , #6e1696); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.landing-section .gradient-border 			{ position: relative; display: inline-block;}
+.landing-section .gradient-border:before 	{ content: ""; position: absolute; width: calc(100% + 16px); height: calc(100% + 16px); display: block; top: -8px; left: -8px; z-index: 0; border-radius: 4em; background: -o-linear-gradient(right, #2f40c4, #6e1696); background: -moz-linear-gradient(right, #2f40c4, #6e1696); background: linear-gradient(to right, #2f40c4 , #6e1696); }
+
+.download-app.landing-section           	{ display: block; background: #6e1696 url(../img/download-landing.jpg) no-repeat bottom center / cover; }
+.download-app.landing-section .logo img		{ margin-bottom: 0px; }
+
+.download-app .btn-list-block 					{ min-height: calc(100vh - 110px); display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center; }
+.download-app.landing-section .btn-list 	{ margin-top: 40px; }
+
+
+.sms-app.landing-section           			{ display: block; background: #6e1696 url(../img/sms-landing.jpg) no-repeat bottom center / cover; }
+.sms-app.landing-section .logo img			{ margin-bottom: 0px; }
+.sms-app .main-row 							{ min-height: calc(100vh - 100px); display: flex; display: -webkit-flex; align-items: center;}
+.sms-app .main-row .img-block 				{ align-self: flex-end; -webkit-align-self: flex-end; }
+.sms-app img 								{ max-width: 100%;}
+.sms-app .landing-text 						{ margin-bottom: 30px; }
+.sms-app.landing-section .download-btn		{ padding: 8px 34px 8px 24px; font-size: 16px; line-height: 20px;}
+.sms-app.landing-section .download-btn img 	{ margin-right: 16px; max-width: 32px;}
+.sms-app.landing-section .gradient-border::before { width: calc(100% + 12px); height: calc(100% + 12px); top: -6px; left: -6px;}
+.sms-app .btn-list-block 						{ display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center; }
+.sms-app.landing-section .btn-list 			{ margin-top: 40px; }
+
+@media (min-width: 1200px) and (max-width: 1340px) {
+	.landing-section .logo img					{ margin-bottom: 54px; max-width: 240px;}
+	.landing-section .logo-icon img				{ margin-bottom: 30px; max-width: 210px;}
+	.landing-section .download-btn 				{ padding: 8px 54px 8px 30px;}
+	.landing-section .download-btn img 			{ margin-right: 22px; }
+}
+
+@media (max-width: 1199px) {
+	.landing-section .logo img					{ margin-bottom: 44px; max-width: 230px;}
+	.landing-section .logo-icon img				{ margin-bottom: 30px; max-width: 200px;}
+	.landing-section .download-btn 				{ padding: 8px 52px 8px 28px; font-size: 20px; line-height: 30px;}
+	.landing-section .download-btn img 			{ margin-right: 20px; max-width: 44px; }
+}
+
+
+@media (max-width: 991px) {
+	.download-app.landing-section           	{ background-image: url(../img/download-landing-phone.jpg); background-position: bottom 40% center; }
+	.download-app .btn-list-block 				{ align-items: flex-end; -webkit-align-items: flex-end; }
+	.download-app.landing-section .btn-list 	{ margin: 0 0 10%; }
+
+	.sms-app .main-row 							{ flex-direction: column;}
+	.sms-app .landing-text 						{ margin: 25px 0 15px; }
+	.sms-app .sunny-mobile 						{ margin: 0px auto; height: calc(100vh - 197px);}
+	.sms-app .btn-list-block 					{ position: fixed; min-width: 290px; bottom: 12%; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); }
+}
+
+@media (max-width: 767px) {
+	.download-app.landing-section           	{ background-image: url(../img/download-landing-phone.jpg); background-position: bottom center; }
+	.landing-section .logo img					{ max-width: 180px;}
+	.landing-section .logo-icon img				{ max-width: 180px;}
+	.landing-section .download-btn 				{ padding: 8px 28px 8px 16px; font-size: 16px; line-height: 30px;}
+	.landing-section .download-btn img 			{ margin-right: 14px; max-width: 30px; }
+
+
+	.sms-app .landing-text 						{ margin-bottom: 15px; width: 280px; }
+	.sms-app .sunny-mobile 						{ margin: 0px auto; height: calc(100vh - 168px);}
+	.sms-app.landing-section .download-btn		{ padding: 8px 28px 8px 16px; font-size: 16px; line-height: 20px;}
+	.sms-app.landing-section .download-btn img 	{ margin-right: 14px; max-width: 30px;}
+}

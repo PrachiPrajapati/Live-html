@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Pending Request Copy</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="14.1-B2C-User-Orders_Details" transform="translate(-374.000000, -1245.000000)">
+            <g id="Pending-Request-Copy" transform="translate(374.000000, 1245.000000)">
+                <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="60" height="60"></rect>
+                <g id="Group-26" transform="translate(14.000000, 14.000000)" stroke="#5674FF" stroke-width="2">
+                    <path d="M2,5.51724138 L30,5.51724138 C31.1045695,5.51724138 32,6.41267188 32,7.51724138 L32,11.2413793 C32,12.3459488 31.1045695,13.2413793 30,13.2413793 L2,13.2413793 C0.8954305,13.2413793 1.3527075e-16,12.3459488 0,11.2413793 L0,7.51724138 C-1.3527075e-16,6.41267188 0.8954305,5.51724138 2,5.51724138 Z" id="Rectangle"></path>
+                    <polygon id="Rectangle" points="28.137931 0 28.137931 5.51724138 16 5.51724138"></polygon>
+                    <polygon id="Rectangle-Copy-19" transform="translate(9.379310, 2.758621) scale(-1, 1) translate(-9.379310, -2.758621) " points="15.4482759 0 15.4482759 5.51724138 3.31034483 5.51724138"></polygon>
+                    <polygon id="Rectangle" points="13.2413793 13.2413793 18.7586207 13.2413793 18.7586207 32 13.2413793 32"></polygon>
+                    <path d="M6.4137931,13.2413793 L25.5862069,13.2413793 C26.6907764,13.2413793 27.5862069,14.1368098 27.5862069,15.2413793 L27.5862069,30 C27.5862069,31.1045695 26.6907764,32 25.5862069,32 L6.4137931,32 C5.3092236,32 4.4137931,31.1045695 4.4137931,30 L4.4137931,15.2413793 C4.4137931,14.1368098 5.3092236,13.2413793 6.4137931,13.2413793 Z" id="Rectangle-Copy-17"></path>
+                    <rect id="Rectangle" x="13.2413793" y="0.551724138" width="5.51724138" height="4.96551724"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

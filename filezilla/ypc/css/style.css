@@ -1,0 +1,706 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('../fonts/BrandonGrotesque-Bold.eot');
+    src: url('../fonts/BrandonGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BrandonGrotesque-Bold.woff2') format('woff2'),
+        url('../fonts/BrandonGrotesque-Bold.woff') format('woff'),
+        url('../fonts/BrandonGrotesque-Bold.ttf') format('truetype'),
+        url('../fonts/BrandonGrotesque-Bold.svg#BrandonGrotesque-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+:root{
+	--primary-color: #f3392f;
+	--secondary-color: #000;
+    --secondary-header-color: #161616;
+}
+*							{margin: 0px; padding: 0px; outline: none; box-sizing: border-box;}
+body						{font-family: 'Roboto', sans-serif; font-size: 15px; line-height: 25px; color: #7d7d7d; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+img							{border: 0px; max-width: 100%;}
+ul,ol						{list-style: none; margin-bottom: 0px;}
+a							{text-decoration: none; outline: none; color: inherit; display: inline-block; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+a:hover, a:focus            {color: var(--primary-color);}
+a:hover,
+a:focus, a:active,a:visited	{outline: none; text-decoration: none;}
+h1,h2,h4,h3,h5,h6 			{margin: 0; }
+h1                          {margin-bottom: 50px; font-size: 57px; line-height: 90px;   font-family: 'Brandon Grotesque'; color: #fff; text-transform: uppercase;}
+h2                          {font-size: 43px; line-height: 50px; color: var(--secondary-color); text-transform: uppercase; font-family: 'Brandon Grotesque'; font-weight: 700; }
+h4							{font-size: 24px; line-height: 32px;   font-family: 'Brandon Grotesque'; text-transform: uppercase; color: var(--primary-color);} 
+h3                          {font-size: 26px; line-height: 42px; font-family: 'Brandon Grotesque'; color: #fff; font-weight: 700;}
+h5                          {font-size: 18px; line-height: 28px;  font-family: 'Brandon Grotesque'; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 10px;}
+h6                          {font-family: 'Brandon Grotesque'; font-weight: 700;}
+button                      {transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+button:focus,
+input:focus                 {outline: none;}
+.form-control:focus         {box-shadow: none !important; -webkit-box-shadow: none !important;}
+.theme-color                {color: var(--primary-color);}
+.light-bg                   {background: #EEEEEE;}
+/* Button Style*/
+.theme-btn 					{display: inline-block; padding: 12px 35px; letter-spacing: 2px; background: var(--primary-color); font-size: 15px; line-height: 28px; position: relative; overflow: hidden; color: #fff;  text-transform: uppercase; transition: all 0.5s; -webkit-transition: all 0.5s; font-family: 'Brandon Grotesque';}
+.theme-btn:hover            {background-color: #fff; color: var(--primary-color);transition: all 0.5s; -webkit-transition: all 0.5s;box-shadow: 0px 0px 4px rgba(0,0,0,0.2); -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.2);}
+.theme-btn:focus            {background-color: #fff; color: var(--primary-color);transition: all 0.5s; -webkit-transition: all 0.5s; box-shadow: 0px 0px 4px rgba(0,0,0,0.2); -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.2);}
+.theme-btn.white-btn        {background-color: #fff; color: var(--primary-color); transition: all 0.5s; -webkit-transition: all 0.5s;}
+.theme-btn.white-btn:hover  {background-color: var(--primary-color); color: #fff; transition: all 0.5s; -webkit-transition: all 0.5s;}
+.theme-btn.white-btn:focus  {background-color: #fff; color: var(--primary-color);transition: all 0.5s; -webkit-transition: all 0.5s;}
+/* common title content */
+.common-title-content       {margin-bottom: 30px; }
+/* common banner content */
+.common-banner-inner        {background: #fff;}
+.common-banner-content      {width: 550px; margin: auto; padding: 50px 0px;}
+/******* Common Element CSS End *********/
+
+/***** Header section CSS Start *******/
+header                                          {position: sticky; position: -webkit-sticky; z-index: 10; top: 0; background: var(--secondary-color);}
+.navbar                                         {padding: 20px 0px; position: relative;  margin-bottom: 0px; border-radius: 0; background: var(--secondary-color); border: transparent; box-shadow: 0px 2px 50px 25px rgba(255,255,255,0.2); -webkit-box-shadow: 0px 2px 50px 25px rgba(255,255,255,0.2);}
+.navbar-expand-md .navbar-collapse              {justify-content: space-between; -webkit-justify-content: space-between;}
+.navbar .navbar-nav                             {margin: 0px -12px;}
+.navbar .navbar-nav .nav-item                   {margin: 0px 20px;}
+.navbar .navbar-nav .nav-link                   {padding: 0px; color: #fff; text-transform: uppercase; font-size: 15px; line-height: 24px; font-family: 'Brandon Grotesque'; font-weight: 700;} 
+.navbar .navbar-nav .nav-link:hover             {color: var(--primary-color);}
+.navbar .navbar-nav .social-nav                 {padding-left: 12px;}
+.navbar .navbar-nav .social-nav li              {margin: 0px 6px;}
+.navbar .navbar-nav .social-nav li a            {margin-right: 0px; color: #fff;}
+.navbar .navbar-nav .social-nav li a:hover,
+.navbar .navbar-nav .social-nav li a:focus      {color: var(--primary-color);}
+.navbar-collapse                                {display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center;}
+.navbar-nav .dropdown .dropdown-toggle i        {color: #fff; font-size: 12px; margin-left: 4px;}
+.navbar-nav .dropdown .dropdown-toggle::after   {display: none;}
+.dropdown-menu                                  {box-shadow: 0 5px 10px rgb(0 0 0 / 10%); -webkit-box-shadow: 0 5px 10px rgb(0 0 0 / 10%); border-radius: 10px;}
+.dropdown-item                                  {text-transform: capitalize; font-size: 15px; line-height: 24px;}
+.dropdown-item:hover                            {color: var(--primary-color); background: transparent;}
+.header-social-nav li                           {display: inline-block; margin-left: 7px;}
+.header-social-nav li a                         {color: var(--primary-color);}
+/***** Header section CSS Ends *******/
+
+/***** Homepage CSS Start *******/
+/* banner content */
+.banner                                         {position: relative; background: url('../images/home-banner.jpg') no-repeat center center / cover;}
+.banner:before                                  {position: absolute; background: rgba(0,0,0,0.5); content: ''; top: 0; left: 0; width: 100%; height: 100%;}
+.banner .row                                    {padding: 60px 0px 110px; min-height: calc(100vh - 205px); align-items: center; -webkit-align-items: center;}
+.banner-content ul                              {margin: 0px -10px;}
+.banner-content ul li                           {margin: 0px 10px;}
+.banner-content p                               {color: #fff; width: 68%; margin: 0px auto 50px;}
+.banner-content h1                              {margin: 47px 0px 19px; letter-spacing: 2px; text-shadow: 2px 2px rgba(0,0,0,0.5);}
+.banner-content img                             {display: inline-block; width: 50%;}
+.banner-content .theme-btn                      {display: inline-block; padding: 10px 60px 10px 60px;}
+.banner-content .theme-btn.white-btn            {display: inline-block; padding: 10px 64px 10px 60px;}
+
+.banner-slider .slick-next                      {top: 50%; right: 2%;width: 40px;height: 40px;padding: 0;-webkit-transform: translate(0, -50%);-ms-transform: translate(0, -50%);transform: translate(0, -50%);background: #fff url('../images/arrow-next.png') no-repeat center center / 32%; opacity: 0.3;}
+.banner-slider .slick-prev                      {top: 50%; left: 2%;width: 40px;height: 40px;padding: 0;-webkit-transform: translate(0, -50%);-ms-transform: translate(0, -50%);transform: translate(0, -50%);background: #fff url('../images/arrow-prev.png') no-repeat center center / 32%; opacity: 0.3; z-index: 1;}
+.banner-slider .slick-prev:hover                {color: none;outline: none;background: #fff url('../images/arrow-prev.png') no-repeat center center / 32%; opacity: 0.5;}
+.banner-slider .slick-next:hover                {color: none;outline: none;background: #fff url('../images/arrow-next.png') no-repeat center center / 32%; opacity: 0.5;}
+
+
+.banner-slider .slick-dots li button:before         {display: none;}
+.banner-slider .slick-dots                          {bottom: 40px;}
+.banner-slider .slick-dots li button                {background-color: #fff; border-radius: 50%; width: 15px; height: 15px;}
+.banner-slider .slick-dots li button:hover          {background-color: var(--primary-color); border-radius: 50%; }
+.banner-slider .slick-dots li.slick-active button   {background-color: var(--primary-color);}
+.banner-slider.slick-dotted.slick-slider            {margin-bottom: 0px;}
+.banner-slider .slick-next::before                  {content: "→"; display: none;}
+.banner-slider .slick-prev::before                  {content: "→"; display: none;}
+
+/* consultation content */
+.consultation-1,.consultation-3                                         {background: url('../images/block-bg.jpg') no-repeat center center / cover; width: 100%; height: 100%; padding: 20px 46px;}
+.consultation-2                                                         {background: #fff; padding: 25px 46px;}
+.consultation-2 .consultation-content h3 a:hover                        {color: var(--secondary-color);}
+.consultation-2 .consultation-content h3 a:focus                        {color: var(--secondary-color);}
+.consultation-2 .consultation-icon , .consultation-3 .consultation-icon {color: var(--primary-color);}
+.consultation-2 .consultation-content h3 a                              {color: var(--secondary-color);}
+.consultation-2 .consultation-content  p                                {color: var(--secondary-color);}
+.consultation-icon                                                      {color: #fff;}
+.consultation-content                                                   {margin-left: 20px;}
+/* .consultation-content h3                                                {line-height: 30px;} */
+.consultation-content p                                                 {margin-bottom: 0px; color: #fff;}
+.consultation-content h3 a                                              {font-size: 26px; line-height: 42px;}
+.consultation-content h3 a:hover                                        {color: #fff;}
+.consultation-content h3 a:focus                                        {color: #fff;}
+
+/* welcome section */
+.welcome-section                                    {padding: 100px 0px 126px; background: #eee}
+.welcome-inner-content                              {padding-right: 40px;}
+.welcome-inner-content p                            {margin-bottom: 30px; color: #7d7d7d;}
+.welcome-inner-content .welcome-number              {font-size: 28px; line-height: 29px; display: inline-block; margin-left: 53px; color: var(--secondary-color); font-family: 'Brandon Grotesque';}
+.welcome-inner-content .welcome-number:hover        {color: var(--primary-color);}
+.welcome-inner-content .common-title-content h2     {text-transform: none;}
+.welcome-image img                                  {max-width: 31%; display: inline-block;}
+.welcome-image .about-2-image                       {display: inline-block; margin: 0px 10px; transform: translateY(50px); -webkit-transform: translateY(50px);}
+
+/* service installation */
+.service-installation h2                            { color: #fff;}
+.service-installation h5                            {color: #fff;}
+.service-installation                               { padding: 90px 0px 120px; background: url('../images/service-bg.jpg') no-repeat center center / cover; position: relative;}
+.service-installation::before                       {content: ''; position: absolute; background: rgba(0,0,0,0.8); top: 0; left: 0; width: 100%; height: 100%;}
+.service-installation .container                    {position: relative; z-index: 1;}
+.services-main                                      {padding-top: 50px;}
+.service-install-block                              {background: #1d1d1d; border-radius: 10px; margin: 0px 20px;box-shadow: 0px 0px 4px rgba(0,0,0,0.5); -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.5);}
+.item-content                                       {padding: 0px 20px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;}
+.service-install-block .item-img                    {background: no-repeat center / cover; padding-top: 70%; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+.item-content h4                                    {color: #fff; padding: 18px 0px; border-bottom: 1px solid var(--primary-color);}
+.item-content p                                     {padding: 20px 0px; margin-bottom: 0px; color: #fff;}
+.item-content a                                     {margin-bottom: 20px; padding: 10px 54px;}
+.services-main .slick-next::before                  {content: "\f054"; font-family: 'Font Awesome\ 5 Free'; font-weight: 900; color: var(--primary-color);}
+.services-main .slick-prev::before                  {content: "\f053"; font-family: 'Font Awesome\ 5 Free'; font-weight: 900; color: var(--primary-color);}
+
+/* wheel casestudy content */
+.casestudy-item                                     {padding: 70px 0px;}
+.casestudy-content                                  {padding-left: 30px; width: 570px;}
+.casestudy-content p                                {margin-bottom: 30px; color: #7d7d7d;}
+.casestudy-content .common-title-content h2         {font-size: 30px; line-height: 40px;}
+.casestudy-image                                    {background: no-repeat center center / cover; padding-top: 80%; width: 100%;}
+
+/****** Bottom section CSS Starts *******/
+/* testimonial */
+.border-top                                             {position: relative;}
+.border-top::after                                      {content: ''; position: absolute; top: -1px; left: 0; width: 100%; height: 10px; background: url('../images/border-line.jpg') no-repeat center center / cover;}
+.border-bottom                                          {position: relative;}
+.border-bottom::after                                   {content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 10px; background: url('../images/border-line.jpg') no-repeat center center / cover;}
+.testimonial                                            {padding:100px 0px; position: relative; background: url('../images/testimonial-bg.jpg') no-repeat center center / cover;}
+.testimonial:before                                     {position: absolute; background: rgba(0,0,0,0.8); content: ''; top: 0; left: 0; width: 100%; height: 100%;}
+.testimonial h4                                         {margin-bottom: 30px; color: var(--primary-color); }
+.testimonial-inner-content                              {z-index: 1; position: relative; }
+.testimonial-data p                                     {margin: 40px auto; color: #fff; position: relative; font-size: 20px; line-height: 34px; font-family: 'Brandon Grotesque';}
+.testimonial-slider .slick-dots                         {bottom: -40px;}
+.testimonial-slider .slick-dots li button:before        {content: none;} 
+.testimonial-slider .slick-dots li,
+.testimonial-slider .slick-dots li button               {width: 16px; height: 16px; }      
+.testimonial-slider .slick-dots li button               {background-color: #6b6b6b; border-radius: 50%; }
+.testimonial-slider .slick-dots li.slick-active button  {background-color: var(--primary-color);}
+/* Footer Section */
+.footer-inner				    {padding: 68px 0; background: #1d1d1d; }
+.footer-inner .about-blk img    {max-width: 70%; display: inline-block; margin-bottom: 30px;}
+.footer-inner .about-blk p      {color: #c5c5c5; padding-right: 40px;}
+
+footer ul                       {margin: 0; }
+ul.footer-nav li a			    {margin-bottom: 2px; padding-right: 20px; color: #c5c5c5; display: inline-block; position: relative;}
+ul.footer-nav li a:hover,
+ul.footer-nav li a:focus        {color: var(--primary-color);}
+footer a                        {color: var(--secondary-color); }
+ul.footer-nav li.active a,footer a:focus,
+footer a:hover  	            {color: var(--primary-color); }
+.footer-blk h5                  {margin-bottom: 20px; color: #fff; border-bottom: 1px solid #fff; padding-bottom: 10px;}
+.cat-blk .footer-nav li a       {margin-bottom: 5px;}
+.cat-blk ul                     {column-count: 2;}
+.get-in-blk p                   {color: #c5c5c5;}
+.get-in-blk .info               {margin-left: 10px;}
+.get-in-blk .info a             {color: #c5c5c5;}
+.get-in-blk .info a:hover,
+.get-in-blk .info a:focus       {color: var(--primary-color);}
+.contact-nav li                 {margin-bottom: 28px;}
+.contact-nav li:last-child      {margin-bottom: 0px;}
+.contact-nav li p               {margin: 0; }
+.contact-nav li i               {margin-right: 10px; font-size: 24px; line-height: 28px; color: var(--primary-color); }
+
+/* copyright content */
+.site-info					    {background: #1d1d1d; }
+.site-info-inner                {border-top: 1px solid rgba(255,255,255,0.2); padding: 24px 0px;}
+.site-info p                    {margin-bottom: 0px; color: #c5c5c5; text-transform: capitalize;}
+.site-info .social-nav li       {margin-right: 12px;}
+.site-info .social-nav li:last-child { margin-right: 0px;}
+.social-nav li a                {font-size: 16px; line-height: 40px; color:#fff; width: 40px; height: 40px; border: 1px solid #fff; border-radius: 50%; text-align: center;}
+.social-nav li a:hover,
+.social-nav li a:focus          {color: var(--primary-color); border: 1px solid var(--primary-color);}
+/****** Bottom section CSS End *******/
+
+/***** Homepage CSS Ends *******/
+
+/***** Contact page CSS Start *******/
+.contact-page                                               {background: #EEEEEE; padding: 70px 0px 60px;}
+.contact-links-content                                      {background: #fff; padding: 20px;  box-shadow: 0px 8px 6px -6px rgba(65, 64, 64, 0.2); -webkit-box-shadow: 0px 8px 6px -6px rgba(65,64,64,0.2);}
+.contact-address-info                                       {margin-bottom: 0px;}
+.contact-address-info .info                                 {margin-left: 20px;}
+.contact-address-info li:nth-child(2)                       {margin: 20px 0px;}
+.contact-address-info .info p                               {margin-bottom: 0px; text-transform: capitalize;}
+.contact-address-info .info a                               {font-weight: 400;}
+.contact-address-info .icon                                 {color: var(--primary-color); font-size: 24px; line-height: 30px;}
+
+/*form styling starts*/
+.contact-inner                                              {margin-top: 60px;}
+.contact-desc                                               {margin-bottom: 30px;}
+.contact-desc h4                                            {color: var(--secondary-header-color); letter-spacing: 2px; margin-bottom: 10px;} 
+.contact-desc p                                             {width: 80%; margin-bottom: 0px;}
+.contact-form-content .user-name                            {width: 48%;}
+.contact-form-content .user-mail                            {width: 48%;}
+.contact-form-content .form-group                           {margin-bottom: 30px;}
+.contact-form-content .form-control                         {font-size: 14px; line-height: 20px; padding: 24px; border: 1px solid transparent; border-radius: 0px; box-shadow: 0px 8px 6px -6px rgba(65, 64, 64, 0.2); -webkit-box-shadow: 0px 8px 6px -6px rgba(65,64,64,0.2);}
+.contact-form-content .form-control:focus                   {border: 1px solid var(--primary-color);}
+.contact-form-content .theme-btn                            {border: 1px solid transparent;}
+/*map styling starts*/
+.contact-map                                                {margin-top: 60px;}
+.contact-map iframe                                         {box-shadow: 0px 0px 4px rgba(0,0,0,0.2); -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.2);}
+
+
+
+/***** Powder Coating page CSS Start *******/
+/*quote section styling starts*/
+.quote                                              {padding: 75px 0px 0px;}
+.quote-item                                         {padding-bottom: 70px;}
+.remove-bottom-margin                               {margin-bottom: 0px !important;}
+.quote-desc-block h2                                {text-transform: none; font-size: 36px; line-height: 44px;}
+.quote-inner                                        {background-color: #fff;}
+.quote-image                                        {background: no-repeat center center / cover; width: 100%; padding-top: 70%;}
+.quote-content                                      {background: #fff; text-align: center; width: 545px; margin: auto;}
+.quote-content p                                    {margin-bottom: 30px;}
+.quote-content .common-title-content h2             {color: var(--secondary-header-color);letter-spacing: 2px;}
+.breadcrumb                                         {margin-bottom: 10px; padding: 0px; background-color: transparent; justify-content: center; -webkit-justify-content: center; text-transform: uppercase; font-weight: 700; font-family: 'Brandon Grotesque'; color: var(--secondary-header-color);}
+.breadcrumb-item.active                             {color: var(--primary-color);}
+.get-quote .row                                     {margin-bottom: 50px;}
+.quote-item .row:nth-child(even) .quote-desc-block  {padding-right: 25px;}
+.quote-item .row:nth-child(odd) .quote-desc-block   {padding-left: 25px;}
+.quote-desc-block p                                 {margin-bottom: 30px;}
+/*quote section styling ends*/
+
+/***** Powder Coating page CSS End *******/
+
+
+ @media(min-width: 992px) and (max-width: 1199px){
+     /*global styling starts*/
+    h1                                              {margin-bottom: 42px; font-size: 42px; line-height: 60px;}
+    h2                                              {font-size: 32px; line-height: 42px;}
+    h4                                              {font-size: 24px; line-height: 30px;}
+    h3                                              {font-size: 20px; line-height: 34px;}
+    h5                                              {font-size: 17px; line-height: 26px; margin-bottom: 5px;}
+    body                                            {font-size: 13px; line-height: 22px;}
+    .theme-btn                                      {padding: 11px 30px; font-size: 13px; line-height: 20px;}
+    .common-title-content                           {margin-bottom: 20px;}
+    .common-banner-content                          {width: 500px; margin: auto; padding: 45px 0px;}
+    /*global styling ends*/
+
+    /*navbar styling starts*/
+    .navbar                                         {padding: 18px 0px;}
+    .navbar .navbar-nav .nav-item                   {margin: 0px 18px;}
+    .navbar .navbar-nav .nav-link                   {font-size: 12px; line-height: 20px;} 
+    .dropdown-item                                  {font-size: 12px; line-height: 20px;}
+    /*navbar styling ends*/
+
+    
+    /***** Home page CSS Start *******/
+    /*banner styling starts*/
+    .banner .row                                    {padding: 60px 0px 80px; min-height: calc(100vh - 195px); align-items: center; -webkit-align-items: center;}
+    .banner-content ul                              {margin: 0px -10px;}
+    .banner-content ul li                           {margin: 0px 10px;}
+    .banner-content p                               {margin: 0px auto 40px; width: 76%;}
+    .banner-content h1                              {margin: 35px 0px 12px;}
+    .banner-content img                             {display: inline-block; width: 40%;}
+    .banner-content .theme-btn                      {display: inline-block; padding: 10px 40px 10px 40px;}
+    .banner-content .theme-btn.white-btn            {display: inline-block; padding: 10px 44px 10px 40px;}
+
+    .banner-slider .slick-next                      {width: 35px; height: 35px; background: #fff url('../images/arrow-next.png') no-repeat center center / 30%;}
+    .banner-slider .slick-prev                      {width: 35px; height: 35px; background: #fff url('../images/arrow-prev.png') no-repeat center center / 30%;}
+    .banner-slider .slick-prev:hover                {background: #fff url('../images/arrow-prev.png') no-repeat center center / 30%;}
+    .banner-slider .slick-next:hover                {background: #fff url('../images/arrow-next.png') no-repeat center center / 30%;}
+    .banner-slider .slick-dots                      {bottom: 30px;}
+    .banner-slider .slick-dots li button            {width: 12px; height: 12px;}
+    /*banner styling ends*/
+
+    /* consultation-content  starts*/
+    .consultation-1,.consultation-3                     {padding: 15px 28px;}
+    .consultation-2                                     {padding: 15px 28px;}
+    .consultation-content h3 a                          {font-size: 20px; line-height: 32px;}
+    /* consultation-content  ends*/
+
+    /*welcome section starts*/
+    .welcome-section                                    {padding: 70px 0px 100px;}
+    .welcome-inner-content                              {padding-right: 16px;}
+    .welcome-inner-content p                            {margin-bottom: 25px;}
+    .welcome-inner-content .welcome-number              {font-size: 24px; line-height: 30px;  margin-left: 35px;}
+    .welcome-image .about-2-image                       {display: inline-block; margin: 0px 8px;}
+    /*welcom section ends*/
+
+    /*services section starts*/
+    .service-installation                               { padding: 70px 0px}
+    .services-main                                      {padding-top: 45px;}
+    .service-install-block                              {border-radius: 10px; margin: 0px 12px;}
+    .item-content                                       {padding: 0px 18px;}
+    .item-content h4                                    {padding: 15px 0px; font-size: 22px; line-height: 28px;}
+    .item-content p                                     {padding: 18px 0px;}
+    .item-content a                                     {margin-bottom: 15px; padding: 10px 34px;}
+    /*services section ends*/
+
+    /*casestudy section start*/
+    .casestudy-item                                     {padding: 70px 0px;}
+    .casestudy-content                                  {padding-left: 30px; width: 480px;}
+    .casestudy-content p                                {margin-bottom: 20px; color: #7d7d7d;}
+    .casestudy-content .common-title-content h2         {font-size: 26px; line-height: 34px;}
+
+    /*casestudy section ends*/
+
+    /* testimonial section starts */
+    .border-top::after                                   {height: 8px;}
+    .border-bottom::after                                {height: 8px;}
+    .testimonial                                         {padding:70px 0px;}
+    .testimonial-slider .slick-dots                      {bottom: -20px;}
+    .testimonial-slider .slick-dots li,
+    .testimonial-slider .slick-dots li button            {width: 12px; height: 12px; }      
+    /* testimonial section ends */
+
+    /*footer section starts*/
+    .footer-inner				    { padding: 60px 0;}
+    .footer-inner .about-blk img    {margin-bottom: 25px;}
+    .footer-inner .about-blk p      {padding-right: 20px;}
+    ul.footer-nav li a			    {margin-bottom: 2px; padding-right: 20px;}
+    .get-in-blk .info               {margin-left: 8px;}
+    .contact-nav li                 {margin-bottom: 20px;}
+    .contact-nav li i               {margin-right: 10px; font-size: 20px; line-height: 28px;}
+    /* copyright content */
+    .site-info-inner                { padding: 18px 0px;}
+    .site-info .social-nav li       {margin-right: 12px;}
+    .social-nav li a                {font-size: 14px; line-height: 34px; color:#fff; width: 34px; height: 34px; border: 1px solid #fff; border-radius: 50%; text-align: center;}
+    /***** Home page CSS Ends*******/
+
+    /***** Powder Coating page CSS Start *******/
+    /*quote section styling starts*/
+    .quote                                               {padding: 55px 0px 0px;}
+    .quote-item                                          {padding-bottom: 50px;}
+    .quote-desc-block h2                                 {text-transform: none; font-size: 30px; line-height: 38px;}
+    .quote-content                                       {width: 443px;}
+    .quote-content p                                     {margin-bottom: 20px;}
+    .breadcrumb                                          {margin-bottom: 0px;}
+    .get-quote .row                                      {margin-bottom: 30px;}
+    .quote-item .row:nth-child(even) .quote-desc-block   {padding-right: 6px;}
+    .quote-item .row:nth-child(odd) .quote-desc-block    {padding-left: 6px;}
+    .quote-desc-block p                                  {margin-bottom: 20px;}
+    /*quote section styling ends*/
+    /***** Powder Coating page CSS Ends *******/
+
+    /***** Contact page CSS Start *******/
+    .contact-page                                               {padding: 55px 0px 45px;}
+    .contact-links-content                                      {padding: 20px;}
+    .contact-address-info .info                                 {margin-left: 20px;}
+    .contact-address-info li:nth-child(2)                       {margin: 15px 0px;}
+    .contact-address-info .info a                               {font-weight: 400;}
+    .contact-address-info .icon                                 {color: var(--primary-color); font-size: 24px; line-height: 30px;}
+
+    /*form styling starts*/
+    .contact-inner                                              {margin-top: 40px;}
+    .contact-desc                                               {margin-bottom: 20px;}
+    .contact-desc p                                             {width: 88%;}
+    .contact-form-content .form-group                           {margin-bottom: 20px;}
+    .contact-form-content .form-control                         {padding: 23px 15px;}
+    .contact-map                                                {margin-top: 40px;}
+    /***** Contact page CSS Ends *******/
+} 
+
+@media(min-width: 768px) and (max-width: 991px){
+    /*global styling starts*/
+   h1                               {margin-bottom: 28px; font-size: 34px; line-height: 42px;}
+   h2                               {font-size: 30px; line-height: 38px;}
+   h4                               {font-size: 24px; line-height: 30px;}
+   h3                               {font-size: 16px; line-height: 24px;}
+   h5                               {font-size: 14px; line-height: 22px; margin-bottom: 0px;}
+   body                             {font-size: 12px; line-height: 20px;}
+   .theme-btn                       {padding: 8px 18px; font-size: 12px; line-height: 20px;}
+   .common-title-content            {margin-bottom: 12px;}
+   .common-banner-content           {width: 440px; margin: auto; padding: 35px 0px 38px;}
+   /*global styliong ends*/
+
+   /*navbar styling starts*/
+   .navbar                          {padding: 18px 0px;}
+   .logo-blk .logo                  {width: 100px;}
+   .navbar .navbar-nav .nav-item    {margin: 0px 6px}
+   .navbar .navbar-nav .nav-link    {font-size: 12px; line-height: 20px;} 
+   .dropdown-item                   {font-size: 12px; line-height: 20px;}
+   /*navbar styling ends*/
+
+   /***** Home page CSS Starts *******/
+   /*banner styling starts*/
+   .banner .row                                    {padding: 45px 0px 70px; min-height: calc(100vh - 142px); align-items: center; -webkit-align-items: center;}
+   .banner-content ul                              {margin: 0px -10px;}
+   .banner-content ul li                           {margin: 0px 10px;}
+   .banner-content p                               {margin: 0px auto 35px; width: 85%;}
+   .banner-content h1                              {margin: 30px 0px 10px;}
+   .banner-content img                             {display: inline-block; width: 40%;}
+   .banner-content .theme-btn                      {display: inline-block; padding: 8px 30px 8px 30px;}
+   .banner-content .theme-btn.white-btn            {display: inline-block; padding: 8px 34px 8px 30px;}
+
+   .banner-slider .slick-next                      {width: 32px; height: 32px; background: #fff url('../images/arrow-next.png') no-repeat center center / 28%;}
+   .banner-slider .slick-prev                      {width: 32px; height: 32px; background: #fff url('../images/arrow-prev.png') no-repeat center center / 28%;}
+   .banner-slider .slick-prev:hover                {background: #fff url('../images/arrow-prev.png') no-repeat center center / 28%;}
+   .banner-slider .slick-next:hover                {background: #fff url('../images/arrow-next.png') no-repeat center center / 28%;}
+   .banner-slider .slick-dots                      {bottom: 20px;}
+   .banner-slider .slick-dots li button            {width: 10px; height: 10px;}
+   /*banner styling ends*/
+
+   /* consultation-content  starts*/
+   .consultation-1,.consultation-3                   {padding: 4px 16px;}
+   .consultation-2                                   {padding: 4px 16px;}
+   .consultation-content                             {margin-left: 10px;}
+   .consultation-icon img                            {max-width: 70%;}
+   .consultation-content h3  a                       {font-size: 16px; line-height: 20px;}
+   /* consultation-content  ends*/
+
+   /*welcome section starts*/
+   .welcome-section                                    {padding: 50px 0px 70px;}
+   .welcome-inner-content                              {padding-right: 0px;}
+   .welcome-inner-content p                            {margin-bottom: 15px;}
+   .welcome-inner-content .welcome-number              {font-size: 20px; line-height: 28px;  margin-left: 25px;}
+   .welcome-image .about-2-image                       {display: inline-block; margin: 5px;}
+   /*welcom section ends*/
+   
+   /*services section starts*/
+   .service-installation                               {padding: 50px 0px}
+   .services-main                                      {padding-top: 35px;}
+   .service-install-block                              {border-radius: 10px; margin: 0px 10px;}
+   .item-content                                       {padding: 0px 10px;}
+   .item-content h4                                    {padding: 15px 0px; font-size: 16px; line-height: 24px;}
+   .item-content p                                     {padding: 18px 0px;}
+   .item-content a                                     {margin-bottom: 10px; padding: 8px 24px;}
+   /*services section ends*/
+
+   /*casestudy section start*/
+   .casestudy-item                                     {padding: 50px 0px;}
+   .casestudy-content                                  {padding-left: 30px; width: 360px;}
+   .casestudy-content p                                {margin-bottom: 15px;}
+   .casestudy-content .common-title-content h2         {font-size: 20px; line-height: 28px;}
+
+   /*casestudy section ends*/
+
+   /* testimonial section starts */
+   .border-top::after                              {height: 5px;}
+   .border-bottom::after                           {height: 5px;}
+   .testimonial                                    {padding:50px 0px;}
+   .testimonial-data p                             {font-size: 16px; line-height: 24px;}
+   .testimonial-slider .slick-dots                 {bottom: -20px;}
+   .testimonial-slider .slick-dots li,
+   .testimonial-slider .slick-dots li button       {width: 12px; height: 12px; }      
+   /* testimonial section ends */
+
+   /*footer section starts*/
+   .footer-inner				    { padding: 40px 0;}
+   .footer-inner .about-blk img     {margin-bottom: 25px;}
+   .footer-inner .about-blk p       {padding-right: 0px;}
+   .footer-blk h5                   {margin-bottom: 10px;}
+   ul.footer-nav li a			    {margin-bottom: 2px; padding-right: 10px;}
+   .get-in-blk .info                {margin-left: 8px;}
+   .contact-nav li                  {margin-bottom: 15px;}
+   .contact-nav li i                {margin-right: 10px; font-size: 14px; line-height: 22px;}
+   /* copyright content */
+   .site-info-inner                 { padding: 18px 0px;}
+   .site-info .social-nav li        {margin-right: 12px;}
+   .social-nav li a                 {font-size: 12px; line-height: 30px; width: 30px; height: 30px; border-radius: 50%; text-align: center;}
+    /***** Home page CSS ends *******/
+
+    /***** Powder Coating page CSS Starts *******/
+    /*quote section styling starts*/
+    .quote                                              {padding: 45px 0px 0px;}
+    .quote-item                                         {padding-bottom: 40px;}
+    .quote-inner h2                                     {font-size: 24px; line-height: 30px;}
+    .quote-desc-block h2                                {text-transform: none; font-size: 24px; line-height: 32px;}
+    .quote-content                                      {width: 350px;}
+    .quote-image                                        {padding-top: 80%;}
+    .quote-content p                                    {margin-bottom: 10px;}
+    .breadcrumb                                         {margin-bottom: 0px;}
+    .get-quote .row                                     {margin-bottom: 25px;}
+    .quote-item .row:nth-child(even) .quote-desc-block  {padding-right: 0px;}
+    .quote-item .row:nth-child(odd) .quote-desc-block   {padding-left: 0px;}
+    /*quote section styling ends*/
+    /***** Powder Coating page CSS Ends *******/
+
+    /***** Contact page CSS Start *******/
+    .contact-page                                       {padding: 40px 0px 30px;}
+    .contact-links-content                              {padding: 20px 15px;}
+    .contact-address-info .info                         {margin-left: 10px;}
+    .contact-address-info li:nth-child(2)               {margin: 15px 0px;}
+    .contact-address-info .info a                       {font-weight: 400;}
+    .contact-address-info .icon                         {font-size: 18px; line-height: 26px;}
+
+    /*form styling starts*/
+    .contact-inner                                      {margin-top: 30px;}
+    .contact-desc                                       {margin-bottom: 20px;}
+    .contact-desc p                                     {width: 90%;}
+    .contact-form-content .form-group                   {margin-bottom: 20px;}
+    .contact-form-content .form-control                 {padding: 18px; font-size: 12px; line-height: 20px;}
+    .contact-map                                        {margin-top: 30px;}
+    .contact-map iframe                                 {height: 300px;}
+    /***** Contact page CSS Ends *******/
+} 
+
+@media(min-width:576px ) and (max-width:767px){
+    .common-banner-content{width: 416px !important;}
+    .banner-content img{width: 70% !important;}
+    .footer-inner .about-blk img{max-width: 40% !important;}
+    .footer-blk.cat-blk{margin-bottom: 0px !important;}
+    .site-info-inner p{text-align: left !important; margin-bottom: 0px !important;}
+}
+
+@media(max-width:767px){
+    /*global styling starts*/
+    h1                                                  {margin-bottom: 20px; font-size: 26px; line-height: 38px;}
+    h2                                                  {font-size: 26px; line-height: 34px;}
+    h4                                                  {font-size: 20px; line-height: 26px;}
+    h3                                                  {font-size: 16px; line-height: 28px;}
+    h5                                                  {font-size: 14px; line-height: 22px; margin-bottom: 5px;}
+    body                                                {font-size: 12px; line-height: 20px;}
+    .common-banner-content                              {width: 250px; margin: auto; padding: 25px 0px 28px;}
+    .common-title-content                               {margin-bottom: 15px;}
+    .theme-btn                                          {padding: 8px 18px; font-size: 12px; line-height: 20px;}
+    /*global styling ends*/
+
+    /* navbar styling starts */
+    .navbar                                             {padding: 15px;}
+    .navbar-nav:last-child                              {padding-bottom: 15px; }
+    .navbar-nav                                         {width: 100%;}
+    .navbar-brand                                       {margin: 0px; padding:0px;}
+    .navbar-brand img                                   {width: 100px; }
+    .navbar-header                                      {width: 100%; display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; justify-content: space-between; -webkit-justify-content: space-between; }
+    .navbar-header .mobile-contact a                    {color: #fff; font-size: 18px; line-height: 26px;}
+    .navbar-toggle                                      {background: transparent; outline: none; box-shadow: none; -webkit-box-shadow: none; border: none;}
+    .navbar-toggler > div                               {margin: 0px 2px; }
+    .navbar-toggler-icon                                {display: block; width: 24px; height: 2px; background-color: #fff; border-radius: 4px; }
+    .navbar-toggler-icon:nth-child(2)                   {margin: 5px 0; }
+    .navbar-collapse                                    {flex-direction: column; -webkit-flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #161616; }
+    .navbar .navbar-nav .nav-item                       {margin: 0px; display: block; width: 100%; }
+    .navbar .navbar-nav .social-nav                     {justify-content: flex-start !important; -webkit-justify-content: flex-start !important; }
+    .navbar .navbar-nav .social-nav                     {margin: 0px; padding: 10px 15px;}
+    .navbar .navbar-nav .nav-link                       {padding: 10px 15px;}
+    .navbar .navbar-nav .social-nav li:first-child      {margin-left: 0px;}
+    .navbar-default .navbar-nav > li > a:hover, 
+    .navbar-default .navbar-nav > li > a:focus, 
+    .dropdown .btn:hover, 
+    .dropdown .btn-default:active:focus, 
+    .dropdown.show > .dropdown-toggle:hover, 
+    .dropdown.show > .dropdown-toggle:focus, 
+    .dropdown.show > .dropdown-toggle                   {background: var(--primary-color); color: #fff; }
+    .navbar-nav .dropdown.show .dropdown-toggle i       {color: #fff;}
+    .dropdown.show > .dropdown-menu                     {padding: 0px 0px 15px; margin: 0px; background: var(--primary-color); width: 100%; border: transparent; border-radius: 0px; }
+    .dropdown.show > .dropdown-menu ul li a             {font-size: 13px; line-height: 16px; }
+    .dropdown.show > .dropdown-menu ul li a:hover,
+    .dropdown.show > .dropdown-menu ul li a:focus       {color: #fff;}
+    .dropdown-item:hover,
+    .dropdown-item:focus                                {color: #fff; background: transparent;}
+    .dropdown-menu                                      {border: 0px; box-shadow: none !important; -webkit-box-shadow: none !important;} 
+    /*navbar styling ends*/
+
+    /***** Home page CSS Starts *******/
+    /*banner styling starts*/
+   .banner-content ul                                 {margin: 0px -10px;}
+   .banner-content ul li                              {margin: 0px 10px;}
+   .banner-content p                                  {margin: 0px auto 35px; width: 100%;}
+   .banner-content h1                                 {margin: 20px 0px 10px;}
+   .banner-content img                                {display: inline-block; width: 80%;}
+   .banner-content .theme-btn                         {display: inline-block; padding: 8px 14px 8px 14px;}
+   .banner-content .theme-btn.white-btn               {display: inline-block; padding: 8px 14px 8px 14px;}
+   .banner-slider .slick-next                         {display: none !important;}
+   .banner-slider .slick-prev                         {display: none !important;}
+   .banner-slider .slick-dots                         {display: none !important;}
+   .banner .row                                       {padding: 25px 0px; min-height: calc(100vh - 132px); align-items: center; -webkit-align-items: center;}
+   /*banner styling ends*/
+    /*consultation-content  starts*/
+    .consultation-2,.consultation-3                    {display: none !important;}
+    .consultation-1                                    {padding: 8px 18px; justify-content: center; -webkit-justify-content: center; margin-top: -1px;}
+    .consultation-content                              {margin-left: 15px;}
+    .consultation-content h3 a                         {font-size: 16px; line-height: 28px;}
+    .consultation-icon img                             {max-width: 80%;}
+    /* consultation-content  ends*/
+    /*welcome section starts*/
+   .welcome-section                                    {padding: 30px 0px 70px; text-align: center;}
+   .welcome-inner-content                              {padding-right: 0px;}
+   .welcome-inner-content p                            {margin-bottom: 15px;}
+   .welcome-inner-content .welcome-number              {font-size: 20px; line-height: 28px;  margin-left: 25px;}
+   .welcome-image                                      {margin-top: 25px;}
+   .welcome-image .about-2-image                       {display: inline-block; margin: 6px;}
+   .welcome-links                                      {justify-content: center; -webkit-justyfy-content: center;}
+   /*welcom section ends*/
+   /*services section starts*/
+   .service-installation                               { padding: 50px 0px}
+   .services-main                                      {padding-top: 35px;}
+   .service-install-block                              {border-radius: 10px; margin: 0px 10px;}
+   .item-content                                       {padding: 0px 18px;}
+   .item-content h4                                    {padding: 10px 0px; font-size: 16px; line-height: 24px;}
+   .item-content p                                     {padding: 15px 0px;}
+   .item-content a                                     {margin-bottom: 10px; padding: 8px 24px;}
+   .service-install-block                              {max-width: 220px;}
+   .services-inner{margin: 0px -15px;}
+   .services-main .slick-next::before                  {display: none;}
+   .services-main .slick-prev::before                  {display: none;}
+   /*services section ends*/
+   /*wheel casestudy section start*/
+   .casestudy-item                                     {padding: 25px 0px;}
+   .casestudy-content                                  {padding-left: 0px; width: 93%; margin: 20px auto 0px; text-align: center;}
+   .casestudy-content p                                {margin-bottom: 15px;}
+   .casestudy-content .common-title-content h2         {font-size: 26px; line-height: 34px;}
+
+   /*wheel casestudy section ends*/
+    /*testimonial section starts*/
+    .border-top::after                                  {height: 5px;}
+    .border-bottom::after                               {height: 5px;}
+    .testimonial                                        {padding:50px 0px;}
+    .testimonial h4                                     {margin-bottom: 15px;}
+    .testimonial-data p                                 {font-size: 16px; line-height: 24px; margin: 20px 0px;}
+    .testimonial-slider .slick-dots                     {bottom: -25px;}
+    .testimonial-slider .slick-dots li,
+    .testimonial-slider .slick-dots li button           {width: 12px; height: 12px; }      
+    /* testimonial section ends */
+   /*footer section starts*/
+   .footer-inner				                        {padding: 30px 0;}
+   .footer-blk.about-blk                                {margin-bottom: 25px;}
+   .footer-inner .about-blk img                         {margin-bottom: 15px; max-width: 60%;}
+   .footer-inner .about-blk p                           {padding-right: 0px;}
+   .footer-blk h5                                       {margin-bottom: 10px;}
+  .footer-blk.cat-blk                                   {margin-bottom: 20px;}
+   ul.footer-nav li a			                        {margin-bottom: 2px; padding-right: 10px;}
+   .get-in-blk .info                                    {margin-left: 8px;}
+   .contact-nav li                                      {margin-bottom: 15px;}
+   .contact-nav li i                                    {margin-right: 10px; font-size: 14px; line-height: 22px;}
+   /* copyright content */
+   .site-info-inner                                     {padding: 18px 0px;}
+   .site-info-inner p                                   {text-align: center; margin-bottom: 10px;}
+   .site-info .social-nav li                            {margin-right: 12px;}
+   .social-nav.justify-content-end                      {justify-content: center !important; -webkit-justify-content: center !important;}
+   .social-nav li a                                     {font-size: 12px; line-height: 30px; width: 30px; height: 30px; border-radius: 50%; text-align: center;}
+    /***** Home page CSS Ends *******/
+
+    /***** Powder Coating page CSS Starts *******/
+    /*quote section styling starts*/
+    .quote                                              {padding: 30px 0px 10px; text-align: center;}
+    .quote-item                                         {padding-bottom: 20px;}
+    .quote-inner h2                                     {font-size: 24px; line-height: 32px;}
+    .glory-block                                        {padding-left: 0px; padding-top: 15px;}
+    .ypc-block                                          {padding-right: 0px; padding-top: 15px;}
+    .quote-desc-block h2                                {font-size: 20px; line-height: 28px;}
+    .quote-desc-block .common-title-content             {margin-bottom: 5px;}
+    .quote-desc-block p                                 {margin-bottom: 15px;}
+    .quote-content                                      {width: 348px; padding: 20px;}
+    .quote-content .common-title-content                {margin-bottom: 15px;}
+    .quote-content p                                    {margin-bottom: 12px;}
+    .breadcrumb                                         {margin-bottom: 0px;}
+    .breadcrumb li                                      {font-size: 11px; line-height: 22px;}
+    .breadcrumb-item+.breadcrumb-item::before           {padding-right: 4px;}
+    .breadcrumb-item+.breadcrumb-item                   {padding-left: 4px;}
+    .quote-item .row:nth-child(even)                    {flex-direction: column-reverse; -webkit-flex-direction: column-reverse;}
+    .get-quote .row                                     {margin-bottom: 30px;}
+    .quote-desc-block                                   {margin-top: 15px;}
+    .quote-item .row:nth-child(even) .quote-desc-block  {padding-right: 0px;}
+    .quote-item .row:nth-child(odd) .quote-desc-block   {padding-left: 0px;}
+    .quote-inner .row                                   {flex-direction: column-reverse; -webkit-flex-direction: column-reverse;}
+    /*quote section styling ends*/
+    /***** Powder Coating page CSS Ends *******/
+
+    /***** Contact page CSS Start *******/
+    .contact-page                                       {padding: 40px 0px 30px;}
+    .contact-links-content                              {padding: 20px; margin-top: 30px;}
+    .contact-address-info .info                         {margin-left: 15px;}
+    .contact-address-info li:nth-child(2)               {margin: 12px 0px;}
+    .contact-address-info .icon                         {font-size: 20px; line-height: 28px;}
+    /*form styling starts*/
+    .contact-inner                                      {margin-top: 30px;}
+    .contact-desc                                       {margin-bottom: 20px; text-align: center;}
+    .contact-desc h4                                    {margin-bottom: 5px;}
+    .contact-desc p                                     {width: 100%;}
+    .contact-form-content .form-group                   {margin-bottom: 18px;}
+    .contact-form-content .form-control                 {padding: 18px; font-size: 12px; line-height: 20px;}
+    .contact-map                                        {margin-top: 30px;}
+    .contact-map iframe                                 {height: 300px;}
+    /***** Contact page CSS Ends *******/
+}
+

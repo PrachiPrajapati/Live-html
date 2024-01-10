@@ -1,0 +1,41 @@
+.login-page { height: 100vh; background: linear-gradient(201.71deg, #3492F8 -27.99%, rgba(52, 146, 248, 0) 91.38%), #3246D3;}
+.login-blk { margin: 30px 0; padding: 30px; background: #FFFFFF; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); border-radius: 20px; text-align: center;}
+.login-blk img { padding-bottom: 35px;}
+.login-content { width: 450px; margin: 0 auto;}
+.login-blk .content_wrapper { margin: 0 auto 25px; text-align: left;}
+.login-blk .form-control { color: #000!important;}
+.login-blk .checkbox-input-style { text-align: left;}
+.login-blk .checkbox-input-style .dt-checkboxes { display: block;}
+.login-blk .checkbox-input-style span { margin-left: 10px; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 17px; font-weight: 700; color: #9FA3C0; display: block;}
+.login-blk .blue_btn { margin: 35px auto; width: 100%;}
+.forgot-link a { text-align: left; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 17px; font-weight: 600; color: #3246D3; display: inline-block;}
+.forgot-link a:hover { color: #657FDB; text-decoration: none;}
+.gmail_btn { margin-top: 25px; border: 2px solid #3246D3; border-radius: 6px; width: 100%; text-align: center; padding: 10px 20px; background-color: rgb(255, 255, 255); font-family:'Poppins', sans-serif; color: #3246D3; font-size: 15px; line-height: 25px; font-weight: 600; box-shadow: none;}
+.gmail_btn img { width: 25px; padding-bottom: 0 !important; float: right;}
+.login-blk h4 { margin: 0; padding: 5px 20px; text-align: center; font-family:'Poppins', sans-serif; display: inline-block; font-size: 15px; line-height: 22px; font-weight: 600; color: #60698B; background: #fff; position: relative; z-index: 1;}
+.login-blk .or-blk { margin-top: 25px; position: relative;}
+.login-blk .or-blk::before { 
+    content: '';
+    border-top: 1px solid #CACCE1;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    display: block;
+    z-index: 0;
+}
+/*Welcome Pwd Css*/
+.welcome-pwd-sec .login-blk .blue_btn { margin: 20px auto;}
+.welcome-text h5 { font-family:'Poppins', sans-serif; font-size: 25px; line-height: 30px; font-weight: 500; color: #293A3E;}
+.welcome-text h5 span { color: #3246D3;}
+.enter-join-text { margin: 20px 0; padding: 10px 15px; border-radius: 6px; background: #F2F2F2; }
+.enter-join-text h4 { background: transparent; font-family: 'Inter', sans-serif; font-size: 15px; line-height: 19px; font-weight: 500; color: #293A3E; display: block; text-align: center;}
+@media ( max-height: 767px) {
+    /* .login-page.register-page { height: 100%;} */
+}   
+@media( min-width: 1200px) and ( max-width: 1399px){ 
+    .login-blk { padding: 35px 45px;}
+    .login-blk img { padding-bottom: 35px;}
+    .login-blk .blue_btn { margin: 30px auto;}
+}

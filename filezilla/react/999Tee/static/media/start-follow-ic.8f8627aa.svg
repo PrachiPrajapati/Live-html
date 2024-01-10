@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>profile-add(24x24)@1x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home-Page_06/10/2020" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="10.1_notifications" transform="translate(-319.000000, -395.000000)" stroke="#221B38">
+            <g id="Group-7-Copy" transform="translate(288.000000, 364.000000)">
+                <g id="ic_like" transform="translate(18.000000, 18.000000)">
+                    <g id="profile-add(24x24)@1x" transform="translate(14.000000, 14.000000)">
+                        <path d="M17.1428571,18.2142857 C13.7714286,18.9761905 10.8095238,19.1666667 8.57142857,19.1666667 C5.0952381,19.1666667 2.17142857,18.7 0,18.2142857 C0,14.0047619 3.83809524,10.5952381 8.57142857,10.5952381 C13.3047619,10.5952381 17.1428571,14.0047619 17.1428571,18.2142857 Z" id="Path" fill="#26A541" fill-rule="nonzero" stroke-linecap="round"></path>
+                        <path d="M8.57142857,7.73809524 C10.6753333,7.73809524 12.3809524,6.03251429 12.3809524,3.92857143 C12.3809524,1.82462857 10.6753333,0.119047619 8.57142857,0.119047619 C6.46748571,0.119047619 4.76190476,1.82462857 4.76190476,3.92857143 C4.76190476,6.03251429 6.46748571,7.73809524 8.57142857,7.73809524 Z" id="Path" fill="#26A541" fill-rule="nonzero" stroke-linecap="round"></path>
+                        <line x1="14.2857143" y1="7.02380952" x2="20" y2="7.02380952" id="Path" stroke-width="1.14285714"></line>
+                        <line x1="17.1428571" y1="4.16666667" x2="17.1428571" y2="9.88095238" id="Path" stroke-width="1.14285714"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

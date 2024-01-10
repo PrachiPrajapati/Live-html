@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>chat</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Table/project-review" transform="translate(-990.000000, -21.000000)">
+            <g id="Group-54-Copy-7" transform="translate(970.000000, 0.000000)">
+                <g id="chat" transform="translate(20.000000, 21.000000)">
+                    <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="30" height="30"></rect>
+                    <g id="Group" transform="translate(5.000000, 5.714286)" stroke="#464546" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.68">
+                        <path d="M5,5 L5,14 C5,14.55 5.45,15 6,15 L16,15 L20,19 L20,5 C20,4.45 19.55,4 19,4 L6,4 C5.45,4 5,4.45 5,5 Z" id="Path"></path>
+                        <path d="M5,5 C5,4.45 5.45,4 6,4 L15,4 L15,1 C15,0.45 14.55,0 14,0 L1,0 C0.45,0 0,0.45 0,1 L0,10 C0,10.55 0.45,11 1,11 L5,11 L5,5 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

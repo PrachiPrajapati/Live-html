@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="37px" viewBox="0 0 40 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>group-communication-2(24x24)@1x</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01_Dashboard" transform="translate(-794.000000, -271.000000)" stroke="#FFFFFF" stroke-width="1.8">
+            <g id="Group-10" transform="translate(374.000000, 234.000000)">
+                <g id="Group-12-Copy" transform="translate(385.000000, 0.000000)">
+                    <g id="Group-11" transform="translate(24.000000, 24.000000)">
+                        <g id="group-communication-2(24x24)@1x" transform="translate(13.000000, 14.000000)">
+                            <path d="M21.6,3.6 C21.6,4.800006 20.39994,7.2 18,7.2 C15.60006,7.2 14.4,5.366826 14.4,3.6 C14.4,1.200006 16.39368,0 18,0 C19.60632,0 21.6,1.200006 21.6,3.6 Z" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M23.4,14.4 L22.79628,11.180628 C22.36356,8.872542 20.34828,7.2 18,7.2 C15.65172,7.2 13.636404,8.872542 13.20363,11.180628 L12.6,14.4 L23.4,14.4 Z" id="Path"></path>
+                            <path d="M34.2,18 C34.2,19.20006 32.99994,21.6 30.6,21.6 C28.20006,21.6 27,19.76688 27,18 C27,15.60006 28.99368,14.4 30.6,14.4 C32.20632,14.4 34.2,15.60006 34.2,18 Z" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M36,28.8 L35.39628,25.5807 C34.96356,23.27256 32.94828,21.6 30.6,21.6 C28.25172,21.6 26.23644,23.27256 25.80372,25.5807 L25.2,28.8 L36,28.8 Z" id="Path"></path>
+                            <path d="M9,18 C9,19.20006 7.8,21.6 5.4,21.6 C3.000006,21.6 1.8,19.76688 1.8,18 C1.8,15.60006 3.793608,14.4 5.4,14.4 C7.00641,14.4 9,15.60006 9,18 Z" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M10.8,28.8 L10.19637,25.5807 C9.763596,23.27256 7.748298,21.6 5.4,21.6 C3.051702,21.6 1.036404,23.27256 0.60363,25.5807 L9.05941988e-14,28.8 L10.8,28.8 Z" id="Path"></path>
+                            <path d="M16.2,32.4 L23.4,32.4 M19.8,30.6 L16.2,32.4 L19.8,30.6 Z M16.2,32.4 L19.8,34.2 L16.2,32.4 Z" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M6.930612,6.874254 L1.032714,11.004012 M5.014098,10.413612 L6.930612,6.874254 L5.014098,10.413612 Z M6.930612,6.874254 L2.949228,7.464654 L6.930612,6.874254 Z" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M32.13018,9.204228 L26.2323,5.07447 M28.14876,8.61381 L32.13018,9.204228 L28.14876,8.61381 Z M32.13018,9.204228 L30.21372,5.66487 L32.13018,9.204228 Z" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

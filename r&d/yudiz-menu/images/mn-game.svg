@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Game</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Game" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle-17" x="0" y="0" width="44" height="44"></rect>
+            <g id="Group-25" transform="translate(3.666667, 9.166667)">
+                <rect id="Rectangle-51" stroke="#FFFFFF" stroke-width="0.825825826" transform="translate(18.203310, 13.002364) rotate(90.000000) translate(-18.203310, -13.002364) " x="5.20094563" y="-5.20094563" width="26.0047281" height="36.4066194" rx="1.30023641"></rect>
+                <path d="M12.677305,18.2033097 C14.0237438,18.2033097 15.2427155,17.6575575 16.1250774,16.7751956 L14.0838839,13.3274232 L16.1250774,9.87965074 C15.2427155,8.99728883 14.0237438,8.45153664 12.677305,8.45153664 C9.9844272,8.45153664 7.80141844,10.6345454 7.80141844,13.3274232 C7.80141844,16.0203009 9.9844272,18.2033097 12.677305,18.2033097 Z" id="Oval-5" stroke="#47EBC6" stroke-width="2.60047281"></path>
+                <circle id="Oval-7" fill="#FFFFFF" cx="19.5035461" cy="13.0023641" r="1.30023641"></circle>
+                <circle id="Oval-7-Copy" fill="#FFFFFF" cx="23.4042553" cy="13.0023641" r="1.30023641"></circle>
+                <circle id="Oval-7-Copy-2" fill="#FFFFFF" cx="27.3049645" cy="13.0023641" r="1.30023641"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

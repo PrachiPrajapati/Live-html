@@ -1,0 +1,79 @@
+<script type="text/javascript"
+        src="//cdn.bitmovin.com/player/web/8.4.0/bitmovinplayer.js"></script>
+<script type="text/javascript"
+        src="https://cdn.bitmovin.com/analytics/web/beta/2/bitmovinanalytics.min.js"></script>
+
+<div class="row">
+    <div class="col-lg-6">
+        <ul>
+            <li>Reduce latency for Live streams from 30 seconds to 5-10 seconds</li>
+            <li>Target latency is configurable</li>
+            <li>Compatible with chunked CMAF MPEG-DASH streams</li>
+            <li>Available on Web and Mobile SDKs</li>
+            <li>Monitor latency and playback performance with Bitmovin Analytics</li>
+        </ul>
+    </div>
+    <div class="col-lg-6">
+        <div id="player"></div>
+    </div>
+</div>
+
+<div>
+    <div class="row mt-5">
+        <div class="col-lg-6 player-col">
+            <div class="demo-video tv-frame">
+                <div id="player-container">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="latency-status">
+                <div class="latency-status-header">Latency Status</div>
+                <div class="latency-status-row thick">
+                    <div>Current Latency</div>
+                    <div>
+                        <span id="latency">-</span>
+                    </div>
+                </div>
+                <div class="latency-status-row">
+                    <div>Wall-clock Time (EST)</div>
+                    <div>
+                        <span id="time">-</span>
+                    </div>
+                </div>
+                <div class="latency-status-row">
+                    <div>Video Buffer</div>
+                    <div>
+                        <span id="videoBufferLength">-</span>
+                    </div>
+                </div>
+                <div class="latency-status-row">
+                    <div>Audio Buffer</div>
+                    <div>
+                        <span id="audioBufferLength">-</span>
+                    </div>
+                </div>
+                <div class="latency-status-row">
+                    <div>Latency Mode</div>
+                    <div>
+                        <span id="playbackSpeed">1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="latency-control">
+                <div>
+                    Target Latency: <span id="targetLatency">2</span>
+                </div>
+                <div class="slide-container">
+                    <input type="range" min="0.5" max="5" value="2" step="0.1" class="slider" id="targetLatencySlider">
+                    <div class="latency-status-row">
+                        <div>Low</div>
+                        <div style="text-align: right">High</div>
+                    </div>
+                </div>
+            </div>
+            <div id="firefoxWarning">
+            </div>
+        </div>
+    </div>
+</div>

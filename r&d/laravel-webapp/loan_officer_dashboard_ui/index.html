@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <style>
+        .highcharts-tooltip span{
+            overflow: auto;
+        }
+
+        .highcharts-label.highcharts-tooltip{
+            left: 100px!important;
+        }
+
+        .chart {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px 10px 10px 0px;
+            padding: 7.5px;
+            min-width: 155px;
+        }
+
+        .m_t_10{
+            margin-top: 5px;
+        }
+
+        .chart_title{
+            font-family: 'Inter', serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 8px;
+            line-height: 12px;
+            letter-spacing: 0.01em;
+            color: #9FA3C0;
+        }
+
+        .chart_value{
+            font-size: 10px;
+            line-height: 120%;
+            font-family: 'Inter', serif;
+            font-style: normal;
+            font-weight: 300;
+            color: #60698B;
+        }
+
+        .chart_expenses{
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0.01em;
+            color: #60698B;
+            font-family: 'Poppins', serif;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .color_filled {
+            border-radius: 5px;
+            width: 6px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .light_green_filled{
+            background: linear-gradient(0deg, #D6F8F1, #D6F8F1), #3246D3;
+        }
+
+        .light_pink_filled{
+            background: linear-gradient(0deg, #FFD9EB, #FFD9EB), #3246D3;
+        }
+
+        .blue_filled{
+            background: #3246D3;
+        }
+
+        .lightblue_filled{
+            background: rgba(50,70,211,0.1);
+        }
+
+        .text_2{
+            font-size: 12px;
+            line-height: 15px;
+            font-family: 'Inter',serif;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #293A3E;
+            min-width: 130px;
+            margin: 0 10px;
+        }
+
+        .number{
+            font-family: 'Inter',serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: 0.01em;
+            text-align: center;
+            color: #293A3E;
+            min-width: 17px;
+        }
+
+        .text_1{
+            font-family: 'Inter',serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: #293A3E;
+            margin-left: 2px;
+            min-width: 20px;
+        }
+
+        .text_3{
+            font-family: 'Inter',serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 14px;
+            letter-spacing: 0.01em;
+            text-align: left;
+            color: #293A3E;
+            margin-left: 10px;
+            min-width: 50px;
+        }
+
+        .width_100{
+            width: 30px;
+        }
+
+        .chart .content_center img{
+            width: 40px;
+        }
+        .color_filled_2{
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+
+        .filled_blue{
+            background-color: #657FDB;
+        }
+
+        .filled_lightblue{
+            background: #BDE2FF
+        }
+
+        .filled_lightblue2{
+            background: #AED0FE
+        }
+
+        .filled_lightpink{
+            background: #DCCEFF;
+        }
+
+        .filled_lightpink2{
+            background: #FFD6FF;
+        }
+
+        .filled_lightblue3{
+            background: #AEE2F5;
+        }
+
+        .filled_lightpink3{
+            background: #D1B9D6;
+        }
+
+
+        .filled_lightpink4{
+            background: #E7C6FF;
+        }
+
+        .filled_lightpink5{
+            background: #CC95C1;
+        }
+
+        .filled_grey{
+            background: #BBCFFF;
+        }
+
+        .custom_chart{
+            min-width: 122px!important;
+            padding: 5px 20px!important;
+            border-radius: 0px 10px 10px 0px!important;
+        }
+
+        #pie-chart-container .chart ,
+        #container .chart {
+            min-width: 100px;
+        }
+
+        #pie-chart-container .highcharts-label.highcharts-tooltip {
+            left: 40px!important;
+        }
+
+        @media(min-width: 1601px){
+            .chart_expenses{
+                font-size: 24px;
+                line-height: 36px;
+            }
+            .chart_value{
+                font-size: 14px;
+                line-height: 140%;
+            }
+            .chart_title{
+                font-size: 12px;
+                line-height: 15px;
+            }
+            .chart{
+                padding: 15px;
+            }
+
+            .m_t_10{
+                margin-top: 10px;
+            }
+
+            .text_3,
+            .number,.text_2,.text_1{
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+        }
+
+    </style>
+    <style>
+        .bg_white2{
+            background: #F9FBFF;
+        }
+
+        .bg_white{
+            background: #FFFFFF;
+        }
+
+        body,
+        .bg_skyblue{
+            background: #F2F6FE;
+        }
+
+        .dropdown_label{
+            font-size: 10px;
+            line-height: 14px;
+            font-family: 'Poppins',serif;
+            font-style: normal;
+            font-weight: 500;
+            text-align: right;
+            color: #60698B;
+            padding-right: 10px;
+            margin-left: -15px;
+        }
+
+        .m_r_15{
+            margin-right: 15px;
+        }
+
+        .m_t_30{
+            margin-top: 30px;
+        }
+
+        .border_grey{
+            background: #FFFFFF;
+            border: 1px solid #BEBEBE;
+            box-sizing: border-box;
+            border-radius: 20px;
+            padding: 12px 15px;
+        }
+
+        .content_center{
+            display: flex;
+            vertical-align: middle;
+            align-items: center;
+        }
+
+        .border_grey img{
+            margin-right: 10px;
+            width: 48px;
+        }
+
+
+        .border_grey .title{
+            font-family:  'Poppins', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #0C1347;
+        }
+
+        .border_grey .sub_title{
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #9FA3C0;
+        }
+
+        .border_grey .desp{
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #60698B;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .border_grey .desp.m_t_20 {
+            margin-top: 10px;
+        }
+
+        .m_t_20 {
+            margin-top: 20px;
+        }
+
+        .default_btn,
+        .border_grey .blue_btn{
+            background: #3246D3;
+            color: #fff;
+            border: 2px solid #3246D3;
+        }
+
+        .modal .default_btn:hover,
+        .border_grey .blue_btn:hover{
+            outline: none;
+            background-color: #657FDB;
+            border-color: #657FDB;
+        }
+
+        .modal .default_btn:visited,
+        .modal .default_btn:focus,
+        .modal .default_btn:active,
+        .border_grey .blue_btn:visited,
+        .border_grey .blue_btn:focus,
+        .border_grey .blue_btn:active{
+            background: #18299D;
+            border-color: #18299D;
+        }
+
+        .border_grey .common_btn{
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 0.01em;
+            text-align: center;
+            box-shadow: none;
+            width: 100%;
+            padding: 8px 16px;
+        }
+
+        .border_grey .lightblue_btn{
+            background: #F2F6FE;
+            color: #293A3E;
+            border: 2px solid #F2F6FE;
+        }
+
+
+        .border_grey .lightblue_btn:hover{
+            color: #657FDB;
+            background-color: #F2F6FE;
+            border-color: #F2F6FE;
+        }
+
+        .border_grey .lightblue_btn:visited,
+        .border_grey .lightblue_btn:focus,
+        .border_grey .lightblue_btn:active{
+            background: #D7E4FF;
+            border-color: #D7E4FF;
+            color: #3246D3;
+        }
+
+        .integation_dropdown {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .integation_dropdown .sidebar_title{
+            margin-top: 0;
+        }
+        .empty_intergation{
+            font-family: 'Inter',serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            color: #9FA3C0;
+        }
+
+        .content-wrapper .scroll_body::-webkit-scrollbar {
+            width: 10px;
+            margin-top: 20px;
+        }
+
+        .content-wrapper .scroll_body::-webkit-scrollbar-track {
+            background-color: rgba(204,209,244,0.4);;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .content-wrapper .scroll_body::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            margin-top: 20px;
+            background: #3246D3;
+        }
+
+        .right_top{
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            width: 25px!important;
+        }
+
+        .modal-dialog{
+            margin: 0 auto;
+        }
+
+        .width_32{
+            width: 32px;
+        }
+
+        .m_l_10{
+            margin-left: 10px;
+        }
+
+        .width_50p{
+            width: 50%;
+        }
+
+        .form-horizontal .input_text{
+            color: #000!important;
+            background: #F2F6FE;
+            padding: 7px 8px;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            border: 1px solid #F2F6FE;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-horizontal label.error {
+            color: #B62D2D;
+            font-size: 10px;
+            line-height: 14px;
+            font-family: 'Inter', sans-serif;
+            padding-left: 5px;
+        }
+
+        .form-horizontal label{
+            font-family:  'Poppins', sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #60698B;
+        }
+
+        .red_color{
+            color: #B62D2D!important;
+        }
+
+        .width_25p{
+            width: 25px!important;
+        }
+
+        input.input_text.error {
+            background: #FEF2F2;
+            margin-bottom: 0;
+            border-color: #FEF2F2;
+        }
+
+        input.input_text.error::placeholder {
+            color: #B62D2D;/* Firefox */
+        }
+
+        input.input_text.error:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #B62D2D;
+        }
+
+        input.input_text.error::-ms-input-placeholder { /* Microsoft Edge */
+            color: #B62D2D;
+        }
+
+        .input_text::placeholder {
+            color: #60698B;/* Firefox */
+        }
+
+        .input_text:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #60698B;
+        }
+
+        .input_text::-ms-input-placeholder { /* Microsoft Edge */
+            color: #60698B;
+        }
+
+        .input_text.error::placeholder {
+            color: #B62D2D!important;/* Firefox */
+        }
+
+        .input_text.error:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #B62D2D!important;;
+        }
+
+        .input_text.error::-ms-input-placeholder { /* Microsoft Edge */
+            color: #B62D2D!important;;
+        }
+
+        .input_text:focus{
+            border:1px solid #F2F6FE;
+            outline: none;
+        }
+
+        .modal .width_48 {
+            width: 48px;
+        }
+
+        .modal .desp{
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #60698B;
+        }
+
+        .modal .title{
+            font-family:  'Poppins', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #0C1347;
+        }
+
+        .modal .sub_title{
+            color: #9FA3C0;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        .modal .bottom_title{
+            font-family:  'Inter', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.01em;
+            text-align: left;
+            color: #000000;
+        }
+
+        .modal .bottom_subtitle{
+            font-family:  'Poppins', sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #60698B;
+        }
+
+        .modal .default_btn{
+            background: #3246D3;
+        }
+
+        .modal .disable_btn {
+            background: #86A9F0;
+        }
+
+        .modal .common_btn {
+            font-size: 14px;
+            line-height: 22px;
+            color: #fff;
+            width: 100%;
+            font-weight: 600;
+            padding: 12px 12px;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            max-width: 300px;
+            margin: 10px auto 0;
+        }
+
+        .modal-title{
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0.01em;
+            text-align: left;
+            color: #0C1347;
+        }
+
+        .custom_modal{
+            padding: 0;
+            border-radius: 20px;
+        }
+
+        .close{
+            cursor: pointer;
+        }
+
+        .m_tb_10{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .space_between{
+            justify-content: space-between;
+        }
+
+        .align_center{
+            text-align: center;
+        }
+
+        .integation_dropdown .form-group.has-search{
+            width: 95%!important;
+        }
+
+        main.content.bg_skyblue{
+            padding-bottom: 1rem;
+        }
+
+        @media (min-width: 992px){
+            .p_35{
+                padding: 15px;
+            }
+
+            .modal-lg, .modal-xl {
+                max-width: 668px;
+            }
+        }
+
+        @media (min-width: 1601px) {
+            .custom_modal {
+                padding: 20px;
+            }
+            .dropdown_label{
+                font-size: 12px;
+                line-height: 18px;
+            }
+            .right_top{
+                top: 40px;
+            }
+            .border_grey{
+                padding: 13px 25px 25px;
+            }
+
+            .p_35{
+                padding: 35px;
+            }
+
+            .border_grey .desp{
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    </style>
+    <style>
+    .highcharts-figure, .highcharts-data-table table {
+        min-width: 310px;
+        max-width: 800px;
+        margin: 1em auto;
+    }
+
+    #container {
+        height: 200px;
+    }
+
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #EBEBEB;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+
+</style>
+</head>
+<body>
+<div id="container2" style="width:100%;height:400px;"></div>
+<script type="text/javascript">
+    var d = new Date();
+    var pointStart = d.getTime();
+    Highcharts.setOptions({
+        global: {
+            useUTC: false
+        },
+        credits: {
+            enabled: false
+        },
+        colors: [
+            'rgba( 0,   154, 253, 0.9 )', //bright blue
+            'rgba( 253, 99,  0,   0.9 )', //bright orange
+            'rgba( 40,  40,  56,  0.9 )', //dark
+            'rgba( 253, 0,   154, 0.9 )', //bright pink
+            'rgba( 154, 253, 0,   0.9 )', //bright green
+            'rgba( 145, 44,  138, 0.9 )', //mid purple
+            'rgba( 45,  47,  238, 0.9 )', //mid blue
+            'rgba( 177, 69,  0,   0.9 )', //dark orange
+            'rgba( 140, 140, 156, 0.9 )', //mid
+            'rgba( 238, 46,  47,  0.9 )', //mid red
+            'rgba( 44,  145, 51,  0.9 )', //mid green
+            'rgba( 103, 16,  192, 0.9 )'  //dark purple
+        ],
+        chart: {
+            alignTicks: false,
+            zoomType: 'x',
+            type: 'line',
+           // margin: [60, 25, 100, 90],
+        },
+        title: {
+            text: '',
+            align: 'left',
+            margin: 10,
+            x: 50,
+            style: {
+                fontWeight: 'bold',
+                color: 'rgba(0,0,0,.9)'
+            }
+        },
+        subtitle: {
+            text: '',
+            align: 'left',
+            x: 52,
+        },
+        legend: {enabled: false},
+        plotOptions: {
+            line: {
+                lineWidth: 1,
+                marker: {
+                    enabled: true,
+                    symbol: 'circle',
+                    radius: 4
+                }
+            },
+        },
+        xAxis: {
+            title: {
+                text: '',
+                rotation: 0,
+                textAlign: 'center',
+                style: {
+                    color: 'rgba(0,0,0,.9)'
+                }
+            },
+            labels: {
+                style: {
+                    color: 'rgba(0,0,0,.9)',
+                    fontSize: '9px'
+                }
+            },
+            lineWidth: .5,
+            lineColor: 'rgba(0,0,0,.5)',
+            tickWidth: .5,
+            tickLength: 6,
+            tickColor: 'rgba(0,0,0,.75)'
+        },
+        yAxis: {
+            minPadding: 0,
+            maxPadding: 0,
+            gridLineColor: 'rgba(204,204,204,.25)',
+            gridLineWidth: 0,
+            title: {
+                text: '',
+                rotation: 0,
+                textAlign: 'right',
+                style: {
+                    color: 'rgba(0,0,0,.9)',
+                }
+            },
+            labels: {
+                style: {
+                    color: 'rgba(0,0,0,.9)',
+                    fontSize: '9px'
+                }
+            },
+            lineWidth: .5,
+            lineColor: 'rgba(0,0,0,.5)',
+            tickWidth: .5,
+            tickLength: 12,
+            tickColor: 'rgba(0,0,0,.75)'
+        },
+        tooltip: {
+            shared: true,
+            useHTML: true,
+            borderWidth: 0,
+            backgroundColor: "rgba(255,255,255,0)",
+            borderRadius: 0,
+            shadow: false,
+            formatter: function () {
+                var html = '' +
+                        '<div class="chart">' +
+                        '<div class="chart_title"></div>' +
+                        '<div class="content_center m_t_10">' +
+                        '<div class="color_filled blue_filled"></div>' +
+                        '<div>' +
+                        '<div class="chart_value">' +
+                        'Total' +
+                        '</div>' +
+                        '<div class="chart_expenses">' +
+                        this.points[0].y +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="content_center m_t_10">' +
+                        '<div class="color_filled lightblue_filled"></div>' +
+                        '<div>' +
+                        '<div class="chart_value">' +
+                        'Daily Average' +
+                        '</div>' +
+                        '<div class="chart_expenses">' +
+                        '$' + (this.points[1].y) +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+                return html;
+            }
+        },
+    });
+
+    var chart;
+    var pointStart = Date.UTC(2020, 0, 1);
+    $(function () {
+
+        $('#container2').highcharts({
+            chart: {type: 'line'},
+            title: {},
+            subtitle: {},
+            legend: {enabled: false},
+            plotOptions: {
+                series: {
+                    pointStart: pointStart,
+                    pointInterval: 24 * 3600 * 1000 * 30
+                }
+            },
+            xAxis: {
+                min: Date.UTC(2020, 0, 0),
+                max: Date.UTC(2020, 08, 1),
+                //allowDecimals: false,
+                type: 'datetime',
+                tickInterval: 24 * 3600 * 1000 * 30, //one day
+                labels: {
+                    rotation: 0,
+                    format: '{value:%b}'
+                },
+
+            },
+            yAxis: {}
+        });
+        chart = $('#container2').highcharts();
+
+
+        var jsonString = '[{ "date": "2019-11-01", "total": "20", "average": "30" },{ "date": "2019-12-01", "total": "50", "average": "25" },{ "date": "2020-1-01", "total": "30", "average": "21" }, { "date": "2020-2-02", "total": "35", "average": "32" }, { "date": "2020-4-03", "total": "23", "average": "34" }, { "date": "2020-5-04", "total": "20", "average": "15" }, { "date": "2020-6-05", "total": "34", "average": "20" }, { "date": "2020-7-06", "total": "22", "average": "34" }, { "date": "2020-8-07", "total": "15", "average": "18" } ]';
+
+        var myData = JSON.parse(jsonString);
+        var dataArray = [];
+        var dataArray_a = [];
+
+        $.each(myData, function (i, obj) {
+            //console.log(obj.date);
+            var d = new Date(obj.date);
+            dataArray.push([Date.parse(d), parseInt(obj.total)]);
+            dataArray_a.push([Date.parse(d), parseInt(obj.average)]);
+        });
+
+        // add first series values
+        chart.addSeries({
+            data: dataArray
+        });
+
+        // add second   series values
+        chart.addSeries({
+            data: dataArray_a
+        });
+    });
+
+</script>
+</body>
+</html>
+
+
+
+

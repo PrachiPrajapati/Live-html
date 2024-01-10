@@ -1,0 +1,437 @@
+@charset "utf-8";
+/* CSS Document */
+/******* Common Element CSS Start ******/
+* { margin: 0px; padding: 0px;}
+body { font-family: Arial, Helvetica, sans-serif; font-size:14px; height: 100vh; overflow-x: hidden;}
+img { border: 0px; width: 100%;}
+/******* Common Element CSS End *********/
+body { position: relative; text-align: center; background: #000}
+.active { opacity: 1 !important;}
+.screen-1,
+.screen-2 { position: absolute; height: 100vh; width: 100%; opacity: 0;}
+.screen-2 { background: url(../images/brick-walls.jpg) repeat center center;}
+
+.main-charector img { height: 12%; width: auto; bottom: 7%; position: absolute; left: 0; z-index: 15; transform-origin: left bottom; -webkit-transform-origin: left bottom;}
+.quite-run-car { animation: quite-run-car 5s ease-in-out 1, vibrate-car 0.3s linear infinite; }
+
+.option-tunnel { position: absolute; height: calc(100% - 20%); bottom: 20%; display: block; width: 100%;}
+.option-tunnel > div { position: absolute; width: 14%; height: 40%; background: #000; bottom: 0; border-radius: 40% 40% 0 0;}
+/******* Screen-1 CSS Start *********/
+.interchange-effect { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: #000; display: block; z-index: 10000; opacity: 1; transition: all ease-in-out 1s;}
+.active .interchange-effect { opacity: 0 !important;}
+.active-interchange { opacity: 0.5;}
+.front-scene {position: absolute; bottom: 0px; width: 100%; z-index: 500; height: 100%;}
+.back-scene {position: absolute; top: 0px; width: 100%; z-index: 400; height: 100vh;}
+.back-scene .road { position: absolute; bottom: 0; left: 0; width: 100%; background: #8c8c8c; height: 20%;}
+.main-charector { position: absolute; bottom: 0; left: 0; height: 100%; width: 100%; overflow: hidden;}
+.main-charector:before { position: absolute; width: 10%; border-radius: 40% 40% 0px 0px; height: 40%; background: #333; display: block; content: ""; right: 0; bottom: 20%; border: 25px solid #d4d4d4;  border-image: url(../images/brick-walls.jpg) 25 repeat; border-right: none; border-bottom: none; box-sizing: border-box; transform: skewY(42deg); -webkit-transform: skewY(42deg); transform-origin: left bottom; -webkit-transform-origin: left bottom; z-index: 10;}
+
+
+.building-blocks { position: absolute; left: 0; width: 100%; bottom: 20%; height:50%;}
+.building-blocks .back-building { position: absolute; left: 0; width: 100%; bottom: 0px; height:100%; background: url(../images/building-back.png) repeat-x left bottom / auto 100%;}
+.building-blocks .front-building { position: absolute; left: 0; width: 100%; bottom: 0px; height:70%; background: url(../images/building-Front.png) repeat-x left bottom / auto 100%;}
+
+
+
+.road-tunnel { width: 100%; position: absolute; right: 0; bottom: 0; display: block; height: 100%; overflow: hidden;}
+.road-tunnel:before { position: absolute; width: 10%; border-radius: 40% 40% 0px 0px; height: 40%; display: block; content: ""; right: 0; bottom: 20%; border: 25px solid #d4d4d4; border-image: url(../images/brick-walls.jpg) 25 repeat; border-left: none; border-bottom: none; box-sizing: border-box; transform: skewY(42deg); -webkit-transform: skewY(42deg); transform-origin: left bottom; -webkit-transform-origin: left bottom;z-index: 20;}
+
+.first-run-car { animation: first-run-car 5s ease-in-out 1, vibrate-car 0.3s linear infinite; }
+/******* Screen-2 CSS Start *********/
+
+.screen-2 .main-charector img { left: -15%;  transition: all ease-in 1.5s;}
+.screen-2.active .main-charector img { left: 0%; }
+.screen-2 .main-charector:after { position: absolute; width: 10%; border-radius:40% 40% 0px 0px; height: 40%; background: #333;  display: block; content: ""; left: 0; bottom: 20%; border: 25px solid #d4d4d4; border-image: url(../images/brick-walls.jpg) 25 repeat; border-left: none; border-bottom: none; box-sizing: border-box; transform: skewY(-42deg); -webkit-transform: skewY(-42deg); transform-origin: right bottom; -webkit-transform-origin: right bottom; z-index: 10;}
+.screen-2 .road-tunnel:after { position: absolute; width: 10%; border-radius: 40% 40% 0px 0px; height: 40%; display: block; content: ""; left: 0; bottom: 20%; border: 25px solid #d4d4d4; border-right: none; border-image: url(../images/brick-walls.jpg) 25 repeat; border-bottom: none; box-sizing: border-box; transform: skewY(-42deg); -webkit-transform: skewY(-42deg); transform-origin: right bottom; -webkit-transform-origin: right bottom; z-index: 20;}
+
+.option-tunnel .option-tunnel-design { left: 18%;}
+.option-tunnel .option-tunnel-web { left: 42%;}
+.option-tunnel .option-tunnel-mobile { left: 66%;}
+
+
+.main-charector img.selection-design-car { animation: selection-design-car 3s ease-in-out 1, vibrate-car 0.3s linear infinite; -webkit-animation: selection-design-car 3s ease-in-out 1, vibrate-car 0.3s linear infinite; }
+.main-charector img.selection-web-car { animation: selection-web-car 3.5s ease-in-out 1, vibrate-car 0.3s linear infinite; -webkit-animation: selection-web-car 3.5s ease-in-out 1, vibrate-car 0.3s linear infinite;}
+.main-charector img.selection-mobile-car { animation: selection-mobile-car 4s ease-in-out 1, vibrate-car 0.3s linear infinite; -webkit-animation: selection-mobile-car 4s ease-in-out 1, vibrate-car 0.3s linear infinite;}
+
+
+.border-collapse-block { position: absolute; width: 10%; height: 40%; display: block; left: 0%; bottom: 20%; background: #ccc; display: none; z-index: 100;}
+.border-collapse-block.design-active { display: block; left: 32%;}
+.border-collapse-block.web-active { display: block; left: 56%;}
+.border-collapse-block.mobile-active { display: block; left: 80%;}
+
+@keyframes vibrate-car {
+    0% { margin-bottom: 0px;}
+    50% { margin-bottom: 3px;}
+    100% { margin-bottom: 0px;}
+}
+@-webkit-keyframes vibrate-car {
+    0% { margin-bottom: 0px;}
+    50% { margin-bottom: 3px;}
+    100% { margin-bottom: 0px;}
+}
+
+@keyframes first-run-car {
+    0% { left: 0%;}
+    100% { left: 120%;}
+}
+@-webkit-keyframes first-run-car {
+    0% { left: 0%;}
+    100% { left: 120%;}
+}
+
+@keyframes quite-run-car {
+    0% { left: 0%;}
+    100% { left: 120%;}
+}
+@-webkit-keyframes quite-run-car {
+    0% { left: 0%;}
+    100% { left: 120%;}
+}
+
+@keyframes selection-design-car {
+    0% { left: 0%; bottom: 7%; transform: skewY(0deg);}
+    35% { bottom: 7%; transform: skewY(0deg);}
+    100% { left: 32.5%; bottom: 30% ; transform: skewY(-12deg) scale(0.75);}
+}
+@-webkit-keyframes selection-design-car {
+    0% { left: 0%; bottom: 7%; transform: skewY(0deg);}
+    35% { bottom: 7%; transform: skewY(0deg);}
+    100% { left: 32.5%;  bottom: 30%; transform: skewY(-12deg) scale(0.75);}
+}
+
+@keyframes selection-web-car {
+    0% { left: 0%;  bottom: 7%; transform: skewY(0deg);}
+    50% { bottom: 7%; transform: skewY(0deg);}
+    100% { left: 56.5%; bottom: 30%; transform: skewY(-10deg) scale(0.85);}
+}
+@-webkit-keyframes selection-web-car {
+    0% { left: 0%;  bottom: 7%; transform: skewY(0deg);}
+    50% { bottom: 7%; transform: skewY(0deg);}
+    100% { left: 56.5%; bottom: 30%; transform: skewY(-10deg) scale(0.85);}
+}
+
+@keyframes selection-mobile-car {
+    0% { left: 0%;  bottom: 7%; transform: skewY(0deg);}
+    60% { bottom: 7%; transform: skewY(0deg);}
+    100% { left: 80%; bottom: 33%; transform: skewY(-8deg) scale(0.90);}
+}
+@-webkit-keyframes selection-mobile-car {
+    0% { left: 0%;  bottom: 7%; transform: skewY(0deg);}
+    60% { bottom: 7%; transform: skewY(0deg);}
+    100% { left: 80%; bottom: 33%; transform: skewY(-8deg) scale(0.90);}
+}
+
+
+
+/*.runner-boy { position: relative; bottom: 0px; display: inline-block; margin: 0px auto; z-index: 1000; transform: rotate(8deg) scale(0.55); -webkit-transform: rotate(8deg) scale(0.55); transform-origin: bottom; -webkit-transform-origin: bottom; animation: runjump 0.75s ease-in infinite; -webkit-animation: runjump 0.75s ease-in infinite; transition: all 0.3s ease-in;}
+.face {width: 100px; position: relative; height: 140px; border-radius: 40px 40px 80px 80px; background: bisque; position: relative; margin-top: 50px; z-index: 100; transform: rotate(-8deg); -webkit-transform: rotate(-8deg);}
+.hair { position: absolute; width: 100%; display: block; top: 0;}
+.hair span { background: brown; display: block; position: absolute; z-index: 2;}
+.hair span:nth-child(1) { height: 40px; border-radius: 20px; margin-top: 0px; width: 120%; margin-left: -10%; transform: rotate(-3deg);}
+.hair span:nth-child(2) { top: -20px; right: -7px; height: 50px; width: 50px; border-radius: 25px 25px 10px 10px; transform: rotate(-5deg);}
+.hair span:nth-child(3) { top: -15px; right: 30px; height: 40px; width: 45px; border-radius: 22px 22px 10px 10px;}
+.hair span:nth-child(4) { top: -10px; right: 60px; height: 35px; width: 40px; border-radius: 20px 20px 10px 10px;}
+.hair b { position: absolute; border: 4px solid transparent; border-bottom: 10px solid #fff; border-top: none; border-radius: 5px;}
+.hair .drop { position: relative; z-index: 1; animation: rundrop 1s ease-in-out infinite; -webkit-animation: rundrop 2s ease-in-out infinite;}
+.hair .drop b:nth-child(1) { bottom: -40px; left: 25px;}
+.hair .drop b:nth-child(2) { bottom: -30px; left: 30px;}
+.hair .drop b:nth-child(3) { bottom: -50px; left: 35px;}
+.hair .drop b:nth-child(4) { bottom: -25px; left: 40px;}
+.ear { position: absolute; width: 12px; height: 30px; border-radius: 6px; background: rgba(0, 0, 0, 0.05);display: block; top: 50%; left: 10%; box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.3);}
+.eye { position: absolute; width: 18px; height: 30px; border-radius: 10px; background: white; display: block; top: 35%; right: 5%; box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.1);}
+.eye:before { position: absolute; content: ""; width: 10px; height: 15px; box-shadow: inset 0px 0px 2px 3px rgba(0, 0, 0, 0.8); top:10px; right: 0; display: block; border-radius: 50%;}
+.nose { position: absolute; width: 15px; height: 25px; border-radius: 10px; background: bisque; display: block; top: 52%; right: -5%; transform: rotate(-15deg); }
+.neck { position: relative; background: #f7dcbe; height: 50px; width: 40px; border-radius: 30px;left: calc(50% - 20px); top: -25px;z-index: 50;}
+.middle { width: 100px; height: 140px;  margin-top: -50px; position: relative; z-index: 20;}
+.mid-body { position: relative; height: 100%; width: 100%; background: darkseagreen; border-radius: 50px 50px 0px 0px; z-index: 7;}
+.mid-bottom { width: 100px; height: 30px; background: #005CA1; margin-top: 0px; position: relative; z-index: 8;}
+.hand-with-sleev {position: absolute; top: 40px; width: 40px; display: block; left: calc(50% - 20px);}
+.hand-sleev { width: 100%; border-radius: 50% 50% 0px 0px; height: 50px; background: #87b287;  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.2);}
+.hand { position: relative; left: calc(50% - 15px)}
+.hand .upper-part { width: 30px; height: 45px; background: bisque; border-radius: 0px 0px 15px 15px; position: relative;}
+.hand .lower-part { position: absolute; top: calc(100% - 0px); top: calc(100% - 12px); left: 0; height: 70px; width: 25px; background: bisque; border-radius: 15px 15px 4px 4px; transform: rotate(-95deg); transform-origin: top center;}
+.finger-block { background: bisque; height: 30px; width: 25px; position: relative; border-radius: 4px 4px 10px 10px; position: absolute; top: 100%;}
+.finger-block .thumb { position: absolute; top: 0px; right: 0px; width: 10px; height: 15px; background: bisque; border-radius: 5px; transform: rotate(-27deg); display: block; transform-origin: top left; border-bottom: 2px solid rgba(0, 0, 0, 0.2);}
+.finger-block:before { position: absolute; bottom: 0px;left: 6px; width: 8px; height: 15px; border: 2px solid rgba(0, 0, 0, 0.2); content: ""; border-top: none; border-bottom: none;}
+.finger-block:after { position: absolute; bottom: 0px;left: 18px; width: 8px; height: 15px;border-left: 2px solid rgba(0, 0, 0, 0.2); content: "";}
+.hand-with-sleev.front {z-index: 10; transform: rotate(-85deg); -webkit-transform: rotate(-85deg); transform-origin: top center; animation: handrun-front linear 1.5s infinite;}
+.hand-with-sleev.back {z-index: 5; transform: rotate(85deg); -webkit-transform: rotate(85deg); transform-origin: top center; animation: handrun-back linear 1.5s infinite;}
+.hand-watch { position: absolute; width: 100%; height: 12px; background: #6d1b1b; bottom: 10px; left: 0; display: block;}
+.hand-watch:before { position: absolute; width: 16px; height: 16px; border: 2px solid #000; border-radius: 50%; display: block; left: calc( 50% - 8px); top: -2px; content: ""; background: #fff; animation: watch-reflection 1.5s linear infinite; -webkit-animation:  watch-reflection 1.5s linear infinite;}
+.belt-holder {position: absolute; top: 1px; width: 100%; height: 17px;}
+.belt-holder:before,
+.belt-holder:after { position: absolute; top: 0px; height: 100%; background: #005CA1; width: 5px; display: block; content: ""; z-index: 5;}
+.belt-holder:before { left: 25px;}
+.belt-holder:after { right: 25px;}
+.belt { position: absolute; top: 2px; width: 100%; height: 15px; background: yellow;  box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);}
+.belt-buckle { position: absolute; top: -1px; height: calc(100% + 2px); background: orange; width: 15px; right: -2px; border-radius: 15px 0px 0px 15px;}
+.bottom { position: relative; z-index: 20; min-height: 275px;}
+.bottom-body { position: absolute; background: #005CA1; width: 100px; height: 50px; margin-top: 0px; border-radius: 0px 0px 40px 40px; top: 30px;left: 0; display: block; z-index: 7;}
+.leg-with-cover { position: absolute; top: 60px; width: 50px; display: block; left: calc(50% - 25px);}
+.leg-cover {  width: 100%; border-radius: 50% 50% 0px 0px; height: 60px; background: #065187 url(../images/yudiz-white-logo.png) no-repeat center bottom 3px / 90% auto; box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.2);}
+.leg-cover {  width: 100%; border-radius: 50% 50% 0px 0px; height: 60px; background: #065187; box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.2);}
+.leg .upper-part { width: 40px; height: 50px; background: bisque; border-radius: 0px 0px 15px 15px; position: relative; left: calc(50% - 20px)}
+.leg .lower-part { position: absolute; top: calc(100% - 0px); top: calc(100% - 15px); left: calc(50% - 15px); height: 70px; width: 30px; background: bisque; border-radius: 15px; animation: legrun-lower linear 1.5s infinite; -webkit-animation: legrun-lower linear 1.5s infinite;}
+.shoe-block { position: relative; top: calc(100% - 15px); left: -5px; width: 70px; height: 30px; background: #ccc; border-bottom: 5px solid purple; border-radius: 5px 15px 10px 5px; z-index: -1; animation: run-shoe linear 1.5s infinite; -webkit-animation: run-shoe linear 1.5s infinite;}
+.shoe-block:before { position: absolute; height: 10px; width: 8px; border: 2px solid purple; border-bottom: none; border-top: none; content: ""; right: 17px; top: 0px;}
+.leg-with-cover.front {z-index: 10; transform: rotate(-80deg); -webkit-transform: rotate(-80deg); transform-origin: top center; animation: legrun-front linear 1.5s infinite; -webkit-animation: legrun-front linear 1.5s infinite;}
+.leg-with-cover.back {z-index: 5; transform: rotate(80deg); -webkit-transform: rotate(80deg); transform-origin: top center; animation: legrun-back linear 1.5s infinite; -webkit-animation: legrun-back linear 1.5s infinite;}
+.leg-with-cover.front .lower-part { transform-origin: top; -webkit-transform-origin: top; animation: legrun-front-lower linear 1.5s infinite; -webkit-animation: legrun-front-lower linear 1.5s infinite;}
+.leg-with-cover.back .lower-part { transform-origin: top; -webkit-transform-origin: top; animation: legrun-back-lower linear 1.5s infinite; -webkit-animation: legrun-back-lower linear 1.5s infinite;}
+.pause-animate { animation-iteration-count: 0 !important; -webkit-animation-iteration-count: 0 !important;}
+.jump-up { bottom: 80px !important;}*/
+/******* Runner boy CSS End *******/
+/******* Track CSS Start ******/
+/*.track:before,
+.track:after { height: 20px; width: 30%; background: #fff; content: ""; position: absolute; top: calc(50% - 10px); left: 100%; display: block; z-index: 101; animation: track 4s linear infinite; -webkit-animation: track 4s linear infinite;}
+.track:after { animation-delay: 2s; -webkit-animation-delay: 2s;}
+.track { background: #8c8c8c; height: 250px; z-index: 100; position: relative; overflow-x: hidden; overflow-y: auto !important; width: 100%;}
+.hurdles { position: absolute; display: none; height: 100px; left: 300%; border: 10px solid #ccc; width: 180px; border-bottom: none; z-index: 150; transform: skewY(40deg); bottom: 80px; border-radius: 20px 20px 0px 0px; animation: hurdles 6.4s linear infinite; -webkit-animation:  hurdles 6.4s linear infinite; overflow: visible;}
+.hurdles:after {position: relative; padding: 10px 0px; background: #fff url(../images/yudiz-logo.jpg) no-repeat center center / auto 100%; color: red; text-align: center; width: 100%; height: 60px; content: ""; box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.1); display: block; font-weight: bold;}*/
+/******** Track CSS End *******/
+/*#foot-audio,
+#jump-audio { display: none;}*/
+/***** Bottom section CSS Start *******/
+/*.back-scene { position: absolute; bottom: 0; left: 0; display: block; width: 100%; overflow: hidden; overflow-y: auto; z-index: 100; background: url(../images/cloud.png) repeat-x left top / 40% auto; animation: cloud 5s ease-in-out infinite; -webkit-animation: cloud 5s ease-in-out infinite;}
+.building-block { position: relative; height: calc(100vh - 250px);}
+.building-front { position: absolute; left: 0; bottom: 0; background: url(../images/building-front.png) repeat-x left bottom / 50% auto; height: 350px; width: 200%; animation: front-building 20s linear infinite; -webkit-animation: front-building 20s linear infinite;}
+.building-back { position: absolute; left: 0; bottom: 0; background: url(../images/building-back.png) repeat-x left bottom 0px / 50% auto; height: 500px; width: 200%; border-bottom: 5px solid #fff; animation: front-building 30s linear infinite; -webkit-animation: front-building 30s linear infinite;}
+.sky-brand { position: absolute; text-align: center; top: 50px; z-index: 1500; width: 100%;}
+.sky-brand a { max-width: 250px; display: inline-block;}
+.choper { position: absolute;left: 0; bottom: 320px; width: 4%; animation: choper 85s linear infinite; -webkit-animation: choper 85s linear infinite;}
+.choper:after { position: absolute; width: 18px; height: 18px; border-radius: 50%; background: url('../images/helicopter-wing.png') no-repeat center center / 100% auto; left: -5px; top: 5px; display: block; content: "";  animation: choper-wing 0.2s linear infinite; -webkit-animation: choper-wing 0.2s linear infinite;}
+.airbus { position: absolute;left: 0; bottom: 7px; width: 4%; animation: airbus 25s linear infinite; -webkit-animation: airbus 25s linear infinite;}
+
+.baloon1 { position: absolute; width: 2%; bottom: 370px; left: 70%; animation: baloon1 150s linear infinite; -webkit-animation: baloon1 150s linear infinite;}
+.baloon2 { position: absolute; width: 1.5%; bottom: 450px; left: 30%; animation: baloon2 250s linear infinite; -webkit-animation: baloon2 250s linear infinite;}
+***** Bottom section CSS End ******
+.back-vehical { position: absolute; z-index: 200; bottom: 100px; left: 0px; width: 100%; display: block;}
+.front-vehical { position: absolute; z-index: 700; bottom: 5px; left: 0px; display: block; width: 100%; }
+.car { position: absolute; left: 10%; width: 25%; bottom: 100px; animation: vehical 9s linear infinite; -webkit-animation: vehical 9s linear infinite;}
+.racing-car{ position: absolute; left: -100%; width: 25%; bottom: 80px; animation: vehical 6s linear infinite; -webkit-animation: vehical 6s linear infinite;}
+.truck { position: absolute; width: 35%; bottom: 0px; left: -100%; animation: vehical 13s linear infinite; -webkit-animation: vehical 13s linear infinite;}
+
+canvas { display: block; position: relative; z-index: 1000;}*/
+/****** Animation CSS Start *******/
+/*@keyframes runjump {
+    0% { margin-bottom: 0px;}
+    50% { margin-bottom: -15px;}
+    100% { margin-bottom: 0px;}
+}
+@-webkit-keyframes runjump {
+    0% { margin-bottom: 0px;}
+    50% { margin-bottom: -15px;}
+    100% { margin-bottom: 0px;}
+}
+@keyframes rundrop {
+    0% { opacity:1; bottom:0;}
+    100% { opacity:0; bottom:-50px;}
+}
+@-webkit-keyframes rundrop {
+    0% { opacity:1; bottom:0;}
+    100% { opacity:0; bottom:-50px;}
+}
+@keyframes handrun-front {
+    0% {transform: rotate(-80deg);}
+    50% { transform: rotate(80deg);}
+    100% {transform: rotate(-80deg);}
+}
+@-webkit-keyframes handrun-front {
+    0% {transform: rotate(-80deg);}
+    50% { transform: rotate(80deg);}
+    100% {transform: rotate(-80deg);}
+}
+@keyframes handrun-back {
+    0% {transform: rotate(80deg);}
+    50% { transform: rotate(-80deg);}
+    100% {transform: rotate(80deg);}
+}
+@-webkit-keyframes handrun-back {
+    0% {transform: rotate(80deg);}
+    50% { transform: rotate(-80deg);}
+    100% {transform: rotate(80deg);}
+}
+
+@keyframes legdrun-front {
+    0% {transform: rotate(-80deg);}
+    50% { transform: rotate(80deg);}
+    100% {transform: rotate(-80deg);}
+}
+@-webkit-keyframes legrun-front {
+    0% {transform: rotate(-80deg);}
+    50% { transform: rotate(80deg);}
+    100% {transform: rotate(-80deg);}
+}
+@keyframes legrun-back {
+    0% {transform: rotate(80deg);}
+    50% { transform: rotate(-80deg);}
+    100% {transform: rotate(80deg);}
+}
+@-webkit-keyframes legrun-back {
+    0% {transform: rotate(80deg);}
+    50% { transform: rotate(-80deg);}
+    100% {transform: rotate(80deg);}
+}
+@keyframes legdrun-front-lower {
+    0% {transform: rotate(25deg);}
+    15% {transform: rotate(0deg);}
+    35% {transform: rotate(15deg);}
+    50% {transform: rotate(25deg);}
+    60% {transform: rotate(100deg);}
+    80% {transform: rotate(80deg);}
+    100% {transform: rotate(25deg);}
+}
+@-webkit-keyframes legrun-front-lower {
+    0% {transform: rotate(25deg);}
+    15% {transform: rotate(0deg);}
+    35% {transform: rotate(15deg);}
+    50% {transform: rotate(25deg);}
+    70% {transform: rotate(100deg);}
+    85% {transform: rotate(80deg);}
+    100% {transform: rotate(25deg);}
+}
+@keyframes legdrun-back-lower {
+    0% {transform: rotate(25deg);}
+    20% {transform: rotate(100deg);}
+    35% {transform: rotate(80deg);}
+    50% {transform: rotate(25deg);}
+    65% {transform: rotate(0deg);}
+    85 %{transform: rotate(15deg);}
+    100% {transform: rotate(25deg);}
+}
+@-webkit-keyframes legrun-back-lower {
+    0% {transform: rotate(25deg);}
+    20% {transform: rotate(100deg);}
+    35% {transform: rotate(80deg);}
+    50% {transform: rotate(25deg);}
+    65% {transform: rotate(0deg);}
+    85%{transform: rotate(15deg);}
+    100% {transform: rotate(25deg);}
+}
+@keyframes track {
+    0% { left: 100%;}
+    100% { left: -35%;}
+}
+@-webkit-keyframes track {
+    0% { left: 100%;}
+    100% { left: -35%;}
+}
+@keyframes hurdles {
+    0% { left: 200%;}
+    100% { left: -300px;}
+}
+@-webkit-keyframes hurdles {
+    0% { left: 200%;}
+    100% { left: -300px;}
+}
+@keyframes watch-reflection {
+    0% { background: #fff;}
+    50% { background: #7a87ef;}
+    100% { background: #fff;}
+}
+@-webkit-keyframes watch-reflection {
+    0% { background: #fff;}
+    50% { background: #7a87ef;}
+    100% { background: #fff;}
+}
+@keyframes front-building {
+    0% { left: 0%;}
+    100% { left: -100%;}
+}
+@-webkit-keyframes front-building {
+    0% { left: 0%;}
+    100% { left: -100%;}
+}
+@keyframes vehical {
+    0% { left: -100%;}
+    100% { left: 100%;}
+}
+@-webkit-keyframes vehical {
+    0% { left: -100%;}
+    100% { left: 100%;}
+}
+@keyframes airbus {
+    0% { left: 0%; bottom: 7px; transform: rotate(0deg);}
+    15% { left: 15%; bottom: 60px;}
+    30% { left: 30%; bottom: 120px; transform: rotate(-25deg);}
+    45% { left: 45%; bottom: 210px;}
+    60% { left: 60%; bottom: 320px;}
+    80% { left: 80%; bottom: 420px; transform: rotate(0deg);}
+    90% { left: 90%; bottom: 450px;}
+    100% { left: 100%; bottom: 480px;}
+}
+@-webkit-keyframes airbus {
+    0% { left: 0%; bottom: 7px; transform: rotate(0deg);}
+    15% { left: 15%; bottom: 60px;}
+    30% { left: 30%; bottom: 120px; transform: rotate(-25deg);}
+    45% { left: 45%; bottom: 210px;}
+    60% { left: 60%; bottom: 320px;}
+    80% { left: 80%; bottom: 420px; transform: rotate(0deg);}
+    90% { left: 90%; bottom: 450px;}
+    100% { left: 100%; bottom: 480px;}
+}
+
+@keyframes choper {
+    0% { left: -10%;}
+    100% { left: 110%;}
+}
+@-webkit-keyframes choper {
+    0% { left: -10%;}
+    100% { left: 110%;}
+}
+@keyframes choper-wing {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+@-webkit-keyframes choper-wing {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+@keyframes baloon1 {
+    0% { left: 70%;}
+    70% { left: -2%; opacity: 1;}
+    71% { left: -2%; opacity: 0;}
+    72% { left: 102%; opacity: 0;}
+    73% { left: 102%; opacity: 1;}
+    100% { left: 70%;}
+}
+@-webkit-keyframes baloon1 {
+    0% { left: 70%;}
+    70% { left: -2%; opacity: 1;}
+    71% { left: -2%; opacity: 0;}
+    72% { left: 102%; opacity: 0;}
+    73% { left: 102%; opacity: 1;}
+    100% { left: 70%;}
+}
+@keyframes baloon2 {
+    0% { left: 30%;}
+    30% { left: -2%;opacity: 1;}
+    31% { left: -2%;opacity: 0;}
+    32% { left: 102%; opacity: 0;}
+    33% { left: 102%; opacity: 1;}
+    100% { left: 30%;}
+}
+@-webkit-keyframes baloon2 {
+    0% { left: 30%;}
+    30% { left: -2%;opacity: 1;}
+    31% { left: -2%;opacity: 0;}
+    32% { left: 102%; opacity: 0;}
+    33% { left: 102%; opacity: 1;}
+    100% { left: 30%;}
+}
+
+@keyframes cloud {
+    0% { background-position-x: left 0;}
+    25% { background-position-x: left -10px;}
+    75% { background-position-x: left 10;}
+    100% { background-position-x: left 0px;}
+}
+@-webkit-keyframes cloud {
+    0% { background-position-x: left 0;}
+    25% { background-position-x: left -10px;}
+    75% { background-position-x: left 10;}
+    100% { background-position-x: left 0px;}
+}*/
+
+/****** Animation CSS End *******/

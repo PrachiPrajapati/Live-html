@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config_detail>
+	<url_detail>
+		<appname></appname>
+		<base_url></base_url>
+		<admin_url></admin_url>
+	</url_detail>
+	<SOAP_detail>
+		<apiuser></apiuser>
+		<apipass></apipass>
+	</SOAP_detail>
+	<designer_tool_dbconnection>
+		<host></host>
+		<dbuser></dbuser>
+		<dbpass/>
+		<dbname></dbname>
+	</designer_tool_dbconnection>
+	<store_attribute>
+		<xe_color></xe_color>
+		<xe_size></xe_size>
+		<inkXE></inkXE>
+	</store_attribute>
+	<store_details>
+		<store_type>others</store_type>
+		<store_version>1.X</store_version>
+	</store_details>
+</config_detail>

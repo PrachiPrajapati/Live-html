@@ -1,0 +1,689 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@font-face {
+    font-family: 'Angelina';
+    src: url('../fonts/Angelina.eot');
+    src: url('../fonts/Angelina.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Angelina.woff2') format('woff2'),
+        url('../fonts/Angelina.woff') format('woff'),
+        url('../fonts/Angelina.ttf') format('truetype'),
+        url('../fonts/Angelina.svg#Angelina') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('../fonts/bebasneue-webfont.eot');
+    src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue-webfont.woff') format('woff'),
+         url('../fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+*, *:before, *:after {/* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */-webkit-box-sizing: border-box; /* Firefox (desktop or Android) 28- */-moz-box-sizing: border-box;/* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */box-sizing: border-box;}
+* { margin: 0px; padding: 0px; transition: all 0.3s ease 0s;}
+body { font-family: 'Open Sans', sans-serif;}
+a { text-decoration: none; outline: none;}
+a:focus, a:active,a:visited	{ outline: none !important; border: 0px;}
+.border-none { border: none !important; }
+.bg-none { background: none !important;}
+.margint-none { margin-top: 0px !important;}
+.marginr-none { margin-right: 0px !important;}
+.marginb-none { margin-bottom: 0px !important;}
+.marginl-none { margin-left: 0px !important;}
+.paddingt-none { padding-top: 0px !important;}
+.paddingr-none { padding-right: 0px !important;}
+.paddingb-none { padding-bottom: 0px !important;}
+.paddingl-none { padding-left: 0px !important;}
+/******* Common Element CSS End *********/
+.common-section { padding: 50px 0px;}
+.img-responsive { display: inline-block;}
+.blue-bg {background: #231f20;}
+.off-white-bg { background: #f4f4f4;}
+.grey-bg { background: #c7c7c7;}
+.theme-btn { padding: 5px 7px !important; border: 1px solid #b81e24 !important; font-size: 12px !important; line-height: 16px !important; background: #b81e24; border-radius: 3px; color: #fff; text-transform: uppercase;}
+.theme-btn i { font-size: 16px !important; position: relative; top: 1px !important;}
+.theme-btn:hover { border-color: #fff !important; color: #fff; background: transparent; text-decoration: none;}
+.findout-list { list-style: none; overflow: hidden;}
+.findout-list li { display: inline-block; margin-right: 10px;  float: left;}
+.findout-list li a { color: #fff; padding: 15px 20px; border-radius: 5px; font-size: 28px; line-height: 28px; border: 1px solid #ad1f25; display: inline-block; background: #ad1f25; font-family: 'bebas_neueregular';  letter-spacing: 3px;}
+.findout-list li a { text-decoration: none;}
+.findout-list li a img { margin-top: -10px;}
+.findout-list li:last-child a {background: #ad1f25; border-color: #ad1f25;}
+.findout-list li:first-child a:hover { background: transparent; border-color: #fff;}
+/* Fancy Title --------------------------------- */
+.title-style-1 { position: relative; padding-bottom: 30px; text-transform: uppercase; text-align: center; margin-bottom: 40px;}
+.title-style-1:after { position: absolute; content: ""; bottom: 0px; left: calc(50% - 25px); background: #ad1f25; height: 6px; width: 50px;}
+.title-style-1 p { font-size: 19px !important; line-height: 20px !important; margin: 0px !important; color: #1e1e3b; font-weight: 800; letter-spacing: 3px;}
+.title-style-1 h2 { font-size: 55px; line-height: 55px; margin: 0px !important; color: #ad1f25; font-family: 'bebas_neueregular'; letter-spacing: 4px;}
+.title-style-1.white-title h2,
+.title-style-2.white-title h2 { color: #fff;}
+.title-style-2 h2 { text-align: center; font-size: 25px; line-height: 25px; color: #b81e24; font-weight: bold; margin-bottom: 20px;}
+.title-style-3 { text-align: left; padding-bottom: 25px; border-bottom: 1px solid #b2b2b2; margin-bottom: 25px;}
+.title-style-3 h2 { font-size: 19px; line-height: 22px; color: #b81e24; font-weight: 800; text-transform: uppercase; margin-bottom: 0px;}
+.title-style-3 ul { list-style: none; font-size: 17px; line-height: 25px; color: #000000; margin-top: 12px;}
+.title-style-3 ul li { margin: 0px 10px; display: inline-block;}
+.title-style-3 ul li i { margin-right: 5px; color: #b81e24;}
+.title-style-3 a { padding: 5px 10px; display: inline-block; color: #fff; border: 1px solid #b81e24; background: #b81e24; font-size: 14px; line-height: 20px; margin-top: 25px; border-radius: 5px;}
+.title-style-3 a:hover { background: transparent; text-decoration: none; color: #b81e24;}
+/******* Header Section CSS Start *******/
+.top-bar { padding: 5px 0px; border: 2px solid #e1e1e1; line-height: 40px; color: #282828;}
+.top-bar p { margin: 0px; font-size: 13px; font-weight: 600;}
+.right-data { display: inline-block; float: right;}
+.top-social { font-family: 'Angelina'; list-style: none; line-height: 40px;}
+.top-social li { display: inline-block; float: left; margin: 0px 5px;}
+.top-social li a { display: block; line-height: 0px;}
+.top-social li a i { font-size: 25px; line-height: 40px; color: #b81e24;}
+.top-social li:first-child { font-size: 24px; color: #1e1e3b;}
+.logo-bar { padding: 25px 0px;}
+.logo-block { text-align: center;}
+.logo-block a { display: inline-block;}
+.advertisement-block-header { background: #ebebeb; padding: 41px; border-radius: 5px; }
+.advertisement-block-header p { text-align: center; margin: 0px; font-size: 14px; line-height: 20px; color: #282828; position: relative; font-weight: 600;}
+.left-block-header { background: #000 url(../images/left-header.jpg) no-repeat center center / cover; padding: 22px; border-radius: 5px; }
+.left-block-header p { font-size: 28px; line-height: 35px; color: #fff; text-transform: uppercase; font-weight: 300; text-align: center;}
+.left-block-header span { color: #c4a667; font-weight: 600; padding-right: 5px;}
+.left-block-header h4 { font-size: 11px; line-height: 4px; color: #fff; text-align: center; text-transform: uppercase; }
+.menu-bar { text-align: center; position: relative;}
+.menu-bar:after{ position: absolute; width: 100%; height: 3px; background: #b81e24; bottom: 0; left: 0; content: ""; display: block;}
+
+ul.navbar-nav,
+ul.navbar-nav li { float: none; }
+.navbar-nav li  { display: inline-block;}
+.navbar-nav.main-navigation > li.active { background: #b81e24;}
+.navbar-nav.main-navigation > li > a { color: #fff !important; text-transform: uppercase; padding: 15px 20px; background: transparent !important; font-size: 14px;}
+.navbar-nav.main-navigation > li:first-child > a { font-size: 16px;}
+.main-navigation > li > ul { font-weight: 800; padding: 0px 15px;}
+.main-navigation > li > ul a:before { position: absolute; right: 0px; top: 0; content: "\f138"; font-family: 'fontawesome'; font-size: 18px; color: #b81e24;}
+.main-navigation > li > ul a { font-size: 15px; line-height: 45px; color: #000; padding: 0px; border-bottom: 1px solid #e5e5e5; position: relative;}
+.main-navigation > li > ul a:hover { background: transparent; color: #b81e24;}
+.main-navigation > li > ul li:last-child a { border: none;} 
+.nav-login .dropdown-menu {padding: 15px; top: 100%; min-width: 290px; right: 0; left: auto; border-radius: 0px; background: #b81e24;}
+.nav-login .nav-login-form button[type="submit"] { padding: 5px 7px; border: 1px solid #fff; font-size: 12px; background: #fff; border-radius: 3px; color: #b81e24;}
+.nav-login .nav-login-form button[type="submit"]:hover { background: transparent; color: #fff;}
+.nav-login .nav-login-form input { background: #dfdfdf; box-shadow: none; color: #2a2a2a; height: 40px; border-radius: 3px;}
+.nav-login .nav-login-form a:before { display: none;}
+.nav-login .nav-login-form a {color: #fff; font-size: 10px; line-height: 30px;text-transform: uppercase; font-weight: normal;}
+.nav-login .nav-login-form a:hover { text-decoration: underline; color: #fff;}
+.nav-login-form input::-webkit-input-placeholder {color: #2a2a2a; opacity: 1;}
+.nav-login-form input:-moz-placeholder { /* Firefox 18- */color: #2a2a2a; opacity: 1;}
+.nav-login-form input::-moz-placeholder {  /* Firefox 19+ */color: #2a2a2a; opacity: 1;}
+.nav-login-form input:-ms-input-placeholder {color: #2a2a2a; opacity: 1;}
+/******* Header Section CSS End *********/
+/******* Breadcrumb section CSS Start *******/
+.breadcrumb-section { color: #ffffff; text-transform: uppercase; background: rgba(0, 0, 0, 0.8) url(../images/breadcrumb-bg.jpg)no-repeat center center / cover; border-bottom: 1px solid #404043;}
+.breadcrumb-section h3 {font-size: 35px; line-height: 35px; margin: 0px; font-family: 'Montserrat', sans-serif;}
+.breadcrumb-section p {font-size: 16px; line-height: 32px; text-align: right; margin: 0px;}
+.breadcrumb-section p a { color: #fff; text-decoration: none !important;}
+.breadcrumb-section p a:hover { color: #b81e24; text-decoration: none;}
+.breadcrumb-section p span { color: #fff;}
+/******* Breadcrumb section CSS End *********/
+/******* Banner section CSS Start *******/
+.banner { background:  url(../images/banne-img.jpg) no-repeat center center / cover; border-bottom: 3px solid #ff0000;}
+.slider-desc { text-align: center; padding: 180px 0px;}
+.slider-desc h3 { color: #fff; font-size: 50px; line-height: 55px; margin: 0px; font-family: 'Montserrat', sans-serif; font-weight: 500; text-transform: uppercase; text-shadow: 0 0 10px #000;}
+.slider-desc p { color: #fff; font-size: 22px; line-height: 36px; margin: 0px 0px 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 10px #000;}
+.slider-desc a { padding: 10px 20px; font-size: 28px; line-height: 40px; background: #b81e24; border: 1px solid #b81e24 ; color: #ffffff; font-family: 'bebas_neueregular'; letter-spacing: 3px; display: inline-block; border-radius: 7px;}
+.slider-desc a:hover { background: transparent; text-decoration: none; color: #fff; border-color: #fff;}
+.banner-slider .slick-dots  { bottom: -28px; }
+/******* Banner section CSS End *********/
+/******* Middle section CSS Start ******/
+/* ======= Home Page ==================================================== */
+.highlite-section { padding: 25px 0px;}
+.highlite-section p { font-size: 20px; line-height: 30px; color: #fff; margin: 0px; font-weight: 400;}
+.highlite-link { text-align: right;}
+.highlite-link a { font-size: 30px; line-height: 32px; padding: 12px 15px; display: inline-block; color: #fff; border-radius: 5px; background: #b81e24; border: 1px solid #b81e24; font-family: 'bebas_neueregular'; font-weight: lighter; letter-spacing: 5px;}
+.highlite-link a:hover { text-decoration: none; background: none; border-color: #fff;}
+.latest-news { background: #eeeeee;}
+.upcoming-event { background: #fff;}
+.latest-news h4 { font-size: 18px; line-height: 25px; margin: 10px auto 40px;color: #212121; text-transform: uppercase; text-align: center; font-weight: 600; font-family: "Open Sans",sans-serif; letter-spacing: 2px;}
+.upcoming-event h4 { font-size: 21px; line-height: 25px;}
+.upcoming-event h5 { font-size: 17.9px; line-height: 26px; color: #242424; font-weight: bold;  margin-bottom: 0px !important;}
+.upcoming-event .date-title {  color: #ad1f25; font-size: 15.34px; line-height: 20px; margin: 0px;  font-weight: 700;}
+.common-section.upcoming-event h6 a { font-size: 15.34px; }
+.news-feature { position: relative; overflow: hidden;}
+.news-feature > figure > img {width: 100%;}
+.news-feature .news-share-list { position: absolute; bottom: -50px; right: 0px; list-style: none; display: inline-block; margin: 5px; transition: all 0.3s ease 0s;}
+.news-feature:focus .news-share-list,
+.news-feature:hover .news-share-list { top: auto; bottom: 0;}
+.news-feature .news-share-list li { display: inline-block; font-size: 24px; margin: 5px; line-height: 25px;}
+.news-feature .news-share-list li a { color: #fff;}
+.news-feature .news-share-list li a:hover { color: #b81e24;}
+.latest-news-box h5 { margin: 20px auto;}
+.latest-news-box h5 a { font-size: 19px; line-height: 26px; color: #242424; font-weight: bold; }
+.latest-news-box h5 a:hover { text-decoration: none; color: #b81e24;}
+.latest-news-box h5 a > i { color: #b81e24;}
+.latest-news-box h6 { margin: 20px auto;}
+.latest-news-box h6 a { font-size: 14px; line-height: 20px; color: #8f8f8f; font-weight: bold;  font-weight: 400;}
+.latest-news-box h6 a:hover { text-decoration: none; color: #b81e24;}
+.latest-news-box h6 a > i { color: #b81e24;}
+.latest-news-box p { font-size: 16px; line-height: 24px; color: #9d9d9d; margin-bottom: 0px; font-weight: 300;}
+.join-club-section h1 { color: #fff; font-size: 58px; line-height: 60px; font-family: 'Open Sans', sans-serif; font-weight: 700;}
+.join-club-section p { color: #fff; font-size: 17px; line-height: 33px; margin: 25px 0px; font-weight: 300;}
+.join-club-section { background: url(../images/join-club-image.jpg)no-repeat center center / cover; }
+.join-club-desc { width: 50%; padding: 15px 0px;}
+/* ======= About Page ==================================================== */
+.about-us-main-section .about-desc-section 	{ padding-right: 6.5%; } 
+.about-us-main-section .about-desc-section p { font-size: 17px; line-height: 26px; margin-bottom: 25px; }
+.about-us-main-section .about-desc-section p.big { font-size: 22px; line-height: 36px; color: #b81e24; font-weight: 700; }
+.about-us-main-section .latest-news 	{ box-shadow: inset 15px 0 15px -10px #efefef; }
+.about-us-main-section .latest-news-container 	{ padding-left: 7%; }
+.about-us-main-section .latest-news-box { margin-bottom: 50px; }
+.about-us-main-section .advert-block 	{ padding: 80px 20px; background: #e7e7e7; text-align: center;}
+.about-us-main-section .advert-block p 	{ font-size: 50px; line-height: 42px; font-family: 'bebas_neueregular'; }
+.about-intro p {font-size: 17px; line-height: 33px; color: #393939; margin-bottom: 20px;}
+.about-scroll { background: url(../images/about-scroll-image.jpg)no-repeat center center / cover; height: 350px; -moz-box-shadow: inset 0 27px 8px -27px rgba(0, 0, 0, 0.35), inset  0 -27px 27px -27px rgba(0, 0, 0, 0.35); -webkit-box-shadow: inset  0  27px 27px -27px rgba(0, 0, 0, 0.35), inset  0 -27px 27px -27px rgba(0, 0, 0, 0.35); box-shadow:inset  0  27px 27px -27px rgba(0, 0, 0, 0.35), inset  0 -27px 27px -27px rgba(0, 0, 0, 0.35);}
+.about-service h3 { margin: 0px auto 30px; font-size: 36px; line-height: 36px; color: #ad1f25; font-family: 'bebas_neueregular'; letter-spacing: 5px;}
+.about-service img { margin-bottom: 30px;}
+.membership-section { background: url(../images/membership-bg.jpg)no-repeat center center / cover; }
+.membership-section p { color: #fff;}
+.membership-section .findoulist-with-message { position: relative; margin-bottom: 40px; display: inline-block;}
+.membership-section .findoulist-with-message:after { position: absolute; bottom: -50px; left: 40px; content: "Join Our Community"; padding: 15px 5px 5px 40px; font-size: 32px; background: url(../images/community-arrow.png)no-repeat left 2px top 5px / 34px auto; color: #fff; line-height: 30px;}
+/* ======= Membership Page ==================================================== */
+.membership-intro p {color: #393939; }
+.offer-badge { display: inline-block; text-align: center; padding: 18px; border-radius: 50%; transform: rotate(-15deg); margin-bottom: 30px;}
+.offer-badge p { color: #fff; font-size: 15px; line-height: 20px; display: inline-block; margin: 0px !important;}
+.offer-badge p span { font-size: 50px; line-height: 55px; font-family: 'bebas_neueregular'; display: block; }
+.membership-intro { background: url(../images/membership-intro-bg.jpg)no-repeat center center / cover;}
+.membership-intro h2 { color: #ad1f25; font-size: 50px; line-height: 50px; font-family: 'bebas_neueregular'; letter-spacing: 5px; margin: 30px 0px;}
+.membership-intro ul { list-style: none;}
+.membership-intro ul li { display: inline-block; margin-bottom: 15px;}
+.membership-intro ul li a { padding: 15px; background: #b81e24; color: #fff; border-radius: 5px; font-size: 16px; line-height: 40px; text-transform: uppercase; margin-right: 10px; border: 1px solid #b81e24;}
+.membership-intro ul li a:hover { background: transparent; color: #b81e24; text-decoration: none;}
+.alternate-section { background: url(../images/alternate-way-bg.jpg)no-repeat center center / cover; border-bottom: 10px solid #fff; text-align: center;}
+.alternate-section h3 { font-size: 34px; line-height: 48px; font-style: italic; margin: 20px auto 30px; color: #fff;}
+.alternate-section p { color: #fff;}
+.alternate-section p a { color: #fff; text-decoration: underline;}
+.alternate-section p a:hover { text-decoration: none;}
+/* ======= Join Club Page ==================================================== */
+.join-club-intro { text-align: center;}
+.join-club-intro img { display: block; margin: 20px auto;}
+.join-club-intro p,
+.member-login-section p,
+.member-account-section p { font-size: 16px; line-height: 30px; color: #323232; margin: 20px auto;}
+.join-club-form { margin: 50px auto;}
+.join-club-form input { background: #dfdfdf; box-shadow: none; border: none; height: 40px; padding: 5px 15px; color: #2a2a2a; font-size: 14px;}
+.join-club-form textarea { background: #dfdfdf; box-shadow: none; border: none; width: 100%; border-radius: 5px; resize: none; padding: 10px 15px; font-size: 14px;}
+.join-club-form button[type="submit"] { padding: 15px 20px; background: #b81e24; color: #fff; border-radius: 5px; font-size: 16px; line-height: 20px; text-transform: uppercase; margin-top: 40px; border: 1px solid #b81e24;}
+.join-club-form button[type="submit"]:hover,
+.join-club-form button[type="submit"]:focus { background: transparent; color: #b81e24; text-decoration: none;}
+.join-club-form input::-webkit-input-placeholder,
+.join-club-form textarea::-webkit-input-placeholder {color: #2a2a2a; opacity: 1;}
+.join-club-form input:-moz-placeholder,
+.join-club-form textarea:-moz-placeholder { /* Firefox 18- */color: #2a2a2a; opacity: 1;}
+.join-club-form input::-moz-placeholder,
+.join-club-form textarea::-moz-placeholder {  /* Firefox 19+ */color: #2a2a2a; opacity: 1;}
+.join-club-form input:-ms-input-placeholder,
+.join-club-form textarea:-ms-input-placeholder {color: #2a2a2a; opacity: 1;}
+/* ======= Membership Login Page ==================================================== */
+.member-login-section { text-align: center; background: url(../images/member-login-bg.jpg)no-repeat center center / cover;}
+.member-login-section .breadcrumb-section { background: none; border: none;}
+.member-login-section p { color: #fff; }
+.member-login-section p a { color: #fff; text-decoration: underline;}
+.member-login-section p a:hover { text-decoration: none;}
+/* ======= Member Account Page ==================================================== */
+.member-account-section { text-align: center;}
+.account-manage-list { list-style: none;}
+.manage-box { border: 2px solid #dfdfdf; padding: 15px; display: block; border-radius: 5px; margin-top: 30px; background: #ffffff; background: -moz-linear-gradient(top,  #ffffff 0%, #e0e0e0 100%); background: -webkit-linear-gradient(top,  #ffffff 0%,#e0e0e0 100%); background: linear-gradient(to bottom,  #ffffff 0%,#e0e0e0 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 );}
+.manage-box:hover { text-decoration: none; border-color: #b81e24;}
+.manage-box .manage-thumb { height: 100px; line-height: 100px; margin-bottom: 20px; color: #b81e24; font-size: 80px;}
+.manage-box .manage-thumb i { line-height: 100px;}
+.manage-box .manage-thumb img { display: inline-block; transform: rotate(-5deg); max-width: 125px;}
+.manage-box .manage-desc h4 { font-size: 20px; line-height: 23px; color: #b81e24; margin: 0px auto; font-weight: 800;}
+.manage-box .manage-desc p { font-size: 15px; line-height: 23px; color: #000; margin: 0px auto;}
+/* ======= News Page ==================================================== */
+.recent-news-section h3 { font-size: 19px; line-height: 30px; color: #000000; text-transform: uppercase; margin: 10px 0px 30px;}
+.recent-news-section h3 strong { font-weight: 800;}
+.recent-news-section h3 i { opacity: 0.5; font-size: 15px; top: -3px; position: relative;}
+.news-list { list-style: none; color: #9d9d9d; font-size: 15px; line-height: 26px; }
+.news-list li { margin-bottom: 30px;}
+.news-list .news-thumb { margin-bottom: 20px;}
+.news-list .news-thumb img {width: 100%;}
+.news-list .news-desc h4 { font-size: 18px; line-height: 26px; color: #242424; margin: 0px 0px 15px; font-weight: bold;}
+.news-list .news-desc p { margin: 0px 0px 15px;}
+.news-list .news-desc ul { list-style: none;}
+.news-list .news-desc ul li { display: inline-block; margin: 0px 15px 0px 0px; font-weight: bold;}
+.news-list .news-desc ul li a { color: #050064;}
+.news-list .news-desc ul li a:hover { text-decoration: none; color: #b81e24;}
+/* ======= News Inner Page ==================================================== */
+.back-link a { font-size: 12px; line-height: 20px; opacity: 0.5; color: #b81e24 !important; text-transform: uppercase; font-weight: 800; text-decoration: none !important;}
+.back-link a:hover { opacity: 1; text-decoration: none;}
+.news-featuere-list { list-style: none;}
+.news-featuere-list li { margin-bottom: 25px;}
+.news-featuere-list li img { width: 100%;}
+.single-news-section p { font-size: 15px; line-height: 25px; color: #000; margin-bottom: 30px;}
+.single-news-section p a { text-decoration: underline; color: #000;}
+.single-news-section p a:hover { text-decoration: none; color: #b81e24;}
+/* ======= Meeting Map Page ==================================================== */
+.meeting-view-switch { text-align: right; margin: 30px 0px;}
+.meeting-view-switch ul { list-style: none; display: inline-block; line-height: 40px;}
+.meeting-view-switch ul li { display: inline-block; margin-left: 5px; text-transform: uppercase; font-size: 16px;}
+.meeting-view-switch ul li a { color: #000; border-radius: 5px; padding: 0px 10px; display: block;}
+.meeting-view-switch ul li a:hover { text-decoration: none;}
+.meeting-view-switch ul li.active a { background: #b81e24; color: #fff;}
+.meeting-map-block { list-style: none; margin: 20px 0px;}
+.meeting-map-block li { padding: 15px 0px; margin-bottom: 15px; border: 2px solid #dfdfdf; border-radius: 5px; background: #ffffff; background: -moz-linear-gradient(top,  #ffffff 0%, #e0e0e0 100%); background: -webkit-linear-gradient(top,  #ffffff 0%,#e0e0e0 100%); background: linear-gradient(to bottom,  #ffffff 0%,#e0e0e0 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 );}
+.meeting-map-block li p { margin-bottom: 0px; font-size: 13px; line-height: 20px;}
+.meeting-map-block li p strong,
+.meeting-map-block li p i {color: #b81e24;}
+.meeting-map-block .meeting-location { text-transform: uppercase; padding-bottom: 15px; font-size: 14px !important; border-bottom: 1px solid #000; display: inline-block;}
+.meeting-map-block .meeting-member strong { font-size: 16px;}
+.meeting-map-block .meeting-time { line-height: 40px !important;}
+/* ======= Meeting List Page ==================================================== */
+.meeting-list-block { list-style: none; }
+.meeting-list-block .meeting-list-box { padding: 15px; margin-bottom: 30px; border: 2px solid #dfdfdf; border-radius: 5px; background: #ffffff; background: -moz-linear-gradient(top,  #ffffff 0%, #e0e0e0 100%); background: -webkit-linear-gradient(top,  #ffffff 0%,#e0e0e0 100%); background: linear-gradient(to bottom,  #ffffff 0%,#e0e0e0 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 );}
+.meeting-list-box p { font-size: 13px; line-height: 20px; }
+.meeting-list-box p strong,
+.meeting-list-box p i {color: #b81e24;}
+.meeting-list-box .meeting-location { text-transform: uppercase; padding-bottom: 15px; font-size: 14px !important; border-bottom: 1px solid #000; margin-bottom: 15px;}
+.meeting-list-box .meeting-member strong { font-size: 16px;}
+.meeting-list-box ul {list-style: none;}
+.meeting-list-box ul li { display: inline-block; margin-right: 5px;}
+.meeting-list-box ul li a { padding: 6px 10px; border-radius: 5px; border: 1px solid transparent; font-size: 14px; line-height: 18px; color: #fff; font-weight: lighter; display: block;}
+.meeting-list-box ul li a:hover { background: transparent; text-decoration: none;}
+.link-to-map { background: #1e1e3b; border-color: #1e1e3b !important;}
+.link-to-map:hover { color: #1e1e3b;}
+.link-to-news { background: #b81e24; border-color: #b81e24 !important;}
+.link-to-news:hover { color: #b81e24;}
+/* ======= Event Detail Page ==================================================== */
+.upcomming-event-section h4 { background: #b81e24; border-radius: 5px; color: #fff; font-size: 18px; line-height: 40px; padding: 0px 15px; text-transform: uppercase; font-weight: 800; margin: 0px 0px 30px;}
+.event-list-block { list-style: none;}
+.event-box { padding: 15px; margin-bottom: 30px; border: 2px solid #dfdfdf; border-radius: 5px; background: #ffffff; background: -moz-linear-gradient(top,  #ffffff 0%, #e0e0e0 100%); background: -webkit-linear-gradient(top,  #ffffff 0%,#e0e0e0 100%); background: linear-gradient(to bottom,  #ffffff 0%,#e0e0e0 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 );}
+.event-box p { margin-bottom: 0px; font-size: 14px; line-height: 23px;}
+.event-box p strong,
+.event-box p i {color: #b81e24;}
+.event-date { text-transform: uppercase; padding-bottom: 10px; font-size: 14px !important; border-bottom: 1px solid #000; margin-bottom: 15px !important;}
+.event-desc strong { font-size: 16px;}
+.event-box ul {list-style: none; margin-top: 40px;}
+.event-box ul li { display: inline-block; margin-right: 5px;}
+.event-box ul li a { padding: 6px 10px; border-radius: 5px; border: 1px solid transparent; font-size: 14px; line-height: 18px; color: #fff; font-weight: lighter; display: block;}
+.event-box ul li a:hover { background: transparent; text-decoration: none;}
+/* ======= Register Page ==================================================== */
+.register-intro { text-align: center;}
+.register-intro p { font-size: 16px; color: #393939; line-height: 25px; margin-bottom: 25px;}
+.register-intro p:first-child { font-weight: 600;}
+.register-intro p:last-child { margin: 0px;}
+.regester-list { padding: 40px 0px; border-top: 1px solid #d6d6d6; text-align: center; overflow: hidden;}
+.regester-list li { padding: 15px; width: calc(100% / 5 - 20px); float: left; margin:15px 10px; display: inline-block; background: #f2f2f2; font-size: 18px; line-height: 25px; box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.14);}
+.regester-list li a { color: #242424; text-transform: uppercase;}
+.regester-list li a:hover { text-decoration: none;}
+.regester-list li a img { border: 1px solid #bcbcbc;}
+.regester-list li a p { margin: 20px 0px 0px; font-weight: 800; color: #000;}
+/* ======= Register List Page ==================================================== */
+.register-title { text-align: center; position: relative; color: #393939; font-size: 23px; line-height: 25px; margin: 20px 0px; font-weight: 600;}
+.register-title a { position: absolute; left: 0; top: 0; font-size: 13px; color: #1e1e3b; opacity: 0.5; z-index: 1;}
+.register-title a:hover { opacity: 1; text-decoration: none;}
+.gtd-list { list-style: none; padding: 30px 0px; border-top: 1px solid #d6d6d6;}
+.gtd-list li { padding: 15px; background: #f2f2f2; margin-bottom: 20px; box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.14); font-size: 18px; line-height: 25px; color: #393939; font-weight: 600;}
+.gtd-list li p { margin-bottom: 0px;}
+.gtd-list li p span { font-weight: bold; font-size: 14px;}
+.gtd-bio p { margin: 50px 0px;}
+.gtd-bio figure { position: relative;}
+.gtd-bio figure a { position: absolute; left: 0; bottom: 0px; font-size: 25px; line-height: 35px; padding: 0px 10px; color: #fff;}
+.gtd-desc { text-align: center; padding-top: 50px;}
+.single-gtd-desc { text-align: center; color: #fff; font-weight: 600;
+}
+.single-gtd-desc h4 { font-size: 22px; line-height: 30px;}
+.single-gtd-desc p { font-size: 15px; line-height: 30px; margin-bottom: 30px;}
+/* ======= Sale List Page ==================================================== */
+.sale-filter-block { margin-bottom: 30px;}
+.sale-filter-block h4 { color: #fff; font-size: 20px; line-height: 50px; background: #1e1e3b; margin: 0px}
+.sale-filter-block h4 span { background: #d23234 url(../images/category-menu.png)no-repeat center center / 25px auto; float: left; margin-right: 10px; height: 50px; width: 50px; display: inline-block;}
+.sale-filter-block ul { list-style: none; border: 1px solid #dddddd; border-top: none;}
+.sale-filter-block ul li a:before { position: absolute; right: 0; top: calc(50% - 10px); width: 15px; height: 20px; line-height: 20px; color: #999999; content: "\f105"; font-size: 16px; font-family: 'fontawesome';}
+.sale-filter-block ul li a { font-size: 15px; text-transform: uppercase; color: #444444; line-height: 20px; padding: 15px; display: block;  position: relative;}
+.sale-filter-block ul li a:hover:before { color: #b81e24;}
+.sale-filter-block ul li.active a,
+.sale-filter-block ul li a:hover {background: #eeeeee; text-decoration: none;}
+.sale-list { list-style: none;}
+.sale-list li:after { position: absolute; color: #b81e24; font-size: 30px; line-height: 30px; z-index: 0; right: 0px; width: 30px; height: 30px; content: "\f105"; top: calc(50% - 15px); text-align: center; font-family: 'fontawesome'; cursor: pointer;}
+.sale-list li { padding: 15px; background: #f2f2f2; margin-bottom: 20px; box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.14); position: relative; font-weight: 800;}
+.sale-list li a:hover { text-decoration: none;}
+.sale-desc { padding-top: 20px;}
+.sale-desc p { font-size: 16px; line-height: 20px; color: #000; }
+.sale-desc p span { font-size: 11px; display: block;}
+.sale-desc p.member { color: #b81e24; font-size: 13px; line-height: 22px; margin-bottom: 10px;}
+.sale-price { font-size: 20px; line-height: 25px; color: #b81e24; margin-top: 50px;}
+/******** Middle section CSS End *******/
+/***** Bottom section CSS Start *******/
+footer { background: #1e1e1e;}
+.foot-widget-block { padding: 30px 0px; color: #858585;}
+.foot-widget-block h3 { color: #fff; font-size: 22px; line-height: 30px; margin-bottom: 20px; display: inline-block;  font-weight: 700;}
+.foot-widget-block p { font-size: 14px; line-height: 25px; font-weight: 400; }
+.foot-widget-block figure { text-align: center; margin-bottom: 20px;}
+.foot-event-block { padding: 0px 20px 20px; background: rgba(255, 255, 255, 0.07); border-radius: 5px;}
+.foot-event-list { list-style: none;}
+.foot-event-list li:before { position: absolute; left: 0; top:0; color: #b81e24; content: "\f111"; font-size: 7px; font-family: 'fontawesome';}
+.foot-event-list li { position: relative; font-size: 14px; line-height: 25px; color: #858585; padding-left: 15px;}
+.foot-event-block a { color: #fff; font-size: 14px; line-height: 25px; margin-top: 15px; display: inline-block;}
+.foot-event-block a > i, .about-desc-footer a > i { color: #b81e24 !important; font-size: 16px; line-height: 25px; margin-left: 5px;}
+.foot-event-block a:hover {};
+.foot-event-block a i { color: #b81e24 !important;}
+#custom-search-input { margin:0; margin-top: 20px; padding: 0;}
+#custom-search-input .search-query { padding-right: 5px; padding-left: 15px; margin-bottom: 0; -webkit-border-radius: 17px 0px 0px 17px; -moz-border-radius: 17px 0px 0px 17px; border-radius: 17px 0px 0px 17px;  border: none;} 
+#custom-search-input button { border: 0; background: #fff; padding: 5px 10px 5px 5px; margin-top: 0px; position: relative; margin-bottom: 0; -webkit-border-radius: 0px 17px 17px 0px; -moz-border-radius: 0px 17px 17px 0px; border-radius: 0px 17px 17px 0px; color:#5f5f5f; box-shadow: none; font-size: 17px; line-height: 24px;}
+.search-query:focus + button { z-index: 3;}
+.copy-right-bar { padding: 10px 0px; background: #b81e24; color: #fff; line-height: 29.17px; font-size: 11px; }
+.copy-right-bar p { margin-bottom: 0px;}
+.copy-right-left { text-align: left; }
+.copy-right-right { text-align: right; }
+/****** Bottom section CSS End *******/
+/***** Responsive CSS Start *******/
+@media (min-width: 992px) and (max-width: 1199px){
+    /******* Common Element CSS End *********/
+    .common-section { padding: 40px 0px;}
+    .findout-list li a { padding: 12px 15px; letter-spacing: 2px; font-size: 24px; line-height: 24px; max-width: 170px;}
+    /* Fancy Title --------------------------------- */
+    .title-style-1 { margin-bottom: 30px;}
+    .title-style-1 p { font-size: 18px !important;}
+    .title-style-1 h2 { font-size: 50px; line-height: 50px;}    
+    .title-style-3 ul { font-size: 15px; line-height: 25px;}
+    /******* Header Section CSS Start *******/
+    .top-bar { padding: 0px;}
+    .top-bar p { font-size: 11px;}
+    .top-social li { margin: 0px 3px;}
+    .top-social li a i,
+    .top-social li:first-child { font-size: 22px;}
+    .logo-bar { padding: 15px 0px;}
+    .logo-block a { max-width: 190px;}
+    .joinus-block { padding: 15px;}
+    .joinus-block p {  font-size: 12px;}
+    .joinus-block p:after { bottom: -10px;}
+    .joinus-block a { padding: 13px 0px; font-size: 15px;}
+    .navbar-nav.main-navigation > li > a { font-size: 12px; padding: 15px 12px;}
+    .main-navigation > li > ul a { font-size: 12px; line-height: 35px;}
+    .main-navigation > li > ul a::before { font-size: 16px;}
+    /******* Header Section CSS End *********/    
+    /******* Banner section CSS Start *******/
+    .slider-desc h3 { font-size: 35px; line-height: 44px;}
+    .slider-desc p { font-size: 20px; line-height: 25px; margin: 25px 0px;}
+    .slider-desc a { font-size: 25px; line-height: 30px;}
+    /* ======= Home Page ==================================================== */
+    .highlite-section { padding: 20px 0px;}
+    .highlite-section p { font-size: 15px;}
+    .home-service h3 { margin: 10px auto 20px; font-size: 35px; line-height: 35px;}
+    .home-service p,
+    .membership-section p,
+    .membership-intro p,
+    .alternate-section p { font-size: 15px; line-height: 30px; margin-bottom:25px;}    
+    .latest-news-box h5 { margin: 15px auto;}
+    .latest-news-box h5 a { font-size: 17px; line-height: 20px;}
+    .latest-news-box p { font-size: 14px; line-height: 20px;}
+    .join-club-section h1 { font-size: 50px; line-height: 50px; }
+    .join-club-section p { font-size: 14px; line-height: 25px; margin: 15px 0px;}
+    /* ======= About Page ==================================================== */
+    .about-service p { font-size: 14px; line-height: 25px; margin-bottom: 20px;}
+    .about-intro p { font-size: 16px; line-height: 30px;}
+    .about-scroll { height: 250px;}
+    /* ======= Membership Page ==================================================== */
+    .membership-intro h2 { font-size: 42px; line-height: 45px; letter-spacing: 4px; margin: 20px 0px;}
+    /* ======= Join Club Page ==================================================== */
+    .join-club-intro p,
+    .member-login-section p,
+    .member-account-section p { font-size: 15px; line-height: 28px;}
+    .join-club-form { margin: 35px auto;}
+    /* ======= Member Account Page ==================================================== */
+    .manage-box { padding: 15px 10px;}
+    .manage-box .manage-thumb { font-size: 65px; height: 80px; line-height: 80px;}
+    .manage-box .manage-desc h4 { font-size: 18px; line-height: 20px;}
+    .manage-box .manage-desc p { font-size: 13px; line-height: 20px;}
+    /* ======= News Page ==================================================== */
+    .recent-news-section h3 { font-size: 17px;}
+    .news-list { font-size: 14px; line-height: 23px;}
+    .news-list .news-thumb { margin-bottom: 15px;}
+    .news-list .news-desc h4 { font-size: 16px; line-height: 23px;}
+    /* ======= News Inner Page ==================================================== */
+    .single-news-section p { font-size: 13px; line-height: 20px; margin-bottom: 25px;}
+    /* ======= Meeting Map Page ==================================================== */
+    .meeting-view-switch ul { line-height: 35px;}
+    .meeting-view-switch ul li { font-size: 15px;}
+    /* ======= Register Page ==================================================== */
+    .register-intro p { font-size: 14px; line-height: 22px; margin-bottom: 20px;}
+    /* ======= Register List Page ==================================================== */
+    .gtd-bio p { margin-top: 10px;}
+    .gtd-desc { padding-top: 10px;}
+    /* ======= Sale List Page ==================================================== */
+    .sale-desc { padding-top: 15px;}
+    .sale-desc p { font-size: 14px; line-height: 18px;}
+    .sale-desc p span { font-size: 10px;}
+    .sale-price { font-size: 18px; margin-top: 40px;}
+    /***** Bottom section CSS Start *******/
+    .foot-widget-block h3 { font-size: 18px; margin: 10px 0px 15px;}
+    .foot-widget-block p { font-size: 12px; line-height: 20px;}
+    .foot-event-list li { font-size: 12px;}
+    .copy-right-bar { padding: 7px 0px; font-size: 12px;}
+    /****** Bottom section CSS End *******/
+}
+@media (min-width: 768px) and (max-width: 991px){
+    /******* Common Element CSS End *********/
+    .common-section { padding: 30px 0px;}   
+    .findout-list li a { padding: 10px 15px; font-size: 20px; line-height: 22px; letter-spacing: 2px; max-width: 160px;}
+    /* Fancy Title --------------------------------- */
+    .title-style-1 { padding-bottom: 25px; margin-bottom: 25px;}
+    .title-style-1 p { font-size: 16px !important; line-height: 20px !important;}
+    .title-style-1 h2 { font-size: 45px; line-height: 45px;}    
+    .title-style-3 ul { font-size: 13px; line-height: 23px;}
+    /******* Header Section CSS Start *******/
+    .top-bar { padding: 0px;}
+    .top-bar p { font-size: 10px;}
+    .top-social li { margin: 0px 3px;}
+    .top-social li a i,
+    .top-social li:first-child { font-size: 18px;}
+    .top-social li img { max-width: 110px;}
+    .logo-bar { padding: 15px 0px;}
+    .logo-block a { max-width: 150px;}
+    .joinus-block { padding: 10px;}
+    .joinus-block p {  font-size: 10px; line-height: 20px;}
+    .joinus-block p:after { bottom: -10px;}
+    .joinus-block a { padding: 10px 0px; font-size: 12px;}
+    .navbar-nav.main-navigation > li > a { font-size: 9.2px; padding: 15px 8px;}
+    .main-navigation > li > ul a { font-size: 11px; line-height: 30px;}
+    .main-navigation > li > ul a::before { font-size: 14px;}
+    /******* Header Section CSS End *********/
+    /******* Banner section CSS Start *******/
+    .slider-desc h3 { font-size: 30px; line-height: 35px;}
+    .slider-desc p { font-size: 15px; line-height: 24px; margin: 15px 0px;}
+    .slider-desc a { font-size: 18px; line-height: 30px; letter-spacing: 2px; padding: 6px 12px;}
+    /******* Breadcrumb section CSS Start *******/
+    .breadcrumb-section h3 { font-size: 21px;}
+    /******* Breadcrumb section CSS End *********/
+    /* ======= Home Page ==================================================== */
+    .highlite-section { padding: 15px 0px;}
+    .highlite-section p { font-size: 13px; line-height: 20px;}
+    .highlite-link a { font-size: 17px; line-height: 17px;}
+    .home-service h3 { margin: 0px auto 10px; font-size: 30px; line-height: 30px;}
+    .home-service p,
+    .about-service p,
+    .membership-section p,
+    .membership-intro p,
+    .alternate-section p { font-size: 13px; line-height: 23px; margin-bottom:15px;}
+    .latest-news h4 { font-size: 20px; line-height: 20px; margin: 0px auto 30px;}
+    .latest-news-box h5 { margin: 10px auto;}
+    .latest-news-box h5 a { font-size: 15px; line-height: 20px;}
+    .latest-news-box p { font-size: 13px; line-height: 20px;}
+    .join-club-section h1 { font-size: 45px; line-height: 45px; }
+    .join-club-section p { font-size: 13px; line-height: 25px; margin: 15px 0px;}
+    /* ======= About Page ==================================================== */
+    .about-us-main-section .about-desc-section p { font-size: 16px; line-height: 24px; margin-bottom: 15px; }
+	.about-us-main-section .about-desc-section p.big { font-size: 18px; line-height: 26px; color: #b81e24; font-weight: 700; }
+    .about-intro p { font-size: 16px; line-height: 30px; margin-bottom: 15px; text-align: center;}
+    .about-service h3 { margin-bottom: 20px;}
+    .about-scroll { height: 200px;}
+    /* ======= Membership Page ==================================================== */
+    .membership-intro h2 { font-size: 38px; line-height: 45px; letter-spacing: 3px; margin: 15px 0px;}
+    .membership-intro ul li a { font-size: 15px;}
+    .alternate-section h3 { font-size: 28px; line-height: 35px; margin-bottom: 25px;}
+    /* ======= Join Club Page ==================================================== */
+    .join-club-intro p,
+    .member-login-section p,
+    .member-account-section p { font-size: 15px; line-height: 28px;}
+    .join-club-form { margin: 25px auto;}
+    .join-club-form button[type="submit"] { margin-top: 25px;}
+    /* ======= Member Account Page ==================================================== */
+    .manage-box .manage-thumb { font-size: 70px;}
+    .manage-box .manage-desc h4 { font-size: 16px; line-height: 20px;}
+    .manage-box .manage-desc p { font-size: 12px; line-height: 20px;}
+    /* ======= News Page ==================================================== */
+    .recent-news-section h3 { font-size: 16px; line-height: 20px;}
+    /* ======= News Inner Page ==================================================== */
+    .single-news-section p { font-size: 12px; line-height: 17px; margin-bottom: 10px;}
+    /* ======= Meeting Map Page ==================================================== */
+    .meeting-view-switch ul { line-height: 30px;}
+    .meeting-view-switch ul li { font-size: 14px;}
+    .meeting-map-block li p { margin: 10px 0px; }
+    /* ======= Event Detail Page ==================================================== */
+    .event-box { padding: 15px 10px;}
+    .event-box ul li a { padding: 5px 7px; font-size: 12px;}
+    /* ======= Register Page ==================================================== */
+    .register-intro p { font-size: 14px; line-height: 22px; margin-bottom: 20px;}
+    .regester-list li { padding: 15px; width: calc(100% / 3 - 20px);}
+    /* ======= Register List Page ==================================================== */
+    .gtd-desc { padding-top: 30px;}
+    .single-gtd-desc h4 { font-size: 21px; line-height: 27px;}
+    .single-gtd-desc p { font-size: 14px; line-height: 22px; margin-bottom: 20px;}
+    /* ======= Sale List Page ==================================================== */
+    .sale-filter-block h4 { font-size: 15px;}
+    .sale-filter-block ul li a { font-size: 13px; padding: 12px;}
+    .sale-desc { padding-top: 15px;}
+    .sale-desc p { font-size: 14px; line-height: 18px;}
+    .sale-desc p span { font-size: 10px;}
+    .sale-price { font-size: 20px; margin-top: 20px; margin-bottom: 0px; text-align: center;}
+    /***** Bottom section CSS Start *******/
+    .foot-widget-block h3 { font-size: 17px; margin: 10px 0px 15px;}
+    .copy-right-bar { padding: 5px 0px; font-size: 11px;}
+    /****** Bottom section CSS End *******/
+}
+@media (max-width: 767px){
+    /******* Common Element CSS End *********/
+    .common-section { padding: 30px 0px;}
+    .findout-list li { float: none; display: block; margin-bottom: 15px;}
+    .findout-list li a { padding: 10px 15px; font-size: 22px; line-height: 22px; letter-spacing: 2px; max-width: 160px;}
+    /* Fancy Title --------------------------------- */
+    .title-style-1 { padding-bottom: 20px; margin-bottom: 20px;}
+    .title-style-1 p { font-size: 14px !important; line-height: 15px !important;}
+    .title-style-1 h2 { font-size: 40px; line-height: 40px;}
+    .title-style-2 h2 { font-size: 18px; line-height: 20px; margin-bottom: 20px;}
+    .title-style-3 { padding-bottom: 10px; margin-bottom: 10px;}
+    .title-style-3 h2 { font-size: 14px; line-height: 20px;}
+    .title-style-3 ul { font-size: 14px; line-height: 20px;}
+    .title-style-3 ul li { margin: 5px 5px;}
+    /******* Header Section CSS Start *******/
+    .mob-header { padding: 7px 15px; background: #1e1e3b; border-bottom: 5px solid #b81e24;}
+    .mob-header > a.theme-btn { margin-top: 3px; float: right;}
+    .mobilemenu--inner i { font-size: 20px; top: 3px; position: relative; display: inline-block;}    
+    .mob-nav img { max-width: 190px; margin: 0px auto 20px;}
+    .close-menu { text-align: right; margin-bottom: 0px;}
+    .close-menu a { display: inline-block !important; font-size: 18px;}
+    .quick-connect { padding: 10px 0px;}
+    .quick-connect a { float: none; display: inline-block !important; margin: 0px 5px;}
+    .mob-social { margin-top: 15px;}
+    .mob-social a { display: inline-block !important; padding: 5px !important; margin: 2px;}
+    .mob-social a:hover { color: #b81e24 !important;}
+    /******* Header Section CSS End *******/
+    /******* Banner section CSS Start *******/
+    .slider-desc { text-align: center;}
+    .slider-desc h3 { font-size: 24px; line-height: 25px;}
+    .slider-desc p { font-size: 15px; line-height: 24px; margin: 20px 0px;}
+    .slider-desc a { font-size: 18px; line-height: 30px; letter-spacing: 2px; padding: 6px 12px;}
+    /******* Breadcrumb section CSS Start *******/
+    .breadcrumb-section h3 { font-size: 20px; line-height: 30px; text-align: center;}
+    .breadcrumb-section p { text-align: center;}
+    /******* Breadcrumb section CSS End *********/
+    /* ======= Home Page ==================================================== */
+    .highlite-section { padding: 20px 0px;}
+    .highlite-section p { font-size: 14px; line-height: 20px; text-align: center; margin-bottom: 15px;}
+    .highlite-link { text-align: center;}
+    .highlite-link a { font-size: 22px; line-height: 32px; letter-spacing: 2px; padding: 8px 12px;}
+    .home-service,
+    .about-intro,
+    .about-service { text-align: center;}
+    .home-service h3 { margin: 20px auto; font-size: 30px; line-height: 30px;}
+    .home-service p,
+    .about-service p,
+    .membership-section p,
+    .membership-intro p,
+    .alternate-section p { font-size: 14px; line-height: 23px; margin-bottom: 18px;}
+    .latest-news h4 { font-size: 24px; line-height: 24px; margin: 20px auto;}
+    .latest-news-box { margin-top: 30px;}
+    .latest-news-box h5 { margin: 10px auto;}
+    .latest-news-box h5 a { font-size: 15px; line-height: 20px;}
+    .latest-news-box p { font-size: 13px; line-height: 20px;}
+    .join-club-desc   { width: 100%; }
+    .join-club-section { text-align: center;}
+    .join-club-section h1 { font-size: 40px; line-height: 40px;}
+    .join-club-section p { font-size: 13px; line-height: 25px; margin: 15px 0px;}
+    /* ======= About Page ==================================================== */
+    .about-us-main-section .about-desc-section 	{ padding-right: 0%; } 
+	.about-us-main-section .about-desc-section p { font-size: 15px; line-height: 22px; margin-bottom: 15px; }
+	.about-us-main-section .about-desc-section p.big { font-size: 16px; line-height: 24px; color: #b81e24; font-weight: 700; }
+	.about-us-main-section .latest-news-container 	{ padding-left: 0%; }
+    .about-intro p { font-size: 15px; line-height: 25px; margin-bottom: 15px;}
+    .about-service h3 { margin-bottom: 20px;}
+    .about-scroll { height: 120px;}
+    .membership-section { text-align: center;}
+    .membership-section .findoulist-with-message:after { position: absolute; bottom: -30px; left: 0px; padding: 10px 5px 5px 35px; font-size: 20px; line-height: 20px; text-align: left; background-size: 30px;}
+    /* ======= Membership Page ==================================================== */
+    .membership-intro h2 { font-size: 35px; line-height: 40px; letter-spacing: 3px; margin: 10px 0px;}
+    .membership-intro ul li a { font-size: 14px;}
+    .alternate-section h3 { font-size: 25px; line-height: 30px; margin-bottom: 20px;}
+    /* ======= Join Club Page ==================================================== */
+    .join-club-intro p,
+    .member-login-section p,
+    .member-account-section p { font-size: 14px; line-height: 25px;}
+    .join-club-form { margin: 20px auto;}
+    .join-club-form button[type="submit"] { margin-top: 20px;}
+    /* ======= Member Account Page ==================================================== */
+    .manage-box .manage-thumb { font-size: 60px; line-height: 80px; height: 80px;}
+    .manage-box .manage-desc h4 { font-size: 16px; line-height: 22px;}
+    .manage-box .manage-desc p { font-size: 13px; line-height: 22px;}
+    /* ======= News Page ==================================================== */
+    .recent-news-section h3 { font-size: 14px; line-height: 20px;}
+    .recent-news-section h3 i { top: -1px;}
+    .news-list { font-size: 13px; line-height: 20px;}
+    .news-list .news-thumb { margin-bottom: 15px;}
+    .news-list .news-desc h4 { font-size: 14px; line-height: 20px;}
+    /* ======= News Inner Page ==================================================== */
+    .single-news-section p { font-size: 14px; line-height: 20px; margin-bottom: 20px;}
+    /* ======= Meeting Map Page ==================================================== */
+    .meeting-view-switch ul { line-height: 30px;}
+    .meeting-view-switch ul li { font-size: 13px;}
+    .meeting-map-block li p { margin: 10px 0px; font-size: 12px;}
+    .meeting-location { font-size: 12px !important;}
+    /* ======= Register Page ==================================================== */
+    .register-intro p { font-size: 13px; line-height: 24px; margin-bottom: 20px;}
+    .regester-list li { padding: 10px; width: calc(100% - 20px); box-sizing: border-box;}
+    .regester-list li img {width: 100%;}
+    /* ======= Register List Page ==================================================== */
+    .register-title a { position: relative;}    
+    .gtd-list li { font-size: 15px;}
+    .gtd-list li p { margin-bottom: 5px;}
+    .gtd-list li p span { font-size: 12px;}
+    .gtd-bio p { margin-top: 10px;}
+    .gtd-desc { padding-top: 15px;}
+    .single-gtd-desc h4 { font-size: 20px; line-height: 25px;}
+    .single-gtd-desc p { font-size: 13px; line-height: 20px; margin-bottom: 20px;}
+    /* ======= Sale List Page ==================================================== */
+    .sale-filter-block h4 { font-size: 14px;}
+    .sale-filter-block ul li a { font-size: 13px; padding: 12px;}
+    .sale-list li { text-align: center;}
+    .sale-desc { padding-top: 15px;}
+    .sale-desc p { font-size: 13px; line-height: 18px;}
+    .sale-desc p span { font-size: 10px;}
+    .sale-price { font-size: 22px; margin-top: 10px; margin-bottom: 0px; text-align: center;}
+    /***** Bottom section CSS Start *******/
+    .foot-widget-block { padding: 20px 0px 40px;}
+    .foot-widget-block h3 { font-size: 16px; margin: 15px 0px 10px;}
+    .foot-widget-block p { font-size: 13px; line-height: 20px; margin-bottom: 20px;}
+    .foot-event-block { padding: 0px 15px 15px}
+    .foot-event-list li { font-size: 13px; line-height: 20px;}
+    .copy-right-bar { padding: 5px 0px; font-size: 10px;}
+    /****** Bottom section CSS End *******/
+}
+/***** Responsive CSS End *******/

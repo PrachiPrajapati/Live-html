@@ -1,0 +1,38 @@
+<div class="panel-heading separator p-t-0">
+    <div class="panel-title">
+        <h4 class ="xe-panel-title pull-left">
+            <xe-translate text-value="Change Production">
+            </xe-translate>
+        </h4>
+    </div>
+</div>
+<div class="panel-body m-t-20">
+    <form class="form-horizontal" role="form" autocomplete="off">
+        <div class="form-group">
+            <div class="col-sm-10 clearfix">
+                <label class="col-sm-2 control-label">
+                    <xe-translate text-value="Production Status">
+                    </xe-translate>
+                </label>
+                <div class="col-sm-10">
+                    <div class="pull-left m-l-10">
+                        <div class="material-switch pull-right" style="margin-top: 15px;">
+                            <input id="someSwitchOptionSuccess" ng-model="productionHubStatus.production_hub" ng-checked="{{productionHubStatus.production_hub}}" name="someSwitchOption001"   type="checkbox"/>
+                            
+                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+                    
+                   
+            </div>
+        </div>
+    </form>
+</div>
+<div class="panel-footer wizard-ftr bg-white panel-footer-mg">
+    <button class="btn btn-sm btn-info pull-left" ng-click="
+    updateGeneralSetting()" ng-disabled="demoStatus">
+        <xe-translate text-value="Save">
+        </xe-translate>
+    </button>
+</div>

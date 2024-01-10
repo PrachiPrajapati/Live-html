@@ -1,0 +1,434 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@font-face {
+    font-family: 'Audrey-Bold';
+    src: url('../fonts/Audrey-Bold.eot');
+    src: url('../fonts/Audrey-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Audrey-Bold.woff2') format('woff2'),
+        url('../fonts/Audrey-Bold.woff') format('woff'),
+        url('../fonts/Audrey-Bold.ttf') format('truetype'),
+        url('../fonts/Audrey-Bold.svg#Audrey-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Audrey';
+    src: url('../fonts/Audrey-Normal.eot');
+    src: url('../fonts/Audrey-Normal.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Audrey-Normal.woff2') format('woff2'),
+        url('../fonts/Audrey-Normal.woff') format('woff'),
+        url('../fonts/Audrey-Normal.ttf') format('truetype'),
+        url('../fonts/Audrey-Normal.svg#Audrey-Normal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'League-Spartan-Bold';
+    src: url('../fonts/LeagueSpartan-Bold.eot');
+    src: url('../fonts/LeagueSpartan-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LeagueSpartan-Bold.woff2') format('woff2'),
+        url('../fonts/LeagueSpartan-Bold.woff') format('woff'),
+        url('../fonts/LeagueSpartan-Bold.ttf') format('truetype'),
+        url('../fonts/LeagueSpartan-Bold.svg#LeagueSpartan-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Audrey-Medium';
+    src: url('../fonts/Audrey-Medium.eot');
+    src: url('../fonts/Audrey-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Audrey-Medium.woff2') format('woff2'),
+        url('../fonts/Audrey-Medium.woff') format('woff'),
+        url('../fonts/Audrey-Medium.ttf') format('truetype'),
+        url('../fonts/Audrey-Medium.svg#Audrey-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+:root{
+	--primary-color: #A5803E;
+	--secondary-color: #0f223f;
+	--gold-color: #B68A3D;
+}
+*							{ margin: 0px; padding: 0px;}
+body						{ font-family: 'Montserrat', sans-serif; font-size: 17.5px; line-height: 30px; color: #16171b; letter-spacing: 0.4px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+.clear						{ clear:both;}
+img							{ border: 0px; max-width: 100%;}
+ul,ol						{ list-style: none;}
+a							{ text-decoration: none; outline: none; display: inline-block; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+a:hover,
+a:focus, a:active,a:visited	{ outline: none; text-decoration: none;}
+h1,h2,h3,h4,h5,h6 			{ margin: 0 }
+h1							{ margin: 0 0 40px 0; font-size: 54px; line-height: 62px; font-family: 'Audrey-Medium'; text-transform: uppercase;}
+h1 img                      { margin:0 25px; max-width: 75px;}
+h2							{ font-size: 44px; line-height: 50px; font-family: 'Audrey-Medium'; color: var(--primary-color); text-transform: uppercase; }
+h3							{ font-size: 36px; line-height: 46px; font-family: 'Audrey-Bold'; text-transform: uppercase; color: var(--gold-color);}
+h4							{ font-size: 28px; line-height: 36px; font-family: 'Audrey-Bold'; text-transform: uppercase; color: var(--primary-color); }
+h5							{ font-size: 18px; line-height: 28px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+h6 							{ margin: 0 0 30px 0; font-size: 14px; line-height: normal; font-weight: 700; letter-spacing: 16px; text-transform: uppercase;}
+p							{ margin-bottom: 25px; }
+.light-bg                   { background: #f3f3f3;}
+button                      { transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+/* Button Style */
+.theme-btn 					{ padding: 16px 26px 10px;background: transparent; font-size: 16px; line-height: 20px; color: var(--primary-color); font-family: 'Audrey-Medium'; font-weight: 700; border: 2px solid var(--primary-color); border-radius: 8px; text-transform: uppercase;}
+.theme-btn:hover,
+.theme-btn:focus 			{ background-color: var(--primary-color); color: #fff; }
+
+/* Title Style */
+.line-title				        { margin-bottom: 32px; padding-bottom: 20px; position: relative; }
+.line-title:before		        { content: ""; width: 72px; height: 3px; background-color: var(--primary-color); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); -moz-transform: translateX(-50%); -webkit-transform: translateX(-50%); }
+.line-title.small-line::before  { width: 30px; height: 6px;}
+.line-title.gold-color::before  { background: #daa974; }
+.line-title.left-line:before    { left: 0; transform: translate(0); -webkit-transform: translate(0);}
+.white-color                    { color: #fff;}
+.gold-color                     { color: var(--gold-color);}
+
+/******* Common Element CSS End *********/
+
+/******* Header Section CSS Start *******/
+.navbar 					{ padding: 46px 0; transition: all linear 0.5s; -moz-transition: all linear 0.5s; -webkit-transition: all linear 0.5s; }
+.navbar.navbar-color        { padding: 20px 0; background-color:rgba(10,8,4,0.7); }
+.navbar.navbar-shadow 		{ padding: 20px 0; background-color:rgba(10,8,4,0.7); }
+.navbar-expand-md .navbar-nav   { width: 90%; }
+.navbar-expand-md .logo-item { margin-left: auto; margin-right: auto; }
+.navbar-expand-md .navbar-nav .nav-link { margin: 0 20px; padding: 0; font-size: 15px; line-height: normal; font-weight: 700; letter-spacing: 1px; color: #fff; text-transform: uppercase; }
+.dropdown-menu 				{ border: none; border-radius: 0; font-size: 16px;}
+.dropdown-item 				{ color: var(--primary-color); }
+.navbar-expand-md .navbar-nav .active .nav-link, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item.active,
+.navbar-expand-md .navbar-nav .nav-link:hover,
+.navbar-expand-md .navbar-nav .nav-link:focus { color: var(--primary-color); background-color: transparent; }
+.dropdown-toggle::after     { margin-left: 0px; content: "\f103"; font-size: 13px; font-family: 'Font Awesome 5 Free'; vertical-align: unset; border: none;}
+.logo 						{ width: 160px; }
+.navbar.navbar-color .logo  { width: 100px; }
+/******* Header Section CSS End *********/
+
+/******* Banner section CSS Start *******/
+.banner 					{ background: no-repeat center center / cover; position: relative; z-index: 1; color: #fff;}
+.banner:before				{ content: ""; width: 100%; height: 100%; background: rgba(10,8,4,0.8); position: absolute; top: 0; left: 0; z-index: -1;}
+.home-banner 				{ height: 86vh; padding: 200px 0 120px; background-image: url("../images/banner.jpg"); }
+.banner .container 			{ height: 100%; text-align: center; }
+.video-btn 					{ padding: 10px 24px; font-size: 16px; color: var(--primary-color); letter-spacing: 2px; font-weight: 700; border: 2px solid var(--primary-color); text-transform: uppercase;}
+.video-btn i 				{ margin-left: 2px;}
+.video-btn:hover, .video-btn:focus { background: var(--primary-color); color: #fff; }
+/******* Banner section CSS End *********/
+
+/******* Middle section CSS Start ******/
+.common-section             { padding: 60px 0;}
+/******* Home *******/
+/* Booking Section */
+.make-booking               { padding: 42px 0px; background: url(../images/theme-pattern.jpg) left top / cover; }
+.make-booking a             { color: #151515; letter-spacing: 2px;}
+.make-booking a:hover,
+.make-booking a:focus       { color: #fff;}
+/* We are Section */
+.we-are-section .desc-block             { padding: 0 4%;}
+.desc-block a  , .desc-block span       { color:#B68A3D; font-weight: 400; font-size:14px; line-height:20px;  }
+.desc-block a                           { font-weight: 500; font-size:16px; line-height:20px; }
+.desc-block a:hover                     { color:#151515;    }
+.we-are-section .img-block              { padding-right: 12%;}
+.we-are-section .img-block img          { margin-bottom: 20px; border-radius: 16px;}
+.we-are-section .img-block [class*="col-"]:last-child img  { margin-bottom: 0px;}
+/* Our Menu Section */
+.our-menu-section                       { padding: 80px 0; }
+.our-menu-section .menu-item            { margin: 10px -5px; padding-top: 50%; background: no-repeat center center / cover; position: relative; z-index: 1; color: #fff; text-transform: uppercase; cursor: pointer; }
+.our-menu-section .menu-item::before    { content: ""; width: 100%; height: 100%; background: rgba(10,8,4,0.7); position: absolute; top: 0; left: 0; z-index: -1;}
+.our-menu-section .menu-item::after     { content: "";  position: absolute; left: 10px; top: 10px; width: calc(100% - 20px); height: calc(100% - 20px); border: 2px solid #fff; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+.our-menu-section .menu-item:hover::after   { left: 0px; top: 0px; width: calc(100%); height: calc(100%); }
+.our-menu-section .menu-item .item-inner    { padding: 15px; position: absolute; z-index: 1; width: 100%; top: 50%; left: 0; text-align: center; transform: translateY(-50%); -webkit-transform: translateY(-50%); }
+.our-menu-section h2                    { margin-bottom: -5px;}
+.our-menu-section h5                    { letter-spacing: 4px; font-weight: 500;}
+.our-menu-section .menu-item .full-link { position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 3;}
+/* Feature Section */
+.feature-section > :nth-child(even)     { background: #f3f3f3;}
+.feature-section .img-block             { margin: 0px 25px 15px; position: relative; }
+.feature-section .img-block::before     { content: ""; position: absolute; width: 100%; height: 100%; top: 12px; left: 12px; background: #C9AD7B; border-radius: 8px; z-index: 1; }
+.feature-section > :nth-child(even) .img-block::before { left: -12px;}
+.feature-section .img-block img         { width: 100%; border-radius: 8px; position: relative; z-index: 1; }
+.feature-section .desc-block            { padding: 0 25px;}
+.feature-section .desc-block p:last-child { margin: 0;}
+/******** Middle section CSS End *******/ 
+
+/***** Bottom section CSS Start *******/
+/* Follow Us Section */
+
+.social-list li             { margin: 10px 20px 0;  }
+.social-list li a           { width:100px; height:100px; display: block; font-size: 26px; line-height: 26px; color: #fff;  position: relative; border:1px solid #FFFEFE; border-radius: 50%; transition: all 0.45s ease-in-out; -webkit-transition: all 0.45s ease-in-out;}
+.social-list li a:hover     { border-color: var(--primary-color); }
+.social-list li a i         { position: absolute; z-index: 1; width: 100%; top: 50%; left: 0; text-align: center; transform: translateY(-50%); -webkit-transform: translateY(-50%);}
+/* Footer Section */
+footer						{ background: #060f1b; color: #fff; text-transform: uppercase; }
+footer ul                   { margin: 0; }
+ul.footer-nav				{ padding: 54px 0 40px; }
+ul.footer-nav li			{ margin: 0 15px; display: inline-block; vertical-align: middle; }
+ul.footer-nav li a			{ font-size: 16px; letter-spacing: 2px; font-weight: 700;  }
+footer a                    { color: #fff; }
+ul.footer-nav li.active a,footer a:focus,
+footer a:hover	            { color: var(--primary-color); }
+.footer-middle              { padding: 80px 0 40px; border-top: 1px solid #fff; border-bottom: 1px solid #fff; }
+.footer-logo img            { margin-bottom: 30px; max-width: 220px;  }
+.secondary-nav li           { margin-bottom: 8px; font-size: 14px; line-height: 20px; font-weight: 500; }
+.secondary-nav li:last-child { margin: 0;}
+.site-info					{ padding: 32px 0; font-size: 13px; line-height: normal; font-weight: 500; }
+.site-info p                { margin-bottom: 10px;}
+.site-info a                { color: var(--primary-color); }
+.site-info a:hover,
+.site-info a:focus          { color: #fff; }
+/****** Bottom section CSS End *******/
+
+/****** Menu Page CSS Start *******/
+/* Banner */
+.inner-banner                   { padding-top: 96px; height: 500px; }
+.banner.inner-banner::before    { background: rgba(10,8,4,0.7);}
+.inner-banner h1                { margin: 0;}
+.inner-banner.menu-banner       { background-image: url("../images/menu-banner.jpg"); }
+.menu-section .menu-desc        { margin-bottom: 30px; }
+/****** Menu Page CSS End *******/
+
+/****** Contact Page CSS Start *******/
+.inner-banner.contact       { background-image: url("../images/contact-banner.jpg");}
+.contact-sec                { padding: 70px 0 100px;  }
+.contact-sec form           { margin: 0 auto; max-width: 490px; }
+.form-group                 { margin-bottom: 20px; }
+label                       { margin-bottom: 5px; color: var(--primary-color); font-size: 18px; line-height: 22px; letter-spacing: 2px; font-family: 'Audrey-Bold'; text-transform: uppercase;}
+.form-control               { padding: 8px 12px; background: #dddddd; color: var(--secondary-color); border-radius: 0; border: none;}
+.form-control:focus         { color: var(--secondary-color); background: #dddddd; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; }
+textarea                    { resize: none; min-height: 130px;}
+.theme-btn.submit-btn       { margin-top: 24px; text-align: center; }
+.black-box                  { margin: 0 auto; padding: 60px; background-color: #16171B; color: #fff; text-align: center; max-width: 520px; box-shadow: 0px 0px 30.1px 4.9px rgba(1, 1, 1, 0.22); -moz-box-shadow: 0px 0px 30.1px 4.9px rgba(1, 1, 1, 0.22); -webkit-box-shadow: 0px 0px 30.1px 4.9px rgba(1, 1, 1, 0.22);}
+.black-box .line-title:before { width: 20px; height: 4px; bottom: -5px; border-radius: 0; left: calc(50% - 10px); }
+.black-box ul               { margin: 0; }
+.black-box ul.contact-info  { padding-top: 1px; margin-bottom: 40px; }
+.black-box ul li            { margin: 5px 0; font-size: 20px; line-height: normal; }
+.black-box ul.contact-info li { margin: 12px 0; }
+.black-box ul li a          { color: #fff; }
+.black-box ul li a:hover, .black-box ul li a:focus,
+.black-box ul li i          { color: var(--primary-color); }
+.black-box ul li i          { margin-right: 2px; }
+.black-box ul li b          { font-weight: 900; }
+/* Map Section */
+.map-section                { height: 450px; position: relative;}
+.map-section:before         { content: ""; position: absolute; top: 0; left: 0; z-index: 100; width: 100%; height: 100%; box-shadow: inset 0px 4px 20.37px 0.63px rgba(30, 31, 30, 0.4); -moz-box-shadow: inset 0px 4px 20.37px 0.63px rgba(30, 31, 30, 0.4); -webkit-box-shadow: inset 0px 4px 20.37px 0.63px rgba(30, 31, 30, 0.4); }
+/****** Contact Page CSS End *******/
+
+/****** Responsive CSS Start *******/
+@media(min-width: 992px) and (max-width: 1199px){
+    body                    { font-size: 16px; line-height: 26px; }
+    h1					    { margin: 0 0 36px 0; font-size: 44px; line-height: 56px; }
+    h1 img                  { max-width: 88px;}
+    h2					    { font-size: 40px; line-height: 45px; }
+    h3					    { font-size: 32px; line-height: 42px; }
+    h4					    { font-size: 24px; line-height: 32px; }
+    h5					    { font-size: 17px; line-height: 26px; }
+    h6 					    { margin: 0 0 30px 0; font-size: 14px; letter-spacing: 14px; }
+    p					    { margin-bottom: 22px; }
+/* Title Style */
+    .line-title				{ margin-bottom: 28px; padding-bottom: 18px;}
+/* Header */
+    .navbar                 { padding: 40px 0; }
+    .navbar-expand-md .navbar-nav { width: 92%;}
+    .navbar-expand-md .navbar-nav .nav-link { margin: 0 15px; font-size: 14px; }
+    .logo                   { width: 120px; }
+/* Home Page */
+    /* Booking Section */
+    .make-booking               { padding: 36px 0px;}
+    /* Our Menu Section */
+    .our-menu-section           { padding: 70px 0; }
+/* Footer */
+    .follow-us-section { padding: 80px 0;}
+    .social-list li { margin: 10px 18px 0;  }
+    ul.footer-nav           { padding: 44px 0 30px; }
+    ul.footer-nav li a      { font-size: 15px; }
+    .footer-middle          { padding: 70px 0 36px; }
+    .footer-logo img        { max-width: 180px; }
+    .site-info              { padding: 26px 0; }
+
+/* Menu Page */
+    /* Banner */
+    .inner-banner                   { padding-top: 82px; height: 420px; }
+
+/* Contact Page */
+   
+/* Map Section */
+    .map-section            { height: 400px; }
+}
+
+@media (max-width: 991px){
+    .theme-btn 					{ padding: 14px 26px 8px; font-size: 14px; line-height: 18px;}
+    .video-btn { padding: 9px 22px; font-size: 15px;}
+    /* Our Menu Section */
+    .feature-section .img-block             { margin: 0px 0px 15px; }
+    .feature-section .desc-block            { padding: 0 0px;}
+    .menu-section .menu-desc        { margin-bottom: 10px; }
+
+
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+    body                    { font-size: 14px; line-height: 22px; }
+    h1					    { margin: 0 0 28px 0; font-size: 34px; line-height: 42px; }
+    h1 img                  { max-width: 72px;}
+    h2					    { font-size: 30px; line-height: 36px; }
+    h3					    { font-size: 26px; line-height: 36px; }
+    h4					    { font-size: 20px; line-height: 30px; }
+    h5					    { font-size: 16px; line-height: 24px; }
+    h6 					    { margin: 0 0 20px 0; font-size: 13px; letter-spacing: 12px; }
+    p					    { margin-bottom: 16px; }
+/* Title Style */
+    .line-title				{ margin-bottom: 24px; padding-bottom: 16px;}
+    .line-title::before     { width: 56px;}
+/* Header */
+    .navbar                 { padding: 40px 0; }
+    .navbar-expand-md .navbar-nav { width: 100%; }
+    .navbar-expand-md .navbar-nav .nav-link { margin: 0 10px; font-size: 13px; }
+    .navbar.navbar-color .logo { width: 90px; }
+    .logo                   { width: 120px; }
+/******* Banner section CSS Start *******/
+    .home-banner 				{ padding: 160px 0 90px;}
+/******* Middle section CSS Start ******/
+    .common-section             { padding: 50px 0;}
+/* Home Page */
+    /* Booking Section */
+    .make-booking               { padding: 30px 0px;}
+    /* We are Section */
+    .we-are-section .desc-block     { padding: 0 0%;}
+    .we-are-section .img-block img             { margin-bottom: 16px; border-radius: 16px;}
+    .we-are-section .img-block      { padding-right: 0%;}
+    /* Our Menu Section */
+    .our-menu-section           { padding: 54px 0; }
+    .our-menu-section h5        { letter-spacing: 2px;}
+/* Footer */
+    .follow-us-section      { padding: 50px 0;}
+    .social-list li         { margin: 8px 15px 4px;  }
+    .social-list li a           { width:80px; height:80px;}
+    .follow-us-section .shape { width: 200px;}
+    ul.footer-nav           { padding: 36px 0 24px; }
+    ul.footer-nav li        { margin: 0 8px;}
+    ul.footer-nav li a      { font-size: 14px; }
+    .footer-middle          { padding: 50px 0 24px; }
+    .footer-logo img        { margin-bottom: 20px; max-width: 150px; }
+    .site-info              { padding: 22px 0; }
+
+/* Menu Page */
+    /* Banner */
+    .inner-banner           { padding-top: 82px; height: 380px; }
+   
+/* Contact Page */
+    /* contact section */
+    .contact-sec            { padding: 40px 0 60px; }
+    .form-group             { margin-bottom: 16px; }
+    label                   { font-size: 16px; }
+    textarea                { min-height: 110px; }
+    .theme-btn.submit-btn   { margin-top: 20px; min-width: 180px; }
+    .black-box              { padding: 40px 30px; }
+    .black-box ul.contact-info { margin-bottom: 28px; }
+    .black-box ul li        { margin: 4px 0; font-size: 17px; }
+    .black-box ul.contact-info li { margin: 8px 0; }
+    .black-box ul li br     { display: none; }
+    .black-box ul li b      { display: block; }
+    /* Map Section */
+    .map-section            { height: 360px; }
+}
+
+
+@media(max-width: 767px){
+    body                    { font-size: 14px; line-height: 22px; }
+    h1					    { margin: 0 0 28px 0; font-size: 28px; line-height: 38px; }
+    h1 img                  { margin:0; max-width: 45px;}
+    h2					    { font-size: 26px; line-height: 32px; }
+    h3					    { font-size: 24px; line-height: 34px; }
+    h4					    { font-size: 19px; line-height: 28px; }
+    h5					    { font-size: 15px; line-height: 22px; }
+    h6 					    { margin: 0 0 15px 0; font-size: 12px; letter-spacing: 10px; }
+    p					    { margin-bottom: 16px; }
+/* Title Style */
+    .line-title				{ margin-bottom: 24px; padding-bottom: 16px; text-align: center;}
+    .line-title::before     { width: 56px;}
+    .line-title.small-line::before  { height: 5px;}
+    .line-title.left-line:before    { left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%);}
+
+/* Header */
+    .navbar                 { padding: 32px 0; }
+    .navbar.navbar-shadow   { padding: 16px 0; }
+    .navbar-header          { width: 100%; text-align: center; }
+    .navbar-toggler         { padding: 0; border-radius: 0; }
+    .navbar-toggler-icon    { display: block; width: 22px; height: 2px; background-color: #fff; }
+    .navbar-toggler-icon:nth-child(2) { margin: 6px 0; }
+    .navbar-toggler:hover .navbar-toggler-icon { background-color: var(--primary-color); }
+    .logo                   { width: 100px; }
+    .navbar-header .phone   { font-size: 18px; color: #fff; }
+    .navbar-header .phone:hover,
+    .navbar-header .phone:focus { color: var(--primary-color); }
+    .dropdown .dropdown-menu { width: 98%; text-align: center; }
+    .navbar.navbar-color    { padding: 0; background-color: transparent; }
+    .navbar.navbar-color .logo { width: 60px; }
+/******* Middle section CSS Start ******/
+    .common-section             { padding: 40px 0;}
+    .home-banner                { height: auto; padding: 150px 0 60px;}
+    .video-btn                  { padding: 8px 22px; font-size: 14px; }
+/* Home Page */
+    /* Booking Section */
+    .make-booking               { padding: 24px 0px;}
+    /* We are Section */
+    .we-are-section .desc-block     { padding: 0 4%; text-align: center; }
+    .desc-block a                   { margin-bottom: 20px; }
+    .we-are-section .img-block img  { margin: 10px 0 0; padding: 0 8px; border-radius: 8px;}
+    .we-are-section .img-block      { margin: 0px -8px; padding-right: 0%;}
+    /* Our Menu Section */
+    .our-menu-section               { padding: 48px 0 38px; }
+    .our-menu-section .menu-list    { padding: 0px 6px;}
+    .our-menu-section .menu-item    { margin: 7px -7px; padding-top: 100%;}
+    .our-menu-section .menu-item::after { left: 5px; top: 5px; width: calc(100% - 10px); height: calc(100% - 10px); border-width: 1px;}
+    .our-menu-section h2			{ font-size: 24px; line-height: 24px; }
+    .our-menu-section h5            { font-size: 12px; letter-spacing: 2px;}
+     /* Feature Section */
+     .feature-section .common-section { padding-right: 15px; padding-left: 15px; text-align: center; }
+     .feature-section .img-block    { margin: 20px 10px 10px 0;}
+     .feature-section > :nth-child(2n) .row { flex-direction: column-reverse;}
+     .feature-section .img-block::before,
+     .feature-section > :nth-child(2n) .img-block::before { top: 10px; left: 10px; }
+     .feature-section .theme-btn    { margin-bottom: 15px;}
+
+/* Footer */
+    .follow-us-section      { padding: 50px 0;}
+    .social-list li         { margin: 0px 8px 10px; }
+    .social-list li a           { width:60px; height:60px;}
+    .follow-us-section .shape { width: 140px;}
+    footer                  { padding-top: 24px;}
+    .footer-middle          { padding: 30px 0 24px; }
+    .footer-logo img        { margin-bottom: 20px; max-width: 150px; }
+    .site-info              { padding: 22px 0; font-size: 12px; }
+    .secondary-nav li       { font-size: 13px;}
+
+/* Menu Page */
+    /* Banner */
+    .inner-banner           { padding-top: 68px; height: 320px; }
+   
+/* contact section */
+    .contact-sec            { padding: 30px 0 50px; }
+    .contact-sec form       { text-align: center; }
+    .form-group             { margin-bottom: 14px; text-align: left;}
+    label                   { font-size: 15px; }
+    textarea                { min-height: 100px; }
+    .theme-btn.submit-btn   { margin: 15px 0 30px; min-width: 180px; }
+    .black-box              { padding: 28px 24px; }
+    .black-box ul.contact-info { margin-bottom: 24px; }
+    .black-box ul li        { margin: 3px 0; font-size: 16px; }
+    .black-box ul.contact-info li { margin: 6px 0; }
+    .black-box ul li br     { display: none; }
+    .black-box ul li b      { display: block; }
+    /* Map Section */
+    .map-section            { height: 320px; }
+   
+}
+@media(max-width: 374px){
+    .our-menu-section h2					    { font-size: 20px; line-height: 20px; }
+
+}
+/****** Responsive CSS End *******/

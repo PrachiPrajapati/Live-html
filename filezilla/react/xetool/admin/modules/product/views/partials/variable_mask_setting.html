@@ -1,0 +1,88 @@
+<div class="xe-product-setting">
+    <div class="setting-view">
+        <div class="row">
+            <div class="col-md-6 col-padd">
+                <label class="custom-label">
+                    Minimum width
+                </label>
+                <div class="form-group input-group">
+                    <input class="form-control"  ng-model="tempMaskData[selectedThumbIndex].custom_min_width_mask" placeholder="Width" type="text" ng-keyup="updateMinMask('w')"/>
+                    <span class="input-group-addon" ng-bind="productUnit">
+                        <!-- inch -->
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-6 col-padd">
+                <label class="custom-label">
+                    Minimum height
+                </label>
+                <div class="form-group input-group">
+                    <input class="form-control" ng-model="tempMaskData[selectedThumbIndex].custom_min_height_mask" placeholder="Height" type="text" ng-keyup="updateMinMask('h')"/>
+                    <span class="input-group-addon" ng-bind="productUnit">
+                        <!-- inch -->
+                    </span>                
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-padd">
+                <label class="custom-label">
+                    Maximum width
+                </label>
+                <div class="form-group input-group">
+                    <input class="form-control" ng-model="tempMaskData[selectedThumbIndex].custom_max_width_mask" placeholder="Width" type="text" ng-keyup="updateMaxMask('w')"/>
+                    <span class="input-group-addon" ng-bind="productUnit">
+                        <!-- inch -->
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-6 col-padd">
+                <label class="custom-label">
+                    Maximum height
+                </label>
+                <div class="form-group input-group">
+                    <input class="form-control" ng-model="tempMaskData[selectedThumbIndex].custom_max_height_mask" placeholder="Height" type="text" ng-keyup="updateMaxMask('h')"/>
+                    <span class="input-group-addon" ng-bind="productUnit">
+                        <!-- inch -->
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-padd">
+                <label class="custom-label">
+                    <xe-translate text-value="Price per square unit">
+                    </xe-translate>
+                    <!-- <i class="fa fa-info-circle ng-scope info-module-icon" tooltip="" tooltip-placement="left" ng-click="showProductFaqDetails(7)"></i> -->
+                </label>
+                <div class="form-group input-group">
+                    <input class="form-control" ng-model="tempMaskData[selectedThumbIndex].custom_boundary_price"  placeholder="price" type="text"/>
+                    <span class="input-group-addon">
+                    {{ appCurrency }}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-padd">
+                <div class="checkbox check-info">
+                    <input id="checkbox5" type="checkbox" value="2" ng-model="isSidesAdded[selectedThumbIndex]" ng-checked="isSidesAdded[selectedThumbIndex] == '1'" ng-change="enableAddSides(isSidesAdded[selectedThumbIndex],selectedThumbIndex)">
+                    <label class="bold" for="checkbox5">
+                        <!-- Allow users to add sides -->
+                        <xe-translate text-value="Add Sides Description">
+                        </xe-translate>
+                    </label>     
+                    <i class="fa fa-info-circle" tooltip= "{{ addSideMessage }}" tooltip-placement="right"></i>               
+                </div>
+            </div>
+            <div class="form-group m-t-10 m-l-25 m-b-0" ng-show = "isSidesAdded[selectedThumbIndex]">
+                <label class="custom-label">
+                    <xe-translate text-value="Add Sides"></xe-translate>
+                </label>
+                <input ng-model="sidesAllowed[selectedThumbIndex]" type="text" class="form-control" price-Only="priceOnly" name="pName" ng-keyup="sideValidate(sidesAllowed[selectedThumbIndex])"/>
+            </div>
+        </div>
+        <ng-include src="'modules/product/doc/ps07.html'">
+        </ng-include>
+    </div>
+</div>

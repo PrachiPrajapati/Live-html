@@ -1,0 +1,65 @@
+<div class="Form_Details">
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="pageTitle">
+                <xe-translate text-value="Add Task"></xe-translate>
+            </label>
+        </div>
+    </div>
+    <div class="panel panel-default m-t-20">
+        <div class="panel-body">
+            <div class="row">
+                
+                <div class="col-sm-6">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Description">
+                            </xe-translate>
+                        </label>
+                        <textarea class="form-control" ng-model="taskAdd.text_data" placeholder="Task description" required></textarea>
+                    </div>
+                </div>
+                
+                <div class="col-sm-3">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Assigned To">
+                            </xe-translate>
+                        </label> 
+
+                        <select class="form-control select" ng-model="taskAdd.assign_to" ng-options="item.id as item.name for item in userDataList">
+                            <option value="" ng-disabled="true">Assigned To </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group form-group-default required">
+                        <label class="control-label">
+                            <xe-translate text-value="Due Date">
+                            </xe-translate>
+                        </label>
+                        <input ui-date="dateOptions" class="form-control" id="add_task" ui-date-format
+                            ng-model="textDataClicked.date" onkeydown="return false">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default" style="margin-bottom:0px;background:transparent;border:0;">
+        <div class="panel-body" style="padding:15px 0;">
+            <div class="row">
+                <div class="col-sm-12 text-right">
+                    <button type="reset" class="btn btn-danger btn-sm" ng-click="cancelEditTask()">Cancel</button>
+                    <button class="btn btn-success btn-sm"
+                        ng-click="submitFormData(taskAdd.text_data, taskAdd.assign_to, textDataClicked.date)">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="preloader-trans" ng-show="editCustomerPreloader">
+        <div class="page-loader">
+            <img class=" demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+            <xe-translate text-value="Please wait"></xe-translate>...
+        </div>
+    </div>
+</div>

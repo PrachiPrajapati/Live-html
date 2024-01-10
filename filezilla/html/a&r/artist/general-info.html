@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title> PROFILE MANAGEMENT | A&amp;R Talent Finders </title>
+    <!--Favicon Included-->
+    <link rel="shortcut icon" href="../images/favicon.png" /> 
+    <!--Main Style Included-->
+    <!--Extra Style Included-->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../css/jcf.css">
+    <link href="../css/style.css" type="text/css" rel="stylesheet"/>
+
+    <!--Main Js Included-->
+
+    <script src="../js/lib/jquery.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script type="text/javascript" src="../js/jcf.js"></script>
+     <script type="text/javascript" src="../js/jcf.select.js"></script>
+     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+    
+    <script type="text/javascript">
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+          var msViewportStyle = document.createElement('style');
+          msViewportStyle.appendChild(
+            document.createTextNode(
+              '@-ms-viewport{width:auto!important}'
+            )
+          );
+          document.querySelector('head').appendChild(msViewportStyle);
+        }
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            jcf.replaceAll();
+        });
+    </script>
+</head>
+<body>
+    <!-- Header Start -->
+        
+    <!-- Header End -->
+    
+    <!-- Main Start -->
+    <div class="common-banner">
+        <div class="common-banner-content">
+            <div class="common-banner-title">
+                <p> ARTIST DASHBOARD</p>
+            </div>
+        </div>
+    </div>
+    <div class="artist-dashboard-navbar common-navbar">
+        <div class="container">
+            <ul class="artist-navbar">
+                <li><a href="#">PROFILE MANAGEMENT</a></li>
+                <li><a href="#">NOTICEBOARD</a></li>
+                <li><a href="#">MY SUBSCRIPTION</a></li>
+                <li><a href="#">ACCOUNT SETTINGS</a></li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+        <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}' class="artist-mobile-navbar">
+            <option><a href="profile-dashboard.html" class="active-navbar">PROFILE MANAGEMENT</a></option>
+            <option><a href="noticeboard.html">NOTICEBOARD</a></option>
+            <option><a href="my-subscription.html">MY SUBSCRIPTION</a></option>
+            <option><a href="account-settings.html">ACCOUNT SETTINGS</a></option>
+        </select>
+    </div>
+    <div class="comman-padding artist-dashboard">
+        <div class="container">
+            <div class="artist-dashboard-header">
+                <div class="artist-dashboard-title">
+                    <h1 class="heading-text">MY PROFILE</h1>
+                    <p class="sub-title color-red">MANAGE YOUR ARTIST PROFILE</p>
+                </div>
+                <div class="my-profile-btn-section">
+                    <a href="profile-dashboard.html" class="artist-back-link"><i class="fa fa-angle-left" aria-hidden="true"></i>GO BACK</a>
+                    <a class="my-profile-btn" href="artist-profile.html">MY PUBLIC PROFILE</a>
+                </div>
+            </div>
+            <div class="general-information-section">
+                <h2 class="general-info-title">GENERAL INFO</h2>
+                <p class="general-info-subtitle color-black">Enter the relevant details to create an artist profile that shows A&R Execs what you are all about!</p>
+                <div class="dotted-seprator"></div>
+                <div class="all-general-info-section">
+                    <div class="general-info-grp">
+                        <div class="general-info">
+                            <label>FULL NAME</label>
+                            <input type="text" name="name" value="James Harrison">
+                        </div>
+                        <div class="general-info input-error">
+                            <label>EMAIL ADDRESS</label>
+                            <input type="email" name="email" value="Field missing or incorrect">
+                        </div>
+                        <div class="general-info">
+                            <label>DATE OF BIRTH</label>
+                            <div class="day-selct dob-select">
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}' class="general-info-select" plceholder="select gender">
+                                    <option>Day</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                    <option>06</option>
+                                    <option>07</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+
+                                </select>
+                            </div>
+                            <div class="month-selct dob-select">
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}' class="general-info-select" plceholder="select gender">
+                                    <option>Month</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                    <option>06</option>
+                                    <option>07</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                            </div>
+                            <div class="year-selct dob-select">
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}' class="general-info-select" plceholder="select gender">
+                                    <option>Year</option>
+                                    <option>2005</option>
+                                    <option>2004</option>
+                                    <option>2003</option>
+                                    <option>2002</option>
+                                    <option>2001</option>
+                                    <option>2000</option>
+                                    <option>1999</option>
+                                    <option>1998</option>
+                                    <option>1997</option>
+                                    <option>1996</option>
+                                    <option>1995</option>
+                                    <option>1994</option>
+                                    <option>1993</option>
+                                    <option>1992</option>
+                                    <option>1991</option>
+                                    <option>1990</option>
+                                    <option>1989</option>
+                                    <option>1988</option>
+                                    <option>1987</option>
+                                    <option>1986</option>
+                                    <option>1985</option>
+                                    <option>1984</option>
+                                    <option>1983</option>
+                                    <option>1982</option>
+                                    <option>1981</option>
+                                    <option>1980</option>
+                                    <option>1979</option>
+                                    <option>1978</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="general-info-grp">
+                        <div class="general-info">
+                            <label>CONTACT NUMBER</label>
+                            <input type="text" name="name">
+                        </div>
+                        <div class="general-info">
+                            <label>GENDER</label>
+                            <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}' class="general-info-select" plceholder="select gender">
+                                <option>Select from the list</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+                        <div class="general-info heght-input-section">
+                            <label>HEIGHT</label>
+                            <div class="height-feet">
+                                <input type="text" name="height-feet">
+                            </div>
+                            <div class="height-inch">
+                                <input type="text" name="height-inch">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="general-info-grp">
+                        <div class="general-info">
+                            <label>NATIONALITY</label>
+                            <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}' class="general-info-select" plceholder="select gender">
+                                <option>Select from the list</option>
+                                <option>India</option>
+                                <option>India</option>
+                                <option>India</option>
+                                <option>India</option>
+                                <option>India</option>
+                                <option>India</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="general-info-grp">
+                        <div class="general-info info-textarea">
+                            <label>PROFESSIONAL EXPERIENCE</label>
+                            <textarea placeholder="Max 500 Characters"></textarea>
+                        </div>
+                    </div>
+                    <div class="general-info-grp">
+                        <div class="general-info music-catogories">
+                            <label>CONTACT NUMBER</label>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC MUSIC</label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC MUSIC</label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC </label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC </label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC MUSIC</label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC </label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC MUSIC</label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC MUSIC</label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC </label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC </label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC MUSIC</label>
+                            </div><div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC MUSIC</label>
+                            </div>
+                            <div class="music-catogory">
+                                <input type="checkbox" name="name">
+                                <label>ACOUSTIC MUSIC</label>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="general-info-grp">
+                        <div class="general-info info-textarea">
+                            <label>PROFESSIONAL EXPERIENCE</label>
+                            <textarea placeholder="Max 500 Characters"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dotted-seprator"></div>
+            <div class="banner-btn-grp general-info-btns">
+                <a href="#" class="secondary-btn common-btn">SAVE PROGRESS</a>
+                <a href="#" class="primary-btn common-btn">SAVE & PUBLISH</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    
+    
+    
+    
+
+    <!-- Main End -->
+
+    <!-- Footer Start -->
+        
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5">
+                    <ul class="footer-links">
+                        <li><a href="../terms-and-condition.html">TERMS & CONDITIONS</a></li>
+                        <li><a href="../privacy-policy.html">PRIVACY POLICY</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-2 footer-mobile-logo">
+                    <div class="footer-logo">
+                        <a href="../index.html"><img src="../images/logo.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <p class="copyright-text">&copy; 2019 BY A&R TALENT FINDERS.  DESIGN BY <a href="#">JC WEB </a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+ <nav class="primary-navbar top-navbar logged-in-navbar"> 
+        <div class="container">
+            <div class="logo-img">
+                <a href="../index.html" class="logo"><img src="../images/logo.png" alt="logo"></a>
+            </div>
+            <div class="navbar-right ml-auto">
+                <p class="color-white">Hi James</p>
+                <div class="dropdown">
+                  <button type="button" class="dropdown-toggle user-dropdown" data-toggle="dropdown">
+                    <img src="../images/login-icon.svg">
+                    <span class="user-dropdown-angle"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <ul class="user-dropdown-content">
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="sidebar-btn">
+                    <img src="../images/menu-icon.svg">
+                </div>
+            </div>
+            <div class="clearfix">
+            </div>
+        </div>
+    </nav>
+    <div class="menu-backdrop"></div>
+    <div class="sidebar-menu-section">
+        <div class="close-menu-icon">
+            <a href="#" class="menu-close"><img src="../images/cancle-icon.svg"></a>
+        </div>
+        <ul class="menu-list">
+            <li><a href="../index.html">Home</a></li></li>
+            <li><a href="../about-us.html">About</a></li>
+            <li><a href="../top-10.html">Top 10</a></li>
+            <li><a href="../labels.html">Labels</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../signup.html">Signup</a></li>
+        </ul>
+        <div class="menu-logo">
+            <a href="../index.html"><img src="../images/logo.png" align="logo"></a>
+        </div>
+    </div>
+    
+    <!-- Footer End -->
+    <script type="text/javascript">
+        $('.sidebar-btn ,.menu-close').on('click', function () {
+            $('body').toggleClass('main-menu-open')
+        }); 
+        $('.menu-backdrop').on('click', function () {
+            $('body').removeClass('main-menu-open');
+        });
+    </script>
+    <script type="text/javascript">
+      $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+
+         //>=, not <=
+        if (scroll >= 100) {
+            //clearHeader, not clearheader - caps H
+            $(".top-navbar").addClass("stickey-top-navbar");
+        }
+        else if (scroll <= 100) {
+            //clearHeader, not clearheader - caps H
+            $(".top-navbar").removeClass("stickey-top-navbar");
+        }
+    });
+  </script>
+</body>
+</html>

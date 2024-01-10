@@ -1,0 +1,139 @@
+<div class="modal fade stick-up" id="quoteproductshipmentmodal" pg-portlet tabindex="-1" role="dialog"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left" id="quoteItemShipingMsg">
+                <button type="button" class="close custom-modal-close" data-dismiss="modal" aria-hidden="true"
+                    style="margin-right:6px;">
+                    <i class="pg-close fs-14"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="quoteproductshipmentmodal">
+                <div class="dxTable table-responsive m-b-20" ng-hide="noData">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th ng-repeat="column in columnList" ng-show="true">
+                                    <xe-translate text-value="{{column}}">
+                                    </xe-translate>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- ngRepeat: User in pUserList track by $index -->
+                            <tr ng-repeat="quote_price in productShipmentproductdetails track by $index">
+                                <td><img class="img-responsive" ng-src="{{quote_price.image[0].original }}" style="max-width:70px;" /></td>
+                                <td>{{quote_price.product_name}}</td>
+                                <td>{{quote_price.size}}</td>
+                                <td>{{quote_price.color}}</td>
+                                <td>{{quote_price.quantity}}</td>
+                            </tr>
+                            <!-- end ngRepeat: User in pUserList track by $index -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-md-4"><xe-translate text-value="Ship Date">
+                    </xe-translate>
+                </th> <span class="star-one" style="color: red;">*</span></div>
+                    <div class="col-md-8"><input ui-date="dateOptions" class="form-control" ui-date-format
+                                ng-model="productShipment.date" placeholder="Enter Expected Date Of Delivery"
+                                onkeydown="return false"></div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-md-4"> <xe-translate text-value="Shipping Method">
+                    </xe-translate> <span class="star-one" style="color: red;">*</span></div>
+                    <div class="col-md-8">
+                        <div class="customer">
+                            <div id="quote-delivery-method" class="select-wrap" ng-click="QuoteProductShipMethod()">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="select-one"> {{ productShipment.career }} </span>
+                                    <span class="arrow-one"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer">
+                            <div id="quote-delivery-method-drop" class="dropdown-wrap">
+                                <ul>
+                                    <li ng-click="onProductDeliveryTypeSelected('Delivery')">Delivery</li>
+                                    <li ng-click="onProductDeliveryTypeSelected('Pickup')">Pickup</li>
+                                    <li ng-click="onProductDeliveryTypeSelected('Shipping')">Shipping</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-md-4"> <xe-translate text-value="Dimensions in inch">
+                    </xe-translate> <span class="star-one" style="color: red;">*</span>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row" style="margin:0;">
+                            <div class="col-sm-4" style="padding:0;">
+                                <div pg-form-group
+                                    class="form-group form-group-default input-group nested-form-group">
+                                    <input type="text" ng-model="productShipment.dimension_l"
+                                        class="form-control" price-only="price-only" />
+                                    <span class="input-group-addon" style="height: 10px">
+                                        L
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4" style="padding:0;">
+                                <div pg-form-group
+                                    class="form-group form-group-default input-group nested-form-group">
+                                    <input type="text" ng-model="productShipment.dimension_b"
+                                        class="form-control" price-only="price-only" />
+                                    <span class="input-group-addon" style="height: 10px">
+                                        B
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4" style="padding:0;">
+                                <div pg-form-group
+                                    class="form-group form-group-default input-group nested-form-group">
+                                    <input type="text" ng-model="productShipment.dimension_h"
+                                        class="form-control" price-only="price-only" />
+                                    <span class="input-group-addon" style="height: 10px">
+                                        H
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-md-4"> <xe-translate text-value="Weights">
+                    </xe-translate><span class="star-one" style="color: red;">*</span></div>
+                    <div class="col-md-8">
+                        <div pg-form-group class="form-group form-group-default input-group nested-form-group">
+                            <input type="text" ng-model="productShipment.weight" class="form-control"
+                                price-only="price-only" />
+                            <span class="input-group-addon" style="height: 10px">
+                                Kg
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-sm-12 text-right">
+                        <button class="btn btn-danger btn-cons" ng-click="cancelProductShipment()">
+                            <xe-translate text-value="Cancel">
+                            </xe-translate>
+                        </button>
+                        <button class="btn btn-success btn-cons" ng-click="saveProductShipment()">
+                            <xe-translate text-value="Save and download">
+                            </xe-translate>
+                        </button>
+                    </div>
+                </div>
+                <div class="preloader-trans" ng-show="productShipPreLoader" style="padding-left: 0px; z-index: 100000">
+                    <div class="page-loader">
+                        <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                        <xe-translate text-value="Please wait"></xe-translate>...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

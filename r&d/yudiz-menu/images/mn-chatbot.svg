@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Chatbot</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Chatbot" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle-17" x="0" y="0" width="44" height="44"></rect>
+            <g id="Group" transform="translate(3.666667, 6.966667)">
+                <g id="Group-34" transform="translate(2.744425, 0.000000)" stroke="#FFFFFF">
+                    <circle id="Oval-22" stroke-width="0.834167501" cx="15.5517439" cy="15.2468077" r="15.2468077"></circle>
+                    <line x1="14.0270631" y1="25.1572327" x2="17.0764246" y2="25.1572327" id="Line-5" stroke-width="1.52468077" stroke-linecap="square"></line>
+                </g>
+                <path d="M12.5343667,21.3455306 C14.3044633,18.8620139 16.2029044,17.5338287 18.2961693,17.5338287 C20.3894341,17.5338287 22.2878752,18.8620139 24.0579718,21.3455306 L35.8299982,21.3455306 C36.251027,21.3455306 36.5923385,21.0042192 36.5923385,20.5831903 L36.5923385,9.91042485 C36.5923385,9.48939597 36.251027,9.14808451 35.8299982,9.14808451 L0.762340377,9.14808451 C0.341311415,9.14808451 7.95931233e-15,9.48939597 7.95931233e-15,9.91042485 L7.95931233e-15,20.5831903 C7.95931233e-15,21.0042192 0.341311415,21.3455306 0.762340377,21.3455306 L12.5343667,21.3455306 Z" id="Rectangle-68" stroke="#47EBC6" stroke-width="3.04936154" fill="#26313D" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

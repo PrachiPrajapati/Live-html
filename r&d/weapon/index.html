@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>::- AR Model Demo -::</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+    <script src="js/lib/jquery.js" type="text/javascript"></script>
+    <script src="js/modernizr.js" type="text/javascript"></script>
+    <script src="js/html5shiv.min.js" type="text/javascript"></script>
+    <script src="js/respond.min.js" type="text/javascript"></script>
+
+    <!--******************* 3D Modal Required JS *********************-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>  
+    <script src="js/classie.js" type="text/javascript"></script>
+    <script src="js/OrbitControls.js"></script>
+	<script src="js/GLTFLoader.js"></script>
+
+    <!--******************* Style WebPage *********************-->
+    <style>
+        html                            { height: 100%;}
+        body                            { background: -moz-linear-gradient(top, #b3dced 0%, #29b8e5 50%, #bce0ee 100%); /* FF3.6-15 */
+                                            background: -webkit-linear-gradient(top, #b3dced 0%,#29b8e5 50%,#bce0ee 100%); /* Chrome10-25,Safari5.1-6 */
+                                            background: linear-gradient(to bottom, #b3dced 0%,#29b8e5 50%,#bce0ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
+        .ar-modal-blk                   { margin: 35px; text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%);}
+        .modal-display canvas           { margin-top: 35px;  background: #ffffff; height: 100%; width: 100%; position: relative;}
+        .ar-modal-blk h1                { font-size: 50px; line-height: 55px;}
+        .ar-badge,
+        .android-ar-badge               { display: none;}
+        @media ( max-width: 767px) 
+        { 
+            .ar-modal-blk   { position: relative; position: absolute; top: 0; left: 0; transform: translate(0,0); -webkit-transform: translate(0, 0); -moz-transform: translate(0, 0);}
+            .modal-display canvas { height: 350px !important; width: 350px !important;}
+        }
+    </style>
+</head>
+<body>
+
+    <!--******************* AR Button Section Design ******************-->
+    <main>
+        <div class="ar-modal-blk">
+            <h1>Web AR Model Demo</h1>
+            <a class="ar-badge" href="https://trompadu.com/wp-content/themes/trompadu-child/gltf/Lion.usdz" rel="ar"><img src="uploads/ar-logo.svg" /></a><br/>
+            <a id="android-ar-badge" class="android-ar-badge" href="intent://arvr.google.com/scene-viewer/1.0?file=https://trompadu.com/wp-content/themes/trompadu-child/gltf/Lion.gltf#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;" rel="ar"><img src="uploads/ar-logo.svg"></a>
+            <div id="scene3d" class="modal-display"><span id="loadingBar"></span></div>
+        </div>
+        <button onclick="changeTex()">Click here</button>
+    </main>
+
+    <!--******************* Web Page Load Modal Script ******************-->
+    <script>
+        var camera, scene, renderer, pivot;
+        var geometry, material, mesh, clrMap2, clrMap, clrChange = false;
+        var CANVAS_WIDTH = 400;
+        var CANVAS_HEIGHT = 400;
+        let arr = [
+            'uploads/26138.jpg',
+            'uploads/t-2.jpg'
+        ]
+        let index = 0;
+        let texArray = [];
+        var manager = new THREE.LoadingManager();
+        const texLoader = new THREE.TextureLoader(manager);
+
+        init();
+        animate();
+
+        function init() {
+        document.getElementById('loadingBar').textContent = "Loading: 0%";
+        camera = new THREE.PerspectiveCamera( 70, CANVAS_WIDTH / CANVAS_HEIGHT, 0.01, 150 );
+            camera.position.set(-95, 30, 10);
+        
+            scene = new THREE.Scene();
+
+            //loading manager
+            manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+
+                console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+
+            };
+
+            manager.onLoad = function ( ) {
+
+                console.log( 'Loading complete!');
+
+            };
+
+            manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+
+                console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+                var t = (itemsLoaded / itemsTotal * 100);
+                document.getElementById('loadingBar').textContent = "Loading: " + t.toPrecision(2) + "%";
+
+                if(t == 100)
+                document.getElementById('loadingBar').remove();
+
+            };
+
+            manager.onError = function ( url ) {
+
+                console.log( 'There was an error loading ' + url );
+
+            };
+        
+            const loader2 = new THREE.CubeTextureLoader(manager);
+        
+        const texture2 = loader2.load([
+            'uploads/px.png',
+            'uploads/nx.png',
+            'uploads/py.png',
+            'uploads/ny.png',
+            'uploads/pz.png',
+            'uploads/nz.png',
+        ]);
+
+            // //Load background texture
+            // var loader3 = new THREE.TextureLoader();
+            // loader3.load('https://tim-deussen.de/wp-content/uploads/2019/09/AMC-Pot__new_Trigger.jpg' , function(texture)
+            // 			{
+            // 			scene.background = texture;  
+            // 			});
+
+        var light = new THREE.AmbientLight(0xffffff,1); // soft white light
+        scene.add( light );
+        
+        // var light1 = new THREE.PointLight( 0xffffff,1.5);
+        // light1.position.set( 0, 70, -1 );
+        // scene.add( light1 );
+
+        //leather textures
+        
+        clrMap = texLoader.load(arr[index]);
+        // var mtlMap = texLoader.load( 'uploads/Lion_metallic.png' );
+        // var rghMap = texLoader.load( 'uploads/Lion_Roughness.png' );
+        // clrMap2 = texLoader.load( 'uploads/Gun_BaseColor2.jpg' );
+        // clrMap2.flipY = false;
+        arr.forEach(function (tex, ind){
+            texArray[ind] = texLoader.load(tex);
+        });
+        
+            // Instantiate a loader
+            var loader = new THREE.GLTFLoader(manager);
+
+            // Load a glTF resource
+            loader.load(
+            // resource URL
+            'uploads/m4gun.glb',
+            // called when the resource is loaded
+            function ( gltf ) {
+
+                
+                var model = gltf.scene;
+
+                console.log(gltf.scene);
+
+                geometry = gltf.scene;
+                
+                clrMap.flipY = false;
+                
+                model.traverse ( function( o ) {
+                if ( o.isMesh ) {
+                // note: for a multi-material mesh, `o.material` may be an array,
+                // in which case you'd need to set `.map` on each value.
+                o.material = new THREE.MeshStandardMaterial();
+                // o.material.roughnessMap = rghMap;
+                // o.material.metalnessMap = mtlMap;
+                // o.material.envMap = texture2;
+                o.material.map = clrMap;
+                // o.material.emissiveMap=clrMap;
+                // o.material.emissiveIntensity=10;
+                o.material.side = THREE.DoubleSide;
+
+                // o.material.metalness = 0;
+                // o.material.roughness = 0;
+                }
+                });
+                        
+                model.scale.set(1.3,1.3,1.3);
+                model.position.set(-25, 0, -10);
+                // model.rotation.set(-0.60, -Math.PI/2, -Math.PI / 12);
+                scene.add( geometry );
+
+                // gltf.animations; // Array<THREE.AnimationClip>
+                // gltf.scene; // THREE.Scene
+                // gltf.scenes; // Array<THREE.Scene>
+                // gltf.cameras; // Array<THREE.Camera>
+                // gltf.asset; // Object
+
+            },
+            // called while loading is progressing
+            function ( xhr ) {
+                let t = ( xhr.loaded / xhr.total * 100 );
+                console.log( t + '% object loaded' );
+                // document.getElementById('loadingBar').textContent = "Loading: " + t.toPrecision(2) + "%";
+
+                // if(t == 100)
+                // document.getElementById('loadingBar').remove();
+
+            },
+            // called when loading has errors
+            function ( error ) {
+
+                console.log( 'An error happened' );
+
+            }
+            );
+        
+            renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
+            console.log(CANVAS_WIDTH);
+            renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
+            renderer.setClearColor( 0xffffff, 1 );
+            renderer.gammaOutput = true;
+            renderer.gammaFactor = 0;
+            // renderer.toneMapping = THREE.ReinhardToneMapping;
+            // renderer.toneMappingExposure = 2;
+            
+            var scene3d = document.getElementById("scene3d");
+
+            scene3d.appendChild(renderer.domElement);
+            renderer.render(scene, camera);
+        
+            var controls = new THREE.OrbitControls( camera, renderer.domElement );
+            controls.update(); 
+            // controls.enabled=false
+        }
+        function animate() {
+            requestAnimationFrame( animate );
+            renderer.render( scene, camera );
+        }
+
+        function changeTex() {
+            let newMap;
+            index = (index + 1) % arr.length;
+            newMap = texArray[index];
+            newMap.flipY = false;
+            geometry.traverse(function(node) {                        
+                if (node instanceof THREE.Mesh) {
+                    node.material.map = newMap;
+                }
+            });
+        }
+    </script>   
+</body>
+</html>

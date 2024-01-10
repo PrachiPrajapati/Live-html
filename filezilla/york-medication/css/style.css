@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+:root{
+	--primary-color: #15db95;
+	--secondary-color: #000e38;
+}
+*							{ margin: 0px; padding: 0px; outline: none;}
+body						{ font-family: 'Poppins', sans-serif; font-size: 15.5px; line-height: 21px; color: #262626; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+.clear						{ clear:both; }
+img							{ border: 0px; max-width: 100%;}
+ul,ol						{ list-style: none;}
+a							{ text-decoration: none; outline: none; color: inherit; display: inline-block; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+a:hover, a:focus            { color: var(--primary-color);}
+a:hover,
+a:focus, a:active,a:visited	{ outline: none; text-decoration: none;}
+h1,h2,h3,h4,h5 			    { margin: 0; font-weight: normal;  }
+h1							{ margin: 0 0 15px; font-size: 40px; line-height: 50px; font-weight: 700; }
+h1 span                     { color: var(--primary-color); }
+h3							{ margin-bottom: 20px; font-size: 26.4px; line-height: 36px; font-weight: 700; }
+h4							{ margin-bottom: 24px; font-size: 24px; line-height: 32px; font-weight: 700; }
+p							{ margin-bottom: 24px; }
+.big-text                   { font-size: 19.5px; line-height: 30px;}
+.small-text                 { font-size: 13px; line-height: 18px;}
+b                           { font-weight: 700;}
+button                      { transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+button:focus                { outline: none;}
+/* Button Style */
+.theme-btn 					    { padding: 14px 28px; background: var(--primary-color); font-size: 24px; line-height: 30px; color: #262626; font-weight: 700; border-radius: 8px; text-transform: capitalize; border: none;}
+.theme-btn:hover,
+.theme-btn:focus 			    { background-color: var(--secondary-color); color: #fff; border: none;}
+
+/* Title Style */
+.white-color                    { color: #fff;}
+.theme-color                    { color: var(--primary-color);}
+
+/* Slider Style */
+
+/******* Common Element CSS End *********/
+
+/******* Header Section CSS Start *******/
+/******* Header Section CSS End *********/
+
+/******* Banner section CSS Start *******/
+.banner 				    { padding: 50px 0; background: url(../images/home-banner.jpg) no-repeat bottom center / cover; position: relative; z-index: 1; color: #fff; box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.3); -webkit-box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.3); }
+.logo-section               { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 2px solid #fff;}
+.banner h1 span             { padding: 0px 0px 4px 2px; display: inline-block; background: url(../images/border-mark.png) no-repeat bottom center / 100% auto;}
+.banner-desc                { margin-top: 60px;}
+.banner-desc .image         { margin-right: 22px; width: 240px; flex-shrink: 0; -webkit-flex-shrink: 0; }
+.banner .scroll-down        { position: absolute; height: 54px; width: 54px; left: 50%; bottom: 0; transform: translate(-50%,50%); -webkit-transform: translate(-50%,50%); font-size: 34px; line-height: 60px; background: var(--primary-color); border-radius: 50%; text-align: center;}
+.banner .scroll-down:focus,
+.banner .scroll-down:hover  { background: var(--secondary-color); color: #fff;}
+/******* Banner section CSS End *********/
+
+/******* Middle section CSS Start ******/
+.common-section                         { padding: 70px 0;}
+
+/******* Home *******/
+/* Your Medication Section */
+.your-medication-section                { padding: 80px 0; }
+.your-medication-section h3             { margin-bottom: 60px;}
+.your-medication-section .item-list     { margin: 0px -10px; flex-wrap: wrap; -webkit-flex-wrap: wrap; }
+.your-medication-section .item          { margin: 0px 10px; width: calc(100% / 5 - 20px); box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.2); -webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.2); border-radius: 8px; overflow: hidden; }
+.your-medication-section .item > div    { padding: 8px; }
+.your-medication-section .item .title   { min-height: 120px; background: var(--primary-color);}
+.your-medication-section .item .desc    { min-height: 100px; }
+.your-medication-section .item p,
+.your-medication-section .item h4       { margin: 0;}
+/* Register Today Section */
+.register-today-section                 { padding: 48px 0 60px; background: #f0f3fc;}
+.register-today-section .desc           { margin: 32px 0 60px;}
+.register-today-section iframe          { width: 100%; height: 340px; display: block;}
+.common-shadow                          { height: 100%; background: #fff; box-shadow: 0px 0px 14px 14px rgba(0,0,0,0.06); -webkit-box-shadow: 0px 0px 14px 14px rgba(0,0,0,0.06); border-radius: 8px; overflow: hidden;}
+.form-section .title                    { padding: 12px 15px; background: var(--primary-color); }
+.form-section .info                     { margin-bottom: 36px; font-size: 17px; line-height: 26px;}
+.form-section form                      { padding: 8px 24px 10px;}
+.form-group                             { margin-bottom: 18px;}
+.custom-select,
+.form-control                           { padding: 14px 18px; height: auto; font-size: 19px; font-weight: 400; line-height: 24px; font-weight: 500; color: #262626; border: 1px solid #dedede;}
+.custom-select:focus,
+.form-control:focus                     { border-color: var(--secondary-color); box-shadow: none; -webkit-box-shadow: none;  }
+.custom-select                          { color: rgba(38, 38, 38, 0.7);}
+form .theme-btn                         { margin: 10px 0 24px; width: 100%;}
+.map-section .table-responsive          { padding: 16px 15px 10px; font-weight: 500; max-height: calc(100% - 350px)}
+.map-section table                      { margin: 0;}
+.table th, .table td                    { padding: 5px 15px;}
+.table th:nth-child(2), 
+.table td:nth-child(2)                  { width: 30%;}
+
+/******** Middle section CSS End *******/  
+
+/***** Bottom section CSS Start *******/
+/* Footer Section */
+footer				        { padding: 48px 0; background: var(--secondary-color); font-size: 17px; line-height: 26px; color: #fff; border-top: 8px solid var(--primary-color); }
+footer .footer-logo         { margin-bottom: 32px; max-width: 240px; display: inline-block; }
+footer a                    { color: #fff; }
+footer a:hover	            { color: var(--primary-color); }
+
+/****** Bottom section CSS End *******/
+
+/****** Menu Page CSS Start *******/
+
+/****** Responsive CSS Start *******/
+@media(min-width: 992px) and (max-width: 1199px){
+    body						{ font-size: 14.5px; line-height: 21px; }
+    h1							{ font-size: 36px; line-height: 46px; }
+    h3							{ font-size: 24px; line-height: 34px; }
+    h4							{ font-size: 20px; line-height: 26px; }
+    .big-text                   { font-size: 18px; line-height: 28px;}
+    .small-text                 { font-size: 13px; line-height: 18px;}
+/******* Home *******/
+/* Your Medication Section */
+    .your-medication-section .item .title   { min-height: 100px; }
+    .your-medication-section .item .desc    { min-height: 90px; }
+}
+
+@media (max-width: 991px){
+    .common-shadow                          { margin-bottom: 26px; height: initial; }
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+    body						{ font-size: 14px; line-height: 20px; }
+    h1							{ font-size: 32px; line-height: 42px; }
+    h3							{ font-size: 24px; line-height: 34px; }
+    h4							{ font-size: 21px; line-height: 28px; }
+    p                           { margin-bottom: 18px;}
+    .big-text                   { font-size: 16px; line-height: 26px;}
+    .small-text                 { font-size: 12px; line-height: 17px;}
+/******* Banner section CSS Start *******/
+    .logo-section               { margin-bottom: 28px; padding-bottom: 28px;}
+    .logo-section img           { width: 240px;}
+    .banner-desc                { margin-top: 42px; }
+    .banner-desc .image         { margin-right: 16px; width: 200px;}
+    .banner .scroll-down        { height: 48px; width: 48px; font-size: 26px; line-height: 54px;}
+/******* Home *******/
+/* Your Medication Section */
+    .your-medication-section                { padding: 60px 0 40px; }
+    .your-medication-section h3             { margin-bottom: 40px; }
+    .your-medication-section .item          { margin-bottom: 20px; width: calc(100% / 3 - 20px); }
+    .your-medication-section .item .title   { min-height: 100px; }
+    .your-medication-section .item .desc    { min-height: 90px; }
+/* Register Today Section */
+    .register-today-section                 { padding: 42px 0 30px; }
+    .register-today-section .desc           { margin: 30px 0 40px; }
+    .map-section .table-responsive          { max-height: 260px; }
+    
+}
+
+@media(max-width: 767px){
+    body						{ font-size: 13.5px; line-height: 19px; }
+    h1							{ font-size: 26px; line-height: 32px; }
+    h3							{ font-size: 20px; line-height: 26px; }
+    h4							{ font-size: 17px; line-height: 22px; }
+    p                           { margin-bottom: 12px;}
+    .big-text                   { font-size: 15px; line-height: 26px;}
+    .small-text                 { font-size: 12px; line-height: 17px;}
+    .theme-btn                  { padding: 12px 24px; background: var(--primary-color); font-size: 18px; line-height: 24px;}
+/******* Banner section CSS Start *******/
+    .banner                     { padding: 36px 0;}
+    .logo-section               { margin-bottom: 24px; padding-bottom: 24px;}
+    .logo-section img           { width: 240px; max-width: 65%;}
+    .banner-desc                { margin-top: 32px; flex-direction: column; -webkit-flex-direction: column; align-items: center; -webkit-align-items: center; text-align: center;}
+    .banner-desc .image         { margin: 0 0 16px; width: 200px;}
+    .banner .scroll-down        { height: 36px; width: 36px; font-size: 20px; line-height: 40px;}
+/******* Home *******/
+/* Your Medication Section */
+    .your-medication-section                { padding: 36px 0 24px; }
+    .your-medication-section h3             { margin-bottom: 24px; }
+    .your-medication-section .item > div    { padding: 8px 6px;}
+    .your-medication-section .item          { margin-bottom: 20px; width: calc(100% / 2 - 20px); }
+    .your-medication-section .item .title   { min-height: 80px; }
+    .your-medication-section .item .desc    { min-height: 70px; }
+/* Register Today Section */
+    .register-today-section                 { padding: 36px 0 20px; }
+    .register-today-section .desc           { margin: 20px 0 30px; }
+    .form-section .info                     { margin-bottom: 24px; font-size: 14px; line-height: 20px; }
+    .form-section form                      { padding: 8px 16px 10px; }
+    .custom-select, .form-control           { padding: 12px 14px; font-size: 16px; line-height: 20px;}
+    .register-today-section iframe          { height: 280px; }
+    .map-section .table-responsive          { max-height: 420px; padding: 14px 15px 14px; }
+    .table th, .table td                    { padding: 4px 6px; }
+/* Footer Section */
+    footer				        { padding: 32px 0; font-size: 13px; line-height: 20px; border-top-width: 6px; }
+    footer .footer-logo         { margin-bottom: 16px; max-width: 200px; }
+
+}
+
+@media(max-width: 340px){
+    h4							{ font-size: 16px; line-height: 20px; }
+}
+
+/****** Responsive CSS End *******/

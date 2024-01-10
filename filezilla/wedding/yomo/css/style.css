@@ -1,0 +1,590 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@font-face {
+    font-family: 'zeroneroblack';
+    src: url('../fonts/zeronero-webfont.eot');
+    src: url('../fonts/zeronero-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/zeronero-webfont.woff2') format('woff2'), url('../fonts/zeronero-webfont.woff') format('woff'), url('../fonts/zeronero-webfont.ttf') format('truetype'), url('../fonts/zeronero-webfont.svg#zeroneroblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+*, *:before, *:after {/* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */-webkit-box-sizing: border-box; /* Firefox (desktop or Android) 28- */-moz-box-sizing: border-box;/* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */box-sizing: border-box;}
+*							{ margin: 0px; padding: 0px;}
+a							{ text-decoration: none; outline: none;}
+a:focus, a:active,a:visited	{ outline: none !important; border: 0px;}
+.border-none				{ border: none !important; }
+.bg-none					{ background: none !important;}
+.margint-none				{ margin-top: 0px !important;}
+.marginr-none				{ margin-right: 0px !important;}
+.marginb-none				{ margin-bottom: 0px !important;}
+.marginl-none				{ margin-left: 0px !important;}
+.paddingt-none				{ padding-top: 0px !important;}
+.paddingr-none				{ padding-right: 0px !important;}
+.paddingb-none				{ padding-bottom: 0px !important;}
+.paddingl-none				{ padding-left: 0px !important;}
+img { max-width: 100%;}
+/******* Common Element CSS End *********/
+body { font-family: 'zeroneroblack';}
+.general-section { padding-top: 40px;}
+.section-desc-block { position: relative; width: 100%; display: inline-block; margin-top: 200px; background: url('../images/speech-bubble@2x.png')no-repeat center center; background-size: 100% 100%; text-align: center;}
+.side-phone-block.right-side { text-align: right;}
+.side-phone-block.left-side { text-align: left;}
+.section-title {font-size: 50px; line-height: 50px; color: #ffffff; text-shadow: 0 4px 0 #d4d4d4; margin-bottom: 50px;}
+.section-desc { font-size: 20px; line-height: 30px; letter-spacing: 2px; margin-bottom: 100px;}
+.white-text { color: #fff;}
+.desc-slide-block { max-width: 1060px; margin: 0px auto;}
+.typed-cursor { display: none !important;}
+.black-title-text { color: #333333;}
+
+
+.section-desc-block h2 { margin-bottom: 20px; font-size: 43px; line-height: 43px;}
+.section-desc-block p { font-size: 18px; line-height: 25px; letter-spacing: 1px; margin-bottom: 120px;}
+.side-phone-block { position: relative;}
+.side-phone-block .charecter-img-block { position: absolute; bottom: 0px; width: 70%;}
+.side-phone-block.left-side .charecter-img-block { left: -40%;}
+.side-phone-block.right-side .charecter-img-block { right: -40%;}
+.side-phone-block .charecter-img-block img { width: 100%;}
+/* Custom Animation*/
+.durationexslow { -webkit-animation-duration: 100000ms; -moz-animation-duration: 100000ms; -ms-animation-duration: 100000ms; animation-duration: 100000ms;}
+.durationslow { -webkit-animation-duration: 10000ms; -moz-animation-duration: 10000ms; -ms-animation-duration: 10000ms; animation-duration: 10000ms;}
+.durationmedium { -webkit-animation-duration: 5000ms; -moz-animation-duration: 5000ms; -ms-animation-duration: 5000ms; animation-duration: 5000ms;}
+.durationfast { -webkit-animation-duration: 2000ms; -moz-animation-duration: 2000ms; -ms-animation-duration: 2000ms; animation-duration: 2000ms;}
+.spin { -webkit-animation-name: spin; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; animation-name: spin; animation-iteration-count: infinite; animation-timing-function: linear;}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from { transform:rotate(0deg);}
+    to { transform:rotate(360deg);}
+}
+.flying { -webkit-animation-name: flying; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: flying; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: flying; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; animation-name: flying; animation-iteration-count: infinite; animation-timing-function: linear;}
+@-ms-keyframes flying {
+    0% { margin-top: 0px;}
+    50% { margin-top: -25px;}
+    100% { margin-top: 0px;}
+  }
+@-moz-keyframes flying {
+    0% { margin-top: 0px;}
+    50% { margin-top: -25px;}
+    100% { margin-top: 0px;}
+}
+@-webkit-keyframes flying {
+    0% { margin-top: 0px;}
+    50% { margin-top: -25px;}
+    100% { margin-top: 0px;}
+}
+@keyframes flying {
+    0% { margin-top: 0px;}
+    50% { margin-top: -30px;}
+    100% { margin-top: 0px;}
+}
+.leftright { -webkit-animation-name: leftright; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: leftright; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: leftright; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; animation-name: leftright; animation-iteration-count: infinite; animation-timing-function: linear;}
+@-ms-keyframes leftright {
+    0% { margin-left: 0px}
+    25% { margin-left: -4px}
+    50% { margin-right: 0px}
+    75% { margin-right: -4px;}
+    100% { margin-right: 0px}    
+  }
+@-moz-keyframes leftright {
+    0% { margin-left: 0px}
+    25% { margin-left: -4px}
+    50% { margin-right: 0px}
+    75% { margin-right: -4px;}
+    100% { margin-right: 0px}
+}
+@-webkit-keyframes leftright {
+    0% { margin-left: 0px}
+    25% { margin-left: -4px}
+    50% { margin-right: 0px}
+    75% { margin-right: -4px;}
+    100% { margin-right: 0px}
+}
+@keyframes leftright {
+    0% { margin-left: 0px}
+    25% { margin-left: -4px}
+    50% { margin-right: 0px}
+    75% { margin-right: -4px;}
+    100% { margin-right: 0px}
+}
+.leftright2x { -webkit-animation-name: leftright2x; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: leftright2x; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: leftright2x; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; animation-name: leftright2x; animation-iteration-count: infinite; animation-timing-function: linear;}
+@-ms-keyframes leftright2x {
+    0% { margin-left: 0px}
+    25% { margin-left: -20px}
+    50% { margin-right: 0px}
+    75% { margin-right: -20px;}
+    100% { margin-right: 0px}
+  }
+@-moz-keyframes leftright2x {
+    0% { margin-left: 0px}
+    25% { margin-left: -20px}
+    50% { margin-right: 0px}
+    75% { margin-right: -20px;}
+    100% { margin-right: 0px}
+}
+@-webkit-keyframes leftright2x {
+    0% { margin-left: 0px}
+    25% { margin-left: -20px}
+    50% { margin-right: 0px}
+    75% { margin-right: -20px;}
+    100% { margin-right: 0px}
+}
+@keyframes leftright2x {
+    0% { margin-left: 0px}
+    25% { margin-left: -20px}
+    50% { margin-right: 0px}
+    75% { margin-right: -20px;}
+    100% { margin-right: 0px}
+}
+.spin{ -webkit-animation-name: spinnerRotate; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spinnerRotate; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spinnerRotate; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear;}
+@-webkit-keyframes spinnerRotate
+{
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes spinnerRotate
+{
+    from{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+@-ms-keyframes spinnerRotate
+{
+    from{-ms-transform:rotate(0deg);}
+    to{-ms-transform:rotate(360deg);}
+}
+.shake { -webkit-animation-name: shake; -webkit-animation-iteration-count:infinite; -moz-animation-name: shake; -moz-animation-iteration-count:infinite;}
+@keyframes shake {
+  10%, 30%, 50%, 70%, 90%{ transform: translate3d(-2px, 0, 0);}
+  20%, 40%, 60%, 80% { transform: translate3d(2px, 0, 0);}
+}
+.pulse { -webkit-animation-name: pulse; -webkit-animation-iteration-count:infinite; -moz-animation-name: pulse; -moz-animation-iteration-count:infinite;}
+@keyframes pulse {
+  0%, 100% { transform: scale(0.78);}  
+  50% { transform: scale(0.85);}
+}
+.scaling{ -webkit-animation-name: scale; -webkit-animation-iteration-count:infinite; -moz-animation-name: scale; -moz-animation-iteration-count:infinite;}    
+@-webkit-keyframes scalex{
+    from {-webkit-transform: scale(0.9); opacity: 0;}
+    65% {-webkit-transform: scale(1.0); opacity: 1;}
+    to {-webkit-transform: scale(0.9); opacity: 0;}
+}
+@-moz-keyframes scale{
+    from {-moz-transform: scale(0.9); opacity: 0;}
+    65% {-moz-transform: scale(1.0); opacity: 1;}
+    to {-moz-transform: scale(0.9); opacity: 0;}    
+}
+/******* Header Section CSS Start *******/
+header { padding: 13px 0px; border-bottom: 7px solid #d9d9d9; }
+.sticky-header {  background: #fff; width: 100%; z-index: 10000; }
+.isStuck { padding: 13px 0px; border-bottom: 7px solid #d9d9d9;}
+ul.main-navigation { margin: 0px;}
+ul.main-navigation li,
+ul.top-social-link li { margin: 0px 20px; padding: 15px 0px !important;}
+ul.main-navigation > li:last-child { padding: 0px !important; margin-left: 0px;}
+ul.main-navigation li:last-child { margin-right: 0px;}
+ul.main-navigation li > a,
+ul.top-social-link li > a { color: #222222 !important; font-size: 15px; text-transform: uppercase; background: transparent; opacity: 0.8 !important; padding: 0px !important; line-height: 20px;}
+ul.top-social-link li > a { font-size: 20px;}
+ul.main-navigation li a#intro-link:hover { color: #f9746c !important;}
+ul.main-navigation li a#feature-link:hover { color: #536a8f !important;}
+ul.main-navigation li a#download-link:hover { color: #77c297 !important;}
+ul.main-navigation li a#twitter-link:hover { color: #55acee !important;}
+ul.main-navigation li a#facebook-link:hover { color: #3b5998 !important;}
+ul.main-navigation li a#insta-link:hover { color: #3f729b !important;}
+ul.main-navigation li > a:hover,
+ul.top-social-link li > a:hover,
+header ul li.active > a { background: transparent !important; opacity: 1 !important;}
+ul.top-social-link { margin: 0px;}
+/*-------------------------- mobile menu css ----------------------------*/
+.header,
+#menu { display: none;}
+.header img { height: 38px;}
+.mm-listview li:first-child { text-align: center; padding: 7px 0px 12px;}
+.mm-listview .mm-selected a,
+.mm-listview a:hover { color: #F96861;}
+.mobile-social a { display: inline-block !important; padding: 12px 10px !important; margin-left: 10px !important;}
+/******* Middle section CSS Start ******/
+/*-------------------------- slide 1 ----------------------------*/
+.first-slide { background: url('../images/slide-1-bg.jpg')no-repeat center center; background-size: cover; overflow: hidden;}
+.screen-1 { position: relative; padding-bottom: 115px;}
+.first-slide .screen-1 { padding-bottom: 0px;}
+.first-slide .screen-2 { padding-top: 150px;  position: relative; margin-top: 20px;}
+.first-slide .screen-2 .container { z-index: 11; position: relative;}
+.first-slide .screen-2 .cloudy-block { height: 100%; width: 100%; position: absolute; top: 0px; left: 0;z-index: 10; background: url(../images/cloudy-background-screen.png) no-repeat top center; background-size: cover;}
+.raccoon-block { position: absolute; right: 0; bottom: -150px;}
+.racoon-box { position: absolute; left: 80px; top: -98px;}
+.racoon-box > img { z-index: 200; position: relative;}
+.iphone-block { display: inline-block; text-align: right; position: relative; z-index: 500;}
+.iphone-block > img {width: 100%;}
+.phone-1-block { margin-top: 65px;}
+.phone-1-block > img { position: absolute;}
+.phone-1-block .cloud1 { bottom: 65px; right: -50px; z-index: 100;}
+.phone-1-block .cloud2 { bottom: 26px; left: -147px;  z-index: 200;}
+.phone-1-block .cloud3 { bottom: 33px; left: 100px;  z-index: 600;}
+.spark-circle { text-align:  center; position: relative; width: calc( 100% + 100px); left: -75px;}
+.main-logo-center { position: absolute; top: calc(50% - 170px); width: 100%;}
+.download-link-block { text-align: center; position: relative; bottom: 0px; max-width: 365px; display: inline-block; background: #fff; box-shadow: 0px 7px 0px 0px #d9d9d9; border-radius: 7px; top: -120px;}
+.download-link-block p { text-shadow: 0 4px 0 #d4d4d4; margin: 10px auto; font-size: 20px; width: 100%; }
+.download-link-list { padding: 14px; display: inline-block; list-style: none; margin: 0px; background: #fff; box-shadow: 0px 7px 0px 0px #d9d9d9; border-radius: 7px; }
+.download-link-block .download-link-list { box-shadow: none;}
+.download-link-list li { float: left;}
+.download-link-list li img { }
+.download-link-list li:first-child { margin-right: 17px;}
+.first-slide .screen-2 { text-align: center; position: relative;}
+.screen-2 .screen-desc { position: relative;}
+.parrot-image-block { position: absolute; left: -30px; top: -50px;}
+.parrot-sparkle { position: absolute; top: -85px; left: -190px;}
+.screen-2 .left-cloud-block { position: absolute; bottom: -97px; left: 0px;z-index: 100;}
+.screen-2 .right-cloud-block { position: absolute; bottom: -120px; right: 0px;}
+.raccoon-sparkle { position: absolute; top: -58px; right: -33px; }
+.video-block { z-index: 200; position: relative;}
+.video-block img { width: 100%; max-width: 816px; border: 6px solid #fff; border-radius: 7px; box-shadow: 0px 4px 0px 0px #d4d4d4; margin-bottom: 140px;}
+#video-block { width: 100%; max-width: 1000px;}
+.fancybox-overlay { background: rgba(0,0,0,0.5) !important;}
+/*-------------------------- slide 2 ----------------------------*/
+.second-slide { background: url('../images/slide-2-bg.jpg')no-repeat center center; background-size: 100% 100%; overflow: hidden; position: relative;}
+.second-slide .container { position: relative; z-index: 1000;}
+.second-slide p { color: #4983bf;}
+.opctopus-block,
+.left-coral-block,
+.right-coral-block { position: absolute;}
+.opctopus-block { top: -7px; left: 38px; width: 42%}
+.left-coral-block { bottom: -10px; left: 0; width: 16%}
+.right-coral-block { bottom: 0px; right: -5px; max-width: 13%;}
+.second-slide .side-phone-block .charecter-img-block { bottom: 50px; right: -30%;}
+/*-------------------------- slide 3 ----------------------------*/
+.third-slide { background: url('../images/slide-3-bg.jpg')no-repeat center center; background-size: 100% 100%; overflow: hidden; position: relative;}
+.third-slide .container { position: relative; z-index: 1000;}
+.third-slide p { color: #553d43;}
+.left-tree-block,
+.mobile-star-block,
+.tree-star-block { position: absolute;}
+.left-tree-block { left: 0px; bottom: 0px; width: 26%;}
+.mobile-star-block { left: 38.5%; top: 5%; width: 9%; min-width: 80px;}
+.tree-star-block { right: 20%; top: 21%; width: 9%; min-width: 80px;}
+/*-------------------------- slide 4 ----------------------------*/
+.fourth-slide { background: url('../images/slide-4-bg.jpg')no-repeat center center; background-size: 100% 100%; overflow: hidden; position: relative;}
+.fourth-slide .container { position: relative; z-index: 1000;}
+.fourth-slide p { color: #06a8a9;}
+.owl-block,
+.chris-tree-block,
+.zombie-hand-block { position: absolute;}
+.owl-block { left: 0px; bottom: 0px; width: 16%;}
+.chris-tree-block { right: 0px; bottom: 0px; max-width: 13%; z-index: 200;}
+.zombie-hand-block { right: -20px; top: 65px; max-width: 13%; z-index: 100;}
+/*-------------------------- slide 5 ----------------------------*/
+.fifth-slide { background: url('../images/slide-5-bg.jpg')no-repeat center center; background-size: 100% 100%; overflow: hidden; position: relative;}
+.fifth-slide .container { position: relative; z-index: 1000;}
+.fifth-slide p { color: #693f26;}
+.snake-block,
+.powerup1-block,
+.powerup2-block,
+.powerup3-block { position: absolute;}
+.snake-block { right: 0px; top: 0px; max-width: 36%;}
+.powerup1-block { left: 3%; bottom: 40%; width: 8%;}
+.powerup2-block { right: 7%; bottom: 25%; width: 9%;}
+.powerup3-block { right: 22%; bottom: 3px; width: 6.5%;}
+/*-------------------------- slide 6 ----------------------------*/
+.sixth-slide { background: url('../images/slide-7-bg.jpg')no-repeat center center; background-size: cover; overflow: hidden; position: relative;}
+.sixth-slide .screen-1 { text-align: center; padding-top: 223px; position: relative;}
+.sixth-slide .screen-1 .shadow-block { position: absolute; text-align: center; width: 100%; top: 80px;}
+.sixth-slide .screen-1 .group-desc-block { position: relative; z-index: 200;}
+.sixth-slide .screen-1 .group-desc-block p { margin-bottom: 25px;}
+.sixth-slide .screen-1 .member-group { position: relative;}
+.sixth-slide .screen-1 .member-group > div { position: absolute; bottom: 0px; display: inline-block;}
+.sixth-slide .screen-1 .member-group > div.first-member { left: calc(50% - 484px); z-index: 200;}
+.sixth-slide .screen-1 .member-group > div.second-member { left: calc(50% - 355px); z-index: 400;}
+.sixth-slide .screen-1 .member-group > div.third-member { position: relative; z-index: 1000;}
+.sixth-slide .screen-1 .member-group > div.fourth-member { right: calc(50% - 300px); z-index: 800;}
+.sixth-slide .screen-1 .member-group > div.fifth-member { right: calc(50% - 465px); z-index: 600;}
+.sixth-slide .screen-2 { margin: 60px 0px 135px;}
+.sixth-slide .screen-2 h3 { font-size: 40px; line-height: 50px; text-shadow: 0 4px 0 #8c8c8c; margin: 0px 0px 20px;}
+.app-icon { text-align: right; padding-right: 15px;}
+.sixth-slide .top-left-cloud { position: absolute; top: -180px; left: 0px;}
+.sixth-slide .top-right-cloud { position: absolute; top: 35px; right: 0px;}
+.sixth-slide .bottom-left-cloud { position: absolute; bottom: -70px; left: 30px;}
+.last-slide-top { padding-top: 120px; position: relative; z-index: 10;}
+.last-slide-top .container { width: 80%;}
+.last-slide-top { text-align: center;}
+.last-slide-top img { width: 100%; margin-bottom: 30px; max-width: 300px; display: inline-block;}
+.last-slide-bottom { position: relative; z-index: 9;}
+.member-group:after,
+.member-group:before { content: ""; width: 170px; height: 70px; background: url(../images/colour-stars-2.png) no-repeat center center / 100% auto; display: block; bottom: 25%; position: absolute;}
+.member-group:after { left: 0px;}
+.member-group:before { right: 0px;}
+/******** Middle section CSS End *******/
+/******** Footer section CSS Start *******/
+footer { padding: 25px 0px; background: #fff; border-bottom: 7px solid #d9d9d9;}
+footer p { font-size: 15px; color: #222222; margin-bottom: 0px; line-height: 20px; font-family: 'helvetica';}
+.foot-follow-link { float: right}
+/******** Footer section CSS End *******/
+/*Go Top CSS Start*/
+#toTop { display:none; text-decoration:none; position:fixed; bottom:10px; right:10px; overflow:hidden; width:51px; height:51px; border:none; text-indent:100%; background:url(../images/ui.totop.png) no-repeat left top; z-index: 2000000;}
+#toTopHover { background:url(../images/ui.totop.png) no-repeat left -51px;width:51px;height:51px;display:block;overflow:hidden;float:left;opacity: 0;-moz-opacity: 0;filter:alpha(opacity=0);-o-transition:0s; -ms-transition:0s; -moz-transition:0s; -webkit-transition:0s; transition:0s;}
+#toTop:active, #toTop:focus { outline:none;}
+.animateme { opacity: 0;}
+/*Go Top CSS End*/
+/***** Responsive CSS Start *******/
+@media (min-width: 1920px) {
+    .general-section {padding-top: 9%}
+    .first-slide .screen-2 { padding-top: 210px;}
+}
+@media (min-width: 1200px) and (max-width: 1599px){
+    /******* Common Element CSS End *********/
+    .section-title { font-size: 42px; line-height: 45px; margin-bottom: 40px;}
+    .section-desc { font-size: 16px; line-height: 22px; margin-bottom: 50px;}
+    .side-phone-block.right-side,
+    .side-phone-block.left-side { text-align: center;}
+    
+     .side-phone-block .charecter-img-block { width: 45%;}
+    .side-phone-block.left-side .charecter-img-block { left: -5%;}
+    .side-phone-block.right-side .charecter-img-block { right: -5%;}
+    /*-------------------------- slide 1 ----------------------------*/
+    .spark-circle { left: -60px; width: calc(100% + 65px)}
+    .main-logo-center { top: calc(50% - 80px)}
+    .main-logo-center > img { width: 50%;}
+    .download-link-block { bottom: -70px;}
+    .download-link-list li img { width: 135px;}    
+    .parrot-image-block { width: 150px; left: 40px; top: -30px;}
+    .parrot-sparkle { width: 100px; left: -100px; top: -60px;}    
+    .raccoon-block { width: 290px;}
+    .racoon-box { width: 150px; top: -75px; left: 70px;}
+    .raccoon-sparkle { width: 115px; right: -28px; top: -45px;}
+    /*-------------------------- slide 5 ----------------------------*/
+    .fifth-slide { background-size: 100% 100% !important;}
+    .section-desc-block.left-side { float: right;}
+    .powerup2-block { right: 6%;}
+    .powerup3-block {  bottom: 14px; width: 5.5%;}
+}
+@media (min-width: 1400px) and (max-width: 1599px){
+    /*-------------------------- slide 5 ----------------------------*/    
+    .side-phone-block  img { width: 340px;}    
+    .section-desc-block {margin-top: 125px;}    
+}
+@media (min-width: 1200px) and (max-width: 1399px){
+    .side-phone-block img { width: 320px;}
+    .section-desc-block { margin-top: 120px;}
+   
+}
+@media (min-width: 992px) and (max-width: 1199px){    
+    /******* Common Element CSS End *********/
+    .section-title { font-size: 35px; line-height: 40px; margin-bottom: 30px;}
+    .section-desc { font-size: 16px; line-height: 22px; margin-bottom: 50px;}
+    .section-desc > br { display: none;}
+    .desc-slide-block { width: 87%;}
+    .section-desc-block { margin-top: 100px;}
+    .side-phone-block.right-side,
+    .side-phone-block.left-side { text-align: center;}
+    .side-phone-block img { width: 300px;}    
+    
+    .section-desc-block { padding: 0px 10px;}
+    .section-desc-block h2 {font-size: 35px; line-height: 40px;}
+    .section-desc-block p { font-size: 16px; line-height: 22px; margin-bottom: 95px;}
+    .side-phone-block .charecter-img-block { width: 60%;}
+    .side-phone-block.left-side .charecter-img-block { left: -18%;}
+    .side-phone-block.right-side .charecter-img-block { right: -18%;}
+    /*-------------------------- slide 1 ----------------------------*/
+    .phone-1-block { margin-top: 5px;}
+    .phone-1-block .cloud1 { width: 330px; right: -45px; bottom: 50px;}
+    .phone-1-block .cloud2 { width: 325px; left: -100px; bottom: 18px;}
+    .phone-1-block .cloud3 { width: 170px; left: 95px; bottom: 25px;}    
+    .spark-circle { left: -50px; width: calc(100% + 20px);}
+    .main-logo-center { top: calc(50% - 150px);}
+    .main-logo-center > img { width: 50%;}
+    .screen-desc p br { display: block;}
+    .download-link-block { bottom: -30px;}
+    .download-link-block p { font-size: 16px;}
+    .download-link-list { padding: 12px;}
+    .download-link-list  li:first-child { margin-right: 12px;}
+    .download-link-list  li  img {width: 120px;}    
+    .parrot-image-block { width: 150px; left: 40px; top: -30px;}
+    .parrot-sparkle { width: 100px; left: -100px; top: -60px;}    
+    .screen-2 .left-cloud-block { width: 380px;}
+    .screen-2 .right-cloud-block { width: 300px;}    
+    .raccoon-block { width: 250px;}
+    .racoon-box { width: 134px; top: -70px; left: 49px;}
+    .raccoon-sparkle { width: 100px; right: -21px; top: -36px;}
+    /*-------------------------- slide 5 ----------------------------*/
+    .fifth-slide { background-size: 100% 100% !important;}
+    .powerup2-block { bottom: 26%;}
+    .powerup3-block {  bottom: 15px; right: 21%;}
+    /*-------------------------- slide 6 ----------------------------*/
+    .sixth-slide .screen-1 { padding-top: 180px; padding-bottom: 60px;}
+    .sixth-slide .screen-1 .shadow-block { top: 35px;}
+    .sixth-slide .screen-2 h3 { font-size: 32px; line-height: 40px;}    
+    .group-desc-block p br { display: block;}    
+    .sixth-slide .top-left-cloud {  width: 450px;}
+    .sixth-slide .top-right-cloud { width: 240px;}
+    .sixth-slide .bottom-left-cloud { width: 545px; left: -50px;}    
+}
+@media (min-width: 768px) and (max-width: 991px){
+    /******* Header Section CSS Start *******/    
+    ul.main-navigation li > a { font-size: 13px;}
+    ul.top-social-link li > a { font-size: 16px;}    
+    /******* Common Element CSS End *********/
+    .section-title { font-size: 25px; line-height: 28px; margin-bottom: 20px;}
+    .section-desc { font-size: 13px; line-height: 17px; margin-bottom: 40px;}
+    .section-desc > br { display: none;}
+    .desc-slide-block { width: 87%;}
+    .section-desc-block { margin-top: 100px;}
+    .side-phone-block.right-side,
+    .side-phone-block.left-side { text-align: center;}
+    .side-phone-block img { width: 250px;}
+    .section-desc-block { padding: 0px 10px;}
+    .section-desc-block h2 {font-size: 25px; line-height: 28px;}
+    .section-desc-block p { font-size: 12px; line-height: 17px; margin-bottom: 85px;}
+    .side-phone-block .charecter-img-block { width: 60%;}
+    .side-phone-block.left-side .charecter-img-block { left: -25%;}
+    .side-phone-block.right-side .charecter-img-block { right: -25%;}
+    /*-------------------------- slide 1 ----------------------------*/
+    .phone-1-block { margin-top: 0px;}
+    .phone-1-block .cloud1 { width: 230px; right: -25px; bottom: 40px;}
+    .phone-1-block .cloud2 { width: 240px; left: -75px; bottom: 14px;}
+    .phone-1-block .cloud3 { width: 115px; left: 70px; bottom: 20px;}
+    .spark-circle { left: -40px; width: 100%;}
+    .main-logo-center { top: calc(50% - 105px);}
+    .main-logo-center > img { width: 50%;}
+    .screen-desc p br { display: block;}
+    .download-link-block { bottom: -30px;}
+    .download-link-block p { font-size: 15px; margin-bottom: 15px;}
+    .download-link-list { padding: 10px;}
+    .download-link-list  li:first-child { margin-right: 10px;}
+    .download-link-list  li  img {width: 100px;}
+    .parrot-image-block { width: 110px; left: 50px; top: -30px;}    
+    .parrot-sparkle { width: 70px; left: -50px; top: -50px;}    
+    .screen-2 .left-cloud-block { width: 280px; bottom: -55px;}
+    .screen-2 .right-cloud-block { width: 200px; bottom: -70px;}
+    .raccoon-block { width: 200px;}
+    .racoon-box { width: 100px; top: -50px; left: 43px;}
+    .raccoon-sparkle { width: 70px; right: -15px; top: -25px;}
+    .download-link-block p { margin: 10px auto 0px;}
+    /*-------------------------- slide 5 ----------------------------*/    
+    .powerup2-block { bottom: 26%;}
+    .powerup3-block {  bottom: 15px; right: 21%;}
+    /*-------------------------- slide 6 ----------------------------*/
+    .sixth-slide .screen-1 { padding-top: 140px; padding-bottom: 60px;}
+    .sixth-slide .screen-1 .shadow-block { top: 65px;}
+    .sixth-slide .screen-2 h3 { font-size: 22px; line-height: 30px;}
+    .shadow-block > img { width: 45%;}
+    .group-desc-block p br { display: block;}
+    .sixth-slide .screen-1 .member-group > div > img { max-width: 65%;} 
+    .sixth-slide .screen-1 .member-group > div.first-member { left: calc(50% - 348px);}
+    .sixth-slide .screen-1 .member-group > div.second-member { left: calc(50% - 275px);}    
+    .sixth-slide .screen-1 .member-group > div.fourth-member { right: calc(50% - 230px);}
+    .sixth-slide .screen-1 .member-group > div.fifth-member { right: calc(50% - 340px);}
+    .sixth-slide .top-left-cloud {  width: 330px; top: -120px;}
+    .sixth-slide .top-right-cloud { width: 190px;}
+    .sixth-slide .bottom-left-cloud { width: 345px; left: -30px; bottom: -40px;}
+    .app-icon-desc { margin-top: 30px;}
+}
+@media (max-width: 767px){
+    /******* Header Section CSS Start *******/
+    header { padding: 6px 0px;}
+    ul.main-navigation li > a { font-size: 12px; line-height: 15px;}
+    ul.top-social-link li > a { font-size: 16px;}
+    ul.main-navigation li, ul.top-social-link li { margin: 0px 10px; padding: 12px 0px !important;}
+    /*-------------------------- mobile menu css ----------------------------*/
+    .header,
+    #menu { display: block;}
+    /******* Common Element CSS End *********/
+    .section-desc-block { margin-top: 0px;}
+    .section-title { font-size: 25px; line-height: 28px; margin-bottom: 20px; text-align: center;}
+    .section-desc { font-size: 15px; line-height: 20px; margin-bottom: 40px; text-align: center;}
+    .section-desc > br { display: none;}
+    .side-phone-block.right-side,
+    .side-phone-block.left-side { text-align: center;}
+    .section-desc-block { padding: 15px 15px 0px;}
+    .section-desc-block h2 {font-size: 25px; line-height: 28px;}
+    .section-desc-block p { font-size: 15px; line-height: 20px; letter-spacing: 2px;}
+    .side-phone-block .charecter-img-block { width: 40%;}
+    .side-phone-block.left-side .charecter-img-block { left: -4%;}
+    .side-phone-block.right-side .charecter-img-block { right: -4%;}
+    /*-------------------------- slide 1 ----------------------------*/
+    .first-slide .screen-1 { text-align: center; padding-bottom: 150px;}
+    .first-slide .screen-2 { padding-top: 200px;}
+    .phone-1-block { display: inline-block; position: relative; margin-top: 10px;}
+    .phone-1-block .iphone-block { max-width: 180px;}
+    .phone-1-block .cloud1 { width: 155px; right: -32px; bottom: 25px;}
+    .phone-1-block .cloud2 { width: 140px; left: -45px; bottom: 10px;}
+    .phone-1-block .cloud3 { width: 65px; left: 35px; bottom: 15px;}
+    .main-logo-block { text-align:  center;}
+    .spark-circle { left: auto; max-width: 100%; display: inline-block;}
+    .main-logo-center { top: calc(50% - 45px);}
+    .main-logo-center img { max-width: 200px;}
+    .app-icon-desc { text-align: center;}
+    .download-link-block { bottom: -30px;}
+    .download-link-block p { font-size: 15px; margin-bottom: 15px;}
+    .download-link-list { padding: 10px; margin: 0px auto;}
+    .download-link-list  li:first-child { margin-right: 10px;}
+    .download-link-list  li  img {width: 100px;}
+    .raccoon-block { max-width: 150px; bottom: -235px;}
+    .racoon-box { max-width: 80px; top: -40px; left: 30px;}
+    .raccoon-sparkle { max-width: 80px; top: -30px; right: -20px;}    
+    .parrot-image-block { left: calc(50% - 60px); top: -120px; max-width: 120px; display: inline-block;}
+    .parrot-sparkle { max-width: 80px; left: -70px; top: -50px;}
+    .screen-2 .left-cloud-block { width: 200px; bottom: -40px;}
+    .screen-2 .right-cloud-block { width: 120px; bottom: -40px;}
+    /*-------------------------- slide 4 ----------------------------*/
+    .zombie-hand-block { width: 26%; }
+    /*-------------------------- slide 5 ----------------------------*/
+    .powerup1-block,
+    .powerup2-block,
+    .powerup3-block { display: none;}
+    
+    .second-slide,
+    .third-slide,
+    .fourth-slide,    
+    .fifth-slide { background-size: cover !important;}
+    /*-------------------------- slide 6 ----------------------------*/
+    .sixth-slide .screen-1 { padding: 100px 0px 30px;} 
+    .sixth-slide .shadow-block { padding-top: 35px;}
+    .sixth-slide .shadow-block > img { max-width: 205px;}
+    .app-icon { padding: 0px; text-align: center;}
+    .app-icon > img { width: 70px; margin-bottom: 10px;}
+    .sixth-slide .screen-2 h3 { text-align: center; font-size: 17px; line-height: 25px;}
+    .sixth-slide .screen-1 .member-group > div > img { max-width: 30%;} 
+    .sixth-slide .screen-1 .member-group > div.first-member { left: calc(50% - 207px);}
+    .sixth-slide .screen-1 .member-group > div.second-member { left: calc(50% - 190px);}
+    .sixth-slide .screen-1 .member-group > div.fourth-member { right: calc(50% - 163px);}
+    .sixth-slide .screen-1 .member-group > div.fifth-member { right: calc(50% - 222px);}
+    .sixth-slide .top-left-cloud {  width: 230px; top: -85px;}
+    .sixth-slide .top-right-cloud { width: 120px;}
+    .sixth-slide .bottom-left-cloud { width: 200px; left: -20px; bottom: -20px;}
+    /******** Footer section CSS Start *******/
+    footer { padding: 15px; text-align: center;}
+    .foot-follow-link { float: none}    
+    .mobile-first-section { padding-top: 50px;}
+    .download-mob-block { margin-top: 50px;}
+    .mobile-p-top { padding-top: 70px;}
+}
+@media (max-width: 480px){ 
+    /******* Common Element CSS End *********/
+    .section-title { font-size: 17px; line-height: 23px; text-shadow: 0 2px 0 #8c8c8c;}
+    .section-desc { font-size: 14px;}
+    .section-desc-block h2 {font-size: 18px; line-height: 23px;}
+    .section-desc-block p { font-size: 14px; line-height: 17px; padding: 0px 10px;}
+    /*-------------------------- slide 1 ----------------------------*/
+    .main-logo-center img { max-width: 150px;}
+    .download-link-block { top: -30px;}
+    /*-------------------------- slide 6 ----------------------------*/
+    .sixth-slide .shadow-block { padding-top: 100px;}
+    .sixth-slide .shadow-block > img { max-width: 70%;}
+    .sixth-slide .screen-1 .member-group > div { display: none;}
+    .sixth-slide .screen-1 .member-group > div.third-member { display: block; width: 100%;}
+    .sixth-slide .screen-1 .member-group > div.third-member > img { max-width: 60%}
+}
+
+/***** Responsive CSS End *******/

@@ -1,0 +1,204 @@
+<div class="clearfix" ng-init="init()" ng-controller="ProductController">
+    <!-- <xe-translate text-value="PRODUCT"></xe-translate> -->
+    <div class="panel panel-transparent" ng-hide="productData">
+        <div class="panel-body">
+            <!-- <ng-include src="'modules/product/views/partials/productAddition.html'" 
+                 ng-show="isUploadViewActive"> -->
+            <!-- <ng-include src="'modules/product/views/partials/productAddWizard.html'">
+            </ng-include> -->
+            <!--category list dropdown-->
+
+            <!--  <div class="btn-group padding-0 pull-right" ng-show="categoryDropDown">
+                     <button type="button" class="btn btn-success btn-sm btn-cons from-top"
+                         ng-click="addNewProduct()">
+                         <span><xe-translate text-value="Add New Product"></xe-translate></span>
+                     </button>
+             </div> -->
+            <!--preloader-->
+            <div class="col-lg-12 bg-white" ng-hide="dataLoaded">
+                <div class="product-wrap-height">
+                    <div class="panel-body text-center">
+                        <img class="image-responsive-height demo-mw-50 page-loader" src="assets/img/demo/progress.svg"
+                            alt="Progress" />
+                        <span class="loader-label">
+                            <xe-translate text-value="Please wait products loading">
+                            </xe-translate>
+                            ...
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--product list-->
+
+            <div ng-show="productsList" class="product-list panel-default m-t-10">
+                <div class="row" ng-show="dataLoaded">
+                    <div class="col-md-12">
+                        <div class="heading-button">
+                            <div class="left">
+                                <h3>
+                                    <xe-translate text-value="Product settings">
+                                    </xe-translate>
+                                </h3>
+                            </div>
+                            <div class="right">
+                                <div class="btn-group m-r-10" ng-show="categoryDropDown">
+                                    <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown"
+                                        style="width: 180px;" ng-disabled="!dataLoaded">
+                                        {{ selectedItem }}
+                                    </button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false" ng-disabled="!dataLoaded">
+                                        <span class="caret">
+                                        </span>
+                                        <span class="sr-only">
+                                            Toggle Dropdown
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" style="width: 207px;"
+                                        ng-class="{'button-scroll':categoryList.length> 4}">
+                                        <li ng-repeat="category in categoryList" ng-click="selectedCatagory($index)">
+                                            <a href="">
+                                                {{ category.name }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group" ng-show="categoryDropDown">
+                                    <input type="text" placeholder="Enter search tag" style="width:150px"
+                                        class="input-sm form-control pull-left m-r-10" name="start" id="searchId"
+                                        pg-form-group="" ng-model="searchValue" />
+                                    <div class="pull-left">
+                                        <button type="button" class="btn btn-default btn-sm" id="searchBtn"
+                                            ng-click="searchProductOnKeyUp(searchValue)"
+                                            ng-disabled="demoStatus || !dataLoaded">
+                                            <span>
+                                                <xe-translate text-value="Search">
+                                                </xe-translate>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 m-b-25">
+                        <div class="text-number">
+                            <div><span class="all">All <span class="number">({{productList.length}})</span></span> 
+                                <!-- <span class="no-decoration">No decoration area <span class="number">(56)</span></span> -->
+                            </div>
+                            <!-- <div class="how-to-add">How to add, edit and delete products?</div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div ng-class="{true:'col-md-12', false:'col-md-6'}[productList.length == 1]"  ng-repeat="product in productList track by $index"
+                                ng-click="selectedProduct($index)">
+                                <div class="single-listing">
+                                    <div class="product-title">
+                                        <div class="thumb"><img ng-src="{{ product.thumbnail }}">
+                                        </div>
+                                        <div class="title" tooltip-append-to-body="true" tooltip="{{ product.name }}"
+                                            tooltip-trigger="{{ getProductInfoPop(product.name) }}"
+                                            tooltip-placement="top">
+                                            {{ product.name }}
+                                        </div>
+                                    </div>
+                                    <div class="right-sedc">
+                                        <span ng-repeat="print in product.print_details track by $index">
+                                            <span ng-if="$index > 0">,&nbsp;</span>{{ print.prntMthdName }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" ng-show="showNoResultMsg">
+                                <div class="single-listing" style=" text-align: center; flex-direction: column;">
+                                    <p class="font-normal text-lg m-t-10" style="display: flex;   flex-direction: column;">
+                                        <xe-translate text-value="No Products found">
+                                        </xe-translate>
+                                        <span class="m-t-20">
+                                            <a ng-click="selectedCatagory('0')">
+                                                <xe-translate text-value="Back to all products">
+                                                </xe-translate>
+                                            </a>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 m-t-25" style="display: none;">
+                        <div class="pagination-text">
+                            <ul class="pagination">
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                            </ul>
+                            <div class="p-l-20">Viewing 1-20 of 36</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default" ng-show="isLoadMore">
+            <div class="panel-body text-center">
+                <button type="button" class="btn btn-default btn-sm btn-cons" ng-click="loadMoreProducts()"
+                    ng-show="isLoadMore" ng-disabled="loadMore">
+                    <xe-translate text-value="LOAD MORE">
+                    </xe-translate>
+                </button>
+                <img class="image-responsive-height demo-mw-30 page-loader" src="assets/img/demo/progress.svg"
+                    alt="Progress" ng-show="loadMore" />
+            </div>
+        </div>
+    </div>
+    <!--selected product data loaded preloader-->
+    <div class="row">
+        <div class="col-lg-12 bg-white" ng-show="showLoader">
+            <div class="product-wrap-height">
+                <div class="panel-body text-center">
+                    <img class="image-responsive-height demo-mw-50 page-loader" src="assets/img/demo/progress.svg"
+                        alt="Progress" />
+                    <span class="loader-label">
+                        <xe-translate text-value="Please wait product detail loading">
+                        </xe-translate>
+                        ...
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 bg-white" ng-show="showPreDecoLoader">
+            <div class="product-wrap-height">
+                <div class="panel-body text-center">
+                    <img class="image-responsive-height demo-mw-50 page-loader" src="assets/img/demo/progress.svg"
+                        alt="Progress" />
+                    <span class="loader-label">
+                        <xe-translate text-value="Redirect to predeco">
+                        </xe-translate>
+                        ...
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Selected product view-->
+    <ng-include src="'modules/product/views/partials/selectedproduct.html'" ng-show="productData && !showPreDecoLoader">
+    </ng-include>
+    <ng-include src="'modules/product/views/partials/addCustomSize.html'">
+    </ng-include>
+    <ng-include src="'modules/product/views/partials/addCustomMask.html'">
+    </ng-include>
+    <ng-include src="'modules/product/views/partials/templateAssignModal.html'">
+    </ng-include>
+    <ng-include src="'modules/product/views/partials/createPredeco.html'">
+    </ng-include>
+    <ng-include src="'modules/product/views/partials/product_image_dropdown.html'">
+    </ng-include>
+    <ng-include src="'modules/productTemplate/views/view.html'">
+    </ng-include>
+    <ng-include src="'modules/product/views/partials/addCustomPaperSize.html'">
+    </ng-include>
+</div>

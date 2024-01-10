@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-transparent">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-tabs-linetriangle nav-tab-v nav-tabs-left">
+                <li ng-class="{'active':priceRule == 'color'}" ng-hide = "isSimple || variants.length == 0">
+                    <a data-toggle="tab" ng-click="changePriceRuleTab('color')">
+                        <span>
+                            Color Variants
+                        </span>
+                    </a>
+                </li>                
+                <li ng-class="{'active':priceRule == 'size'}" ng-hide = "!isSizeExits || isSimple">
+                    <a data-toggle="tab" ng-click="changePriceRuleTab('size')">
+                        <span>
+                            Size Variants
+                        </span>
+                    </a>
+                </li>
+                <li ng-class="{'active':priceRule == 'whitebase'}"  ng-hide = "variants.length == 0">
+                    <a data-toggle="tab" ng-click="changePriceRuleTab('whitebase')">
+                        <span>
+                            Whitebase
+                            
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content pos-rlt">
+                <div class="tab-pane" ng-class="{'active':priceRule == 'color'}">
+                    <div class="row column-seperation">
+                        <div class="col-md-12">
+                            <ng-include src="'modules/product/views/partials/additionalprice.html'">
+                            </ng-include>
+                        </div>
+                    </div>
+                    <div class="xe-card-ftr footer-custom-temp">
+                        <!-- <a class="blank-btn m-r-20" href="">
+                            Cancel
+                        </a> -->
+                        <button class="btn btn-info btn-cons" type="button" ng-click="updateAdditionalPrice()" ng-disabled="demoStatus">
+                            <span class="bold">
+                                Save
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tab-pane" ng-class="{'active':priceRule == 'size'}">
+                    <div class="row column-seperation">
+                        <div class="col-md-12">
+                            <ng-include src="'modules/product/views/partials/sizevariantprice.html'">
+                            </ng-include>
+                        </div>
+                    </div>
+                    <div class="xe-card-ftr footer-custom-temp">
+                        <!-- <a class="blank-btn m-r-20" href="">
+                            Cancel
+                        </a> -->
+                        <button class="btn btn-info btn-cons" type="button" ng-click="updateVariantPrice()" ng-disabled="demoStatus">
+                            <span class="bold">
+                                Save
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tab-pane" ng-class="{'active':priceRule == 'whitebase'}">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ng-include src="'modules/product/views/partials/whitebaseSetting.html'">
+                            </ng-include>
+                        </div>
+                    </div>
+                    <div class="xe-card-ftr footer-custom-temp">
+                        <!-- <a class="blank-btn m-r-20" href="">
+                            Cancel
+                        </a> -->
+                        <button class="btn btn-info btn-cons" type="button" ng-click="updateColorWhitebaseData()" ng-disabled="demoStatus">
+                            <span class="bold">
+                                Save
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-include src="'modules/product/doc/ps08.html'">
+    </ng-include>
+    <ng-include src="'modules/product/doc/ps09.html'">
+    </ng-include>
+    <ng-include src="'modules/product/doc/ps10.html'">
+    </ng-include>
+</div>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="css/custom_daterpicker.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script type="text/javascript" src="js/custom_datepicker.js"></script>
+	<script src="js/custom.js"></script>
+</head>
+<body>
+
+	<main class="content" role="content">
+		<section class="container-fluid bg_skyblue">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<a class="navbar-brand" href="#">
+							<img src="images/logo.png" class="img-fluid height_37" />
+						</a>
+
+						<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+								<li class="nav-item active">
+									<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Pipeline</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Proposals</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Lenders</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Partners</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Campaigns</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Reports</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Tasks</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Finance</a>
+								</li>
+							</ul>
+							<form class="form-inline my-2 my-lg-0">
+								<img src="images/bell.png" class="img-fluid m_r_15" />
+								<span class="notification_dot"></span>
+								<img src="images/user.png" class="img-fluid width_36" />
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="bg_white2 border_20p p_30 m_t_30 m_b_30">
+						<div class="row align_item_bottom">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-8">
+								<div class="content_center">
+									<div class="m_r_30">
+										<img src="images/ink_layer.png" class="img-fluid">
+									</div>
+									<div class="">
+										<div class="date_time">WED, Nov 5, 2020</div>
+										<div class="day_time">Good evening, Guilherme</div>
+										<div class="time">Breaking the boundaries of the 9-5 🕔 We're with you every step of the way.</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-4">
+								<div class="right_content_top">3 days left in Trial</div>
+								<div class="right_content_bottom">Time to close more deals, <span>upgrade now</span>.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid">
+			<div class="row p_40 content_center">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+					<div>
+						<div class="title_1">Did we mention you’re doing great?</div>
+						<div class="subtitle_1">Basic setup complete. Now get ready to book clients and get paid.</div>
+					</div>
+					<div class="content_center m_t_50p">
+						<div>
+							<img src="images/rocket.png" class="img-fluid" />
+						</div>
+						<div class="tip_text">
+							<strong>PRO TIP: </strong>You can always edit your brand elements (logo, color, etc) from your <span>company settings</span>.
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-6 col-lg-5">
+					<div class="content_center">
+						<div class="number_circle">1</div>
+						<div class="">
+							<div class="pointer_title">
+								Update your company profile <img src="images/arrow.png" class="img-fluid" />
+							</div>
+							<div class="pointer_subtitle">Make your account stand out by updating your company profile.</div>
+						</div>
+					</div>
+					<div class="content_center m_t_30">
+						<div class="number_circle">2</div>
+						<div class="">
+							<div class="pointer_title">
+								Integrate with your favorite tools <img src="images/arrow.png" class="img-fluid" />
+							</div>
+							<div class="pointer_subtitle">Connect with all applications that make sense for your business.</div>
+						</div>
+					</div>
+					<div class="content_center m_t_30">
+						<div class="number_circle">3</div>
+						<div class="">
+							<div class="pointer_title">
+								Customize your workflow <img src="images/arrow.png" class="img-fluid" />
+							</div>
+							<div class="pointer_subtitle">Organize and control your business workflow in a single place.</div>
+						</div>
+					</div>
+					<div class="content_center m_t_30">
+						<div class="number_circle">4</div>
+						<div class="">
+							<div class="pointer_title">
+								Invite team members <img src="images/arrow.png" class="img-fluid" />
+							</div>
+							<div class="pointer_subtitle">Getting results is easier when everyone works in sync.</div>
+						</div>
+					</div>
+					<div class="content_center m_t_30">
+						<div class="number_circle">5</div>
+						<div class="">
+							<div class="pointer_title">
+								Upload your contacts <img src="images/arrow.png" class="img-fluid" />
+							</div>
+							<div class="pointer_subtitle">Add your contacts by uploading a single or bulk CSV or FNM 1003 files.</div>
+						</div>
+					</div>
+					<div class="content_center m_t_30">
+						<div class="number_circle">6</div>
+						<div class="">
+							<div class="pointer_title">
+								Set your finance goals <img src="images/arrow.png" class="img-fluid" />
+							</div>
+							<div class="pointer_subtitle">What’s your revenue goal? You set the goal, we help you get there.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 d-sm-none col-md-2 col-lg-3 d-md-none d-lg-block">
+					<img src="images/opendoodles.png" class="img-fluid xs_m_tb_50">
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid bg_skyblue p_b_30">
+			<div class="row">
+				<div class="col-12">
+					<div class="date_selection bg_white">
+						<img src="images/calendra.png" class="img-fluid m_r_15 reportrange" />
+						<span class="reportrange">Jun 01, 2020 - Nov 30, 2020</span>
+					</div>
+				</div>
+			</div>
+			<div class="row full_width">
+				<div class="col-12 col-sm-8 col-md-8 col-lg-9 column">
+					<div class="">
+						<div class="row column_width">
+							<div class="col-12 col-sm-6 m_t_30">
+								<div class="box_shadow column_2">
+									<div class="title">
+										Agenda
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a>
+									</div>
+									<div class="empty_table_center">
+										<img src="images/no_tasks.png" class="img-fluid">
+										<div class="empty_text">
+											No tasks
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-6 m_t_30">
+								<div class="box_shadow column_2">
+									<div class="title">
+										Company Pipeline 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a> 
+									</div>
+									<div class="empty_table_center">
+										<img src="images/company_pipeline.png" class="img-fluid">
+										<div class="empty_text">
+											Your pipeline is empty
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row column_width_2">
+							<div class="col-12 col-sm-6 m_t_30">
+								<div class="box_shadow column_3">
+									<div class="title">
+										Closing Targets 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a> 
+									</div>
+									<div class="empty_table_center_2">
+										<img src="images/calendar.png" class="img-fluid">
+										<div class="empty_text">
+											Closing targets list is empty
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-6 m_t_30">
+								<div class="box_shadow column_3">
+									<div class="title">
+										Marketing ROI 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a> 
+									</div>
+									<div class="empty_table_center_2">
+										<img src="images/marketing.png" class="img-fluid">
+										<div class="empty_text">
+											Waiting on leads
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row column_width_3">
+							<div class="col-12 col-sm-6 m_t_30 column_4">
+								<div class="box_shadow ">
+									<div class="title">
+										My team 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a> 
+									</div>
+									<div class="empty_table_center">
+										<img src="images/my_team.png" class="img-fluid">
+										<div class="empty_text">
+											No productivity data
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-6 column_4">
+								<div class="">
+									<div class="box_shadow m_t_30">
+										<div class="title">
+											Finance 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a> 
+										</div>
+										<div class="empty_table_center_3">
+											<img src="images/finance.png" class="img-fluid">
+											<div class="empty_text">
+												No financial data
+											</div>
+										</div>
+									</div>
+									<div class="box_shadow m_t_30">
+										<div class="title">
+											Revenue target 
+										<a href="#">
+											<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+										</a> 
+										</div>
+										<div class="empty_table_center_4 justify-center">
+											<img src="images/alert-circle.svg" alt="alert-circle"/>
+											<div class="empty_text">
+												No financial goals
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-4 col-md-4 col-lg-3 m_t_30">
+					<div class="box_shadow column">
+						<div class="title">
+							Activity Feed 
+							<a href="#">
+								<img src="images/box_arrow.png" align="right" class="img-fluid" /> 
+							</a>
+						</div>
+						<div class="empty_table_center_5">
+							<img src="images/activity.png" class="img-fluid">
+							<div class="empty_text">
+								Waiting for activity
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main> <!-- /content -->
+
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		if ($(window).width() >= 767) {
+		// Select and loop the container element of the elements you want to equalise
+			$('.full_width').each(function(){  
+			  
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.column', this).each(function(){
+			    
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			      highestBox = $(this).height(); 
+			    }
+			  
+			  });  
+			        
+			  // Set the height of all those children to whichever was highest 
+			  $('.column',this).height(highestBox);
+			                
+			}); 
+
+			$('.column_width').each(function(){  
+			  
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.column_2', this).each(function(){
+			    
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			      highestBox = $(this).height(); 
+			    }
+			  
+			  });  
+			        
+			  // Set the height of all those children to whichever was highest 
+			  $('.column_2',this).height(highestBox);
+			                
+			}); 
+
+			$('.column_width_2').each(function(){  
+			  
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.column_3', this).each(function(){
+			    
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			      highestBox = $(this).height(); 
+			    }
+			  
+			  });  
+			        
+			  // Set the height of all those children to whichever was highest 
+			  $('.column_3',this).height(highestBox);
+			                
+			}); 
+
+			$('.column_width_3').each(function(){  
+			  
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.column_4', this).each(function(){
+			    
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			      highestBox = $(this).height(); 
+			    }
+			  
+			  });  
+			        
+			  // Set the height of all those children to whichever was highest 
+			  $('.column_4',this).height(highestBox);
+			                
+			}); 
+		}
+	});
+</script>
+</html>

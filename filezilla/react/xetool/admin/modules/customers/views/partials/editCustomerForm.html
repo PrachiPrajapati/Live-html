@@ -1,0 +1,333 @@
+<div class="Form_Details newCustomerField">
+  <div class="row m-b-20">
+    <div class="col-sm-12">
+      <label class="pageTitle">Edit Customer</label>
+    </div>
+  </div>
+  <div class="panel panel-default" style="margin-bottom:6px;">
+    <div class="panel-heading">
+      <div class="panel-title">Customer Info</div>
+    </div>
+    <div class="panel-body">
+      <div class="flexRow">
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="First Name">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.first_name" class="form-control" placeholder="First Name"
+              required>
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="Last Name">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.last_name" class="form-control" placeholder="Last Name"
+              required>
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default">
+            <label class="control-label">
+              <xe-translate text-value="Contact Number">
+              </xe-translate>
+            </label>
+            <input type="text" name="contact" ng-model="editCustomerData.contact_no" id="c_num" autocomplete="off"
+              placeholder="Contact Number" class="form-control" numbers-only="numbers-only">
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default">
+            <label class="control-label">
+              <xe-translate text-value="Company">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.company_name" class="form-control" placeholder="Company">
+          </div>
+        </div>
+        <div class="flexCol" ng-hide="storeDepSection">
+          <div class="form-group form-group-default">
+            <label class="control-label">
+              <xe-translate text-value="Company URL">
+              </xe-translate>
+            </label>
+            <input type="url" ng-model="editCustomerData.company_url" class="form-control"
+              placeholder="Company URL(http://example.com)" ng-blur="validateEditUrl()">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default" style="margin-bottom:6px;" ng-hide="storeDepSection">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <xe-translate text-value="Billing Address">
+        </xe-translate>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="flexRow">
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="Addr">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.billing_address_1" class="form-control" placeholder="Address1"
+              required>
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default">
+            <label class="control-label">
+              <xe-translate text-value="Address">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.billing_address_2" class="form-control" placeholder="Address2"
+              required>
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="City">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.billing_city" class="form-control" placeholder="City"
+              required>
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="Zip">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.billing_zip" class="form-control" placeholder="******"
+              required>
+          </div>
+        </div>
+        <div class="flexCol form-group">
+          <div class="q-r-products-container" ng-click="resetBillingCountrySearchField()">
+            <span class="q-r-dropdown-star" style="right: 10px">*</span>
+            <label class="control-label q-r-dropdown-btn-label">
+              <xe-translate text-value="Country">
+              </xe-translate>
+            </label>
+            <div class="btn-group" style="width:100%;display:flex;">
+              <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown">
+                {{ editCustomerData.billing_country }}
+              </button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                <li>
+                  <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="billingCountrySearch.value">
+                </li>
+                <li>
+                  <ul class="quote-drop-down" ng-class="{'quote-drop-down-scroll':countryList.length > 5}" style="padding: 12px 0;">
+                    <li ng-repeat="country in countryList | filter:billingCountrySearch.value" ng-click="onEditBillingCountrySelected(country)">
+                      <a href="" style="color:#333;">
+                          {{ country.countries_name }}
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flexCol form-group">
+          <div class="q-r-products-container" ng-click="resetBillingStateSearchField()">
+            <span class="q-r-dropdown-star" style="right: 10px">*</span>
+            <label class="control-label q-r-dropdown-btn-label">
+              <xe-translate text-value="State">
+              </xe-translate>
+            </label>
+            <div class="btn-group" style="width:100%;display:flex;">
+              <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown" ng-disabled="editCustomerData.billing_country == 'Select'">
+                {{ editCustomerData.billing_state }}
+              </button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="height: 64px;" ng-disabled="editCustomerData.billing_country == 'Select'">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                <li>
+                  <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="billingStateSearch.value">
+                </li>
+                <li>
+                  <ul class="quote-drop-down" ng-class="{'quote-drop-down-scroll':editBillingStateList.length > 5}" style="padding: 12px 0;">
+                    <li ng-repeat="state in editBillingStateList | filter:billingStateSearch.value" ng-click="onEditBillingStateSelected(state)">
+                      <a href="" style="color:#333;">
+                          {{ state.state_name }}
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default" style="margin-bottom:6px;">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel-title">
+            <xe-translate text-value="Shipping Address">
+            </xe-translate>
+          </div>
+          <div class="checkbox-inline checkbox check-info pull-right" style="margin:0;position:relative;top:-5px;" ng-hide="storeDepSection">
+            <input type="checkbox" id="edit_is_checked" ng-model="editSameAsBillingAddress.is_checked"
+              ng-change="onEditSameAsBillingAddClicked(editSameAsBillingAddress.is_checked)">
+            <label for="edit_is_checked">
+              <xe-translate text-value="Same As Billing Address">
+              </xe-translate>
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-8">
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="flexRow">
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="Addr">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.shipping_address_1" class="form-control"
+              placeholder="Address1" required>
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default">
+            <label class="control-label">
+              <xe-translate text-value="Address">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.shipping_address_2" class="form-control"
+              placeholder="Address2" required>
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="City">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.shipping_city" class="form-control" placeholder="City"
+              required>
+          </div>
+        </div>
+        <div class="flexCol">
+          <div class="form-group form-group-default required">
+            <label class="control-label">
+              <xe-translate text-value="Zip">
+              </xe-translate>
+            </label>
+            <input type="text" ng-model="editCustomerData.shipping_zip" class="form-control" placeholder="******"
+              required>
+          </div>
+        </div>
+        <div class="flexCol form-group">
+          <div class="q-r-products-container" ng-click="resetShippingCountrySearchField()">
+            <span class="q-r-dropdown-star" style="right: 10px">*</span>
+            <label class="control-label q-r-dropdown-btn-label">
+              <xe-translate text-value="Country">
+              </xe-translate>
+            </label>
+            <div class="btn-group" style="width:100%;display:flex;">
+              <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown">
+                {{ editCustomerData.shipping_country }}
+              </button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                <li>
+                  <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="shippingCountrySearch.value">
+                </li>
+                <li>
+                  <ul class="quote-drop-down" ng-class="{'quote-drop-down-scroll':countryList.length > 5}" style="padding: 12px 0;">
+                    <li ng-repeat="country in countryList | filter:shippingCountrySearch.value" ng-click="onEditShippingCountrySelected(country)">
+                      <a href="" style="color:#333;">
+                          {{ country.countries_name }}
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flexCol form-group">
+          <div class="q-r-products-container" ng-click="resetShippingStateSearchField()">
+            <span class="q-r-dropdown-star" style="right: 10px">*</span>
+            <label class="control-label q-r-dropdown-btn-label">
+              <xe-translate text-value="State">
+              </xe-translate>
+            </label>
+            <div class="btn-group" style="width:100%;display:flex;">
+              <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown" ng-disabled="editCustomerData.shipping_country == 'Select'">
+                {{ editCustomerData.shipping_state }}
+              </button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="height: 64px;" ng-disabled="editCustomerData.shipping_country == 'Select'">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                <li>
+                  <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="shippingStateSearch.value">
+                </li>
+                <li>
+                  <ul class="quote-drop-down" ng-class="{'quote-drop-down-scroll':editShippingStateList.length > 5}" style="padding: 12px 0;">
+                    <li ng-repeat="state in editShippingStateList | filter:shippingStateSearch.value" ng-click="onEditShippingStateSelected(state)">
+                      <a href="" style="color:#333;">
+                          {{ state.state_name }}
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default" style="margin-bottom:0px;background:transparent;border:0;">
+    <div class="panel-body" style="padding:15px 0;">
+      <div class="row">
+        <div class="col-sm-12 text-right">
+          <button type="reset" class="btn btn-danger" ng-click="cancelEditCustomer()">Cancel</button>
+          <button type="submit" class="btn btn-primary" ng-click="saveEditCustomer()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="preloader-trans" ng-show="editCustomerPreloader">
+    <div class="page-loader">
+      <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+      <span>
+        <xe-translate text-value="Please wait"></xe-translate>...
+      </span>
+    </div>
+  </div>
+</div>

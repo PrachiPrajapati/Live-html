@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Events</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Events" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle-17" x="0" y="0" width="44" height="44"></rect>
+            <g id="Group-6" transform="translate(3.666667, 3.666667)">
+                <rect id="Rectangle" stroke="#FFFFFF" stroke-width="0.834167501" x="0" y="3.69623656" width="36.3709677" height="32.9704301" rx="2.06989247"></rect>
+                <path d="M14.7849462,18.4811828 L21.5860215,18.4811828 C23.3824315,18.4811828 24.8387097,19.937461 24.8387097,21.733871 C24.8387097,23.530281 23.3824315,24.9865591 21.5860215,24.9865591 L14.7849462,24.9865591 C12.9885362,24.9865591 11.5322581,23.530281 11.5322581,21.733871 C11.5322581,19.937461 12.9885362,18.4811828 14.7849462,18.4811828 Z" id="Rectangle" stroke="#2C3846" stroke-width="0.55" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <polygon id="Rectangle" stroke="#2C3846" stroke-width="0.55" fill="#FFFFFF" fill-rule="nonzero" points="17.4462366 18.4811828 18.9247312 18.4811828 20.9946237 22.7688172 15.542386 22.7688172"></polygon>
+                <rect id="Rectangle" stroke="#2C3846" stroke-width="0.55" fill="#47EBC6" fill-rule="nonzero" x="11.6801075" y="26.0215054" width="13.0107527" height="9.91182796"></rect>
+                <polygon id="Rectangle" stroke="#2C3846" stroke-width="0.55" fill="#F5F8FC" fill-rule="nonzero" points="7.68817204 21.733871 28.6827957 21.733871 27.2043011 27.6478495 9.16666667 27.6478495"></polygon>
+                <polygon id="Star" stroke="#333333" stroke-width="0.55" fill="#47EBC6" fill-rule="nonzero" points="18.1854839 25.7997312 16.8819278 26.4850511 17.1308849 25.0335201 16.0762859 24.0055403 17.5337059 23.7937648 18.1854839 22.4731183 18.8372618 23.7937648 20.2946818 24.0055403 19.2400828 25.0335201 19.4890399 26.4850511"></polygon>
+                <circle id="Oval" stroke="#2C3846" stroke-width="0.55" fill="#F5F8FC" fill-rule="nonzero" cx="18.1854839" cy="14.4892473" r="2.95698925"></circle>
+                <path d="M2.06989247,3.69623656 L34.3010753,3.69623656 C35.4442452,3.69623656 36.3709677,4.62295899 36.3709677,5.76612903 L36.3709677,9.46236559 L36.3709677,9.46236559 L0,9.46236559 L0,5.76612903 C0,4.62295899 0.926722426,3.69623656 2.06989247,3.69623656 Z" id="Rectangle-Copy-6" stroke="#FFFFFF" stroke-width="0.834167501"></path>
+                <rect id="Rectangle" fill="#F5F8FC" fill-rule="nonzero" x="7.68817204" y="0" width="2.3655914" height="7.09677419" rx="1.1827957"></rect>
+                <rect id="Rectangle-Copy-7" fill="#F5F8FC" fill-rule="nonzero" x="26.3172043" y="0" width="2.3655914" height="7.09677419" rx="1.1827957"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

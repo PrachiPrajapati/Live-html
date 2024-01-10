@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/intergation.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" class="js/custom.js"></script>
+</head>
+<body>
+
+	<main class="content bg_skyblue" role="content">
+		<section class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<a class="navbar-brand" href="#">
+							<img src="images/logo.png" class="img-fluid height_37" />
+						</a>
+
+						<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+								<li class="nav-item active">
+									<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Pipeline</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Proposals</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Lenders</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Partners</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Campaigns</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Reports</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Tasks</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Finance</a>
+								</li>
+							</ul>
+							<form class="form-inline my-2 my-lg-0">
+								<img src="images/bell.png" class="img-fluid m_r_15" />
+								<span class="notification_dot"></span>
+								<img src="images/user.png" class="img-fluid width_36" />
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</section>
+		<nav class="navbar navbar-expand-lg navbar-light left_top_menu">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto sidenav" id="navAccordion">
+					<div class="sidebar_title">Settings</div>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<img src="images/file-text.png" class="img-fluid">
+							Company Profile
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<img src="images/file-text.png" class="img-fluid">Plan & Billing
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Company Directory</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Commissions</a>
+					</li>
+					<li class="nav-item active">
+						<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems1" aria-controls="collapseSubItems1" aria-expanded="false"><img src="images/file-text-blue.png" class="img-fluid">Integrations</a>
+					</li>
+					<li class="nav-item">
+						<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">Workflow<span class="arrow"></span></a>
+						<ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Log viewer</a>
+					</li>
+					<li class="nav-item">
+						<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems3" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">User Management<span class="arrow"></span></a>
+						<ul class="nav-second-level collapse" id="collapseSubItems3" data-parent="#navAccordion">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Lead rotator</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="content-wrapper">
+			<div class="container-fluid p_35">
+				<div class="row integation_dropdown">
+					<div class="col-4 col-lg-4 col-xl-4">
+						<div class="sidebar_title">All integrations</div>
+					</div>
+					<div class="col-5 col-lg-4 col-xl-5">
+						<div class="form-group has-search">
+							<img src="images/search.png"  class="img-fluid form-control-feedback" />
+							<input type="text" class="form-control" placeholder="Search integration">
+						</div>
+					</div>
+					<div class="col-3 col-lg-4 col-xl-3">
+						<div class="content_center">
+							<div class="dropdown_label">
+								Categories
+							</div>
+							<div class="dropdown">
+								<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+									<ins>All</ins>
+									<span class="arrow"></span>
+								</button>
+								<div class="dropdown-menu radio">
+									<label class="dropdown-item">
+										<input class="jRadioDropdown" type="radio" value="001" name="alphabet">
+										<i>All</i>
+									</label>
+									<label class="dropdown-item">
+										<input class="jRadioDropdown" type="radio" value="002" name="alphabet">
+										<i>Active</i>
+									</label>
+									<label class="dropdown-item">
+										<input class="jRadioDropdown" type="radio" value="003" name="alphabet">
+										<i>Credit vendors</i>
+									</label>
+									<label class="dropdown-item">
+										<input class="jRadioDropdown" type="radio" value="004" name="alphabet">
+										<i>LOS vendors</i>
+									</label>
+									<label class="dropdown-item">
+										<input class="jRadioDropdown" type="radio" value="005" name="alphabet">
+										<i>E-sign vendors</i>
+									</label>
+									<label class="dropdown-item">
+										<input class="jRadioDropdown" type="radio" value="006" name="alphabet">
+										<i>Loan pricing vendors</i>
+									</label>
+									<label class="dropdown-item">
+										<input class="jRadioDropdown" type="radio" value="007" name="alphabet">
+										<i>Others</i>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="scroll_body relative">
+					<div class="row center_page">
+						<div class="col-12">
+							<div class="text-center">
+								<img src="images/empty_intergation.png" class="img-fluid" />
+								<div class="empty_intergation">No results found</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main> <!-- /content -->
+</body>
+
+<script type="text/javascript">
+	// Change the button text & add active class
+$('.jRadioDropdown').change(function() {
+	var dropdown = $(this).closest('.dropdown');
+	var thislabel = $(this).closest('label');
+
+	dropdown.find('label').removeClass('active');
+	if( $(this).is(':checked') ) {
+		thislabel.addClass('active');
+		dropdown.find('ins').html( thislabel.text() );
+	}
+
+});    
+
+//Add tabindex on labels
+$('label.dropdown-item').each(function (index, value){
+	$(this).attr('tabindex', 0 );
+	$(this).find('input').attr('tabindex', -1 );
+});
+
+//Add keyboard navigation
+$('label.dropdown-item').keypress(function(e){
+	if((e.keyCode ? e.keyCode : e.which) == 13){
+		$(this).trigger('click');
+	}
+});
+	$(document).ready(function(){
+		if ($(window).width() >= 767) {
+		// Select and loop the container element of the elements you want to equalise
+			$('.scroll_body').each(function(){  
+			  
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.desp', this).each(function(){
+			    
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			      highestBox = $(this).height(); 
+			    }
+			  
+			  });  
+			        
+			  // Set the height of all those children to whichever was highest 
+			  $('.desp',this).height(highestBox);
+			                
+			}); 
+			$('.scroll_body').each(function(){  
+			  
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.img_text', this).each(function(){
+			    
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			      highestBox = $(this).height(); 
+			    }
+			  
+			  });  
+			        
+			  // Set the height of all those children to whichever was highest 
+			  $('.img_text',this).height(highestBox);
+			                
+			}); 
+		}
+	});
+	$(document).ready(function() {
+
+	$("#modalform").validate({
+		rules: {
+			company_name: "required",
+			server_name : "required",
+			site_name : "required",
+			user_name : "required",
+			password : "required",
+			authorization_key : "required",
+			org_code : "required"
+		},
+		messages: {
+			company_name: "Please enter a valid company website",
+			server_name : "Please enter a valid server name",
+			site_name : "Please enter a valid site name",
+			user_name : "Please enter a valid phone number",
+			password : "Please enter a password",
+			authorization_key : "Please enter a valid authorization key",
+			org_code : "Please enter a valid org code"
+		},
+        submitHandler: function(form) {
+        	form.submit();
+        }
+
+    });
+    $("#modal_form").validate({
+		rules: {
+			company_id: "required",
+			compaign_id : "required"
+		},
+		messages: {
+			company_id: "Please enter a valid company ID",
+			compaign_id : "Please enter a valid compaign ID"
+		},
+        submitHandler: function(form) {
+        	form.submit();
+        }
+
+    });
+    $("#twillio_form").validate({
+		rules: {
+			account_sid: "required",
+			auth_token : "required"
+		},
+		messages: {
+			account_sid: "Please enter a valid Account SID",
+			auth_token : "Please enter a valid Auth Token"
+		},
+        submitHandler: function(form) {
+        	form.submit();
+        }
+
+    });
+    $("#hello_form").validate({
+		rules: {
+			sign_api_key: "required"
+		},
+		messages: {
+			sign_api_key: "Please enter a valid Sign Api Key"
+		},
+        submitHandler: function(form) {
+        	form.submit();
+        }
+
+    });
+    $("#docu_form").validate({
+		rules: {
+			client_id: "required",
+			client_secret: "required",
+			impersonated_id: "required"
+		},
+		messages: {
+			client_id: "Please enter a valid client ID",
+			client_secret: "Please enter a valid client secret",
+			impersonated_id: "Please enter a valid impersonated user id"
+		},
+        submitHandler: function(form) {
+        	form.submit();
+        }
+
+    });
+    $("#attom_form").validate({
+		rules: {
+			attom_key: "required"
+		},
+		messages: {
+			attom_key: "Please enter a valid Attom API Key"
+		},
+        submitHandler: function(form) {
+        	form.submit();
+        }
+    });
+    $("#zillow_form").validate({
+		rules: {
+			zillow_web: "required"
+		},
+		messages: {
+			zillow_web: "Please enter a valid Zillow Web Service ID (zws-id)"
+		},
+        submitHandler: function(form) {
+        	form.submit();
+        }
+    });
+    $("#meridian_form").validate({
+		rules: {
+			smart_name: "required",
+			smart_api: "required",
+			smart_interface: "required"
+		},
+		messages: {
+			smart_name: "Please enter a valid Smart API user name",
+			smart_api: "Please enter a valid Smart API password",
+			smart_interface: "Please enter a valid Smart API Interface Identifier (For Production)"
+		},
+        submitHandler: function(form) {
+        	form.submit();
+        }
+
+    });
+	$('form :input[type="submit"]').prop('disabled', true);
+	$('form input[type="text"]').keyup(function() {
+		if($(this).val() != '') {
+			$('form :input[type="submit"]').prop('disabled', false).removeClass('disable_btn').addClass('default_btn');
+		}
+	});
+});
+</script>
+</html>

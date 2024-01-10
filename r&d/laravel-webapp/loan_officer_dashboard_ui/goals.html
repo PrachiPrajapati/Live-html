@@ -1,0 +1,2881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.css"> 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/custom_daterpicker.css">
+    <link rel="stylesheet" type="text/css" href="css/input_tag.css">
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/switch.css">
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="js/custom_datepicker.js"></script>
+    <script type="text/javascript" class="js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.js"></script>
+<!--     <script type="text/javascript" src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script> -->
+     <script type="text/javascript" src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.10/js/dataTables.checkboxes.min.js"></script>
+<!-- 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.1/css/select.dataTables.min.css"> -->
+<link rel="stylesheet" type="text/css" href="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.10/css/dataTables.checkboxes.css">
+    <style>
+        table.dataTable tr th.select-checkbox.selected::after {
+            content: "✔";
+            margin-top: -7px;
+            margin-left: -4px;
+            text-align: center;
+            text-shadow: rgb(176, 190, 217) 1px 1px, rgb(176, 190, 217) -1px -1px, rgb(176, 190, 217) 1px -1px, rgb(176, 190, 217) -1px 1px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main class="content bg_skyblue" role="content">
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> -->
+                        <div class="toggle-wrap d-block d-lg-none top_menu" onclick="toggleMainmenu(this)">
+                            <span class="toggle-bar"></span>
+                        </div>
+                        <aside class="navbar-nav mr-auto sidenav d-block d-lg-none">
+                            <div class="navbar-collapse">
+                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Pipeline</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Proposals</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Lenders</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Partners</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Campaigns</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Reports</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="http://sigmadev.beta.loanofficer.ai/data-points">Data-Points</a>
+                                    </li>       
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Tasks</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Finance</a>
+                                    </li>
+                                </ul>
+                                <form class="form-inline my-2 my-lg-0">
+                                    <img src="images/bell.png" class="img-fluid m_r_15" />
+                                    <span class="notification_dot"></span>
+                                    <img src="images/user.png" class="img-fluid width_36 user" />
+                                    <ul class="dropdown-menu-profile">
+                                        <li class="dropdown-menu__item nav-item">
+
+                                            <a href="http://sigmadev.beta.loanofficer.ai/profile-page" data-bind="" class="dropdown-menu__link profilepage nav-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m9 10c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z" fill="#2849de" data-original="#000000" style="" stroke="#2849DE" stroke-width="1" class=""></path></g><g xmlns="http://www.w3.org/2000/svg"><path d="m8.5 21h-8c-.276 0-.5-.224-.5-.5v-4c0-2.481 2.019-4.5 4.5-4.5h6c.276 0 .5.224.5.5s-.224.5-.5.5h-6c-1.93 0-3.5 1.57-3.5 3.5v3.5h7.5c.276 0 .5.224.5.5s-.224.5-.5.5z" fill="#2849de" data-original="#000000" style="" class="" stroke="#2849DE" stroke-width="1"></path></g><g xmlns="http://www.w3.org/2000/svg"><g><path d="m17 20c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z" fill="#2849de" data-original="#000000" style="" class=""></path></g><g><path d="m17.797 24h-1.595c-.516 0-.944-.387-.995-.901l-.127-1.271c-.303-.135-.592-.303-.865-.503l-1.168.527c-.469.214-1.02.035-1.277-.412l-.797-1.381c-.258-.447-.136-1.011.282-1.312l1.029-.74c-.02-.155-.034-.327-.034-.507s.014-.353.034-.507l-1.029-.74c-.418-.301-.54-.865-.282-1.312l.797-1.381c.258-.447.806-.624 1.277-.412l1.168.527c.273-.2.562-.368.865-.503l.127-1.271c.051-.513.479-.9.995-.9h1.595c.516 0 .944.387.995.901l.127 1.271c.304.135.593.304.865.503l1.168-.527c.471-.211 1.02-.034 1.277.412l.797 1.381c.258.447.136 1.011-.282 1.312l-1.029.74c.02.155.034.327.034.507s-.014.353-.034.507l1.029.74c.418.301.54.865.282 1.312l-.796 1.38c-.258.446-.805.625-1.277.412l-1.168-.527c-.273.2-.562.368-.865.503l-.128 1.272c-.051.513-.479.9-.995.9zm-3.512-3.755c.115 0 .229.04.321.117.339.284.714.501 1.113.647.18.066.307.229.326.42l.158 1.571h1.595l.157-1.571c.019-.191.146-.354.326-.42.399-.146.774-.364 1.113-.647.148-.123.352-.151.526-.072l1.444.652.797-1.381-1.278-.918c-.156-.112-.233-.304-.201-.493.037-.211.067-.426.067-.648s-.03-.437-.067-.648c-.033-.189.045-.38.201-.493l1.278-.918-.797-1.381-1.444.651c-.175.079-.379.051-.527-.072-.338-.284-.712-.501-1.113-.647-.18-.066-.307-.229-.326-.42l-.157-1.574h-1.595l-.157 1.571c-.019.191-.146.354-.326.42-.399.146-.774.364-1.113.647-.147.123-.351.152-.526.072l-1.444-.652-.797 1.381 1.278.918c.156.112.233.304.201.493-.037.211-.067.426-.067.648s.03.437.067.648c.033.189-.045.38-.201.493l-1.278.918.797 1.381 1.444-.651c.066-.028.135-.042.205-.042z" fill="#2849de" data-original="#000000" style="" class=""></path></g></g></g></svg>
+                                                My Profile
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+
+                                            <a href="http://sigmadev.beta.loanofficer.ai/users" class="dropdown-menu__link profilepage nav-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+                                                Manage Users
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+
+                                            <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link nav-link-collapse"   href="#" id="hasSubItems" data-toggle="collapse" data-target="#settingcollapse" aria-controls="settingcollapse" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+                                                Company Settings <span class="arrow" style="margin-left: 35%;"></span>
+                                                <ul class="nav-second-level collapse" id="settingcollapse" data-parent="#navAccordion">
+                                                    <div class="sidebar_title">Settings</div>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">
+                                                            <img src="images/file-text.png" class="img-fluid">
+                                                            Company Profile
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">
+                                                            <img src="images/file-text.png" class="img-fluid">Plan & Billing
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Company Directory</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Commissions</a>
+                                                    </li>
+                                                    <li class="nav-item active">
+                                                        <a  class="nav-link nav-link-collapse"  href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems1" aria-controls="collapseSubItems1" aria-expanded="false"><img src="images/file-text-blue.png" class="img-fluid">Integrations</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a  class="nav-link nav-link-collapse"  href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">Workflow<span class="arrow"></span></a>
+                                                        <ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#">
+                                                                    <span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#">
+                                                                    <span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Log viewer</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a  class="nav-link nav-link-collapse"  href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems3" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">User Management<span class="arrow"></span></a>
+                                                        <ul class="nav-second-level collapse" id="collapseSubItems3" data-parent="#navAccordion">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#">
+                                                                    <span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#">
+                                                                    <span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Lead rotator</a>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/icons.svg#ico-logout">
+
+                                                    </use>
+                                                </svg>
+                                                Logout
+                                            </a>
+                                            <form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+                                                <input type="hidden" name="_token" value="hAEQjARbzqFjkrSBw1G0HJs8F3Zr3PvyXC53t3Y3">
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </aside>
+                        <a class="navbar-brand" href="#">
+                            <img src="images/logo.png" class="img-fluid height_37" />
+                        </a>
+                        <div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pipeline</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Proposals</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Lenders</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Partners</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Campaigns</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Reports</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://sigmadev.beta.loanofficer.ai/data-points">Data-Points</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Tasks</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Finance</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <img src="images/bell.png" class="img-fluid m_r_15" />
+                                <span class="notification_dot"></span>
+                                <img src="images/user.png" class="img-fluid width_36 user" />
+                                <ul class="dropdown-menu-profile">
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/profile-page" data-bind="" class="dropdown-menu__link profilepage nav-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m9 10c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z" fill="#2849de" data-original="#000000" style="" stroke="#2849DE" stroke-width="1" class=""></path></g><g xmlns="http://www.w3.org/2000/svg"><path d="m8.5 21h-8c-.276 0-.5-.224-.5-.5v-4c0-2.481 2.019-4.5 4.5-4.5h6c.276 0 .5.224.5.5s-.224.5-.5.5h-6c-1.93 0-3.5 1.57-3.5 3.5v3.5h7.5c.276 0 .5.224.5.5s-.224.5-.5.5z" fill="#2849de" data-original="#000000" style="" class="" stroke="#2849DE" stroke-width="1"></path></g><g xmlns="http://www.w3.org/2000/svg"><g><path d="m17 20c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z" fill="#2849de" data-original="#000000" style="" class=""></path></g><g><path d="m17.797 24h-1.595c-.516 0-.944-.387-.995-.901l-.127-1.271c-.303-.135-.592-.303-.865-.503l-1.168.527c-.469.214-1.02.035-1.277-.412l-.797-1.381c-.258-.447-.136-1.011.282-1.312l1.029-.74c-.02-.155-.034-.327-.034-.507s.014-.353.034-.507l-1.029-.74c-.418-.301-.54-.865-.282-1.312l.797-1.381c.258-.447.806-.624 1.277-.412l1.168.527c.273-.2.562-.368.865-.503l.127-1.271c.051-.513.479-.9.995-.9h1.595c.516 0 .944.387.995.901l.127 1.271c.304.135.593.304.865.503l1.168-.527c.471-.211 1.02-.034 1.277.412l.797 1.381c.258.447.136 1.011-.282 1.312l-1.029.74c.02.155.034.327.034.507s-.014.353-.034.507l1.029.74c.418.301.54.865.282 1.312l-.796 1.38c-.258.446-.805.625-1.277.412l-1.168-.527c-.273.2-.562.368-.865.503l-.128 1.272c-.051.513-.479.9-.995.9zm-3.512-3.755c.115 0 .229.04.321.117.339.284.714.501 1.113.647.18.066.307.229.326.42l.158 1.571h1.595l.157-1.571c.019-.191.146-.354.326-.42.399-.146.774-.364 1.113-.647.148-.123.352-.151.526-.072l1.444.652.797-1.381-1.278-.918c-.156-.112-.233-.304-.201-.493.037-.211.067-.426.067-.648s-.03-.437-.067-.648c-.033-.189.045-.38.201-.493l1.278-.918-.797-1.381-1.444.651c-.175.079-.379.051-.527-.072-.338-.284-.712-.501-1.113-.647-.18-.066-.307-.229-.326-.42l-.157-1.574h-1.595l-.157 1.571c-.019.191-.146.354-.326.42-.399.146-.774.364-1.113.647-.147.123-.351.152-.526.072l-1.444-.652-.797 1.381 1.278.918c.156.112.233.304.201.493-.037.211-.067.426-.067.648s.03.437.067.648c.033.189-.045.38-.201.493l-1.278.918.797 1.381 1.444-.651c.066-.028.135-.042.205-.042z" fill="#2849de" data-original="#000000" style="" class=""></path></g></g></g></svg>
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/users" class="dropdown-menu__link profilepage nav-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+                                            Manage Users
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+                                            Company Settings
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+                                        <a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                            <svg width="24" height="24">
+                                                <use xlink:href="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/icons.svg#ico-logout">
+
+                                                </use>
+                                            </svg>
+                                            Logout
+                                        </a>
+                                        <form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+                                            <input type="hidden" name="_token" value="hAEQjARbzqFjkrSBw1G0HJs8F3Zr3PvyXC53t3Y3">
+                                        </form>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <nav class="navbar navbar-expand-lg navbar-light left_top_menu">
+            <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                Settings <span class="arrow"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto sidenav" id="navAccordion" style="min-height: auto">
+                    <div class="sidebar_title">Reports</div>
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text-blue.png" class="img-fluid">My team<span class="arrow"></span></a>
+                        <ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Time</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Calls</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Revenue</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Leads</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Leaderboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">
+                                    <span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text-blue.png" class="img-fluid">Goals</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Revenue goal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Marketing ROI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Mailer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Loan Finance</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content-wrapper bg_skyblue team_time goals">
+            <div class="container-fluid">
+                <div class="top_body m_0">
+                    <div class="team_code row">
+                        <div class="m_t_auto m_b_auto col-12">
+                            <div class="content_center space_between">
+                                <div class="title">
+                                    <span>Goals</span>
+                                </div>
+                                <div class="content_center">
+                                    <div class="m_l_30 content_center">
+                                        <label style="white-space: nowrap;margin-right:10px;margin-bottom: 0">Report Dates</label>
+                                        <div class="date_selection light_blue content_center">
+                                            <img src="images/calendra.png" class="img-fluid m_r_15 reportrange">
+                                            <span class="reportrange m_r_10"> Jun 01, 2020 - Nov 30, 2020 </span>
+                                        </div>
+                                    </div>
+                                    <div class="m_l_30  content_center integation_dropdown">
+                                        <label style="margin-right: 10px;margin-bottom: 0;">Performance</label>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                <ins>All</ins>
+                                                <span class="arrow"></span>
+                                            </button>
+                                            <div class="dropdown-menu radio">
+                                                <label class="dropdown-item">
+                                                    <input class="jRadioDropdown" type="radio" value="001"
+                                                    name="alphabet_1">
+                                                    <i>Option 1</i>
+                                                </label>
+                                                <label class="dropdown-item">
+                                                    <input class="jRadioDropdown" type="radio" value="002"
+                                                    name="alphabet_1">
+                                                    <i>Option 2</i>
+                                                </label>
+                                                <label class="dropdown-item">
+                                                    <input class="jRadioDropdown" type="radio" value="003"
+                                                    name="alphabet_1">
+                                                    <i>Option 3</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m_l_30  content_center integation_dropdown">
+                                        <label style="margin-right: 10px;margin-bottom: 0;">Department</label>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                <ins>All</ins>
+                                                <span class="arrow"></span>
+                                            </button>
+                                            <div class="dropdown-menu radio">
+                                                <label class="dropdown-item">
+                                                    <input class="jRadioDropdown" type="radio" value="001"
+                                                    name="alphabet_1">
+                                                    <i>Option 1</i>
+                                                </label>
+                                                <label class="dropdown-item">
+                                                    <input class="jRadioDropdown" type="radio" value="002"
+                                                    name="alphabet_1">
+                                                    <i>Option 2</i>
+                                                </label>
+                                                <label class="dropdown-item">
+                                                    <input class="jRadioDropdown" type="radio" value="003"
+                                                    name="alphabet_1">
+                                                    <i>Option 3</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m_l_30 d-sm-none d-md-none d-lg-none d-xl-block">
+                                        <div class="form-group has-search">
+                                            <img src="images/search.png" class="img-fluid form-control-feedback"/>
+                                            <input type="text" class="form-control" placeholder="Search by name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="m_l_30 d-sm-block d-md-block d-lg-block d-xl-none">
+                                    <div class="form-group has-search m_t_20">
+                                        <img src="images/search.png" class="img-fluid form-control-feedback"/>
+                                        <input type="text" class="form-control" placeholder="Search by name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="m_t_20">
+                        <div class="content_center space_between">
+                            <div class="selected_number">
+                                <div id="value_selected" style="display:none;">
+                                    <span>Selected </span>
+                                    <span id="count-checked-checkboxes">/<span id="total"></span></span>
+                                    
+                                </div>
+                            </div>
+                            <div class="text_right">
+                                <button class="blue_btn" type="button" data-toggle="modal" data-target="#exampleModal">
+                                    Assign goals
+                                </button>
+                            </div>
+                        </div>
+                        <div class="m_t_20">
+                            <table id="goals_table" style='display:none;'>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                        </th>
+                                        <th>
+                                            <span>Name</span>
+                                        </th>
+                                        <th>
+                                            <span>Number of calls</span>
+                                        </th>
+                                        <th>
+                                            <span>Call time</span>
+                                        </th>
+                                        <th>
+                                            <span>Logged time</span>
+                                        </th>
+                                        <th>
+                                            <span>Submissions</span>
+                                        </th>
+                                        <th>
+                                            <span>Fundings</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                       <td width="20" align="left" >
+                                            1
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:78%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">78%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left">2</td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <div class="without_img">MK</div>
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:60%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">60%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left">3</td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Giana Press
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>      
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:90%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">90%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="purple_action top_action">Needs Attention</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:80%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">80%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left">
+
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="grey_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Tatiana Workman
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>         
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>         
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <div class="without_img">MK</div>
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:60%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">60%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>      
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:90%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">90%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="purple_action top_action">Needs Attention</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:80%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">80%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left">
+
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="grey_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Tatiana Workman
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>         
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>         
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <div class="without_img">MK</div>
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:60%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">60%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>      
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:90%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">90%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="purple_action top_action">Needs Attention</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:80%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">80%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left">
+
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="grey_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Tatiana Workman
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>         
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                         <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:78%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">78%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <div class="without_img">MK</div>
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:60%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">60%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Giana Press
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>      
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:90%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">90%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="purple_action top_action">Needs Attention</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:80%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">80%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left">
+
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="grey_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Tatiana Workman
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>         
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>         
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <div class="without_img">MK</div>
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:60%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">60%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>      
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:90%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">90%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="purple_action top_action">Needs Attention</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:80%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">80%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left">
+
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="grey_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Tatiana Workman
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>         
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>         
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <div class="without_img">MK</div>
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="green_action top_action">On Track</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:60%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">60%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>      
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:90%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">90%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left"></td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="profile_green_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="purple_action top_action">Needs Attention</div>
+                                                    <div class="profile_name">
+                                                        Madelyn Westervelt
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:70%"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:80%"></div>
+                                                </div>
+                                                <div class="progess-bar-value">80%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20" align="left">
+
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="profile_img">
+                                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/profile.png" class="img-fluid with_img">
+                                                    <div class="grey_dot"></div>
+                                                </div>
+                                                <div class="profile_details">
+                                                    <div class="blue_action top_action">Exceeded</div>
+                                                    <div class="profile_name">
+                                                        Tatiana Workman
+                                                    </div>
+                                                    <div class="profile_desgination text_left">
+                                                        Loan Officer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                        <td>         
+                                            <div class="content_center">
+                                                <div class="progress">
+                                                    <div class="progress-notassigned">
+                                                        not assigned
+                                                    </div>
+                                                </div>
+                                                <div class="progess-bar-value"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content custom_modal">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title">Assign goals</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+                <div class="desp m_tb_10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis diam posuere turpis cum erat pellentesque a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </div>
+                <form class="form-horizontal" action="#" method="POST" id="modalform">
+                    <div class="row m_b_15">
+                        <div class="col-12 col-sm-12">
+                            <label>Assign goal to</label>
+                            <div class="ui form">
+                                <div class="inline field">
+                                    <select multiple="multiple" class="ui fluid search dropdown_goals" 
+                                    id="lead_sources" name="lead_sources">
+                                    <option value="0">All lead sources</option>
+                                    <option value="1">Repeat Customer</option>
+                                    <option value="2">Facebook</option>
+                                    <option value="3">Google</option>
+                                    <option value="4">Mailers</option>
+                                    <option value="5">XFR</option>
+                                    <option value="6">Zillow</option>
+                                    <option value="7">Referrals</option>
+                                    <option value="8">MSA</option>
+                                    <option value="9">FHA</option>
+                                    <option value="10">Rate table</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m_b_15">
+                    <div class="col-12 col-sm-6">
+                        <label>Daily number of calls</label>
+                        <input type="text" name="server_name" class="input_text">
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label>Monthly submissions</label>
+                        <input type="text" name="site_name" class="input_text">
+                    </div>
+                </div>
+                <div class="row m_b_15">
+                    <div class="col-12 col-sm-6">
+                        <label>Daily call time</label>
+                        <input type="text" name="user_name" class="input_text">
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label>Monthly fundings</label>
+                        <input type="text" name="password" class="input_text">
+                    </div>
+                </div>
+                <div class="row m_b_15">
+                    <div class="col-12 col-sm-6">
+                        <label>Daily logged time</label>
+                        <input type="text" name="authorization_key" class="input_text">
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="content_center space_between m_t_30">
+                            <label class="m_b_0">Allow manual entry</label>
+                            <label class="switch text_right m_b_0">
+                                <input type="checkbox" class="name"  name="name" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 align_center">
+                        <input class="common_btn default_btn" type="submit" value="Create">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="creategoal" tabindex="-1" role="dialog" aria-labelledby="creategoal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom_modal_2">
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title">Create new goal</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                        <div class="desp m_tb_10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis diam posuere turpis cum erat pellentesque a. 
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal" action="#" method="POST" id="modalform"> 
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Daily number of calls</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="site_name" class="input_text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Daily call time</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="site_name" class="input_text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Daily logged time</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="site_name" class="input_text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Monthly submissions</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="site_name" class="input_text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Monthly fundings</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="site_name" class="input_text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="content_center space_between">
+                                <label class="m_b_0">Allow manual entry</label>
+                                <label class="switch text_right m_b_0">
+                                    <input type="checkbox" class="name"  name="name" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 align_center">
+                            <input class="common_btn default_btn" type="submit" value="Create">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="multiplegoal" tabindex="-1" role="dialog" aria-labelledby="multiplegoal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom_modal_2">
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title">Edit Goals</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                        <div class="count_number">
+                            For <strong>1/50</strong>
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal" action="#" method="POST" id="modalform">
+                    <div class="row m_t_30">
+                        <div class="col-12 col-sm-6">
+                            <div class="old_value">Current</div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="old_value">New</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <label>Daily number of calls</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div class="old_value">Multiple</div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="text" name="site_name" class="input_text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <label>Daily call time</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div class="old_value">Multiple</div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="text" name="site_name" class="input_text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <label>Daily call time</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div class="old_value">Multiple</div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="text" name="site_name" class="input_text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <label>Monthly submissions</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div class="old_value">Multiple</div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="text" name="site_name" class="input_text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <label>Monthly fundings</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div class="old_value">Multiple</div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="text" name="site_name" class="input_text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 align_center">
+                            <input class="common_btn default_btn" type="submit" value="Apply">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+//        $("#value_selected").hide();
+//        $.fn.rowCount = function() {
+//            return $('tr .checkbox_custom', $(this).find('tbody')).length;
+//        };
+//        var rowctr = $('#goals_table').rowCount();
+//        //rowctr =rowctr+1;
+//        var $checkboxes = $('#goals_table tr input[type="checkbox"]');
+//        $checkboxes.change(function(){
+//            var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
+//            // var tmpcount = countCheckedCheckboxes -1;
+//            //     if (tmpcount == rowctr ) {
+//            //         if($(this.checked)){
+//            //             countCheckedCheckboxes = tmpcount;
+//            //         }
+//            //         else{
+//            //             countCheckedCheckboxes = tmpcount-1;
+//            //         }
+//            //     }
+//            $('#count-checked-checkboxes').text(countCheckedCheckboxes);
+//            $("#value_selected").show();
+//        });
+//        $('#total').text(rowctr);
+    });
+    $('.progress-bar').hover(function () {
+            $('.progress-bar').tooltip({
+                title: '<div class="">' +
+                '<div class="tooltip_title_2">Daily</div>'+
+                '<div class="content_center m_t_10">'+
+                '<div class="color_filled blue_filled">'+
+                '</div>'+
+                '<div>'+
+                '<div class="chart_value_2">'+
+                'Number of calls' +
+                '</div>' +
+                '<div class="chart_expenses_2">'+
+                '60 <span>/100</span>' +
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>',
+                html:true,
+                placement:'top'
+            });
+        });
+    $('.dropdown_goals').dropdown({
+        label: {
+            duration: 0,
+        },
+        debug: true,
+        performance: true,
+    });
+    function setEqualContainer() {
+        setTimeout(function () {
+            var highestBox = 0;
+            // Select and loop the elements you want to equalise
+            highestBox = $('.team_time').height();
+            console.log('height box ' + highestBox);
+
+            // Set the height of all those children to whichever was highest
+            $('.sidenav').css({'height': highestBox + 'px'});
+        }, 100);
+    }
+
+    setEqualContainer();
+
+    function toggleMainmenu(e) {
+        e.classList.toggle("active");
+        document.querySelector("aside").classList.toggle("active");
+    }
+    // Change the button text & add active class
+    $('.jRadioDropdown').change(function() {
+        var dropdown = $(this).closest('.dropdown');
+        var thislabel = $(this).closest('label');
+
+        dropdown.find('label').removeClass('active');
+        if( $(this).is(':checked') ) {
+            thislabel.addClass('active');
+            dropdown.find('ins').html( thislabel.text() );
+        }
+
+    });    
+
+//Add tabindex on labels
+$('label.dropdown-item').each(function (index, value){
+    $(this).attr('tabindex', 0 );
+    $(this).find('input').attr('tabindex', -1 );
+});
+
+//Add keyboard navigation
+$('label.dropdown-item').keypress(function(e){
+    if((e.keyCode ? e.keyCode : e.which) == 13){
+        $(this).trigger('click');
+    }
+});
+function toggleMainmenu(e) {
+    e.classList.toggle("active");
+    document.querySelector("aside").classList.toggle("active");
+}
+$(document).ready(function(){
+
+    $('.user').click(function (e) {
+        e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').toggle();
+    });
+    $('.top_menu').click(function (e) {
+        e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').hide();
+        $('.nav-second-level').addClass('collapse').removeClass('show');
+    });
+
+    var goals_table = $('#goals_table').DataTable({
+        "pageLength": 10,
+        "dom": 'rt<"bottom right"ip><"clear">',
+        // 'columnDefs': [{
+        //     'orderable': false,
+        //     'className': 'select-checkbox',
+        //     'targets': 0
+        // }],
+        select: {
+            style: 'multi+shift',
+            selector: 'td:first-child'
+        },
+        language: {
+            paginate: {
+                next: '<img src="../svg/loanofficer/dashboard/right_arrow.png">',
+                previous: '<img src="../svg/loanofficer/dashboard/left_arrow.png">'
+            }
+        },
+        "infoCallback": function( settings, start, end, max, total, pre ) {
+            return "Showing " + start +" - "+ end + " of " + total;
+        },
+        'columnDefs': [
+            {
+                'targets': 0,
+                'checkboxes': true
+            }
+        ],
+        'order': [[1, 'asc']]
+    });
+
+    $('#goals_table').fadeIn('slow', function(){
+        bindcheckboxclick();
+    });
+    $('table.dataTable').fadeIn('slow', function(){
+        bindcheckboxclick();
+    });
+    $('#goals_table').DataTable().draw();
+
+    //jQuery to bind the checkbox clicks
+    bindcheckboxclick();
+
+    function bindcheckboxclick() {
+        goals_table.on("click", "th.select-checkbox", function () {
+            //console.log('th.select');
+            if ($("th.select-checkbox").hasClass("selected")) {
+                goals_table.rows().deselect();
+                $("th.select-checkbox").removeClass("selected");
+            } else {
+                goals_table.rows().select();
+                $("th.select-checkbox").addClass("selected");
+            }
+            calculateTotalSelected();
+
+        }).on("select deselect", function () {
+            //console.log("Some selection or deselection going on");
+            if (goals_table.rows({selected: true}).count() !== goals_table.rows().count()) {
+                $("th.select-checkbox").removeClass("selected");
+            } else {
+                $("th.select-checkbox").addClass("selected");
+            }
+            calculateTotalSelected();
+        });
+    }
+
+    //jQuery to display the number of selected records againsts the checkboxes
+    function calculateTotalSelected() {
+        var selected_row_cnt = goals_table.rows('.selected').data().length;
+        var total_row_cnt = goals_table.rows().data().length;
+
+        if(selected_row_cnt == 0) {
+            $("#value_selected").hide();
+        } else {
+            $("#value_selected").show();
+        }
+        $('#count-checked-checkboxes').html();
+        $('#count-checked-checkboxes').html(selected_row_cnt);
+        $('#total').html();
+        $('#total').html(total_row_cnt);
+    }
+//   var goals_table = $('#goals_table').DataTable( {
+//        "scrollY":        "600px",
+//        "scrollCollapse": true,
+//        "pageLength": 25,
+//        "dom": 'rt<"bottom right"ip><"clear">',
+//        "aaSorting": [],
+//        aoColumnDefs: [
+//            {
+//                bSortable: false,
+//                aTargets: [ 0 ]
+//            }
+//        ],
+//        language: {
+//            paginate: {
+//                next: '<img src="images/right_arrow.png">',
+//                previous: '<img src="images/left_arrow.png">'
+//            }
+//        },
+//        "infoCallback": function( settings, start, end, max, total, pre ) {
+//            return "Showing " + start +" - "+ end + " of " + total;
+//        }
+//    });
+//    $("#selectall").click(function () {
+//        if($(this).prop('checked') == false){
+//            goals_table.$("input[type='checkbox']").removeAttr("checked");
+//        }
+//        else{
+//            goals_table.$("input[type='checkbox']").attr('checked', $(this.checked));
+//        }
+//        //goals_table.$(".name").attr('checked', $(this.checked));
+//       // $('.name').attr('checked', this.checked);
+//    });
+//
+//    // if all checkbox are selected, then check the select all checkbox
+//    // and viceversa
+//    $(".name").click(function () {
+//
+//        if ($(".name").length == $(".name:checked").length) {
+//            $("#selectall").attr("checked", "checked");
+//        } else {
+//            $("#selectall").removeAttr("checked");
+//        }
+//    });
+});
+
+// jQuery.noconfict();
+// jQuery(document).ready(function($){
+//         // add multiple select / deselect functionality
+      
+//     });
+</script>
+</html>

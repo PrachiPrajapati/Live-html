@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>LLAdmin</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet">
+
+<!-- Morris Charts CSS -->
+<link href="css/plugins/morris.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="font-awesome-4.1.0/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<!-- *********************************************************
+		********************************************************* -->
+		<nav class="navbar navbar-inverse side_nav_mobile" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo">
+				<img src="images/logo.png" width="157" height="44" alt="logo" />
+			</div>
+            <!-- Top Menu Items -->
+            
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav-menu">
+				<li class="active">
+					<a href="index.html"> 
+						<i class="fa fa-lg fa-home"></i> Dashboard
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-check-square"></i> Approval Centre
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-file"></i> Magazine Advertising
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-wrench"></i> Manage Businesses
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-map-marker"></i> Manage Events
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-certificate"></i> Manage Offers
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-list-alt"></i> Manage Jobs/CVs
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-users"></i> Manage Website Users
+					</a>
+				</li>
+				<li class="approve_center">
+					<a href="#"> 
+						<i class="fa fa-lg fa-key"></i> Admin Management
+					</a>
+					<ul>
+                            <li>
+                                <a href="#">Website Adverts</a>
+                            </li>
+                            <li>
+                                <a href="#">Website Categories</a>
+                            </li>
+                            <li>
+                                <a href="#">Account Types</a>
+                            </li>
+                        </ul>
+				</li>
+			</ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+		<!-- ************************************************************
+		************************************************************ -->
+		<div class="side-nav side_nav">
+			<div class="logo">
+				<img src="images/logo.png" width="157" height="44" alt="logo" />
+			</div>
+			<div class="user_profile">
+				<div class="dropdown"> 
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/user.png" width="61" height="61" alt="user" /></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                    </ul>
+                </div> 
+				<div class="user_info">
+					<p>Welcome</p>
+					<span>Sarah Pulleyn <a href="#">(Log Out)</a></span>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<ul class="nav navbar-nav side-nav-menu">
+				<li class="active">
+					<a href="index.html"> 
+						<i class="fa fa-lg fa-home"></i> Dashboard
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-check-square"></i> Approval Centre
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-file"></i> Magazine Advertising
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-wrench"></i> Manage Businesses
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-map-marker"></i> Manage Events
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-certificate"></i> Manage Offers
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-list-alt"></i> Manage Jobs/CVs
+					</a>
+				</li>
+				<li>
+					<a href="#"> 
+						<i class="fa fa-lg fa-users"></i> Manage Website Users
+					</a>
+				</li>
+				<li class="approve_center">
+					<a href="#"> 
+						<i class="fa fa-lg fa-key"></i> Admin Management
+					</a>
+					<ul>
+                            <li>
+                                <a href="#">Website Adverts</a>
+                            </li>
+                            <li>
+                                <a href="#">Website Categories</a>
+                            </li>
+                            <li>
+                                <a href="#">Account Types</a>
+                            </li>
+                        </ul>
+				</li>
+			</ul>
+			<!-- <ul class="admin_mgmt side-nav-menu">
+				<li><a href="#"> <i class="fa fa-lg fa-key"></i>
+						Approval Centre
+				</a></li>
+				<li><a href="#"> Magazine Advertising </a></li>
+				<li><a href="#"> Magazine Advertising </a></li>
+				<li><a href="#"> Magazine Advertising </a></li>
+			</ul> -->
+		</div>
+		<div class="panel_outer_wrapper">
+			<div class="row panel_header col-lg-12">
+				<div class="panel">
+					<p>
+						<span>Important alerts</span> This is where you can put an
+						important note to all of the web staff
+					</p>
+					<div class="panel_header_icons">
+						<a href="#" class="fa-stack stack-blue"><i
+							class="fa fa-circle fa-stack-2x"></i><i
+							class="fa fa-cog fa-stack-1x fa-inverse"></i></a> <a href="#"
+							class="fa-stack stack-pink"><i
+							class="fa fa-circle fa-stack-2x"></i><i
+							class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></a>
+					</div>
+				</div>
+			</div>
+			<div id="page-wrapper">
+
+
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-3 col-md-6">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-xs-9">
+											<div class="huge">2131</div>
+											<div class="panel_comment">Active Businesses</div>
+										</div>
+										<div class="col-xs-3">
+											<i class="fa fa-comments fa-5x"></i>
+										</div>
+
+									</div>
+								</div>
+								<a href="#">
+									<div class="panel-footer">
+										<span class="pull-left">View all businesses</span> <span
+											class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+										<div class="clearfix"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-xs-9">
+											<div class="huge">172</div>
+											<div class="panel_comment">Active Events</div>
+										</div>
+										<div class="col-xs-3">
+											<i class="fa fa-flag fa-5x"></i>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<div class="panel-footer panel-pink">
+										<span class="pull-left">View all events</span> <span
+											class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+										<div class="clearfix"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-xs-9">
+											<div class="huge">241</div>
+											<div class="panel_comment">Active Offers / Promotions</div>
+										</div>
+										<div class="col-xs-3">
+											<i class="fa fa-certificate fa-5x"></i>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<div class="panel-footer">
+										<span class="pull-left">View all offers</span> <span
+											class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+										<div class="clearfix"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="panel panel-primary">
+								<div class="panel-heading active_jobs">
+									<div class="row">
+										<div class="col-xs-9">
+											<div class="huge">72</div>
+											<div class="panel_comment">Active Jobs</div>
+										</div>
+										<div class="col-xs-3">
+											<!-- <img src="images/active_jobs.png" width="117" height="130" alt="img" /> -->
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<div class="panel-footer panel-pink">
+										<span class="pull-left">View all job listings</span> <span
+											class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+										<div class="clearfix"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- /.row -->
+
+					<div class="row">
+						<div class="col-lg-7">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										To Approve<i class="fa fa-refresh"></i>
+									</h3>
+									<div class="clear"></div>
+								</div>
+								<div class="panel-body">
+									<ul class="list-group">
+										<li class="list-group-item"><img
+											src="images/future_img.png" width="89" height="80" alt="img"
+											class="col-lg-2" />
+											<div class="future_ren_list col-lg-10">
+												<h6>
+													Future Renovations<span> have changed their
+														description</span>
+												</h6>
+												<p>
+													Details: Lorem ipsum dolor sit amet, consectetur
+													adipisicing elit, sed do eiusmod tempor incididunt ut
+													labore et dolore magna aliqua. Ut enim ad minim llamco
+													laboris nisi ut <a href="#">(read more)</a>
+												</p>
+												<div class="list_choice">
+													<a href="" class="panel-green"><i class="fa fa-check"></i>
+														Approve</a> <a href="" class="panel-red"><i
+														class="fa fa-times"></i> Reject</a>
+												</div>
+											</div>
+											<div class="clear"></div></li>
+										<li class="list-group-item"><img
+											src="images/future_img.png" width="89" height="80" alt="img"
+											class="col-lg-2" />
+											<div class="future_ren_list col-lg-10">
+												<h6>
+													Future Renovations<span> have added a new offer</span>
+												</h6>
+												<p>
+													Details: Lorem ipsum dolor sit amet, consectetur
+													adipisicing elit, sed do eiusmod tempor incididunt ut
+													labore et dolore magna aliqua. Ut enim ad minim llamco
+													laboris nisi ut <a href="#">(read more)</a>
+												</p>
+												<div class="list_choice">
+													<a href="" class="panel-green"><i class="fa fa-check"></i>
+														Approve</a> <a href="" class="panel-red"><i
+														class="fa fa-times"></i> Reject</a>
+												</div>
+											</div>
+											<div class="clear"></div></li>
+										<li class="list-group-item"><img
+											src="images/future_img.png" width="89" height="80" alt="img"
+											class="col-lg-2" />
+											<div class="future_ren_list col-lg-10">
+												<h6>
+													Future Renovations<span> have posted a new job</span>
+												</h6>
+												<p>
+													Details: Lorem ipsum dolor sit amet, consectetur
+													adipisicing elit, sed do eiusmod tempor incididunt ut
+													labore et dolore magna aliqua. Ut enim ad minim llamco
+													laboris nisi ut <a href="#">(read more)</a>
+												</p>
+												<div class="list_choice">
+													<a href="" class="panel-green"><i class="fa fa-check"></i>
+														Approve</a> <a href="" class="panel-red"><i
+														class="fa fa-times"></i> Reject</a>
+												</div>
+											</div>
+											<div class="clear"></div></li>
+
+									</ul>
+									<div class="text-right approve_view_all">
+										<a href="#">View all pending approvals <i
+											class="fa fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">New Advert Subimssions</h3>
+								</div>
+								<div class="panel-body">
+									<ul class="list-group">
+										<li class="list-group-item"><img
+											src="images/djc_img.png" width="82" height="82" alt="img"
+											class="col-lg-2" />
+											<div class="future_ren_list col-lg-9 new-advert">
+												<h6>
+													DJC Plumbing <span> have booked an advert </span>
+												</h6>
+												<p>Advert specification: 1/4 page, back page. • Cost:
+													£225.00</p>
+												<a href="#" class="panel-green"><i
+													class="fa fa-arrow-circle-right"></i> View Details</a>
+											</div>
+											<div class="clear"></div></li>
+										<li class="list-group-item"><img
+											src="images/djc_img.png" width="82" height="82" alt="img"
+											class="col-lg-2" />
+											<div class="future_ren_list col-lg-9 new-advert">
+												<h6>
+													DJC Plumbing <span> have booked an advert</span>
+												</h6>
+												<p>Advert specification: 1/4 page, back page. • Cost:
+													£225.00</p>
+												<a href="#" class="panel-green"><i
+													class="fa fa-arrow-circle-right"></i> View Details</a>
+											</div>
+											<div class="clear"></div></li>
+										<li class="list-group-item"><img
+											src="images/djc_img.png" width="82" height="82" alt="img"
+											class="col-lg-2" />
+											<div class="future_ren_list col-lg-9 new-advert">
+												<h6>
+													DJC Plumbing <span> have booked an advert</span>
+												</h6>
+												<p>Advert specification: 1/4 page, back page. • Cost:
+													£225.00</p>
+												<a href="#" class="panel-green"><i
+													class="fa fa-arrow-circle-right"></i> View Details</a>
+											</div>
+											<div class="clear"></div></li>
+
+									</ul>
+									<div class="text-right approve_view_all">
+										<a href="#">View all Advert submissions <i
+											class="fa fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.row -->
+
+				</div>
+				<!-- /.container-fluid -->
+
+			</div>
+		</div>
+		<!-- /#page-wrapper -->
+		<div class="clear"></div>
+
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- jQuery Version 1.11.0 -->
+	<script src="js/jquery-1.11.0.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Morris Charts JavaScript -->
+	<script src="js/plugins/morris/raphael.min.js"></script>
+	<script src="js/plugins/morris/morris.min.js"></script>
+	<script src="js/plugins/morris/morris-data.js"></script>
+
+</body>
+
+</html>

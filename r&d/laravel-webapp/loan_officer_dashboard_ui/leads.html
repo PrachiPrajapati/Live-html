@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile_menu.css">
+	<link rel="stylesheet" type="text/css" href="css/general_menu.css">
+	<link rel="stylesheet" type="text/css" href="css/custom_daterpicker.css">
+	<link rel="stylesheet" type="text/css" href="css/chart.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script type="text/javascript" src="js/custom_datepicker.js"></script>
+	<script type="text/javascript" class="js/custom.js"></script>
+</head>
+<body>
+
+	<main class="content bg_skyblue" role="content">
+		<section class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button> -->
+						<div class="toggle-wrap d-block d-lg-none top_menu" onclick="toggleMainmenu(this)">
+							<span class="toggle-bar"></span>
+						</div>
+						<aside class="navbar-nav mr-auto sidenav d-block d-lg-none">
+							<div class="navbar-collapse">
+								<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+									<li class="nav-item active">
+										<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Pipeline</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Proposals</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Lenders</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Partners</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Campaigns</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Reports</a>
+									</li>
+									<li class="nav-item">
+		                                <a class="nav-link" href="http://sigmadev.beta.loanofficer.ai/data-points">Data-Points</a>
+		                            </li>		
+									<li class="nav-item">
+										<a class="nav-link" href="#">Tasks</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Finance</a>
+									</li>
+								</ul>
+								<form class="form-inline my-2 my-lg-0">
+									<img src="images/bell.png" class="img-fluid m_r_15" />
+									<span class="notification_dot"></span>
+									<img src="images/user.png" class="img-fluid width_36 user" />
+									<ul class="dropdown-menu-profile">
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/profile-page" data-bind="" class="dropdown-menu__link profilepage nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m9 10c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z" fill="#2849de" data-original="#000000" style="" stroke="#2849DE" stroke-width="1" class=""></path></g><g xmlns="http://www.w3.org/2000/svg"><path d="m8.5 21h-8c-.276 0-.5-.224-.5-.5v-4c0-2.481 2.019-4.5 4.5-4.5h6c.276 0 .5.224.5.5s-.224.5-.5.5h-6c-1.93 0-3.5 1.57-3.5 3.5v3.5h7.5c.276 0 .5.224.5.5s-.224.5-.5.5z" fill="#2849de" data-original="#000000" style="" class="" stroke="#2849DE" stroke-width="1"></path></g><g xmlns="http://www.w3.org/2000/svg"><g><path d="m17 20c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z" fill="#2849de" data-original="#000000" style="" class=""></path></g><g><path d="m17.797 24h-1.595c-.516 0-.944-.387-.995-.901l-.127-1.271c-.303-.135-.592-.303-.865-.503l-1.168.527c-.469.214-1.02.035-1.277-.412l-.797-1.381c-.258-.447-.136-1.011.282-1.312l1.029-.74c-.02-.155-.034-.327-.034-.507s.014-.353.034-.507l-1.029-.74c-.418-.301-.54-.865-.282-1.312l.797-1.381c.258-.447.806-.624 1.277-.412l1.168.527c.273-.2.562-.368.865-.503l.127-1.271c.051-.513.479-.9.995-.9h1.595c.516 0 .944.387.995.901l.127 1.271c.304.135.593.304.865.503l1.168-.527c.471-.211 1.02-.034 1.277.412l.797 1.381c.258.447.136 1.011-.282 1.312l-1.029.74c.02.155.034.327.034.507s-.014.353-.034.507l1.029.74c.418.301.54.865.282 1.312l-.796 1.38c-.258.446-.805.625-1.277.412l-1.168-.527c-.273.2-.562.368-.865.503l-.128 1.272c-.051.513-.479.9-.995.9zm-3.512-3.755c.115 0 .229.04.321.117.339.284.714.501 1.113.647.18.066.307.229.326.42l.158 1.571h1.595l.157-1.571c.019-.191.146-.354.326-.42.399-.146.774-.364 1.113-.647.148-.123.352-.151.526-.072l1.444.652.797-1.381-1.278-.918c-.156-.112-.233-.304-.201-.493.037-.211.067-.426.067-.648s-.03-.437-.067-.648c-.033-.189.045-.38.201-.493l1.278-.918-.797-1.381-1.444.651c-.175.079-.379.051-.527-.072-.338-.284-.712-.501-1.113-.647-.18-.066-.307-.229-.326-.42l-.157-1.574h-1.595l-.157 1.571c-.019.191-.146.354-.326.42-.399.146-.774.364-1.113.647-.147.123-.351.152-.526.072l-1.444-.652-.797 1.381 1.278.918c.156.112.233.304.201.493-.037.211-.067.426-.067.648s.03.437.067.648c.033.189-.045.38-.201.493l-1.278.918.797 1.381 1.444-.651c.066-.028.135-.042.205-.042z" fill="#2849de" data-original="#000000" style="" class=""></path></g></g></g></svg>
+												My Profile
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/users" class="dropdown-menu__link profilepage nav-link">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+												Manage Users
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+
+											<a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#settingcollapse" aria-controls="settingcollapse" aria-expanded="false">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+												Company Settings <span class="arrow" style="margin-left: 35%;"></span>
+												<ul class="nav-second-level collapse" id="settingcollapse" data-parent="#navAccordion">
+													<div class="sidebar_title">Settings</div>
+													<li class="nav-item">
+														<a class="nav-link" href="#">
+															<img src="images/file-text.png" class="img-fluid">
+															Company Profile
+														</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="#">
+															<img src="images/file-text.png" class="img-fluid">Plan & Billing
+														</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Company Directory</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Commissions</a>
+													</li>
+													<li class="nav-item active">
+														<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems1" aria-controls="collapseSubItems1" aria-expanded="false"><img src="images/file-text-blue.png" class="img-fluid">Integrations</a>
+													</li>
+													<li class="nav-item">
+														<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">Workflow<span class="arrow"></span></a>
+														<ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+																</a>
+															</li>
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+																</a>
+															</li>
+														</ul>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Log viewer</a>
+													</li>
+													<li class="nav-item">
+														<a 	class="nav-link nav-link-collapse" 	href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems3" aria-controls="collapseSubItems2" aria-expanded="false"><img src="images/file-text.png" class="img-fluid">User Management<span class="arrow"></span></a>
+														<ul class="nav-second-level collapse" id="collapseSubItems3" data-parent="#navAccordion">
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">All</span>
+																</a>
+															</li>
+															<li class="nav-item">
+																<a class="nav-link" href="#">
+																	<span class="nav-link-text"><img src="images/file-text.png" class="img-fluid">Other</span>
+																</a>
+															</li>
+														</ul>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href=""><img src="images/file-text.png" class="img-fluid">Lead rotator</a>
+													</li>
+												</ul>
+											</a>
+										</li>
+										<li class="dropdown-menu__item nav-item">
+											<a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+												<svg width="24" height="24">
+													<use xlink:href="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/icons.svg#ico-logout">
+
+													</use>
+												</svg>
+												Logout
+											</a>
+											<form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+												<input type="hidden" name="_token" value="hAEQjARbzqFjkrSBw1G0HJs8F3Zr3PvyXC53t3Y3">
+											</form>
+										</li>
+									</ul>
+								</form>
+							</div>
+						</aside>
+						<a class="navbar-brand" href="#">
+							<img src="images/logo.png" class="img-fluid height_37" />
+						</a>
+						<div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+								<li class="nav-item active">
+									<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Pipeline</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Proposals</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Lenders</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Partners</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Campaigns</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Reports</a>
+								</li>
+								<li class="nav-item">
+	                                <a class="nav-link" href="http://sigmadev.beta.loanofficer.ai/data-points">Data-Points</a>
+	                            </li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Tasks</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Finance</a>
+								</li>
+							</ul>
+							<form class="form-inline my-2 my-lg-0">
+								<img src="images/bell.png" class="img-fluid m_r_15" />
+								<span class="notification_dot"></span>
+								<img src="images/user.png" class="img-fluid width_36 user" />
+								<ul class="dropdown-menu-profile">
+									<li class="dropdown-menu__item nav-item">
+
+										<a href="http://sigmadev.beta.loanofficer.ai/profile-page" data-bind="" class="dropdown-menu__link profilepage nav-link">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m9 10c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z" fill="#2849de" data-original="#000000" style="" stroke="#2849DE" stroke-width="1" class=""></path></g><g xmlns="http://www.w3.org/2000/svg"><path d="m8.5 21h-8c-.276 0-.5-.224-.5-.5v-4c0-2.481 2.019-4.5 4.5-4.5h6c.276 0 .5.224.5.5s-.224.5-.5.5h-6c-1.93 0-3.5 1.57-3.5 3.5v3.5h7.5c.276 0 .5.224.5.5s-.224.5-.5.5z" fill="#2849de" data-original="#000000" style="" class="" stroke="#2849DE" stroke-width="1"></path></g><g xmlns="http://www.w3.org/2000/svg"><g><path d="m17 20c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z" fill="#2849de" data-original="#000000" style="" class=""></path></g><g><path d="m17.797 24h-1.595c-.516 0-.944-.387-.995-.901l-.127-1.271c-.303-.135-.592-.303-.865-.503l-1.168.527c-.469.214-1.02.035-1.277-.412l-.797-1.381c-.258-.447-.136-1.011.282-1.312l1.029-.74c-.02-.155-.034-.327-.034-.507s.014-.353.034-.507l-1.029-.74c-.418-.301-.54-.865-.282-1.312l.797-1.381c.258-.447.806-.624 1.277-.412l1.168.527c.273-.2.562-.368.865-.503l.127-1.271c.051-.513.479-.9.995-.9h1.595c.516 0 .944.387.995.901l.127 1.271c.304.135.593.304.865.503l1.168-.527c.471-.211 1.02-.034 1.277.412l.797 1.381c.258.447.136 1.011-.282 1.312l-1.029.74c.02.155.034.327.034.507s-.014.353-.034.507l1.029.74c.418.301.54.865.282 1.312l-.796 1.38c-.258.446-.805.625-1.277.412l-1.168-.527c-.273.2-.562.368-.865.503l-.128 1.272c-.051.513-.479.9-.995.9zm-3.512-3.755c.115 0 .229.04.321.117.339.284.714.501 1.113.647.18.066.307.229.326.42l.158 1.571h1.595l.157-1.571c.019-.191.146-.354.326-.42.399-.146.774-.364 1.113-.647.148-.123.352-.151.526-.072l1.444.652.797-1.381-1.278-.918c-.156-.112-.233-.304-.201-.493.037-.211.067-.426.067-.648s-.03-.437-.067-.648c-.033-.189.045-.38.201-.493l1.278-.918-.797-1.381-1.444.651c-.175.079-.379.051-.527-.072-.338-.284-.712-.501-1.113-.647-.18-.066-.307-.229-.326-.42l-.157-1.574h-1.595l-.157 1.571c-.019.191-.146.354-.326.42-.399.146-.774.364-1.113.647-.147.123-.351.152-.526.072l-1.444-.652-.797 1.381 1.278.918c.156.112.233.304.201.493-.037.211-.067.426-.067.648s.03.437.067.648c.033.189-.045.38-.201.493l-1.278.918.797 1.381 1.444-.651c.066-.028.135-.042.205-.042z" fill="#2849de" data-original="#000000" style="" class=""></path></g></g></g></svg>
+											My Profile
+										</a>
+									</li>
+									<li class="dropdown-menu__item nav-item">
+
+										<a href="http://sigmadev.beta.loanofficer.ai/users" class="dropdown-menu__link profilepage nav-link">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+											Manage Users
+										</a>
+									</li>
+									<li class="dropdown-menu__item nav-item">
+
+										<a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="20" height="20" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m499.953125 197.703125-39.351563-8.554687c-3.421874-10.476563-7.660156-20.695313-12.664062-30.539063l21.785156-33.886719c3.890625-6.054687 3.035156-14.003906-2.050781-19.089844l-61.304687-61.304687c-5.085938-5.085937-13.035157-5.941406-19.089844-2.050781l-33.886719 21.785156c-9.84375-5.003906-20.0625-9.242188-30.539063-12.664062l-8.554687-39.351563c-1.527344-7.03125-7.753906-12.046875-14.949219-12.046875h-86.695312c-7.195313 0-13.421875 5.015625-14.949219 12.046875l-8.554687 39.351563c-10.476563 3.421874-20.695313 7.660156-30.539063 12.664062l-33.886719-21.785156c-6.054687-3.890625-14.003906-3.035156-19.089844 2.050781l-61.304687 61.304687c-5.085937 5.085938-5.941406 13.035157-2.050781 19.089844l21.785156 33.886719c-5.003906 9.84375-9.242188 20.0625-12.664062 30.539063l-39.351563 8.554687c-7.03125 1.53125-12.046875 7.753906-12.046875 14.949219v86.695312c0 7.195313 5.015625 13.417969 12.046875 14.949219l39.351563 8.554687c3.421874 10.476563 7.660156 20.695313 12.664062 30.539063l-21.785156 33.886719c-3.890625 6.054687-3.035156 14.003906 2.050781 19.089844l61.304687 61.304687c5.085938 5.085937 13.035157 5.941406 19.089844 2.050781l33.886719-21.785156c9.84375 5.003906 20.0625 9.242188 30.539063 12.664062l8.554687 39.351563c1.527344 7.03125 7.753906 12.046875 14.949219 12.046875h86.695312c7.195313 0 13.421875-5.015625 14.949219-12.046875l8.554687-39.351563c10.476563-3.421874 20.695313-7.660156 30.539063-12.664062l33.886719 21.785156c6.054687 3.890625 14.003906 3.039063 19.089844-2.050781l61.304687-61.304687c5.085937-5.085938 5.941406-13.035157 2.050781-19.089844l-21.785156-33.886719c5.003906-9.84375 9.242188-20.0625 12.664062-30.539063l39.351563-8.554687c7.03125-1.53125 12.046875-7.753906 12.046875-14.949219v-86.695312c0-7.195313-5.015625-13.417969-12.046875-14.949219zm-152.160156 58.296875c0 50.613281-41.179688 91.792969-91.792969 91.792969s-91.792969-41.179688-91.792969-91.792969 41.179688-91.792969 91.792969-91.792969 91.792969 41.179688 91.792969 91.792969zm0 0" fill="#0000ff" data-original="#000000" style="" class=""></path></g></svg>
+											Company Settings
+										</a>
+									</li>
+									<li class="dropdown-menu__item nav-item">
+										<a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+											<svg width="24" height="24">
+												<use xlink:href="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/icons.svg#ico-logout">
+
+												</use>
+											</svg>
+											Logout
+										</a>
+										<form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+											<input type="hidden" name="_token" value="hAEQjARbzqFjkrSBw1G0HJs8F3Zr3PvyXC53t3Y3">
+										</form>
+									</li>
+								</ul>
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</section>
+		<nav class="navbar navbar-expand-lg navbar-light left_top_menu">
+			<button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				Settings <span class="arrow"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto sidenav" id="navAccordion" style="min-height: auto">
+					<div class="sidebar_title">Reports</div>
+					<li class="nav-item active">
+						<a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text-blue.png" class="img-fluid">My team<span class="arrow"></span></a>
+						<ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Time</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Calls</span>
+								</a>
+							</li>
+							<li class="nav-item active">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text-blue.png" class="img-fluid">Revenue</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Leads</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Leaderboard</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span class="nav-link-text"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Goals</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Revenue goal</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Marketing ROI</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Mailer</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/file-text.png" class="img-fluid">Loan Finance</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="content-wrapper bg_skyblue team_time">
+			<div class="container-fluid">
+				<div class="top_body m_0">
+					<div class="team_code row">
+						<div class="m_t_auto col-12">
+							<div class="content_center space_between">
+								<div class="title">
+									<span>My team’s Lead Performance</span>
+								</div>
+								<div class="content_center">
+									<div class="m_l_30 content_center">
+										<label style="white-space: nowrap;margin-right:10px;margin-bottom: 0">Report Dates</label>
+										<div class="date_selection light_blue content_center">
+											<img src="images/calendra.png" class="img-fluid m_r_15 reportrange">
+											<span class="reportrange m_r_10"> Jun 01, 2020 - Nov 30, 2020 </span>
+										</div>
+									</div>
+									<div class="m_l_30  content_center integation_dropdown">
+										<label style="margin-right: 10px;margin-bottom: 0;">Department</label>
+										<div class="dropdown">
+											<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+												<ins>All</ins>
+												<span class="arrow"></span>
+											</button>
+											<div class="dropdown-menu radio">
+												<label class="dropdown-item">
+													<input class="jRadioDropdown" type="radio" value="001" name="alphabet_1">
+													<i>Option 1</i>
+												</label>
+												<label class="dropdown-item">
+													<input class="jRadioDropdown" type="radio" value="002" name="alphabet_1">
+													<i>Option 2</i>
+												</label>
+												<label class="dropdown-item">
+													<input class="jRadioDropdown" type="radio" value="003" name="alphabet_1">
+													<i>Option 3</i>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="m_l_30">
+										<div class="form-group has-search">
+											<img src="images/search.png"  class="img-fluid form-control-feedback" />
+											<input type="text" class="form-control" placeholder="Search by Name">
+										</div>
+									</div>
+									<div class="m_l_30">
+										<button class="blue_btn">
+											Export to CSV
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 m_t_30">
+							<div class="title">
+								<span>Revenue</span>
+							</div>
+							<div id="lead" class="m_t_20" style="width:100%;height:250px;"></div>
+							<div class="content_center m_t_30 m_b_20">
+								<div class="content_center m_t_10 width_20p">
+									<div class="color_filled" style="background: #3FA2B8;"></div>
+									<div>
+										<div class="chart_value">Leads Taken</div>
+										<div class="chart_expenses">763</div>
+									</div>
+								</div>
+								<div class="content_center m_t_10 width_20p">
+									<div class="color_filled" style="background: #3F6FB8;"></div>
+									<div>
+										<div class="chart_value">Submissions</div>
+										<div class="chart_expenses">289</div>
+									</div>
+								</div>
+								<div class="content_center m_t_10 width_20p">
+									<div class="color_filled" style="background: #8A3FB8;"></div>
+									<div>
+										<div class="chart_value">Funded</div>
+										<div class="chart_expenses">256</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="m_t_30">
+						<table id="team_lead">
+							<thead>
+								<tr>
+									<th><span>Name</span></th>
+									<th><span>Leads Taken</span></th>
+									<th><span>Submissions</span></th>
+									<th><span>Funded</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+								<tr>
+									<td>Joseph Triyer</td>
+									<td>763</td>
+									<td>289</td>
+									<td>256</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+<script type="text/javascript">
+	function setEqualContainer() {
+		setTimeout(function () {
+			var highestBox = 0;
+			// Select and loop the elements you want to equalise
+			highestBox = $('.team_time').height();
+			console.log('height box ' + highestBox);
+
+			// Set the height of all those children to whichever was highest
+			$('.sidenav').css({'height': highestBox + 'px'});
+		}, 100);
+	}
+
+	setEqualContainer();
+
+	function toggleMainmenu(e) {
+		e.classList.toggle("active");
+		document.querySelector("aside").classList.toggle("active");
+	}
+	// Change the button text & add active class
+	$('.jRadioDropdown').change(function() {
+		var dropdown = $(this).closest('.dropdown');
+		var thislabel = $(this).closest('label');
+
+		dropdown.find('label').removeClass('active');
+		if( $(this).is(':checked') ) {
+			thislabel.addClass('active');
+			dropdown.find('ins').html( thislabel.text() );
+		}
+
+	});    
+
+//Add tabindex on labels
+$('label.dropdown-item').each(function (index, value){
+	$(this).attr('tabindex', 0 );
+	$(this).find('input').attr('tabindex', -1 );
+});
+
+//Add keyboard navigation
+$('label.dropdown-item').keypress(function(e){
+	if((e.keyCode ? e.keyCode : e.which) == 13){
+		$(this).trigger('click');
+	}
+});
+function toggleMainmenu(e) {
+	e.classList.toggle("active");
+	document.querySelector("aside").classList.toggle("active");
+}
+$(document).ready(function(){
+
+	$('.user').click(function (e) {
+		e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').toggle();
+    });
+	$('.top_menu').click(function (e) {
+		e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').hide();
+        $('.nav-second-level').addClass('collapse').removeClass('show');
+    });
+
+	$('#team_lead').DataTable( {
+		"scrollY":        "500px",
+         "scrollCollapse": true,  
+         "pageLength": 25,
+         "dom": 'rt<"bottom right"ip><"clear">',
+         language: {
+            paginate: {
+                next: '<img src="images/right_arrow.png">',
+                previous: '<img src="images/left_arrow.png">'
+            }
+        },
+        "infoCallback": function( settings, start, end, max, total, pre ) {
+            return "Showing " + start +" - "+ end + " of " + total;
+        }
+		//"pagingType": "full_numbers"
+		// "dom": 'rt<"bottom right"ip><"clear">',
+		// language: {
+		// 	paginate: {
+		// 		next: '<img src="images/right_arrow.png">',
+		// 		previous: '<img src="images/left_arrow.png">'
+		// 	}
+		// },
+		// "infoCallback": function( settings, start, end, max, total, pre ) {
+		// 	return "Showing " + start +" - "+ end + " of " + total;
+		// }
+	});
+});
+var d = new Date();
+var pointStart = d.getTime();
+Highcharts.setOptions({
+	global: {
+		useUTC: false
+	},
+	credits: {
+		enabled: false
+	},
+	colors: [
+		'#8A3FB8',
+		'#3FA2B8',
+		'#3F68B8'
+    ],
+    chart: {
+    	alignTicks: false,
+    	zoomType: 'x',
+    	type: 'line',
+    	//margin: [60, 25, 100, 90],
+    },
+    title: {
+    	text: '',
+    	align: 'left',
+    	margin: 10,
+    	x: 50,
+    	style: {
+    		fontWeight: 'bold',
+    		color: 'rgba(0,0,0,.9)'
+    	}
+    },
+    subtitle: {
+    	text: '',
+    	align: 'left',
+    	x: 52,
+    },
+    legend: {enabled: false},
+    plotOptions: {
+    	line: {
+    		lineWidth: 3,
+    		marker: {
+    			enabled: true,
+    			symbol: 'circle',
+    			radius: 5
+    		}
+    	},
+    },
+    xAxis: {
+    	title: {
+    		text: '',
+    		rotation: 0,
+    		textAlign: 'center',
+    		style: {
+    			color: 'rgba(0,0,0,.9)'
+    		}
+    	},
+    	labels: {
+    		style: {
+    			color: '#9FA3C0',
+    			fontSize: '12px',
+    			fontWeight: '300',
+    			fontFamily: '"Inter",serif'
+    		}
+    	},
+    	lineWidth: .5,
+    	lineColor: '#3F68B8',
+    	tickWidth: .5,
+    	tickLength: 6,
+    	tickColor: 'rgba(0,0,0,.75)'
+    },
+    yAxis: {
+    	minPadding: 0,
+    	maxPadding: 0,
+    	gridLineColor: 'rgba(204,204,204,.25)',
+    	gridLineWidth: 0,
+    	title: {
+    		text: '',
+    		rotation: 0,
+    		textAlign: 'right',
+    		style: {
+    			color: 'rgba(0,0,0,.9)',
+    		}
+    	},
+    	labels: {
+    		style: {
+    			color: '#9FA3C0',
+    			fontWeight: '300',
+    			fontFamily: '"Inter",serif',
+    			fontSize: '12px'
+    		}
+    	},
+    	lineWidth: .5,
+    	lineColor: 'rgba(0,0,0,.5)',
+    	tickWidth: .5,
+    	tickLength: 12,
+    	tickColor: 'rgba(0,0,0,.75)'
+    },
+    tooltip: {
+    	shared: true,
+    	useHTML: true,
+    	borderWidth: 0,
+    	backgroundColor: "rgba(255,255,255,0)",
+    	borderRadius: 0,
+    	shadow: false,
+    	formatter: function () {
+    		var html = '' +
+    		'<div class="chart revenue_graph">' +
+    		'<div class="content_center m_t_10">' +
+    		'<div class="color_filled" style="background: #3FA2B8;"></div>' +
+    		'<div>' +
+    		'<div class="chart_value">' +
+    		'Leads Taken' +
+    		'</div>' +
+    		'<div class="chart_expenses">' +
+    		this.points[0].y + 
+    		'</div>' +
+    		'</div>' +
+    		'</div>' +
+    		'<div class="content_center m_t_10">' +
+    		'<div class="color_filled" style="background-color:#3F6FB8"></div>' +
+    		'<div>' +
+    		'<div class="chart_value">' +
+    		'Submissions' +
+    		'</div>' +
+    		'<div class="chart_expenses">' +
+    		this.points[1].y + 
+    		'</div>' +
+    		'</div>' +
+    		'</div>' +
+    		'<div class="content_center m_t_10">' +
+    		'<div class="color_filled" style="background-color:#8A3FB8"></div>' +
+    		'<div>' +
+    		'<div class="chart_value">' +
+    		'Funded' +
+    		'</div>' +
+    		'<div class="chart_expenses">' +
+    		this.points[2].y + 
+    		'</div>' +
+    		'</div>' +
+    		'</div>' +
+    		'</div>';
+    		return html;
+    	}
+    },
+});
+
+var chart;
+var pointStart = Date.UTC(2020, 0, 1);
+$(function () {
+
+	$('#lead').highcharts({
+		chart: {type: 'line'},
+		title: {},
+		subtitle: {},
+		legend: {enabled: false},
+		plotOptions: {
+			series: {
+				pointStart: pointStart,
+				pointInterval: 24 * 3600 * 1000 * 30
+			}
+		},
+		xAxis: {
+			// min: Date.UTC(2020, 0, 0),
+			// max: Date.UTC(2020, 08, 1),
+                //allowDecimals: false,
+                type: 'datetime',
+                tickInterval: 24 * 3600 * 1000 * 30, //one day
+                labels: {
+                	rotation: 0,
+                	format: '{value:%b}'
+                },
+
+            },
+            yAxis: {}
+        });
+	chart = $('#lead').highcharts();
+
+
+	var jsonString = '[{ "date": "2019-10-01", "Leads_Taken": "200", "Submissions": "500" ,"Funded": "300"},{ "date": "2019-11-01", "Leads_Taken": "150", "Submissions": "450" ,"Funded": "250"},{ "date": "2019-12-01", "Leads_Taken": "100", "Submissions": "400" ,"Funded": "200"},{ "date": "2020-01-01", "Leads_Taken": "50", "Submissions": "350" ,"Funded": "150"},{ "date": "2020-02-01", "Leads_Taken": "200", "Submissions": "500" ,"Funded": "300"},{ "date": "2020-03-01", "Leads_Taken": "150", "Submissions": "450" ,"Funded": "250"},{ "date": "2020-04-01", "Leads_Taken": "100", "Submissions": "400" ,"Funded": "200"},{ "date": "2020-05-01", "Leads_Taken": "200", "Submissions": "500" ,"Funded": "300"},{ "date": "2020-06-01", "Leads_Taken": "150", "Submissions": "450" ,"Funded": "250"},{ "date": "2020-07-01", "Leads_Taken": "100", "Submissions": "400" ,"Funded": "200"},{ "date": "2020-08-01", "Leads_Taken": "50", "Submissions": "350" ,"Funded": "150"},{ "date": "2020-09-01", "Leads_Taken": "200", "Submissions": "500" ,"Funded": "300"},{ "date": "2020-10-01", "Leads_Taken": "150", "Submissions": "450" ,"Funded": "250"},{ "date": "2020-11-01", "Leads_Taken": "100", "Submissions": "400" ,"Funded": "200"},{ "date": "2020-12-01", "Leads_Taken": "200", "Submissions": "500" ,"Funded": "300"}]';
+
+	var myData = JSON.parse(jsonString);
+	var dataArray = [];
+	var dataArray_a = [];
+	var dataArray_b = [];
+
+	$.each(myData, function (i, obj) {
+            //console.log(obj.date);
+            var d = new Date(obj.date);
+            dataArray.push([Date.parse(d), parseInt(obj.Leads_Taken)]);
+            dataArray_a.push([Date.parse(d), parseInt(obj.Submissions)]);
+            dataArray_b.push([Date.parse(d), parseInt(obj.Funded)]);
+        });
+
+        // add first series values
+        chart.addSeries({
+        	data: dataArray
+        });
+
+        // add second   series values
+        chart.addSeries({
+        	data: dataArray_a
+        });
+
+        // add second   series values
+        chart.addSeries({
+        	data: dataArray_b
+        });
+    });
+</script>
+</html>

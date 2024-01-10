@@ -1,0 +1,203 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+             <div class="pull-right m-b-10">
+                <button class="btn btn-success" type="button" ng-click="editCustomer()">
+                    <i class="fa fa-edit">
+                    </i>
+                    <xe-translate text-value="Edit">
+                    </xe-translate>
+                </button>
+                <button class="btn btn-danger btn-cons" type="button" ng-click="deleteCustomer()">
+                    <i class="fa fa-trash-o">
+                    </i>
+                    <xe-translate text-value="Delete">
+                    </xe-translate>
+                </button>
+                <button class="btn btn-info" type="button" ng-click="backToCustomerListing()">
+                    <xe-translate text-value="Back">
+                    </xe-translate>
+                </button> 
+            </div> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div id="portlet-linear-color" class="panel panel-default">
+              <div class="panel-heading separator">
+                <div class="panel-title">
+                  <xe-translate text-value = "Customer Info">
+                  </xe-translate>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="prduct-details-section">
+                  <ul>
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "Name">
+                         </xe-translate>:
+                      </span>
+                      <span> {{userDetails[0].first_name}} {{ userDetails[0].last_name}} </span>
+                    </li>
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "Email Address">
+                         </xe-translate>:
+                      </span>
+                      <span> {{userDetails[0].email}} </span>
+                    </li>
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "Contact Number">
+                         </xe-translate>:
+                      </span>
+                      <span ng-if="userDetails[0].contact_no !== '123'"> {{userDetails[0].contact_no}} </span>
+                    </li>
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "Company">
+                         </xe-translate>:
+                      </span>
+                      <span> {{userDetails[0].company_name}} </span>
+                    </li>
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "Company URL">
+                         </xe-translate>:
+                      </span>
+                      <span class="word-break"><a href="{{userDetails[0].company_url}}" target="_blank"> {{userDetails[0].company_url}} </a></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>  
+        </div>
+        <div class="col-sm-4">
+            <div id="portlet-linear-color" class="panel panel-default">
+                <div class="panel-heading separator">
+                  <div class="panel-title justify-content">
+                     <xe-translate text-value = "Billing Address">
+                     </xe-translate>
+                  </div>
+                </div>
+                <div class="panel-body">
+                    <div class="prduct-details-section">
+                        <ul>
+                          <li>
+                            <span class="text-left">
+                               <xe-translate text-value = "Addr">
+                               </xe-translate>:
+                            </span> 
+                            <span> {{userDetails[0].billing_address_1}} </span>
+                          </li>
+                          <li>   
+                            <span class="text-left">
+                               <xe-translate text-value = "Address">
+                               </xe-translate>:
+                            </span>
+                            <span> {{userDetails[0].billing_address_2}} </span>
+                          </li>
+                          <li>   
+                            <span class="text-left">
+                               <xe-translate text-value = "City">
+                               </xe-translate>:
+                            </span>
+                            <span> {{userDetails[0].billing_city}} </span>
+                          </li>
+                          <li>   
+                            <span class="text-left">
+                               <xe-translate text-value = "State">
+                               </xe-translate>:
+                            </span>
+                            <span> {{userDetails[0].billing_state}} </span>
+                          </li>
+                          <li>   
+                            <span class="text-left">
+                               <xe-translate text-value = "Country">
+                               </xe-translate>:
+                            </span>
+                            <span> {{userDetails[0].billing_country}} </span>
+                          </li>
+                          <li>   
+                            <span class="text-left">
+                               <xe-translate text-value = "ZIP">
+                               </xe-translate>:
+                            </span>
+                            <span> {{userDetails[0].billing_zip}} </span>
+                          </li>  
+                        </ul>  
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div id="portlet-linear-color" class="panel panel-default">
+              <div class="panel-heading separator">
+                <div class="panel-title justify-content">
+                  <xe-translate text-value = "Shipping Address">
+                  </xe-translate>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="prduct-details-section">
+                  <ul> 
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "Addr">
+                         </xe-translate>:
+                      </span>
+                      <span> {{userDetails[0].shipping_address_1}} </span>
+                    </li>
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "Address">
+                         </xe-translate>:
+                      </span>
+                      <span> {{userDetails[0].shipping_address_2}} </span>
+                    </li>
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "City">
+                         </xe-translate>:
+                      </span>
+                      <span> {{userDetails[0].shipping_city}} </span>
+                    </li>
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "State">
+                         </xe-translate>:
+                      </span>
+                      <span> {{userDetails[0].shipping_state}} </span>
+                    </li>
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "Country">
+                         </xe-translate>:
+                      </span>
+                      <span> {{userDetails[0].shipping_country}} </span>
+                    </li>
+                    <li>
+                      <span class="text-left">
+                         <xe-translate text-value = "ZIP">
+                         </xe-translate>:
+                      </span>
+                      <span> {{userDetails[0].shipping_zip}} </span>
+                    </li>  
+                </ul>
+              </div>      
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="preloader-trans" ng-show="customerDetailsLoader">
+        <div class="page-loader">
+            <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress"/>
+            <span>
+                <xe-translate text-value="Please wait">
+                </xe-translate>
+                ...
+            </span>
+        </div>
+    </div>
+</div>

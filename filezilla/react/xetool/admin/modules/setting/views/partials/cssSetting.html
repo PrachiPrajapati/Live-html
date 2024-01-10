@@ -1,0 +1,40 @@
+<div class="panel-heading separator p-t-0">
+    <div class="panel-title">
+        <h4 class ="xe-panel-title pull-left">
+            <xe-translate text-value="Css Description">
+            </xe-translate>
+        </h4>
+        <i class="fa fa-info-circle ng-scope info-module-icon m-l-10" ng-click="showSettingsFaqDetails(14)">
+        </i>
+    </div>
+</div>
+<div class="panel-body m-t-20">
+    <form class="form-horizontal" role="form" autocomplete="off">
+        <div class="form-group">
+            <div class="form-group no-border no-margin">
+                <div class="col-sm-10">
+                    <div class="row">
+                        <div class="form-group form-group-default input-group nested-form-group w-full" pg-form-group>
+                            <label>
+                                <xe-translate text-value="Set your css">
+                                </xe-translate>
+                            </label>
+                            <textarea type="text" placeholder="Enter CSS"  style="width: 100%; height: 300px;"  ng-model="css.text">
+                            </textarea>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<div class="panel-footer wizard-ftr bg-white panel-footer-mg">
+    <button class="btn btn-sm btn-info pull-left m-r-10" ng-click="updateCssSetting()" ng-disabled="demoStatus">
+        <xe-translate text-value="Save">
+        </xe-translate>
+    </button>
+</div>
+<ng-include src="'modules/setting/doc/s14.html'">
+</ng-include>

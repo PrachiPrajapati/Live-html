@@ -1,0 +1,125 @@
+<div class="container-fluid" ng-init="init()" ng-controller="VendorsController">
+  <div class="vendorList" ng-show="isVendorListingPage">
+    <div class="row">
+      <div class="col-sm-12">
+        <label class="pageTitle">
+          <xe-translate text-value="Vendors List"></xe-translate>
+        </label>
+        <button class="btn btn-default btn-sm m-l-10" type="button" ng-click="addVendor()">
+          <xe-translate text-value="Add Vendor"></xe-translate>
+        </button>
+        <button class="btn btn-default btn-sm" type="button" ng-click="editVendor()"
+         ng-hide="vendorslist.length < 1" ng-disabled="fileCount == 0 || fileCount > 1 || demoStatus">
+          <xe-translate text-value="Edit"></xe-translate>
+        </button>
+        <button class="btn btn-default btn-sm" type="button" ng-click="deleteVendor()"
+         ng-hide="vendorslist.length < 1" ng-disabled="isDeleteBtnDisabled || demoStatus">
+          <xe-translate text-value="Delete"></xe-translate>
+        </button>
+      </div>
+    </div>
+    <div class="custom-table m-t-20">
+      <ul class="custom-table-head customer-head-content-manual" ng-hide="isShowNoVendorFound">
+        <li class="checkCol">
+          <div class="checkbox check-success customer-checkbox-heading">
+            <input type="checkbox" value="allChecked" ng-disabled="vendorslist.length < 1" id="allChecked"
+              ng-model="allChecked" ng-change="allCheckedClicked(allChecked)" />
+            <label for="allChecked"></label>
+          </div>
+        </li>
+        <li class="tColumns" ng-repeat="column in columnList" ng-show="true">
+          <xe-translate text-value="{{column}}">
+          </xe-translate>
+        </li>
+      </ul>
+      <div class="custom-table-body customer-scroll-content-manual">
+        <div class="custom-table-row customerList" ng-repeat="vendor in vendorslist">
+          <ul class="custom-table-content customer-body-content-manual">
+            <li class="checkCol">
+              <div class="checkbox check-success" style="margin:0px">
+                <input type="checkbox" value="{{ vendor.vendor_id }}" id="{{ vendor.vendor_id }}"
+                  ng-model="vendorChecked[$index]" ng-change="vendorSelected(vendorChecked[$index])" />
+                <label for="{{ vendor.vendor_id }}"></label>
+              </div>
+            </li>
+            <li class="tColumns">{{vendor.name}}</li>
+            <li class="tColumns">{{vendor.email}}</li>
+            <li class="tColumns">{{vendor.phone}}</li>
+            <li class="tColumns">{{vendor.vendor_fax}}</li>
+          </ul>
+          <div class="customer-body-content-hide-manual" ng-if="false" id="panel-{{$index}}">
+            <div class="row m-t-20 m-b-20">
+              <div class="col-sm-4">
+                <div class="panel panel-default" id="portlet-linear-color">
+                  <div class="panel-heading separator">
+                    <div class="panel-title">
+                      <xe-translate text-value="Customer Info">
+                      </xe-translate>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <div class="prduct-details-section">
+                      <ul>
+                        <li>
+                          <span class="text-left">
+                            <xe-translate text-value="Name">
+                            </xe-translate>:
+                          </span>
+                          <span>{{vendor.name}}</span>
+                        </li>
+                        <li>
+                          <span class="text-left">
+                            <xe-translate text-value="Email Address">
+                            </xe-translate>:
+                          </span>
+                          <span>{{vendor.email}}</span>
+                        </li>
+                        <li>
+                          <span class="text-left">
+                            <xe-translate text-value="Contact Number">
+                            </xe-translate>:
+                          </span>
+                          <span>{{vendor.phone}}</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-table" ng-show="isShowNoVendorFound && !vendorLoader">
+          <div class="custom-table-body quot-scroll-content-manual">
+            <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                <xe-translate text-value="No vendors found"></xe-translate>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="preloader-trans" ng-show="vendorLoader">
+        <div class="page-loader">
+          <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+          <span>
+            <xe-translate text-value="Please wait"></xe-translate>...
+          </span>
+        </div>
+      </div>
+    </div>
+    <div ng-show="isLoadMore" class="text-center m-t-20">
+      <button type="button" class="btn btn-default btn-sm btn-cons" ng-click="loadMore()" ng-disabled="isLoadMorePreloader">
+        <span>
+          <xe-translate text-value="Load More">
+          </xe-translate>
+        </span>
+      </button>
+      <img class="image-responsive-height demo-mw-30" src="assets/img/progress/progress-circle-master.svg"
+        alt="Progress" ng-show="isLoadMorePreloader" />
+    </div>
+  </div>
+  <ng-include src="'modules/vendors/views/partials/addVendorForm.html'" ng-show="isAddVendorPage">
+  </ng-include>
+  <ng-include src="'modules/vendors/views/partials/editVendorForm.html'" ng-show="isEditVendorPage">
+  </ng-include>
+</div>
+</div>

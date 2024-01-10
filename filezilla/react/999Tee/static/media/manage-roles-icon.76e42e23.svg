@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="64px" viewBox="0 0 32 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, 32.000000)">
+            <rect id="ViewBox" fill="#FFFFFF" opacity="0.165411086" x="0" y="0" width="32" height="32" rx="4"></rect>
+            <g id="user-success-circle(24x24)@1x" transform="translate(7.000000, 7.000000)">
+                <path d="M18,9 C18,9.918 17.865,10.809 17.604,11.646 C16.893,10.089 15.327,9 13.5,9 C11.016,9 9,11.016 9,13.5 C9,15.327 10.089,16.893 11.646,17.604 C10.809,17.865 9.918,18 9,18 C4.032,18 0,13.968 0,9 C0,4.032 4.032,0 9,0 C13.968,0 18,4.032 18,9 Z" id="Path" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M11.637,17.595 C10.08,16.884 9,15.318 9,13.5 C9,12.51 9.315,11.601 9.864,10.854 C9.576,10.818 9.288,10.8 9,10.8 C6.047982,10.8 3.518982,12.573 2.402982,15.111 C4.049982,16.884 6.389982,18 9,18 C9.918,18 10.8,17.865 11.637,17.595 Z" id="Path" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round"></path>
+                <path d="M10.008,10.656 L10.017,10.656 C10.512,10.044 11.178,9.558 11.934,9.279 C12.357,8.685 12.6,7.974 12.6,7.2 C12.6,5.211 10.989,3.6 9,3.6 C7.011,3.6 5.4,5.211 5.4,7.2 C5.4,9.189 7.011,10.8 9,10.8 C9.351,10.8 9.693,10.746 10.017,10.656" id="Path"></path>
+                <path d="M10.008,10.656 L10.017,10.656 C10.512,10.044 11.178,9.558 11.934,9.279 C12.357,8.685 12.6,7.974 12.6,7.2 C12.6,5.211 10.989,3.6 9,3.6 C7.011,3.6 5.4,5.211 5.4,7.2 C5.4,9.189 7.011,10.8 9,10.8 C9.351,10.8 9.693,10.746 10.017,10.656" id="Path" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13.5,18 C15.98526,18 18,15.98526 18,13.5 C18,11.01474 15.98526,9 13.5,9 C11.01474,9 9,11.01474 9,13.5 C9,15.98526 11.01474,18 13.5,18 Z" id="Path" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polyline id="Path" stroke="#FFFFFF" stroke-width="0.9" points="11.34 12.915 12.96 14.535 15.66 11.835"></polyline>
+            </g>
+        </g>
+        <g id="Group-Copy">
+            <rect id="ViewBox" opacity="0.165411086" x="0" y="0" width="32" height="32" rx="4"></rect>
+            <g id="user-success-circle(24x24)@1x" transform="translate(7.000000, 7.000000)">
+                <path d="M18,9 C18,9.918 17.865,10.809 17.604,11.646 C16.893,10.089 15.327,9 13.5,9 C11.016,9 9,11.016 9,13.5 C9,15.327 10.089,16.893 11.646,17.604 C10.809,17.865 9.918,18 9,18 C4.032,18 0,13.968 0,9 C0,4.032 4.032,0 9,0 C13.968,0 18,4.032 18,9 Z" id="Path" stroke="#464546" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M11.637,17.595 C10.08,16.884 9,15.318 9,13.5 C9,12.51 9.315,11.601 9.864,10.854 C9.576,10.818 9.288,10.8 9,10.8 C6.047982,10.8 3.518982,12.573 2.402982,15.111 C4.049982,16.884 6.389982,18 9,18 C9.918,18 10.8,17.865 11.637,17.595 Z" id="Path" stroke="#464546" stroke-width="0.9" stroke-linecap="round"></path>
+                <path d="M10.008,10.656 L10.017,10.656 C10.512,10.044 11.178,9.558 11.934,9.279 C12.357,8.685 12.6,7.974 12.6,7.2 C12.6,5.211 10.989,3.6 9,3.6 C7.011,3.6 5.4,5.211 5.4,7.2 C5.4,9.189 7.011,10.8 9,10.8 C9.351,10.8 9.693,10.746 10.017,10.656" id="Path"></path>
+                <path d="M10.008,10.656 L10.017,10.656 C10.512,10.044 11.178,9.558 11.934,9.279 C12.357,8.685 12.6,7.974 12.6,7.2 C12.6,5.211 10.989,3.6 9,3.6 C7.011,3.6 5.4,5.211 5.4,7.2 C5.4,9.189 7.011,10.8 9,10.8 C9.351,10.8 9.693,10.746 10.017,10.656" id="Path" stroke="#464546" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13.5,18 C15.98526,18 18,15.98526 18,13.5 C18,11.01474 15.98526,9 13.5,9 C11.01474,9 9,11.01474 9,13.5 C9,15.98526 11.01474,18 13.5,18 Z" id="Path" stroke="#464546" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polyline id="Path" stroke="#464546" stroke-width="0.9" points="11.34 12.915 12.96 14.535 15.66 11.835"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

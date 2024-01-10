@@ -1,0 +1,52 @@
+<div class="modal fade stick-up" id="singTask" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left create-art-popup" id="addTaskModalMessage">
+                <button type="button" class="close custom-modal-close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14"></i>
+                </button>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h5>
+                            <span class="semi-bold">
+                                <xe-translate text-value="Add Task">
+                                </xe-translate>
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body create-art-popup">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="form-group form-group-default required">
+                            <lable for="addtask">
+                                <xe-translate text-value="Description">
+                                </xe-translate>
+                            </lable>
+                            <textarea class="form-control" ng-model="singletask.singleTaskList" id="addtask" required></textarea>
+                        </div>
+                        <div class="alert alert-danger" ng-show="isAddTaskgroupValid">
+                            <xe-translate text-value="ENTER TASKGROUP">
+                            </xe-translate>
+                        </div>
+                        <div class="col-md-12 text-right">
+                            <button type="button" class="btn btn-success btn-sm" ng-click="saveSingleTaskListData(singletask.singleTaskList)">
+                                <span>
+                                    <xe-translate text-value="Save">
+                                    </xe-translate>
+                                </span>
+                            </button>
+                            <button class="btn btn-danger btn-sm" type="button" ng-click="cancelTaskGroup('AddSingleTaskList')">
+                                <span>
+                                    <xe-translate text-value="Cancel">
+                                    </xe-translate>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

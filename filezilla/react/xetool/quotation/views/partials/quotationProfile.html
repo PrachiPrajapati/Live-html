@@ -1,0 +1,118 @@
+<div class="container m-t-30 m-b-30" ng-if = "quoteFormShow == false && isCustomerLogin == true && isCustomerSignUp == false && showQuoteDetails == false && invalidQuote == false">
+	<div class="row">
+		<div class="loading-quoting-list" ng-show = "isQuoteListPreloader">
+	        <img class="image-responsive-height demo-mw-50 page-loader" src="assets/progress.svg" alt="Progress"/>
+        </div>
+ 
+		<div class="col-sm-12" ng-hide = "isQuoteListPreloader">
+			<div class="page-wrap">
+				<div class="alert alert-success msg_popup alert-position" ng-show = "isSubmitQuote">                   
+                    <button type="button" class='close' data-dismiss='alert'>x
+                    </button>
+                    <span>
+                        Quotation created sucessfully.
+                    </span>
+            	</div>
+				<div class="header-section">
+					<div class="clearfix">
+						<h2 class="pull-left">Quotation List</h2>
+						<div class="col-sm-6 pull-right">
+							<button class="btn btn-success pull-right" ng-click="reqQuote()">Generate Quote</button>						
+				        	<button type="button" class="btn btn-success pull-right" id="continueShoppingBtn" ng-click="continueShopping()" style="margin-right: 10px;"">
+				        		Continue Shopping
+							</button>
+				        </div>
+					</div>
+				</div>
+				<div class="page-body">
+					<div class="clearfix">
+							<div class="btn-group pull-left m-r-10">
+					            <button type="button" class="btn btn-default text-ellipsis"  data-toggle="dropdown" style="width: 180px;">
+					                {{ selectedQuoteStatus }}
+					              <!--   all -->
+					            </button>
+					            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					                <span class="caret">
+					                </span>
+					                <span class="sr-only">
+					                    Toggle Dropdown
+					                </span>
+					            </button>
+					            <ul class="dropdown-menu" role="menu" style="width: 207px;">
+					              <li ng-repeat="status in quotationStatusList" ng-click="statusSelected(status)">
+					                <a href="">
+					                    {{ status.name }}
+					                </a>
+					              </li>
+					            </ul>
+							</div>
+							<div class="form-group pull-left m-r-10 mobile-input">
+								<input type="text" placeholder="Type search value" class="form-control pull-left m-r-10 h-40" name="start" id="searchId"  ng-keyUp = "searchByName(search.value)" ng-model="search.value"/>
+							</div>
+							<div class="pull-left mobile-m-10">
+				                <button type="button" class="btn btn-default btn-sm" id="searchBtn" ng-click="searchProductOnKeyUp(search.value)" ng-disabled="!search.value">
+				                   Search
+				                </button>
+				            </div>
+					
+					</div>
+					<div class="row">
+						<div class="col-sm-12" style = "min-height:400px;">
+							<div class="table-responsive">
+								<table class="table table-border"> 
+									<thead> 
+										<tr> 
+											<th width="10%">ID</th> 
+											<th width="35%">Subject</th> 
+											<th width="25%">Created Date</th>
+											<th width="30%">Status</th>
+										</tr> 
+									</thead> 
+									<tbody> 
+										<tr ng-repeat="q_list in quotationList" ng-click="openQuoteDetails(q_list.quote_id,q_list.status)" style="cursor: pointer;" class="row-hover">
+					                        <td width="10%">{{q_list.prefix_quote_id}}</td>
+					                        <td width="50%" title="{{q_list.subject}}"><span class="customer-list-title">{{q_list.subject}}</span></td>
+					                        <td width="20%">{{q_list.created_date | date:'dd MMM yyyy'}}</td>
+					                        <td width="30%">    
+					                        	<span class="label label-info" ng-if = "q_list.status == 'New Quotation'">
+	                       							{{q_list.status}}
+						                        </span>
+						                        <span class="label label-inverse" ng-if = "q_list.status == 'Approved'">
+						                           {{q_list.status}}
+						                        </span>
+						                        <span class="label label-important" ng-if = "q_list.status == 'Rejected'">
+						                           {{q_list.status}}
+						                        </span>
+						                        <span class="label label-view" ng-if = "q_list.status == 'Viewed'">
+						                           {{q_list.status}}
+						                        </span>  
+						                        <span class="label label-warning" ng-if = "q_list.status == 'Paid'">
+						                           {{q_list.status}}
+						                        </span>     
+						                        <span class="label label-success" ng-if = "q_list.status == 'Sent'">
+						                           {{q_list.status}}
+						                        </span> 
+					                        </td> 
+	                					</tr>
+									</tbody> 
+								</table>
+								<span ng-show = "quotationList.length == 0">
+					                <p class="font-normal text-lg text-center" style =" margin-top: 180px;">
+						                No quotations found.
+					                </p>
+					            </span>				   
+							</div>						
+						</div>						
+						<div class="col-sm-12 text-center"  ng-show = "isLoadMore">
+					        <button type="button" class="btn btn-default btn-sm" ng-click="loadMore()" ng-disabled="isLoadMorePreloader">
+					            Load More
+					        </button>
+				         	<img class="image-responsive-height demo-mw-30 " src="assets/progress-circle-master.svg" alt="Progress" ng-show="isLoadMorePreloader"/>
+				        </div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>

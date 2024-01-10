@@ -1,0 +1,19 @@
+<div class="modal fade stick-up" id="artworkHistoryImgViewModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left">
+                <button type="button" class="close custom-modal-close" data-dismiss="modal" aria-hidden="true" style = "margin-right:6px;">
+                    <i class="pg-close fs-14"></i>
+                </button>        
+            </div>
+            <div class="modal-body" id="artworkHistoryImgViewModal">
+                <div  class = "m-t-10 image-view q-r-img-model-img">
+                    <i class="fa fa-angle-left fs-14 q-r-img-model-nav-left" ng-click="onArtworkHistoryNavLeftClicked()" ng-hide="artworkHistCurrImgIndex == 0"></i>
+                        <img class="img-responsive m-auto" src="{{ artworkHistCurrImg }}">
+                    <i class="fa fa-angle-right fs-14 q-r-img-model-nav-right" ng-click="onArtworkHistoryNavRightClicked()" ng-hide="artworkHistCurrImgIndex == artworkHistAllSides.length - 1"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

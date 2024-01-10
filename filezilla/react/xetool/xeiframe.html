@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+  <body id="iFrameBody">
+  <script type="text/javascript">
+  var vn = '?vn=' + 710;
+    var baseUrl = window.location.hostname;
+    var assetsPath = baseUrl.replace(/\./g, '_');
+    assetsPath = assetsPath.replace(/www_/g, '');
+    document.getElementById('iFrameBody').innerHTML = '<link rel="stylesheet" type="text/css" href="'+assetsPath+'/allless.css'+vn+'" /> <link rel="stylesheet" type="text/css" href="'+assetsPath+'/style.css'+vn+'" />';  
+  var localSettings = document.createElement('script');
+    localSettings.setAttribute("type","text/javascript");
+  localSettings.src = 'localsettings.js'+vn;
+  document.head.appendChild(localSettings);
+  var adminSetting = document.createElement('script');
+    adminSetting.setAttribute("type","text/javascript");
+      adminSetting.src = assetsPath+'/adminsettings.js'+vn;
+  document.head.appendChild(adminSetting);  
+  var xeloader = document.createElement('script');
+      xeloader.setAttribute("type","text/javascript");
+      xeloader.src = 'xeloader.js'+vn;
+  document.head.appendChild(xeloader);
+  var xeapp = document.createElement('script');
+  xeapp.src = 'xeapp.js'+vn;
+  document.head.appendChild(xeapp);
+  document.head.appendChild(xeloader);
+  var xeangular = document.createElement('script');
+  xeangular.src = 'lib/xelib001.js'+vn;
+  document.head.appendChild(xeangular);
+  </script>
+  </body>
+       <link rel="stylesheet" type="application/font-woff" href="assets/fonts/xe-fonts/fontinkxe.woff" />
+       <link rel="stylesheet" type="application/font-woff" href="assets/fonts/OpenSans-Bold.woff" />
+       <link rel="stylesheet" type="application/font-woff" href="assets/fonts/OpenSans.woff" />
+</html>
+

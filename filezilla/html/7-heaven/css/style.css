@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+/******* Fonts Face CSS Start **********/
+@font-face {
+    font-family: 'subway_novellaregular';
+    src: url('../fonts/subwaynovellademo-webfont.woff2') format('woff2'),
+         url('../fonts/subwaynovellademo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskBEMd';
+    src: url('../fonts/AkzidenzGroteskBEMd.eot');
+    src: url('../fonts/AkzidenzGroteskBEMd.eot') format('embedded-opentype'),
+         url('../fonts/AkzidenzGroteskBEMd.woff2') format('woff2'),
+         url('../fonts/AkzidenzGroteskBEMd.woff') format('woff'),
+         url('../fonts/AkzidenzGroteskBEMd.ttf') format('truetype'),
+         url('../fonts/AkzidenzGroteskBEMd.svg#AkzidenzGroteskBEMd') format('svg');
+}
+/********* Fonts Face CSS End **********/
+/******* Common Element CSS Start ******/
+*, *:before, *:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+*							{ margin: 0px; padding: 0px;}
+body						{ background: url("../images/bg.jpg") no-repeat; background-size:cover; height: 100%;  font-family: 'subway_novellaregular'; }
+.container					{ background-image: url("../images/container-bg.png"); background-repeat: no-repeat;  height: 100%; background-size:106% cover; }
+html,body					{ min-height: 100%; font-family: 'subway_novellaregular';}
+.clear						{ clear:both;}
+img							{ border: 0px; }
+ul,ol						{ list-style: none;}
+a							{ text-decoration: none; outline: none; display: block; cursor: pointer; font-family: 'subway_novellaregular';}
+a:focus, a:active,a:visited,a:hover	{ outline: none; border: 0px; text-decoration:  none; }
+h1							{ font-family: 'subway_novellaregular';}
+h2							{ font-family: 'subway_novellaregular';}
+h3							{ font-family: 'subway_novellaregular';}
+h4							{ font-family: 'subway_novellaregular';}
+h5							{font-family: 'subway_novellaregular';}
+h6							{ font-family: 'subway_novellaregular';}
+p							{font-family: 'subway_novellaregular'; }
+.paddingl-none				{ padding-left: 0px;}
+.paddingr-none				{ padding-right: 0px;}
+form-group					{  margin-bottom: 10px;}
+textarea					{ resize:none; color:#531d0c !important; font-size: 16px;   font-weight: normal;}
+/******* Common Element CSS End *********/
+/*Common FrameWork Start*/
+.border-none				{ border: none !important; }.bg-none{ background: none !important;}.margint-none{ margin-top: 0px !important;}.marginr-none	{ margin-right: 0px !important;}.marginb-none{ margin-bottom: 0px !important;}.marginl-none	{ margin-left: 0px !important;}.margin-none{ margin: 0px !important;}.paddingt-none{ padding-top: 0px !important;}.paddingr-none{ padding-right: 0px !important;}.paddingb-none{ padding-bottom: 0px !important;}.paddingl-none{ padding-left: 0px !important;}.padding-none{ padding: 0px !important;}.fleft{ float: left !important;}.fright{ float: right !important;}.fnone{ float: none !important;}
+/*Common FrameWork Start*/
+.four-star					{ margin-left: -15px;}
+.logo						{ padding: 40px 0 5px;}
+.looks	p					{ color:#fff; vertical-align: middle; font-size: 14px;}
+.looks						{ padding: 38px 0px;}
+.could-win					{ padding: 5px 0px; margin-left: -13px;}
+.text-content	h3			{ font-size: 30px; color:#531d0c;margin-top: 5px; }
+.form-group > #fname { background: url("../images/text-bg1.png") no-repeat !important; border: none;}
+.form-group > input	{ background: url("../images/text-bg2.png") no-repeat !important; border: none;}
+.city-menu .form-group > input { background: none !important;}
+textarea					{ background: url("../images/text-area-bg.png")no-repeat !important; border: none; color:#531d0c; font-size: 16px;   font-weight: normal;}
+.date						{ background: url("../images/text-bg2.png") no-repeat !important;  background-size:cover; height: 100%;}
+.city-menu					{ background: url("../images/text-bg2.png") no-repeat !important;  background-size:cover; height: 100%;}
+.date > .age				{ margin-top: 5px;}
+.date label					{color:#531d0c; font-size: 16px;   font-weight: normal; padding-left: 15px;}
+button.date-btn				{ background: transparent; border:1px solid #531d0c !important; border-raduis:0px; color:#531d0c;margin: 8px 0; padding: 0 10px;}
+.form-control::-moz-placeholder { color:#531d0c; font-family: 'subway_novellaregular';}
+.form-control::-ms-input-placeholder { color:#531d0c; font-family: 'subway_novellaregular';}
+.form-control::-webkit-input-placeholder { color:#531d0c; font-family: 'subway_novellaregular';}
+.form-control				{ font-size: 16px; padding: 5px 30px; font-family: 'AkzidenzGroteskBEMd';}
+.county 					{ background: transparent; border: none;}
+ .submit			       	{ background: url("../images/submit-btn.png") no-repeat  ; font-size: 32px; color:#531d0c; width: 208px; height: 64px; margin: 0px auto; text-align: center; border: none;}
+ .submit:hover 				{  opacity: 0.8;}
+ .footer					{ background-color: #743923; font-size: 12px; color:#fff; padding: 15px 0px;}
+ .logo-inline li			{ display: inline-block;}
+ .text-content				{ padding: 0 0 0 10px;}
+ .check-box	label			{ color:#000; font-size: 14px; font-weight: normal;margin-left: 28px !important; }
+ .check-box 				{  margin-bottom: 15px;}
+ .sachet-img				{ margin-top: 50px; margin-left: 60px;}
+ .form-group				{ margin-bottom: 10px;}
+ .text-area					{ margin-bottom: 0;  margin-top: 5px; padding: 15px 35px 0; text-align: center;}
+ul.check-box li label		{ display: inline-block; margin: 0px; padding: 0px; max-width: 94%;}
+.jcf-select select option  { font-size: 14px;}	
+.jcf-select-text ,.jcf-select select option			{ color:#000; font-family: arial; font-weight: bold;}
+.jcf-select-opener			{ background: url("../images/drop-down-arrow.png") no-repeat; width: 9px; height: 9px; display: block; cursor: pointer;}
+.text-area-mobile			{ margin-bottom: 5px;}
+.check-box li a 			{ color: #000; font-size: 14px;  margin-left: 28px;}
+.check-box li a:hover 		{ color:#ed008c;}
+.city-menu	label			{ color:#531d0c; font-size: 16px;   font-weight: normal;}
+.country-city				{ }	
+.check-box > li                         { margin-bottom:10px;}				
+/***********************thank you page ********************/
+.star a	 img				{ float: right; width: 60%; }
+.thank-text	h3				{ font-size: 42px;    margin: 50px 0px 100px; color:#531d0c; }
+.thank-text	h3	span		{ font-size: 65px;}
+.message					{ background: url("../images/bg-thanku.png") no-repeat; background-size:100%; height: 100%;}
+/**************** terms and condition ****************/
+.set-logo					{ margin: 10px 0px;}
+.four a	 img				{ width: 60%; margin: 50px 0px 0px;}
+.condition	h3				{ color:#531d0c; font-size: 40px;}
+.back-bg					{ background: url("../images/terms-bg.png") no-repeat; padding: 30px 60px; width: 821px; margin: 0 auto; position: relative;}
+.list-condition	li			{ font-size: 14px; color:#000; font-family: 'AkzidenzGroteskBEMd';  line-height: 22px; list-style: disc; padding-left: 10px;}
+.list-condition	li span a		{ color:#ED008C; font-family: 'AkzidenzGroteskBEMd';  font-size: 14px;}
+.text-term					{ margin-bottom: 10px;}
+.text-term	p				{ font-size: 14px; color:#000; font-family: 'AkzidenzGroteskBEMd';}
+.list	li					{ font-size: 14px; color:#000; font-family: 'AkzidenzGroteskBEMd';  list-style: disc; padding-left: 10px;}
+.cup						{  margin-top: -10em;}
+.white-footer				{ background: #fff;  padding: 15px 0px; }
+.white-footer p				{ color:#000; font-size: 11px; font-family: 'AkzidenzGroteskBEMd'; }
+.set-disc	span				{  margin: -26px 10px 10px 0;}
+.set-bottom					{ margin-top: 15em;}
+.list-condition li span a:hover	{ opacity:0.6;}
+.with-errors {font-family: 'AkzidenzGroteskBEMd';  font-size: 12px; color: #f00;}
+ /**************** responsive css start *******************/
+@media (min-width:1200px) and (max-width:1280px){
+	a.submit	{ font-size: 32px; padding: 32px 0;}
+}
+@media (min-width:992px) and (max-width:1199px){
+	
+}
+@media (min-width: 768px) and (max-width:991px){
+	a.submit			{ font-size: 18px; padding: 25px 0;}		
+	.text-content h3	{  font-size: 18px;}
+	.sachets img		{ width: 80%;}
+	.jcf-select			{ margin: 5px 0 0 !important; min-width: 65px !important;}
+	.date label			{ font-size: 9px;}
+	.container { background-size: cover;}
+	ul.check-box li label	{ max-width: 90%;}
+	.thank-text h3		{ font-size: 30px;}
+	.back-bg			{ background: #f3f3f3; padding: 15px 30px; width: 100%;}
+	.cup				 {  margin-top: -10em ;}
+	.list-condition li	{ padding-left: 0px;}
+	.check-box 			{ margin: 15px 0;}
+	.set-bottom 		{ margin-top: 5em;}
+	.thank-text h3 span { font-size: 45px;}
+	.country-city		{ display: none;}
+	.city-a-to-z span.jcf-select 	{  min-width: 135px !important; }
+}
+@media (max-width:767px){
+	.logo a  img 		{ width: 60%;}
+	.looks				{ padding: 15px 0px;}
+	.text-content h3	{ font-size: 18px;}
+	button.date-btn		{ padding: 0 5px;}	
+	.sachets img		{ width: 70%;}
+	a.submit			{ font-size: 18px;}
+	.form-group > #fname	{  background-color: #fff !important; background-image: none !important;}
+	.form-group > input	{ background-color: #fff !important; background-image: none !important;}
+	.date				{ background-color: #fff !important; background-image: none !important; margin-bottom: 10px;}
+	textarea			{ background-color: #fff !important; background-image: none !important;}
+	.date > .age		{ text-align: center;}
+	.logo				{padding: 10px 0 5px;}
+	.sachet-img			{ margin-left:0px; margin-top: 0px;}
+	.text-area-mobile 	{ margin-bottom: 10px;}
+	.country-post		{ background-color:  transparent !important; margin-bottom: 0px;}
+	.country-post input { background-color: #fff;}
+	button.date-btn 	{ width: 100%;}
+	.container 			{ background-size: cover;}
+	.mobile-last-child 	{ padding-right: 15px !important;}
+	.form-control		{ padding:  5px 10px;}
+	ul.check-box li label{  max-width: 80%;}
+	.thank-text h3		{font-size: 24px; margin: 15px 0; }
+	.message			{ padding: 10px;}
+	.four a img			{ margin-top: 0px;}
+	.condition h3		{ font-size: 20px;}
+	.back-bg			{ background: #f3f3f3; padding: 15px 30px; width: 100%;}
+	.cup				{ margin: 0px;}
+	.set-bottom			{ margin: 0em;}
+	.list-condition li	{ padding-left: 0px;}
+	.check-box 			{ margin: 15px 0;}	
+	.thank-text h3 span { font-size: 30px;}
+	.city				{ background: #fff; color:#531d0c; margin-bottom: 10px; text-align: center;}
+}
+@media (min-width:376px) and (max-width:414px){
+	.container			{ background-size: cover !important; }
+	.form-control		{  padding: 5px 15px;}
+	}
+@media (min-width:360px) and (max-width:375px){
+	.container			{ background-size: cover !important; }
+	.form-control		{  padding: 5px 15px;}
+}
+ /**************** responsive css end *******************/

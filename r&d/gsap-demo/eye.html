@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eye Scroll Animation</title>
+	<style>
+		* { padding: 0; margin: 0;}
+		body { position: relative; background: #000; color: #fff; font-family: 'Courier New', Courier, monospace;}
+		section {min-height: 100vh; overflow: hidden;}
+		.content-section { padding: 50px 0px; display: flex; align-items: center;}
+		.wrapper { padding: 0px 15px; width: 1320px; margin: 0px auto; max-width: 100%;}
+		h1 { font-size: 54px; line-height: 68px; font-family: 'Courier New', Courier, monospace;}
+		ul,
+		p{ font-size: 24px; line-height: 36px; font-family: 'Courier New', Courier, monospace; margin-bottom: 40px;}
+		ul {list-style-position: inside;}
+		/* Eye Content */
+		.eye-content { min-height: auto; position: relative; background-color: #fff; padding-top: 40%;}
+		.el-1 { position: absolute; top: 50%; left: 50%; width: 125%; height: 100%; transform: translate(-50%, -50%); border-radius: 50%; box-shadow: 0 0 0px 1000px #000; }
+		.el-2 { position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+		.el-2 p { position: absolute; top:50%; left: 0; width: 100%; transform: translateY(-50%) scale(2.3); font-size: 248px; line-height: 300px; font-weight: 700; letter-spacing: 40px; font-family: 'Courier New', Courier, monospace; color: #000; opacity: 0.1; text-align: center;}
+		.el-2 a { position: relative; color: #fff; width: 20%; aspect-ratio: 1 / 1; border-radius: 50%; transition-duration: 0.3s; transition-timing-function: ease-in-out; background-color: #000; font-size: 48px; line-height: 58px; font-weight: 500; font-family: 'Courier New', Courier, monospace; display: flex; justify-content: center; align-items: center; text-align: center;}
+		.el-2 a:before,
+		.el-2 a:after { content: " "; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; border: 2px solid #000; border-radius: 50%; animation: wave 3s infinite ease-out; box-sizing: border-box;}
+		.el-2 a:after { animation-delay: 1.4s;}
+		@keyframes wave {
+			0% {transform: scale(1); opacity: 0.8;}
+			100% {transform: scale(1.4); opacity: 0;}
+		}
+		@media (max-width: 767px) {
+			section {min-height: 70vh; overflow: hidden;}
+			h1 { font-size: 34px; line-height: 42px;}
+			ul,
+			p{ font-size: 16px; line-height: 22px; margin-bottom: 20px;}
+
+			.eye-content { padding-top: 110%;}
+			.el-1 { width: 200%; }
+			.el-2 p { font-size: 68px; line-height: 80px; letter-spacing: 0px;}
+			.el-2 a { font-size: 38px; line-height: 42px; width: 60%;}
+			/* .el-2 a:before,
+			.el-2 a:after {  border-width: 2px;} */
+		}
+	</style>
+</head>
+<body>
+	<section class="content-section">
+		<div class="wrapper">
+			<h1>What is Lorem Ipsum?</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+	</section>
+	<section class="content-section">
+		<div class="wrapper">
+			<h1>Why do we use it?</h1>
+			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+				<li>Nulla iaculis mauris sit amet nulla facilisis porttitor.</li>
+				<li>Aliquam sed libero ac dui aliquam gravida vitae vitae nunc.</li>
+				<li>Proin et mauris auctor, elementum lorem vel, volutpat metus.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="eye-content">
+		<div class="eye-wrapper">
+			<div class="el-2">
+				<p>Enviz</p>
+				<a>Check Enviz</a>
+			</div>
+			<div class="el-1"></div>
+		</div>
+	</section>
+	<section class="content-section">
+		<div class="wrapper">
+			<h1>Where does it come from?</h1>
+			<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+		</div>
+	</section>
+	<!-- GSAP Library Included -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+	<script>
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.set('.el-1', {height: "0%"});
+		gsap.set('.el-2', {filter: "blur(10px)"});
+		gsap.to('.eye-content', {
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".eye-content",
+				start: "center center",
+				end: "+=700",
+				markers:false,
+				pin: true,
+				pinSpacing: true,
+				scrub: 0.75
+			}
+		});
+		gsap.to('.el-1', {
+			height: "100%",
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".el-1",
+				start: "center center",
+				end: "+=500",
+				markers:false,
+				scrub: 0.75
+			}
+		});
+		gsap.to('.el-2', {
+			filter: "blur(0px)",
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".eye-content",
+				start: "center center",
+				end: "+=500",
+				markers:false,
+				scrub: 0.75
+			}
+		});
+	</script>
+</body>
+</html>

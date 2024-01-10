@@ -1,0 +1,408 @@
+/******* Fonts Face CSS Start **********/
+
+@font-face {
+	font-family: 'Poppins-medium';
+	src: url('../fonts/Poppins-Medium.eot');
+	src: url('../fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Poppins-Medium.woff2') format('woff2'),
+		url('../fonts/Poppins-Medium.woff') format('woff'),
+		url('../fonts/Poppins-Medium.ttf') format('truetype'),
+		url('../fonts/Poppins-Medium.svg#Poppins-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins-bold';
+	src: url('../fonts/Poppins.eot');
+	src: url('../fonts/Poppins.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Poppins.woff2') format('woff2'),
+		url('../fonts/Poppins.woff') format('woff'),
+		url('../fonts/Poppins.ttf') format('truetype'),
+		url('../fonts/Poppins.svg#Poppins') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins-semiblod';
+	src: url('../fonts/Poppins-SemiBold.eot');
+	src: url('../fonts/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Poppins-SemiBold.woff2') format('woff2'),
+		url('../fonts/Poppins-SemiBold.woff') format('woff'),
+		url('../fonts/Poppins-SemiBold.ttf') format('truetype'),
+		url('../fonts/Poppins-SemiBold.svg#Poppins-SemiBold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Poppins-light';
+	src: url('../fonts/Poppins-Light.eot');
+	src: url('../fonts/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Poppins-Light.woff2') format('woff2'),
+		url('../fonts/Poppins-Light.woff') format('woff'),
+		url('../fonts/Poppins-Light.ttf') format('truetype'),
+		url('../fonts/Poppins-Light.svg#Poppins-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.eot');
+	src: url('../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Poppins-Regular.woff2') format('woff2'),
+		url('../fonts/Poppins-Regular.woff') format('woff'),
+		url('../fonts/Poppins-Regular.ttf') format('truetype'),
+		url('../fonts/Poppins-Regular.svg#Poppins-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+* 					{ margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box;}
+*:focus 			{ outline: none;}
+html 				{ height: 100%;}
+*							{ margin: 0px; padding: 0px;}
+body						{ font-family: 'Poppins'; font-size:14px;}
+.clear						{ clear:both;}
+img							{ border: 0px;}
+ul,ol						{ list-style: none;}
+a							{ text-decoration: none; outline: none;}
+a:focus, a:active,a:visited	{ outline: none; border: 0px;}
+h1,h2,h3,h4,h5,h6			{ font-family: 'Poppins-medium';  font-weight: 300;}
+p							{ font-family: 'Poppins' !important;}
+.border-none				{ border: none !important; }
+.bg-none					{ background: none !important;}
+.margint-none				{ margin-top: 0px !important;}
+.marginr-none				{ margin-right: 0px !important;}
+.marginb-none				{ margin-bottom: 0px !important;}
+.marginl-none				{ margin-left: 0px !important;}
+.paddingt-none				{ padding-top: 0px !important;}
+.paddingr-none				{ padding-right: 0px !important;}
+.paddingb-none				{ padding-bottom: 0px !important;}
+.paddingl-none				{ padding-left: 0px !important;}
+/******* Common Element CSS End *********/
+
+/******* Header Section CSS Start *******/
+.header-main { -webkit-transition: all 0.4s ease; transition: all 0.4s ease;}
+.header-main.sticky { position: fixed; width: 100%; background: #53b7ee; z-index: 100; left: 0; top:0;}
+.header-main.sticky .logo img { width: 120px; -webkit-transition: all 0.4s ease; transition: all 0.4s ease;}
+.header-main.sticky .nav > li { margin: 10px 0px !important;}
+.header-main.sticky .logo h1 { margin: 10px 0px;}
+.header-main.sticky .navbar-default .navbar-nav > li > a:hover,.header-main.sticky .navbar-default .navbar-nav > li.active > a { color: #fff; text-decoration: underline;}
+header { height: 100vh;}
+.header-background { background: url(../images/header-bg.png) no-repeat center bottom; background-size: cover;}
+.menu-border { border-bottom: 1px solid #7f8695;}
+.section-padding { padding: 100px 0px;}
+.section-title { font-size: 30px; line-height: 35px; padding-bottom: 10px; text-transform: uppercase; font-weight: 700; color: #72899a; text-align: center; margin-top: 0px;}
+.section-title span { color: #3976bb;}
+.header-top { border-bottom: 1px solid #f2f2f2; padding-top: 15px;}
+.header-top-left { float: left;}
+.header-top-left i { margin-right: 5px;}
+.header-top-right{ float: right;}
+.header-top li { color: #fff; display: inline-block; padding: 0 10px;}
+.header-top li a { color: #fff; font-family: 'Poppins-light'; font-size: 16px;}
+.header-top li a:hover { color: #2693bf;}
+.main-menu ul { float: right; margin-right: -40px;}
+.main-menu li a { font-family: 'Poppins'; font-size: 16px; text-transform: uppercase; padding-top: 20px !important;}
+.main-menu li { padding: 0px 15px; margin-top: 50px !important;}
+.main-menu li:last-child a { background: #fff; color: #2fafe5 !important; border-radius: 50px; border: 2px solid transparent;}
+.main-menu li:last-child a:hover { background: transparent; border: 2px solid #fff; color: #fff !important;}
+/******* Header Section CSS End *********/
+
+/******* Banner section CSS Start *******/
+.banner-content { padding: 50px 0px;}
+.banner-content h1 { color: #fff; font-size: 30px; line-height: 35px; margin: 45px 0 0px; text-align: center;}
+.banner-content h4 { color: #fff; font-size: 20px; line-height: 25px; text-align: center; }
+.drag-text > img { padding-top: 30px;}
+.show-open-window { text-align: center;}
+.show-list-item { background: #fff none repeat scroll 0 0; border-radius: 5px; box-shadow: 0 0 10px #ccc; margin-top: 35px; padding: 25px; display: none; }
+.show-list-item li { display: inline-block; margin: 5px 0px; width: 300px}
+.show-list-item ul { margin: 0px;}
+.show-open-window .get-started-btn a { background: #fff; color: #2fafe5; border: 2px solid transparent; margin-top: 25px;}
+.show-open-window .get-started-btn a:hover { background: transparent; border: 2px solid #fff;}
+/******* Banner section CSS End *********/
+
+/****** Middle section CSS Start *******/
+
+/****** Work Android Section CSS Start *******/
+.work-android { text-align: center;}
+.work-android-section p { font-size: 16px; color: #696a6a; }
+.work-android-three-block img { }
+.work-android-three-block span { background: #e9e9e9; color: #9b9b9b; display: block; padding: 15px 0px 10px; margin:40px auto 20px; width:120px; font-size: 16px; line-height: 20px; text-transform: uppercase; font-weight: 500; border-radius: 50px;}
+.work-android-three-block { padding-top: 60px;}
+.work-android-three-block p { color: #72899a; font-size: 16px; line-height: 25px; text-transform: uppercase; width: 250px; margin: 0px auto;}
+.get-started-btn a { border-radius: 50px; color: #fff; display: inline-block; margin-top: 50px; padding: 15px 35px 10px; text-transform: uppercase; background: -moz-linear-gradient(left, #60ebd2 0%, #53b5ef 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, #60ebd2 0%,#53b5ef 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, #60ebd2 0%,#53b5ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
+.get-started-btn a:hover { color: #fff; background: -moz-linear-gradient(left, #53b5ef 0%, #60ebd2 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, #53b5ef 0%,#60ebd2 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, #53b5ef 0%,#60ebd2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
+/****** Work Android Section CSS End *******/
+
+/****** About Section CSS Start *******/
+.about { background: #f8f8f8;}
+.about p { text-align: center; padding: 0px 150px; line-height: 25px; margin-bottom: 50px;}
+.about p:last-child { margin-bottom: 0px;}
+/****** About Section CSS End *******/
+
+/****** Test Section CSS Start *******/
+.test-section { background: url(../images/test-file-bg.png) no-repeat; background-size: cover; background-attachment: fixed; padding: 50px 0px;}
+.test-section .section-title { color: #fff;}
+.test-section .get-started-btn { text-align: center; }
+.test-section .get-started-btn a { margin-top: 0px;}
+/****** Test Section CSS End *******/
+
+/****** Features Section CSS Start *******/
+.features { background: #f8f8f8; text-align: center;}
+.features-section p { font-size: 16px; padding: 0px 150px; }
+.features-section { margin-bottom: 50px;}
+.features-img img { margin: 0px auto 25px;}
+.features-img h5 { text-transform: uppercase; color: #636363; font-size: 16px;} 
+.features-img { background: #fff; padding: 20px 0px !important; margin: 0px 20px 35px 18px; width: 30% !important;}
+.features-img:nth-child(n+4) { margin-bottom: 0px;}
+.features-img:hover { background: #fff; filter: drop-shadow(0px 0 10px rgba(0, 0,0, 0.20)); -moz-filter: drop-shadow(0px 0 10px rgba(0, 0, 0, 0.20)); -webkit-filter: drop-shadow(0px 0 10px rgba(0, 0,0, 0.20));}
+/****** Features Section CSS End *******/
+
+/****** Contact Section CSS Start *******/
+textarea { resize: none;}
+.contact-section p { color: #696a6a; text-align: center; font-size: 16px;}
+.contact-section .form-control { background: transparent; border: 1px solid #ccc; margin-bottom: 15px;}
+.contact-form form { margin-top: 45px;}
+.contact-form .form-control::-webkit-input-placeholder { color: #92a0a3;}
+.contact-form .form-control::-moz-placeholder { color: #92a0a3;}
+.contact-form button { border-radius: 50px; color: #fff; display: block; border:none; padding: 20px 80px 15px; margin: 0px auto; text-transform: uppercase; background: -moz-linear-gradient(left, #60ebd2 0%, #53b5ef 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, #60ebd2 0%,#53b5ef 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, #60ebd2 0%,#53b5ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
+.contact-form button:hover { color: #fff; background: -moz-linear-gradient(left, #53b5ef 0%, #60ebd2 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, #53b5ef 0%,#60ebd2 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, #53b5ef 0%,#60ebd2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
+/****** Contact Section CSS End *******/
+/****** Middle section CSS End *******/
+
+/*Go Top CSS Start*/
+#toTop { display:none; text-decoration:none; position:fixed; bottom:10px; right:10px; overflow:hidden; width:51px; height:51px; border:none; text-indent:100%;
+background:url(../images/ui.totop.png) no-repeat left top;}
+#toTopHover { background:url(../images/ui.totop.png) no-repeat left -51px;width:51px;height:51px;display:block;overflow:hidden;float:left;opacity: 0;-moz-opacity: 0;filter:alpha(opacity=0);-o-transition:0s; -ms-transition:0s; -moz-transition:0s; -webkit-transition:0s; transition:0s;}
+#toTop:active, #toTop:focus { outline:none;}
+/*Go Top CSS End*/
+
+/****** Footer section CSS Start *******/
+.footer-panel { background: #8f8f8f; text-align: center; padding: 15px 0px;}
+.footer-left { float: left;}
+.footer-left > ul { margin: 0px;}
+.footer-left li { color: #fff; display: inline-block;}
+.footer-left a { color: #fff;}
+.footer-right { float: right;}
+.footer-panel p { color: #fff; margin: 0px}
+/****** Footer section CSS End *******/
+
+/****** Drag & Drop File CSS Start *******/
+.file-upload {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 2px dashed #fff;
+  position: relative;
+  border-radius: 10px;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 100;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 30px 0;
+  font-size: 20px;
+}
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+/****** Drag & Drop File CSS End *******/
+
+/****** Login / Register CSS Start *******/
+body { min-height: 100%;}
+.login-reg-bg { background: url(../images/login-bg.jpg) no-repeat center center / cover; }
+.register 			{ height: 100vh;}
+.login-screen 		{ padding: 20px; border-radius: 5px; width: 100%; max-width:500px; margin: 0px auto; position: relative; top: 50%; transform: translateY(-50%);}
+.title 				{ margin-bottom: 15px; text-align: center; color: #fff; font-weight: 300;}
+.title p 			{ margin: 30px 0 15px;}
+.register-form 		{ text-align: center; background: #fff; padding: 35px 20px; width: 100%; margin-top: 50px; border-radius: 8px;}
+.register-form .section-title { text-align: left; font-size: 24px; line-height: 30px; padding: 0px;}
+.register-form .section-title span { color: #44D3FF;}
+.control-group 		{ margin-bottom: 15px;}
+.login-screen input  				{ width: 100%; height: 50px; text-align: left; background: transparent; border: 1px solid #e4e4e4; font-size: 15px; font-weight: 200; padding: 10px 18px; letter-spacing: 1px;}
+.login-screen input::-moz-placeholder 				{ color: #ccc; opacity: 1;}
+.login-screen input::-webkit-input-placeholder 		{ color: #ccc; opacity: 1;}
+.login-screen input::-ms-input-placeholder 			{ color: #ccc; opacity: 1;}
+.login-screen input:focus::-moz-placeholder 			{ color: #ccc;}
+.login-screen input:focus::-webkit-input-placeholder 	{ color: #ccc;}
+.login-screen input:focus::-ms-input-placeholder 		{ color: #ccc;}
+.login-screen input:focus 		{ box-shadow: none; border: 1px solid #44D3FF;}
+.control-group.checkbox { text-align: left}
+.control-group.checkbox input { width: auto; height: auto;}
+.register-form .text-left { text-align: left;}
+.register-form .text-right { text-align: right;}
+.register-form .get-started-btn a { padding: 15px 30px 10px; margin-top: 15px; margin-bottom: 25px; font-size: 18px;	}
+.text-right > a { color: #44d3ff; display: inline-block; font-size: 16px; padding-top: 30px;}
+.create-acc-title .section-title { text-align: center; margin-top: 20px; font-size: 25px; line-height: 30px;}
+.create-acc-title { border-top: 3px solid #e4e4e4;}
+.create-acc-title .get-started-btn a { padding: 15px 50px 10px; margin-top: 0px; margin-bottom: 0px; font-size: 18px;}
+.border-none { border: none;}
+/****** Login / Register CSS End *******/
+
+@media (min-width:992px) and (max-width: 1199px){
+	.features-img { margin: 0 15px 25px;}
+	.contact-form { padding: 0px;}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	.main-menu li { padding: 0px;}
+	.main-menu ul { margin-right: -25px;}
+	.banner-content { padding: 15px 0px;}
+	.banner-content h1 { font-size: 25px; margin-top: 25px;}
+	header { height: 700px;}
+	.file-upload { margin: 0px auto;}
+	.work-android-three-block p { width: 100%;}
+	.about p, .features-section p { padding: 0px;}
+	.features-img { margin: 0 0px 25px;}
+	.contact-form { padding: 0px;}	
+	body.login-reg-bg { padding: 50px 0px;}
+	.title img { width: 175px;}
+	.register-form { margin-top: 35px;}
+}
+
+@media (max-width: 767px){
+	header { height: auto !important; background-image: url(../images/mobile-bg.jpg) !important;}
+	.sticky { display: none;}
+	.show-open-window .get-started-btn a { margin: 20px 0px;}
+	.show-list-item li { width: 100%;}
+	.work-android-three-block img { height: 70px;}
+	.banner-content h4 { display: none;}
+	.work-android-three-block p,.about p,.work-android-section p,.features-section p,.contact-section p { font-size: 14px; line-height: 22px;}
+	.header-top-left, .header-top-right  { float:none; text-align: center;}
+	.footer-panel { font-size: 12px;}
+	.features-img img { height: 50px;}
+	.header-top-left > li:nth-child(2n),#toTop { display: none !important;}
+	.logo img { width: 150px;}
+	.logo { float: left;}
+	.main-menu ul { float: none; margin: 0px;}
+	.main-menu li { margin: 5px 0px !important;}
+	.nav.navbar-nav { background: #2fafe5 !important;}
+	.main-menu li:last-child a { padding: 15px 10px 10px !important;}
+	.main-menu li:last-child a { margin: 20px 0px;}
+	.navbar-default .navbar-nav > li > a { font-size: 14px;}
+	.banner-content h1 { font-size: 18px; line-height: 28px; margin-top: 15px;}
+	.banner-content { padding: 15px 0px;}
+	.banner-content h4 { font-size: 16px; line-height: 22px; margin-top: 15px;}
+	.file-upload { margin: 0px; width: 100%;}
+	.image-upload-wrap { margin: 0px;}
+	.drag-text h3 { font-size: 16px;}
+	.section-padding { padding: 35px 0px;}
+	.section-title { font-size: 20px; line-height: 28px;}
+	.work-android-three-block { padding-top: 35px;}
+	.work-android-three-block .col-sm-4 { border-bottom: 1px dashed #ccc; margin-bottom: 20px;}
+	.work-android-three-block p { margin: 15px auto;}
+	.get-started-btn a { margin: 0px;}
+	.about p { padding: 0px; line-height: 25px; margin-bottom: 35px;}
+	.features-section p { padding: 0px; line-height: 25px; margin: 0px;}
+	.features-section { margin-bottom: 35px;}
+	.features-img:nth-child(n+4) { margin-bottom: 25px;}
+	.features-img { width: 100% !important; margin: 0 0 25px;}
+	.features-img:nth-child(5n+1) { margin-bottom: 0px;}
+	.contact-form { padding: 0px;}
+	.contact-form form { margin-top: 35px;}
+	.footer-left, .footer-right { float: none;}
+	body.login-reg-bg { padding: 50px 0px; height: auto;}
+	.register  { height: auto;}
+	.login-screen  { top: 0; transform: none; padding: 30px 15px;}
+	.text-right > a { font-size: 12px;}
+	.title img { width: 175px;}
+	.register-form { margin-top: 35px;}
+	.create-acc-title .section-title { font-size: 16px; line-height: 25px;}
+	.register-form .get-started-btn a { font-size: 14px; line-height: 14px;}
+	.navbar-default .navbar-toggle { margin-top: 15px; margin-right: 0px;}
+	.logo img { width: 100px;}
+	.logo h1 { margin: 16px 0px;}
+	.nav.navbar-nav { background: #53b7ee !important;}
+	.navbar-collapse { padding: 0px; text-align: center;}
+}
+@media(max-height: 650px) {
+	.register  { height: auto;}
+	.login-screen  { top: 0; transform: none; padding-top: 45px; padding-bottom: 45px;}
+}

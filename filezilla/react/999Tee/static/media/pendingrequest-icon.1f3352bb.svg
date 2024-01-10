@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Pending Request</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="14.1-B2C-User-Orders_Details" transform="translate(-374.000000, -1046.000000)">
+            <g id="Pending-Request" transform="translate(374.000000, 1046.000000)">
+                <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="60" height="60"></rect>
+                <g id="Group-25" transform="translate(14.000000, 14.000000)">
+                    <ellipse id="Oval" stroke="#FFB75D" stroke-width="2" cx="16" cy="15.7377049" rx="16" ry="15.7377049"></ellipse>
+                    <path d="M16.2666667,24.1311475 C20.5376687,24.1311475 24,20.6081423 24,16.2622951 L15.9444444,16.2622951 L16.2666667,8.39344262 C11.9956646,8.39344262 8.53333333,11.9164479 8.53333333,16.2622951 C8.53333333,20.6081423 11.9956646,24.1311475 16.2666667,24.1311475 Z" id="Oval" fill="#FFB75D"></path>
+                    <line x1="16.2666667" y1="27.2786885" x2="16.2666667" y2="31.6201244" id="Path-4-Copy" stroke="#FFB75D" stroke-width="2"></line>
+                    <line x1="16.2666667" y1="0" x2="16.2666667" y2="4.34143584" id="Path-4" stroke="#FFB75D" stroke-width="2"></line>
+                    <line x1="29.0666667" y1="13.6043716" x2="29.0666667" y2="17.8710383" id="Path-4-Copy-3" stroke="#FFB75D" stroke-width="2" transform="translate(29.066667, 15.737705) rotate(90.000000) translate(-29.066667, -15.737705) "></line>
+                    <line x1="2.4" y1="13.6043716" x2="2.4" y2="17.8710383" id="Path-4-Copy-2" stroke="#FFB75D" stroke-width="2" transform="translate(2.400000, 15.737705) rotate(90.000000) translate(-2.400000, -15.737705) "></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

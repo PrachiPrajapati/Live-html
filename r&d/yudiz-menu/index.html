@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+		<title>mmenu yudiz demo</title>
+		<link type="text/css" rel="stylesheet" href="css/demo.css" />
+		<link type="text/css" rel="stylesheet" href="css/mmenu-light.css" />
+		<link type="text/css" rel="stylesheet" href="css/mobile-style.css" />
+	</head>
+	<body>
+		<div id="page">
+			<a href="#trigger-mobile-menu" class="menu-trigger"></a>
+			<div>
+				
+				<nav id="mobile-menu">
+					<div class="mobile-nav-block">
+						<a href="#"><figure><img src="images/mn-home.svg" alt="yudiz menu icon" /></figure></a>
+						<a href="#"><figure><img src="https://www.yudiz.com/wp-content/uploads/2019/10/yudiz-logo.png" alt="yudiz menu logo" /></figure></a>
+						<a href="#" class="close-menu"><figure><img src="images/mn-close.svg" alt="yudiz menu icon" /></figure></a>
+					</div>
+					<ul>
+						<li class="sub-items">
+							<span href="#"><figure><img src="images/mn-what-we-do.svg" alt="yudiz menu icon" /></figure>What we do</span>
+							<ul>
+								<li><a href="#"><figure><img src="images/mn-web.svg" alt="yudiz menu icon" /></figure>web</a></li>
+								<li><a href="#"><figure><img src="images/mn-game.svg" alt="yudiz menu icon" /></figure>game</a></li>
+								<li><a href="#"><figure><img src="images/mn-mobile.svg" alt="yudiz menu icon" /></figure>app</a></li>
+								<li><a href="#"><figure><img src="images/mn-uiux.svg" alt="yudiz menu icon" /></figure>ui/ux</a></li>
+								<li><a href="#"><figure><img src="images/mn-blockchain.svg" alt="yudiz menu icon" /></figure>blockchain</a></li>
+								<li><a href="#"><figure><img src="images/mn-chatbot.svg" alt="yudiz menu icon" /></figure>chatbot</a></li>
+							</ul>
+						</li>
+						<li class="sub-items">
+							<span><figure><img src="images/mn-company.svg" alt="yudiz menu icon" /></figure>our company</span>
+							<ul>
+								<li><a href="#"><figure><img src="images/mn-about.svg" alt="yudiz menu icon" /></figure>About Us</a></li>
+								<li><a href="#"><figure><img src="images/mn-team.svg" alt="yudiz menu icon" /></figure>Team</a></li>
+								<li><a href="#"><figure><img src="images/mn-events.svg" alt="yudiz menu icon" /></figure>Events</a></li>
+								<li><a href="#"><figure><img src="images/mn-awards.svg" alt="yudiz menu icon" /></figure>Awards</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><figure><img src="images/mn-projects.svg" alt="yudiz menu icon" /></figure>projects</a></li>
+						<li class="selected-menu"><a href="#"><figure><img src="images/mn-casestudy.svg" alt="yudiz menu icon" /></figure>casestudy</a></li>
+						<li><a href="#"><figure><img src="images/mn-blog.svg" alt="yudiz menu icon" /></figure>blog</a></li>
+						<li><a href="#"><figure><img src="images/mn_career.svg" alt="yudiz menu icon" /></figure>career</a></li>
+					</ul>
+					<div class="mobile-nav-contact-button"><a href="#">Get in touch</a></div>
+				</nav>
+			</div>
+		</div>
+		<script src="js/mmenu-light.js"></script>
+		<script>
+			var menu = new MmenuLight(
+				document.querySelector( '#mobile-menu' )
+			);
+			var navigator = menu.navigation({
+				selectedClass: 'Selected-menu',
+				// slidingSubmenus: true,
+				theme: 'dark',
+				title: '',
+			});
+			var drawer = menu.offcanvas({
+				position: 'right'
+			});
+			//	Open the menu.
+			document.querySelector( 'a[href="#trigger-mobile-menu"]' )
+				.addEventListener( 'click', evnt => {
+					evnt.preventDefault();
+					drawer.open();
+				});
+			//	Close the menu.
+			document.querySelector( '.close-menu' )
+				.addEventListener( 'click', evnt => {
+					evnt.preventDefault();
+					drawer.close();
+				});
+		</script>
+	</body>
+</html>

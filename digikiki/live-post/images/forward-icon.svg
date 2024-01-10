@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>ic_forward</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="web" transform="translate(-981.000000, -324.000000)">
+            <g id="Group-7" transform="translate(308.000000, 133.000000)">
+                <g id="Group-5" transform="translate(374.000000, 0.000000)">
+                    <g id="Group-7" transform="translate(292.000000, 187.000000)">
+                        <g id="ic_forward" transform="translate(3.000000, 0.000000)">
+                            <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="28" height="28"></rect>
+                            <g id="Group-15" transform="translate(5.250000, 5.250000)" stroke="#080808" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.33333333">
+                                <path d="M0.45325,17.5219333 L0.45325,12.7689333 C0.45325,9.07876667 3.44633333,6.08801667 7.1365,6.09209582 L17.9631667,6.10318333" id="Stroke-22"></path>
+                                <line x1="11.8813333" y1="0.0236833333" x2="17.9649167" y2="6.10201667" id="Stroke-23"></line>
+                                <line x1="17.9655" y1="6.10201667" x2="11.8819167" y2="12.18035" id="Stroke-24"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

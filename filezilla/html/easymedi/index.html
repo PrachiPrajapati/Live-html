@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Easy Medi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+    <!-- favicon  -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png"/>
+      <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png"/>
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png"/>
+      <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png"/>
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png"/>
+      <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png"/>
+      <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png"/>
+      <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png"/>
+      <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png"/>
+      <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png"/>
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
+      <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png"/>
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
+        <link href="css/fontawesome.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+        <link href="css/slick-theme.css" rel="stylesheet" type="text/css"/>
+        <link href="css/slick.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <script src="js/lib/jquery.js" type="text/javascript"></script>
+        <script src="js/modernizr.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/html5shiv.min.js" type="text/javascript"></script>
+        <script src="js/respond.min.js" type="text/javascript"></script>
+        <script src="js/slick.js" type="text/javascript"></script>
+        <script src="js/typed.js" type="text/javascript"></script>
+         <script src="js/easing.js"></script>
+         <script type="text/javascript">
+                    $(function() {
+                        $('.scroll-to-bottom a').bind('click', function(event) {
+                            var $anchor = $(this);
+                            $('html, body').stop().animate({
+                                scrollTop: $($anchor.attr('href')).offset().top
+                            }, 1500, 'easeInOutExpo');
+                            event.preventDefault();
+                        });
+                    });
+                    // Highlight the top nav as scrolling occurs
+                    $('body').scrollspy({
+                        target: '.navbar-example'
+                    })
+                    $(document).ready(function () {
+                            $(".navbar-nav li a").click(function(event) {
+                                    $(".navbar-collapse").collapse('hide');
+                            });
+                    });
+        </script>
+</head>
+<body class="front-page">
+<!--******************* Header Section Start *********************-->
+<header class="header-background">
+    <div>
+        <div class="container">
+            <div class="home-navigation">
+                <div class="row">
+                    <div class="logo col-sm-3">
+                        <a href="index.html"><img src="images/logo.png" alt="EasyMedi"/></a>
+                    </div>
+                    <div class="col-sm-9 main-menu">
+                        <ul>
+                           <li><a href="#join-popup" data-toggle="modal" data-target="#myModal2">JOIN OUR TEAM</a></li>
+                           <li class="social-icon"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+     <div class="container-full">
+        <div class="banner-slider">
+             <div class="slider-block">
+                <img src="images/doctor.png" alt="slider">
+                <div class="text-block animated fadeIn type-wrap">
+                    <h4>Doctor</h4>
+                    <p id="typing1"></p>
+                    <a href="#">Login</a>
+                </div>
+                <div class="charector-lable  animated fadeIn" data-wow-delay="7000ms">
+                    <span>Doctor</span>
+                </div>
+             </div>
+             <div class="slider-block">
+                <img src="images/patient.png" alt="slider">
+                 <div class="text-block animated fadeIn" >
+                     <h4>Patient</h4>
+                     <p id="typing2"></p>
+                     <a href="#">Login</a>
+                 </div>
+                <div class="charector-lable  animated fadeIn" data-wow-delay="7000ms">
+                    <span>Patient</span>
+                </div>
+             </div>
+             <div class="slider-block">
+                <img src="images/pharmacist.png" alt="slider">
+                <div class="text-block animated fadeIn">
+                    <h4>Pharmacist</h4>
+                    <p id="typing3"></p>
+                    <a href="#">Login</a>
+                </div>
+                <div class="charector-lable  animated fadeIn" data-wow-delay="7000ms">
+                    <span>Pharmacist</span>
+                </div>
+             </div>
+             <div class="slider-block">
+                <img src="images/lab.png" alt="slider">
+                <div class="text-block animated fadeIn">
+                    <h4>Lab</h4>
+                    <p id="typing4"></p>
+                    <a href="#">Login</a>
+                </div>
+                <div class="charector-lable  animated fadeIn" data-wow-delay="7000ms">
+                    <span>Lab</span>
+                </div>
+             </div>
+         </div>
+         <div class="scroll-to-bottom">
+             <a href="#scroll-footer">
+                 <img src="images/mouse.png" alt="scroll-arrow" />
+             </a>
+         </div>
+     </div>
+</header>
+
+<div>
+<!--******************* Header Section End *********************-->   
+<!--******************* Middle Section Start ******************-->
+<main>
+    <section id="scroll-footer" class="footer-widget">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 widget-1 border-right">
+            <h1 class="section-title">Who we are?</h1>
+            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
+            <p>nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+          </div>
+          <div class="col-sm-4 widget-2 border-right">
+            <h1 class="section-title">our presence</h1>
+            <div><img src="images/widget-map.png" /></div>
+          </div>
+          <div class="col-sm-4 widget-3">
+            <h1 class="section-title">News Feed</h1>
+          <div>
+            <div class="col-sm-3">
+              <img src="images/news-feed-1.jpg"/>
+            </div>
+            <div class="col-sm-9 news-feed-desc">
+              <h4 class="news-feed-title">This is Photoshop's version  of Lorem </h4>
+              <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div>
+            <div class="col-sm-3">
+              <img src="images/news-feed-2.jpg"/>
+            </div>
+            <div class="col-sm-9 news-feed-desc">
+              <h4 class="news-feed-title">This is Photoshop's version  of Lorem </h4>
+              <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>          
+          <div>
+            <div class="col-sm-3">
+              <img src="images/news-feed-3.jpg"/>
+            </div>
+            <div class="col-sm-9 news-feed-desc">
+              <h4 class="news-feed-title">This is Photoshop's version  of Lorem </h4>
+              <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="myModal1" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                         <h1 class="section-title">Contact Us</h1>
+                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type ,</p>
+                         <div class="contact-form">
+                            <form>
+                                    <div class="form-group col-sm-6">
+                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
+                                     </div>
+                                     <div class="form-group col-sm-6">
+                                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address">
+                                     </div>
+                                 <div class="form-group col-sm-12">
+                                         <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                                 </div>
+                                 <div class="col-sm-12">
+                                     <button>Send</button>
+                                 </div>
+                            </form>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  </div>
+    </section>
+    <section>
+      <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                         <h1 class="section-title">Join Our Team</h1>
+                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type ,</p>
+                         <div class="contact-form">
+                            <form>
+                                <div class="form-group col-sm-6">
+                                   <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email Address">
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <input type="file">
+                                </div>
+                                <div class="col-sm-12">
+                                    <button>Send</button>
+                                </div>
+                            </form>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  </div>
+    </section>
+</main>
+<!--******************* Middle Section End ******************-->
+<!--******************* Footer Section Start ******************-->
+<footer>
+    <div class="footer-panel">
+        <div class="container">
+            <div>
+                <p>&copy; 2017 EasyMedi. All Right Reserved</p>
+                <a href="#click-popup" data-toggle="modal" data-target="#myModal1">Contact Us</a>
+                <p class="development-text">Designed & Developed By: <a href="http://www.yudiz.com" target="_blank"><img src="images/yudiz.png"/></a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+$(window).click(function(){
+    $("#click-popup,#join-popup").modal('show');
+});
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.banner-slider').slick({
+      centerMode: true,
+      centerPadding: '0px',
+      infinite: false,
+      initialSlide: 1,
+      speed: 2000,
+      slidesToShow: 3,
+      responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 1
+        }
+      }
+      ]
+    });
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    var typed1 = new Typed('#typing1', {
+      strings: ['Doctor: Lorem Ipsum is simply dummy text of the printing and.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      fadeOut: true,
+      loop: true
+    });
+    var typed2 = new Typed('#typing2', {
+      strings: ['Patient: Lorem Ipsum is simply dummy text of the printing and.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      fadeOut: true,
+      loop: true
+    });
+     var typed3 = new Typed('#typing3', {
+      strings: ['Pharma: Lorem Ipsum is simply dummy text of the printing and.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      fadeOut: true,
+      loop: true
+    });
+    var typed4 = new Typed('#typing4', {
+      strings: ['Lab: Lorem Ipsum is simply dummy text of the printing and.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      fadeOut: true,
+      loop: true
+    }); 
+  ;});
+</script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+h2,h3,h4,h5,h6{
+	padding:0px;
+	margin: 0px;
+}
+
+@head-font: 'Poppins', sans-serif;
+
+.section{
+	padding:60px 0px;
+}
+
+@primary-color: #f4e524;
+@secondary-color: #a438b5;
+
+/* --------------- body -----------------*/
+
+
+.section-nav{
+	position:absolute;
+	z-index: 9999;
+	width: 100%;
+	margin-top: 30px;
+	z-index: 1;
+	.img{
+		width: 190px;
+	}
+}
+
+.section-banner{
+	height: 100vh;
+	background-image: url("../img/banner.jpg");
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	.banner-content{
+		margin-top: 35%;
+		p{
+			color: #fff;
+			text-align: center;
+			padding:5px 0px;
+		}
+		.ban{
+			width: 300px;
+		}
+		.ban1{
+			width: 150px;
+		}
+	}
+	.banner-content1{
+		margin-top: 25%;
+	}
+}
+
+
+/* section-services */
+.section-services{
+	background-image:url("../img/second-banner.jpg");
+	padding-top:60px;
+	background-size:cover;
+	background-position:top;
+	padding-top:17%;
+		.services-box{
+		text-align: center;
+		margin-top: 50px;
+		.img{
+			width: 90px;
+		}
+		h4{
+			font-size: 24px;
+			font-weight: 700;
+			padding-top:10px;
+			font-family:@head-font;
+			color: @primary-color;
+		}
+		h5{
+			color: @primary-color;
+		}
+	}
+}
+
+/* section-download */
+.section-download{
+	background-image: url("../img/third-banner.png");
+	height: 100vh;
+	background-size: cover;
+	background-position:center;
+}
+
+/* section-game */
+.section-game{
+	background-image:url('../img/fourth-banner.jpg');
+	background-size:cover;
+	background-position:center;
+	h3{
+		font-size: 24px;
+		font-weight: 700;
+		padding-bottom:20px;
+		font-family:@head-font;
+		color: @primary-color;
+	}
+	.section-media{
+		margin: 20px 0px;
+	}
+	.media-left{
+		h2{
+			font-size: 60px;
+			font-weight: 700;
+			color: @primary-color;
+			font-family:@head-font;
+		}
+	}
+	.media-heading{
+		font-size: 19px;
+		font-weight: 700;
+		padding-top:10px;
+		font-family:@head-font;
+		color: @primary-color;
+	}
+	p{
+		color: @primary-color;
+		font-size: 17px;
+	}
+	.create{
+		text-transform: uppercase;
+		background-color:@primary-color;
+		color: @secondary-color;
+		outline: 0px;
+		border-radius:30px;
+		padding:8px 20px;
+		border:0px;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.35);
+		-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.35);
+		box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.35);
+		margin-bottom: 30px;
+		&:hover{
+			-webkit-box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.45);
+		-moz-box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.45);
+		box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.45);
+		}
+	}
+}
+
+.section-fans{
+	padding:60px 0px;
+	background-image:url('../img/last-banner.jpg');
+	padding-top:15%;
+	background-size:cover;
+	background-position:center;
+	h4{
+		text-align: center;
+		color: @secondary-color;
+		font-size: 25px;
+		padding-bottom:20px;
+	}
+	.img{
+		width: 250px;
+		margin-top:15px;
+		margin-bottom: 15px;
+	}
+	h5{
+		text-align: center;
+		color: @secondary-color;
+		letter-spacing: 0.5px;
+		font-size: 16px;
+		font-weight: 700;
+		padding-bottom:5px;
+		padding-top:10px;
+	}
+	p{
+		text-align: center;
+		padding: 0px 15px;
+	}
+}
+
+/* footer */
+.footer{
+	padding:70px 0px;
+	background-color:#222222;
+	
+	h5{
+		color: #F1F1E4;
+		padding:10px 0px;
+		font-size: 17px;
+		letter-spacing: 0.6;
+	}
+	ul{
+		padding:0px;
+		li{
+			list-style: none;
+			padding-bottom:5px;
+			a{
+				color: #772D90;
+				font-size: 17px;
+				text-decoration: none;
+			}
+		}
+	}
+	.more{
+		background-color:transparent;
+		color: #772d90;
+		border:none;
+		position:absolute;
+		margin-top: -100px;
+		margin-bottom: 15px !important;
+	}
+	.well {
+		background-color:transparent;
+		border:none;
+		border-top:0px;
+		h3{
+			color: #f5f5f5;
+			font-size: 18px;
+			padding-bottom:10px;
+		}
+		p{
+			color: rgba(255,255,255,0.4);
+		}
+	}
+	.footer-box{
+		h5{
+			color: #F1F1E4;
+			font-size: 14px;
+			font-weight: 700;
+		}
+		h6{
+			font-size: 14px;
+			color: #fff;
+			padding: 2px 0px;
+		}
+		.img1{
+			width: 55px;
+		}
+		.img2{
+			width: 130px;
+		}
+		.img3{
+			width: 100px;
+			margin-left: 10px;
+		}
+		.img4{
+			width: 80px;
+		}
+		.img5{
+			width: 35px;
+			margin: 15px 0px;
+		}
+	}
+}
+
+/* copyright */
+.copyright{
+	background-color:#151515;
+	padding:15px 0px;
+	ul{
+		padding: 0px;
+		margin:0px auto;
+		text-align: center;
+		li{
+			a{
+				color: rgba(255,255,255,0.6);
+				font-size: 13px;
+				font-weight: 500;
+				text-decoration: none;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+
+/* ---------------------------- responsive ---------------------------------- */
+@media (min-width: 320px) and (max-width: 540px) {
+
+	.section-nav{
+		margin-top: 20px;
+		.img{
+			width: 120px;
+			margin:0px auto;
+			z-index: -11;
+		}
+	}/* section nav */
+
+	.section-banner{
+	height: 100vh;
+	background-image: url("../img/res-banner.jpg");
+	.banner-content{
+		margin-top: 20%;
+		p{
+			padding:0px 0px;
+		}
+		.ban{
+			width: 140px;
+		}
+		.ban1{
+			width: 90px;
+		}
+	}
+	.banner-content1{
+		margin-top: 16%;
+		img{
+			width: 140px;
+		}
+	}
+}/* section banner*/
+
+
+
+
+.section-services{
+	background-image:url("../img/res-second-banner.jpg");
+	padding-top:17%;
+	height: 100%;
+}/* section-service */
+
+/* section-download */
+.section-download{
+	background-image: url("../img/res-third-banner.png");
+	height: 275px;
+	background-size: cover;
+	background-position:center center;
+	
+}
+
+.section-game{
+	background-image:url('../img/res-fourth-banner.jpg');
+	background-size:cover;
+	background-position:center;
+	height: 100%;
+	background-position:bottom;
+}
+
+	
+	.section-download{
+	.content{
+		margin-top: 50%;
+		.img{
+			width: 225px;
+		}
+		h2{
+			font-size: 27px;
+		}
+	}
+}/* section-download */
+
+.section-fans{
+	padding:60px 0px;
+	background-image:url('../img/res-last-banner.png');
+	padding-top:27%;
+	background-size:cover;
+	background-position:center;
+	height: 100%;
+}
+
+
+/* footer */
+.footer{
+	background-image:url('../img/footer.jpg');
+	background-size: cover;
+	background-position:center;
+	background-position:top right;
+}
+
+ }/* responsive */

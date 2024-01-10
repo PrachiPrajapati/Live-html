@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Web</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle-17" x="0" y="0" width="44" height="44"></rect>
+            <g id="Group-25" transform="translate(3.666667, 3.666667)">
+                <rect id="Rectangle-51" stroke="#FFFFFF" stroke-width="0.825825826" x="0" y="0" width="36.6666667" height="36.6666667" rx="1.52777778"></rect>
+                <line x1="5.34722222" y1="20.625" x2="30.5555556" y2="20.625" id="Line" stroke="#47EBC6" stroke-width="3.05555556" stroke-linecap="square"></line>
+                <line x1="5.34722222" y1="28.2638889" x2="22.9243057" y2="28.2638889" id="Line-Copy" stroke="#47EBC6" stroke-width="3.05555556" stroke-linecap="square"></line>
+                <circle id="Oval-3" fill="#47EBC6" cx="5.34722222" cy="6.11111111" r="1.52777778"></circle>
+                <circle id="Oval-3-Copy" fill="#47EBC6" cx="9.93055556" cy="6.11111111" r="1.52777778"></circle>
+                <circle id="Oval-3-Copy-2" fill="#47EBC6" cx="14.5138889" cy="6.11111111" r="1.52777778"></circle>
+                <polyline id="Path-11" stroke="#FFFFFF" stroke-width="1.52777778" points="6.875 10.6944444 3.81944444 13.75 6.875 16.8055556"></polyline>
+                <polyline id="Path-11-Copy" stroke="#FFFFFF" stroke-width="1.52777778" transform="translate(30.555556, 29.027778) scale(-1, 1) translate(-30.555556, -29.027778) " points="32.0833333 25.9722222 29.0277778 29.0277778 32.0833333 32.0833333"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

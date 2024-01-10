@@ -1,0 +1,255 @@
+.highcharts-tooltip span{
+	overflow: auto;
+}
+
+.highcharts-label.highcharts-tooltip{
+	left: 100px!important;
+}
+
+.chart {
+	background: #FFFFFF;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+	border-radius: 10px 10px 10px 0px;
+	padding: 7.5px;
+	min-width: 155px;
+}
+
+.m_t_10{
+	margin-top: 5px;
+}
+
+.chart_title{
+	font-family: 'Inter', serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 8px;
+	line-height: 12px;
+	letter-spacing: 0.01em;
+	color: #9FA3C0;
+}
+
+.chart_value{
+	font-size: 10px;
+	line-height: 120%;
+	font-family: 'Inter', serif;
+	font-style: normal;
+	font-weight: 300;
+	color: #60698B;
+}
+
+.chart_expenses{
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 0.01em;
+	color: #60698B;
+	font-family: 'Poppins', serif;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.color_filled {
+	border-radius: 5px;
+	width: 6px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+.light_green_filled{
+	background: linear-gradient(0deg, #D6F8F1, #D6F8F1), #3246D3;
+}
+
+.light_pink_filled{
+	background: linear-gradient(0deg, #FFD9EB, #FFD9EB), #3246D3;
+}
+
+.blue_filled{
+	background: #3246D3;
+}
+
+.lightblue_filled{
+	background: rgba(50,70,211,0.1);
+}
+
+.text_2{
+	font-size: 12px;
+	line-height: 15px;
+	font-family: 'Inter',serif;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #293A3E;
+	min-width: 130px;
+	margin: 0 10px;
+}
+
+.number{
+	font-family: 'Inter',serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 15px;
+	letter-spacing: 0.01em;
+	text-align: center;
+	color: #293A3E;
+	min-width: 17px;
+}
+
+.text_1{
+	font-family: 'Inter',serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 15px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #293A3E;
+	margin-left: 2px;
+	min-width: 20px;
+}
+
+.text_3{
+	font-family: 'Inter',serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 14px;
+	letter-spacing: 0.01em;
+	text-align: left;
+	color: #293A3E;
+	margin-left: 10px;
+	min-width: 50px;
+}
+
+.width_100{
+	width: 30px;
+}
+
+.chart .content_center img{
+	width: 40px;
+}
+.color_filled_2{
+	width: 12px;
+	height: 12px;
+	margin-right: 5px;
+	border-radius: 50%;
+}
+
+.filled_blue{
+	background-color: #657FDB;
+}
+
+.filled_lightblue{
+	background: #BDE2FF
+}
+
+.filled_lightblue2{
+	background: #AED0FE
+}
+
+.filled_lightpink{
+	background: #DCCEFF;
+}
+
+.filled_lightpink2{
+	background: #FFD6FF;
+}
+
+.filled_lightblue3{
+	background: #AEE2F5;
+}
+
+.filled_lightpink3{
+	background: #D1B9D6;
+}
+
+
+.filled_lightpink4{
+	background: #E7C6FF;
+}
+
+.filled_lightpink5{
+	background: #CC95C1;
+}
+
+.filled_grey{
+	background: #BBCFFF;
+}
+
+.custom_chart{
+	min-width: 122px!important;
+	padding: 5px 20px!important;
+	border-radius: 0px 10px 10px 0px!important;
+	background-color: rgba(255,255,255,0.85);
+}
+
+.marketing_title{
+	text-align: left;
+	margin-left: 30px;
+}
+
+#container,
+#container .highcharts-container,
+#container svg, #pie-chart-container,
+#pie-chart-container .highcharts-container,
+#pie-chart-container svg{
+	overflow: visible!important;
+}
+
+#pie-chart-container .highcharts-container{
+	z-index: 999!important;
+}
+
+#container .chart {
+	min-width: 100px;
+}
+
+#pie-chart-container .chart{
+	padding:17.5px 8px;
+	min-width:100px;
+	overflow:hidden;
+}
+#marketing-roi-container .chart{
+	position: fixed;
+}
+#pie-chart-container .highcharts-label.highcharts-tooltip {
+    left: 80px!important;
+	overflow: visible !important;
+}
+
+#marketing-roi-container .highcharts-label.highcharts-tooltip {
+    left: 195px!important;
+}
+@media(max-width: 768px){
+	.highcharts-figure, .highcharts-data-table table{
+		max-width: 550px!important;
+	}
+}
+@media(min-width: 1601px){
+	.chart_expenses{
+		font-size: 24px;
+		line-height: 36px;
+	}
+	.chart_value{
+		font-size: 14px;
+		line-height: 140%;
+	}
+	.chart_title{
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.chart{
+		padding: 15px;
+	}
+
+	.m_t_10{
+		margin-top: 10px;
+	}
+
+	.text_3,
+	.number,.text_2,.text_1{
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+}

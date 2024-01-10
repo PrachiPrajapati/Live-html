@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="64px" viewBox="0 0 32 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, 32.000000)">
+            <rect id="ViewBox" fill="#FFFFFF" opacity="0.165411086" x="0" y="0" width="32" height="32" rx="4"></rect>
+            <g id="package-close(24x24)@1x" transform="translate(8.000000, 7.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.05882353">
+                <polygon id="Path" points="8.47058824 8.47058824 0 4.23529412 0 13.7647059 8.47058824 18"></polygon>
+                <polygon id="Path" points="8.47058824 18 16.9411765 13.7647059 16.9411765 4.23529412 8.47058824 8.47058824"></polygon>
+                <polygon id="Path" points="12.7058824 2.11764706 4.23529412 6.35294118 8.47058824 8.47058824 16.9411765 4.23529412"></polygon>
+                <polygon id="Path" points="12.7058824 2.11764706 4.23529412 6.35294118 0 4.23529412 8.47058824 0"></polygon>
+            </g>
+        </g>
+        <g id="Group-Copy">
+            <rect id="ViewBox" opacity="0.165411086" x="0" y="0" width="32" height="32" rx="4"></rect>
+            <g id="package-close(24x24)@1x" transform="translate(8.000000, 7.000000)" stroke="#464546" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.05882353">
+                <polygon id="Path" points="8.47058824 8.47058824 0 4.23529412 0 13.7647059 8.47058824 18"></polygon>
+                <polygon id="Path" points="8.47058824 18 16.9411765 13.7647059 16.9411765 4.23529412 8.47058824 8.47058824"></polygon>
+                <polygon id="Path" points="12.7058824 2.11764706 4.23529412 6.35294118 8.47058824 8.47058824 16.9411765 4.23529412"></polygon>
+                <polygon id="Path" points="12.7058824 2.11764706 4.23529412 6.35294118 0 4.23529412 8.47058824 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

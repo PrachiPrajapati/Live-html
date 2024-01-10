@@ -1,0 +1,604 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@font-face {
+    font-family: 'DIN Alternate';
+    src: url('../fonts/DINRegularAlternate.eot');
+    src: url('../fonts/DINRegularAlternate.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINRegularAlternate.woff2') format('woff2'),
+        url('../fonts/DINRegularAlternate.woff') format('woff'),
+        url('../fonts/DINRegularAlternate.ttf') format('truetype'),
+        url('../fonts/DINRegularAlternate.svg#DINRegularAlternate') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINLightAlternate';
+    src: url('../fonts/DINLightAlternate.eot');
+    src: url('../fonts/DINLightAlternate.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINLightAlternate.woff2') format('woff2'),
+        url('../fonts/DINLightAlternate.woff') format('woff'),
+        url('../fonts/DINLightAlternate.ttf') format('truetype'),
+        url('../fonts/DINLightAlternate.svg#DINLightAlternate') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINMediumAlternate';
+    src: url('../fonts/DINMediumAlternate.eot');
+    src: url('../fonts/DINMediumAlternate.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINMediumAlternate.woff2') format('woff2'),
+        url('../fonts/DINMediumAlternate.woff') format('woff'),
+        url('../fonts/DINMediumAlternate.ttf') format('truetype'),
+        url('../fonts/DINMediumAlternate.svg#DINMediumAlternate') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN';
+    src: url('../fonts/DIN.eot');
+    src: url('../fonts/DIN.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DIN.woff2') format('woff2'),
+        url('../fonts/DIN.woff') format('woff'),
+        url('../fonts/DIN.ttf') format('truetype'),
+        url('../fonts/DIN.svg#DIN') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Odudo';
+    src: url('../fonts/Odudo-Regular.eot');
+    src: url('../fonts/Odudo-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Odudo-Regular.woff2') format('woff2'),
+        url('../fonts/Odudo-Regular.woff') format('woff'),
+        url('../fonts/Odudo-Regular.ttf') format('truetype'),
+        url('../fonts/Odudo-Regular.svg#Odudo-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Odudo Semi';
+    src: url('../fonts/Odudo-SemiBold.eot');
+    src: url('../fonts/Odudo-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Odudo-SemiBold.woff2') format('woff2'),
+        url('../fonts/Odudo-SemiBold.woff') format('woff'),
+        url('../fonts/Odudo-SemiBold.ttf') format('truetype'),
+        url('../fonts/Odudo-SemiBold.svg#Odudo-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+body 							{ background-color: #ffffff; font-family: 'DIN',sans-serif; }
+* 								{-o-transition:.5s;-ms-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s;transition:.5s; }
+*, *:before, *:after 			{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*								{ margin: 0px; padding: 0px; }
+img								{ border: 0px; }
+ul,ol							{ list-style: none; }
+a:hover, a:focus 				{ text-decoration: none; }
+a,a:active,a:visited			{ outline: none; border: 0px; text-decoration: none; }
+h1,h2,h3,h4,h5,h6,p 			{ margin: 0px; }
+h1								{ font-size: 35px; line-height: 45px; font-family: 'Odudo'; }
+h2								{ font-size: 32px; line-height: 37px; font-family: 'Odudo'; }
+h3								{ font-size: 28px; line-height: 35px; }
+h4								{ font-size: 24px; line-height: 32px; font-family: 'Odudo'; }
+h5								{ font-size: 18px; line-height: 22px; }
+h6								{ font-size: 20px; line-height: 25px; }
+p								{ font-size: 14px; line-height: 20px; }
+p.big							{ font-size: 18px; line-height: 28px; font-family: 'DINLightAlternate'; }
+p.meduim						{ font-size: 16px; line-height: 26px; }
+.small-text 					{ font-size: 12px; line-height: 18px; }
+.sub-title 						{ font-size: 30px; line-height: 38px; }
+.br 							{ display: block; }
+.full-img 						{ width: 100%; }
+.desktop-view 					{ display: block; }
+.mob-show 						{ display: none !important; }
+/*.fleft							{ float: left !important;}
+.fright							{ float: right !important;}
+.nofloat						{ float: none !important;}*/
+/* Padding */
+.pad-ten						{ padding: 10px; }
+.pad-top-ten					{ padding-top: 10px; }
+.pad-top-twentyfive				{ padding-top: 25px; }
+.pad-btm-ten					{ padding-bottom: 10px; }
+.pad-btm-twentyfive				{ padding-bottom: 25px; }
+.pad-comman-top-btm				{ padding: 25px 0px; }
+.pad-comman 					{ padding: 25px; }
+.no-pad 	 					{ padding: 0px; }
+/* //Padding */
+/* Margin */
+.mar-ten						{ margin: 10px; }
+.mar-top-ten					{ margin-top: 10px; }
+.mar-top-twentyfive				{ margin-top: 25px; }
+.mar-btm-ten					{ margin-bottom: 10px; }
+.mar-btm-twenty					{ margin-bottom: 20px; }
+.mar-btm-twentyfive				{ margin-bottom: 30px; }
+.mar-comman-top-btm				{ margin: 30px 0px; }
+.mar-comman-big-top-btm			{ margin: 50px 0px; }
+.mar-comman-big-btm				{ margin-bottom: 50px; }
+.mar-comman 					{ margin: 25px; }
+.no-mar 	 					{ margin: 0px; }
+.mar-left-right					{ margin: 0px 15px; }
+/* //Margin */
+.big-pad-tb						{ padding: 200px 0px; }
+.medium-pad-top					{ padding-top: 100px; }
+.medium-pad-tb 					{ padding: 100px 0px; }
+.small-pad-tb 					{ padding: 50px 0px; }
+.border-none					{ border: none; }
+.bg-none						{ background: none;}
+/******* Common Element CSS End *********/
+/* ----------- Color Element CSS Start -----------*/
+.white-text 					{ color: #ffffff; }
+.grey-text 						{ color: #8a9bae; }
+.comman-btn 					{ padding: 12px; text-align: center; border-radius: 4px; font-size: 12px; line-height: 16px; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.21); 
+								display: inline-block; }
+.white-bg						{ background-color: #ffffff; }
+.pink-bg						{ background-color: #ff3366; padding: 12px 24px; font-weight: bold; }
+.comman-btn.pink-bg:focus,
+.comman-btn.pink-bg:hover		{ color: #ff3366; background-color: #ffffff; }
+.comman-btn.grey-text:hover		{ color: #ffffff; background-color: #8a9bae; }
+.green-btn:hover,
+.green-btn:focus 				{ color: #83ff94; }
+.green-btn 						{ display: inline-block; color: #83ff94; font-size: 10px; font-weight: 700;line-height: 10px; text-align: center; padding: 10px;
+								border: 2px solid #83ff94; border-radius: 10px; text-transform: uppercase; }
+.uppercase 						{ text-transform: uppercase; }
+/* ----------- Color Element CSS End -----------*/
+/* ----------- 		Header Section CSS Start 	-----------*/
+.navbar-default                 { position: fixed; display: block; top: 0; left: 0; width: 100%; min-height: auto; margin-bottom: 0px; border-radius: 0; border: 0px; 
+                                background: transparent; width: 100%; transition-duration: 0.3s; -webkit-transition-duration: 0.3s; z-index: 9999; }
+.navbar-default.sticky-head { background: #fff !important; padding: 0px;}
+header							{ position: relative; z-index: 5; overflow: hidden;}
+.banner-circle                  { position: absolute; display: block; bottom: 0px; left: 45%; width: 1600px; height: 1600px; border-radius: 48%; z-index: 0; 
+                                background-image: linear-gradient(#33C2FF, #662BF7); background-repeat: no-repeat; display: block; opacity: 1; overflow: hidden;}
+.header-mobile					{ position: relative; display: block; top: 0; left: 45%; width: 55%; z-index: -1; opacity: 1; }
+.logo							{ width: 100%; max-width: 140px; }
+.navbar-brand 					{ height: auto; }
+.nav.navbar-nav 				{ padding-top: 5px;}
+.navbar-default .navbar-nav > li > a { color: #ffffff !important; padding: 15px 0px; margin: 0px 30px; background: transparent;}
+.navbar-default.sticky-head .navbar-nav > li > a { color: #3849e2 !important;}
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus { color: #ffffff; opacity: 0.7; }
+.default-logo 					{ padding-top: 0px; }
+.navbar-default .sticky-logo,
+.navbar-default.sticky-head .normal-logo { display: none; }
+.navbar-default.sticky-head .sticky-logo { display: block; }
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus,
+
+.navbar-default .navbar-nav > .active > a { background-color: transparent; position: relative; }
+.navbar-default .navbar-nav > .active > a:before { content: ''; height: 2px; background-color: #ffffff; position: absolute; left: 50%; transform: translateX(-50%); bottom: 8px; z-index: -1; width: 100%; opacity: 0.5}
+.navbar-default.sticky-head .navbar-nav > .active > a {}
+.navbar-default.sticky-head .navbar-nav > .active > a:before { background-color: #3849e2;}
+
+
+/* ----------- 		Header Section CSS End 		-----------*/
+/* ----------- 		Banner Section CSS Start	-----------*/
+.hero-content { position: absolute; top: calc(50% - 163px); left: 0; width: 100%; }
+.hero-content > .container > .row {display: flex; -webkit-display: flex; align-items: center;}
+.hero-content li p 				{ color: #294ff5; font-weight: bold; font-size: 10px; }
+.hero-content li:first-child 	{ padding-left: 0px; }
+.hero-content li				{ text-align: center; min-width: 85px; margin-bottom: 10px; }
+.hero-content li img			{ max-width: 40px; }
+/* ----------- 		Banner Section CSS End		-----------*/
+/* --------  Application section CSS Start 	--------  */
+.row-flex 						{ display: flex; -webkit-display: flex; align-items: center; -webkit-align-items: center; }
+.mar-top-less 					{ margin-top: -75px; margin-left: -275px; }
+/* --------  Application section CSS End 	--------  */
+/* Meditation Application Start */
+.no-overflow 					{ overflow: visible; }
+.background-section .overlay:before { z-index: 0; }
+.background-section 			{ position: relative; z-index: 1; }
+.meditation-app 				{ z-index: 0; position: relative; }
+.meditation-app .background-content { position: absolute; top: 0; right: 0; background: url(../images/map-picture.png) no-repeat center right / cover; height: 100%; } 
+.meditation-des .icon-section 	{ float: left; width: 125px; }
+.meditation-des .icon-description { float: left; width: calc(100% - 125px); }
+.icon-section img 				{ max-width: 100px; width: 100%; }
+.icon-description .small-text 	{ color: #839bd9; font-weight: bold; }
+.icon-description h2 			{ color: #2b64f7; font-family: 'Odudo'; }
+.icon-description .big 			{ color: #7d7c9d; font-size: 16px; line-height: 20px; }
+.extra-space-right 				{ padding-right: 200px; }
+/* Meditation Application End */
+/* Workplace Application Start */
+.workplace-app 					{ margin-top: -100px; position: relative; }
+.workplace-app .full-img 		{ box-shadow: 0 2px 129px 0 rgba(31,120,255,0.71); border-radius: 4px; }
+.workplace-app .background-content { position: absolute; top: 0; left: 0; background: url(../images/workbackgroundimage.jpg) no-repeat center right / cover; 
+								height: 100%; } 
+.workplace-app .background-content:before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100px; background-size: 200% 100px;
+											background-image: url(../images/transparent-shape.svg); background-repeat: no-repeat; z-index: 5; }
+/* Workplace Application End */
+/* Conscious Games Section Start */
+.conscious-games .background-content { position: absolute; top: 0; right: 0; background: url(../images/arcadebg.png) no-repeat 10% / cover; height: 100%; } 
+/* Conscious Games Section End */
+/* --------  Application section CSS End 	--------  */
+/*.platform-product 				{ max-width: 525px; width: 100%; margin: 0 auto; }*/
+.platform-product ul li 		{ min-width: 100px; }
+.platform-product p 			{ font-size: 18px; line-height: 28px; font-family: 'DINLightAlternate', sans-serif; }
+.platform-product ul li p 		{ font-size: 10px; line-height: 12px; font-family: 'Roboto', sans-serif; font-weight: bold; }
+/* --------  Platform-product section CSS End 	--------  */
+/* --------  Features section CSS Start 	--------  */
+.features-section 				{ position: relative; z-index: 2; padding: 200px 0px 100px;}
+.features-section.empower		{ padding: 100px 0px 250px;}
+.features-note p 				{ font-size: 18px; line-height: 22px; font-family: 'DINLightAlternate'; }
+.overlay.opacity 				{ opacity: 0.7;}
+.overlay 						{ height: 100%; width: 100%; background-image: linear-gradient(#662BF7, #33C2FF); background-repeat: no-repeat; overflow: hidden; }
+.pattern:after 					{ content: ''; display: block; position: absolute; height: 100%; width: 100%; top: 0; z-index: -1;
+								background: url(../images/pattern.svg) repeat top center; }
+.platform-product li img		{ max-width: 49px; margin-bottom: 15px; }
+
+.feature-list-section { display: flex;  -webkit-display:flex; margin-top: -99px; min-height: 670px;}
+.half-saperator { position: relative; float: none;}
+.half-saperator:after { position: absolute; top: -1px; left: 0; width: 100%; height: 100px; content: ""; display: block; z-index: 10;}
+.fill-saperator:after { background: url('../images/transparent-shape.svg') no-repeat left center / 200% 100%;}
+.eclips-saperator:after { background: url('../images/white-shape.svg') no-repeat left center / 200% 100%;}
+.fill-saperator.right-bg:after,
+.eclips-saperator.right-bg:after { background-position: right center;}
+
+.feature-list-section .feature-desc,
+.feature-list-section .feature-bg { padding-top: 200px; padding-bottom: 100px;}
+.conscious-game .feature-bg { background: url(../images/arcadebg.png); background-position: center; }
+.map-picture .feature-bg { background: url(../images/map-picture.png) no-repeat center center / cover; position: relative; z-index: 1;}
+.feature-bg 			{ background: url(../images/workbackgroundimage.jpg) no-repeat center center / cover; position: relative; z-index: 1;}
+.conscious-plugin .feature-bg { background: url(../images/plugin-bg.jpg) no-repeat center center / cover; position: relative; z-index: 1;}
+.feature-bg:before { position: absolute; top: 0; left: 0; height: 100%; width: 100%; content: ""; display: block; background: linear-gradient(#662BF7, #33C2FF); 
+					opacity: 0.7; z-index: -1;}
+.feature-bg figure { padding: 0 10px; }
+.feature-bg .comapany { border-radius: 4px; box-shadow: 0 2px 80px 0 rgba(31,120,255,0.71); } 
+.feature-bg .full-img { max-width: 500px; }
+.feature-desc { text-align: center; display: flex; align-items: center;}
+.feature-desc > .row { width: 100%; }
+.feature-box { text-align: left; max-width: 425px; overflow: hidden; display: inline-block;}
+.feature-box .icon-section 	{ float: left; width: 125px; }
+.feature-box .icon-description { float: left; width: calc(100% - 125px);}
+
+
+/* --------  Features section CSS End 	--------  */
+/* --------  Revolution section CSS Start 	--------  */
+.revolution-section.no-mar-top 	{ margin-top: 0px; }
+.features-propduct:before 		{ content: ''; display: block; width: 100%; position: absolute; top: -1px; left: 0; height: 100px;
+								 background-image: url(../images/transparent-shape.svg); background-size: 100% 100%; }
+.flowers:after 					{ content: ''; display: block; width: 100%; position: absolute; bottom: 0; left: 0; height: 100px;
+								 background-image: url(../images/white-shape.svg); background-size: 100% 100%; }
+.revolution-section:after 		{ content: ''; display: block; width: 100%; position: absolute; bottom: -3px; left: 0; height: 100px;
+								 background-image: url(../images/white-shape.svg); background-size: 100% 100%; }
+.revolution-section:before 		{ content: ''; display: block; width: 100%; position: absolute; bottom: calc(100% - 3px); left: 0; height: 100px;
+								 background-image: url(../images/blue-shape.svg); background-size: 100% 100%; }
+.revolution-section  			{ background: #202735 url(../images/lines.svg) no-repeat center 30% / contain; position: relative; z-index: 10; margin-top: -100px;
+								background-size: 100%; position: relative; }
+.own-apps figure				{ margin: 5px 0px; }
+.own-apps p 					{ color: #bac8ea; text-transform: uppercase; font-weight: bold; }
+.own-apps li 					{ padding: 0px 20px; }
+.own-apps li img				{ max-height: 35px; }
+.own-apps.circle-apps li img    { max-height: 100px;}
+.features-product 				{ overflow: hidden; margin: 0 auto; display: flex; -webkit-display:flex; text-align: center; justify-content: center;}
+.features-product li			{ padding: 0px 28px; margin-bottom: 25px; display: flex; -webkit-display:flex;}
+.core-feature 					{ width: 200px; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15); padding: 15px 12px; border-radius: 7px;}
+.core-feature h6 				{ color: #2b64f7; font-family: 'DINMediumAlternate'; font-size: 16px; line-height: 20px; }
+.core-feature p 				{ color: #7d7c9d; line-height: 15px;}
+.core-feature figure 			{ margin: 10px 0px 25px; }
+.core-feature img 				{ max-width: 92px; }
+/* --------  Revolution section CSS End 	--------  */
+/***** Bottom section CSS Start *******/
+.footer-logo                    { display: inline-block; }
+.footer-logo img				{ max-width: 165px; width: 100%; }
+footer h5 						{ text-transform: uppercase; color: #637bb9; font-size: 14px; line-height: 20px; font-weight: bold; } 
+.social a						{ color: #2b64f7; font-size: 16px; }
+.quick-links li a               { color: #637bb9; line-height: 28px; }
+.copyright li a:hover,
+.quick-links li a:hover         { color: #2b64f7; }
+.copyright p                    { margin-bottom: 10px; }
+.copyright p,.copyright li a    { color: rgba(31,51,73,0.5); font-size: 12px; }
+/****** Bottom section CSS End *******/
+/*Template Page Start */
+header.flowers 					{ background: url(../images/david-clode.jpg) no-repeat; background-size: cover; position: relative; z-index: 1; }
+.template-content h4 			{ color: #326ff8; }
+.template-content a 			{ text-decoration: underline; color: #326ff8; }
+.template-content p 			{ color: #959595; font-size: 16px; line-height: 20px; }
+.template-content p strong		{ color: #535353; }
+.own-apps.access li img 		{ max-height: 50px; }
+.own-apps.access li p 			{ font-size: 10px; }
+.cemical 						{ position: relative; z-index: 1; }
+.cemical .mar-top-less 			{ margin-top: -125px; }
+/*Template Page End*/
+/****** Media-Query CSS Start *******/
+/* -------- Large Desktop Device Start ------- */
+@media (min-width: 2000px) { 
+	.feature-list-section { margin-top: -97px; }
+	.half-saperator:after { top: -1px; height: 103px; }
+	.feature-desc,
+	.feature-list-section .feature-desc, .feature-list-section .feature-bg { margin-top: 3px;}
+}
+@media (max-width: 1280px) {
+    .features-product li { display: inline-block; vertical-align: top;}
+    .core-feature { min-height: 278px;}
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+	/* Feature Section Start */
+	.features-section ul 			{ padding: 0px; text-align: center; }
+	
+	.features-product li			{ padding: 0px 15px; }
+	.default-logo 					{ padding-top: 15px; }
+	.feature-bg .comapany { box-shadow: 0 2px 50px 0 rgba(31,120,255,0.71) }
+	/* Feature Section End */
+    .hero-content { position: absolute; top: calc(50% - 170px);}
+    .banner-circle { left: 40%; width: 1000px; height: 1000px; border-radius: 50%; }
+    .mockup { max-width: 500px; }
+}
+/* -------- Large Desktop Device End ------- */
+/* -------- Desktop Device Start ------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+	/* -------- Comman Spaciing ------- */
+    .extra-space-right { padding-right: 125px; }
+	.big-pad-tb						{ padding: 100px 0px; }
+	.default-logo 					{ padding-top: 15px; }
+	.navbar-default .navbar-nav > li > a { padding: 15px 0px;  margin: 0px 20px;}
+    .navbar-default.small-pad-tb { padding: 25px 0px; }
+	/* -------- //Comman Spaciing ------- */
+    .header-mobile { width: 57%; left:43%; }
+	/* Feature Section Start */
+	.features-section ul 			{ padding: 0px; text-align: center; }
+	.features-product li,
+	.features-product 				{ display: inline-block;}
+	.core-feature { min-height: 280px; }
+	/* Feature Section End */
+	/* --------  Application section CSS End 	--------  */
+	.meditation-app 				{ margin-top: -60px; }
+	.platform-product 				{ max-width: 90%; width: 100%; margin: 0 auto; }
+	.features-section .platform-product ul li 		{ display: inline-block; width: auto; }
+	.workplace-app .medium-pad-tb 	{ padding: 50px 0px; }
+	.conscious-games .medium-pad-tb { padding: 25px 0px; }
+	/* --------  Platform-product section CSS End 	--------  */
+	/* --------  Template page Start 	--------  */
+	header.flowers .medium-pad-tb 	{ padding: 10px 0px; }
+	.features-propduct::before,
+	.flowers::after,
+	.revolution-section::after,
+	.revolution-section::before 	{ height: 50px; }
+	.workplace-app .full-img 		{ box-shadow: 0 2px 19px 0 rgba(31,120,255,0.71); }
+	/* --------  Template page End 	--------  */
+	.feature-list-section {margin-top: -50px;}
+	.half-saperator:after { height: 50px;}
+
+	.feature-list-section .feature-desc,
+	.feature-list-section .feature-bg { padding-top: 100px; padding-bottom: 75px;}
+	.feature-bg .comapany { box-shadow: 0 2px 50px 0 rgba(31,120,255,0.71); }
+	.half-saperator::after { top: 0px; }
+	/*.hero-content { position: absolute; top: calc(50% - 200px);}*/
+    .hero-content { position: absolute; top: calc(50% - 170px);}
+    .feature-list-section { min-height: 500px; }
+    .feature-bg .full-img { padding: 0 20px; }
+}
+/* -------- Desktop Device End ------- */
+/* -------- Tablet Device Start ------- */
+@media (min-width: 768px) and (max-width: 991px) {
+	/* -------- Comman Spaciing ------- */	
+	.pad-comman-top-btm				{ padding: 15px 0px; }
+	.pad-comman 					{ padding: 15px; }
+	.mar-comman-top-btm				{ margin: 15px 0px; }
+	.mar-comman 					{ margin: 15px; }
+	.big-pad-tb						{ padding: 40px 0px; }
+	.medium-pad-tb 					{ padding: 25px 0px; }
+	.default-logo 					{ padding-top: 15px; }
+	p.big 							{ font-size: 14px; line-height: 22px; }
+	.mar-left-right					{ margin-bottom: 15px; }
+	/* -------- //Comman Spaciing ------- */	
+	/* -------- Header Start ------- */
+    .banner-circle  { left: 41%; width: 750px; height: 750px; }
+	header { overflow: hidden; }
+	.header-mobile { position: absolute; bottom: 0; left: 42%; width: 75%; top: auto; }
+	.navbar-default,
+	.hero-content { position: relative;}
+	.hero-content > .row { display: flex; align-items: center; }
+	.comman-btn,.pink-bg { padding: 7px;}
+	.pink-bg { font-size: 10px; }
+	.logo 							{ max-width: 125px; }
+	.navbar-default .navbar-nav > li > a { padding: 15px; }
+	header.small-pad-tb,
+	.hero-content.medium-pad-top 	{ padding-top: 20px;}
+
+    .navbar-default .navbar-nav > li > a { padding: 15px 0px;  margin: 0px 15px;}
+    .navbar-default.small-pad-tb { padding: 20px 0px; }
+	/* -------- Header End ------- */	
+	/* Feature Section Start */
+	.features-section ul 			{ padding: 0px; text-align: center; }
+	.features-product li,
+	.features-product 				{ display: inline-block;}
+	.features-propduct.medium-pad-tb { padding: 50px 0px 20px; }
+	.core-feature { min-height: 265px;}
+	/* Feature Section End */
+	/* --------  Application section CSS End 	--------  */
+	.platform-product 				{ max-width: 100%; width: 100%; margin: 0 auto; }
+	.features-section .platform-product ul li 		{ display: inline-block; width: auto; }
+	.features-section.empower 		{ padding: 25px 0 125px; }
+	/* --------  Platform-product section CSS End 	--------  */
+	.meditation-app 				{ margin-top: 40px; z-index: 0; position: relative; }
+	.meditation-des .icon-section 	{ width: 100px; }
+	.meditation-des .icon-description { margin-bottom: 20px; }
+	.extra-space-right 				{ padding-right: 0px; }
+	/* Meditation Application End */
+	.template-content 				{ padding-bottom: 35px; }
+	.features-propduct::before,
+	.flowers::after,
+	.revolution-section::after,
+	.revolution-section::before 	{ height: 20px; }
+	.workplace-app .full-img 		{ box-shadow: 0 2px 19px 0 rgba(31,120,255,0.71); }
+	.own-apps li 					{ padding: 0px 15px; }
+
+	.mar-top-less 					{ margin-top: -15px; margin-left: 0px; }
+	
+	.feature-list-section {margin-top: -50px;}
+	.half-saperator:after { height: 50px; top: 0;}
+
+	.feature-list-section .feature-desc,
+	.feature-list-section .feature-bg { padding-top: 100px; padding-bottom: 75px;}
+	.icon-description h2 			{ font-size: 25px; line-height: 30px; }
+	.feature-bg .full-img 			{ max-width: 500px; padding: 0 10px; }
+	
+	
+	.feature-box { padding: 0 10px;}
+	.feature-box .icon-section 	{ width: 75px; }
+	.feature-box .icon-description { width: calc(100% - 75px);}
+	.feature-bg .comapany { box-shadow: 0 2px 20px 0 rgba(31,120,255,0.71); }
+    .feature-list-section { min-height: 450px; }
+	
+}
+/* -------- Tablet Device End ------- */
+/* -------- Mobile Device Start ------- */
+@media (max-width: 767px) {
+	/* -------- Comman Spaciing ------- */	
+    body { padding-top: 64px; }
+	.pad-comman-top-btm				{ padding: 10px 0px; }
+	.pad-comman 					{ padding: 10px; }
+	.mar-comman-top-btm				{ margin: 10px 0px; }
+	.mar-comman 					{ margin: 10px; }
+	.big-pad-tb						{ padding: 30px 0px; }
+	.medium-pad-tb 					{ padding: 10px 0px; }
+	.mar-comman-big-top-btm 		{ margin: 15px 0px; }
+	.extra-space-right 				{ padding-right: 0px; }
+	.no-pad-mobile 					{ padding: 0px; }
+	.mob-center 					{ text-align: center; }
+	.mar-top-less 					{ margin-top: 0px; margin-left: 0px; }
+	.mar-comman-big-btm 			{ margin-bottom: 25px; }
+	.br 							{ display: none; }
+	h2 								{ font-size: 25px; line-height: 30px; margin-bottom: 25px; }
+	h4 								{ font-size: 20px; line-height: 25px; }
+    .comman-btn,
+	.comman-btn.pink-bg             { padding: 10px 5px; font-size: 10px; }
+    .mar-left-right 				{ margin: 0px 0px 0px 10px; }
+    .mob-fixed                      { max-width: 300px; margin: 0 auto; }
+    .container                      { padding-left: 20px; padding-right: 20px;}
+	/* -------- //Comman Spaciing ------- */	
+
+	/* -------- Header Start ------- */	
+	.navbar-default { background: #fff !important;}
+    .mob-show.full-img,
+    .header-mobile                  { position: absolute; }
+    .hero-content                   { position: relative; padding-bottom: 25px; }
+	.default-logo 					{ padding-top: 15px; }
+	header.small-pad-tb 			{ padding: 0px; }
+	header .icon-description		{ text-align: center; }
+	header .icon-description li 	{ margin-bottom: 10px; }
+	.hero-content > .container > .row { display: block; }
+	.navbar-default .navbar-toggle:hover, 
+	.navbar-default .navbar-toggle:focus 	{ background-color: transparent;  }
+	.navbar-default .navbar-toggle 	{ border: 0px; margin-top: 15px;  }
+	.navbar-default .navbar-form,
+	.navbar-default .navbar-toggle .icon-bar { background-image: linear-gradient(#662BF7, #33C2FF); background-repeat: no-repeat; }
+    .navbar-default.sticky-nav .navbar-toggle .icon-bar { background-color: #ffffff; background-image: none; }
+	.navbar-header { box-shadow: 0px 2px 4px #ccc; }
+    .home .navbar-collapse ul { margin-left: 0px; margin-right: 0px; }
+    .navbar-default .navbar-toggle .icon-bar { background-color: #ffffff; }
+
+    .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, 
+    .container-fluid > .navbar-collapse { margin-left: -20px; margin-right: -20px;}
+
+	.navbar-default.small-pad-tb 	{ padding: 0px; }
+
+    .navbar-default .navbar-nav > li > a { color: #3849e2 !important;}
+
+    .navbar-default .navbar-nav > .active > a, 
+    .navbar-default .navbar-nav > .active > a:hover, 
+    .navbar-default .navbar-nav > .active > a:focus {display: inline-block; }
+    .icon-description ul { margin-bottom: 10px;}
+    .home .navbar-default .navbar-nav > li > a,
+    .home .navbar-default .navbar-nav > li > a:hover, 
+    .home .navbar-default .navbar-nav > li > a:focus { color: #3849e2; margin: 0px; }
+
+    .navbar-default .normal-logo { display: none !important;}
+    .navbar-default .sticky-logo { display: block !important; }
+	.navbar-default .navbar-nav > .active > a:before { background-color: #3849e2 !important;}
+
+
+
+    .top-bar { transform: rotate(45deg); transform-origin: 10% 10%; }
+    .middle-bar { opacity: 0; }
+    .bottom-bar { transform: rotate(-45deg); transform-origin: 10% 90%; }
+
+    .collapsed .top-bar { transform: rotate(0); }
+    .collapsed .middle-bar { opacity: 1; }
+    .collapsed .bottom-bar { transform: rotate(0); }
+    /* -------- Header End ------- */	
+	/* Feature Section Start */
+	.features-propduct.medium-pad-tb { padding: 40px 0px 15px; }
+	.features-section ul 			{ padding: 0px; margin-top: 25px; }
+	.features-section li 			{ width: 100%; margin-bottom: 25px; text-align: center; }
+	.features-section.empower 		{ padding: 25px 0 125px; }
+	.platform-product p             { margin-bottom: 15px; }
+    .platform-product ul li 		{ min-width: 90px; width: auto; }
+    .feature-bg .full-img           { padding: 0 25px; }
+	/* Feature Section End */
+	/* Meditation Application Start */
+	.meditation-des 				{ text-align: center; }
+	.meditation-app .big-pad-tb,
+	.workplace-app .big-pad-tb 	{ padding: 10px 0px; }
+	.meditation-app 				{ margin-top: 0px; z-index: 0; position: relative; }
+	.revolution-section.medium-pad-tb { padding: 40px 0px 15px; }
+	.workplace-app.workplace-app .background-content,
+	.meditation-app .background-content,
+	.workplace-app .background-content,
+	.conscious-games .background-content { display: none; } 
+	
+	.meditation-des .icon-section,
+	.meditation-des .icon-description { float: none; width: 100%; }
+	.meditation-des .icon-description { margin-bottom: 20px; }
+	.extra-space-right 				{ padding-right: 0px; }
+	.conscious-games .small-pad-tb 	{ padding: 0px 0px 20px; }
+	/* Meditation Application End */
+	.workplace-app .green-btn 		{ margin-top: 25px; }
+	/* --------  Application section CSS Start 	--------  */
+	.row-flex 						{ display: block; }
+	/* --------  Application section CSS End 	--------  */
+	/* --------  Footer Start 	--------  */
+	footer h5 						{ margin: 0px 0px 15px; }
+	/* --------  Footer End 	--------  */
+	/* --------  Template page Start 	--------  */
+	.cemical .mar-top-less 			{ margin-top: 25px; text-align: center; }
+	.features-propduct::before,
+	.flowers::after,
+	.revolution-section::after,
+	.revolution-section::before 	{ height: 20px; }
+	.workplace-app .full-img 		{ box-shadow: 0 2px 19px 0 rgba(31,120,255,0.71); }
+	/* --------  Template page End 	--------  */
+	.feature-list-section .feature-desc, .feature-list-section .feature-bg { padding-top: 40px; padding-bottom: 40px; }
+	.feature-box 					{ text-align: center; }
+	.feature-box .icon-description,
+	.feature-box .icon-section { float: none; width: 100%; margin: 10px 0px; }
+	.feature-list-section { display: block; margin-top: 0px;}
+	.feature-desc > .row { margin: 0px; }
+	.features-propduct::before,
+	.eclips-saperator:after,
+	.fill-saperator:after { display: none;}
+	.fill-saperator.right-bg:after,
+	.eclips-saperator.right-bg:after { background-position: right center;}
+	.desktop-view 					{ display: none; }
+	.mob-show 						{ display: block !important; }
+	.feature-bg .comapany { box-shadow: none; }
+	.core-feature { padding: 15px 20px; max-width: 230px; display: inline-block; }
+    .features-product li,
+	.features-product 				{ display: block; -webkit-display:block; }
+	.revolution-section::after,
+    .revolution-section::before { display: none; }
+	.text-right { text-align: left; }
+    .icon-description .big { display: none; }
+    p.big,
+    .features-note p,
+    .platform-product p { font-size: 14px; line-height: 20px; margin-bottom: 15px; }
+    .icon-description .small-text { margin-bottom: 0px; }
+    h2.mar-comman-top-btm { margin-bottom: 25px; }
+    .own-apps li { margin: 15px 0px; padding: 0 10px; }
+    .own-apps p { font-size: 11px; line-height: 15px; }
+    .quick-links li a { font-size: 12px; line-height: 16px; }
+    .footer-logo { margin-bottom: 25px; }
+    footer .mar-comman-big-btm { margin-bottom: 15px; }
+    footer .medium-pad-tb { padding: 40px 0px 15px; }
+    .banner-circle { opacity: 0; }
+    .feature-list-section { min-height: auto; }
+}
+/* -------- Mobile Device End ------- */
+/****** Media-Query CSS End *******/

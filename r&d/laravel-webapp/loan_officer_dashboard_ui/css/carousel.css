@@ -1,0 +1,90 @@
+.owl-nav button {
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.owl-nav button.owl-prev {
+  left: -24px;
+}
+
+.owl-nav button.owl-next {
+  right: -15px;
+}
+
+.item_box:hover{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+}
+
+.item_box:hover .item_country{
+  color: #3246D3;
+}
+
+.item_box{
+  border: 1px solid #CACCE1;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 120px;
+  height: 100px;
+  margin: 20px 5px;
+  cursor: pointer;
+}
+
+.active_class .item_box{
+  background: #657FDB;
+}
+
+.active_class .item_country{
+  color: #FFFFFF;
+}
+
+.item_country{
+  padding: 15px;
+  font-family: 'Inter',serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #9FA3C0;
+}
+
+.owl-dots {
+  text-align: center;
+  display: none;
+  padding-top: 15px;
+}
+
+.owl-dots button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ccc;
+  margin: 0 3px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: #000;
+}
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+.owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(270deg, #FFFFFF 20%, #FFFFFF 42.65%, rgba(255, 255, 255, 0) 100%)!important;
+  height: 100px;
+  width: 50px;
+}
+
+.owl-nav button:focus {
+  outline: none;
+}
+

@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@font-face {
+	font-family: 'Lovelo';
+	src: url('../fonts/Lovelo-Black.eot');
+	src: url('../fonts/Lovelo-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Lovelo-Black.woff2') format('woff2'),
+		url('../fonts/Lovelo-Black.woff') format('woff'),
+		url('../fonts/Lovelo-Black.ttf') format('truetype'),
+		url('../fonts/Lovelo-Black.svg#Lovelo-Black') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Budmo Jiggler';
+	src: url('../fonts/BudmoJiggler-Regular.eot');
+	src: url('../fonts/BudmoJiggler-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BudmoJiggler-Regular.woff2') format('woff2'),
+		url('../fonts/BudmoJiggler-Regular.woff') format('woff'),
+		url('../fonts/BudmoJiggler-Regular.ttf') format('truetype'),
+		url('../fonts/BudmoJiggler-Regular.svg#BudmoJiggler-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/******* Fonts Face CSS Start **********/
+/********* Fonts Face CSS End **********/
+/******* Common Element CSS Start ******/
+* {margin: 0px; padding: 0px;}
+body { font-family: 'Open Sans', sans-serif; font-size:14px; position: relative;}
+.clear { clear:both;}
+img { border: 0px;}
+ul,ol { list-style: none;}
+a { text-decoration: none; outline: none;}
+a:focus, a:active,a:visited { outline: none; border: 0px;}
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+p { font-size: 18px; line-height: 35px;}
+/******* Common Element CSS End *********/
+/******* Header Section CSS Start *******/
+header { background: transparent; position: absolute; top: 0; left: 0;z-index: 1000; width: 100%; padding-top: 20px;}
+header a { color: #fff; text-transform: uppercase; font-family: 'Montserrat', sans-serif;}
+header a:hover { color: #e32e51; text-decoration: none;}
+.city-link,
+.menu-icon { margin-top: 62px;}
+.city-link ul { overflow: hidden; margin: 0px;}
+.city-link li:after { position: absolute; top: 0; right: 0; color: #fff; font-family: 'fontawesome'; content: '\f111'; text-align: center; width: 25px; font-size: 6px; line-height: 28px; display: block;}
+.city-link li { float: left; position: relative; font-size: 17px; line-height: 28px; padding: 0px 25px 0px 0px;}
+.city-link li:last-child { padding-right: 0px;}
+.city-link li:last-child:after { display: none;}
+.logo-box { text-align: center;}
+.logo { width: 200px; display: inline-block;}
+.logo img { width: 100%;}
+.menu-icon { text-align: right; font-size: 17px; line-height: 28px;}
+.menu-icon a { margin-right: 100px;}
+/******* Header Section CSS End *********/
+/******* Banner section CSS Start *******/
+.banner-slider { text-align: center; color: #fff; font-family: 'Lovelo';}
+.banner-slider .slick-slide { padding: 300px 0px 150px;}
+.banner-slider h3 { font-size: 23px; line-height: 30px; margin-bottom: 50px;}
+.banner-slider h2 { font-size: 70px; line-height: 75px;}
+.banner-slider h4 { font-size: 18px; line-height: 20px;}
+/******* Banner section CSS End *********/
+/******* Middle section CSS Start ******/
+main { background: url(../images/wood_bg.jpg)no-repeat center center / cover;}
+.highlite-bar { background: #e32e51; padding: 30px; text-align: center;}
+.highlite-bar p { margin: 0px; font-family: 'Budmo Jiggler'; color: #fff; font-size: 38px; line-height: 40px;}
+.highlite-bar a { color: #fff !important; text-decoration: underline;}
+.highlite-bar a:hover { text-decoration: none;}
+.service-section { padding: 50px 0px; text-align: center; color: #d7d7d7;}
+.service-section img { width: 100%;}
+.about-section h3 { font-size: 24px; line-height: 35px; font-family: 'Lovelo'; margin: 60px auto 30px;}
+/******** Middle section CSS End *******/
+/***** Bottom section CSS Start *******/
+/****** Bottom section CSS End *******/
+@media (min-width:992px) and (max-width: 1199px) {
+    /******* Common Element CSS Start ******/
+    p {font-size: 15px; line-height: 25px;}
+    /******* Header Section CSS Start *******/
+    header { padding-top: 15px;}
+    .city-link,
+    .menu-icon { margin-top: 45px;}
+    .city-link li { font-size: 14px; padding: 0px 25px 0px 0px;}
+    .logo { width: 130px;}
+    .menu-icon { font-size: 14px;}
+    .menu-icon a { margin-right: 0px;}
+    /******* Banner section CSS Start *******/
+    .banner-slider .slick-slide { padding: 250px 0px 100px;}
+    .banner-slider h3 { font-size: 20px; line-height: 25px; margin-bottom: 35px;}
+    .banner-slider h2 { font-size: 60px; line-height: 65px;}
+    .banner-slider h4 { font-size: 15px; line-height: 20px;}
+    /******* Middle section CSS Start ******/
+    .highlite-bar { padding: 20px;}
+    .highlite-bar p { font-size: 30px; line-height: 35px;}
+    .service-section { padding: 40px 0px;}
+    .about-section h3 { font-size: 20px; line-height: 30px; margin: 40px auto 20px;}
+}
+@media (min-width:768px) and (max-width: 991px) {
+    /******* Common Element CSS Start ******/
+    p {font-size: 15px; line-height: 25px;}
+    /******* Header Section CSS Start *******/
+    header { padding-top: 10px;}
+    .city-link,
+    .menu-icon { margin-top: 35px;}
+    .city-link li { font-size: 10px; padding: 0px 25px 0px 0px;}
+    .logo { width: 115px;}
+    .menu-icon { font-size: 10px;}
+    .menu-icon a { margin-right: 0px;}
+    /******* Banner section CSS Start *******/
+    .banner-slider .slick-slide { padding: 200px 0px 100px;}
+    .banner-slider h3 { font-size: 18px; line-height: 25px; margin-bottom: 35px;}
+    .banner-slider h2 { font-size: 50px; line-height: 55px;}
+    .banner-slider h4 { font-size: 13px; line-height: 20px;}
+    /******* Middle section CSS Start ******/
+    .highlite-bar { padding: 18px;}
+    .highlite-bar p { font-size: 25px; line-height: 30px;}
+    .service-section { padding: 40px 0px;}
+    .about-section h3 { font-size: 16px; line-height: 25px; margin: 40px auto 20px;}
+}
+@media (max-width:767px) {
+    /******* Common Element CSS Start ******/
+    p {font-size: 12px; line-height: 25px;}
+    /******* Header Section CSS Start *******/
+    header { padding-top: 0px;}
+    .city-link { margin-top: 0px;}
+    .menu-icon { margin-top: 20px;}
+    .city-link { background: rgba(255, 255, 255, 0.2); text-align: center; margin-bottom: 5px;}
+    .city-link ul { display: inline-block;}
+    .city-link li { font-size: 10px; padding: 0px 25px 0px 0px;}
+    .logo-box { text-align: left;}
+    .logo { width: 85px;}
+    .menu-icon { font-size: 10px;}
+    .menu-icon a { margin-right: 0px;}
+    /******* Banner section CSS Start *******/
+    .banner-slider .slick-slide { padding: 150px 0px 100px;}
+    .banner-slider h3 { font-size: 13px; line-height: 25px; margin-bottom: 20px;}
+    .banner-slider h2 { font-size: 32px; line-height: 40px;}
+    .banner-slider h4 { font-size: 12px; line-height: 15px;}
+    /******* Middle section CSS Start ******/
+    .highlite-bar { padding: 18px;}
+    .highlite-bar p { font-size: 23px; line-height: 25px;}
+    .service-section { padding: 40px 0px;}
+    .service-section img { margin-bottom: 30px;}
+    .about-section h3 { font-size: 15px; line-height: 25px; margin: 20px auto 20px;}
+}

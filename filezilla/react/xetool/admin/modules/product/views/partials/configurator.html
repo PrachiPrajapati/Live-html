@@ -1,0 +1,124 @@
+<div class="col-lg-12 bg-white" ng-if ="showLoaderForConfigurator">
+    <div class="product-wrap-height">
+        <div class="panel-body text-center">
+            <img class="image-responsive-height demo-mw-50 page-loader"  src="assets/img/demo/progress.svg" alt="Progress"/>
+            <span class="loader-label">
+                <xe-translate text-value="Loading">
+                </xe-translate>
+                ...
+            </span>
+        </div>
+    </div>
+</div>
+<!-- <div class="d-col">
+        <div class="checkbox">
+            <input type="checkbox" ng-model="configStatus.cstatus"
+                value="1" id="checkbox4" ng-change="enableConfigurator(configStatus.cstatus)">
+            <label for="checkbox4" class="curser-hand">
+                Enable Configurator
+            </label>
+        </div>
+     
+</div> -->
+  <!-- Sections Part -->
+    <div class="panel panel-transparent">
+        <ng-include src="'modules/product/views/partials/addConfiguratorSection.html'" ng-show="isSectionActive">
+        </ng-include>
+        <ng-include src="'modules/product/views/partials/addConfiguratorDesign.html'" ng-show="isDesignActive">
+        </ng-include>
+    </div>
+    <div class="row" ng-if="!showLoaderForConfigurator">
+        <div class="col-md-12">
+            <div class="top-s">
+                <div class="left" ng-click="addSection()">
+                    <a href="" class="delete"><i class="fa fa-plus" aria-hidden="true"></i>
+                        <span>
+                            <xe-translate text-value="Add new sections">
+                            </xe-translate>
+                        </span>
+                    </a>
+                </div>
+                <div class="right"><a class="btn btn-success" ng-click="enableConfigurator()" ng-show="sectionList.length > 0">Apply</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-if="!showLoaderForConfigurator">
+        <div class="col-md-12">
+         <div ng-repeat="section in sectionList track by $index"  ng-init="sectionIndex=$index">
+            <div class="configurator-bar">
+                <div class="left">
+                    <div class="image">
+                        <img class="w-70" data-ng-src="{{ section.thumb_image_url }}" />
+                    </div>
+                    <div class="content" style="padding-left: 0; padding-top: 0;padding-bottom: 0;">
+                        <div class="title"> {{ section.name }}</div>
+                        <div class="description">({{section.DesignCount}} variants in this option)</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <span ng-click="editSection($index)" class="edit" ><i class="fa fa-pencil" aria-hidden="true" ></i>
+                        <xe-translate text-value="edit"></xe-translate></span>
+                    <span ng-click="deleteSection($index)" class="delete"><i class="fa fa-trash-o"
+                            aria-hidden="true"></i>  <xe-translate text-value="delete"></xe-translate></span>
+                    <span ng-click="categorySelected(section,$index);expand(section,$index)" class="down">
+                        <i class="fa fa-caret-right" aria-hidden="true" ng-show="!section.showfull">
+                        </i>
+                        <i class="fa fa-caret-down" aria-hidden="true" ng-show="section.showfull">
+                        </i>
+                    </span>
+                </div>
+            </div>
+            <div class="configurator-options" ng-show="section.showfull">
+                <div class="col-sm-12" >
+                    <div class="action">
+                        <div class="checkbox-x checkbox-x-success" ng-show="designList.length > 0">
+                            <input type="checkbox" value="selectAll" id="selectAll" ng-model="itemCheck.allChecked" ng-change="selectAllDesignChecked(itemCheck.allChecked)"/> 
+                            <label for="selectAll">
+                             <xe-translate text-value="Select All"></xe-translate>
+                            </label>
+                        </div>
+                        <span ng-click="addDesign()" class="edit">
+                            <i class="fa fa-plus" aria-hidden="true"></i>  
+                            <xe-translate text-value="Add New"></xe-translate>
+                        </span>
+                        <span  ng-click="DeleteSelectedDesign()" class="delete" ng-hide="fileCount < 1">
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>  
+                            <xe-translate text-value="Delete Selected"></xe-translate>
+                        </span>
+                        <span ng-click="editDesign()" class="m-l-20"  ng-hide="fileCount < 1">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>  
+                            <xe-translate text-value="Edit Selected"></xe-translate>
+                        </span>
+                    </div>
+                    <div class="panel-body text-center"  ng-show="addpreloader">
+                        <img class="image-responsive-height demo-mw-50 page-loader" src="assets/img/progress/progress-circle-master.svg" alt="Progress" style="width: 30px;"/>
+                    </div>
+                </div>
+                <div class="col-sm-4" ng-repeat="design in designList track by $index">
+                    <div class="configurator-group">
+                        <div class="checkbox-x checkbox-x-success">
+                                <input type="checkbox" value="{{ design.id }}" id="{{ design.id }}"  ng-model="designCheck[$index]"  ng-change="designSelected(designCheck[$index])"/>
+                                <label for="{{ design.id }}">&nbsp;
+                                </label>
+                        </div>
+                        <div class="img-thumb">
+                            <a href="" >
+                                <img class="w-70" data-ng-src="{{ design.thumb_image_url }}"/>
+                            </a>
+                        </div>
+                        <div class="c-name">
+                            <input type="text" class="configurator-form-control"  ng-model="design.name"  ng-disabled="configuratorInputBox.isDisabled">
+                        </div>
+                        <!-- <div class="c-price">
+                            <input type="text" class="configurator-form-control" ng-model="design.price" ng-disabled="configuratorInputBox.isDisabled">
+                            <span class="dollar">$</span>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- <div class="col-sm-12"><a href="#" class="load-more"><i class="fa fa-spinner" aria-hidden="true"></i>
+                        Load More</a></div> -->
+            </div> 
+        </div>
+        </div>
+    </div>

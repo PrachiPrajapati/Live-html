@@ -1,0 +1,110 @@
+<div class="container-fluid" ng-init="init()" ng-controller="PrintShopAddressController">
+    <div class="addressList" ng-show="isAddressListingPage">
+        <div class="row">
+            <div class="col-sm-6">
+                <label class="pageTitle">
+                    <xe-translate text-value="Printshop Address">
+                    </xe-translate>
+                </label>
+                <button class="btn btn-default btn-sm m-l-10" type="button" ng-click="addAddress()">
+                    <xe-translate text-value="Add Address"></xe-translate>
+                </button>
+                <button class="btn btn-default btn-sm" type="button" ng-click="editAddress()"
+                    ng-disabled="fileCount == 0 || fileCount > 1 || demoStatus
+                    || addresslist.length == 0"  ng-hide="addresslist.length == 0">
+                    <xe-translate text-value="Edit"></xe-translate>
+                </button>
+                <button class="btn btn-default btn-sm" type="button" ng-click="deleteAddress()"
+                    ng-disabled="fileCount == 0 || isDeleteBtnDisabled || demoStatus|| addresslist.length == 0"
+                    ng-hide="addresslist.length == 0">
+                    <xe-translate text-value="Delete"></xe-translate>
+                </button>
+            </div>
+        </div>
+        <div class="custom-table m-t-20 printshopAddress">
+            <ul class="custom-table-head customer-head-content-manual" ng-show="addresslist.length !=0">
+                <li class="checkCol">
+                    <div class="checkbox check-success customer-checkbox-heading">
+                        <input type="checkbox" value="allChecked" ng-disabled="addresslist.length < 1" id="allChecked"
+                            ng-model="allChecked" ng-change="allCheckedClicked(allChecked)" />
+                        <label for="allChecked"></label>
+                    </div>
+                </li>
+                <!-- <li class="tColumns" ng-repeat="column in columnList" ng-show="true">
+                    <xe-translate text-value="{{column}}">
+                    </xe-translate>
+                </li> -->
+                <li style="flex: 4">
+                    <xe-translate text-value="Printshop Name">
+                    </xe-translate>
+                </li>
+                <li style="flex: 6">
+                    <xe-translate text-value="Printshop Address">
+                    </xe-translate>
+                </li>
+                <li style="flex: 2">
+                    <xe-translate text-value="Set Default Address">
+                    </xe-translate>
+                </li>
+            </ul>
+            <div class="custom-table-body customer-scroll-content-manual">
+                <div class="custom-table-row customerList" ng-repeat="address in addresslist track by $index" >
+                    <ul class="custom-table-content customer-body-content-manual">
+                        <li class="checkCol">
+                            <div class="checkbox check-success" style="margin:0px">
+                                <input type="checkbox" value="{{ address.address_id }}" id="{{ address.address_id }}"
+                                    ng-model="addresschecked[$index]"
+                                    ng-change="addressSelected(addresschecked[$index])" />
+                                <label for="{{ address.address_id }}"></label>
+                            </div>
+                        </li>
+                        <li class="tColumns" style="flex: 4">{{address.name}}</li>
+                        <li class="tColumns" style="flex: 6">
+                            <span ng-if="address.address_1">{{address.address_1}},   </span> 
+                            <span ng-if="address.address_2">{{address.address_2}},   </span> 
+                            <span ng-if="address.city">{{address.city}},        </span>
+                            <span ng-if="address.postcode">{{address.postcode}},    </span>
+                            <span ng-if="address.state_name">{{address.state_name}},  </span> 
+                            <span ng-if="address.country_name">{{address.country_name}} </span>
+                        </li>
+                        <li style="flex: 2">
+                            <div class="checkbox check-success" style="margin:0px">
+                                <input type="checkbox" id="defaultAdd{{$index}}" ng-checked="address.isdefault== 1 ? true : false" ng-disabled="address.isdefault==1" ng-model="addressStatus[$index]" ng-change="setToDefault(address)"/>
+                                <label for="defaultAdd{{$index}}"></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dxTable table-responsive m-t-20 bg-white" ng-show="addresslist.length==0 && !printshopaddressloader">
+                    <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                       <xe-translate text-value="No printshop address found"></xe-translate>
+                    </p>
+                </div>
+            </div>
+            <div class="preloader-trans" ng-show="printshopaddressloader">
+                <div class="page-loader">
+                    <img class="demo-mw-50 block" src="assets/img/demo/progress.svg"
+                        alt="Progress" />
+                    <span>
+                        <xe-translate text-value="Please wait"></xe-translate>...
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div ng-show="isLoadMore" class="text-center m-t-20">
+            <button type="button" class="btn btn-default btn-sm btn-cons" ng-click="loadMore()"
+                ng-disabled="isLoadMorePreloader">
+                <span>
+                    <xe-translate text-value="Load More">
+                    </xe-translate>
+                </span>
+            </button ng-disabled="isLoadMorePreloader">
+            <img class="image-responsive-height demo-mw-30 " src="assets/img/progress/progress-circle-master.svg"
+                alt="Progress" ng-show="isLoadMorePreloader" />
+        </div>
+    </div>
+    <ng-include src="'modules/printshopaddress/views/partials/addAddressForm.html'" ng-show="isAddAddressPage">
+    </ng-include>
+    <ng-include src="'modules/printshopaddress/views/partials/editAddressForm.html'" ng-show="isEditAddressPage">
+    </ng-include>
+</div>

@@ -1,0 +1,279 @@
+<div class="container-fluid" ng-init="init()" ng-controller="CustomersController">
+  <div class="customerList" ng-show="isCustomerListingPage">
+    <div class="row">
+      <div class="col-sm-6">
+        <label class="pageTitle">
+          <xe-translate text-value="Customers"></xe-translate>
+        </label>
+        <button class="btn btn-default btn-sm m-l-10" type="button" ng-click="addCustomer()">
+          <xe-translate text-value="Add Customer"></xe-translate>
+        </button>
+        <button class="btn btn-default btn-sm" type="button" ng-click="editCustomer()"
+          ng-disabled="fileCount == 0 || fileCount > 1 || demoStatus" ng-if="totalNoOfCustomer > 0">
+          <i class="fa fa-edit"></i>
+          <xe-translate text-value="Edit"></xe-translate>
+        </button>
+        <button class="btn btn-default btn-sm" type="button" ng-click="deleteCustomer()"
+          ng-disabled="isDeleteBtnDisabled || demoStatus" ng-if="totalNoOfCustomer > 0">
+          <i class="fa fa-trash-o"></i>
+          <xe-translate text-value="Delete"></xe-translate>
+        </button>
+        <span ng-if="totalNoOfCustomer == 0" class="m-l-20">
+          <i class="fa fa-info-circle" aria-hidden="true"></i>
+          <xe-translate text-value="Add customer to generate a quote">
+          </xe-translate>
+        </span>
+      </div>
+      <div class="col-sm-6 text-right" ng-if="totalNoOfCustomer > 0">
+        <div class="form-inline">
+          <input type="password" name="password" autocomplete="user-password" ng-hide="true">
+          <input type="text" placeholder="Type search value" class="form-control input-sm" name="start"
+            id="customerSearchId" pg-form-group="" ng-model="lookUpCustomer.value" ng-keyUp="searchCustomersData($event)"/>
+          <button class="btn btn-primary btn-sm inline" type="button" ng-click="searchCustomer()" id="customerSearchBtn"
+            ng-disabled="customerLoader || lookUpCustomer.value == ''">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Table Start -->
+    <div class="custom-table m-t-20" ng-show="customerList.length > 0">
+      <ul class="custom-table-head customer-head-content-manual">
+        <li class="checkCol">
+          <div class="checkbox check-success customer-checkbox-heading">
+            <input type="checkbox" value="allChecked" id="allChecked" ng-model="allChecked"
+              ng-change="allCheckedClicked(allChecked)" />
+            <label for="allChecked"></label>
+          </div>
+        </li>
+        <li class="tColumns" ng-repeat="column in columnList" ng-show="column.status == 1">
+          <xe-translate text-value="{{column.label}}"></xe-translate>
+        </li>
+        <li class="settingCol">
+          <div class="listBtn customer-list-btn" id="colListDropBtn" ng-show="userType == 1">
+            <i class="fa fa-gear"></i>
+          </div>
+          <div class="listShadowBox customer-list-shadow-box" id="colListDrop">
+            <h4>
+              <xe-translate text-value="Displayed column list"></xe-translate>
+            </h4>
+            <div>
+              <div class="checkbox check-success" ng-repeat="column in columnList">
+                <input type="checkbox" id="{{ column.column_name }}" ng-checked="column.status == 1 ? true : false"
+                  ng-model="colChecked[$index]" ng-change="columnSelected(column, colChecked[$index])"
+                  ng-disabled="column.is_required == 1" />
+                <label for="{{ column.column_name }}" class="cust-col-over">
+                  <span>{{ column.label }}</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="custom-table-body customer-scroll-content-manual">
+        <div class="custom-table-row customerList" ng-repeat="customer in customerList track by $index">
+          <ul class="custom-table-content customer-body-content-manual">
+            <li class="checkCol">
+              <div class="checkbox check-success" style="margin:0px">
+                <input type="checkbox" value="{{ customer.store_customer_id }}" id="{{ customer.store_customer_id }}"
+                  ng-model="customerChecked[$index]" ng-change="customerSelected(customerChecked[$index])" />
+                <label for="{{ customer.store_customer_id }}"></label>
+              </div>
+            </li>
+            <li class="tColumns" ng-repeat="column in columnList" ng-show="column.status == 1 || customer[column.column_name] !== '123'">
+              {{ customer[column.column_name] }} 
+            </li>
+            <li class="settingCol">
+              <a class="accordion" id="headPlus-{{$index}}" ng-click="openAccPanel(customer, $index)"
+                ng-if="customerList[$index].accPanelStatus == false">
+              </a>
+              <a class="accordion customer-active" id="headMinus-{{$index}}" ng-click="closeAccPanel($index)"
+                ng-if="customerList[$index].accPanelStatus == true">
+              </a>
+            </li>
+          </ul>
+          <div class="custom-table-content customer-body-content-hide-manual" style="padding:0 16px 16px 16px; position: relative;"
+            ng-if="customerList[$index].accPanelStatus == true" id="panel-{{$index}}">
+            <div class="flexRow">
+              <div class="flexCol">
+                <div id="portlet-linear-color" class="panel panel-default" style="margin:0;height:100%;">
+                  <div class="panel-heading separator">
+                    <div class="panel-title">
+                      <xe-translate text-value="Customer Info">
+                      </xe-translate>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <div class="prduct-details-section">
+                      <ul>
+                        <li ng-if="userDetails.first_name || userDetails.last_name">
+                          <span class="text-left">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                          </span>
+                          <span>{{userDetails.first_name}} {{ userDetails.last_name}}</span>
+                        </li>
+                        <li ng-if="userDetails.email">
+                          <span class="text-left">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                          </span>
+                          <span>{{userDetails.email}}</span>
+                        </li>
+                        <li ng-if="userDetails.contact_no && userDetails.contact_no !== '123'">
+                          <span class="text-left">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                          </span>
+                          <span>{{userDetails.contact_no}}</span>
+                        </li>
+                        <li ng-if="userDetails.company_name">
+                          <span class="text-left">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                          </span>
+                          <span>{{userDetails.company_name}}</span>
+                        </li>
+                        <li ng-if="userDetails.company_url">
+                          <span class="text-left">
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                          </span>
+                          <span class="word-break"><a href="{{userDetails.company_url}}"
+                              target="_blank">{{userDetails.company_url}}</a></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flexCol" ng-hide="storeDepSection">
+                <div id="portlet-linear-color" class="panel panel-default" style="margin:0;height:100%;">
+                  <div class="panel-heading separator">
+                    <div class="panel-title justify-content">
+                      <xe-translate text-value="Billing Address">
+                      </xe-translate>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <div class="prduct-details-section">
+                      <ul>
+                        <li>
+                          {{userDetails.billing_address_1}}
+                        </li>
+                        <li>
+                          {{userDetails.billing_address_2}}
+                        </li>
+                        <li>
+                          <span ng-if="userDetails.billing_city">
+                            {{userDetails.billing_city}}
+                          </span>
+                          <span ng-if="userDetails.billing_city && userDetails.billing_zip">
+                            - 
+                          </span>
+                          <span ng-if="userDetails.billing_zip">
+                             {{userDetails.billing_zip}}
+                          </span>
+                        </li>
+                        <li>
+                          <span ng-if="userDetails.billing_state">
+                            {{userDetails.billing_state}}
+                          </span>
+                          <span ng-if="userDetails.billing_state && userDetails.billing_country">
+                            ,
+                          </span>
+                          <span ng-if="userDetails.billing_country">
+                            {{userDetails.billing_country}}
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flexCol">
+                <div id="portlet-linear-color" class="panel panel-default" style="margin:0;height:100%;">
+                  <div class="panel-heading separator">
+                    <div class="panel-title justify-content">
+                      <xe-translate text-value="Shipping Address">
+                      </xe-translate>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <div class="prduct-details-section">
+                      <ul>
+                        <li>
+                          {{userDetails.shipping_address_1}}
+                        </li>
+                        <li>
+                          {{userDetails.shipping_address_2}}
+                        </li>
+                        <li>
+                          <span ng-if="userDetails.shipping_city">
+                            {{userDetails.shipping_city}}
+                          </span>
+                          <span ng-if="userDetails.shipping_city && userDetails.shipping_zip">
+                            - 
+                          </span>
+                          <span ng-if="userDetails.shipping_zip">
+                            {{userDetails.shipping_zip}}
+                          </span>
+                        </li>
+                        <li>
+                          <span ng-if="userDetails.shipping_state">
+                            {{userDetails.shipping_state}}
+                          </span>
+                          <span ng-if="userDetails.shipping_state && userDetails.shipping_country">
+                            , 
+                          </span>
+                          <span ng-if="userDetails.shipping_country">
+                            {{userDetails.shipping_country}}
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="preloader-trans" ng-show="!userDetails" style="position: absolute; padding-left: 0px;">
+              <div class="page-loader">
+                <img class="demo-mw-50 block"
+                  src="assets/img/demo/progress.svg" alt="Progress" />
+                <span>
+                  <xe-translate text-value="Please wait"></xe-translate>...
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="preloader-trans" ng-show="customerLoader">
+      <div class="page-loader">
+        <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+        <span>
+          <xe-translate text-value="Please wait"></xe-translate>...
+        </span>
+      </div>
+    </div>
+    <div class="dxTable table-responsive m-t-20 bg-white" ng-if="customerList.length == 0 && !customerLoader">
+        <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+           <xe-translate text-value="No customer found"></xe-translate>
+        </p>
+    </div>
+    <div ng-show="isLoadMore && customerList.length > 0" class="text-center m-t-20">
+      <button type="button" class="btn btn-default btn-sm btn-cons" ng-click="loadMore()"
+        ng-disabled="isLoadMorePreloader">
+        <span>
+          <xe-translate text-value="Load More">
+          </xe-translate>
+        </span>
+      </button ng-disabled="isLoadMorePreloader">
+      <img class="demo-mw-30 " src="assets/img/progress/progress-circle-master.svg"
+        alt="Progress" ng-show="isLoadMorePreloader" />
+    </div>
+    <!-- Table End -->
+  </div>
+  <ng-include src="'modules/customers/views/partials/addCustomerForm.html'" ng-show="isAddCustomerPage">
+  </ng-include>
+  <ng-include src="'modules/customers/views/partials/customerDetailsPage.html'" ng-show="isShowCustomerDetailsPage">
+  </ng-include>
+  <ng-include src="'modules/customers/views/partials/editCustomerForm.html'" ng-show="isEditCustomerPage">
+  </ng-include>
+</div>

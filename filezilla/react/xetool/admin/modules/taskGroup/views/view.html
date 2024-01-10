@@ -1,0 +1,260 @@
+<div class="container-fluid" ng-controller="TaskGroupController" ng-init="init()">
+    <div class="taskGroup" ng-show="taskGroupShow">
+        <div class="row">
+            <div class="col-sm-6">
+                <label class="pageTitle">
+                    <xe-translate text-value="workflows"></xe-translate>
+                </label>
+                <button class="btn btn-default btn-sm m-l-10" type="button" ng-click="addTaskGroup()">
+                    <xe-translate text-value="Add Task Group"></xe-translate>
+                </button>
+            </div>
+            <div class="col-sm-6 text-right">
+                <button ng-click="taskRefreshList()" type="button" class="btn btn-default btn-sm">
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="m-h-400 tab-pane fade in" style="margin-top: 10px">
+            <div class="panel panel-default" ng-show="dataFound" ng-repeat="(key,TaskGroup) in TaskGroupList"
+                style=" margin-bottom: 4px;">
+                <div class="panel-body" style="padding: 13px 20px 10px 20px">
+                    <div class="qrTitle">
+                        <div class="flexRow">
+
+                            <div class="flexCol">
+                                <h5 style="margin:0;font-weight:300;font-size:15px;line-height:inherit;">
+                                    <span ng-if="detailsViewUnClicked[$index]" class="cursor-pointer"
+                                        ng-click="detailsView(TaskGroup.task_group_id,TaskGroup.task_group_title,$index,TaskGroupList.length)">
+                                        {{TaskGroup.task_group_title | removeHTMLTags}}</span>
+                                    <span ng-if="detailsViewClicked[$index]" class="cursor-pointer"
+                                        ng-click="hideDetailsView($index)">
+                                        {{TaskGroup.task_group_title | removeHTMLTags}}</span>
+                                    <a ng-click="detailsView(TaskGroup.task_group_id,TaskGroup.task_group_title,$index,TaskGroupList.length)"
+                                        class="accordion" ng-if="detailsViewUnClicked[$index]"
+                                        style="display:inline-block;" title="Expand"></a><a ng-if="detailsViewClicked[$index]"
+                                        class="accordion customer-active" style="display:inline-block;"
+                                        ng-click="hideDetailsView($index)" title="Collapse"></a>
+                                </h5>
+                            </div>
+                            <div class="flexCol alignRight" style="max-width:375px;min-width:285px;text-align:right;">
+                                <div class="ship-artwork-btn-cont"></div>
+                                <button class="btn btn-default btn-sm btn-cons m-r-5"
+                                    ng-click="addTask(TaskGroup.task_group_id,$index)">
+                                    <xe-translate text-value="Add Task"></xe-translate>
+                                </button>
+                                <!-- <button class="btn btn-default btn-sm"
+                                         ng-click="detailsView(TaskGroup.id,TaskGroup.title)">
+                                         <xe-translate text-value="Task Details"></xe-translate>
+                                     </button> -->
+                                <button class="btn btn-default btn-sm btn-cons m-r-5"
+                                    ng-click="deleteTaskGroup(TaskGroup.task_group_id)">
+                                    <xe-translate text-value="Delete"></xe-translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="alert alert-danger" ng-show="isAddTaskgroupValid[$index]">
+                                        <xe-translate text-value="ENTER TASK"></xe-translate>
+                                    </div>
+                                    <div class="panelWrap" ng-if="addANewTaskStatus[$index]" style="padding-top: 15px">
+                                        <div class="qrBody">
+                                            <div class="row">
+
+                                                <div class="col-md-10">
+
+                                                    <div class="form-group form-group-default required">
+                                                        <lable for="addtask">
+                                                            <xe-translate text-value="Description"></xe-translate>
+                                                        </lable>
+                                                        <textarea class="form-control"
+                                                            ng-model="singletask.taskListData" id="addtask"
+                                                            placeholder="Enter the task description"
+                                                            required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group text-left">
+                                                        <button type="button" class="btn btn-success btn-sm"
+                                                            ng-click="saveTaskListData(singletask.taskListData,$index)">
+                                                            <xe-translate text-value="Save"></xe-translate>
+                                                        </button>
+                                                        <button class="btn btn-danger btn-sm" type="button"
+                                                            ng-click="cancelTaskGroup('AddTaskList',$index)">
+                                                            <xe-translate text-value="Cancel"></xe-translate>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                    <div class="panelWrap" ng-if="detailsViewClicked[$index]" style="margin-top: 10px">
+                        <div class="qrBody">
+                            <div class="row dxTable table-responsive">
+                                <table class="table table-striped">
+                                    <thead ng-hide="!TaskGroup.group_tasks_details.length">
+                                        <tr>
+                                            <th><xe-translate text-value="Title"></xe-translate></th>
+                                            <th style="padding-left: 20px;">Assigned to</th>
+                                            <th><xe-translate text-value="Action"></xe-translate></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- ng-show="taskListFound" -->
+                                        <tr  ng-repeat="data in TaskGroup.group_tasks_details">
+                                            <td style="width: 60%">{{data.task_title | removeHTMLTags}}</td>
+                                            <td>
+                                                <select class="form-control select" ng-model="data.assign_to"
+                                                    ng-options="item.id as item.name for item in userDataList"
+                                                    ng-change="onClickedUserDetails(data.assign_to,data.id)"
+                                                    ng-selected="true" style ="width: 70%;">
+                                                    <option value="">Assigned To </option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-link text-right"
+                                                    ng-click="deleteSingleTask(data.id,$index)" style="padding:0 6px;"><i
+                                                        class="fa fa-trash"></i></button>
+                                                <button class="btn btn-link"
+                                                    ng-click="editTask(data.id,data.task_title,$index)"
+                                                    style="padding:0 6px;"><i class="fa fa-edit"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr ng-show="!TaskGroup.group_tasks_details.length &&
+                                            !addANewTaskStatus[key]">
+                                            <td colspan="3" class="text-center">
+                                                <xe-translate text-value="No Records"></xe-translate>
+                                            </td>
+                                        </tr>
+                                        <!-- <tr ng-show="editViewTaskPreLoader">
+                                            <td colspan="3">
+                                                <div class="panel panel-default">
+                                                    <div class="graphics-wrap-height">
+                                                        <div class="panel-body text-center">
+                                                            <img class="image-responsive-height demo-mw-50 page-loader"
+                                                                src="assets/img/progress/progress-circle-master.svg"
+                                                                alt="Progress" />
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped" ng-show="!TaskGroupList.length && noTaskGroupData">
+                <tr>
+                    <td class="text-center">
+                        <xe-translate text-value="No workflow"></xe-translate>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+
+        <!-- <table class="table table-striped">
+                <thead ng-hide="!TaskGroupList.length && noTaskGroupData">
+                    <tr>
+                        <th>Title</th>
+                        <th style="width:260px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-show="dataFound" ng-repeat="TaskGroup in TaskGroupList">
+                        <td>{{TaskGroup.title | removeHTMLTags}} <a ng-click="detailsView(TaskGroup.id,TaskGroup.title,$index)"
+                                class="accordion" ng-if="detailsViewUnClicked[$index]"
+                                style="display:inline-block;"></a><a ng-if="detailsViewClicked[$index]"
+                                    class="accordion customer-active"
+                                style="display:inline-block;" ng-click="hideDetailsView($index)"></a>
+                                <div ng-show="detailsViewClicked[$index]" class="table-responsive">
+                                   <table class="table table-striped">
+                                       <thead ng-hide="!TaskLists.length">
+                                           <tr>
+                                               <th>Title</th>
+                                               <th style="width:220px;">Assign</th>
+                                               <th style="width:100px;">Action</th>
+                                           </tr>
+                                       </thead>
+                                       <tbody>
+                                           <tr ng-show="taskListFound" ng-repeat="data in TaskLists">
+                                               <td>{{data.task_title | removeHTMLTags}}</td>
+                                               <td>
+                                                   <select class="form-control select" ng-model="data.assign_to"
+                                                       ng-options="item.id as item.name for item in userDataList"
+                                                       ng-change="onClickedUserDetails(data.assign_to,data.id)"
+                                                       ng-selected="true">
+                                                       <option value="">Assigned To </option>
+                                                   </select>
+                                               </td>
+                                               <td style="width:100px;">
+                                                   <button class="btn btn-link" ng-click="deleteSingleTask(data.id)"
+                                                       style="padding:0 6px;"><i class="fa fa-trash"></i></button>
+                                                   <button class="btn btn-link"
+                                                       ng-click="editTask(data.id,data.task_title)"
+                                                       style="padding:0 6px;"><i class="fa fa-edit"></i></button>
+                                               </td>
+                                           </tr>
+                                           <tr ng-show="!TaskLists.length && !editViewTaskPreLoader">
+                                               <td colspan="3" class="text-center">
+                                                   <xe-translate text-value="No Records"></xe-translate>
+                                               </td>
+                                           </tr>
+                                           <tr ng-show="editViewTaskPreLoader">
+                                               <td colspan="3">
+                                                   <div class="panel panel-default">
+                                                       <div class="graphics-wrap-height">
+                                                           <div class="panel-body text-center">
+                                                               <img class="image-responsive-height demo-mw-50 page-loader"
+                                                                   src="assets/img/progress/progress-circle-master.svg"
+                                                                   alt="Progress" />
+
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                               </td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
+                                </div>
+                        </td>
+                        <td style="width: 268px; max-width: 350px;">
+                            <button class="btn btn-default btn-sm" ng-click="addTask(TaskGroup.id)">
+                                <xe-translate text-value="Add Task"></xe-translate>
+                            </button>
+                            <button class="btn btn-default btn-sm" ng-click="detailsView(TaskGroup.id,TaskGroup.title)">
+                                <xe-translate text-value="Task Details"></xe-translate>
+                            </button>
+                            <button class="btn btn-default btn-sm" ng-click="deleteTaskGroup(TaskGroup.id)">
+                                <xe-translate text-value="Delete"></xe-translate>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr ng-show="!TaskGroupList.length && noTaskGroupData">
+                        <td colspan="2" class="text-center">
+                            <xe-translate text-value="No workflow"></xe-translate>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> -->
+    </div>
+    <div class="preloader-trans" ng-show="taskGroupLoader">
+        <div class="page-loader">
+            <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+            <xe-translate text-value="Please wait"></xe-translate>...
+        </div>
+    </div>
+
+    <ng-include src="'modules/taskGroup/views/partials/addTaskGroup.html'" ng-show="isAddTaskGroup"></ng-include>
+    <ng-include src="'modules/taskGroup/views/partials/addTaskList.html'"></ng-include>
+    <ng-include src="'modules/taskGroup/views/partials/addSingleTask.html'"></ng-include>
+    <ng-include src="'modules/taskGroup/views/partials/editTaskList.html'"></ng-include>
+    <ng-include src="'modules/taskGroup/views/partials/viewTaskGroup.html'" ng-show="isViewTaskGroup"></ng-include>
+</div>

@@ -1,0 +1,362 @@
+<div class="container-fluid" ng-controller="TaskController" ng-init="init()">
+    <div class="taskTabel" ng-show="taskTabelShow">
+        <div class="row">
+            <div class="col-md-12 text-left">
+                    <butoon class="btn  btn-sm m-l-8"
+                        ng-class="{'btn-info': kanbanViewActiveButton == true && listViewActiveButton == false}"
+                        ng-click="changeView('Grid')">
+                        <i class="fa fa-th"></i>
+                        <xe-translate text-value="Grid View"></xe-translate>
+                    </butoon>
+                    <butoon class="btn  btn-sm m-l-9"
+                        ng-class="{'btn-info': kanbanViewActiveButton == false && listViewActiveButton == true}"
+                        ng-click="changeView('List')">
+                        <i class="fa fa-list"></i>
+                        <xe-translate text-value="List View"></xe-translate>
+                    </butoon>
+                     <button class="btn  btn-sm m-l-9" type="button" ng-click="calendarView()"
+                         ng-class="{'btn-info': isCalendarClicked == true}">
+                          <i class="fa fa-calendar"></i>
+                         <xe-translate text-value="calendar view">
+                         </xe-translate>
+                     </button>
+                      <button ng-show="kanbanViewActiveButton" class="btn btn-success btn-sm pull-right" type="button"
+                          ng-click="addTask()">
+                          <xe-translate text-value="Add Task"></xe-translate>
+                      </button>
+            </div>
+            <div class="col-md-6" style="padding-top: 10px" ng-show="listViewActiveButton">
+               
+                    <label class="pageTitle">
+                        <xe-translate text-value="All Task"></xe-translate>
+                    </label>
+                    <button class="btn btn-default btn-sm m-l-10" type="button" ng-click="addTask()">
+                        <xe-translate text-value="Add Task"></xe-translate>
+                    </button>
+                   
+                   
+            </div> 
+           
+            
+            <div class="col-md-6 text-right" ng-show="listViewActiveButton">
+                <div ng-show="showFilterOptions">
+                     <div class="btn-group">
+                         <button type="button" class="btn btn-default btn-sm text-ellipsis" data-toggle="dropdown">
+                             {{ statusSelectedQuote }} <span class="caret"></span>
+                         </button>
+                         <ul class="dropdown-menu" role="menu" style="padding:12px;"  ng-class="{'button-scroll-lang':quoteStatusList.length> 10}">
+                             <li ng-repeat="status_value in quoteStatusList" ng-click="quoteStatusSelect(status_value)">
+                                 <a href="" style="position:relative;padding-left:20px;">
+                                     {{ status_value.name }}
+                                     <span class="statusColor" style="background:{{ status_value.color_code }};"></span>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="btn-group">
+                         <button type="button" class="btn btn-default btn-sm text-ellipsis" data-toggle="dropdown">
+                             {{ taskSelectedStatus }} <span class="caret"></span>
+                         </button>
+                         <ul class="dropdown-menu" ng-class="{'button-scroll-lang':filterTaskStatusArr.length> 4}"
+                             role="menu">
+                             <li ng-repeat="status in filterTaskStatusArr" ng-click="selectedQuoteStatus(status)">
+                                 <a href="" style="position:relative;padding-left:20px;">
+                                     {{ status.name }}
+                                     <span class="statusColor"
+                                         style="background:{{ status.color_code }}; border: 1px solid #ddd;"></span>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="btn-group">
+                         <button type="button" class="btn btn-default btn-sm text-ellipsis" data-toggle="dropdown">
+                             {{ taskDateFilter }} <span class="caret"></span>
+                         </button>
+                         <ul class="dropdown-menu" role="menu" style="width: auto;right: 0;
+                         left: auto;">
+                             <li ng-click="selectedDateStatus('All')">
+                                 <a href="">
+                                     <xe-translate text-value="All Date">
+                                     </xe-translate>
+                                 </a>
+                             </li>
+                             <li ng-click="selectedDateStatus('today')">
+                                 <a href="">
+                                     <xe-translate text-value="Today">
+                                     </xe-translate>
+                                 </a>
+                             </li>
+                             <li ng-click="selectedDateStatus('week')">
+                                 <a href="">
+                                     <xe-translate text-value="Week">
+                                     </xe-translate>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="" ng-click="dateRaange()">
+                                     <xe-translate text-value="Date Range">
+                                     </xe-translate>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                     <button ng-click="taskRefreshList()" type="button" class="btn btn-default btn-sm">
+                         <i class="fa fa-refresh" aria-hidden="true"></i>
+                     </button>
+                </div>
+            </div>
+        </div>
+        <div class="row m-t-15" ng-show="isDateRangeSelected && listViewActiveButton">
+            <div class="col-md-4">
+                <div class="form-group form-group-default required">
+                    <label class="control-label">
+                        <xe-translate text-value="Start Date">
+                        </xe-translate>
+                    </label>
+                    <input ui-date="dateOptionsRange" class="form-control" ui-date-format='dd-mm-yy' id="task_date_range_1" ng-model="filterStartDate" onkeydown="return false">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-default required">
+                    <label class="control-label">
+                        <xe-translate text-value="End Date">
+                        </xe-translate>
+                    </label>
+                    <input ui-date="dateOptionsRange" class="form-control" ui-date-format='dd-mm-yy' id="task_date_range_2" ng-model="filterEndtDate" onkeydown="return false">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-success m-t-25" ng-click="onClickFilterDateRange(filterStartDate,filterEndtDate)">
+                    <xe-translate text-value="Filter">
+                    </xe-translate>
+                </button>
+                <button type="button" class="btn btn-danger m-t-25" ng-click="onClickCancel()">
+                    <xe-translate text-value="cancel">
+                    </xe-translate>
+                </button>
+            </div>
+        </div>
+        <div class="dxTable table-responsive m-t-15" ng-show="listViewActiveButton">
+            <table class="table table-striped" ng-hide="!TaskList.length && !dataRangeError">
+                <thead ng-if="!quote_data && !dataRangeError">
+                    <tr>
+                        <th style="width:100px;">Task ID</th>
+                        <th>Title</th>
+                        <th style="width:96px;">QUOTE ID</th>
+                        <th style="width:220px;">Assigned To</th>
+                        <th style="width:200px;">Due Date</th>
+                        <th style="width:220px;">Status</th>
+                        <th style="width:110px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-show="dataFound" ng-repeat="(key,task) in TaskList track by $index">
+                        <td>
+                            #{{task.task_ref_id}}
+                        </td>
+                        <td>
+                            {{task.task_title | removeHTMLTags}}
+                        </td>
+                        <td>
+                            <a href="#" ng-if="task.quote_id != null" ng-click="viewQuoteDetails(task.quote_id)">#{{task.quote_id}}</a>
+                        </td>
+                        <td>
+                            <select style="width:-webkit-fill-available;" class="form-control select" ng-model="task.assign_to" ng-options="item.id as item.name for item in userDataList" ng-change="onClickedUserDetails(task.assign_to,task.id)" ng-selected="true">
+                                <option value="" ng-disabled="true">Assigned To </option>
+                            </select>
+                        </td>
+                        <td>
+                            <span ng-if="!isProDueDateEditView[$index]"> {{task.formated_due_date}}
+                            </span>
+                            <div class="input-group" style="position: relative;" ng-if="isProDueDateEditView[$index]">
+                                <input  ng-change="updateDate(task.id,task.task_due_date)" type="text"
+                                ui-date="dateOptions" class="form-control date" id="{{task.id}}" ui-date-format='yy-mm-dd'
+                                ng-model="task.task_due_date" placeholder="{{task.formated_due_date}}" onkeydown="return false">
+                                <i class="pg-close_line text-danger cursor-pointer m-l-10 m-t-10" style="position:absolute;top:1px;right:6px;z-index:9;" ng-if="isProDueDateEditView[$index]" ng-click="onTaskDudateChangeClickCancel($index)"></i>
+                            </div>
+                            <i class="fa fa-pencil text-info cursor-pointer m-l-10 m-t-5" ng-if="!isProDueDateEditView[$index]" ng-click="onTaskDudateChangeClick($index)">
+                            </i>                            
+                        </td>
+
+                        <td>
+                            <div class="q-r-status-drop dropdown" style="display:inline-block; width:100%;">
+                                <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" type="button" data-toggle="dropdown" data-disabled="true">
+                                    <div>
+                                        <span class="statusColor q-r-status-color"
+                                            style="background:{{selectedTaskUpdatedColor[$index]}}">
+                                        </span>
+                                        <span style="padding-left: 20px;">
+                                            {{selectedTaskUpdatedStatus[$index]}}
+                                        </span>
+                                    </div>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" style="width: 100%">
+                                    <div  ng-class="{'custom-scroll-menu-bar': actionTaskStatuses.length > '10'}">  
+                                        <li  ng-click="onTaskStatusChange(status.id,task.id,status,key)"
+                                        ng-repeat="status in actionTaskStatuses track by $index"
+                                        ng-if="status.name != 'Customize Statuses'">
+                                        <a  class="status-adjust" href="#" ng-class="task.task_status_id == status.id ? 'active':'' " style="position:relative;padding-left:20px;">
+                                            {{status.name}}
+                                            <span class="statusColor" style="background:{{status.color_code}};"></span>
+                                        </a>
+                                        </li>
+                                    </div>
+                                    <li ng-click="showCustomizeTaskStatusModal()">
+                                        <a href="#" class="btn btn-info m-t-10" style="color:#fff;text-align:center;">
+                                            <xe-translate text-value="Customize Statuses"></xe-translate>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-link p-l-0" ng-click="editTask(task.id, task.task_title, task.assign_to)"><i class="fa fa-edit"></i></button>
+                            <button class="btn btn-link p-l-0" ng-click="deleteTask(task.id)"><i class="fa fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <!-- <tr ng-show="quote_data">
+                        <td colspan="6">
+                            <xe-translate text-value="No Records"></xe-translate>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <table class="table table-striped" ng-show="!TaskList.length && !dataRangeError && !quote_data && !taskMainPreLoader">
+                <tr>
+                    <td class="text-center">
+                        <xe-translate text-value="No Records"></xe-translate>
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-striped" ng-show="dataRangeError || quote_data">
+                <tr>
+                    <td class="text-center">
+                        <p ng-show="dataRangeError">{{messageDateError}}.</p>
+                        <p ng-show="quote_data"><xe-translate text-value="No Records"></xe-translate></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+         <div class="clearfix m-t-18" ng-show="kanbanViewActiveButton">
+             <div class="custom-table" ng-show="!taskdndList.length && !kanbanViewPreLoader || !TaskList.length">
+                 <div class="custom-table-body quot-scroll-content-manual">
+                     <p class="font-normal text-lg text-center m-t-10 p-t-20 p-b-20">
+                         <xe-translate text-value="No Records"></xe-translate>
+                     </p>
+                 </div>
+             </div>
+             <div class="simpleDemo app" ng-show="taskdndList.length && kanbanViewPreLoader || TaskList.length">
+                 <div class="hs">
+                     <div ng-repeat="list in taskdndList">
+                         <div class="panel panel-default">
+                             <div class="panel-heading panel-heading-kanabanview"
+                                 style="background: {{list.status_color_code}};">
+                                 <h3 class="panel-title">{{list.status_title}}</h3>
+                             </div>
+                             <div style="overflow-y: auto;/* height: 100%*/;max-height:400px">
+                                 <div class="panel-body">
+                                     <!-- The dnd-list directive allows to drop elements into it. The dropped data will be added to the referenced list -->
+                                     <ul dnd-list="list.task_details"
+                                         dnd-drop="dropCallback(index, item, external, type,list)">
+                                         <li class="kanbanviewList"
+                                             style="border-top: 6px solid {{list.status_color_code}};border-radius: 5px !important;"
+                                             ng-repeat="calendar in list.task_details" dnd-draggable="calendar"
+                                             dnd-moved="list.task_details.splice($index, 1)" dnd-effect-allowed="move"
+                                             dnd-selected="models.selected = calendar.id"
+                                             ng-class="{'selected': models.selected == calendar.id}"
+                                             dnd-dragstart="getCurrentIndex(list)" dnd-dragend="getUpdateIndex(list)"
+                                             draggable="true">
+                                             <!--  <a class="close" ng-click="removeFromList(list, $index)">�</a>
+                                              <a class="close" ng-click="cloneItem(list, $index)">=</a> showQuoteDetails(calendar.id,list.status_id,calendar.id)-->
+                                             <div class="row">
+                                                 <div ng-click="kanbanViewModalShow(calendar)" class="text-right col-md-12"
+                                                     style="font-size: 10px;"
+                                                     ng-style="{{pastDueDate(calendar.task_due_date)}}">
+                                                     {{calendar.task_due_date}}
+                                                 </div>
+                                                 <!-- <div class="col-md-7 text-right"> -->
+
+                                                     <!--  <div class="btn-group dropright dropdown">
+                                               <button class="btn btn-link " title="Send"><i class="fa fa-send"></i></button>
+                                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Add labels">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+
+                                                <ul class="dropdown-menu modified scrollable-menu" role="menu" style="width: 222px">
+                                                    <li ng-class="labelDisabeled[$index] ? 'kanban-disabeled' : ''" class="dropdown-item kanaban-drop" ng-repeat="labelDatas in labelList" ng-mouseenter="changeColor($index,labelDatas,true)" ng-mouseleave="changeColor($index,labelDatas,false)" ng-style="selectedColor[$index]" style="background-color: {{labelDatas.color_code}};color:white !important;margin:  5px;height: 33px;opacity: 0.8" ng-click="changeQuotelabel($index,checkBoxChecked[$index],labelDatas)">
+                                                        <div style="background-color: {{labelDatas.color_code}};cursor: hand;">
+                                                            <div class="col-md-9">
+                                                                {{labelDatas.label_name}}
+                                                            </div>
+                                                            <div class="col-md-3 text-right">
+                                                                <i ng-show="checkBoxChecked[$index]" class="fa fa-check text-right" style="font-size: 12px"></i>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                 
+                                                 
+                                            </div> -->
+                                                     <!-- <button class="btn btn-link"
+                                                         ng-click="showQuoteDetails(calendar.id,list.status_id,calendar.id)"
+                                                         title="View details"><i class="fa fa-navicon"></i></button> -->
+                                                 <!-- </div> -->
+                                             </div>
+                                             <!-- <div ng-click="kanbanViewModalShow(calendar)"
+                                                 style="padding: 6px 0px 10px 0px;">
+                                                 <span ng-repeat="labelData in calendar.label_list"
+                                                     class="badge badge-info"
+                                                     style="background-color: {{labelData.label_color_code}};margin: 2px">{{labelData.label_name}}</span>
+                                             </div> -->
+                                             <p ng-click="kanbanViewModalShow(calendar)" style="padding-top: 6px">
+                                                 <b style="font-weight: bolder;">{{calendar.task_title}}</b>
+                                             </p>
+                                             <div ng-click="kanbanViewModalShow(calendar)" class="col-md-12 "
+                                                 style="padding: 12px 0px 0px 0px;font-size: 12px;">
+                                                 <i class="fa fa-user" aria-hidden="true"></i>
+                                                 {{calendar.assigner_name}}
+                                             </div>
+
+                                             <!-- <edit-in-place value="quotes.status_name"></edit-in-place> -->
+                                         </li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+        <div class="text-center m-b-20" ng-show="isLoadMore && TaskList.length && listViewActiveButton">
+            <button type="button" class="btn btn-default btn-sm btn-cons" ng-click="loadMore()" ng-disabled="isLoadMorePreloader">
+                <xe-translate text-value="Load More"></xe-translate>
+            </button>
+            <img class="image-responsive-height demo-mw-30 " src="assets/img/progress/progress-circle-master.svg" alt="Progress" ng-show="isLoadMorePreloader" />
+        </div>
+        <div class="preloader-trans" ng-show="taskMainPreLoader &&  listViewActiveButton">
+            <div class="page-loader">
+                <img class=" demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                <xe-translate text-value="Please wait"></xe-translate>...
+            </div>
+        </div>
+        <div class="preloader-trans" ng-show="kanbanViewPreLoader  &&  kanbanViewActiveButton">
+            <div class="page-loader">
+                <img class=" demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                <xe-translate text-value="Please wait"></xe-translate>...
+            </div>
+        </div>
+    </div>
+     <ng-include src="'modules/Calendar/views/view.html'" ng-if="isCalendarClicked && !taskTabelShow">
+     </ng-include>
+    <ng-include src="'modules/task/views/partials/editCustomerData.html'" ng-show="isEditCustomerPage && !taskTabelShow">
+    </ng-include>
+    <ng-include src="'modules/task/views/partials/addTaskDetails.html'" ng-show="isAddCustomTaskPage && !taskTabelShow">
+    </ng-include>
+    <!-- <ng-include src="'modules/taskGroup/views/view.html'" ng-controller="TaskGroupController" ng-show="isWorkflowClicked && !taskTabelShow"> -->
+    </ng-include>
+    <ng-include src="'modules/task/views/partials/taskStatusModal.html'">
+    </ng-include>
+    <ng-include src="'modules/task/views/partials/deleteQuoteStatus.html'">
+    </ng-include>
+</div>

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flower Shop</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/manifest.json">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <meta name="csrf-token" content="KFk1mzddVngKIzOXj3JsG1DpBkBgmVEWzxOqbMZ5">
+    <link href="css/profile.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet"
+        type="text/css" />
+    <link href="plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
+        type="text/css" />
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/filepond.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/filepond-plugin-image-preview.css" rel="stylesheet" type="text/css" />
+    <link href="css/filepond-plugin-file-poster.css" rel="stylesheet" type="text/css" />
+    <link href="css/components-md.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/layout.min.css">
+    <link rel="stylesheet" type="text/css" href="css/darkblue.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link href="plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/filepond.min.js"></script>
+    <script src="js/filepond.jquery.js"></script>
+    <script src="js/filepond-plugin-image-preview.js"></script>
+    <script src="js/filepond-plugin-file-validate-type.js"></script>
+    <script src="js/filepond-plugin-file-poster.js"></script>
+    <script src="plugins/select2/js/select2.full.js"></script>
+    <!-- END HEAD -->
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-content-white">
+    <div class="page-header navbar navbar-fixed-top">
+        <div class="page-header-inner ">
+            <div class="page-logo">
+                <a href="box-listing.html">
+                    <img class="logo-default" src="images/logo.svg" alt="Flowers Shop" height="40">
+                </a>
+                <div class="menu-toggler sidebar-toggler"> </div>
+            </div>
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+                data-target=".navbar-collapse"></a>
+            <div class="top-menu">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown dropdown-user">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                            data-close-others="true">
+                            <span class="username username-hide-on-mobile"> Super Admin </span>
+                            <i class="icon-users"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default">
+                            <li>
+                                <a href="#">
+                                    <i class="icon-user"></i> My Profile </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-lock"></i> Change Password </a>
+                            </li>
+                            <li class="divider"> </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-logout"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"> </div>
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <div class="page-sidebar navbar-collapse collapse">
+                <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true"
+                    data-slide-speed="200" style="padding-top: 10px">
+                    <li class="nav-item start ">
+                        <a href="box-listing.html" class="nav-link ">
+                            <i class="icon-home"></i>
+                            <span class="title">Box Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start ">
+                        <a href="category-listing.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                            <span class="title">Category Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start ">
+                        <a href="color-listing.html" class="nav-link ">
+                            <i class="icon-home"></i>
+                            <span class="title">Colors Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start ">
+                        <a href="product-listing.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                            <span class="title">Products Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start ">
+                        <a href="shape-listing.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                            <span class="title">Shape Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start ">
+                        <a href="home-management.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                            <span class="title">Home Management</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content">
+                <h3 class="page-title" style="margin-top: 0px;">
+                    Add Product
+                </h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption font-dark">
+                                    <span class="caption-subject bold uppercase"> Product Details </span>
+                                </div>
+                            </div>
+                            <div class="profile-content">
+                                <form action="" role="form" method="POST" enctype="multipart/form-data"
+                                    novalidate="novalidate">
+                                    <input type="hidden" name="_token" value="W4leT0YuB5xOKQT3MuTYQKy32Qw2uT6RLIVMHNzT">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="portlet light bordered bg-blue-chambray bg-font-blue-chambray">
+                                                <div class="portlet-title">
+                                                    <div class="caption font-dark">
+                                                        <span class="caption-subject bold font-white uppercase"> English </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label"><span class="mendatory">*</span>Product
+                                                        Title</label>
+                                                    <input type="text" placeholder="Enter Product Title" value="Small Festive Faux Flowers Arrangement" class="form-control" maxlength="50" autocomplete="off">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label"><span class="mendatory">*</span>Product
+                                                        Description</label>
+                                                    <textarea class="form-control" placeholder="Enter Product Details" rows=5>Fresh Flowers picked from gardens.</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="portlet light bordered bg-blue-chambray bg-font-blue-chambray">
+                                                <div class="portlet-title">
+                                                    <div class="caption font-dark">
+                                                        <span class="caption-subject bold font-white uppercase"> Arabic </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label"><span class="mendatory">*</span>Product
+                                                        Title</label>
+                                                    <input type="text" placeholder="Enter Product Title" value="Small Festive Faux Flowers Arrangement" class="form-control" maxlength="50" autocomplete="off">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label"><span class="mendatory">*</span>Product
+                                                        Description</label>
+                                                    <textarea class="form-control" placeholder="Enter Product Details" rows=5>Fresh Flowers picked from gardens.</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row flex-row">
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>Select
+                                                    Product Category</label>
+                                                <select class="form-control" name="category">
+                                                    <option>Fresh Flowers</option>
+                                                    <option>Orchids</option>
+                                                    <option>Roses</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>Select Product
+                                                    Type</label>
+                                                <select class="form-control">
+                                                    <option>Select Category</option>
+                                                    <option selected>Classic</option>
+                                                    <option>Classic Acrylic</option>
+                                                    <option>Acrylic</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>Select Product
+                                                    Shape</label>
+                                                <select class="form-control">
+                                                    <option>Select Category</option>
+                                                    <option selected>Large Round</option>
+                                                    <option>Medium Round</option>
+                                                    <option>Large Square</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>SKU</label>
+                                                <input type="text" placeholder="Enter SKU" class="form-control"
+                                                    maxlength="50" autocomplete="off" value="FR35">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>List
+                                                    Price</label>
+                                                <input type="text" placeholder="Enter List Price" class="form-control"
+                                                    maxlength="50" autocomplete="off" value="AED 475">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>Your
+                                                    Price</label>
+                                                <input type="text" placeholder="Enter Your Price" class="form-control"
+                                                    maxlength="50" autocomplete="off" value="AED 450">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span
+                                                        class="mendatory">*</span>Weight</label>
+                                                <input type="text" placeholder="Enter Weight" class="form-control"
+                                                    maxlength="50" autocomplete="off" value="0.7kg">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>Total
+                                                    Stock</label>
+                                                <input type="text" placeholder="Enter Total Stock" class="form-control"
+                                                    maxlength="50" autocomplete="off" value="30">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>Minimum
+                                                    Quantity</label>
+                                                <input type="text" placeholder="Enter Minimum Quantity"
+                                                    class="form-control" maxlength="50" autocomplete="off" value="1">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>Order
+                                                    Amount</label>
+                                                <input type="text" placeholder="Enter Order Amount" class="form-control"
+                                                    maxlength="50" autocomplete="off" value="AED 475">
+                                            </div>
+                                            <!-- <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>Handling
+                                                    Fee</label>
+                                                <input type="text" placeholder="Enter Handling Fee"
+                                                    class="form-control" maxlength="50" autocomplete="off">
+                                            </div> -->
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label"><span class="mendatory">*</span>Product
+                                                    Image</label>
+                                                <div class="upload">
+                                                    <input type="file" class="file-upload prod-image" accept="image/*" multiple>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- END EXAMPLE TABLE PORTLET-->                       
+                        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption font-dark">
+                                    <span class="caption-subject bold uppercase"> Add Colors </span>
+                                </div>
+                            </div>
+                            <div class="profile-content">
+                                <form action="" role="form" method="POST" enctype="multipart/form-data"
+                                    novalidate="novalidate">
+                                    <input type="hidden" name="_token" value="W4leT0YuB5xOKQT3MuTYQKy32Qw2uT6RLIVMHNzT">
+                                    <div class="col-md-12">
+                                        <div class="color-box">                                           
+                                            <div class="row">
+                                                <div class="form-group col-md-5">
+                                                    <label class="control-label"><span class="mendatory">*</span>Select
+                                                        Color</label>
+                                                    <select class="form-control">
+                                                        <option>Select Color</option>
+                                                        <option selected>Fuschia</option>
+                                                        <option>Red</option>
+                                                        <option>Dark Blue</option>
+                                                        <option>White</option>
+                                                    </select>
+                                                    <div class="img-thumb">
+                                                        <img src="images/color-fuschia.png" alt="Fuschia">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6 col-lg-5">
+                                                    <label class="control-label"><span class="mendatory">*</span>Drop files
+                                                        here or click on upload</label>
+                                                    <div class="upload multiple">
+                                                        <input type="file" class="file-upload color-fuschia" accept="image/*" multiple>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-1 col-lg-2">
+                                                    <div class="actions">
+                                                        <ul class="list-inline">
+                                                            <li>
+                                                                <a href="#" class="remove"><i class="icon-close"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="color-box">
+                                            <div class="row">
+                                                <div class="form-group col-md-5">
+                                                    <label class="control-label"><span class="mendatory">*</span>Select
+                                                        Color</label>
+                                                    <select class="form-control">
+                                                        <option>Select Color</option>
+                                                        <option>Fuschia</option>
+                                                        <option>Red</option>
+                                                        <option selected>Dark Blue</option>
+                                                        <option>White</option>
+                                                    </select>
+                                                    <div class="img-thumb">
+                                                        <img src="images/color-dark-blue.png" alt="Dark Blue">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6 col-lg-5">
+                                                    <label class="control-label"><span class="mendatory">*</span>Drop files
+                                                        here or click on upload</label>
+                                                    <div class="upload multiple">
+                                                        <input type="file" class="file-upload color-dark-blue" accept="image/*" multiple>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-1 col-lg-2">
+                                                    <div class="actions">
+                                                        <ul class="list-inline">
+                                                            <li>
+                                                                <a href="#" class="add"><i class="icon-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="remove"><i class="icon-close"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- END EXAMPLE TABLE PORTLET-->
+                        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                        <!-- <div class="portlet light bordered"> -->
+                            <div class="row d-flex">
+                                <div class="col-md-6">
+                                    <div class="portlet light bordered">
+                                        <div class="portlet-title">
+                                            <div class="caption font-dark">
+                                                <span class="caption-subject bold uppercase"> Related Products </span>
+                                            </div>
+                                        </div>
+                                        <div class="profile-content">
+                                            <form action="" role="form" method="POST" enctype="multipart/form-data" novalidate="novalidate">
+                                                <input type="hidden" name="_token" value="W4leT0YuB5xOKQT3MuTYQKy32Qw2uT6RLIVMHNzT">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="form-group col-md-4">
+                                                            <select class="form-control select2" multiple id="related-products">
+                                                                <option>Small Festive Faux Flowers Arrangement</option>
+                                                                <option>Small Festive Faux Flowers Arrangement</option>
+                                                                <option>Small Festive Faux Flowers Arrangement</option>
+                                                                <option>Small Festive Faux Flowers Arrangement</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="row">
+                                                        <div class="form-group col-md-4">
+                                                            <select class="form-control">
+                                                                <option>Product 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-4">
+                                                            <select class="form-control">
+                                                                <option>Product 3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-4">
+                                                            <label class="control-label"><span class="mendatory">*</span>Select
+                                                                Product</label>
+                                                            <select class="form-control">
+                                                                <option>Product 1</option>
+                                                                <option>Product 2</option>
+                                                                <option>Product 3</option>
+                                                                <option>Product 4</option>
+                                                                <option>Product 5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div> -->
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <a href="#" class="btn green">Add Product</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="portlet light bordered">
+                                        <div class="portlet-title">
+                                            <div class="caption font-dark">
+                                                <span class="caption-subject bold uppercase"> Add Ons </span>
+                                            </div>
+                                        </div>
+                                        <div class="profile-content">
+                                            <form action="" role="form" method="POST" enctype="multipart/form-data" novalidate="novalidate">
+                                                <input type="hidden" name="_token" value="W4leT0YuB5xOKQT3MuTYQKy32Qw2uT6RLIVMHNzT">
+                                                <select class="form-control select2" multiple id="addons-products">
+                                                    <option>Small Festive Faux Flowers Arrangement</option>
+                                                    <option>Small Festive Faux Flowers Arrangement</option>
+                                                    <option>Small Festive Faux Flowers Arrangement</option>
+                                                    <option>Small Festive Faux Flowers Arrangement</option>
+                                                </select>
+                                                <!-- <div class="col-md-12">
+                                                    <div class="row col-md-12">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" class="form-control"> Mark as Feature Product
+                                                            </label>
+                                                        </div>
+                                                        <!-- <div class="form-group col-md-1">
+                                                                            <input class="form-control" type="checkbox" name=""> 
+                                                                            </div>
+                                                                            <div>
+                                                                            <span></span>
+                                                                            </div> -->
+                                                    <!-- </div>
+                                                    <div class="row col-md-12">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" class="form-control"> Mark as New Product
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group col-md-1">
+                                                                            <input class="form-control" type="checkbox" name=""> 
+                                                                            </div>
+                                                                            <div>
+                                                                            <span></span>
+                                                                            </div>
+                                                    </div> -->
+                                                    <!-- <div class="row col-md-12">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" class="form-control"> Mark as Most Viewed
+                                                                Product
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group col-md-1">
+                                                                            <input class="form-control" type="checkbox" name=""> 
+                                                                            </div>
+                                                                            <div>
+                                                                            <span>Mark as Most Viewed Product</span>
+                                                                            </div> -->
+                                                    <!-- </div>
+                                                    <div class="row col-md-12">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" class="form-control"> Free Shipping
+                                                            </label>
+                                                        </div> -->
+                                                        <!-- <div class="form-group col-md-1">
+                                                                            <input class="form-control" type="checkbox" name=""> 
+                                                                            </div>
+                                                                            <div>
+                                                                            <span>Free Shopping</span>
+                                                                            </div> -->
+                                                    <!-- </div>
+                                                </div> --> 
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                        <!-- END EXAMPLE TABLE PORTLET-->
+                        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                    </div>
+                    <!-- END EXAMPLE TABLE PORTLET-->
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <input type="submit" value="Save Changes" class="btn green">
+                            </div>
+                            <div class="col-md-2">
+                                <a href="#" class="btn default">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner">
+                June, 2020 © Flowers Shop.
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+        <script>
+            // filepond
+            $(function () {
+
+                // First register any plugins
+                $.fn.filepond.registerPlugin(FilePondPluginImagePreview);
+                $.fn.filepond.registerPlugin(FilePondPluginFileValidateType);
+                $.fn.filepond.registerPlugin(FilePondPluginFilePoster);
+
+                // Turn input element into a pond
+                $('.file-upload').filepond({
+                    allowReorder: true,
+                    imagePreviewHeight: 130
+                });
+                $('.prod-image').filepond({
+                    allowFilePoster: true,
+                    files: [
+                        {
+                            options: {
+                                type: 'local',
+
+                                // stub file information
+                                file: {
+                                    name: 'flower-box.jpg',
+                                    size: 3001025,
+                                    type: 'image/jpg'
+                                },
+
+                                metadata: {
+                                    poster: 'images/flower-box.jpg'
+                                }
+                            }
+                        }
+                    ]
+                });
+                $('.color-fuschia').filepond({
+                    allowFilePoster: true,
+                    files: [
+                        {
+                            options: {
+                                type: 'local',
+
+                                // stub file information
+                                file: {
+                                    name: 'fuschia-box.jpg',
+                                    size: 3001025,
+                                    type: 'image/jpg'
+                                },
+
+                                metadata: {
+                                    poster: 'images/fuschia-box.jpg'
+                                }
+                            }
+                        }
+                    ]
+                });
+                $('.color-dark-blue').filepond({
+                    allowFilePoster: true,
+                    files: [
+                        {
+                            options: {
+                                type: 'local',
+
+                                // stub file information
+                                file: {
+                                    name: 'blue-box.jpg',
+                                    size: 3001025,
+                                    type: 'image/jpg'
+                                },
+
+                                metadata: {
+                                    poster: 'images/blue-box.jpg'
+                                }
+                            }
+                        }
+                    ]
+                });
+                $('#related-products').select2({
+                    placeholder: 'Add related products',
+                });
+                $('#addons-products').select2({
+                    placeholder: 'Add addons products',
+                });
+            });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Yudiz</title>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="js/p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+  </head>
+  <body>
+  <script type="text/javascript">
+    function setup() {
+  createCanvas(windowWidth, windowHeight, WEBGL);
+}
+
+var x = 0;
+var y = 0; 
+var sp1 = 1;
+var sp2 = 1.4;
+
+function draw() {
+  background(220);
+	orbitControl();
+  angleMode(DEGREES);
+  translate (-130, -130);
+	
+	// let locX = mouseX - height / 2;
+  // let locY = mouseY - width / 2;
+
+ 	// ambientLight(80);
+ 	// directionalLight(255, 0, 0, 0.25, 0.25, 0);
+ 	// pointLight(0, 0, 255, locX, locY, 150);
+	
+	// rotateZ(frameCount * 1);
+ 	// rotateX(frameCount * 1);
+ 	// specularMaterial(150);
+	
+	noStroke();
+	normalMaterial();
+	point(x,y);
+	push();
+	scale(sp1, sp2);
+	sphere(70, 4, 2);
+	pop();
+	
+	push();
+	translate(x+70,y+98);
+	scale(sp1, sp2);
+	sphere(70, 4, 2);
+	pop();
+
+	push();
+	translate(x+280,y+0);
+	scale(sp1, sp2);
+	sphere(70, 4, 2);
+	pop();
+	
+	push();
+	translate(x+210,y+98);
+	scale(sp1, sp2);
+	sphere(70, 4, 2);
+	pop();
+	
+	push();
+	translate(x+140,y+196);
+	scale(sp1, sp2);
+	sphere(70, 4, 2);
+	pop();
+	
+	push();
+	translate(x+70,y+294);
+	scale(sp1, sp2);
+	sphere(70, 4, 2);
+	pop();
+}
+  </script>
+  </body>
+</html>

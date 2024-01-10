@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_delete</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="12.1_Manage-Category_Details" transform="translate(-1840.000000, -988.000000)" stroke="#0566FF">
+            <g id="ic_delete" transform="translate(1840.000000, 988.000000)">
+                <rect id="Rectangle" stroke-width="1.25" fill-opacity="0" fill="#D8D8D8" x="0.625" y="0.625" width="38.75" height="38.75" rx="19.375"></rect>
+                <g id="Group" transform="translate(12.500000, 10.000000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25">
+                    <path d="M12.56,21.25 L3.44,21.25 C2.91,21.25 2.47,20.84 2.44,20.31 L2.44,6.5 L13.56,6.5 L13.56,20.31 C13.53,20.84 13.09,21.25 12.56,21.25 Z" id="Path"></path>
+                    <polygon id="Path" points="10.5 0 5.5 0 5.5 1 10.5 1"></polygon>
+                    <path d="M15.5,6.5 L0.5,6.5 C0.22,6.5 0,6.28 0,6 L0,2.75 C0,2.47 0.22,2.25 0.5,2.25 L15.5,2.25 C15.78,2.25 16,2.47 16,2.75 L16,6 C16,6.28 15.78,6.5 15.5,6.5 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

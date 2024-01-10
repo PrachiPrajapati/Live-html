@@ -1,0 +1,50 @@
+<div class="modal fade slide-right" id="p7" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body info-module-single">
+                <h4 class="info-module-title">
+                  How to enable setup price?
+                </h4>
+                <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                    INFO: Setup cost allows you to add an optional printing setup amount to the overall printing cost.
+                </div>
+                <br>
+                To enable setup price,
+                <ol>
+                    <li>Open inkXE Admin.</li>
+                    <li>Go to <b>Print Profile</b> in the toolbar towards the left.</li>
+                    <li>Select your print profile and click on the edit icon.<img src="modules/printSettingWizard/doc/assets/editProfile.png" /></li>
+                    <li>In the new page, go to <b>Price Settings</b>.</li>
+                    <li>Under price settings, find <b>Setup Cost</b> and enable it.</li>
+                    <li> Give desired setup price in the box that appears below.<img src="modules/printSettingWizard/doc/assets/p7_1.png" /></li>
+                    <li>Click <b>Save</b>.</li>
+                </ol>
+                Setup price is enabled now.<br>
+                <br>
+                There are different condition for setting up the Setup Cost :
+                <ol>
+                    <li>
+                        If "Per Product Side" is Enable then the price will be added for each side that has been customized.<img src="modules/printSettingWizard/doc/assets/p7_2.png" />
+                        Example :<br>
+                        The setup price is set as $5 and number of sides customized is 2. Then $5 will get multiplied by 2 and that will give to $10 ($5 x 2= $10). So the Setup Cost is $10 which will be added to the total printing cost. 
+                    </li>
+                    <li>
+                        If "Per Product" is Enable then the price will be added only once independent of number of sides customized.<img src="modules/printSettingWizard/doc/assets/p7_3.png" />
+                        Example :<br>
+                        The setup price is set as $5 and number of sides customized is 4. Only $5 will get calculated to the total printing cost.
+                    </li>
+                    <li>
+                        If "Single Order" is Enable then price will be added to each item in order. That means total number of order will get multiplied with the Setup Cost.<img src="modules/printSettingWizard/doc/assets/p7_4.png" />
+                        Example :<br>
+                        The setup price is set as $5 and there is 50 items in order. Then $5 will get multiplied with 50 and that will results to $250 ($5 x 50 = 250). So the Setup Cost is $250 which will be added to the total printing cost.
+                    </li>
+                    <li>
+                        If "Multiple order" is Enable then price will be added to the total number of order amount.<img src="modules/printSettingWizard/doc/assets/p7_5.png" />
+                        Example :<br> 
+                        The setup price is set as $5 and there is 50 items in order. Then only $5 will get added as Setup Cost.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

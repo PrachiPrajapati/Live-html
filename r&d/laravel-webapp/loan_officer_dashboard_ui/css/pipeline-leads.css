@@ -1,0 +1,1457 @@
+.selected-record-info { padding-bottom: 15px;}
+.pipeline-leads-table { position: relative;}
+.pipeline-leads-table .dataTables_length{
+	display: block !important;
+}
+.total-select-record p { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 17px; font-weight: 500; color: #293A3E;}
+.total-select-record p span { color: #3246D3;}
+.total-record-pagination  { display: none;}
+.p_l_15 { padding-left: 0 !important;}
+.pipeline-leads-tabs .permissions_tabs.reports .nav-item { width: calc(100% / 6) !important;}
+.pipeline-leads-tabs .permissions_tabs.reports .nav-item .nav-link.active span { background: #3246D3;}
+.pipeline-leads-tabs .permissions_tabs.reports .nav-item span { margin: 0 5px; text-align: center; background: #60698B; font-size: 10px; line-height: 19px; color: #fff; height: 18px; width: 18px; border-radius: 50%; display: inline-flex; display: inline-block;}
+.pipeline-leads-main-sec .marketing_toggle_content { margin-top: 25px;}
+.pipeline-leads-main-sec .marketing_toggle_content.loan_toggle_content { margin: 0; padding: 25px 0;}
+/* .pipeline-leads-main-sec .finance_dropdown { width: 80%;} */
+/* .pipeline-leads-main-sec .finance_dropdown .dropdown-item { padding: 10px;} */
+/* .pipeline-leads-main-sec .finance_dropdown .btn.btn-light.dropdown-toggle { background: #32D3AC !important; border: none;} */
+/* .pipeline-leads-main-sec .marketing_arrow_down img { top: 50px; right: 20px;} */
+/* .clear-gray-btn { margin-top: 20px;}
+.clear-gray-btn .filter_text { margin: 0 !important;}
+.clear-gray-btn .btn_clear_filter {     
+    background: #9FA3C0;
+    color: #fff !important;
+    white-space: normal;
+    font-size: 12px;
+    padding: 8px 5px;
+    display: inline-block;
+    border-radius: 6px;
+    text-align: center;
+    width: 100%;
+}
+.clear-gray-btn .btn_clear_filter:hover {
+    background: #3246D3;
+}
+.clear-gray-btn .btn_clear_filter img {
+    margin-right: 5px;
+    filter: brightness(100);
+    -webkit-filter: brightness(100);
+} */
+.height-100vh { min-height: calc(100vh - 110px);}
+.pipeline-leads-table-height { min-height: calc(100vh - 340px); width: 100%; transition-duration: .3s; -webkit-transition-duration: .3s;}
+.pipeline-leads-main-sec.content_wrapper { background: transparent;}
+.pipeline-leads-table input[type=checkbox] { display: block;}
+.pipeline-leads-table .dt-responsive { position: relative;}
+.dt-responsive { overflow-x: auto; overflow-y: hidden;}
+.pipeline-leads-table .all-select-goals  { position: absolute; top: 9px; z-index: 10; width: 30px; background: #fff;}
+.pipeline-leads-table .all-select-goals .goals_checkboxes_all { margin: 5px !important;}
+.pipeline-leads-table .all-select-goals ul.dropdown-checkbox { width: 225px !important; left: 25px;}
+.pipeline-leads-main-sec .marketing_toggle_content .dropdown .btn.btn-light.dropdown-toggle,
+.pipeline-leads-main-sec .marketing_toggle_content .dropdown .dropdown-menu.show { min-width: 100% !important;}
+.pipeline-leads-table .marketing_target td,
+.pipeline-leads-table .marketing_target th { padding: 5px !important;}
+.pipeline-leads-table table.dataTable tbody td { font-size: 12px; line-height: 17px;}
+.pipeline-leads-table .marketing_target th { border-bottom: 2px solid #AEAEAE !important;}
+.pipeline-leads-table .marketing_target td:first-child { width: 25px!important; min-width: 25px!important; max-width: 25px!important;}
+.pipeline-leads-table .marketing_target td:nth-child(2) { padding-left: 15px !important;}
+.pipeline-leads-table .marketing_target th:nth-child(2),
+.pipeline-leads-table .marketing_target td:nth-child(2) { width: 80px !important;}
+.pipeline-leads-table .marketing_target th:nth-child(3),
+.pipeline-leads-table .marketing_target td:nth-child(3),
+.pipeline-leads-table .marketing_target th:nth-child(11),
+.pipeline-leads-table .marketing_target td:nth-child(11),
+.pipeline-leads-table .marketing_target th:nth-child(12),
+.pipeline-leads-table .marketing_target td:nth-child(12) { width: 100px !important;}
+.pipeline-leads-table .marketing_target th:nth-child(8),
+.pipeline-leads-table .marketing_target td:nth-child(8) { width: 13% !important;}
+.pipeline-leads-table .marketing_target th:last-child,
+.pipeline-leads-table .marketing_target td:last-child { width: 8% !important;}
+.pipeline-leads-table table.dataTable thead th:first-child input[type=checkbox] { display: none;}
+.pipeline-leads-table table.dataTable thead th:nth-child(2) { padding-left: 15px !important;}
+.pipeline-leads-table table.dataTable thead th:nth-child(3) { text-align: left !important;}
+.pipeline-leads-table .marketing_target td { color: #293A3E !important; font-weight: 400 !important;}
+.pipeline-leads-table .marketing_target_wrapper table.dataTable thead th span { letter-spacing: 0.05em !important; word-spacing: 3px !important; word-break: break-all !important; display: block;}
+.pipeline-leads-table .marketing_target_wrapper thead .sorting span:after, 
+.pipeline-leads-table .marketing_target_wrapper table.dataTable thead .sorting span:after { right: 0;}
+.pipeline-leads-table td span.hot-lead { margin: 3px auto; padding: 1px 4px; text-align: center; background: #FFC2C2; border-radius: 12px; font-size: 10px; color: #FF2929; font-weight: 500; width: 67px; display: block; text-transform: uppercase;}
+.pipeline-leads-table td span.ny-lead { background: rgba(101, 127, 219, 0.2); color: #657FDB;}
+.pipeline-leads-table td span.regular-lead { background: rgba(169, 172, 198, 0.2); color: #8B8FB2;}
+.pipeline-leads-table .number_count { position: relative; width: auto;}
+.pipeline-leads-table .number_count img { margin-bottom: 0;}
+.column-btn .blue_btn,
+.column-btn .blue_btn:focus { margin-right: 15px; padding: 5px 15px; background: transparent; color: #3246D3; text-decoration: none; position: relative; display: block; width: 150px;}
+.column-btn .blue_btn:hover,
+.column-btn .columns-btn.show,
+.column-btn .filters-btn.show  { background: #3246D3; border-color: #3246D3; color: #fff;}
+.column-btn .blue_btn:last-child { margin: 0;}
+.column-btn .blue_btn img { margin-left: 5px; width: 10px; height: auto;}
+.column-btn .blue_btn:hover img,
+.column-btn .columns-btn.show img,
+.column-btn .filters-btn.show img  { filter: brightness(100); -webkit-filter: brightness(100);}
+.column-btn .columns-btn.show img,
+.column-btn .filters-btn.show img { transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+.pipeline-leads-table .bottom.right { position: relative; z-index: 10;}
+.additional-filter-btns ul { padding: 0; margin: 20px 0 0; list-style-type: none;}
+.additional-filter-btns ul li { padding-right: 10px; display: inline-block; vertical-align: middle;}
+.additional-filter-btns ul a { border: 2px solid #CACCE1; border-radius: 6px; height: 34px; width: 34px; vertical-align: middle;}
+.additional-filter-btns ul a:hover { border-color: #3246D3;}
+.additional-filter-btns ul a .hover-img { display: none;}
+.additional-filter-btns ul a:hover .hover-img { display: block;}
+.additional-filter-btns ul a:hover .default-img { display: none;}
+/* .pipeline-leads-table.disclosure-out-table .dt-responsive { padding-bottom: 40px;} */
+.pipeline-leads-table.disclosure-out-table tbody tr:hover { background: #fff;}
+.pipeline-leads-table.disclosure-out-table tbody td:nth-child(9),
+.pipeline-leads-table.disclosure-out-table tbody td:nth-child(12) { width: 70px !important;}
+.pipeline-leads-table.disclosure-out-table table thead th:nth-child(3) { text-align: left !important;}
+.table-dropdown .jcf-select { cursor: pointer; margin-bottom: 0; min-width: 105px; background: #F2F6FE; border: transparent; border-radius: 6px;}
+.table-dropdown .jcf-select:hover { border-color: #dae0e5;}
+.table-dropdown .jcf-select .jcf-select-opener { background: transparent;}
+.table-dropdown .jcf-select .jcf-select-opener::before { content: ''; background: url('../images/down-arrow.svg') no-repeat; height: 8px; width: 12px; position: absolute; top: 10px; right: 8px; display: block; transition-duration: .3s; -webkit-transition-duration: .3s;}
+.table-dropdown .jcf-select.jcf-drop-active .jcf-select-opener::before { transform: rotate(180deg);}
+.table-dropdown .jcf-select-text span { font-family: 'Inter', sans-serif; font-size: 12px; line-height: 16px; font-weight: 400; color: #000;}
+.jcf-select-drop .jcf-select-drop-content { border: none !important; box-shadow: 0px 0px 8px #ddd; border-radius: 6px;}
+.jcf-select-drop .jcf-select-drop-content .jcf-list { background: #F2F6FE; border-radius: 6px;}
+.jcf-select-drop .jcf-select-drop-content .jcf-list .jcf-option { cursor: pointer; font-family:'Poppins', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #60698B;}
+.jcf-select-drop .jcf-hover, 
+.jcf-list-box .jcf-selected { background: #D7E4FF !important;}
+.edit-condition span { padding: 3px; width: 25px; background: #F2F6FE; border-radius: 10px; display: inline-block; text-align: center;}
+.tick-finalise { margin-right: 5px; background: #CACCE1; height: 25px; width: 25px; border-radius: 50px; display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center;}
+.check-finalise.show .tick-finalise { background: #5BBF52;}
+    /* Columns Modal Css */
+    .pipeline-leads-main-sec.show .pipeline-leads-table-height { width: calc(100% - 390px);}
+    .pipeline-leads-main-sec.show .columns-modal,
+    .pipeline-leads-main-sec.show .filters-modal { display: block;}
+    .columns-modal,
+    .filters-modal { margin-left: 20px; width: 390px; display: none; transition-duration: .3s; -webkit-transition-duration: .3s;}
+    .columns-modal .all-select-columns { padding-bottom: 20px; margin-bottom: 15px; border-bottom: 1px solid #AEAEAE;}
+    .columns-modal .dt-checkboxes-cell { margin-right: 10px;}
+    .columns-modal .dt-checkboxes-cell input { vertical-align: top !important;}
+    .columns-modal .dt-checkboxes-cell input[type='checkbox']:checked { display: inline-block; vertical-align: middle;}
+    .columns-modal .checkbox-input-style span { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 20px; font-weight: 700; color: #9FA3C0;}
+    .columns-modal ul { padding: 0; list-style-type: none;}
+    .columns-modal ul li { padding: 10px 0; }
+    /*Filters Css*/
+    .add-filter { padding-bottom: 20px; margin-bottom: 5px; border-bottom: 0.609412px solid #EAEAEA;}
+    .add-filter .filter_text{ margin: 0 !important;}
+    .add-filter a { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 20px; font-weight: 600; color: #3246D3 !important;}
+    .filters-accordion input.form-control { color: #293A3E !important; font-size: 13px !important;}
+    .filters-accordion .card { box-shadow: none; border: none; overflow: visible;}
+    .filters-accordion .card-header { padding: 15px 0 0; background: transparent; border: none; position: relative; transition-delay: .3s; -webkit-transition-delay: .3s;}
+    .filters-accordion .card-body { padding: 15px 0;}
+    .filters-accordion .card-header h2 { display: inline-block;}
+    .filters-accordion .card-header h2 .delete-ic { position: absolute; top: 14px; right: 18px;}
+    .filters-accordion .card-header .btn-link::before { content: ''; background: url('../images/filter-arrow.svg') no-repeat; height: 10px; width: 18px; position: absolute; top: 25px; right: 0;}
+    .filters-accordion .card-header .btn-link[ aria-expanded="true"]::before { transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+    .filters-accordion .btn:not(:disabled):not(.disabled) { padding: 0; text-decoration: none !important; box-shadow: none !important; font-family:'Poppins', sans-serif; font-weight: 700; font-size: 16px; line-height: 25px; color: #293A3E;}
+    .filters-accordion .date-picker.width_50p { margin: 0 15px 0 0;}
+    .filters-accordion .date-picker.width_50p:last-child { margin-right: 0;}
+    .radio-style { margin-bottom: 20px;}
+    .radio-style:last-child { margin: 0;}
+    .radio-style [type="radio"]:checked + label, 
+    .radio-style [type="radio"]:not(:checked) + label { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 20px; font-weight: 400; color: #293A3E;}
+    .filters-accordion .card-body label, 
+    .add-filter-blk .form-horizontal label { margin-bottom: 3px; font-weight: 400;}
+    .filters-accordion .card-body label.dropdown-item  { padding: 7px 10px;}
+    .add-filter-blk { padding-top: 20px;}
+    .add-filter-blk .ui.selection.dropdown { background: #F2F6FE;}
+    .add-filter-blk .ui.selection.dropdown > .dropdown.icon { display: none;}
+    .add-filter-blk .ui.search.dropdown .menu { max-height: 380px;}
+    .add-filter-blk .ui.multiple.search.dropdown>.text { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 20px; font-weight: 400; color: #60698B;}
+    .no-filter-blk { padding: 90px 0; text-align: center;}
+    .no-filter-blk .no_results { margin-top: 15px;}
+    .hide-filter-link img { width: 15px;}
+    .filters-modal.show .filters-accordion,
+    .filters-modal.show .add-filter-link { display: none;}
+    .filters-modal.show .add-filter-blk,
+    .filters-modal.show .hide-filter-link  { display: block !important;}
+    /* Bulk Adding Contact Modal Css */
+    .map-identifiers table tbody td:first-child { width: 50% !important;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .close { top: 15px; right: 15px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height { height: 850px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline { align-items: center; -webkit-align-items: center;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .bg_skyblue.p35.border_ltb_20p,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .display_block { height: 848px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated, 
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2  { height: 775px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated { overflow-y: auto;}
+    .import-modal .bg_white { height: 600px !important;}
+    .import-modal .width_50p,
+    .import-modal .width_50p img { width: 50%;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated::-webkit-scrollbar-thumb,
+    .add-filter-blk .ui.search.dropdown .menu::-webkit-scrollbar-thumb,
+    .condition-list-sec::-webkit-scrollbar-thumb {
+        background: #3246D3;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+      }
+      .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated::-webkit-scrollbar,
+      .add-filter-blk .ui.search.dropdown .menu::-webkit-scrollbar,
+      .condition-list-sec::-webkit-scrollbar { 
+        height: 6px;
+        width: 6px;
+      }
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .permissions_tabs .nav-item.width_25p { margin-right: 15px; width: auto !important;}
+    .cancel-modal .modal-content { box-shadow: 0px 0px 8px #ddd;}
+    .bulk-contact .upload_img_outer2 .dz-message { margin: 40px 0 !important;}
+    .map-identifiers table.dataTable tbody tr:hover { background: #fff;}
+    .map-identifiers button.btn.btn-light.dropdown-toggle { height: auto;}
+    .map-identifiers .integation_dropdown .menu,
+    .map-identifiers .integation_dropdown .dropdown-menu { margin: 5px !important;}
+    .create-time,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select-drop,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select-drop-content { margin: 0 !important;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select { min-width: 100%; height: 35px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select-text { line-height: 36px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select-text span { font-size: 14px; line-height: 19px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select .jcf-select-opener::before { top: 14px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .table-dropdown .jcf-select .jcf-list .jcf-option { padding: 9px;}
+
+    /*Single Contact Refinance Css*/
+    .cristofer-bergson-blk { width: 350px; flex-shrink: 0;}
+    .cristofer-bergson-blk .title { font-size: 17px !important; line-height: 22px; align-items: start; -webkit-align-items: start;}
+    .cristofer-bergson-blk .crm-id { font-family: 'Inter', sans-serif; font-size: 12px; line-height: 16px; font-weight: 400; color: #9FA3C0;}
+    .cristofer-bergson-blk .date_selection.light_blue.content_center { padding-left: 10px;}
+    .action-btn button { padding: 7px 10px; border: 2px solid #657FDB; background: transparent; border-radius: 6px; display: inline-flex; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 19px; font-weight: 600; color: #657FDB;}
+    .action-btn button:hover { background: #3246D3; border-color: #3246D3; color: #fff;}
+    .action-btn button:hover img,
+    .loan-app-slider .item_box:hover img,
+    .loan-app-slider .item_box.active_loan_application img{ filter: brightness(100); -webkit-filter: brightness(100);}
+    .action-btn { position: relative;}
+    .action-btn.show .action-list { display: block;}
+    .action-list { display: none; padding: 15px; width: 210px; z-index: 10; position: absolute; top: 45px; left: 0; background: #FFFFFF; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); border-radius: 0px 10px 10px 10px;}
+    .action-list ul { margin-bottom: 0; padding-left: 0; list-style-type: none;}
+    .action-list ul li { padding-bottom: 18px; position: relative;}
+    .action-list ul li:last-child { padding-bottom: 0;}
+    .action-list ul li a { padding-left: 35px; display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center;}
+    .action-list ul li a img { position: absolute; top: -3px; left: 0;}
+    .action-list ul li a span { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 19px; font-weight: 700; color:#9FA3C0;}
+    .action-list ul li a:hover span { color: #3246D3;}
+    .action-list ul li a .hover-ic,
+    .action-list ul li a:hover .default-ic { display: none;}
+    .action-list ul li a:hover .hover-ic { display: block; filter: unset; -webkit-filter: unset;}
+    .delete-ic span { color: #D33232 !important;}
+    .img-25 { width: 25px;}
+    .icon-list-blk ul { margin: 30px 0; padding-left: 0; list-style-type: none;}
+    .icon-list-blk li { padding-right: 40px;  display: inline-block; text-align: center;}
+    .icon-list-blk li:last-child { padding-right: 0;}
+    .icon-list-blk li a { height: 42px; width: 42px; background: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;}
+    .icon-list-blk li.bg-1 a { background: rgba(101, 127, 219, 0.2);}
+    .icon-list-blk li.bg-2 a { background: rgba(157, 31, 235, 0.15);}
+    .icon-list-blk li.bg-3 a { background: rgba(41, 216, 255, 0.2);}
+    .icon-list-blk li.bg-4 a { background: rgba(24, 188, 158, 0.2);}
+    .icon-list-blk li span { padding-top: 5px; display: block; font-family:'Poppins', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #60698B;}
+    .cristofer-bergson-blk .permissions_tabs.reports .nav { display: block;}
+    .cristofer-bergson-blk .permissions_tabs.reports .nav-item { margin: 0; padding-bottom: 0 !important; width: calc(100% / 2) !important;}
+    .date_selection.light_blue img { margin-right: 9px !important;}
+    .active-past-campaign { padding: 10px; background: #F2F6FE; border-radius: 6px;}
+    .active-past-campaign .tag-blk { margin-bottom: 5px; margin-right: 5px; padding: 7px 10px; background: #657FDB; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 13px; line-height: 16px; font-weight: 400; color: #fff; display: inline-block;}
+    .active-past-campaign .tag-blk button img { width: 17px; filter: brightness(100); -webkit-filter: brightness(100);}
+    .add-active-campaign button { height: 30px; width: 30px; background: #657FDB; color: #fff; border-radius: 50%; font-size: 18px;}
+    .subscribe-btn .switch { width: 45px; height: 25px;}
+    .subscribe-btn .slider.round { border-radius: 50px; background: #657FDB;}
+    .subscribe-btn .slider:before { bottom: 2px; height: 21px; width: 21px;}
+    .subscribe-btn input:checked + .slider:before { left: -5px; border: none;}
+    .subscribe-btn input[type='checkbox']:checked { display: inline-block;}
+    .cristofer-bergson-icon-modals.modal .ratewatch_modal_section .border_btn { max-width: 100%;}
+    .cristofer-bergson-icon-modals.modal .ratewatch_modal_section #modalform { margin-top: 20px;}
+    .cristofer-bergson-icon-modals.modal .ratewatch_modal_section { margin: 0px auto; max-width: 450px; width: 450px;}
+    .cristofer-bergson-icon-modals.modal .ratewatch_modal_section .form-horizontal h6 { margin: 15px 0; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 19px; font-weight: 400; color: #293A3E;}
+    .cristofer-bergson-icon-modals.modal .ratewatch_modal_section .form-horizontal h6 span { color: #3246D3;}
+    .cristofer-bergson-icon-modals.modal .ratewatch_modal_section .form-horizontal label { font-weight: 400;}
+    .cristofer-bergson-icon-modals.modal .ratewatch_modal_section .form-control { width: 100% !important;}
+    .form-control { color: #293A3E !important;}
+    .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #CACCE1;
+      }
+      .form-control::-moz-placeholder { /* Firefox 19+ */
+        color: #CACCE1;
+      }
+      .form-control:-ms-input-placeholder { /* IE 10+ */
+        color: #CACCE1;
+      }
+      .form-control:-moz-placeholder { /* Firefox 18- */
+        color: #CACCE1;
+      }
+      textarea.height-72.form-control { height: 72px;}
+        /*Single Contact Select Loan Type Css*/
+        .contact-content-blk { margin-left: 20px; width: calc(100% - 370px);}
+        .start-contact { padding: 100px 0; height: 100%;}
+        .start-contact.justify-center { justify-content: flex-start;}
+        .select-loan-type { position: relative;}
+        .select-loan-type-blks { width: 400px; margin: 150px auto;}
+        .start-contact img { width: 350px;}
+        .start-contact .progress_title,
+        .select-loan-type-blks .progress_title { font-size: 32px; line-height: 40px;}
+        .start-contact .progress_subtitle { font-size: 20px; line-height: 26px; color: #9FA3C0; font-weight: 400;}
+        .start-contact .blue_btn { margin-top: 25px; display: inline-block;}
+        .select-loan-type a img { margin-right: 15px; width: 10px;}
+        .select-loan-type a { font-family:'Poppins', sans-serif; font-weight: 700; font-size: 20px; line-height: 28px; color: #0C1347 !important; display: inline-block;}
+        .select-loan-blks a { margin: 35px 0 15px; padding: 50px; background: #F2F6FE; border-radius: 10px; border:none}
+        .select-loan-blks a:hover,
+        .select-loan-blks a.purchase-btn.show,
+        .select-loan-blks a.refinance-btn.show { background: #D7E4FF;}
+        .select-loan-blks a img { width: 80px; margin-right: 0;}
+        .select-loan-blks span { display: block; text-align: center; font-family: 'Inter', sans-serif; font-size: 16px; line-height: 25px; font-weight: 500; color:#0C1347;}
+        /* a.create-loan-btn { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; line-height: 20px; text-align: center; letter-spacing: 0.01em; color: #FFFFFF !important; position: absolute; bottom: -250px; right: 25px; width: 210px; background: #86A9F0; border-color: #86A9F0; pointer-events: none; display: block;} */
+        a.create-loan-btn { margin-top: 35px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; line-height: 20px; text-align: center; letter-spacing: 0.01em; color: #FFFFFF !important; width: 210px; background: #86A9F0; border-color: #86A9F0; pointer-events: none; display: block;}
+        a.create-loan-btn.purchase-link.show,
+        a.create-loan-btn.refinance-link.show { background: #3246D3; border-color: #3246D3; pointer-events:visible;}
+        a.create-loan-btn.refinance-link.show { display: block !important;}
+        .select-loan-type.show .purchase-link { display: none;}
+        /*Refiannce Loan Appliaction Css*/
+        .refinance-main-blks .title { font-size: 18px;}
+        .loan-applications-blk .title { min-width: 230px; flex-shrink: 0; -webkit-flex-shrink: 0;}
+        .content_wrapper .loan-applications-blk .integation_dropdown button.btn.btn-light.dropdown-toggle { width: 200px !important;}
+        .content_wrapper .application-summery .integation_dropdown button.btn.btn-light.dropdown-toggle  { width: 100% !important;}
+        .loan-applications-blk .loan_arrow_down,
+        .loan-applications-blk .application_arrow_down  { margin-left: 25px;}
+        .loan-applications-blk .loan_arrow_down img,
+        .loan-applications-blk .application_arrow_down img { position: relative; top: auto; right: auto; cursor: pointer;}
+        .create-new-app-modal .select-loan-type-blks { width: 100%; margin: 0px auto;}
+        .create-new-app-modal .select-loan-blks  { margin-right: 0; width: 100%;}
+        .create-new-app-modal .select-loan-blks a { margin-top: 15px; height: 175px; width: 175px; display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center;}
+        .create-new-app-modal a.create-loan-btn { margin-top: 0; width: 175px; right: 15px; bottom: 0; background: #CACCE1; color: #60698B; border-color: #CACCE1;}
+        .integation_dropdown label.dropdown-item { padding: 7px 10px;}
+        .loan-app-slider .owl-carousel .owl-stage { height: 100%; min-width: 100% !important;}
+        .loan-app-slider .owl-carousel.owl-drag .owl-item { margin-right: 15px; width: 220px !important;}
+        .loan-app-slider .item_box { margin: 0 5px; padding: 12px; min-height: 124px; width: 220px; height: 100%; display: inline-block;}
+        .loan-app-slider .item_box:first-child { margin-left: 0;}
+        .loan-app-slider .item_box:hover,
+        .loan-app-slider .item_box.active_loan_application { background: #657FDB;}
+        .loan-app-slider .item_box:hover .loan-amount,
+        .loan-app-slider .item_box:hover .loan-app-nm,
+        .loan-app-slider .item_box.active_loan_application .loan-amount,
+        .loan-app-slider .item_box.active_loan_application .loan-app-nm{ color: #fff;}
+        .loan-app-slider .item_box:hover .loan-app-nm span,
+        .loan-app-slider .item_box.active_loan_application .loan-app-nm span{ color: #CACCE1;}
+        .loan-app-slider .loan-app-nm,
+        .loan-app-slider .loan-amount { font-family:'Poppins', sans-serif; font-weight: 600; font-size: 12px; line-height: 18px; color: #0C1347;}
+        .loan-app-slider .loan-app-nm span { display: block; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 12px; line-height: 18px; color: #9FA3C0;}
+        .loan-app-slider .loan-amount { padding: 12px 0;}
+        .loan-app-slider .inprogress-tag { padding: 3px 5px; border-radius: 50px; width: 80%; text-align: center; background: #CACCE1 !important; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 10px; line-height: 15px; color: #fff !important; text-transform: uppercase;}
+        .loan-app-slider .closed-tag { background: #CCF3BF; color: #1ABA00;}
+        .loan-app-slider .close-ic { height: 9px; width: 9px; border-radius: 50%; background: #CACCE1;}
+        .loan-app-slider .owl-nav button { height: 124px; width: auto;}
+        .loan-app-slider .owl-carousel .owl-nav button.owl-prev.disabled,
+        .loan-app-slider .owl-carousel .owl-nav button.owl-next.disabled  { display: none;}
+        .red_btn { color: #fff !important; display: inline-block;}
+        .delete-loanapp-popup .progress_subtitle { padding-bottom: 35px; font-weight: 300;}
+        .cristofer-bergson-icon-modals.modal.call-modal .ratewatch_modal_section { padding: 20px; width: 320px; max-width: 320px;}
+        .cristofer-bergson-icon-modals.call-modal .dialer-blk { padding: 0; width: 100%; position: relative; right: auto; top: auto; background: transparent; box-shadow: none;}
+        .cristofer-bergson-icon-modals.call-modal .dial-call { padding-bottom: 0;}
+        .cristofer-bergson-icon-modals.call-modal .dial-search .form-control-feedback { margin-top: 12px;}
+        .cristofer-bergson-icon-modals.call-modal .dialing-screen ul li { width: calc(100% / 2 - 12px);}
+        .cristofer-bergson-icon-modals.call-modal .contact-nm { color: #9FA3C0;}
+        .cristofer-bergson-icon-modals.call-modal .dialing-screen { padding-top: 25px;}
+        .cristofer-bergson-icon-modals.call-modal ul.dialing-option  { padding-bottom: 15px;}
+        /*Wordflow Slider*/
+        .workflow-slider-sec { padding: 15px 0 25px;}
+        .workflow-blks { display: inline-block;}
+        .green-circle { margin-left: 10px; transition-duration: .5s; -webkit-transition-duration: .5s; transform-origin: left; -webkit-transform-origin: left; height: 28px; width: 28px; background: #5BBF52; border-radius: 50%; display: inline-flex; display: -webkit-inline-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center;}
+        .grey-circle { background: #DBDBDB;}
+        .workflow-dt { transition-duration: .5s; -webkit-transition-duration: .5s; transform-origin: left; -webkit-transform-origin: left; padding: 15px 0 0; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; line-height: 19px; color: #0C1347;}
+        .workflow-status { transition-duration: .5s; -webkit-transition-duration: .5s; transform-origin: left; -webkit-transform-origin: left; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #9FA3C0;}
+        .workflow-blks.hover-state:hover .green-circle,
+        .workflow-blks.upcoming-state .green-circle { transform: scale(1.7); -webkit-transform: scale(1.7);}
+        .workflow-blks.hover-state:hover .green-circle img,
+        .workflow-blks.upcoming-state .green-circle img { width: 12px;}
+        .workflow-blks.hover-state:hover .workflow-dt,
+        .workflow-blks.hover-state:hover .workflow-status,
+        .workflow-blks.upcoming-state .workflow-dt,
+        .workflow-blks.upcoming-state .workflow-status { transform: scale(1.13); -webkit-transform: scale(1.13);}
+        .workflow-blks.hover-state:hover .workflow-status,
+        .workflow-blks.upcoming-state .workflow-status { padding-top: 5px;}
+        .workflow-action-links { display: none; }
+        .workflow-blks.hover-state:hover .workflow-action-links,
+        .workflow-blks.upcoming-state:hover .workflow-action-links { display: block; }
+        .workflow-action-links a { padding-top: 10px; padding-left: 25px; display: block; color: #3246D3 !important; position: relative;}
+        .workflow-action-links a img { position: absolute; top: 16px; left: 0;}
+        .workflow-action-links a img.calender-ic { width: 15px; top: 12px;}
+        .workflow-slider-sec .slick-list { padding-top: 20px;}
+        .workflow-slider .slick-track::after { content: ''; background: #CACCE1; width: 100%; height: 1px; position: absolute; top: 15px; left: 0; z-index: -1;}
+        .workflow-slider .slick-list::before { z-index: 1; content: ''; height: 100%; width: 120px; background: linear-gradient(270deg, #FFFFFF 20%, #FFFFFF 42.65%, rgba(255, 255, 255, 0) 100%)!important; position: absolute; top: 0; right: -25px;}
+        .workflow-slider .slick-dots { bottom: -40px;}
+        .workflow-slider .slick-dots li button::before { font-size: 30px; line-height: 25px; color: #F2F6FE; opacity: 1;}
+        .workflow-slider .slick-dots li.slick-active button::before { color: #3246D3;}
+        /*Refinance Tabs Css*/
+        .refinance-tabs-sec > .nav-tabs { padding: 20px 20px 0; border: none;}
+        .refinance-tabs-sec > .nav-tabs .nav-link { padding: 12px; background: #E8EAF8; border-radius: 35px; text-align: center; font-family:'Poppins', sans-serif; font-weight: 600; font-size: 12px; line-height: 18px; color: #0C1347;}
+        .refinance-tabs-sec > .nav-tabs .nav-link:focus, 
+        .refinance-tabs-sec > .nav-tabs .nav-link:hover, 
+        .refinance-tabs-sec > .nav-tabs .nav-item.show .nav-link, 
+        .refinance-tabs-sec > .nav-tabs .nav-link.active { background: #3246D3; color: #fff;}
+        .refinance-tabs-sec > .nav-tabs .nav-item { padding: 5px; width: calc(100% / 9); min-width: 145px;}
+        .refinance-tabs-sec-small .nav-tabs .nav-item { width: calc(100% / 8);}
+        /* .refinance-tabs-sec .tab-content { display: inline-block;} */
+        .refinance-tabs-sec .tab-content .mortgage-sec { padding: 25px 30px;}
+            /*Mortgage Css*/
+            .mortgage-sec .souce-info h5,
+            .mortgage-sec .souce-info a { margin-bottom: 0; margin-right: 10px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; line-height: 19px; color: #9FA3C0;}
+            .mortgage-sec .souce-info a { color: #3246D3; text-decoration: underline; display: inline-block;}
+            .atom-details a { text-decoration: none !important;}
+            .atom-details a i { margin-right: 5px; color: #FF2929;}
+            .morgtage-info-blks { margin: 25px 0 0; padding: 25px 0; border-top: 2px solid #F2F6FE; border-bottom: 2px solid #F2F6FE;}
+            .morgtage-info-blks .title img { margin-left: 5px; width: 25px;}
+            .refinance-tabs-accordion .filters-accordion .btn:not(:disabled):not(.disabled) { font-size: 18px;}
+            .refinance-tabs-accordion .filters-accordion h2 { min-width: 480px; flex-shrink: 0; -webkit-flex-shrink: 0;}
+            .balance-list { width: calc(100% - 480px);}
+            .balance-list ul { padding-left: 0; list-style-type: none;}
+            .balance-list ul li { display: inline-block;  width: calc(100% / 3 - 3px);}
+            .balane-info-label,
+            .balane-info-text { font-family: 'Inter', sans-serif !important; font-weight: 500 !important; font-size: 14px !important; line-height: 19px !important; color: #9FA3C0 !important;}
+            .balane-info-text { color: #293A3E !important;}
+            .refinance-tabs-accordion .filters-accordion .card-header { border-bottom: 2px solid #F2F6FE;}
+            .refinance-tabs-accordion .filters-accordion .card-body { border-bottom: 2px solid #F2F6FE;}
+            .refinance-tabs-accordion .filters-accordion .card-body .balance-list { width: 100%;}
+            .refinance-tabs-accordion .filters-accordion .card-body .balance-list li { padding: 8px 0; display: block; width: 100%;}
+            .refinance-tabs-accordion .filters-accordion .card-body .balance-list .balane-info-label,
+            .refinance-tabs-accordion .filters-accordion .card-body .balance-list .balane-info-text { display: inline-block;}
+            .refinance-tabs-accordion .filters-accordion .card-body .balance-list .balane-info-label { min-width: 200px;}
+            .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list .balane-info-label { min-width: 80px;}
+            .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list { width: 30%; padding-left: 115px; position: relative;}
+            .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list::before { content: ''; background: #F2F6FE; height: 100%; width: 2px; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+            .main-balance-list { width: 70%;}
+            .width-60 { width: 50%;}
+            .width-40 { width: 40%;}
+            .main-balance-list .width-60 { margin-right: 15px;}
+            .souce-info .blue_btn { color: #fff !important;}
+            /*Edit Mortgage*/
+            .edit-mortgage-sec .select-loan-type { padding: 25px; border-bottom: 2px solid #F2F6FE;}
+            .edit-mortgage-sec .select-loan-type .disable_btn { margin-left: 15px; min-width: 197px !important;}
+            .edit-mortgage-sec .select-loan-type .blue_btn { margin-left: 15px; min-width: 197px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; line-height: 20px; text-align: center; letter-spacing: 0.01em; color: #FFFFFF !important;}
+            .edit-mortgage-sec .select-loan-type .add-mortgae { background: #32D3AC; border-color: #32D3AC;}
+            .edit-mortgage-sec .select-loan-type .add-mortgae:hover { background: #78E1CC; border-color: #78E1CC;}
+            .edit-mortgage-sec .select-loan-type .add-mortgae:active,
+            .edit-mortgage-sec .select-loan-type .add-mortgae:focus { background: #5BBF52; border-color: #5BBF52;}
+            .edit-mortgage-sec .select-loan-type .add-installment{ background: #657FDB; border-color: #657FDB;}
+            .edit-mortgage-sec .select-loan-type .add-installment:hover { background: #3246D3; border-color: #3246D3;}
+            .edit-mortgage-sec .select-loan-type .add-installment:active,
+            .edit-mortgage-sec .select-loan-type .add-installment:focus { background: #18299D; border-color: #18299D;}
+            .edit-mortgage-sec .select-loan-type .add-revolving { background: #60698B; border-color: #60698B;}
+            .edit-mortgage-sec .select-loan-type .add-revolving:hover { background: #8B8FB2; border-color: #8B8FB2;}
+            .edit-mortgage-sec .select-loan-type .add-revolving:active, 
+            .edit-mortgage-sec .select-loan-type .add-revolving:focus { background: #293A3E; border-color: #293A3E;}
+            .edit-mortgage-tab-sec { min-height: calc(100vh - 200px);}
+            .edit-mortgage-tab-sec .nav-tabs { padding: 30px 25px; border: none; width: 50%; border-right: 2px solid #F2F6FE;  display: block;}
+            .edit-mortgage-tab-sec .tab-content { width: 50%; padding: 30px 25px; position: relative;}
+            .edit-mortgage-tab-sec .nav-item { padding-bottom: 15px; display: block;}
+            .edit-mortgage-tab-sec .nav-tabs .nav-link { padding: 12px 12px 12px 35px; border: 1px solid #CACCE1 !important; border-radius: 6px; position: relative;}
+            .edit-mortgage-tab-sec .nav-tabs .nav-link:hover,
+            .edit-mortgage-tab-sec .nav-tabs .nav-link.active{ background: #F2F6FE; border-color:#F2F6FE !important;}
+            .edit-mortgage-tab-sec .nav-tabs .nav-link::before { content: ''; background: transparent; width: 10px; height: 100%; position: absolute; top: 0; left: 0; border-radius: 6px 0 0 6px;}
+            .edit-mortgage-tab-sec .nav-tabs .nav-link.add-mortgage-bg::before { background-color: #32D3AC;}
+            .edit-mortgage-tab-sec .nav-tabs .nav-link.revolving-mortgage-bg::before { background: #60698B;}
+            .edit-mortgage-tab-sec .nav-tabs .nav-link.add-installment-bg::before { background: #657FDB;}
+            .edit-mortgage-nm { width: 350px;}
+            .edit-mortgage-tab-sec .balance-list { width: calc(100% - 350px);}
+            .edit-mortgage-tab-sec .balance-list li { margin-left: 15px; width: calc(100% / 3 - 17px);}
+            .edit-mortgage-tab-sec .balance-list .balane-info-label,
+            .edit-mortgage-tab-sec .balance-list .balane-info-text { font-size: 12px !important;}
+            .edit-mortgage-nm h5 { margin-bottom: 0; font-family:'Poppins', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px; color: #0C1347;}
+            .edit-mortgage-nm span { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 13px; line-height: 19px; color: #293A3E;}
+            .edit-mortgage-tab-sec .escow-title h5,
+            .edit-mortgage-tab-sec .escow-title .escow-amt { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; line-height: 19px; color: #9FA3C0;}
+            .escow-title h5 { margin-bottom: 0; margin-right: 10px;}
+            .edit-mortgage-tab-sec .escow-title .escow-amt  { color: #293A3E;}
+            .estimate-btn { padding-left: 24px !important; background: #60698B !important; border-color: #60698B !important;}
+            /* .bottom-btn { position: absolute; width: calc(100% - 50px); bottom: 25px; right: 25px;} */
+            /*Messaging Css*/
+            .new-msg-sec { padding: 25px 25px 15px;}
+            .new-msg-sec .date_selection { text-align: left;}
+            .new-msg-conversation-blk { padding-top: 25px;}
+            .msg-blks { margin-bottom: 15px;}
+            .new-msg-conversation-blk .profile_img img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover;}
+            .new-msg-conversation-blk .message_sender,
+            .new-msg-conversation-blk .message_receiver  { width: 700px;}
+            .new-msg-conversation-blk .message_sender   { background: #657FDB; color: #fff; border-radius: 6px 0 6px 6px;}
+            .new-msg-conversation-blk .message_receiver { background: #F2F6FE; border-radius: 0px 6px 6px 6px;}
+            .new-msg-conversation-blk .user-nm { height: 40px; width: 40px; background: #9FA3C0; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; line-height: 22px; color: #fff; border-radius: 50%; display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center;}
+            .audio-msg { padding: 12px; border: 1px solid #CACCE1; border-radius: 0px 6px 6px 6px; width: calc(100% - 47px); margin-left: auto;}
+            .clear-both { clear: both;}
+            .new-msg-conversation-blk .email-blk { padding: 10px; width: calc(100% - 47px); margin-left: auto; border: 1px solid #CACCE1; border-radius: 0px 6px 6px 6px;}
+            .new-msg-conversation-blk .email-blk .subject-nm { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; line-height: 19px; color: #000;}
+            .email-blk .reply-btn { margin: 0; width: auto; height: auto; padding: 5px 15px;}
+            .email-blk .reply-btn:hover { background: #3246D3; color: #fff;}
+            .email-blk .reply-btn:hover img { filter: brightness(100); -webkit-filter: brightness(100);}
+            .email-blk .reply-btn img { margin-right: 10px;}
+            .email-blk .email-desc { padding-top: 12px; margin-top: 12px; border-top: 1px solid #60698B;}
+            .email-desc a { color: #3246D3;}
+            .email-desc p:last-child { margin-bottom: 15px;}
+            .email-desc .expert-text { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  overflow: hidden;}
+            .extre-email-text { display: none;}
+            .email-desc.show .extre-email-text { display: block;}
+            .msg-height { padding-right: 12px; height: 500px; overflow-x: hidden; overflow-y: auto;}
+            .msg-height::-webkit-scrollbar-thumb,
+            .lock-pdf-blk ul::-webkit-scrollbar-thumb,
+            .activities-blk::-webkit-scrollbar-thumb,
+            .properties-details-height::-webkit-scrollbar-thumb,
+            .compliance-list-blk .pdf-list ul::-webkit-scrollbar-thumb {
+                background: #3246D3;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+              }
+            .msg-height::-webkit-scrollbar,
+            .lock-pdf-blk ul::-webkit-scrollbar,
+            .activities-blk::-webkit-scrollbar,
+            .properties-details-height::-webkit-scrollbar,
+            .compliance-list-blk .pdf-list ul::-webkit-scrollbar { 
+                height: 6px;
+                width: 6px;
+            }
+            .send-msg-sec { background: #fff; border-radius: 0 0 20px 20px; padding: 25px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25); position: relative;}
+            .send-msg-sec .permissions_tabs.reports .nav-item { width: calc(100% / 2) !important;}
+            .send-msg-sec .tab-content { margin-top: 25px; display: block;}
+            .send-msg-sec .select-template-blk { position: absolute; right: 25px; top: 25px; width: 500px;}
+            .send-msg-sec .tox-tinymce { height: 250px !important;}
+            .send-msg-sec #email-tab .tox-tinymce { height: 150px !important;}
+            .send-msg-sec .tox .tox-toolbar-overlord { margin-bottom: 0;}
+            .send-msg-sec #email-tab .tox .tox-toolbar-overlord { margin-top: 15px;}
+            .send-msg-sec .form-group { position: relative;}
+            .send-msg-sec .text-limit { position: absolute; bottom: 70px; left: 15px; font-family:'Poppins', sans-serif; font-weight: 400; font-size: 12px; line-height: 19px; color: #CACCE1;}
+            .send-btn .blue_btn  { padding: 5px 15px; position: absolute; bottom: 25px; right: 25px; z-index: 100; cursor: pointer;}
+            /*Finance Tab Css*/
+            .finance-tab-sec { padding: 25px;}
+            .investor-lock-info { padding: 15px 0;}
+            .investor-lock-info .upload_img_outer2 .dz-message { margin: 80px 35px !important;}
+            .investor-lock-info .profile_upload { text-align: left;}
+            .lock-pdf-blk { padding: 15px; border: 1px solid #C7C7C7; border-radius: 10px;}
+            .lock-pdf-blk ul { height: 168px; margin-bottom: 0; list-style-type: none; padding-left: 0; padding-right: 10px; overflow-x: hidden; overflow-y: auto;}
+            .lock-pdf-blk ul li { padding: 12px 0; border-bottom: 0.609412px solid #EAEAEA;}
+            .lock-pdf-blk ul li:first-child { padding-top: 0;}
+            .lock-pdf-blk ul li a { min-width: 260px; padding-left: 10px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; line-height: 19px; color: #0C1347;}
+            .lock-pdf-blk ul li a span { display: block; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #9FA3C0;}
+            .lock-pdf-blk ul li a:hover { color: #3246D3;}
+            .lock-pdf-blk ul li .created-user-nm { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; line-height: 19px; color: #293A3E;}
+            .modal .close { top: -10px; right: -10px;}
+            .loan-breakdown-blk { margin: 15px 0 25px; padding: 25px 0; border-top: 2px solid #F2F6FE; border-bottom: 2px solid #F2F6FE;}
+            .loan-breakdown-blk ul,
+            .commision-report-user-blk ul { margin: 15px 0 0; padding-left: 0; list-style-type: none;}
+            .loan-breakdown-blk ul li,
+            .commision-report-user-blk ul li { margin-right: 15px; display: inline-block; width: calc(100% / 5 - 20px);}
+            .loan-breakdown-blk ul li h5,
+            .commision-report-user-blk h5 { margin-bottom: 0; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 14px; line-height: 19px; color: #9FA3C0;}
+            .loan-breakdown-blk ul li p,
+            .commision-report-user-blk ul li p,
+            .revenue-expense-blks .total-amt { font-family:'Poppins', sans-serif; font-weight: 400; font-size: 22px; line-height: 28px; color: #60698B;}
+            .commision-report-user-blk ul li { margin: 0 15px 15px 0; width: calc(100% / 3 - 20px);}
+            .lo-split-blk ul li { width: calc(100% / 2 - 20px);}
+            .commision-report-user-blk ul li p span { padding-left: 3px; font-weight: 500; font-size: 12px; line-height: 19px; color: #F69CC7; vertical-align: top;}
+            .user-input-blk,
+            .lo-split-blk { padding-left: 30px; position: relative;}
+            .user-input-blk::before ,
+            .lo-split-blk::before { content: ''; background: #F79CC7; height: 100%; width: 6px; border-radius: 10px; position: absolute; top: 0; left: 0;}
+            .lo-split-blk::before { background: #78E1CC;}
+            .commision-report-user-blk .notes-blk { padding-top: 10px;}
+            .commision-report-user-blk .notes-blk p { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; line-height: 19px; color: #293A3E;}
+            .revenue-expense-blks { margin-top: 25px; padding-top: 25px; border-top: 2px solid #F2F6FE;}
+            .commision-report-user-blk .title img { width: 25px;}
+            .revenue-expense-blks .add-revenue-btn { background: #0BADC6; border-color: #0BADC6;}
+            .revenue-expense-blks .add-revenue-btn:hover { background: #0CC2DE; border-color: #0CC2DE;}
+            .revenue-expense-blks .add-expense-btn { background: #EF6CB4; border-color: #EF6CB4;}
+            .revenue-expense-blks .add-expense-btn:hover { background: #F28CC4; border-color: #F28CC4;}
+            table.dataTable.revenue-table thead th { border-bottom: 1.21882px solid #AEAEAE !important;}
+            .revenue-table thead th:first-child,
+            .revenue-table tbody td:first-child { padding-left: 0 !important; width: 40% !important}
+            table.dataTable.revenue-table thead .sorting span:after { display: none;}
+            .add-revenue-modal .ratewatch_modal_section { margin: 0px auto; max-width: 580px; width: 580px;}
+            .modal .form-group.has-search input.form-control { width: 100%; min-width: 100%;}
+            /*Assets & Liability Css*/
+            .assets-liabilities-sec { padding: 25px; border: none; margin-top: 0;}
+            .assets-blk .revenue-table thead th:first-child,
+            .assets-blk .revenue-table tbody td:first-child,
+            .assets-blk .revenue-table thead th:nth-child(2),
+            .assets-blk .revenue-table tbody td:nth-child(2) { padding-right: 30px !important; width: 45% !important;}
+            .assets-blk .revenue-table thead th:last-child,
+            .assets-blk .revenue-table tbody td:last-child { width: 10% !important;}
+            .assets-blk .revenue-table tbody td .form-group.has-search input { width: 95% !important; min-width: 95% !important;}
+            .assets-liabilities-sec table.dataTable.revenue-table tr:hover,
+            .assets-liabilities-sec table.dataTable.revenue-table tr:focus,
+            .assets-liabilities-sec table.dataTable.revenue-table tr:active, 
+            .assets-liabilities-sec table.dataTable.revenue-table tr.highlight { background: #fff !important;}
+            .liabilities-blk .revenue-table thead th:first-child,
+            .liabilities-blk .revenue-table tbody td:first-child,
+            .liabilities-blk .revenue-table thead th:nth-child(4),
+            .liabilities-blk .revenue-table tbody td:nth-child(4) { width: 20% !important;}
+            .liabilities-blk input[type='checkbox']:checked,
+            .select-documnet-accoridion input[type='checkbox']:checked { display: inline-block;}
+             /*Documents Tab Css*/
+            .documents-sec .upload_img_outer2 .dz-message { margin: 45px 15px !important;}
+            .documetns-action-sec { padding-bottom: 70px;}
+            .documetns-action-sec .permissions_tabs.reports .nav-item { width: calc(100% / 3) !important;}
+            .select-documnet-accoridion,
+            .documents-tab { padding: 20px; border: 1px solid #CACCE1; border-radius: 10px; min-height: 373px; height: 100%;}
+            .documetns-action-sec .tab-content, 
+            .documetns-action-sec .tab-pane { height: 100%;}
+            .select-documnet-accoridion .dt-checkboxes-cell { margin-right: 10px;}
+            .select-documnet-accoridion .dt-checkboxes-cell span,
+            .doc-info-list p { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; line-height: 19px; color: #000;}
+            .select-documnet-accoridion .filters-accordion h2 { margin-top: 0;}
+            .select-documnet-accoridion .filters-accordion .total-doc,
+            .select-documnet-accoridion .filters-accordion .document-list-content .created-dt { padding-right: 55px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 12px; line-height: 16px; color: #9FA3C0;}
+            .select-documnet-accoridion .filters-accordion .card-body { padding-bottom: 5px;}
+            .select-documnet-accoridion .filters-accordion .document-list-content { padding-bottom: 15px;}
+            .select-documnet-accoridion .filters-accordion .document-list-content:last-child { padding-bottom: 0;}
+            .select-documnet-accoridion .filters-accordion .document-list-content .created-dt { padding-right: 0;}
+            .select-documnet-accoridion .filters-accordion .document-list { padding-left: 30px;}
+            .doc-info-list { padding-top: 10px;}
+            .doc-info-list:first-child { padding-top: 0px;}
+            .doc-info-list p { margin-bottom: 0; color: #293A3E;}
+            .doc-btns { position: absolute; width: calc(100% - 30px); left: 15px; bottom: -60px;}
+            .doc-btns .border_btn:hover { background: #3246D3; color: #fff;}
+            .documents-sec .info-notes { position: absolute; bottom: -60px; left: 15px;}
+            .documents-sec .info-notes h5 { margin-bottom: 2px; font-family:'Poppins', sans-serif; font-weight: 400; font-size: 14px; line-height: 19px; color: #0C1347;}
+            .documents-sec .info-notes p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 14px; line-height: 19px; color: #60698B;}
+            #move-tab.tab-pane { height: auto;}
+            .no-any-doc { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);}
+            .no-any-doc img { width: 120px;}
+            /*Notes and Activities Tab Css*/
+            .activities-blk  { padding-right: 10px; height: 400px; overflow-x: hidden; overflow-y: auto;}
+            .activites-dt { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; line-height: 19px; color: #293A3E;}
+            .notes-list { margin-top: 15px; padding: 15px; background: #F9FBFF; border-radius: 10px;}
+            .notes-list .icon-style { margin-right: 15px; height: 35px; width: 35px; background: #9FA3C0; border-radius: 50%; display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center; flex-shrink: 0; -webkit-flex-shrink: 0;}
+            .notes-list .icon-style i  { font-size: 18px; color: #fff;}
+            .notes-list .loan-status { width: 100%;}
+            .notes-list .loan-status h5 { margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1.21882px solid #CACCE1; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 14px; line-height: 19px; color: #0C1347;}
+            .notes-list .loan-status h5 a { color: #3246D3;}
+            .notes-list .loan-status .notes-user-nm, 
+            .notes-list .loan-status .notes-create-dt { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 12px; line-height: 16px; color: #9FA3C0;}
+            .add-note-blk .box { position: relative;}
+            .add-note-blk .box input[type="file"] { display: none;}
+            .add-note-blk .box .inputfile-1 + label { margin-bottom: 0; cursor: pointer;}
+            .add-note-blk .form-group  { width: calc(100% - 170px); display: flex;}
+            .add-note-blk .form-group.has-search .form-control { padding-left: 10px !important; margin: 0 15px;}
+            /*Proposal Css*/
+            .proposal-action-btn .border_btn { padding: 6px 30px; width: 150px; margin: 0; display: inline-block; position: relative; transition-duration: .3s; -webkit-transition-duration: .3s;}
+            .proposal-action-btn .border_btn img { position: absolute; top: 12px; right: 10px;}
+            .proposal-action-btn .border_btn:hover { background: #3246D3; color: #fff;}
+            .proposal-action-btn .border_btn:hover img { filter: brightness(100); -webkit-filter: brightness(100);}
+            .proposal-action-btn { position: relative;}
+            .proposal-action-btn.show .action-list { display: block;}
+            .proposal-action-btn.show .border_btn img { transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+            .proposal-action-btn .action-list { width: 150px; border-radius: 10px;}
+            .create-proposal-blk a { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; line-height: 19px; color: #3246D3 !important; text-decoration: underline !important;}
+            .width-525 { width: 52px; min-width: 525px;}
+            .proposal-history-sec table.revenue-table.dataTable thead th span:after { display: block;}
+            .proposal-history-sec .revenue-table thead th:first-child, 
+            .proposal-history-sec .revenue-table tbody td:first-child, 
+            .proposal-history-sec .revenue-table thead th:nth-child(2), 
+            .proposal-history-sec .revenue-table tbody td:nth-child(2),
+            .expanded_menu .proposal-history-sec .revenue-table thead th:first-child, 
+            .expanded_menu .proposal-history-sec .revenue-table tbody td:first-child, 
+            .expanded_menu .proposal-history-sec .revenue-table thead th:nth-child(2), 
+            .expanded_menu .proposal-history-sec .revenue-table tbody td:nth-child(2) { width: 10% !important;}
+            .proposal-history-sec .revenue-table thead th:last-child, 
+            .proposal-history-sec .revenue-table tbody td:last-child { width: 33% !important;}
+            .offer-blk .blue_btn { padding: 8px; white-space: unset; display: block}
+            .offer-column-title { position: relative;}
+            .offer-column-title h6 { font-family:'Poppins', sans-serif; font-weight: 500; font-size: 12px; line-height: 16px; color: #60698B;}
+            .offer-column-title::before,
+            .offer-blk .total-escow::before,
+            .transaction-estimate-blk .total-estimate-blk:before  { content: ''; background: #A9A9A9; height: 1px; width: calc(100% - 30px); position: absolute; left: 15px; bottom: 0;}
+            .payment-digit { padding-top: 10px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; line-height: 19px; color: #000;}
+            .current-loan-amount { height: 45px; display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center;}
+            .current-loan-amount .payment-digit { padding-top: 35px; color: #60698B;}
+            .offer-blk .total-escow { margin-top: 50px; padding-top: 40px; position: relative;}
+            .offer-blk .total-escow::before { top: 0;}
+            .transaction-estimate-blk { padding-top: 50px;}
+            .transaction-estimate-blk .total-estimate-blk { position: relative; margin-top: 35px;}
+            .transaction-estimate-blk .total-estimate-blk:before { height: 2px; top: 0;}
+            .green-text { color: #27AE60 !important;}
+            .blue-text { color: #3F6FB8 !important;}
+            .payment-frequency { margin-top: 35px; padding: 15px; border: 1px solid #C4C4C4; border-radius: 10px;}
+            .saving-note { padding-top: 23px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #9FA3C0;}
+            .payment-frequency label { display: block;}
+            .payment-frequency .radio-style { margin: 10px 15px 0 0; display: inline-block;}
+            .payment-frequency .radio-style [type="radio"]:checked + label:before, 
+            .payment-frequency .radio-style [type="radio"]:not(:checked) + label:before { height: 22px; width: 22px;}
+            .payment-frequency .radio-style [type="radio"]:checked + label:after, 
+            .payment-frequency .radio-style [type="radio"]:not(:checked) + label:after { top: 5px; left: 5px;}
+            .current-debt-blk { padding-top: 35px;}
+            .current-debt-blk label { margin-bottom: 3px !important; font-size: 11px !important;}
+            .current-debt-blk .price-digit { font-family:'Poppins', sans-serif; font-weight: 400; font-size: 18px; line-height: 25px; color: #293A3E;}
+            .proposal-graph-blk { padding-top: 50px;}
+            .my-interest-smart-loan-blk h5 { margin-top: 15px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; line-height: 19px; color: #293A3E;}
+            .my-interest-smart-loan-blk .payment-digit { padding-top: 2px;}
+            .total-estimate-fund { padding: 25px; background: #F2F6FE; border: 2px solid #CACCE1; border-radius: 20px;}
+            .total-estimate-fund h4 { margin-bottom: 8px; font-family:'Poppins', sans-serif; font-weight: 700; font-size: 22px; line-height: 28px; color: #0C1347;}
+            .total-estimate-fund p { font-family:'Poppins', sans-serif; font-weight: 400; font-size: 18px; line-height: 25px; color: #60698B;}
+            .share-btn { padding-top: 25px; position: relative;}
+            .share-btn button { background: #3246D3; border: none; height: 50px; width: 50px; border-radius: 50%; display: inline-flex; display: -webkit-inline-flex; align-items: center; -webkit-align-items: center; justify-content: center; -webkit-justify-content: center; filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)); -webkit-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));}
+            .share-btn button img { width: 22px;}
+            button.click-img,
+            .share-btn.show button.default-img { display: none;}
+            .share-btn.show button.click-img { display: inline-flex;}
+            .share-btn .action-list { left: auto; right: -15px; bottom: 60px; top: auto; width: 115px;}
+            .share-btn.show .action-list { display: block;}
+            .share-btn .action-list:before { top: 100%; left: 67px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-bottom-color: #fff; border-width: 8px; transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+            .share-btn .action-list a span { font-family:'Poppins', sans-serif; font-weight: 600; color: #595959;}
+            /*Attom Properties Details Popup*/
+            .modal.attom-properties-details-modal .close { right: 35px; top: 35px; opacity: 1;}
+            .attom-properties-details-modal .modal-lg,
+            .attom-properties-details-modal .ratewatch_modal_section { max-width: 1170px; width: 1170px;}
+            .attom-properties-details-modal .ratewatch_modal_section { padding: 0px; border: none;}
+            .properties-details-height { padding: 0 15px 0; margin: 0 15px 15px 10px; height: 750px; overflow-x: hidden; overflow-y: auto;}
+            .properties-main-title { background: #3246D3; border-radius: 20px 20px 0 0;}
+            .properties-main-title .modal-title { padding: 25px; color: #fff;}
+            .properties-record-blk { margin: 10px 0; padding: 15px; background: #fff; box-shadow: 0 0 8px #ddd; border-radius: 10px;}
+            .properties-details-table table { margin-bottom: 15px; width: 100%;}
+            .properties-details-table table th { background: #DCEBD6; border: 1px solid #DBDBDB; padding: 10px 15px; text-align: center; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px; color: #293A3E;}
+            .properties-details-table table td { width: 50%; padding: 5px 10px; border: 1px solid #DBDBDB; text-align: left;}
+            .properties-details-table table td .blue_btn { padding: 5px 15px;}
+            .properties-details-table table td .blue_btn i { margin-right: 8px;}
+            .properties-details-table table td p { margin-bottom: 0;}
+            .modified-dt { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #293A3E;}
+            .historical-sales-blk .properties-details-table table th { background: #F0DEDC;}
+            .historical-sales-blk .properties-details-table table td:first-child { width: 35%;}
+            .historical-sales-blk .properties-details-table table td p { margin-bottom: 10px;}
+            .historical-sales-blk .properties-details-table table td p b { margin-right: 5px;}
+             /*Run Pricing Css*/
+             .run-pricing-left,
+             .run-pricing-right { min-height: calc(100vh - 100px);}
+             .run-pricing-left { width: 450px;}
+             .run-pricing-right { width: calc(100% - 470px);}
+             .run-pricing-left .select-loan-type { height: auto;}
+             .run-pricing-left .select-loan-type a.filter_text { 
+                font-family: 'Inter',sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.01em;
+                color: #3246D3 !important;
+                cursor: pointer;
+                margin: 0 !important;
+            }
+            .run-pricing-left .select-loan-type a.filter_text img { width: auto;}
+            .run-pricing-left button.btn.btn-light.dropdown-toggle { min-width: 100%;}
+            .jcf-number .jcf-btn-dec, 
+            .jcf-number .jcf-btn-inc { background: transparent !important; right: 10px !important; top: 0px;}
+            .jcf-number .jcf-btn-dec { bottom: 7px !important;}
+            .jcf-number .jcf-btn-inc::before { border: none !important; background: url('../images/bluechevron-up.png') no-repeat; height: 100% !important; width: 100% !important;}
+            .jcf-number .jcf-btn-dec::before { border: none !important; background: url('../images/bluechevron-down.png') no-repeat; height: 100% !important; width: 100% !important;}
+            .run-pricing-left .subscribe-btn { padding-top: 25px;}
+            .end-target::before { content: ''; background: #000; width: 6px; height: 2px; position: absolute; bottom: 15px; left: -2px;}
+            .state-text .payment-digit { color: #293A3E;}
+            .gray-text { color: #9FA3C0 !important;}
+            .no-run-pricing img { width: 100px; margin-bottom: 15px;}
+            .run-pricing-table td { vertical-align: top;}
+            .run-pricing-table td p,
+            .run-pricing-table td a { margin-bottom: 5px; display: table;}
+            .run-pricing-table td p { line-height: 17px;}
+            .run-pricing-table td a { color: #3246D3; position: relative;}
+            .run-pricing-table td a img { vertical-align: top;}
+            .run-pricing-table td a .tool_tip { margin-top: -70px; width: 220px; left: -50px;}
+            .run-pricing-table td:last-child a .tool_tip,
+            .run-pricing-table td:nth-child(7) a .tool_tip { right: 20px; left: auto;}
+            .run-pricing-table td span { display: table; color: #9FA3C0; font-size: 10px;}
+            .run-pricing-table table.dataTable.revenue-table thead .sorting span:after { display: block;}
+            .run-pricing-table .revenue-table thead th:first-child, 
+            .run-pricing-table .revenue-table tbody td:first-child { width: 3% !important;}
+            .run-pricing-table .revenue-table thead th:nth-child(2), 
+            .run-pricing-table .revenue-table tbody td:nth-child(2){ width: 27% !important;}
+            .run-pricing-table table.dataTable.revenue-table tr:hover,
+            .run-pricing-table table.dataTable.revenue-table tr:focus,
+            .run-pricing-table table.dataTable.revenue-table tr:active, 
+            .run-pricing-table table.dataTable.revenue-table tr.highlight { background: #fff !important;}
+            .run-pricing-table td.details-control,
+            .run-pricing-table tr.shown td.details-control { background: none; position: relative;}
+            .run-pricing-table td.details-control::before { content: ''; background: url('../images/chevron-down.png') no-repeat left top; height: 20px; width: 20px; position: absolute; top: 10px; left: 0;}
+            .run-pricing-table tr.shown td.details-control::before { content: ''; background: url('../images/greychevron_up.png') no-repeat left top; height: 20px; width: 20px; position: absolute; top: 10px; left: 0;}
+            .confirm-rate-modal .current-loan-amount { height: auto;}
+            .confirm-rate-modal .current-loan-amount .payment-digit { padding-top: 15px;}
+            .confirm-rate-modal .close { top: 0; right: 0;}
+            .accodion-run-pricing-table td a img { margin-left: 3px;}
+            .run-pricing-table td[colspan="8"] .accodion-run-pricing-table td  { padding-top: 0 !important;}
+            .run-pricing-table .revenue-table tr.shown td { border: none; padding-bottom: 0 !important;}
+            .run-pricing-table td[colspan="8"] { border: none; padding: 0 !important; padding-left: -5px !important;}
+            /*Sens SMS and Email Popup CSS*/
+            .send-email-sms-modal h4.modal-title { position: absolute; left: 0; top: -45px;}
+            .send-email-sms-modal .ratewatch_modal_section { max-width: 900px; width: 900px;}
+            .send-email-sms-modal .modal-dialog { max-width: 900px;}
+            .send-email-sms-modal .send-msg-sec { margin-top: 30px; background: transparent; box-shadow: none; padding: 0; border-radius: 0;}
+            .send-email-sms-modal .send-btn .blue_btn { bottom: 0; right: 0;}
+            .send-email-sms-modal .to-tool_tip .tool_tip { width: 350px; left: -80px; margin-top: -20px;}
+            .send-email-sms-modal .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Blocks"],
+            .send-email-sms-modal .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Fonts"]  { width: 70px !important;}
+            .send-email-sms-modal .form-group.has-search.m_t_20 { width: 100%;}
+            /*Loan Submission CSS*/
+            .loan-sub-popup-btns .blue_btn { padding: 5px 15px;}
+            .loan-sub-popup-btns .blue_btn img { margin-right: 10px; filter: brightness(100); -webkit-filter: brightness(100); width: 18px;}
+            .loan-sub-popup-btns .blue_btn.title-quote-btn { background: #2D9CDB; border-color: #2D9CDB;}
+            .loan-sub-popup-btns .blue_btn.order-title-btn { background: #F2C94C; border-color: #F2C94C;}
+            .loan-sub-popup-btns .blue_btn.title-quote-btn:hover { background: #56b7f0; border-color: #56b7f0;}
+            .loan-sub-popup-btns .blue_btn.order-title-btn:hover { background: #d8b755; border-color: #d8b755;}
+            .condition-list-sec { padding-right: 15px; height: 450px; overflow-y: auto; overflow-x: hidden; border-bottom: 2px solid #F2F6FE;}
+            .conditions-list-blk { padding: 15px 0; border-top: 2px solid #F2F6FE;}
+            .conditions-list-blk .condition-nm { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; line-height: 19px; color: #0C1347;}
+            .conditions-list-blk .condition-type { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #9FA3C0;}
+            .pdf-drag-file ul { padding-left: 0; margin-bottom: 0; list-style-type: none;}
+            .pdf-drag-file ul li { padding-right: 20px; display: inline-block; font-size: 12px;}
+            .pdf-drag-file ul li a { font-size: 22px; color: #000;}
+            .pdf-drag-file ul li a:hover { color: #3246D3;}
+            .import-condition-pdf-file .dropzone .dz-message { margin: 15px !important;}
+            .gray-color { color: #9FA3C0 !important;}
+            .condition-info-list img { margin-right: 15px; width: 24px;}
+            .condition-info-list .conditions-list-blk { border: none; padding: 0;}
+            .title-quote-modal .ratewatch_modal_section { padding: 25px;}
+            .title-quote-modal .historical-sales-blk { box-shadow: none; background: transparent;}
+            .title-quote-modal .ratewatch_modal_section .close { position: relative; top: 0; right: 0;}
+            .title-quote-modal .properties-details-height,
+            .title-quote-modal .properties-record-blk { margin: 0; padding: 0; box-shadow: none; border-radius: 0;}
+            .title-quote-modal .properties-details-height { padding-right: 15px; height: 670px;}
+            .title-quote-modal .properties-details-table table td:first-child { width: 25%;}
+            .title-quote-modal .historical-sales-blk .properties-details-table td:first-child { width: 10%;}
+            .title-quote-modal .historical-sales-blk .properties-details-table table td p { margin-bottom: 5px;}
+            .loan-sub-order-details h5,
+            .loan-sub-order-details p { margin-bottom: 0; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; line-height: 19px; color: #9FA3C0;}
+            .loan-sub-order-details p { color: #293A3E;}
+
+/*Single Purchase Contact*/
+    /* .purchase-tabs-sec > .nav-tabs .nav-item { width: calc(100% / 8);} */
+    /*Loan Pre Approval Css*/
+    .house-sale-blk { padding: 20px 0; margin: 20px 0; border-top: 2px solid #F2F6FE; border-bottom: 2px solid #F2F6FE;}
+    .approval-template-blk { padding: 0px 0 20px; margin: 0 0 20px; border-bottom: 2px solid #F2F6FE;}
+    .submit-processign-btn .blue_btn { background: #32D3AC; border-color: #32D3AC; min-width: 250px;}
+    .submit-processign-btn .blue_btn:hover { background: #78E1CC; border-color: #78E1CC;}
+    .submit-processign-btn .blue_btn:active,
+    .submit-processign-btn .blue_btn:focus { background: #5BBF52; border-color: #5BBF52;}
+    .lock-parameters-btns { margin-top: -20px;}
+    .lock-parameters-btns .blue_btn { margin-bottom: 12px; min-width: 230px;}
+    .lock-parameters-btns .dark-gray-btn { background: #60698B; border-color: #60698B;}
+    .lock-parameters-btns .dark-gray-btn:hover { background: #8B8FB2; border-color: #8B8FB2;}
+    .lock-parameters-btns .dark-gray-btn:active, 
+    .lock-parameters-btns .dark-gray-btn:focus { background: #293A3E; border-color: #293A3E;}
+    .send-email-sms-modal#email-realtor-modal h4.modal-title { position: relative; top: auto; left: auto;}
+    .send-email-sms-modal#email-realtor-modal .close,
+    .generate-pre-approval-modal .close { top: 0; right: 0;}
+    .generate-pre-approval-modal .img_before .calendra, 
+    .generate-pre-approval-modal .img_before .calendra { height: 18px !important;}
+    /*Loan Processign Css*/
+    .loan-processign-sec .integation_dropdown button.btn.btn-light.dropdown-toggle { min-width: 100% !important;}
+    .blue_btn.font-12 { font-size: 12px; line-height: 19px; padding: 7px;}
+    .pricing-info .tool_tip { margin-top: -100px; width: 250px; left: -50px;}
+    .est-montly-pay-blk { border: 1px solid #9FA3C0; border-radius: 6px; padding: 70px 140px;}
+    .est-montly-pay-blk h6 { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 14px; line-height: 19px; color: #9FA3C0;}
+    .est-montly-pay-blk p { font-family:'Poppins', sans-serif; font-weight: 400; font-size: 22px; line-height: 28px; color: #60698B;}
+    .small-grey-text { margin-bottom: 0; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 15px; line-height: 21px; color: #293A3E;}
+    .date_selection.light_blue .delete-dt { text-align: right;}
+    .date_selection.light_blue .delete-dt img { margin-right: -12px !important; height: 16px;}
+    .ins-info textarea.form-control { height: 110px;}
+    #pricing-request-modal .upload_img_outer2 .dz-message { margin: 35px 0 !important;}
+    /*Compliance Css*/
+    .compliance-title p { display: block; font-size: 12px; line-height: 17px; color: #60698B; font-weight: 400;}
+    .compliance-sec .permissions_tabs.reports .nav-item { width: calc(100% / 2) !important;}
+    .compliance-sec .permissions_tabs.reports { width: 40%;}
+    .compliance-sec .border_btn,
+    .compliance-sec .blue_btn  { width: 175px;}
+    .compliance-sec .blue_btn.submit-coc-btn { background: #0BADC6; border-color: #0BADC6;}
+    .compliance-sec .blue_btn.submit-coc-btn:hover { background: #0CC2DE; border-color: #0CC2DE;}
+    .compliance-table thead th:first-child,
+    .compliance-table tbody td:first-child { width: 12% !important;}
+    .compliance-table thead th:nth-child(4),
+    .compliance-table tbody td:nth-child(4) { width: 40% !important;}
+    .compliance-table thead th:nth-child(6),
+    .compliance-table tbody td:nth-child(6) { width: 15% !important;}
+    .compliance-table thead th:last-child,
+    .compliance-table tbody td:last-child { width: 12% !important;}
+    .compliance-list-blk { margin-right: 15px; padding: 15px; border: 1px solid #CACCE1; border-radius: 6px; display: block;}
+    .compliance-list-blk .title { font-size: 16px !important; line-height: 22px;}
+    .fee-updated-status { margin-left: 15px; padding: 5px 13px; background: #EEEEF4; border-radius: 20px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 10px; line-height: 12px; color: #8B8FB2;}
+    .compliance-info-list h5,
+    .compliance-info-list p { margin-bottom: 0; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 11px; line-height: 16px; color: #9FA3C0;}
+    .compliance-info-list p { color: #293A3E;}
+    .compliance-list-blk .pdf-list ul { padding-left: 0; margin-bottom: 0; list-style-type: none; height: 180px; overflow-x: hidden; overflow-y: auto;}
+    .compliance-list-blk .pdf-list li img { margin-right: 8px; display: inline-block;}
+    .compliance-list-blk .pdf-list li { padding-bottom: 10px;}
+    .compliance-list-blk .pdf-list li a  { font-family:'Poppins', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #60698B;}
+    .compliance-list-blk .pdf-list li a:hover { color: #3246D3;}
+    .compliance-list-slider .slick-list::before { z-index: 1; content: ''; height: 100%; width: 120px; background: linear-gradient(270deg, #FFFFFF 20%, #FFFFFF 42.65%, rgba(255, 255, 255, 0) 100%)!important; position: absolute; top: 0; right: -25px;}
+    .compliance-list-slider .slick-dots { bottom: -40px;}
+    .compliance-list-slider .slick-dots li button::before { font-size: 30px; line-height: 25px; color: #F2F6FE; opacity: 1;}
+    .compliance-list-slider .slick-dots li.slick-active button::before { color: #3246D3;}
+    /*Business Partner Tab Css*/
+    .assets-blk .revenue-table#business_partners thead th:first-child,
+    .assets-blk .revenue-table#business_partners tbody td:first-child,
+    .assets-blk .revenue-table#business_partners thead th:nth-child(2),
+    .assets-blk .revenue-table#business_partners tbody td:nth-child(2) { width: 28% !important;}
+    .assets-blk .revenue-table#business_partners thead th:last-child,
+    .assets-blk .revenue-table#business_partners tbody td:last-child { width: 20% !important;}
+    .business_partner_dropdown .jcf-select {
+        min-width: 180px !important;
+    }
+    .business_partner_dropdown .jcf-focus, .business_partner_dropdown .jcf-focus * {
+        border-color: #00BB00 !important;
+    }
+
+/*Responsive Css*/
+@media ( min-width: 1400px) and ( max-width: 1699px) { 
+    .pipeline-leads-main-sec .col-xl-2, 
+    .pipeline-leads-main-sec .col-xl-7,
+    .pipeline-leads-main-sec .col-xl-3 { padding: 0 7px !important;}
+    .expanded_menu .additional-filter-btns ul li { padding-right: 3px;}
+    .additional-filter-btns ul li { padding-right: 9px;}
+    .additional-filter-btns ul a { height: 32px; width: 32px;}
+    /*Refinance Tab Css*/
+    .refinance-tabs-sec > .nav-tabs .nav-item { padding: 3px; width: calc(100% / 7);}
+    .expanded_menu .refinance-tabs-sec > .nav-tabs .nav-item { padding: 3px; width: calc(100% / 5);}
+    /* a.create-loan-btn { bottom: -150px;} */
+    /*Mortgage Css*/
+    .refinance-tabs-accordion .filters-accordion h2 { min-width: 450px;}
+    .balance-list { width: calc(100% - 450px);}
+    .expanded_menu .refinance-tabs-accordion .filters-accordion h2 { min-width: 400px;}
+    .expanded_menu .balance-list { width: calc(100% - 400px);}
+    .refinance-tabs-accordion .filters-accordion .card-body .main-balance-list > .col-6 .balance-list .balane-info-label { min-width: 150px;}
+    .main-balance-list { width: 80%;}
+    .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list { width: 20%; padding-left: 0px;}
+    .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list::before { left: -35px;}
+    /*Edit Mortgage*/
+    .edit-mortgage-nm { width: 270px;}
+    .edit-mortgage-tab-sec .balance-list { width: calc(100% - 270px);}
+    .estimate-btn { padding-left: 15px !important; font-size: 14px !important;}
+    .red_btn { font-size: 14px !important;}
+    .expanded_menu .estimate-btn { font-size: 11px !important;}
+    .expanded_menu .red_btn { font-size: 11px !important;}
+    .expanded_menu .send-msg-sec .select-template-blk { width: 480px;}
+    .expanded_menu .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Blocks"],
+    .expanded_menu .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Fonts"]  { width: 100px !important;}
+    /*Finance Css*/
+    .expanded_menu .investor-lock-info .upload_img_outer2 .dz-message { margin: 80px 15px !important;}
+    .commision-report-user-blk ul li { margin: 0 10px 15px 0; width: calc(100% / 3 - 12px);}
+    .commision-report-user-blk .notes-blk { padding-top: 0;}
+    .expanded_menu .commision-report-user-blk ul li { width: calc(100% / 2 - 20px);}
+    .expanded_menu .revenue-table thead th:first-child, 
+    .expanded_menu .revenue-table tbody td:first-child { width: 35% !important;}
+    /*Documents Tab Css*/
+    .documents-sec .info-notes p { font-size: 13px;}
+    .doc-btns .blue_btn,
+    .doc-btns .border_btn,
+    .doc-btns .red_btn,
+    .expanded_menu  .doc-btns .blue_btn,
+    .expanded_menu  .doc-btns .border_btn,
+    .expanded_menu  .doc-btns .red_btn { font-size: 13px !important;}
+    /*Proposal Css*/
+    .expanded_menu .offer-blk .blue_btn { font-size: 12px;}
+    .expanded_menu .current-debt-blk label { font-size: 10px !important;}
+    /*Run Pricing Css*/
+    .run-pricing-left { width: 450px;}
+    .run-pricing-right { width: calc(100% - 450px);}
+    .expanded_menu .run-pricing-left { width: 400px;}
+    .expanded_menu .run-pricing-right { width: calc(100% - 400px);}
+    .run-pricing-table .revenue-table thead th:nth-child(2), 
+    .run-pricing-table .revenue-table tbody td:nth-child(2) { width: 22% !important;}
+    .expanded_menu .run-pricing-table .revenue-table thead th:first-child, 
+    .expanded_menu .run-pricing-table .revenue-table tbody td:first-child { width: 3% !important;}
+    /*Loan Processign Css*/
+    .est-montly-pay-blk { border: 1px solid #9FA3C0; border-radius: 6px; padding: 70px 85px;}
+    /*Compliance Css*/
+    .expanded_menu .compliance-table thead th:first-child,
+    .expanded_menu .compliance-table tbody td:first-child { width: 28% !important;}
+    .expanded_menu .compliance-table thead th:last-child,
+    .expanded_menu .compliance-table tbody td:last-child { width: 16% !important;}
+}     
+@media ( min-width: 1400px) and ( max-width: 1599px) { 
+    .pipeline-leads-table .all-select-goals  { top: 5px;}
+    /* a.create-loan-btn { bottom: -180px;} */
+    /*Mortgage Css*/
+    .refinance-tabs-accordion .filters-accordion h2 { min-width: 420px;}
+    .balance-list { width: calc(100% - 420px);}
+    .expanded_menu .refinance-tabs-accordion .filters-accordion h2 { min-width: 350px;}
+    .expanded_menu .balance-list { width: calc(100% - 350px);}
+    /*Edit Mortgage*/
+    .edit-mortgage-nm { width: 230px;}
+    .edit-mortgage-tab-sec .balance-list { width: calc(100% - 230px);}
+    .expanded_menu .send-msg-sec .select-template-blk { width: 420px;}
+    .expanded_menu .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Blocks"],
+    .expanded_menu .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Fonts"]  { width: 80px !important;}
+    /*Documents Tab Css*/
+    .expanded_menu  .doc-btns .blue_btn,
+    .expanded_menu  .doc-btns .border_btn,
+    .expanded_menu  .doc-btns .red_btn { font-size: 12px !important;}
+    /*Proposal Css*/
+    .expanded_menu .offer-blk .blue_btn { font-size: 10px;}
+    .expanded_menu .current-debt-blk label { font-size: 9px !important;}
+    /*Loan Submission CSS*/
+    .expanded_menu .loan-sub-popup-btns .blue_btn { font-size: 12px; padding: 5px 10px;}
+}
+@media ( min-width: 1400px) and ( max-width: 1499px) { 
+    .pipeline-leads-table .all-select-goals  { top: 5px;}
+    .pipeline-leads-main-sec .col-xl-2, 
+    .pipeline-leads-main-sec .col-xl-7,
+    .pipeline-leads-main-sec .col-xl-3 { padding: 0 7px !important;}
+    .additional-filter-btns ul li { padding-right: 9px;}
+    .additional-filter-btns ul a { height: 30px; width: 30px;}
+    /*Refinance Tab Css*/
+    .refinance-tabs-sec > .nav-tabs .nav-item { padding: 3px; width: calc(100% / 6);}
+    .expanded_menu .refinance-tabs-sec > .nav-tabs .nav-item { padding: 3px; width: calc(100% / 5);}
+    /* a.create-loan-btn { bottom: -200px;} */
+    /*Mortgage Css*/
+    .refinance-tabs-accordion .filters-accordion h2 { min-width: 380px;}
+    .balance-list { width: calc(100% - 380px);}
+    .expanded_menu .refinance-tabs-accordion .filters-accordion h2 { min-width: 310px;}
+    .expanded_menu .balance-list { width: calc(100% - 310px);}
+    .expanded_menu .atom-details .justify-space-between { display: block;}
+    .expanded_menu .atom-details .blue_btn { margin-top: 10px;}
+    .expanded_menu .refinance-tabs-accordion .filters-accordion .card-body .balance-list .balane-info-label, 
+    .expanded_menu .refinance-tabs-accordion .filters-accordion .card-body .balance-list .balane-info-text { display: block;}
+    .expanded_menu .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list .balane-info-label,
+    .expanded_menu .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list .balane-info-text { display: inline-block;}
+    /*Edit Mortgage*/
+    .edit-mortgage-tab-sec .nav-tabs { width: 55%;}
+    .edit-mortgage-tab-sec .tab-content { width: 45%;}
+    .edit-mortgage-nm { width: 200px;}
+    .edit-mortgage-tab-sec .balance-list { width: calc(100% - 200px);}
+    .estimate-btn { padding-left: 7px !important; font-size: 12px !important;}
+    .red_btn { font-size: 12px !important;}
+    .expanded_menu .estimate-btn { font-size: 10px !important;}
+    .expanded_menu .red_btn { font-size: 10px !important;}
+    /*Messaging Css*/
+    .send-msg-sec .select-template-blk { width: 440px;}
+    .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Blocks"],
+    .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Fonts"]  { width: 100px !important;}
+    .expanded_menu .send-msg-sec .select-template-blk { width: 370px;}
+    .expanded_menu .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Blocks"],
+    .expanded_menu .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Fonts"]  { width: 42px !important;}
+    /*Finance Css*/
+    .investor-lock-info .upload_img_outer2 .dz-message { margin: 80px 15px !important;}
+    .expanded_menu .investor-lock-info .upload_img_outer2 .dz-message { margin: 72px 15px !important;}
+    .loan-breakdown-blk ul li p, .commision-report-user-blk ul li p, .revenue-expense-blks .total-amt { font-size: 18px;}
+    .commision-report-user-blk h5 { font-size: 13px;}
+    .commision-report-user-blk ul li p span { font-size: 10px;}
+    .commision-report-user-blk ul li { margin: 0 10px 15px 0; width: calc(100% / 3 - 12px);}
+    .commision-report-user-blk .notes-blk { padding-top: 0;}
+    .expanded_menu .commision-report-user-blk ul li { width: calc(100% / 2 - 20px);}
+    .expanded_menu .revenue-table thead th:first-child, 
+    .expanded_menu .revenue-table tbody td:first-child { width: 35% !important;}
+    /*Documents Tab Css*/
+    .expanded_menu  .doc-btns .blue_btn,
+    .expanded_menu  .doc-btns .border_btn,
+    .expanded_menu  .doc-btns .red_btn { font-size: 10px !important;}
+    /*Proposal Css*/
+    .offer-blk .blue_btn { font-size: 12px;}
+    .current-debt-blk label { font-size: 10px !important;}
+    .expanded_menu .proposals-sec .col-xl-6 { margin-bottom: 25px; max-width: 100%; flex: 0 0 100%;}
+    .expanded_menu .transaction-estimate-blk,
+    .expanded_menu .current-debt-blk,
+    .expanded_menu .proposal-graph-blk { padding-top: 15px;}
+    /*Run Pricing Css*/
+    .run-pricing-left { width: 450px;}
+    .run-pricing-right { width: calc(100% - 450px);}
+    .expanded_menu .run-pricing-left { width: 380px;}
+    .expanded_menu .run-pricing-right { width: calc(100% - 380px);}
+    .run-pricing-table .revenue-table thead th:nth-child(2), 
+    .run-pricing-table .revenue-table tbody td:nth-child(2) { width: 22% !important;}
+    .expanded_menu .run-pricing-table .revenue-table thead th:first-child, 
+    .expanded_menu .run-pricing-table .revenue-table tbody td:first-child { width: 3% !important;}
+    /*Loan Submission CSS*/
+    .expanded_menu .loan-sub-popup-btns .blue_btn { font-size: 10px; padding: 5px 10px;}
+    .expanded_menu .conditions-list-blk { display: block !important;}
+    .expanded_menu .conditions-list-blk .align-center { margin-top: 10px; justify-content: space-between;}
+    /*Single Purchase Contact*/
+        /*Loan Processign Css*/
+        .blue_btn.font-12  {font-size: 10px;}
+        .est-montly-pay-blk { padding: 70px 60px;}
+        /*Compliance Css*/
+        .expanded_menu .compliance-table thead th:first-child,
+        .expanded_menu .compliance-table tbody td:first-child { width: 28% !important;}
+        .expanded_menu .compliance-table thead th:last-child,
+        .expanded_menu .compliance-table tbody td:last-child { width: 16% !important;}
+}
+@media ( min-width: 1366px) and ( max-width: 1399px) { 
+    .pipeline-leads-table .all-select-goals  { top: 9px;}
+    .pipeline-leads-main-sec .col-xl-2, 
+    .pipeline-leads-main-sec .col-xl-7,
+    .pipeline-leads-main-sec .col-xl-3 { padding: 0 7px !important;}
+    .expanded_menu .additional-filter-btns ul li { padding-right: 1px !important;}
+    .additional-filter-btns ul li { padding-right: 7px !important;}
+    .additional-filter-btns ul a { height: 30px; width: 30px;}
+    /*Refinance Tab Css*/
+    .refinance-tabs-sec > .nav-tabs .nav-item { padding: 3px; width: calc(100% / 5);}
+    .select-loan-type-blks { margin: 80px auto;}
+    /* a.create-loan-btn { bottom: -130px;} */
+    /*Mortgage Css*/
+    .refinance-tabs-accordion .filters-accordion h2 { min-width: 355px;}
+    .balance-list { width: calc(100% - 355px);}
+    .expanded_menu .refinance-tabs-accordion .filters-accordion h2 { min-width: 280px;}
+    .expanded_menu .balance-list { width: calc(100% - 280px);}
+    .refinance-tabs-accordion .filters-accordion .card-body .main-balance-list > .col-6 .balance-list .balane-info-label { min-width: 150px;}
+    .main-balance-list { width: 80%;}
+    .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list { width: 20%; padding-left: 0px;}
+    .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list::before { left: -30px;}
+    .expanded_menu .atom-details .justify-space-between { display: block;}
+    .expanded_menu .atom-details .blue_btn { margin-top: 10px;}
+    .expanded_menu .refinance-tabs-accordion .filters-accordion .card-body .balance-list .balane-info-label, 
+    .expanded_menu .refinance-tabs-accordion .filters-accordion .card-body .balance-list .balane-info-text { display: block;}
+    .expanded_menu .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list .balane-info-label,
+    .expanded_menu .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list .balane-info-text { display: inline-block;}
+    /*Edit Mortgage*/
+    .edit-mortgage-tab-sec .nav-tabs { width: 55%;}
+    .edit-mortgage-tab-sec .tab-content { width: 45%;}
+    .edit-mortgage-nm { width: 200px;}
+    .edit-mortgage-tab-sec .balance-list { width: calc(100% - 200px);}
+    .estimate-btn { padding-left: 5px !important; font-size: 11px !important;}
+    .red_btn { font-size: 11px !important;}
+    .expanded_menu .estimate-btn { font-size: 9px !important;}
+    .expanded_menu .red_btn { font-size: 9px !important;}
+    /*Messaging Css*/
+    .new-msg-conversation-blk .message_sender, .new-msg-conversation-blk .message_receiver { width: 650px;}
+    .send-msg-sec .select-template-blk { width: 410px;}
+    .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Blocks"],
+    .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Fonts"]  { width: 80px !important;}
+    .expanded_menu .send-msg-sec .select-template-blk { width: 330px;}
+    /*Finance Css*/
+    .investor-lock-info .upload_img_outer2 .dz-message { margin: 80px 15px !important;}
+    .expanded_menu .investor-lock-info { display: block;}
+    .expanded_menu .investor-lock-info .col-xl-4,
+    .expanded_menu .investor-lock-info .col-xl-8 { width: 100%; max-width: 100%;}
+    .expanded_menu  .lock-pdf-blk { margin-top: 15px;}
+    .loan-breakdown-blk ul li p, .commision-report-user-blk ul li p, .revenue-expense-blks .total-amt { font-size: 18px;}
+    .commision-report-user-blk h5 { font-size: 12px;}
+    .commision-report-user-blk ul li p span { font-size: 9px;}
+    .commision-report-user-blk ul li { margin: 0 10px 15px 0; width: calc(100% / 3 - 12px);}
+    .commision-report-user-blk .notes-blk { padding-top: 0;}
+    .expanded_menu .commision-report-user-blk ul li { width: calc(100% / 2 - 20px);}
+    /*Attom Properties Details Popup*/
+    .properties-details-height { height: 620px;}
+    /*Run Pricing Css*/
+    .run-pricing-left { width: 400px;}
+    .run-pricing-right { width: calc(100% - 400px);}
+    .expanded_menu .run-pricing-left { width: 380px;}
+    .expanded_menu .run-pricing-right { width: calc(100% - 380px);}
+    .run-pricing-table .revenue-table thead th:nth-child(2), 
+    .run-pricing-table .revenue-table tbody td:nth-child(2) { width: 22% !important;}
+    /*Loan Submission CSS*/
+    .loan-sub-popup-btns .blue_btn { font-size: 12px;}
+    .expanded_menu .loan-submission-sec .col-xl-4 .row { display: block;}
+    .expanded_menu .loan-submission-sec .col-xl-4 .col-6 { margin-bottom: 10px; max-width: 100%; width: 100%;}
+    .expanded_menu .conditions-list-blk { display: block !important;}
+    .expanded_menu .conditions-list-blk .align-center { margin-top: 10px; justify-content: space-between;}
+    .title-quote-modal .properties-details-height { height: 550px;}
+/*Single Purchase Contact*/
+    /*Loan Processign Css*/
+    .blue_btn.font-12  {font-size: 10px;}
+    .est-montly-pay-blk { padding: 70px 60px;}
+    /*Compliance Css*/
+    .expanded_menu .compliance-table thead th:last-child,
+    .expanded_menu .compliance-table tbody td:last-child { width: 16% !important;}
+}    
+@media ( min-width: 1200px) and ( max-width: 1365px) { 
+    .pipeline-leads-table .all-select-goals  { top: 5px;}
+    .expanded_menu .additional-filter-btns ul li a { height: 25px; width: 25px;}
+    .expanded_menu .additional-filter-btns ul li a img { width: 15px;}
+    .additional-filter-btns ul li { padding-right: 0px;}
+    .additional-filter-btns ul a { height: 30px; width: 30px;}
+    /* Bulk Adding Contact Modal Css */
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 { height: calc(100vh - 140px);}
+    /*Refinance Tab Css*/
+    .refinance-tabs-sec > .nav-tabs .nav-item { padding: 3px; width: calc(100% / 5);}
+    /*Mortgage Css*/
+    .refinance-tabs-accordion .filters-accordion h2 { min-width: 275px; flex-wrap: wrap; -webkit-flex-wrap: wrap;}
+    .balance-list { width: calc(100% - 275px);}
+    .expanded_menu .refinance-tabs-accordion .filters-accordion h2 { min-width: 180px;}
+    .expanded_menu .balance-list { width: calc(100% - 180px);}
+    .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list { padding-left: 15px;}
+    .atom-details .justify-space-between { display: block;}
+    .atom-details .blue_btn { margin-top: 10px;}
+    /*Refiannce Loan Appliaction Css*/
+    .loan-applications-blk .title { min-width: auto; font-size: 15px;}
+    .content_wrapper .loan-applications-blk .integation_dropdown button.btn.btn-light.dropdown-toggle { width: 120px !important;}
+    /*Edit Mortgage*/
+    .edit-mortgage-nm { width: 200px; flex-wrap: wrap; -webkit-flex-wrap: wrap;}
+    .edit-mortgage-tab-sec .balance-list { width: calc(100% - 200px);}
+    .estimate-btn { padding-left: 10px !important; font-size: 11px !important;}
+    .red_btn { font-size: 11px !important;}
+    .expanded_menu .estimate-btn { padding-left: 8px !important; font-size: 9px !important;}
+    .expanded_menu .red_btn { font-size: 9px !important;}
+    /*Messaging Css*/
+    .new-msg-conversation-blk .message_sender, .new-msg-conversation-blk .message_receiver { width: 600px;}
+    .send-msg-sec .select-template-blk { width: 370px;}
+    .expanded_menu .send-msg-sec .select-template-blk { width: 300px;}
+    /*Finance Css*/
+    .investor-lock-info .upload_img_outer2 .dz-message { margin: 72px  15px !important;}
+    .investor-lock-info { display: block;}
+    .investor-lock-info .col-xl-4,
+    .investor-lock-info .col-xl-8 { width: 100%; max-width: 100%;}
+    .lock-pdf-blk { margin-top: 15px;}
+    .loan-breakdown-blk ul li p, .commision-report-user-blk ul li p, .revenue-expense-blks .total-amt { font-size: 15px;}
+    .commision-report-user-blk h5 { font-size: 12px;}
+    .commision-report-user-blk ul li p span { font-size: 9px;}
+    .expanded_menu .commision-report-user-blk ul li { width: calc(100% / 2 - 20px);}
+    .expanded_menu .revenue-table thead th:first-child, 
+    .expanded_menu .revenue-table tbody td:first-child { width: 28% !important;}
+    /*Attom Properties Details Popup*/
+    .properties-details-height { height: 580px;}
+    /*Run Pricing Css*/
+    .run-pricing-left { width: 350px;}
+    .run-pricing-right { width: calc(100% - 350px);}
+    .expanded_menu .run-pricing-left { width: 300px;}
+    .expanded_menu .run-pricing-right { width: calc(100% - 300px);}
+    .run-pricing-table .revenue-table thead th:nth-child(2), 
+    .run-pricing-table .revenue-table tbody td:nth-child(2) { width: 20% !important;}
+    .expanded_menu .run-pricing-table .revenue-table thead th:first-child, 
+    .expanded_menu .run-pricing-table .revenue-table tbody td:first-child { width: 3% !important;}
+    /*Loan Submission CSS*/
+    .loan-submission-sec .col-xl-4 .row { display: block;}
+    .loan-submission-sec .col-xl-4 .col-6 { margin-bottom: 10px; max-width: 100%; width: 100%;}
+    .expanded_menu .conditions-list-blk { display: block !important;}
+    .expanded_menu .conditions-list-blk .align-center { margin-top: 10px; justify-content: space-between;}
+    .title-quote-modal .properties-details-height { height: 550px;}
+/*Single Purchase Contact*/
+    /*Loan Pre Approval Css*/
+    .loan-preapproval-sec .col-xl-6:nth-child(2n+2) { margin-top: 20px;}
+    /*Loan Processign Css*/
+    .blue_btn.font-12  {font-size: 8px;}
+    .est-montly-pay-blk { padding: 70px 45px;}
+    /*Compliance Css*/
+    .expanded_menu .compliance-sec .permissions_tabs.reports { width: 50%;}
+}
+@media ( min-width: 1200px) and ( max-width: 1399px) { 
+    .additional-filter-btns ul li { padding-right: 0px;}
+    .additional-filter-btns ul a { height: 30px; width: 30px;}
+    /* Bulk Adding Contact Modal Css */
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height { height: 700px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline { align-items: center; -webkit-align-items: center;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .bg_skyblue.p35.border_ltb_20p,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .display_block { height: 698px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 { height: 620px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 .close { margin-right: 0;}
+    .import-modal .bg_white { height: 600px !important;}
+    .import-modal .width_50p,
+    .import-modal .width_50p img { width: 50%;}
+    /*Refinance Tab Css*/
+    .expanded_menu .refinance-tabs-sec > .nav-tabs .nav-item { padding: 3px; width: calc(100% / 4);}
+    .select-loan-type-blks { margin: 80px auto;}
+    /* a.create-loan-btn { bottom: -100px;} */
+    /*Documents Tab Css*/
+    .expanded_menu .document-double-sec { display: block;}
+    .expanded_menu .document-double-sec .col-lg-7, 
+    .expanded_menu .document-double-sec .col-lg-5,
+    .expanded_menu .document-double-sec .col-xl-6, 
+    .expanded_menu .document-double-sec .col-xl-6 { width: 100%; max-width: 100%;}
+    .expanded_menu .select-documnet-accoridion, 
+    .expanded_menu .documents-tab { min-height: auto; height: auto;}
+    .expanded_menu .documents-tab { margin: 25px 0;}
+    .expanded_menu .documetns-action-sec { padding-bottom: 0;}
+    .expanded_menu .doc-btns,
+    .expanded_menu .documents-sec .info-notes { margin-top: 20px; position: relative; width: 100%; bottom: auto; left: auto;}
+    .documents-sec .info-notes p { font-size: 12px;}
+    .doc-btns .blue_btn,
+    .doc-btns .border_btn,
+    .doc-btns .red_btn { padding: 6px 5px; font-size: 12px !important;}
+    .expanded_menu  .doc-btns .blue_btn,
+    .expanded_menu  .doc-btns .border_btn,
+    .expanded_menu  .doc-btns .red_btn { font-size: 14px !important;}
+    /*Proposal Css*/
+    .proposals-sec .title { font-size: 15px;}
+    .run-pricing-btn .col-6 { max-width: 100%; flex: 0 0 100%;}
+    .payment-digit,
+    .proposals-sec .form-group.has-search input { font-size: 12px !important;}
+    .saving-note { padding-top: 14px; font-size: 10px;}
+    .expanded_menu .proposals-sec .col-xl-6 { margin-bottom: 25px; max-width: 100%; flex: 0 0 100%;}
+    .expanded_menu .transaction-estimate-blk,
+    .expanded_menu .current-debt-blk,
+    .expanded_menu .proposal-graph-blk { padding-top: 15px;}
+}
+@media ( min-width: 992px) and ( max-width: 1199px) {
+    .p_l_15 { padding-left: 15px !important;}
+    #disclosure-out .pipeline-leads-table .all-select-goals,
+    #processing .pipeline-leads-table .all-select-goals,
+    #closed .pipeline-leads-table .all-select-goals,
+    #declined .pipeline-leads-table .all-select-goals { top: 5px;}
+    .pipeline-leads-table .all-select-goals  { top: 15px;}
+    /* Bulk Adding Contact Modal Css */
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height { height: 700px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline { align-items: center; -webkit-align-items: center;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .bg_skyblue.p35.border_ltb_20p,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .display_block { height: 698px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 { height: 620px;}
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 .close { margin-right: 0;}
+    .import-modal .width_50p { width: 50%;}
+    /*Refinance Tab Css*/
+    .refinance-tabs-sec > .nav-tabs .nav-item { padding: 3px; width: calc(100% / 5);}
+    /* a.create-loan-btn { bottom: -100px; right: 45px;} */
+    /*Mortgage Css*/
+    .refinance-tabs-accordion .filters-accordion h2 { min-width: 290px; flex-wrap: wrap; -webkit-flex-wrap: wrap;}
+    .balance-list { width: calc(100% - 290px);}
+    .atom-details .justify-space-between { display: block;}
+    .atom-details .blue_btn { margin-top: 10px;}
+    .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list { width: 25%; padding-left: 15px;}
+    .main-balance-list { width: 75%;}
+    .refinance-tabs-accordion .filters-accordion .card-body .balance-list .balane-info-label, 
+    .refinance-tabs-accordion .filters-accordion .card-body .balance-list .balane-info-text { display: block;}
+    .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list .balane-info-label,
+    .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list .balane-info-text { display: inline-block;}
+    /*Refiannce Loan Appliaction Css*/
+    .refinance-main-blks { display: block !important;}
+    .refinance-main-blks .cristofer-bergson-blk { width: 100%;}
+    .refinance-main-blks .contact-content-blk  { margin: 25px 0 0; width: 100%;}
+    .loan-applications-blk .title { min-width: auto; font-size: 15px;}
+    .content_wrapper .loan-applications-blk .integation_dropdown button.btn.btn-light.dropdown-toggle { width: 120px !important;}
+    /*Edit Mortgage*/
+    .edit-mortgage-sec .select-loan-type { display: block;}
+    .edit-mortgage-sec .select-loan-type .blue_btn { margin: 12px 0 0 8px;}
+    .edit-mortgage-tab-sec .nav-tabs,
+    .edit-mortgage-tab-sec .tab-content { width: 100%;}
+    .edit-mortgage-tab-sec { display: block !important;}
+    .edit-mortgage-tab-sec .tab-content { padding-top: 0;}
+    .edit-mortgage-tab-sec .nav-tabs { border: none;}
+    .estimate-btn { padding-left: 15px !important; font-size: 12px !important;}
+    .red_btn { font-size: 12px !important;}
+    .bottom-btn { position: relative; width: 100%; bottom: auto; right: auto;}
+    /* .bottom-btn { position: absolute; width: calc(100% - 50px); bottom: 25px; right: 25px;} */
+    /*Messaging Css*/
+    .new-msg-conversation-blk .message_sender, .new-msg-conversation-blk .message_receiver { width: 650px;}
+    .send-msg-sec .select-template-blk { width: 420px;}
+    .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Blocks"],
+    .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Fonts"]  { width: 80px !important;}
+    /*Finance Css*/
+    .investor-lock-info .upload_img_outer2 .dz-message { margin: 72px 15px !important;}
+    .commision-report-user-blk h5 { font-size: 12px;}
+    .commision-report-user-blk ul li p span { font-size: 9px;}
+    /*Documents Tab Css*/
+    .expanded_menu .document-double-sec { display: block;}
+    .expanded_menu .document-double-sec .col-lg-7, 
+    .expanded_menu .document-double-sec .col-lg-5 { width: 100%; max-width: 100%;}
+    .expanded_menu .select-documnet-accoridion, 
+    .expanded_menu .documents-tab { min-height: auto; height: auto;}
+    .expanded_menu .documents-tab { margin: 25px 0;}
+    .expanded_menu .documetns-action-sec { padding-bottom: 0;}
+    .expanded_menu .doc-btns,
+    .expanded_menu .documents-sec .info-notes { margin-top: 20px; position: relative; width: 100%; bottom: auto; left: auto;}
+    /*Proposal Css*/
+    .proposals-sec .title { margin-left: 0;}
+    .create-proposal-blk a  { margin-left: 15px; margin-right: 0;}
+    .proposals-sec .col-xl-6 { margin-bottom: 25px;}
+    .transaction-estimate-blk,
+    .current-debt-blk,
+    .proposal-graph-blk { padding-top: 15px;}
+    /*Attom Properties Details Popup*/
+    .attom-properties-details-modal .modal-lg,
+    .attom-properties-details-modal .ratewatch_modal_section { max-width: 100%; width: 100%;}
+    .properties-details-height { height: 600px;}
+    /*Run Pricing Css*/
+    .run-pricing-main-blk { display: block !important;}
+    .run-pricing-left, .run-pricing-right { min-height: 100%;}
+/*Single Purchase Contact*/
+    /*Loan Pre Approval Css*/
+    .loan-preapproval-sec .col-xl-6:nth-child(2n+2) { margin-top: 20px;}
+    /*Loan Processign Css*/
+    .blue_btn.font-12  {font-size: 11px;}
+    .est-montly-pay-blk { padding: 70px 370px;}
+    /*Compliance Css*/
+    .compliance-sec .permissions_tabs.reports { width: 40%;}
+    .compliance-table thead th:first-child,
+    .compliance-table tbody td:first-child { width: 14% !important;}
+    .compliance-table thead th:last-child, 
+    .compliance-table tbody td:last-child { width: 16% !important;}
+    .compliance-table thead th:nth-child(4), 
+    .compliance-table tbody td:nth-child(4) { width: 28% !important;}
+}
+@media ( min-width: 768px) and ( max-width: 991px) {
+    #disclosure-out .pipeline-leads-table .all-select-goals,
+    #processing .pipeline-leads-table .all-select-goals,
+    #closed .pipeline-leads-table .all-select-goals,
+    #declined .pipeline-leads-table .all-select-goals { top: 5px;}
+    .p_l_15 { padding-left: 15px !important;}
+    .pipeline-leads-tabs .permissions_tabs.reports .nav-item .nav-link { font-size: 10px;}
+    .pipeline-leads-table .all-select-goals  { top: 15px;}
+    /* Bulk Adding Contact Modal Css */
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .content_center.baseline .bg_skyblue.p35 { padding: 10px;}
+    /* .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated,
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 { height: calc(100vh - 250px);} */
+    .modal-dialog.modal-dialog-centered.custom_modal_9 .modal-content.contact-modal-height .height_calculated_2 .close { margin-right: 0;}
+    .import-modal .width_50p { width: 100%;}
+    /* Columns Modal Css */
+    .filter-column-sec { flex-direction: column-reverse; -webkit-flex-direction: column-reverse;}
+    .pipeline-leads-main-sec.show .pipeline-leads-table-height { width: 100%;}
+    .columns-modal,
+    .filters-modal { margin-left: 0; width:100%;}
+    /*Single Contact Select Loan Type Css*/
+    .start-contact img { width: 100%; }
+    .start-contact .progress_title, .select-loan-type-blks .progress_title { font-size: 22px; line-height: 28px;}
+    .start-contact .progress_subtitle { font-size: 16px; line-height: 22px;}
+    .select-loan-type a { font-size: 14px;}
+    .select-loan-type-blks { width: 100%;}
+    .select-loan-type-blks > .d-flex { display: block !important;}
+    .select-loan-type-blks .m_r_35 { margin-right: 0;}
+    /* a.create-loan-btn { bottom: -100px; right: 45px;} */
+        /*Refinance Tab Css*/
+        .refinance-tabs-sec > .nav-tabs .nav-item { padding: 3px; width: calc(100% / 4);}
+        /*Mortgage Css*/
+        .refinance-tabs-accordion .filters-accordion h2 { min-width: 200px; flex-wrap: wrap; -webkit-flex-wrap: wrap;}
+        .balance-list { width: calc(100% - 200px);}
+        .atom-details .justify-space-between { display: block;}
+        .atom-details .blue_btn { margin-top: 10px;}
+        .refinance-tabs-accordion .filters-accordion .card-body .other-balance-list { padding-left: 15px;}
+        /*Refiannce Loan Appliaction Css*/
+        .refinance-main-blks { display: block !important;}
+        .refinance-main-blks .cristofer-bergson-blk,
+        .refinance-main-blks .contact-content-blk  { margin: 25px 0 0; width: 100%;}
+        .loan-applications-blk .title { min-width: auto; font-size: 15px;}
+        .content_wrapper .loan-applications-blk .integation_dropdown button.btn.btn-light.dropdown-toggle { width: 120px !important;}
+        /*Edit Mortgage*/
+        .edit-mortgage-sec .select-loan-type { display: block;}
+        .edit-mortgage-sec .select-loan-type .blue_btn { margin: 12px 0 0 8px;}
+        .edit-mortgage-tab-sec .nav-tabs,
+        .edit-mortgage-tab-sec .tab-content { width: 100%;}
+        .edit-mortgage-tab-sec { display: block !important;}
+        .edit-mortgage-tab-sec .tab-content { padding-top: 0;}
+        .edit-mortgage-tab-sec .nav-tabs { border: none;}
+        .estimate-btn { padding-left: 15px !important; font-size: 12px !important;}
+        .red_btn { font-size: 12px !important;}
+        .bottom-btn { position: relative; width: 100%; bottom: auto; right: auto;}
+        /* .bottom-btn { position: absolute; width: calc(100% - 50px); bottom: 25px; right: 25px;} */
+        /*Messaging Css*/
+        .new-msg-conversation-blk .message_sender, .new-msg-conversation-blk .message_receiver { width: 100%;}
+        .send-msg-sec .select-template-blk { width: 300px;}
+        /*Finance Css*/
+        .investor-lock-info .upload_img_outer2 .dz-message { margin: 35px !important;}
+        .lock-pdf-blk { margin-top: 15px;}
+        .revenue-table thead th:first-child, .revenue-table tbody td:first-child { width: 35% !important;}
+        /*Documents Tab Css*/
+        .select-documnet-accoridion, .documents-tab { min-height: auto; height: auto;}
+        .documents-tab { margin: 25px 0;}
+        .documetns-action-sec { padding-bottom: 0;}
+        .doc-btns,
+        .documents-sec .info-notes { margin-top: 20px; position: relative; width: 100%; bottom: auto; left: auto;}
+        /*Proposal Css*/
+        .proposals-sec .title { margin-left: 0;}
+        .create-proposal-blk a  { margin-left: 15px; margin-right: 0;}
+        .proposals-sec .col-xl-6 { margin-bottom: 25px;}
+        .transaction-estimate-blk,
+        .current-debt-blk,
+        .proposal-graph-blk { padding-top: 15px;}
+        /*Attom Properties Details Popup*/
+        .attom-properties-details-modal .modal-lg,
+        .attom-properties-details-modal .ratewatch_modal_section { max-width: 100%; width: 100%;}
+        /*Sens SMS and Email Popup CSS*/
+        .send-email-sms-modal .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Blocks"], 
+        .send-email-sms-modal .send-msg-sec .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) button[title="Fonts"] { width: 25px !important;}
+        /*Run Pricing Css*/
+        .run-pricing-main-blk { display: block !important;}
+        .run-pricing-left, .run-pricing-right { min-height: 100%;}
+        /*Loan Submission CSS*/
+        .conditions-list-blk { display: block !important;}
+        .conditions-list-blk .align-center { margin-top: 10px; justify-content: space-between;}
+/*Single Purchase Contact*/
+    /*Loan Pre Approval Css*/
+    .loan-preapproval-sec .col-xl-6:nth-child(2n+2) { margin-top: 20px;}
+    .send-email-sms-modal#email-realtor-modal .ratewatch_modal_section { padding: 25px;}
+    /*Loan Processign Css*/
+    .blue_btn.font-12  {font-size: 11px;}
+    .est-montly-pay-blk { padding: 70px 240px;}
+    /*Compliance Css*/
+    .compliance-sec .permissions_tabs.reports { width: 40%;}
+    .compliance-table thead th:first-child,
+    .compliance-table tbody td:first-child { width: 14% !important;}
+    .compliance-table thead th:last-child, 
+    .compliance-table tbody td:last-child { width: 16% !important;}
+    .compliance-table thead th:nth-child(4), 
+    .compliance-table tbody td:nth-child(4) { width: 28% !important;}
+}
+#add_note_doc_dropzoner .dz-error-message {
+    position: relative;
+}

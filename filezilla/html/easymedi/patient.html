@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Easy Medi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+        <!-- favicon  -->
+	<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png"/>
+        <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png"/>
+        <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png"/>
+        <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png"/>
+        <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png"/>
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
+        <!-- default css  -->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <!-- Extra css  -->
+        <link href="css/fontawesome.css" rel="stylesheet" type="text/css"/>        
+        <!-- default js  -->
+        <script src="js/lib/jquery.js" type="text/javascript"></script>
+        <script src="js/modernizr.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/html5shiv.min.js" type="text/javascript"></script>
+        <script src="js/respond.min.js" type="text/javascript"></script>
+        <!-- Extra js  -->        
+        <!--Scroll Parallex Start-->
+        <script src="js/easing.js"></script>
+        <script type="text/javascript">
+				$(function() {
+					$('.page-scroll a').bind('click', function(event) {
+						var $anchor = $(this);
+						$('html, body').stop().animate({
+							scrollTop: $($anchor.attr('href')).offset().top
+						}, 1500, 'easeInOutExpo');
+						event.preventDefault();
+					});
+				});
+				// Highlight the top nav as scrolling occurs
+				$('body').scrollspy({
+					target: '.navbar-example'
+				})
+				$(document).ready(function () {
+						$(".navbar-nav li a").click(function(event) {
+								$(".navbar-collapse").collapse('hide');
+						});
+				});        
+        </script>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" class="inner-page">
+<div class="nav-menu-bullet">
+<ul id="menu" style=" position: fixed; bottom: 0; z-index: 1000;">
+	<li data-menuanchor="1page"><a href="#1page">1</a></li>
+	<li data-menuanchor="2page"><a href="#2page">2</a></li>
+	<li data-menuanchor="3page"><a href="#3page">3</a></li>
+	<li data-menuanchor="4page"><a href="#4page">4</a></li>
+    <li data-menuanchor="5page"><a href="#5page">5</a></li>
+    <li data-menuanchor="6page"><a href="#6page">6</a></li>
+    <li data-menuanchor="7page"><a href="#7page">7</a></li>
+    <li data-menuanchor="8page"><a href="#8page">8</a></li>
+    <li data-menuanchor="9page"><a href="#9page">9</a></li>
+</ul>
+</div>
+<!--******************* Header Section Start *********************-->
+<header id="home">
+    <div class="header-top">
+        <div class="container">
+                <ul class="header-top-right">
+                    <li><img src="images/user-photo.png" /></li>
+                    <li class="welcome-msg">Welcome,</li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dr John Deo<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <div class="inner-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="logo col-sm-3">
+                    <a href="index.html"><img src="images/logo.png" alt="EasyMedi"/></a>
+                </div>
+                <div class="col-sm-9 main-menu">
+                    <nav class="navbar navbar-default navbar-right">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <img src="images/menu-icon.png" alt="menu icon" />
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav" id="menu">
+                                <li data-menuanchor="1page"><a href="#1page">Home</a></li>
+                                <li data-menuanchor="3page"><a href="#3page">Features</a></li>
+                                <li data-menuanchor="9page"><a href="#9page">Articles</a></li>
+                                <li class="social-icon"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                     </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!--******************* Header Section End *********************-->   
+<!--******************* Middle Section Start ******************-->
+<div id="fullpage">
+    <main>
+        <section class="section" id="section0">
+            <div class="container align-center">
+                <div class="row">
+                    <div>
+                        <div class="banner-content">
+                           	<div class="col-md-6 banner-left">
+                           		<div class="col-sm-6 text-center">
+                                     <img class="img-responsive" src="images/inner-header-img.png"/>
+                           		</div>
+                           		<div class="col-sm-6 banner-left-text">
+                           			<h2>Lorem Ipsum has been</h2>
+                           			<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                           			<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                           			<a href="#" class="read-more-btn">Know More</a>
+                           		</div>
+                                    <div class="clearfix"></div>
+                           	</div>
+                           	<div class="col-md-6">
+                                    <div class="banner-contact-form">
+                                        <h1 class="section-title">Contact Us</h1>
+                                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type ,</p>
+                                        <div class="contact-form">
+                                            <form>
+                                                <div class="form-group col-sm-6">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                                               </div>
+                                               <div class="form-group col-sm-6">
+                                                    <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="Phone">
+                                               </div>
+                                               <div class="form-group col-sm-6">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="City">
+                                               </div>
+                                               <div class="form-group col-sm-6">
+                                                    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password">
+                                               </div>
+                                               <div class="form-group col-sm-12">
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                               </div>
+                                               <div class="form-group col-sm-12">
+                                                    <textarea class="form-control" rows="0" placeholder="Your Message"></textarea>
+                                               </div>
+                                               <div class="col-sm-12">
+                                                    <button>SUBMIT</button>
+                                               </div>
+                                                <div class="clearfix"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                           	</div>
+                           	<div class="clearfix"></div>
+                       </div>
+                    </div>
+                </div>
+            </div>	
+        </section>
+        <section class="section-padding section-title section" id="section1">
+            <div class="align-end">        	
+                    <div class="container">
+                        <h1>Now no need to wait at doctor clinic</h1>
+                        <p>get your token no sitting at home and check real<br/> time status of your turn</p>
+                    </div>
+                    <div class="section-img">
+                        <img src="images/doctor-clinic.png"/>
+                    </div>
+            </div>
+        </section>
+        <section class="section-padding section-title section" id="feature">
+            <div class="align-center">
+                <div class="container">
+                    <h1>Health App Features</h1>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                    <div class="section-feature">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                    <img src="images/find-doctor.png"/>
+                                    <h4>Find Doctor</h4>
+                            </div>
+                            <div class="col-sm-2">
+                                    <img src="images/find-hospital.png"/>
+                                    <h4>Find Hospital</h4>
+                            </div>
+                            <div class="col-sm-2">
+                                    <img src="images/near-pharma.png"/>
+                                    <h4>Near Pharmacies</h4>
+                            </div>
+                            <div class="col-sm-2">
+                                    <img src="images/test-lab.png"/>
+                                    <h4>Test Lab</h4>
+                            </div>
+                            <div class="col-sm-2">
+                                    <img src="images/user-experiance.png"/>
+                                    <h4>User Experiance</h4>
+                            </div>
+                            <div class="col-sm-2">
+                                    <img src="images/live-support.png"/>
+                                    <h4>Live Support</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btns">
+                        <a href="#"><img class="img-responsive" src="images/google-play-btn.png"/></a>
+                            <a href="#"><img class="img-responsive" src="images/app-store-btn.png"/></a>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        <section class="section-padding section-title section" id="section2">
+            <div class="align-end">
+                <div class="container">
+                    <h1>Now select pharmacy store</h1>
+                    <p>Now select your own trusted pharm.acy store and buy genuine medicine at discounted rate sitting at home</p>
+                </div>
+                <div class="section-img">
+                    <img src="images/pharma-store.png"/>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding section-title section" id="section3">
+            <div class="align-end">
+                <div class="container">
+                    <h1>No need to visit doctor even if your lab<br/> test report are normal</h1>
+                    <p>With Easymedi one can opt for lab test after choosing their preferred Pathology lab and consult doctor online about the result.</p>
+                </div>
+                <div class="section-img">
+                    <img src="images/test-lab-img.png"/>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding section-title section" id="section4">
+            <div class="align-end">
+                <div class="container">
+                    <h1>Health vault</h1>
+                    <p>Easymedi provide you secure access to all your health report. So you don’t need to carry with you all time. Stores for year with all past minuet history. Even you can share with your family & friends</p>                
+                </div>
+                <div class="section-img">
+                    <img class="img-responsive" src="images/health-walet.png"/>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding section-title section" id="section5">
+            <div class="align-end">
+                <div class="container">
+                    <h1>Skip blood bank</h1>
+                    <p>Skip blood bank and Connect directly with nearby blood donor matching your requirement with simplified way</p>
+                </div>
+                <div class="section-img">
+                    <img src="images/blood-bank.png"/>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding section-title section" id="section6">
+            <div class="align-end">
+                <div class="container">
+                    <h1>Health offers</h1>
+                    <p>Get the customised and exclusive health offers just<br/>for you with a click </p>
+                </div>
+                <div class="section-img">
+                    <img  class="img-responsive" src="images/health-offer.png"/>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding section-title section" id="article">
+            <div class="align-end">
+                <div class="container">
+                    <h1>Articles</h1>
+                    <p>Remain updated with the case study and information gathered just from the healthcare industry straight from the health expert</p>
+                    <div class="blog">
+                        <div class="row">
+                            <div class="col-sm-4 blog-block">
+                                    <a href="#"><img src="images/blog-1.jpg"/></a>
+                                    <div class="blog-content">
+                                            <a href="#">Lorem Ipsum has been...</a>
+                                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <!-- 			   				<a href="#" class="read-more-btn">Read More</a> -->
+                                    </div>
+                            </div>
+                            <div class="col-sm-4 blog-block">
+                                    <a href="#"><img src="images/blog-2.jpg"/></a>
+                                    <div class="blog-content">
+                                            <a href="#">Lorem Ipsum has been...</a>
+                                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <!-- 			   				<a href="#" class="read-more-btn">Read More</a> -->
+                                    </div>
+                            </div>
+                            <div class="col-sm-4 blog-block">
+                                    <a href="#"><img src="images/blog-3.jpg"/></a>
+                                    <div class="blog-content">
+                                            <a href="#">Lorem Ipsum has been...</a>
+                                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <!-- 			   				<a href="#" class="read-more-btn">Read More</a> -->
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--******************* Footer Section Start ******************-->
+                <footer>
+                    <div class="footer-panel">
+                        <div class="container">
+                            <div>
+                                <p>&copy; 2017 EasyMedi. All Right Reserved</p>
+                                <a href="#click-popup" data-toggle="modal" data-target="#myModal1">Contact Us</a>
+                                <p class="development-text">Designed & Developed By: <a href="http://www.yudiz.com" target="_blank"><img src="images/yudiz.png"/></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!--******************* Footer Section End ******************-->
+            </div>
+        </section>
+    </main>
+</div>
+<!--******************* Middle Section End ******************-->
+<section>
+	<div id="myModal1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                     <h1 class="section-title">Contact Us</h1>
+                     <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type ,</p>
+                     <div class="contact-form">
+                        <form>
+                            <div class="form-group col-sm-6">
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
+                             </div>
+                             <div class="form-group col-sm-6">
+                                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address">
+                             </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="col-sm-12">
+                                <button>Send</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal10" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                     <h1 class="section-title">Download Our App</h1>
+                     <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type ,</p>
+                     <div class="contact-form">
+                         <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email Address">
+                            </div>
+                            <div class="col-sm-12">
+                                <button>Download Now</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--******************* Footer Section End ******************-->
+<a class="sticky-download" href="#download-btn" data-toggle="modal" data-target="#myModal10">download the app now</a>
+
+<script type="text/javascript">
+$(window).click(function(){
+    $("#click-popup,#join-popup,#download-btn").modal('show');
+});
+</script>
+ <!--Full Page-->
+        <script src="js/jqueryui.js"></script>
+        <script type="text/javascript" src="js/fullpage-test.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    anchors: ['1page', '2page', '3page', '4page', '5page', '6page', '7page', '8page', '9page' ],
+                    menu: '#menu',
+                    scrollingSpeed: 1000,
+                    responsiveWidth: 992,
+                                responsiveHeight: 770
+                });
+            });
+        </script>
+<script type="text/javascript">
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1){
+        $("header").addClass("sticky");
+    }else
+    {
+        $("header").removeClass("sticky");        
+    }
+});
+</script>
+</body>
+</html>

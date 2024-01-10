@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="SV3lbr4cEgcpX4pOBAkdhZEvkuHN1iBFSLpS0Qrj">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/general.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/chart.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/mobile_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    
+    <!-- jQuery library -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script type="text/javascript" src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/dashboard/Chart.roundedBarCharts.min.js"></script>
+    
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/header.js"></script>
+
+    <script src="js/company_directory.js"></script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/custom_daterpicker.css">
+</head>
+<body>
+
+    <main class="content" role="content">
+        <section class="container-fluid bg_white">
+            <div class="row">
+                <div class="col-12 p_lr_0">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a href="#" data-toggle="sidebar-colapse">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <img  id="collapse-icon" src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/menu.png" class="img-fluid" />
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/home"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/logo.png" class="img-fluid height_37" /></a>
+                        <div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+                            <form class="form-inline my-2 my-lg-0">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/bell.png" class="img-fluid m_r_15 notification" />
+                                <span class="notification_dot"></span>
+                                <ul class="dropdown-notification">
+                                    <div class="notification_title">
+                                        Notifications
+                                    </div>
+                                    <div class="content_center space_between p_tb_20 b_b_grey">
+                                        <div class="notification_readall">
+                                            <svg width="21" height="20" style="margin-right: 0" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.0415 7L6.39941 13.4167L3.38029 10.5" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.1821 7L10.54 13.4167" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+
+                                            Mark all as read
+                                        </div>
+                                        <div class="integation_dropdown">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                    <ins>All</ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio">
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="001" name="alphabet">
+                                                        <i>option 1</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="jRadioDropdown" type="radio" value="002" name="alphabet">
+                                                        <i>option 2</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="more_notification">
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_1">
+                                                </div>
+                                                <label for="html_1">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_2">
+                                                </div>
+                                                <label for="html_2">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_3">
+                                                </div>
+                                                <label for="html_3">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_4">
+                                                </div>
+                                                <label for="html_4">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="m_t_10 date_time">
+                                                        Created: 7/27/2020 9:11pm
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36 user" />
+                                <ul class="dropdown-menu-profile">
+                                    <div class="content_center">
+                                        <div>
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36" />
+                                        </div>
+                                        <div class="m_l_10">
+                                            <div class="user_name">Ruchi Patel</div>
+                                            <div class="user_profile">Super admin</div>
+                                        </div>
+                                    </div>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/profile-page" class="dropdown-menu__link profilepage nav-link">
+                                            <img src="images/Pipeline_NA.svg" class="default-icon"/>
+                                            <img src="images/Pipeline_A.svg" class="hover-icon" />
+                                            My Account
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/Company_Profile_NA.svg" class="default-icon"/>
+                                            <img src="images/Company_Profile_A.svg" class="hover-icon" />
+                                            Company Profile
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/closing-targets" class="dropdown-menu__link profilepage nav-link">
+                                            <img src="images/Closing_Targets_NA.svg" class="default-icon"/>
+                                            <img src="images/Closing_Targets_A.svg" class="hover-icon" />
+                                            Closing Targets
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/Plan_Billing_NA.svg" class="default-icon"/>
+                                            <img src="images/Plan_Billing_A.svg" class="hover-icon" />
+                                            Plan & Billing
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-directory" class="dropdown-menu__link nav-link">
+                                            <img src="images/Company_Directory_NA.svg" class="default-icon"/>
+                                            <img src="images/Company_Directory_A.svg" class="hover-icon" />
+                                            Company Directory
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="#" class="dropdown-menu__link nav-link">
+                                            <img src="images/Commissions_NA.svg" class="default-icon"/>
+                                            <img src="images/Commissions_A.svg" class="hover-icon" />
+                                            Commissions
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/Integrations_NA.svg" class="default-icon"/>
+                                            <img src="images/Integrations_A.svg" class="hover-icon" />
+                                            Integrations
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/activity-feeds" class="dropdown-menu__link nav-link">
+                                            <img src="images/Activity_NA.svg" class="default-icon"/>
+                                            <img src="images/Activity_A.svg" class="hover-icon" />
+                                            Activity
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/manage_users" class="dropdown-menu__link nav-link">
+                                            <img src="images/Manage_users_NA.svg" class="default-icon"/>
+                                            <img src="images/Manage_users_A.svg" class="hover-icon" />
+                                            Manage users
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/View_Permissions_NA.svg" class="default-icon"/>
+                                            <img src="images/View_Permissions_A.svg" class="hover-icon" />
+                                            View Permissions
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/commission-schedule" class="dropdown-menu__link nav-link">
+                                            <img src="images/View_Commission_Schedule_NA.svg" class="default-icon"/>
+                                            <img src="images/View_Commission_Schedule_A.svg" class="hover-icon" />
+                                            View Commission Schedule
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/Lead_rotator_NA.svg" class="default-icon"/>
+                                            <img src="images/Lead_rotator_A.svg" class="hover-icon" />
+                                            Lead rotator
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                            <img src="images/Custom_Fields_NA.svg" class="default-icon"/>
+                                            <img src="images/Custom_Fields_A.svg" class="hover-icon" />
+                                            Custom Fields
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+                                        <a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                            <img src="images/log-out_NA.svg" class="default-icon"/>
+                                            <img src="images/log-out_A.svg" class="hover-icon" />
+                                            Logout
+                                        </a>
+                                        <form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+                                            <input type="hidden" name="_token" value="SV3lbr4cEgcpX4pOBAkdhZEvkuHN1iBFSLpS0Qrj">         
+                                        </form>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div style="display: flex;" id="body-row">
+                <div id="sidebar-container" style="display:none;">
+                    <div class="d-none d-md-block">
+                        <ul class="list-group">
+                            <a href="http://sigmadev.beta.loanofficer.ai/home" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                <img src="images/Dashboard_NA.svg" class="default-icon"/>                                
+                                <img src="images/Dashboard_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Dashboard</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <img src="images/Pipeline_NA.svg" class="default-icon"/>
+                                    <img src="images/Pipeline_A.svg" class="hover-icon" />
+                                    <span class="menu-collapsed">Pipeline</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Proposals_NA.svg" class="default-icon"/>                                
+                                <img src="images/Proposals_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Proposals</span>
+                                </div>
+                            </a>
+                            <a href="http://sigmadev.beta.loanofficer.ai/rate-watches" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Rate_Watch_NA.svg" class="default-icon"/>                                
+                                <img src="images/Rate_Watch_A.svg" class="hover-icon" />
+
+
+                                    <span class="menu-collapsed">Rate Watch</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Lenders_NA.svg" class="default-icon"/>                                
+                                <img src="images/Lenders_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Lenders</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Partners_NA.svg" class="default-icon"/>                                
+                                <img src="images/Partners_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Partners</span>
+                                </div>
+                            </a>
+                            <a href="http://sigmadev.beta.loanofficer.ai/report/my-team-time" class=" list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Reports_NA.svg" class="default-icon"/>                                
+                                <img src="images/Reports_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Reports</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Tasks_NA.svg" class="default-icon"/>                                
+                                <img src="images/Tasks_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Tasks</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Campaigns_NA.svg" class="default-icon"/>                                
+                                <img src="images/Campaigns_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Campaigns</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Finance_NA.svg" class="default-icon"/>                                
+                                <img src="images/Finance_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Finance</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+
+                                <img src="images/Workflow_NA.svg" class="default-icon"/>                                
+                                <img src="images/Workflow_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Workflow</span>
+                                </div>
+                            </a>
+                            <a href="http://sigmadev.beta.loanofficer.ai/data-points" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Workflow_NA.svg" class="default-icon"/>                                
+                                <img src="images/Workflow_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Data-Points</span>
+                                </div>
+                            </a>
+                        </ul>
+                        <div class="bottom_menu">
+                            <ul class="list-group">
+                                <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/loan_officer_university_NA.svg" class="default-icon"/>
+                                <img src="images/loan_officer_university_A.svg" class="hover-icon" />
+
+                                        <span class="menu-collapsed">loan officer university</span>
+                                    </div>
+                                </a>
+                                <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Refer_a_friend_NA.svg" class="default-icon"/>
+                                <img src="images/Refer_a_friend_A.svg" class="hover-icon" />
+
+                                        <span class="menu-collapsed">Refer a friend</span>
+                                    </div>
+                                </a>
+                                <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                    <img src="images/Help_Center_NA.svg" class="default-icon"/>
+                                    <img src="images/Help_Center_A.svg" class="hover-icon" />
+
+
+                                        <span class="menu-collapsed">Help Center</span>
+                                    </div>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="expanded_menu content_wrapper main_div" style="display:none;">
+					<div class="container-fluid p_35 integration_section integration-expanded">
+						<div class="row">
+							<div class="col-12">
+								<div class="back_section content_center">
+									<img src="images/back_arrow.png" class="img-fluid">
+									<span>Intergations</span>
+								</div>
+							</div>
+						</div>
+						<div class="row m_t_20">
+							<div class="col-8 col-lg-8 col-xl-9">
+								<label class="m_b_0">Quick Search</label>
+								<div class="form-group has-search">
+									<img src="images/search.png"  class="img-fluid form-control-feedback" />
+									<input type="text" class="form-control" placeholder="Search integration">
+								</div>
+							</div>
+							<div class="col-4 col-lg-4 col-xl-3">
+								<label class="m_b_0">Categories</label>
+								<div class="content_center integation_dropdown m_tb_0">
+									<div class="dropdown">
+										<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+											<ins>All</ins>
+											<span class="arrow"></span>
+										</button>
+										<div class="dropdown-menu radio">
+											<label class="dropdown-item">
+												<input class="jRadioDropdown" type="radio" value="001" name="alphabet">
+												<i>All</i>
+											</label>
+											<label class="dropdown-item">
+												<input class="jRadioDropdown" type="radio" value="002" name="alphabet">
+												<i>Active</i>
+											</label>
+											<label class="dropdown-item">
+												<input class="jRadioDropdown" type="radio" value="003" name="alphabet">
+												<i>Credit vendors</i>
+											</label>
+											<label class="dropdown-item">
+												<input class="jRadioDropdown" type="radio" value="004" name="alphabet">
+												<i>LOS vendors</i>
+											</label>
+											<label class="dropdown-item">
+												<input class="jRadioDropdown" type="radio" value="005" name="alphabet">
+												<i>E-sign vendors</i>
+											</label>
+											<label class="dropdown-item">
+												<input class="jRadioDropdown" type="radio" value="006" name="alphabet">
+												<i>Loan pricing vendors</i>
+											</label>
+											<label class="dropdown-item">
+												<input class="jRadioDropdown" type="radio" value="007" name="alphabet">
+												<i>Others</i>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="scroll_body m_t_20">
+							<div class="row">
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/byte.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">BytePro</div>
+												<div class="sub_title">LOS</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											Byte Software offers a loan origination system that helps streamline the mortgage production process.
+										</div>
+										<div class="m_t_20">
+											<button type="button" class="blue_btn common_btn" data-toggle="modal" data-target="#myModal">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<img src="images/verified.png" class="img-fluid right_top" />
+										<div class="content_center img_text">
+											<div>
+												<img src="images/mortech.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Mortech</div>
+												<div class="sub_title">Pricing Engine</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											Mortech features automated mortgage loan and PMI pricing eligibility and product selection.
+										</div>
+										<div class="m_t_20">
+											<button type="button" class="blue_btn common_btn" data-toggle="modal" data-target="#mortech_modal">Connect</button>
+										</div> 
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<img src="images/error.png" class="img-fluid right_top" />
+										<div class="content_center img_text">
+											<div>
+												<img src="images/zillow.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Zillow</div>
+												<div class="sub_title">Property data</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											Zillow’s GetSearchResults API finds a property for a specified address and return a valuation range.
+										</div>
+										<div class="m_t_20">
+											<button type="button" class="blue_btn common_btn" data-toggle="modal" data-target="#zillow_modal">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/lending_pad.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Lending Pad</div>
+												<div class="sub_title">LOS</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											Lending Pad is a cloud-based system designed by lending professionals to streamline origination tasks.
+										</div>
+										<div class="m_t_20">
+											<button type="button" class="blue_btn common_btn" data-toggle="modal" data-target="#lending">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/calyx.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Calyx</div>
+												<div class="sub_title">LOS Vendor</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											Calyx offers a full suite of loan and mortgage origination software products and solutions.
+										</div>
+										<div class="m_t_20">
+											<button class="blue_btn common_btn">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/meridian_link.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Meridian Link</div>
+												<div class="sub_title">Credit Vendor</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											MeridianLink offers multi-channel account opening and loan origination software and digital lending solutions.
+										</div>
+										<div class="m_t_20">
+											<button type="button" class="blue_btn common_btn" data-toggle="modal" data-target="#meridian_modal">Connect</button>
+										</div> 
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/corelogic.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Corelogic</div>
+												<div class="sub_title">Credit Vendor</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											CoreLogic provides consumer, financial and property data, analytics and services to businesses.
+										</div>
+										<div class="m_t_20">
+											<button class="blue_btn common_btn">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/factualdata.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Factualdata</div>
+												<div class="sub_title">Credit Vendor</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											Factual Data is a Tier One provider of consumer credit and verification services vital to mortgage lending.
+										</div>
+										<div class="m_t_20">
+											<button class="blue_btn common_btn">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/isoftpull.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">iSoftpull</div>
+												<div class="sub_title">Credit Vendor</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											iSoftpull provides soft credit checks to businesses that want to check their customer's credit.
+										</div>
+										<div class="m_t_20">
+											<button class="lightblue_btn common_btn">View integration</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/encompass.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Encompass</div>
+												<div class="sub_title">LOS Vendor</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											Encompass’s Loan Origination System is designed to help businesses lower costs and reduce time to close.
+										</div>
+										<div class="m_t_20">
+											<button class="blue_btn common_btn">Connect</button>
+										</div> 
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/hellosign.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Hello Sign</div>
+												<div class="sub_title">E-Sign Vendor</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											HelloSign provides an easy way to send, receive and manage legally binding electronic signatures.
+										</div>
+										<div class="m_t_20">
+											<button type="button" class="blue_btn common_btn" data-toggle="modal" data-target="#hello_sign">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/docusign.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">DocuSign</div>
+												<div class="sub_title">E-Sign Vendor</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											DocuSign allows you to sign documents, request signatures, check document status and view audit trails.
+										</div>
+										<div class="m_t_20">
+											<button type="button" class="blue_btn common_btn" data-toggle="modal" data-target="#docu_sign">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/optimalblue.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Optimal Blue</div>
+												<div class="sub_title">Loan Pricing Vendors</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											Optimal Blue automates functions like pricing, hedging, trading, and social media for mortgage brokers.
+										</div>
+										<div class="m_t_20">
+											<button class="blue_btn common_btn">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/loansifter.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Loan Sifter</div>
+												<div class="sub_title">Loan Pricing Vendors</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											LoanSifter is a proprietary product eligibility and pricing engine designed to serve financial institutions.
+										</div>
+										<div class="m_t_20">
+											<button class="blue_btn common_btn">Connect</button>
+										</div> 
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/lenderprice.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Lenderprice</div>
+												<div class="sub_title">Loan Pricing Vendors</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											Lender Price is a mortgage pricing engine used by mortgage loan originators all over the country.
+										</div>
+										<div class="m_t_20">
+											<button class="blue_btn common_btn">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/attom.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Attom</div>
+												<div class="sub_title">Property Data</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											ATTOM Data provides property data and real estate data licensing for more than 155 million properties.
+										</div>
+										<div class="m_t_20">
+											<button type="button" class="blue_btn common_btn" data-toggle="modal" data-target="#attom_modal">Connect</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 m_b_20">
+									<div class="border_grey">
+										<div class="content_center img_text">
+											<div>
+												<img src="images/twillio.png" class="img-fluid">
+											</div>
+											<div class="">
+												<div class="title">Twillio</div>
+												<div class="sub_title">Dialer</div>
+											</div>
+										</div>
+										<div class="desp m_t_20">
+											Lorem ipsum dolor sit amet, consectet adipiscing elit. Cras semper faucibus egestas risus.
+										</div>
+										<div class="m_t_20">
+											<button type="button" class="blue_btn common_btn" data-toggle="modal" data-target="#twillio_modal">Connect</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- The Modal -->
+		<div class="modal" id="myModal">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content custom_modal">
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-12">
+								<div class="space_between content_center">
+									<h4 class="modal-title">Integration with</h4>
+									<img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+								</div>
+							</div>
+						</div>
+						<div class="content_center m_tb_10">
+							<div class="content_center width_50p">
+								<div class="width_32">
+									<img src="images/byte.png" class="img-fluid">
+								</div>
+								<div class="m_l_10">
+									<div class="title">BytePro</div>
+									<div class="sub_title">LOS</div>
+								</div>
+							</div>
+							<div class="desp width_50p">
+								Byte Software offers a loan origination system that helps streamline the mortgage production process.
+							</div>
+						</div>
+						<form class="form-horizontal" action="#" method="POST" id="modalform">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Company website</label>
+									<input type="text" name="company_name" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-6">
+									<label>Server name</label>
+									<input type="text" name="server_name" class="input_text">
+								</div>
+								<div class="col-12 col-sm-6">
+									<label>Site name</label>
+									<input type="text" name="site_name" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-6">
+									<label>User name</label>
+									<input type="text" name="user_name" class="input_text">
+								</div>
+								<div class="col-12 col-sm-6">
+									<label>Password</label>
+									<input type="text" name="password" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Authorization key</label>
+									<input type="text" name="authorization_key" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Org code</label>
+									<input type="text" name="org_code" class="input_text">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="content_center">
+										<div class="">
+											<img src="images/not_connected.png" class="img-fluid">
+										</div>
+										<div class="m_l_10">
+											<div class="bottom_title">Not connected</div>
+											<div class="bottom_subtitle">
+												Complete form fields to integrate BytePro
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="content_center">
+										<div class="">
+											<img src="images/error.png" class="img-fluid width_25p">
+										</div>
+										<div class="m_l_10">
+											<div class="bottom_title red_color">Integration has failed</div>
+											<div class="bottom_subtitle">
+												Please check your credentials and try again
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="content_center">
+										<div class="">
+											<img src="images/verified.png" class="img-fluid width_25p">
+										</div>
+										<div class="m_l_10">
+											<div class="bottom_title">Integration was successful</div>
+											<div class="bottom_subtitle">
+												Last check: Nov 02,2020 14:38:34pm
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="content_center">
+										<div class="">
+											<div class="spinner">
+												<div class="bounce1"></div>
+												<div class="bounce2"></div>
+												<div class="bounce3"></div>
+											</div>
+											<!-- <img src="images/progress.png" class="img-fluid"> -->
+										</div>
+										<div class="m_l_10">
+											<div class="bottom_title">Integration in progress</div>
+											<div class="bottom_subtitle">
+												One moment, please. 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12 align_center">
+									<input class="common_btn disable_btn" type="submit" value="Connect">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="lending">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content custom_modal">
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-12">
+								<div class="space_between content_center">
+									<h4 class="modal-title">Integration with</h4>
+									<img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+								</div>
+							</div>
+						</div>
+						<div class="content_center m_tb_10">
+							<div class="content_center width_50p">
+								<div class="width_32">
+									<img src="images/lending_pad.png" class="img-fluid">
+								</div>
+								<div class="m_l_10">
+									<div class="title">Lending Pad</div>
+									<div class="sub_title">LOS Vendor</div>
+								</div>
+							</div>
+							<div class="desp width_50p">
+								Lending Pad is a cloud-based system designed by lending professionals to streamline origination tasks.
+							</div>
+						</div>
+						<form class="form-horizontal" action="#" method="POST" id="modal_form">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Company ID</label>
+									<input type="text" name="company_id" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Compaign ID</label>
+									<input type="text" name="compaign_id" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 align_center">
+									<input class="common_btn disable_btn" type="submit" value="Connect">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="hello_sign">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content custom_modal">
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-12">
+								<div class="space_between content_center">
+									<h4 class="modal-title">Integration with</h4>
+									<img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+								</div>
+							</div>
+						</div>
+						<div class="content_center m_tb_10">
+							<div class="content_center width_50p">
+								<div class="width_32">
+									<img src="images/hellosign.png" class="img-fluid">
+								</div>
+								<div class="m_l_10">
+									<div class="title">Hello Sign</div>
+									<div class="sub_title">E-Sign Vendor</div>
+								</div>
+							</div>
+							<div class="desp width_50p">
+								HelloSign provides an easy way to send, receive and manage legally binding electronic signatures.
+							</div>
+						</div>
+						<form class="form-horizontal" action="#" method="POST" id="hello_form">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Sign Api Key</label>
+									<input type="text" name="sign_api_key" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 align_center">
+									<input class="common_btn disable_btn" type="submit" value="Connect">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="docu_sign">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content custom_modal">
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-12">
+								<div class="space_between content_center">
+									<h4 class="modal-title">Integration with</h4>
+									<img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+								</div>
+							</div>
+						</div>
+						<div class="content_center m_tb_10">
+							<div class="content_center width_50p">
+								<div class="width_32">
+									<img src="images/docusign.png" class="img-fluid">
+								</div>
+								<div class="m_l_10">
+									<div class="title">DocuSign</div>
+									<div class="sub_title">E-Sign Vendor</div>
+								</div>
+							</div>
+							<div class="desp width_50p">
+								DocuSign allows you to sign documents, request signatures, check document status and view audit trails.
+							</div>
+						</div>
+						<form class="form-horizontal" action="#" method="POST" id="docu_form">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Client ID</label>
+									<input type="text" name="client_id" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Client Secret</label>
+									<input type="text" name="client_secret" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Impersonated User ID</label>
+									<input type="text" name="impersonated_id" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 align_center">
+									<input class="common_btn disable_btn" type="submit" value="Connect">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="mortech_modal">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content custom_modal">
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-12">
+								<div class="space_between content_center">
+									<h4 class="modal-title">Integration with</h4>
+									<img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+								</div>
+							</div>
+						</div>
+						<div class="content_center m_tb_10">
+							<div class="content_center width_50p">
+								<div class="width_32">
+									<img src="images/mortech_modal.png" class="img-fluid">
+								</div>
+								<div class="m_l_10">
+									<div class="title">Mortech</div>
+									<div class="sub_title">Pricing Engine</div>
+								</div>
+							</div>
+							<div class="desp width_50p">
+								Mortech features automated mortgage loan and PMI pricing eligibility and product selection.
+							</div>
+						</div>
+						<form class="form-horizontal" action="#" method="POST" id="mortech_form">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Customer ID</label>
+									<input type="text" name="customer_id" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Third Party Name</label>
+									<input type="text" name="third_party" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>License key</label>
+									<input type="text" name="license_key" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Email address</label>
+									<input type="text" name="email_address" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 align_center">
+									<input class="common_btn disable_btn" type="submit" value="Connect">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="meridian_modal">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content custom_modal">
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-12">
+								<div class="space_between content_center">
+									<h4 class="modal-title">Integration with</h4>
+									<img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+								</div>
+							</div>
+						</div>
+						<div class="content_center m_tb_10">
+							<div class="content_center width_50p">
+								<div class="width_32">
+									<img src="images/meridian_link.png" class="img-fluid">
+								</div>
+								<div class="m_l_10">
+									<div class="title">Meridian</div>
+									<div class="sub_title">Pricing Engine</div>
+								</div>
+							</div>
+							<div class="desp width_50p">
+								MeridianLink offers multi-channel account opening and loan origination software and digital lending solutions.
+							</div>
+						</div>
+						<form class="form-horizontal" action="#" method="POST" id="meridian_form">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Smart API user name</label>
+									<input type="text" name="smart_name" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Smart API password</label>
+									<input type="text" name="smart_api" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Smart API Interface Identifier (For Production)</label>
+									<input type="text" name="smart_interface" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 align_center">
+									<input class="common_btn disable_btn" type="submit" value="Connect">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="attom_modal">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content custom_modal">
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-12">
+								<div class="space_between content_center">
+									<h4 class="modal-title">Integration with</h4>
+									<img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+								</div>
+							</div>
+						</div>
+						<div class="content_center m_tb_10">
+							<div class="content_center width_50p">
+								<div class="width_32">
+									<img src="images/attom.png" class="img-fluid">
+								</div>
+								<div class="m_l_10">
+									<div class="title">Attom</div>
+									<div class="sub_title">Property data</div>
+								</div>
+							</div>
+							<div class="desp width_50p">
+								ATTOM Data provides property data and real estate data licensing for more than 155 million properties.
+							</div>
+						</div>
+						<form class="form-horizontal" action="#" method="POST" id="attom_form">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Attom API Key</label>
+									<input type="text" name="attom_key" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 align_center">
+									<input class="common_btn disable_btn" type="submit" value="Connect">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="zillow_modal">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content custom_modal">
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-12">
+								<div class="space_between content_center">
+									<h4 class="modal-title">Integration with</h4>
+									<img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+								</div>
+							</div>
+						</div>
+						<div class="content_center m_tb_10">
+							<div class="content_center width_50p">
+								<div class="width_32">
+									<img src="images/modal_zillow.png" class="img-fluid">
+								</div>
+								<div class="m_l_10">
+									<div class="title">Zillow</div>
+									<div class="sub_title">Property data</div>
+								</div>
+							</div>
+							<div class="desp width_50p">
+								Zillow’s GetSearchResults API finds a property for a specified address and return a valuation range.
+							</div>
+						</div>
+						<form class="form-horizontal" action="#" method="POST" id="zillow_form">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Zillow Web Service ID (zws-id)</label>
+									<input type="text" name="zillow_web" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 align_center">
+									<input class="common_btn disable_btn" type="submit" value="Connect">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="twillio_modal">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content custom_modal">
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-12">
+								<div class="space_between content_center">
+									<h4 class="modal-title">Integration with</h4>
+									<img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+								</div>
+							</div>
+						</div>
+						<div class="content_center m_tb_10">
+							<div class="content_center width_50p">
+								<div class="width_32">
+									<img src="images/twillio.png" class="img-fluid">
+								</div>
+								<div class="m_l_10">
+									<div class="title">Twillio</div>
+									<div class="sub_title">Dialer</div>
+								</div>
+							</div>
+							<div class="desp width_50p">
+								Lorem ipsum dolor sit amet, consectet adipiscing elit. Cras semper faucibus egestas risus.
+							</div>
+						</div>
+						<form class="form-horizontal" action="#" method="POST" id="twillio_form">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Account SID</label>
+									<input type="text" name="account_sid" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<label>Auth Token</label>
+									<input type="text" name="auth_token" class="input_text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 align_center">
+									<input class="common_btn disable_btn" type="submit" value="Connect">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main> <!-- /content -->
+</body>
+
+<script type="text/javascript">
+	function toggleMainmenu(e) {
+		e.classList.toggle("active");
+		document.querySelector("aside").classList.toggle("active");
+	}
+
+	function toggleMainmenu(e) {
+		e.classList.toggle("active");
+		document.querySelector("aside").classList.toggle("active");
+	}
+	jQuery.noConflict();
+	jQuery(document).ready(function($){
+        		// Change the button text & add active class
+        		$('.jRadioDropdown').change(function() {
+        			var dropdown = $(this).closest('.dropdown');
+        			var thislabel = $(this).closest('label');
+
+        			dropdown.find('label').removeClass('active');
+        			if( $(this).is(':checked') ) {
+        				thislabel.addClass('active');
+        				dropdown.find('ins').html( thislabel.text() );
+        			}
+
+        		});    
+
+//Add tabindex on labels
+$('label.dropdown-item').each(function (index, value){
+	$(this).attr('tabindex', 0 );
+	$(this).find('input').attr('tabindex', -1 );
+});
+
+//Add keyboard navigation
+$('label.dropdown-item').keypress(function(e){
+	if((e.keyCode ? e.keyCode : e.which) == 13){
+		$(this).trigger('click');
+	}
+});
+$('.user').click(function (e) {
+	e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').toggle();
+    });
+$('.notification').click(function (e) {
+	e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-notification').toggle();
+    });
+$('.top_menu').click(function (e) {
+	e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').hide();
+        $('.nav-second-level').addClass('collapse').removeClass('show');
+    });
+if ($(window).width() >= 767) {
+		// Select and loop the container element of the elements you want to equalise
+		$('.scroll_body').each(function(){  
+
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.desp', this).each(function(){
+
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			    	highestBox = $(this).height(); 
+			    }
+
+			});  
+
+			  // Set the height of all those children to whichever was highest 
+			  $('.desp',this).height(highestBox);
+
+			}); 
+		$('.scroll_body').each(function(){  
+
+			  // Cache the highest
+			  var highestBox = 0;
+			  
+			  // Select and loop the elements you want to equalise
+			  $('.img_text', this).each(function(){
+
+			    // If this box is higher than the cached highest then store it
+			    if($(this).height() > highestBox) {
+			    	highestBox = $(this).height(); 
+			    }
+
+			});  
+
+			  // Set the height of all those children to whichever was highest 
+			  $('.img_text',this).height(highestBox);
+
+			}); 
+	}
+});
+	$(document).ready(function() {
+
+		$("#modalform").validate({
+			rules: {
+				company_name: "required",
+				server_name : "required",
+				site_name : "required",
+				user_name : "required",
+				password : "required",
+				authorization_key : "required",
+				org_code : "required"
+			},
+			messages: {
+				company_name: "Please enter a valid company website",
+				server_name : "Please enter a valid server name",
+				site_name : "Please enter a valid site name",
+				user_name : "Please enter a valid phone number",
+				password : "Please enter a password",
+				authorization_key : "Please enter a valid authorization key",
+				org_code : "Please enter a valid org code"
+			},
+			submitHandler: function(form) {
+				form.submit();
+			}
+
+		});
+		$("#modal_form").validate({
+			rules: {
+				company_id: "required",
+				compaign_id : "required"
+			},
+			messages: {
+				company_id: "Please enter a valid company ID",
+				compaign_id : "Please enter a valid compaign ID"
+			},
+			submitHandler: function(form) {
+				form.submit();
+			}
+
+		});
+		$("#twillio_form").validate({
+			rules: {
+				account_sid: "required",
+				auth_token : "required"
+			},
+			messages: {
+				account_sid: "Please enter a valid Account SID",
+				auth_token : "Please enter a valid Auth Token"
+			},
+			submitHandler: function(form) {
+				form.submit();
+			}
+
+		});
+		$("#hello_form").validate({
+			rules: {
+				sign_api_key: "required"
+			},
+			messages: {
+				sign_api_key: "Please enter a valid Sign Api Key"
+			},
+			submitHandler: function(form) {
+				form.submit();
+			}
+
+		});
+		$("#docu_form").validate({
+			rules: {
+				client_id: "required",
+				client_secret: "required",
+				impersonated_id: "required"
+			},
+			messages: {
+				client_id: "Please enter a valid client ID",
+				client_secret: "Please enter a valid client secret",
+				impersonated_id: "Please enter a valid impersonated user id"
+			},
+			submitHandler: function(form) {
+				form.submit();
+			}
+
+		});
+		$("#attom_form").validate({
+			rules: {
+				attom_key: "required"
+			},
+			messages: {
+				attom_key: "Please enter a valid Attom API Key"
+			},
+			submitHandler: function(form) {
+				form.submit();
+			}
+		});
+		$("#zillow_form").validate({
+			rules: {
+				zillow_web: "required"
+			},
+			messages: {
+				zillow_web: "Please enter a valid Zillow Web Service ID (zws-id)"
+			},
+			submitHandler: function(form) {
+				form.submit();
+			}
+		});
+		$("#meridian_form").validate({
+			rules: {
+				smart_name: "required",
+				smart_api: "required",
+				smart_interface: "required"
+			},
+			messages: {
+				smart_name: "Please enter a valid Smart API user name",
+				smart_api: "Please enter a valid Smart API password",
+				smart_interface: "Please enter a valid Smart API Interface Identifier (For Production)"
+			},
+			submitHandler: function(form) {
+				form.submit();
+			}
+
+		});
+		$('form :input[type="submit"]').prop('disabled', true);
+		$('form input[type="text"]').keyup(function() {
+			if($(this).val() != '') {
+				$('form :input[type="submit"]').prop('disabled', false).removeClass('disable_btn').addClass('default_btn');
+			}
+		});
+	});
+</script>
+</html>

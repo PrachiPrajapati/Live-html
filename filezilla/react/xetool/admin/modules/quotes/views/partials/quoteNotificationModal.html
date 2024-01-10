@@ -1,0 +1,49 @@
+<div class="modal fade slide-right" id="notificationModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="loader-OnCategoryAdd" pg-portlet  on-refresh="refreshTest('.loader-OnCategoryAdd')">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="pg-close fs-14">
+                        </i>
+                    </button>
+                    <div class="container-xs-height full-height">
+                        <div class="row-xs-height">
+                            <div class="modal-body col-xs-height col-middle" id="notificationModal">
+                                <div class="clearfix">
+                                    <div class="category-head">
+                                        <xe-translate text-value="Quote Notifications">
+                                        </xe-translate>
+                                    </div>
+                                </div>
+                                <img class="demo-mw-50 modal-noti-height m-t-10" ng-show="isNotiPreloader" src="assets/img/demo/progress.svg" alt="Progress" style="margin-left: 117px;margin-top: 162px;">
+                                <div class="modal-noti-height m-t-10" ng-hide = 'isNotiPreloader'>                             
+                                    <div class="alert alert-success pointer m-b-2" role="alert" ng-repeat="quote_noti in quoteNotificationList" ng-click = "openQuoteDetails(quote_noti.quote_id, quote_noti.converse_id)" ng-hide = 'quote_noti.notes == ""'>
+                                        <h3 style="font-size: 16px;line-height: 18px;margin: 0;padding: 0;font-weight: 600;color: #0a7c71;">
+                                            {{quote_noti.prefix_quote_id}} - {{quote_noti.subject}}
+                                        </h3>
+                                        <span class = "noti_title" ng-if = "quote_noti.action == 'rejected'">
+                                            {{ quote_noti.notes }}
+                                        </span>
+                                        <span ng-if = "quote_noti.action != 'rejected'">
+                                            {{ quote_noti.notes }}
+                                        </span>
+                                        <span class="text_noti_time m-t-10 block text-right"> 
+                                           {{quote_noti.created_date}}
+                                        </span>                                        
+                                    </div>                           
+                                    <span ng-show = "isNotifications">
+                                        <p class="font-normal text-lg text-center m-t-150">
+                                            <xe-translate text-value = "No Notifications found">
+                                            </xe-translate>
+                                        </p>
+                                    </span>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

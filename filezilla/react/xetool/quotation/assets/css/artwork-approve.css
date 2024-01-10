@@ -1,0 +1,590 @@
+@font-face {
+    font-family: 'Graphik Web';
+    src: url("../fonts/Graphik-Light-Web.eot");
+    src: url("../fonts/Graphik-Light-Web.eot?#iefix") format("embedded-opentype"), url("../fonts/Graphik-Light-Web.woff") format("woff"), url("../fonts/Graphik-Light-Web.ttf") format("truetype"), url("../fonts/Graphik-Light-Web.svg#Graphik-Light") format("svg");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Graphik Web';
+    src: url("../fonts/Graphik-Regular-Web.eot");
+    src: url("../fonts/Graphik-Regular-Web.eot?#iefix") format("embedded-opentype"), url("../fonts/Graphik-Regular-Web.woff") format("woff"), url("../fonts/Graphik-Regular-Web.ttf") format("truetype"), url("../fonts/Graphik-Regular-Web.svg#Graphik-Regular") format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Graphik Web';
+    src: url("../fonts/Graphik-Medium-Web.eot");
+    src: url("../fonts/Graphik-Medium-Web.eot?#iefix") format("embedded-opentype"), url("../fonts/Graphik-Medium-Web.woff") format("woff"), url("../fonts/Graphik-Medium-Web.ttf") format("truetype"), url("../fonts/Graphik-Medium-Web.svg#Graphik-Medium") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Graphik Web';
+    src: url("../fonts/Graphik-Semibold-Web.eot");
+    src: url("../fonts/Graphik-Semibold-Web.eot?#iefix") format("embedded-opentype"), url("../fonts/Graphik-Semibold-Web.woff") format("woff"), url("../fonts/Graphik-Semibold-Web.ttf") format("truetype"), url("../fonts/Graphik-Semibold-Web.svg#Graphik-Semibold") format("svg");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+body {
+    font-family: 'Graphik Web';
+    font-weight: 400;
+    background-color: #ebedf1;
+}
+
+.artworkApproveWrap {
+    padding: 50px 0;
+    height: 100vh;
+}
+
+.artworkApproveWrap .pageTitle {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.custom-list-group .list-group-item {
+    padding: 15px;
+}
+
+.custom-list-group .list-group-item-heading {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 11px;
+    color: #777;
+    margin: 0 0 3px 0;
+}
+
+.custom-list-group .list-group-item-text {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    color: #0ba73e;
+    margin-top: 6px;
+}
+
+.panel-custom {
+    margin: 0;
+    border-color: #ddd !important;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column;
+    height: calc(100vh - 138px);
+}
+
+.panel-custom .panel-heading {
+    background: #d8dde6;
+    padding: 10px 20px;
+    min-height: initial;
+    font-size: 14px;
+    letter-spacing: initial;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.panel-custom .panel-body {
+    margin: 0;
+    padding: 20px 6px 20px 20px !important;
+    height: 100% !important;
+}
+
+#conversations.scroll-box {
+    height: 100%;
+    padding-right: 10px;
+}
+
+.panel-custom .conversation-footer {
+    padding: 0px;
+}
+
+.panel-custom .conversation-footer .form-group {
+    display: flex;
+    margin: 0;
+}
+
+.panel-custom .conversation-footer .form-control {
+    border-radius: 0;
+    height: 46px;
+    padding: 4px 12px;
+    border: 0;
+    background: transparent !important;
+}
+
+.panel-custom .conversation-footer .btn {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 8px 8px 0;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: initial !important;
+}
+
+.panel-custom .conversation-body .admin-left-text {
+    margin: 0;
+    padding: 0 30px;
+    width: auto;
+    min-height: 45px;
+    border-radius: 30px 30px 30px 0;
+    background-color: #dde3f7;
+    border: 2px solid #dde3f7;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 15px;
+    color: #333;
+}
+
+.panel-custom .conversation-body .user-right-text {
+    margin: 0;
+    padding: 0 30px;
+    width: auto;
+    min-height: 45px;
+    border-radius: 30px 30px 0 30px;
+    color: #fff;
+    background-color: #6886ca;
+    border: 2px solid #6886ca;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 15px;
+}
+
+/************* scroll bar start *************/
+.scroll-bar-wrap {
+    width: 100%;
+    position: relative;
+}
+
+.scroll-box {
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.scroll-box::-webkit-scrollbar {
+    width: .4em;
+    background: rgba(0, 0, 0, .0);
+}
+
+.scroll-box::-webkit-scrollbar,
+.scroll-box::-webkit-scrollbar-thumb {
+    overflow: visible;
+    border-radius: 50px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .4);
+}
+
+.cover-bar {
+    position: absolute;
+    background: #ebedf1;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: .4em;
+    -webkit-transition: all .5s;
+    opacity: 1;
+}
+
+.scroll-bar-wrap:hover .cover-bar {
+    opacity: 0;
+    -webkit-transition: all .5s;
+}
+
+/************* scroll bar end *************/
+/*convesation css*/
+.conversation-body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 450px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    margin-top: 15px;
+    padding: 20px 30px;
+    border: 1px solid rgba(230, 230, 230, 1);
+    overflow-x: hidden;
+}
+
+.conversation-footer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: white;
+}
+
+.conversation-footer .form-control {
+    border-radius: 0;
+    height: 60px;
+    padding: 0 60px 0 30px;
+}
+
+.conversation-footer .btn-primary {
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    font-weight: 700;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* from admin start */
+
+.conversation-body .chatBubble {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.conversation-body .chatBubble .chatBubbleWrap {
+    display: flex;
+    flex-flow: column;
+    /* max-width: 55%; */
+    max-width: 380px;
+}
+
+.chatBubble .chatFlex {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 20px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.chatBubble .chatFlex .chatText {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.chatBubble .chatFlex .chatText h3 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.chatBubble .chatFlex .chatText p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.chatBubble .chatFlex .chatImgGroup {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.chatBubble .chatFlex .chatImgGroup .chatImgWrap {
+    margin-top: 14px;
+    margin-right: 6px
+}
+
+.chatBubble .chatFlex .chatImgGroup .chatImgWrap:last-child {
+    margin-right: 0px;
+}
+
+.chatBubble .chatFlex .chatImgGroup .chatImgWrap .chatImgBox {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.chatBubble .chatFlex .chatImgGroup .chatImgWrap .chatImgBox img {
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.chatBubble .chatFlex .chatImgGroup .chatImgWrap .chatImgBox .downHover {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    padding: 28px;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+.chatBubble .chatFlex .chatImgGroup .chatImgWrap .chatImgBox:hover .downHover,
+.chatBubble .chatFlex .chatImgGroup .chatImgWrap .chatImgBox:focus .downHover {
+    opacity: 1;
+}
+
+.chatBubble .chatFlex .chatImgGroup .chatImgWrap .chatImgLabel {
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.chatBubble .chatFlex .chatBtnGroup {
+    margin-top: 12px;
+}
+
+.chatBubble .chatFlex .chatBtnGroup .btn-sm {
+    padding: 3px 8px;
+    font-size: 11px;
+}
+
+.chatBubble .chatTime {
+    margin-top: 2px;
+    color: #aaa;
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.chatBubble.fromAdmin {
+    justify-content: flex-end;
+}
+
+.chatBubble.fromCustomer {
+    justify-content: flex-start;
+}
+
+.chatBubble.fromAdmin .chatBubbleWrap {
+    align-items: flex-end;
+}
+
+.chatBubble.fromCustomer .chatBubbleWrap {
+    align-items: flex-start;
+}
+
+.chatBubble.fromAdmin .chatFlex {
+    background-color: #cae8ca;
+    border: 1px solid #cae8ca;
+    color: #333;
+    border-bottom-right-radius: 0;
+}
+
+.chatBubble.fromAdmin .chatFlex.alertBg {
+    background: #fcce6c;
+    border-color: #fcce6c;
+}
+
+.chatBubble.fromCustomer .chatFlex {
+    background-color: #f2f2f3;
+    border: 1px solid #f2f2f3;
+    color: #333;
+    border-bottom-left-radius: 0;
+}
+
+.chatBubble.fromCustomer .chatFlex.approved {
+    background-color: #5cb85c;
+    border: 1px solid #5cb85c;
+    color: #fff;
+}
+
+.chatBubble.fromAdmin .chatFlex::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid #cae8ca;
+    border-left: 10px solid transparent;
+    border-right: 0px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    right: -1px;
+}
+
+.chatBubble.fromAdmin .chatFlex.alertBg::after {
+    border-top-color: #fcce6c;
+}
+
+.chatBubble.fromCustomer .chatFlex::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid #f2f2f3;
+    border-left: 0px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: -1px;
+}
+
+.chatBubble.fromCustomer .chatFlex.approved::after {
+    border-top-color: #5cb85c;
+}
+
+.chatBubble.fromAdmin .chatTime {
+    margin-right: 11px;
+}
+
+.chatBubble.fromCustomer .chatTime {
+    margin-left: 11px;
+}
+
+/* Order Info */
+.orderInfo {}
+
+.orderInfo .card {
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 1px;
+    margin-bottom: 20px;
+}
+
+.orderInfo .card .card-header {
+    background: 0 0;
+    border-radius: 0;
+    border-bottom: 0;
+    padding: 20px 20px 7px;
+    position: relative;
+    z-index: 3;
+    min-height: 48px;
+}
+
+.orderInfo .card .card-header .card-title {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+    padding: 0;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+}
+
+.orderInfo .card .card-body {
+    padding: 20px;
+}
+
+.orderInfo .card .card-header+.card-body {
+    padding-top: 0;
+}
+
+.orderInfo .card .card-body .infoFlex {
+    display: flex;
+    flex-flow: column;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow {
+    margin-bottom: 12px;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow:last-child {
+    margin-bottom: 4px;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow .infoBox {
+    display: flex;
+    align-items: center;
+}
+
+
+.orderInfo .card .card-body .infoFlex .infoRow .infoBox .item-heading {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    color: #666;
+    min-width: 100px;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow .infoBox .item-text {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow .infoBox .item-text::before {
+    content: ':';
+    position: absolute;
+    left: -12px;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow .productBox {
+    display: flex;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow .productBox .productImg {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow .productBox .productImg img {
+    max-width: 100%;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow .productBox .productTxt {
+    display: flex;
+    flex-flow: column;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow .productBox .productTxt .productName {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow .productBox .productTxt .productTags {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -2px;
+}
+
+.orderInfo .card .card-body .infoFlex .infoRow .productBox .productTxt .productTags .tags {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    background: #d7dbe2;
+    line-height: 11px;
+    padding: 4px 6px;
+    border-radius: 2px;
+    margin: 0 2px;
+}
+.data-loader
+{
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ebedf1;
+}
+.order-proof-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.modal-backdrop
+{
+    background-color: rgba(0, 0, 0, 0.35);
+}

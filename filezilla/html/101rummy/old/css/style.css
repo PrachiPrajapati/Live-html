@@ -1,0 +1,451 @@
+/****font-face included*****/
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fonts/OpenSauceSans-Regular.eot');
+    src: url('../fonts/OpenSauceSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSauceSans-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSauceSans-Regular.woff') format('woff'),
+        url('../fonts/OpenSauceSans-Regular.ttf') format('truetype'),
+        url('../fonts/OpenSauceSans-Regular.svg#OpenSauceSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fonts/OpenSauceSans-BoldItalic.eot');
+    src: url('../fonts/OpenSauceSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSauceSans-BoldItalic.woff2') format('woff2'),
+        url('../fonts/OpenSauceSans-BoldItalic.woff') format('woff'),
+        url('../fonts/OpenSauceSans-BoldItalic.ttf') format('truetype'),
+        url('../fonts/OpenSauceSans-BoldItalic.svg#OpenSauceSans-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fonts/OpenSauceSans-Medium.eot');
+    src: url('../fonts/OpenSauceSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSauceSans-Medium.woff2') format('woff2'),
+        url('../fonts/OpenSauceSans-Medium.woff') format('woff'),
+        url('../fonts/OpenSauceSans-Medium.ttf') format('truetype'),
+        url('../fonts/OpenSauceSans-Medium.svg#OpenSauceSans-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fonts/OpenSauceSans-SemiBoldItalic.eot');
+    src: url('../fonts/OpenSauceSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSauceSans-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/OpenSauceSans-SemiBoldItalic.woff') format('woff'),
+        url('../fonts/OpenSauceSans-SemiBoldItalic.ttf') format('truetype'),
+        url('../fonts/OpenSauceSans-SemiBoldItalic.svg#OpenSauceSans-SemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fonts/OpenSauceSans-SemiBold.eot');
+    src: url('../fonts/OpenSauceSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSauceSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/OpenSauceSans-SemiBold.woff') format('woff'),
+        url('../fonts/OpenSauceSans-SemiBold.ttf') format('truetype'),
+        url('../fonts/OpenSauceSans-SemiBold.svg#OpenSauceSans-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fonts/OpenSauceSans-MediumItalic.eot');
+    src: url('../fonts/OpenSauceSans-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSauceSans-MediumItalic.woff2') format('woff2'),
+        url('../fonts/OpenSauceSans-MediumItalic.woff') format('woff'),
+        url('../fonts/OpenSauceSans-MediumItalic.ttf') format('truetype'),
+        url('../fonts/OpenSauceSans-MediumItalic.svg#OpenSauceSans-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fonts/OpenSauceSans-Bold.eot');
+    src: url('../fonts/OpenSauceSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSauceSans-Bold.woff2') format('woff2'),
+        url('../fonts/OpenSauceSans-Bold.woff') format('woff'),
+        url('../fonts/OpenSauceSans-Bold.ttf') format('truetype'),
+        url('../fonts/OpenSauceSans-Bold.svg#OpenSauceSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+/*typography Css Strat*/
+h1                                          { font-size: 42px; line-height: 56px; font-weight: bold; text-transform:none; color: #000; text-align: center;  }
+h2                                          { margin-bottom: 32px; font-size: 36px; line-height: 44px; font-weight: 600; text-align: center; text-transform: none; color:#000; }
+h4                                          { font-size: 20px; line-height: 30px; font-weight: normal; text-transform: none; color: #000000;}
+h5                                          { font-size: 22px; line-height: 28px; font-weight:600; color:#0A0A0A; text-transform: uppercase;  }
+h6                                          { font-size: 18px; line-height: 24px; text-transform: none; font-weight: 600; color:#000;   }
+p                                           { font-size: 18px; line-height: 30px; color: #000; text-transform: none; font-weight: 400; }
+/*typography Css End*/
+/*****common section CSS start****/
+*                                           { margin: 0px; padding: 0px; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html                                        { scroll-behavior: smooth; }
+body                                        { font-family: 'Open Sauce Sans'; font-size:15px; line-height:20px; }
+img                                         { border: 0px;}
+ul,ol                                       { list-style: none;}
+a:hover, a:active,a:focus                   { color:#fff; text-decoration: none;}
+a:focus, a:active, a:visited                { outline: none; border: 0px;}
+.text-none                                  { text-transform: none  }
+button:hover,button:focus,button:active     { outline: 0;}
+button.navbar-toggler                       { outline:0;}
+.common-space                               { padding:80px 0;}
+.heading                                    { margin-bottom:25px;}
+.overlay                                    { position: relative;}
+.overlay::before                            { content:""; position: absolute; top:0; left:0; width: 100%; height:100%; background-color: rgba(0,0,0,0.8437);}
+.forgot-pass                                { font-size: 12px; line-height: 16px; color:#fff; transition: all 0.5s ease; text-transform: none; }
+.forgot-pass:hover,.forgot-pass:focus,.forgot-pass:active { color:#FDBB1C; text-decoration: underline;}
+.login-btn ,.sign-up-btn                    { padding: 11px 13px; margin-right: 18px; display: block;  min-width: 106px; text-transform: none; text-align: center; font-size: 18px; line-height: 24px; background-color: #FDBB1C; color:#fff; border:0; border-radius: 4px; transition: all 0.5s ease; cursor: pointer; }
+.login-btn:hover,.login-btn:focus,.login-btn:active,.sign-up-btn { background-color: #1D8722;}
+.sign-up-btn                                { margin-right: 0 !important;}
+.sign-up-btn:hover,.sign-up-btn:focus,.sign-up-btn:active { background-color: #FDBB1C;}
+.sign-up-form                               { padding:110px 22px 30px; background-color: #fff; position: relative; z-index: 3; border-radius: 4px;}
+.sign-up-form .form-group                   { margin-bottom: 15px; position: relative;}
+.form-control input,
+.sign-up-form .form-group .form-control     { padding:0; border: 1px solid #f0f0f0; background: transparent; border-radius: 4px; width: 100%;}
+.form-control input                         { padding: 11px 15px 11px 60px; background: #fff; font-size: 16px; line-height: 22px; color: #9d9d9d; }
+.form-control input:focus                   { border-color: #FDBB1C;}
+.form-group .img-box                        { position: absolute; top: 50%; transform: translateY(-50%); left: 25px;}
+.form-group .img-box img                    { width:18px; height:18px;}
+.form-btn input                             { margin: 40px auto 0; display: inline-block;}
+.banner-details                             { height: 100vh; background: url('../images/login-bg.jpeg')no-repeat center center/cover;}
+.banner-details .sign-up-form               { padding: 32px 22px 30px;  }
+.banner-details .logo                       { margin-bottom: 32px; display: inline-block; }
+.banner-details .banner-content             { position: relative; z-index: 10; text-align: center; width: 28%;}
+.navbar-toggler                             { padding:0;}
+/*****common section Css End****/
+/***Header-section Css CSS Start****/
+.header-section                             { padding:5px 15px 22px;  position: fixed; width: 100%; top:0; background-color: #8A0602; z-index: 100; transition: all 0.5s ease;}
+.header-section.header-style                { padding: 0px 15px 13px;}
+.navbar                                     { padding: 0; }
+.navbar-brand                               { padding:0; margin:0; max-width: 20%;  }
+.header-section .form-group                 { margin:0 18px 0 0; }
+.form-group .form-control                   { padding: 14px 12px; font-size: 14px; line-height: 18px; border: 0; color:#383838;}
+.forgot-box .form-group                     { margin-top: 20px; max-width: 100%; }
+/***Header-section Css End****/
+/******Banner-Section CSS Start********/
+.banner-section                             { margin-top: 111px; background: url('../images/banner.jpg')no-repeat center center/cover; position: relative;}
+.banner-desc                                { padding: 50px 0 130px;}
+.banner-desc h1                             { color:#fff;}
+.join-now-form                              { margin: 0 0 0 auto; max-width: 69.5%; }
+.sign-up-form .sign-up-btn                  { width:100%;}
+.join-now-form .img-shape                   { margin:0 auto; position: absolute; width:80%; top:-1px; left:50%; transform: translate(-50%);z-index: 4;  }
+.join-now-form .img-shape h4                { margin:0; position: absolute; top:8px; left:50%; transform: translate(-50%); width: 60%; text-align: center;}
+.join-now-form:before                       { content:""; background-color: #FDBB1C; position: absolute; top:-8px; left:50%; transform: translate(-50%); width:80%; height:10px; z-index: 1;}
+h4 span.price                               { font-size: 24px; font-weight: 600; color:#9B0000;}
+/*****Banner-Section Css End******/
+/* service Banner  */
+.service-banner-section                     { margin-top: -75px; position: relative;}
+.service-banner-section .service-item       { width: calc(100% / 4); text-align: center; }
+.service-banner-section .service-item .img-item { margin: 0 auto; width:140px; height:140px; background-color: #fff; border-radius: 50%;}
+/*****Feature-Section CSS Start*******/
+.feature-item                               { padding:15px; border:1px solid rgba(0,0,0,0.1); border-radius: 4px;} 
+.feature-item .img-box                      { margin-bottom: 15px; width:100px; height:100px; background-color: #B3180C; border-radius: 4px; }
+.feature-list li                            { padding-left: 20px; margin-bottom: 10px; position: relative;  font-size: 18px; line-height: 22px; color:#2C2C2C;}
+.feature-list li:before                     { content:"\f00c"; position: absolute; top:50%; left:0px; font-weight: bold; font-size: 14px; transform: translate(0 , -50%); font-family: 'Font Awesome\ 5 Free'; color:#2C2C2C;}
+.feature-section .sign-up-btn               { width:312px; }
+/****Feature-Section Css End****/
+/******** what-player-say-section CSS Start ********/
+.what-player-say-section                    { background-color: #FFFAFA;}
+.player-feedback                            { padding: 15px 10px; margin-bottom: 30px; position: relative; min-height: 190px; background-color: #fff; border: 1px solid rgba(0,0,0,0.1);}
+.player-feedback::after                     { content:""; position: absolute; width:25px; height:25px; bottom:0; left:30%; transform: translateY(50%) rotate(45deg); background-color: #fff; border: 1px solid rgba(0,0,0,0.1); border-top: none; border-left: none; }
+.player-img-box                             { width:60px; height:60px; border-radius: 50%; overflow: hidden;} 
+.item                                       { margin:0 8px;}
+.slick-dots                                 { margin:15px 0 0; margin-left:0; position:relative; bottom:0px; left:0; width:100%;  display: flex; justify-content:center; list-style: none; }
+.slick-dots li                              { padding: 0; margin:0 6px; position: relative;  width: 12px; height: 12px;  background:#8A0602; opacity: 14.2%; border-radius: 50%;  cursor: pointer; transition: all 0.3s ease;}
+.slick-dots li button                       { display: none;}
+.slick-dots li:first-child                  { margin-left:0;}
+.slick-dots li.slick-active                 { opacity: 100%; } 
+/******** what-player-say-section Css End ********/
+/********* Refer-Earn Section CSS Start *******/
+.refer-earn-content > img                   { width:50%;}
+.content-box .sign-up-btn                   { margin-top:15px; width:auto; display: inline-block; min-width: 142px; }
+/********* Refer-Earn Section Css End *******/
+/********Rummy-for-mobile-section CSS Start*********/
+.rummy-for-mobile-section                   { background-color: #FFFAFA;}
+.rummy-mobile-content .img-box img          { width: 90%;  position: relative; z-index: 10;}
+.rummy-mobile-content .img-box img.mobile-layer { position: absolute; bottom: -2%; left: 12%; z-index: 5; }
+.sign-up-btn.dwonload-btn                   { padding: 16px 24px;}
+.round-top                                  { position: absolute; top: -5%; right: 30%; width:115px; height:115px; background-color: #000000; border-radius: 50%;}
+/********Rummy-for-mobile-section Css End*********/
+/****deals-Section CSS Start*****/
+.deals-item .img-box                        { margin:15px 0 25px;}
+.deals-item                                 { padding:15px 7px; height: 100%; border: 1px solid rgba(0,0,0,0.1);}
+/* Deals-section Css End */
+/****** footer-section CSS start*******/
+.footer-section                             { background-color: #8A0602;}
+.footer-section .logo-box                   { margin-bottom:30px; display: block; }
+.footer-section h6                          { margin: 15px 0; font-size: 20px; line-height: 26px; color:#fff; font-weight: bold;}
+.bitmap-logo li                             { margin:0 15px; text-align: center;}
+.bitmap-logo li img                         { width:70%;}
+.social-list                                { margin-top: 30px;}
+.social-menu li                             { margin:0 10px; }
+.social-menu li a                           { display: flex; justify-content: center; align-items: center; width:42px; height: 42px; font-size: 27px; line-height: 32px;  background-color: #fff; color:#8A0602; border-radius: 50%; transition: all 0.3s ease; }
+.social-menu li a:hover,.social-menu li a:focus,.social-menu li a:active    { color:#FDBB1C;}
+.quick-links li                             { margin:10px 0;}
+.quick-links li a                           { font-size: 14px; line-height: 18px; display: block; font-weight: 400; text-transform: none; color:#fff; transition: all 0.3s ease; }
+.quick-links li a:hover,.quick-links li a:focus,.quick-links li a:active { color:#FDBB1C; }
+.footer-section .img-item                   { flex-wrap: wrap; margin: 0 -7px;}
+.footer-section .img-item li                { padding: 14px 7px 0px; width: calc(100%/3);}
+.copyright-box                              { padding: 16px 0; background-color: #730300;}
+.copyright-box p                            { margin:0; color:#fff; font-size: 12px; line-height: 16px; font-weight: 400; text-transform: none; transition: all 0.3s ease;}
+/******** footer-section Css end ************/
+/*****LogIN Page CSS Start*****/
+.login-page .forgot-pass                    { text-align: right; color:#383838;}
+.login-page .forgot-pass:hover,.login-page .forgot-pass:focus,.login-page .forgot-pass:active { color:#FDBB1C;}
+/*****LogIN Page Css End*****/
+/**********Responsive Css CSS Start***********/
+@media(min-width:992px) and (max-width:1199px)/* laptop */
+{
+/*typography Css Strat*/
+h1                                          { font-size: 32px; line-height: 46px; }
+h2                                          { margin-bottom: 25px; font-size: 30px; line-height: 38px; }
+h4                                          { font-size: 18px; line-height: 28px; }
+h5                                          { font-size: 19px; line-height: 26px; }
+h6                                          { font-size: 16px; line-height: 22px; }
+p                                           { font-size: 16px; line-height: 28px; }
+/*typography Css End*/
+/*****common section CSS start****/
+.common-space                               { padding:50px 0;}
+.heading                                    { margin-bottom:25px;}
+.login-btn ,.sign-up-btn                    { padding: 7px 12px; margin-right: 12px;  min-width: 98px; font-size: 16px; line-height: 22px; }
+.sign-up-form                               { padding:110px 22px 30px;}
+.sign-up-form .form-group                   { margin-bottom: 12px; }
+.form-control input                         { padding: 8.5px 15px 8.5px 45px;  font-size: 14px; line-height: 21px; }
+.form-group .img-box                        { left: 18px;}
+.form-group .img-box img                    { width:14px; height:14px;}
+.form-btn input                             { margin: 30px auto 0; }
+.banner-details .sign-up-form               { padding: 25px 22px 23px;  }
+.banner-details .banner-content             { width: 32%;}
+.banner-details .logo                       { margin-bottom: 25px; }
+/***Header-section Css CSS Start****/
+.header-section .form-group                 { margin:0 12px 0 0; }
+.form-group .form-control                   { padding: 9px; font-size: 14px; line-height: 18px; border: 0; color:#383838;}
+.forgot-box .form-group                     { margin-top: 21px; max-width: 100%; }
+/***Header-section Css End****/
+/******Banner-Section CSS Start********/
+.banner-section                             { margin-top: 102px; }
+.join-now-form                              { max-width: 72.5%; }
+.banner-desc                                { padding: 30px 0 110px; }
+h4 span.price                               { font-size: 22px; }
+/* service Banner  */
+.service-banner-section                     { margin-top: -62px; }
+.service-banner-section .service-item .img-item {  width:120px; height:120px;}
+/*****Banner-Section Css End******/
+/*****Feature-Section CSS Start*******/
+.feature-item                               { padding:12px; } 
+.feature-item .img-box                      { padding:10px; margin-bottom: 12px; width:80px; height:80px; }
+.feature-item .img-box img                  { max-height: 100%; }
+.feature-list li                            { padding-left: 18px; font-size: 15px; line-height: 20px; }
+.feature-section .sign-up-btn               { width:282px; }
+/****Feature-Section Css End****/
+/******** what-player-say-section CSS Start ********/
+.player-feedback                            { padding: 15px 9px; min-height: 180px; }
+.item                                       { margin:0 8px;}
+.slick-dots                                 { margin-top:12px; }
+.slick-dots li                              { margin:0 5px; width: 10px; height: 10px; }
+/******** what-player-say-section Css End ********/
+/********* Refer-Earn Section CSS Start *******/
+.content-box .sign-up-btn                   { margin-top:15px; min-width: 130px; }
+/********* Refer-Earn Section Css End *******/
+/****deals-Section CSS Start*****/
+.deals-item .img-box                        { margin:12px 0 20px;}
+.deals-item                                 { padding:10px 7px; }
+/* Deals-section Css End */
+/****** footer-section start*******/
+.footer-section h6                          { margin: 12px 0; font-size: 18px; line-height: 24px; }
+.social-menu li                             { margin:0 10px; }
+.social-menu li a                           { width:35px; height: 35px; font-size: 22px; line-height: 30px; }
+.quick-links li                             { margin:8px 0;}
+.quick-links li a                           { font-size: 12px; line-height: 16px; }
+/******** footer-section Css end ************/
+}
+@media(min-width:768px) and (max-width:991px)/* tablet */
+{
+/*typography Css Strat*/
+h1                                          { font-size: 30px; line-height: 44px; }
+h2                                          { margin-bottom: 20px; font-size: 28px; line-height: 36px; }
+h4                                          { font-size: 17px; line-height: 26px; }
+h5                                          { font-size: 18px; line-height: 27px; }
+h6                                          { font-size: 16px; line-height: 22px; }
+p                                           { font-size: 16px; line-height: 28px; }
+/*typography Css End*/
+/*****common section start****/
+.common-space                               { padding:40px 0;}
+.heading                                    { margin-bottom:22px;}
+.login-btn ,.sign-up-btn                    { padding: 7px 11px; margin-right: 8px; min-width: 93px; font-size: 15px; line-height: 20px; }
+.sign-up-form                               { padding:100px 12px 30px;}
+.sign-up-form .form-group                   { margin-bottom: 12px; height: 34px; }
+.form-control input                         { padding: 5.5px 15px 5.5px 45px;  font-size: 14px; line-height: 21px; }
+.form-group .img-box                        { left: 18px;}
+.form-group .img-box img                    { width:12px; height:12px;}
+.form-btn input                             { margin: 30px auto 0; }
+.banner-details .sign-up-form               { padding: 25px 22px 23px;  }
+.banner-details .logo                       { margin-bottom: 25px; }
+.banner-details .banner-content             { width: 38%;}
+/***Header-section Css Start****/
+.header-section                             { padding:6px 5px 26px; }
+.header-section.header-style                { padding: 0px 5px 20px;}
+.header-section .form-group                 { margin:0 8px 0 0; }
+.navbar-collapse > .form-group              { width:28%;} 
+.form-group .form-control                   { padding: 9px; font-size: 12px; line-height: 16px;}
+.forgot-box                                 { width:28%;}
+.forgot-box .form-group                     { margin-top: 21px; max-width: 100%; }
+/***Header-section Css End****/
+/******Banner-Section Start********/
+.banner-section                             { margin-top: 107px; }
+.join-now-form                              { max-width: 81.5%; }
+.banner-desc                                { padding: 30px 0 110px; }
+h4 span.price                               { font-size: 21px; }
+/* service Banner  */
+.service-banner-section                     { margin-top: -54px; } 
+.service-banner-section .service-item .img-item { padding:30px; width:100px; height:100px;}
+/*****Banner-Section Css End******/
+/*****Feature-Section Start*******/
+.feature-item                               { padding:12px; } 
+.feature-item .img-box                      { padding:10px; margin-bottom: 12px; width:80px; height:80px; }
+.feature-item .img-box img                  { max-height: 100%; }
+.feature-list li                            { padding-left: 18px; font-size: 15px; line-height: 20px; }
+.feature-section .sign-up-btn               { width:282px; }
+/****Feature-Section Css End****/
+/******** what-player-say-section Start ********/
+.player-feedback                            { padding: 15px 9px; min-height: 180px; }
+.item                                       { margin:0 8px;}
+.slick-dots                                 { margin-top:12px;  }
+.slick-dots li                              { margin:0 5px; width: 10px; height: 10px; }
+/******** what-player-say-section Css End ********/
+/********* Refer-Earn Section Start *******/
+.content-box .sign-up-btn                   { margin-top:15px; min-width: 130px; }
+/********* Refer-Earn Section Css End *******/
+/* Rummy-for-mobile-section Start */
+.round-top                                  { width: 90px; height: 90px; }
+.sign-up-btn.dwonload-btn                   { padding: 10px 13px; }
+/* Rummy-for-mobile-section Css End */
+/****deals-Section Start*****/
+.deals-item .img-box                        { margin:12px 0 20px;}
+.deals-item                                 { padding:10px 7px; }
+/* Deals-section Css End */
+/****** footer-section start*******/
+.footer-section h6                          { margin: 12px 0; font-size: 17px; line-height: 23px; }
+.logo-box                                   { max-width: 80%;}
+.social-menu li                             { margin:0 10px; }
+.social-menu li a                           { width:30px; height: 30px; font-size: 18px; line-height: 28px; }
+.quick-links li                             { margin:8px 0;}
+.quick-links li a                           { font-size: 12px; line-height: 16px; }
+.partners h6                                { margin-top: 0;}
+.footer-section .img-item                   {  margin: 0;}
+/******** footer-section Css end ************/
+}
+@media(max-width:767px)/* mobile */
+{
+/*typography Css Strat*/
+h1                                          { font-size: 25px; line-height: 32px; }
+h2                                          { margin-bottom: 20px; font-size: 28px; line-height: 36px; }
+h4                                          { font-size: 15px; line-height: 24px; }
+h5                                          { font-size: 16px; line-height: 25px; }
+h6                                          { font-size: 14px; line-height: 20px; }
+p                                           { font-size: 14px; line-height: 23px; }
+/*typography Css End*/
+/*****common section start****/
+.common-space                               { padding:25px 0;}
+.heading                                    { margin-bottom:22px;}
+.login-btn ,.sign-up-btn                    { padding: 6px 12px; margin:15px 0 0; width:100%; font-size: 16px; }
+.sign-up-form                               { padding:100px 12px 30px; }
+.sign-up-form .form-group                   { margin-bottom: 12px; height: 36px; }
+.form-control input                         { padding: 6.5px 15px 6.5px 45px;  font-size: 14px; line-height: 21px; }
+.form-group .img-box                        { left: 18px;}
+.form-group .img-box img                    { width:13px; height:13px;}
+.form-btn input                             { margin: 30px auto 0; }
+.banner-details .sign-up-form               { padding: 25px 22px 23px;  }
+.banner-details .logo                       { margin-bottom: 25px; }
+.banner-details .banner-content             { padding:0 30px; width: 100%;}
+/***Header-section Css Start****/
+.header-section                             { padding:15px 0px; }
+.header-section.header-style                { padding: 10px 0;}
+.navbar-brand                               { max-width: 53%;}
+.navbar-collapse                            { padding:15px 0 0;}
+.header-section .form-group                 { margin:0; }
+.form-group .form-control                   { padding: 9px; font-size: 14px; line-height: 18px; border: 0; color:#383838;}
+.forgot-box .form-group                     { margin-top: 19px; max-width: 100%; }
+.navbar-toggler                             { border:0;}
+/***Header-section Css End****/
+/******Banner-Section Start********/
+.banner-section                             { margin-top: 56px; }
+.banner-desc                                { padding: 30px 0 25px; }
+.join-now-form                              {margin-top: 40px; max-width: 100%; }
+.banner > img                               { margin-bottom:45px; display: block; width:100%;}
+h4 span.price                               { font-size: 21px; }
+/* service Banner  */
+.service-banner-section                     { padding:10px 0; margin-top: 0; flex-wrap: wrap; }
+.service-banner-section .service-item       { width:100%;}
+.service-banner-section .service-item .img-item { padding:30px; margin:15px auto; width:130px; height:130px;  box-shadow: 0 10px 29px 0 rgba(64, 80, 124, 0.1);}
+/*****Banner-Section Css End******/
+/*****Feature-Section Start*******/
+.feature-item                               { padding:12px; } 
+.feature-item .img-box                      { padding:10px; margin-bottom: 12px; width:80px; height:80px; }
+.feature-item .img-box img                  { max-height: 100%; }
+.feature-list li                            { padding-left: 18px; font-size: 15px; line-height: 20px; }
+.feature-section .sign-up-btn               { width:282px; }
+/****Feature-Section Css End****/
+/******** what-player-say-section Start ********/
+.player-feedback                            { padding: 15px 9px; min-height: 180px; }
+.item                                       { margin:0 8px;}
+.slick-dots                                 { margin-top:12px;  }
+.slick-dots li                              { margin:0 5px; width: 10px; height: 10px; }
+/******** what-player-say-section Css End ********/
+/********* Refer-Earn Section Start *******/
+.refer-earn-content > img                   { width:100%;}
+.refer-earn-content .content-box            { margin-top: 20px; text-align: center;}
+.content-box .sign-up-btn                   { margin-top:0px; min-width: 130px; }
+/********* Refer-Earn Section Css End *******/
+/* Rummy-for-mobile */
+.rummy-for-mobile-section.common-space      { padding: 50px 0 25px;}
+.rummy-mobile-content .img-box              { width: 100%; }
+.round-top                                  { top: -6%; right: 25%; }
+.sign-up-btn.dwonload-btn                   { padding: 11px 12px; }
+.rummy-for-mobile-section .content-box      { margin-left: 0px; margin-top: 25px; width: 100%; }
+/****deals-Section Start*****/
+.deals-item .img-box                        { margin:0px 0 10px;}
+.deals-item                                 { padding:10px 7px; }
+/* Deals-section Css End */
+/****** footer-section start*******/
+.footer-section h6                          { margin: 12px 0; font-size: 16px; line-height: 23px; }
+.footer-section .logo-box                   { margin-bottom: 20px; text-align: center;}
+.footer-section .logo-box img               { width:70%;}
+.bitmap-logo li                             { margin:0; }
+.bitmap-logo li img                         { width: 72%;}
+.social-menu li                             { margin:0 10px; }
+.social-menu li a                           { width:35px; height: 35px; font-size: 18px; line-height: 28px; }
+.quick-links li                             { margin:8px 0;}
+.quick-links li a                           { font-size: 12px; line-height: 16px; }
+/******** footer-section Css end ************/  
+}
+@media(min-width:576px) and (max-width:767px)/* fablet */
+{
+    .navbar-brand                           { max-width: 35%;}
+    .img-shape img                          { min-width: 100%;}
+    .rummy-mobile-content .img-box          { margin: 10px  auto 0;  width: 70%; }
+    .footer-section .logo-box img           { width:50%;}
+    .quick-links                            { width:70%;}
+    .partners                               { width:75%;}
+}
+/**********Responsive Css Css End***********/

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4">
+            <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+            <g id="Group-3" transform="translate(3.333333, 7.666667)">
+                <g id="Group-2">
+                    <polyline id="Path" stroke="#FFFFFF" stroke-width="0.750750751" points="25.7134931 20.6666667 0 20.6666667 0 0 28.6666667 0 28.6666667 17.0951962"></polyline>
+                    <g id="Group" transform="translate(26.333333, 18.166667) rotate(45.000000) translate(-26.333333, -18.166667) translate(18.333333, 16.666667)" stroke="#47EBC6" stroke-width="0.507549803">
+                        <path d="M2.92957746,0 L15.3239437,0 C15.6549495,0.34443008 15.8204524,0.808251153 15.8204524,1.39146322 C15.8204524,1.97467528 15.6549495,2.41226266 15.3239437,2.70422535 L2.92957746,2.70422535 L0.443322892,1.55672324 C0.330319597,1.50456787 0.280992605,1.37068033 0.333147972,1.25767703 C0.35560489,1.20902038 0.394666237,1.16995903 0.443322892,1.14750211 L2.92957746,0 L2.92957746,0 Z" id="Rectangle"></path>
+                        <path d="M13.7464789,0 L3.6056338,0 C3.96493737,0.34443008 4.14458915,0.808251153 4.14458915,1.39146322 C4.14458915,1.97467528 3.96493737,2.41226266 3.6056338,2.70422535 L13.7464789,2.70422535 L13.7464789,0 Z" id="Rectangle-Copy"></path>
+                    </g>
+                </g>
+                <rect id="Rectangle" stroke="#FFFFFF" stroke-width="0.750750751" x="0" y="0" width="28.6666667" height="4"></rect>
+                <rect id="Rectangle" fill="#47EBC6" x="2" y="6" width="24.6666667" height="1"></rect>
+                <rect id="Rectangle-Copy-2" fill="#47EBC6" x="2" y="8" width="24.6666667" height="1"></rect>
+                <rect id="Rectangle-Copy-3" fill="#47EBC6" x="2" y="10" width="13.6666667" height="1"></rect>
+                <circle id="Oval" fill="#47EBC6" cx="2" cy="2" r="1"></circle>
+                <circle id="Oval" fill="#47EBC6" cx="4" cy="2" r="1"></circle>
+                <circle id="Oval-Copy" fill="#47EBC6" cx="6" cy="2" r="1"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

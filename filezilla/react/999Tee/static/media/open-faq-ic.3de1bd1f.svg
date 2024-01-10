@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>add(24x24)@1x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Static-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="FAQ" transform="translate(-1022.000000, -269.000000)" stroke="#0566FF" stroke-width="0.833333333">
+            <g id="Group-12" transform="translate(65.000000, 267.000000)">
+                <g id="Group-9">
+                    <g id="Group-8">
+                        <g id="Group-7" transform="translate(955.000000, 0.000000)">
+                            <g id="add(24x24)@1x" transform="translate(2.500000, 2.500000)">
+                                <line x1="0" y1="7.5" x2="15" y2="7.5" id="Path"></line>
+                                <line x1="7.5" y1="0" x2="7.5" y2="15" id="Path"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

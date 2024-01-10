@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Bfk Warzone</title>
+    <!--Favicon Included-->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico/favicon.png">
+    <!--Font Awsome Included-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" type="text/css"
+        rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Main Style Included-->
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="preload justify-content-center align-items-center">
+        <img src="img/preloader.svg">
+    </div>
+
+    <div class="banner">
+
+        <div class="plane-box">
+            <img src="./img/Title.png" alt="title-image" class="img-fluid title">
+            <img src="./img/Plane-1 Compressed.png" alt="plae-image" class="img-fluid plane-1">
+            <img src="./img/Plane-2 Compressed.png" alt="plae-image" class="img-fluid plane-2">
+            <img src="./img/Plane-3 Compressed.png" alt="plae-image" class="img-fluid plane-3">
+            <a href="#" class="login-btn theme-btn"> Login with MetaMask </a>
+        </div>
+
+        <div class="rock-box">
+            <img src="./img/Flag Left Compressed.png" alt="flag-image" class="img-fluid left-flag flags">
+            <img src="./img/Flag Right Compressed.png" alt="flag-image" class="img-fluid right-flag flags">
+            <img src="./img/Rock.png" alt="rock-image" class="img-fluid ground">
+            <img src="./img/1 Doger-3.png" alt="dude-image" class="img-fluid dude-1 dudes">
+            <img src="./img/2 kocken-6.png" alt="dude-image" class="img-fluid dude-2 dudes">
+            <img src="./img/3 Rapto-3.png" alt="dude-image" class="img-fluid dude-3 dudes">
+            <img src="./img/4 Lesly-5.png" alt="dude-image" class="img-fluid dude-4 dudes">
+            <img src="./img/5 Amris-2.png" alt="dude-image" class="img-fluid dude-5 dudes">
+            <img src="./img/6 Draxxis-3.png" alt="dude-image" class="img-fluid dude-6 dudes">
+
+        </div>
+
+        <img src="./img/Dust Animation.png" alt="dust-animation" class="img-fluid dust-img">
+
+
+        <button type="button" class="copyright text-center" data-toggle="modal" data-target="#exampleModal">
+            Copyright &copy; 2022 | BFK WARZONE | Marketplace | All Right Reserved.
+        </button>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade disclaimer-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Disclaimer of Service</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="disclamer-content">
+                        <p> The BFK Marketplace is a spot where NFT Trades take place by the community members and the
+                            official marketplace of BFK Warzone, be aware to check the final price you are paying by
+                            looking
+                            at your Meta-mask transaction confirmation screen before proceeding with any purchase, be
+                            aware
+                            that BFK Warzone does not take any responsibility for any sort of action taken and
+                            authorized by
+                            your end. By pressing proceed to marketplace you confirm that you have clearly took notice
+                            of
+                            this disclaimer and willingly want to proceed and trade responsibly.</p>
+                        <span class="end-desc">
+                            The Team,<br>
+                            BFK WARZONE
+                        </span>
+                        <a href="#" class="theme-btn"> Proceed to Marketplace </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/lib/jquery2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).on('load', function () {
+                $(".preload").hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

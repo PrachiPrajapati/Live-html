@@ -1,0 +1,138 @@
+<div class="modal fade slide-right" id="p19" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body info-module-single">
+                <h4 class="info-module-title">
+                  How to set color price table?
+                </h4>
+                <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                    TIP: Set a tier-type price table that offers a smart calculation of product price based on color and order quantities. The standard rule must be, "the more items you purchase, the lower the per-item price".
+                </div>
+                <br>
+                <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                   NOTE: Several factors are taken into account while creating a price table, such as screen cost, number of colors, order quantity, and whitebase. Provide an appropriate value to each of the these determinants so that the price matrix establishes a fair and reasonable price for every order.
+                </div>
+                To set color price table,
+                <ol>
+                    <li>Open inkXE Admin.</li>
+                    <li>Go to <b>Print Profile</b> in the toolbar towards the left.</li>
+                    <li>Select your print profile and click on the edit icon.<img src="modules/printSettingWizard/doc/assets/p9_1.png" /></li>
+                    <li>In the new page, select <b>Price Sheet</b>.</li>
+                    <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                        NOTE: Color Price = Color Table Price + Color Area Price. 
+                    </div>
+                    <li>A price table will appear on the right. Choose <b>Color Price</b> from the first drop-down.<img src="modules/printSettingWizard/doc/assets/p9_2.png" /></li>
+                    <li>Enter values for <b>Screen Cost</b> and <b>Number of Colors</b>. Tap <b>Update</b>.<img src="modules/printSettingWizard/doc/assets/p9_3.png" /></li>
+                    <li>
+                        A color price table with single row and columns (= number of colors) will get created. Now, take the following actions:
+                        <ul>
+                            <li>
+                                Set an order range and give price for different color quantities.<img src="modules/printSettingWizard/doc/assets/p9_4.png" />
+                            </li>
+                            <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                                NOTE: Each cell represents the per-item-price for a specifc amount of colors and order quantity.  
+                            </div>
+                             <li>
+                               To add more order ranges, click <b>Add Range</b>.<img src="modules/printSettingWizard/doc/assets/p9_5.png" />
+                            </li>
+                            <li>
+                                Add values of white base for all order quantity ranges.<img src="modules/printSettingWizard/doc/assets/p9_6.png" />
+                            </li>
+                            <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                                NOTE: Whitebase = X% of Color Cost, where X is any value you assign under the whitebase column for a given order quantity. 
+                            </div>
+                            <li>
+                                For small orders, you might want to add fixed prices. To do that, simply click on any cell of your choice and select the checkbox that appear. The box will get highlighted.<img src="modules/printSettingWizard/doc/assets/p9_7.png" />You have successfully calculated the Color Table Price. Now you need to calculate Color Area Price. 
+                            </li>
+                            <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                                NOTE: When you assign fixed price to a certain order range, the tool will skip the part of taking other factors into consideration and will pick only the highlighted price, i.e., "fixed price" for the selected order. <b>This option works for Whitebase as well.</b>  
+                            </div>
+                        </ul>
+                    </li>
+                    <li>Scroll down to find <b>Color Area Price</b>. Enable it.
+                    <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                        NOTE: Color Area Price is the price that you set for different print areas.   
+                    </div>
+                    </li>
+                    <li>
+                        A box will appear. Here, you can do any one of the following:
+                        <ul>
+                            <li>Select Fixed Cost from the drop-down and enter your desired cost for each print area. The tool will directly pick the value you have entered when the user selects desired print area.<img src="modules/printSettingWizard/doc/assets/p9_8.png" /></li>
+                        </ul>
+                        <ul>
+                            <li>Select Percentage from the drop-down. Here, you enter your desired percentage to each print area. Henceforth, the tool will calculate a percentage of Color Price when the user selected desired print area.<img src="modules/printSettingWizard/doc/assets/p9_9.png" /></li>
+                        </ul>
+                    </li>
+                    <li>Click <b>Save or Save & Continue</b>.</li>
+                </ol>
+                You have set color price table.<br>
+                <div style="padding: 7.0px 10.0px;background-color: rgb(216,235,248);border: 1.0px solid rgb(151,193,218);">
+                    TIP: We give you full control over providing your own price for different color and order range so that cost calculation gets automated. Create an effective color price table so that you don't have to put more stress in calculating the price for multiple color and quantity choices.
+                </div>
+                <br>
+                <hr>
+                <br>
+                Example: How the tool will calculate pricing based on this model?
+                <img src="modules/printSettingWizard/doc/assets/p9_10.png" /><br>
+                For the above given color price table:
+                Screen Cost = 18<br>
+                Number of Colors = 1-7<br>
+                Order Range = 1-3000<br>
+                Whitebase = -10<br><br>
+                <b>Hypothetical Question 1</b>: For an order placed for 80 tshirts priced at <b>$11</b> each, using <b>4</b> colors, what should be the Total Price of the product? Print area selected is <b>A1</b><br>
+                <b>Answer:</b><br>
+                Here,<br>
+                Order Quantity = 80<br>
+                Number of Colors = 4<br>
+                Print Area = A1<br>
+                <b>Color Price = Color Table Price + Color Area Price</b><br>
+                First, we need to calculate Color Table Price, which is:<br>
+                Color Table Price = Screen Price + Color Cost + Whitebase Cost<br><br>
+                Screen Price = Screen Cost X Number of Colors Used = 18X4 = 72<br>
+                Color Cost = Per Item Price X Order Quantity = 0.65X80 = 52<br>
+                Whitebase Cost = Whitebase% X Color Cost = -10% X 52 = -5.2<br><br>                 
+                <b>Color Table Price = 72 + 52 + (-5.2) = 118.8</b><br><br>
+                Second, we need to calculate Color Area Price, which can be calculated in 2 ways: Fixed Cost & Percentage<br>
+                <b>(i) If it is fixed cost, the tool will directly pick the value that has been assigned to the print area used. Hence,</b><br>
+                As per the image below, the fixed cost will be $10 for the selected print area, which is A1.<br>
+                <b>Color Area Price = $10</b>
+                <img src="modules/printSettingWizard/doc/assets/p9_11.png" />
+                Now,<br>
+                <b>Color Price</b> = Color Table Price + Color Area Price<br>
+                                    = 118.8 + 10<br>
+                                    = <b>128.8</b><br><br>
+                The color price for 80 tshirts comes to $128.8. Since we have all the values now, we can calculate the total price.<br><br>
+                <b>Total Price = Product Price + Color Price</b>, where product price is the cost of total selected products<br>
+                            = (80X11) + 128.8<br>
+                            = 880 + 128.8<br>
+                            = <b>1008.8</b><br><br>
+                <b>(ii) If it is Percentage, the tool will calculate a specified percentage of Color Cost. Hence,</b><br>
+                As per the image below, Color Area Price = 30% of Color Cost<br>
+                                                            = 30% of 52<br>
+                                                            = 15.6<br>
+                Color Area Price = $15.6
+                <img src="modules/printSettingWizard/doc/assets/p9_12.png" />
+                Now,<br>
+                Color Price = Color Table Price + Color Area Price<br>
+                            = 118.8 + 15.6<br>
+                            = 134.4<br><br>
+                The color price for 80 tshirts comes to $134.4. Since we have all the values now, we can calculate the total price.<br>
+                Total Price = Product Price + Color Price, where product price is the cost of total selected products<br>
+                            = (80X11) + 134.4<br>
+                            = 880 + 134.4<br>
+                            = 1014.4<br>
+                <hr>
+                <b>Hypothetical Question 2 (Fixed Price concept)</b>: For an order placed for 40 tshirts priced at $11 each, using 4 colors, what should be the Total Price of the product? Print area selected is A1<br>
+                <b>Answer:</b><br>
+                Considering the same table, <br><br>
+                Order quantity of 40 for 4 colors has been assigned fixed price, which is $117. In this case, the color price will be $117 as the tool will not take any other factor into consideration, except the highlighted price. <br><br>        
+                </b>Color Price = $117</b><br><br>
+                And,<br> 
+                <b>Total Price = Product Price + Color Price</b>, where product price is the cost of total selected products<br>
+                            = (40X11) + 117<br>
+                            = 440 + 117<br>
+                            = 557
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="col-md-12" ng-hide="addpreloader">
+    <div class="panel-body text-center">
+        <img class="image-responsive-height demo-mw-50 page-loader" src="assets/img/progress/progress-circle-master.svg"
+            alt="Progress" />
+    </div>
+</div>
+<div class="col-md-12" ng-show="addpreloader">
+    <div class="product-color-code-image" pg-portlet on-refresh="refreshTest('.loader-OnUpdate')">
+        <div class="left">
+            <input type="text" class="form-control" ng-readonly="true" autocomplete="off" placeholder="Enter color name"
+                name="ColorName" ng-model="editInfo.optionlabel" required>
+        </div>
+        <div class="right">
+            <div class="h-code">
+                <div class="code-thumb">
+                    <spectrum-colorpicker ng-change="changeEditInfo(1)" ng-model="editInfo.hexValue" options="{showInput: true,  showAlpha: false}"
+                        format="'hex'" on-hide="onColorSwatchEdit(color)">
+                    </spectrum-colorpicker>
+                </div>
+                <div class="code-text" ng-click="changeEditInfo(1)">{{editInfo.hexValue}}</div>
+            </div>
+            <div class="or">-or-</div>
+            <div class="p-img cursor-pointer action-color" ng-click="changeEditInfo(0)">
+                <img height="20" ng-src="{{ swachimgUrl }}" src="assets/images/upload-i.png" ng-show="isSelectedSwachVisible" ng-file-select ng-file-change="swachImage($files)">
+                <img src="assets/images/upload-i.png" ng-show="!isSelectedSwachVisible" ng-file-select ng-file-change="swachImage($files)">
+                <!-- <span class="fa fa-upload text-primary" ng-show="!isSelectedSwachVisible" ng-file-select ng-file-change="swachImage($files)"></span> -->
+                <!-- <p class="small" ng-hide="isError == true">
+                    .png .jpg .jpeg 
+                </p> -->
+                <p class="small text-danger" ng-show="showError1">
+                    {{ showMsg }}
+                </p>
+                <div class="upload-icon-show" ng-show="isSelectedSwachVisible">
+                    <img src="assets/images/upload-ccm.png" ng-file-select ng-file-change="swachImage($files)">
+                </div>
+            </div>
+        </div>
+        <div class="action">
+            <!-- <span class="fa fa-check text-success"></span> -->
+            <span class="fa fa-close text-danger cursor-pointer" ng-click="cancelAddColorView()"></span>
+        </div>
+    </div>
+</div>

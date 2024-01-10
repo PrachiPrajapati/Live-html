@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+background-color: #f7edfa;
+line-height: 14px;
+}
+
+#regForm {
+  margin: 10px auto;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: #fff !important;
+  border: 10px solid transparent;
+  border-image: linear-gradient(to right, #4048c6 , #920eae);
+  border-image-slice: 1;	
+  /*border-top: 30px solid #b8b8b8;
+  border-left: 10px solid #b8b8b8;
+  border-right: 10px solid #b8b8b8;
+  border-bottom: 10px solid #b8b8b8;*/
+  padding: 10px;
+  max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #920eae;
+	
+}
+p {
+	color:#707070;
+	height: 18px !important;
+}
+
+b{
+	font-size: 12px;
+	line-height: 20px;
+	color: #920eae;
+}
+
+input {
+  padding: 5px;
+  font-size: 14px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;;
+  border: 1px solid #aaaaaa;
+
+}
+a {
+	text-decoration: none !important;
+	color: #e60000;
+	font-weight: bold;
+	font-size: 11px;
+}
+a:hover {
+	color:  #1467d3 ;
+	text-decoration: none !important;
+}
+
+.redtext{
+	color: #e60000;
+	font-size: 12px;
+}
+
+.memberstop {
+	height: 80px;
+    background-image:url(../images/logo_head.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 79px;
+}
+.upper_header{
+	height: 30px;
+	background-image: linear-gradient(to right, #4048c6 , #920eae);
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: center;
+}
+
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-image: linear-gradient(to right, #4048c6 , #920eae);
+  color: #ffffff;
+  border-radius:10px;
+  padding: 5px 20px;
+  font-size: 17px;
+  margin-top: 20px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #920eae;
+}
+.add_input{
+	margin: 17px 4px 4px 91px;
+}
+

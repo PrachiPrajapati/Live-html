@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="28" viewBox="0 0 40 28">
+  <defs>
+    <clipPath id="clip-menu-icon">
+      <rect width="40" height="28"/>
+    </clipPath>
+  </defs>
+  <g id="menu-icon" clip-path="url(#clip-menu-icon)">
+    <g id="list" transform="translate(1 -7.434)">
+      <path id="Path_5540" data-name="Path 5540" d="M41.335,49.7H15.824a1.9,1.9,0,1,1,0-3.807h25.51a1.9,1.9,0,0,1,0,3.807Z" transform="translate(-5.087 -16.055)" fill="#fff"/>
+      <path id="Path_5541" data-name="Path 5541" d="M41.335,30.869H15.824a1.9,1.9,0,1,1,0-3.807h25.51a1.9,1.9,0,0,1,0,3.807Z" transform="translate(-5.087 -7.173)" fill="#fff"/>
+      <path id="Path_5542" data-name="Path 5542" d="M41.335,12.038H15.824a1.9,1.9,0,1,1,0-3.807h25.51a1.9,1.9,0,0,1,0,3.807Z" transform="translate(-5.087 1.709)" fill="#fff"/>
+      <circle id="Ellipse_12" data-name="Ellipse 12" cx="2.557" cy="2.557" r="2.557" transform="translate(0 9.434)" fill="#fff"/>
+      <circle id="Ellipse_13" data-name="Ellipse 13" cx="2.557" cy="2.557" r="2.557" transform="translate(0 19.236)" fill="#fff"/>
+      <circle id="Ellipse_14" data-name="Ellipse 14" cx="2.557" cy="2.557" r="2.557" transform="translate(0 29.038)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="33px" viewBox="0 0 26 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>check_box-24px (2)</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home-Page_17/09/2020" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cart_Detail-Page" transform="translate(-89.000000, -747.000000)">
+            <g id="Group-21" transform="translate(65.000000, 726.000000)">
+                <g id="check_box-24px-(2)" transform="translate(15.000000, 15.000000)">
+                    <polygon id="Path" points="0 0 44 0 44 44 0 44"></polygon>
+                    <g id="Group-14" transform="translate(9.000000, 6.000000)">
+                        <path d="M12.9036402,33 C24.1212824,27.1253052 27.0470247,17.3045529 25.6930833,5.44712879 C21.359036,4.6933449 17.0545771,3.49638904 12.9036402,0 C8.6743446,3.21202091 4.40329981,4.97846298 0.0947744459,5.44712879 C-0.940380885,26.3390396 6.71193348,28.0577424 12.9036402,33 Z" id="Path-4" fill="#0566FF"></path>
+                        <polyline id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="8 16.6533989 11.8165554 20 20 12"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

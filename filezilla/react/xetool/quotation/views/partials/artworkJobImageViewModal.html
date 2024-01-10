@@ -1,0 +1,20 @@
+<div class="modal fade stick-up" id="artworkJobImageViewModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left" style="padding: 5px 15px">
+                <button type="button" class="close m-t-10" data-dismiss="modal" aria-hidden="true" style = "font-size: small">
+                    <i class="fa fa-close"></i>
+                </button>
+                <h4> View Image</h4>        
+            </div>
+            <div class="modal-body" id="artworkJobImageViewModal">
+                <div  class = "m-t-10 image-view q-r-img-model-img">
+                    <i class="fa fa-angle-left fs-14 q-r-img-model-nav-left" ng-click="onNavLeftClicked()" ng-hide="currentImgIndex == 0"></i>
+                        <img class="img-responsive m-auto" src="{{ imageViewer }}">
+                    <i class="fa fa-angle-right fs-14 q-r-img-model-nav-right" ng-click="onNavRightClicked()" ng-hide="currentImgIndex == allThumbImages.length - 1"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

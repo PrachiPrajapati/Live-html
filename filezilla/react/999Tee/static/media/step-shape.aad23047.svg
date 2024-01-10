@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="400px" viewBox="0 0 64 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <g id="Select-Package" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-437.000000, -954.000000)" fill="#FFFFFF" id="Group-3">
+            <g transform="translate(0.000000, 954.000000)">
+                <polygon id="Rectangle" points="437 0 445 0 501 200 445 400 437 400 493 200"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

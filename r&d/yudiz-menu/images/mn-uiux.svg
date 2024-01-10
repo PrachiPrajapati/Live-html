@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>UI/UX</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI/UX" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle-17" x="0" y="0" width="44" height="44"></rect>
+            <g id="Group-25" transform="translate(3.666667, 3.666667)">
+                <rect id="Rectangle-51" stroke="#FFFFFF" stroke-width="0.825825826" x="0" y="0" width="36.6666667" height="36.6666667" rx="1.52777778"></rect>
+                <circle id="Oval-13" stroke="#ACF6E5" stroke-width="3.05555556" cx="11.0763889" cy="24.0625" r="4.20138889"></circle>
+                <polygon id="Rectangle-52" stroke="#FFFFFF" stroke-width="3.05555556" points="25.2083333 16.0416667 29.7916667 25.2083333 20.625 25.2083333"></polygon>
+                <rect id="Rectangle-52-Copy" stroke="#47EBC6" stroke-width="3.05555556" x="11.4583333" y="8.40277778" width="12.2222222" height="12.2222222"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

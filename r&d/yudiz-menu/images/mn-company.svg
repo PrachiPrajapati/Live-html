@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+            <g id="Group" transform="translate(5.333333, 3.333333)">
+                <rect id="Rectangle" stroke="#FFFFFF" stroke-width="0.750750751" x="0" y="13.0434783" width="12.3188406" height="20.2898551"></rect>
+                <rect id="Rectangle-Copy-9" fill="#47EBC6" x="23.1884058" y="25" width="3.62318841" height="3.62318841"></rect>
+                <rect id="Rectangle-Copy-10" fill="#47EBC6" x="15.942029" y="10.5072464" width="2.89855072" height="2.89855072"></rect>
+                <rect id="Rectangle-Copy-12" fill="#47EBC6" x="15.942029" y="15.5797101" width="2.89855072" height="2.89855072"></rect>
+                <rect id="Rectangle-Copy-11" fill="#47EBC6" x="21.0144928" y="10.5072464" width="2.89855072" height="2.89855072"></rect>
+                <rect id="Rectangle-Copy-13" stroke="#FFFFFF" stroke-width="0.750750751" x="21.0144928" y="15.5797101" width="2.89855072" height="2.89855072"></rect>
+                <polygon id="Rectangle-Copy-2" stroke="#FFFFFF" stroke-width="0.750750751" points="12.3188406 0.724637681 28.9855072 6.52173913 28.9855072 33.3333333 12.3188406 33.3333333"></polygon>
+                <rect id="Rectangle-Copy-5" stroke="#FFFFFF" stroke-width="0.750750751" x="4.34782609" y="14.8550725" width="3.62318841" height="3.62318841" rx="1.8115942"></rect>
+                <rect id="Rectangle-Copy-7" fill="#47EBC6" x="5.07246377" y="20.6521739" width="2.17391304" height="2.17391304"></rect>
+                <rect id="Rectangle-Copy-6" stroke="#FFFFFF" stroke-width="0.750750751" x="3.98550725" y="25.3623188" width="3.98550725" height="7.97101449"></rect>
+                <rect id="Rectangle-Copy-2" stroke="#FFFFFF" stroke-width="0.750750751" x="15.942029" y="21.0144928" width="4.71014493" height="12.3188406"></rect>
+                <path d="M30.7971014,10.5072464 L10.5072464,3.62318841 L30.7971014,10.5072464 Z" id="Path" stroke="#FFFFFF" stroke-width="0.750750751"></path>
+                <path d="M30.7971014,6.88405797 L10.5072464,0 L30.7971014,6.88405797 Z" id="Path-Copy" stroke="#FFFFFF" stroke-width="0.750750751"></path>
+            </g>
+        </g>
+    </g>
+</svg>

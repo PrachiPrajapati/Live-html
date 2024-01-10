@@ -1,0 +1,163 @@
+<div class="page-body" ng-if= "tabModel == 'product&design'">
+  <div class="product-design-content-value">
+    <div class="row">
+      <!--REMOVE
+      div class="col-sm-12">
+        <ul class="xe-productList">
+          <li  ng-repeat="imageurl in designArtworkInfo.images track by $index" style = "cursor:pointer;" ng-click = "openImageModal(imageurl)">
+            <img class="img-responsive" ng-src="{{ imageurl }}"/>
+          </li>
+           <li><img class="img-responsive" src="https://inkxe.com/wp-content/uploads/2016/05/landingPage-graphics/tshirt-design-maker-software-output.png"></li>
+          <li><img class="img-responsive" src="https://inkxe.com/wp-content/uploads/2016/05/landingPage-graphics/tshirt-design-maker-software-output.png"></li>
+          <li><img class="img-responsive" src="https://inkxe.com/wp-content/uploads/2016/05/landingPage-graphics/tshirt-design-maker-software-output.png"></li>
+        </ul>
+      </div-->
+      <div class="col-sm-12">
+        <div class="clearfix m-t-10">
+          <div class="col-sm-3"><strong>Printing Process <span class="text-danger">*</span> </strong></div>
+          <div class="col-sm-3">
+            <select class="form-control" name="printmthd" ng-model="artWork.print_profile_name" ng-options="pm.name for pm in printMethods" ng-change="selectedPrintMethod(pm.id)">
+            </select>
+          </div>
+        </div>
+        <!--REMOVE
+        div class="clearfix m-t-10">
+          <strong class="m-t-10 inline">Image Uploaded in at least 300 dpi
+            <span class="text-danger">
+              *
+            </span>
+          :</strong>
+          <span class="dropdown-w m-l-15">
+            <div class="select-style w-100">
+              <span for="ecommerce"></span>
+              <select class="form-control" id="example-select" name="singleSelect" size="1"  ng-model="data.singleSelect">
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+          </span>
+        </div-->
+        <!-- <div class="clearfix m-t-10">
+          <strong class="m-t-22 inline">Design Dimension :</strong>
+          <span class="dropdown-w m-l-15">
+            <div class="form-group w-60 inline">
+              <label class="font-12" for="text">Width
+                <span class="text-danger">
+                  *
+                </span>
+              </label>
+              <input type="text" class="form-control input-sm" id="" ng-model="dimension.width" ng-keyup="quoteValidate(dimension.width,'width')" placeholder="" valid-number/>
+            </div>
+            <div class="form-group w-60 inline">
+              <label class="font-12" for="text">Height
+                <span class="text-danger">
+                  *
+                </span>
+              </label>
+              <input type="text" class="form-control input-sm" id="" ng-model="dimension.height" ng-keyup="quoteValidate(dimension.height,'height')" placeholder="" valid-number/>
+            </div>
+            <div class="form-group w-60 inline">
+              <label class="font-12" for="text">Unit
+                <span class="text-danger">
+                  *
+                </span>
+              </label>
+              <input type="text" class="form-control input-sm" id="" ng-model="unit.uVal" ng-keyup="quoteValidate(unit.uVal,'unitVal')" placeholder="">
+            </div> ->
+            <div class="form-group w-60 inline">
+              <span for="text">({{designArtworkInfo.unit}})</span>
+            </div>
+          </span>
+        </div> -->
+        <div class="row m-t-10">
+          <div class="col-sm-12 m-b-10">  <!--ng-if="colorSizeArry==undefined"-->
+            <div class="col-sm-3"><strong>Quantity <span class="text-danger">*</span> </strong></div>
+            <div class="col-sm-3">
+              <input type="text" min="0" class="form-control input-sm" ng-model="artWork.quantity" ng-keyup="quoteValidate(artWork.quantity,'sizeQty')" numbers-only="numbers-only" required>
+            </div>
+          </div>
+          <!-- <div class="col-sm-12" ng-repeat="colorInfo in colorSizeArry track by $index" ng-if="colorSizeArry">
+            <div class="col-sm-6">
+              <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Color</th>
+                  <th>Size</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="10" class="rowspan-font">
+                      {{colorInfo.color}}
+                    </td>
+                  </tr>
+                  <tr ng-repeat = "sizeInfo in colorInfo.size_quantity track by $index">
+                    <td>{{sizeInfo.size}}</td>
+                    <td>
+                      <input type="text" min="0" class="form-control input-sm" id="input1" ng-model="colorSizeArry[$parent.$index].size_quantity[$index].quantity"   ng-keyup="quoteValidate(colorSizeArry[$parent.$index].size_quantity[$index].quantity,'sizeQty')" numbers-only="numbers-only" required>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div> -->
+          <div class="col-sm-12 m-b-10">
+            <div class="col-sm-3 m-b-10">
+              <strong>Upload File </strong>
+            </div>
+            <div class="col-sm-12">
+              <form>
+              <div class="qt-drop-box" ng-file-drop="" ng-file-change="upload($files)" dragover-class="">
+                <div id="img-holder" style="margin: 0 0 10px 0;">
+                </div>
+                <i ng-disabled="isBrowseBtn" class="fa fa-upload cursor-pointer" ng-file-change="upload($files)" ng-file-select="" ng-multiple="true"></i>
+                <p>
+                  <span class="d-none d-sm-block">Drag &amp; Drop or</span>
+                    <a class="qt-browse-btn" href="" ng-file-change="upload($files)" ng-disabled="isBrowseBtn" ng-file-select="" ng-multiple="true" >
+                        Browse File
+                    </a> <span class="d-none d-sm-inline">from Your Computer.</span>
+                </p>
+              </div>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 text-right">
+          <small ng-show = "qntyErrorMsg" class="text-right">
+            <label class="text-danger quote-error-message">
+              Quantity must be a number and not null.
+            </label>
+          </small>
+          <small ng-show = "printErrorMsg" class="text-right">
+            <label class="text-danger quote-error-message">
+              Select print method.
+            </label>
+          </small>
+          <small ng-show = "dpiErrorMsg" class="text-right">
+            <label class="text-danger quote-error-message">
+              Please enter all fields.
+            </label>
+          </small>
+          <small ng-show = "!isValidFileFormat" class="text-right">
+            <label class="text-danger quote-error-message">
+            {{validFormatMsg}}
+            </label>
+          </small>
+          <button type="button" class="btn btn-info btn-sm m-r-5" ng-click = "changeTab('address')">Previous</button>
+          <button type="button" class="btn btn-primary btn-sm"  ng-click = "submitQuoteFormData()">
+            Submit
+            <img ng-show = "isSubmitQuotePreloader" class="image-responsive-height demo-mw-50 page-loader" src="assets/progress-circle-master.svg" alt="Progress" style="position: absolute;top: 8px;width: 30px;right: 15px;">
+          </button>
+        </div>
+      </div>
+      <hr/>
+    </div>
+  </div>
+
+</div>

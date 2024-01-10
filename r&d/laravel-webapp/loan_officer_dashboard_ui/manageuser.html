@@ -1,0 +1,1134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="IQQtCCcyO27VC9E25PWHnXSts43JbHMSKl1gVLCV">
+    
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/main.css"> -->
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/general.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/chart.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/mobile_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/header.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/checkbox.css">
+
+    
+        
+    
+                <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+    
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    
+                <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- jQuery library -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script type="text/javascript" src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/dashboard/Chart.roundedBarCharts.min.js"></script>
+    
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/header.js"></script>
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/modal.css">
+        <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/switch.css">
+        <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/checkbox.css">
+        <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/radio.css">
+        <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/input_tag.css">
+        <script src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/jquery.autoSave.min.js"></script>
+        <script src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/jquery.mask.min.js"></script>
+        <script src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/jquery.formatCurrency-1.4.0.min.js"></script>
+        <script src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/manage_users/manage_users.js"></script>
+        <script src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/manage_users/add_users.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.js"></script>
+    
+    
+                <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/custom_daterpicker.css">
+    </head>
+<body>
+
+    <main class="content" role="content">
+    <section class="container-fluid bg_white">
+        <div class="row">
+            <div class="col-12 p_lr_0">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="#" data-toggle="sidebar-colapse">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <img  id="collapse-icon" src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/menu.png" class="img-fluid" />
+                        </div>
+                    </a>
+                    <a href="http://sigmadev.beta.loanofficer.ai/home"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/logo.png" class="img-fluid height_37" /></a>
+                    <div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+                        <form class="form-inline my-2 my-lg-0">
+                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/bell.png" class="img-fluid m_r_15 notification" />
+                            <span class="notification_dot"></span>
+                            <ul class="dropdown-notification">
+                                <div class="notification_title">
+                                    Notifications
+                                </div>
+                                <div class="content_center space_between p_tb_20 b_b_grey">
+                                    <div class="notification_readall">
+                                        <svg width="21" height="20" style="margin-right: 0" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.0415 7L6.39941 13.4167L3.38029 10.5" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17.1821 7L10.54 13.4167" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        Mark all as read
+                                    </div>
+                                    <div class="integation_dropdown">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                                <ins>All</ins>
+                                                <span class="arrow"></span>
+                                            </button>
+                                            <div class="dropdown-menu radio">
+                                                <label class="dropdown-item">
+                                                    <input class="jRadioDropdown" type="radio" value="001" name="alphabet">
+                                                    <i>option 1</i>
+                                                </label>
+                                                <label class="dropdown-item">
+                                                    <input class="jRadioDropdown" type="radio" value="002" name="alphabet">
+                                                    <i>option 2</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="more_notification">
+                                <li class="dropdown-menu__item nav-item">
+                                    <div class="content_center align_item_normal">
+                                        <div class="checkbox_custom">
+                                            <input type="checkbox" class="name" name="notification_chk" id="html_1">
+                                        </div>
+                                        <label for="html_1">
+                                            <div class="notification_text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                            </div>
+                                            <div class="m_t_10 date_time">
+                                                Created: 7/27/2020 9:11pm
+                                            </div>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+                                    <div class="content_center align_item_normal">
+                                        <div class="checkbox_custom">
+                                            <input type="checkbox" class="name" name="notification_chk" id="html_2">
+                                        </div>
+                                        <label for="html_2">
+                                            <div class="notification_text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                            </div>
+                                            <div class="m_t_10 date_time">
+                                                Created: 7/27/2020 9:11pm
+                                            </div>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+                                    <div class="content_center align_item_normal">
+                                        <div class="checkbox_custom">
+                                            <input type="checkbox" class="name" name="notification_chk" id="html_3">
+                                        </div>
+                                        <label for="html_3">
+                                            <div class="notification_text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                            </div>
+                                            <div class="m_t_10 date_time">
+                                                Created: 7/27/2020 9:11pm
+                                            </div>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+                                    <div class="content_center align_item_normal">
+                                        <div class="checkbox_custom">
+                                            <input type="checkbox" class="name" name="notification_chk" id="html_4">
+                                        </div>
+                                        <label for="html_4">
+                                            <div class="notification_text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                            </div>
+                                            <div class="m_t_10 date_time">
+                                                Created: 7/27/2020 9:11pm
+                                            </div>
+                                        </label>
+                                    </div>
+                                </li>
+                                </div>
+                            </ul>
+                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36 user" />
+                            <ul class="dropdown-menu-profile">
+                                <div class="content_center">
+                                    <div>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36" />
+                                    </div>
+                                    <div class="m_l_10">
+                                        <div class="user_name">Ruchi Patel</div>
+                                        <div class="user_profile">Super admin</div>
+                                    </div>
+                                </div>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/profile-page" class="dropdown-menu__link profilepage nav-link">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_A.svg" class="hover-icon" />
+
+                                        My Account
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Company_Profile_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Company_Profile_A.svg" class="hover-icon" />
+
+                                        Company Profile
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/closing-targets" class="dropdown-menu__link profilepage nav-link ">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Closing_Targets_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Closing_Targets_A.svg" class="hover-icon" />
+
+                                        Closing Targets
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Plan_Billing_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Plan_Billing_A.svg" class="hover-icon" />
+
+                                        Plan & Billing
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-directory"
+                                       class="dropdown-menu__link nav-link ">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Company_Directory_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Company_Directory_A.svg" class="hover-icon" />
+
+                                        Company Directory
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="#" class="dropdown-menu__link nav-link">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Commissions_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Commissions_A.svg" class="hover-icon" />
+
+                                        Commissions
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link ">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Integrations_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Integrations_A.svg" class="hover-icon" />
+
+                                        Integrations
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/activity-feeds" class="dropdown-menu__link nav-link">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Activity_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Activity_A.svg" class="hover-icon" />
+
+                                        Activity
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/manage_users" class="dropdown-menu__link nav-link">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Manage_users_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Manage_users_A.svg" class="hover-icon" />
+
+                                        Manage users
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/permissions" class="dropdown-menu__link nav-link">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Permissions_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Permissions_A.svg" class="hover-icon" />
+
+                                        View Permissions
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/commission-schedule" class="dropdown-menu__link nav-link ">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Commission_Schedule_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Commission_Schedule_A.svg" class="hover-icon" />
+
+                                        View Commission Schedule
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lead_rotator_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lead_rotator_A.svg" class="hover-icon" />
+
+                                        Lead rotator
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+
+                                    <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Custom_Fields_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Custom_Fields_A.svg" class="hover-icon" />
+
+                                        Custom Fields
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item nav-item">
+                                    <a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link"
+                                       onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/log-out_NA.svg" class="default-icon"/>
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/log-out_A.svg" class="hover-icon" />
+
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </form>
+                        <form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+                            <input type="hidden" name="_token" value="IQQtCCcyO27VC9E25PWHnXSts43JbHMSKl1gVLCV">                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div style="display: flex;" id="body-row">
+            <div id="sidebar-container" class="container_company_setting" style="display:none;">
+                <div class="d-none d-md-block">
+                    <ul class="list-group">
+                        <a href="http://sigmadev.beta.loanofficer.ai/home" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Dashboard_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Dashboard_A.svg" class="hover-icon" />
+
+                                <span class="menu-collapsed">Dashboard</span>
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/contact" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_A.svg" class="hover-icon" />
+
+                                <span class="menu-collapsed">Pipeline</span>
+                                <span class="submenu-icon ml-auto"></span>
+                            </div>
+                        </a>
+                        
+                            
+                                
+                                    
+                                    
+                                
+                            
+                            
+                                
+                                    
+                                
+                                
+                                    
+                                
+                            
+                        
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Proposals_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Proposals_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Proposals</span>
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/rate-watches" class=" list-group-item list-group-item-action flex-column align-items-start ">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Rate_Watch_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Rate_Watch_A.svg" class="hover-icon" />
+
+                                <span class="menu-collapsed">Rate Watch</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lenders_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lenders_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Lenders</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Partners_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Partners_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Partners</span>
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/report/all" class=" list-group-item list-group-item-action flex-column align-items-start ">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Reports_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Reports_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Reports</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Tasks_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Tasks_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Tasks</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Campaigns_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Campaigns_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Campaigns</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Finance_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Finance_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Finance</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Workflow</span>
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/data-points" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_NA.svg" class="default-icon"/>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_A.svg" class="hover-icon" />
+                                <span class="menu-collapsed">Data-Points</span>
+                            </div>
+                        </a>
+                    </ul>
+                    <div class="bottom_menu">
+                        <ul class="list-group">
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/loan_officer_university_NA.svg" class="default-icon"/>
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/loan_officer_university_A.svg" class="hover-icon" />
+                                    <span class="menu-collapsed">loan officer university</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Refer_a_friend_NA.svg" class="default-icon"/>
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Refer_a_friend_A.svg" class="hover-icon" />
+                                    <span class="menu-collapsed">Refer a friend</span>
+                                </div>
+                            </a>
+                            <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Help_Center_NA.svg" class="default-icon"/>
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Help_Center_A.svg" class="hover-icon" />
+
+                                    <span class="menu-collapsed">Help Center</span>
+                                </div>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="expanded_menu content_wrapper main_div" style="display:none;">
+                    
+    
+
+    
+    <input type="hidden" name="api_token" id="api_token" value="Y29tcGFueWRldkBtYWlsaW5hdG9yLmNvbQ==">
+    <input type="hidden" name="manage_users_list_page" id="manage_users_list_page" value="http://sigmadev.beta.loanofficer.ai/api/manage_users_list_paginate">
+
+    
+    <div class="user_manage">
+        <div class="container-fluid">
+            <div class="top_body m_0 container_company_setting">
+                
+                <div class="row">
+                    <div class="m_t_auto m_b_auto col-12 user_collapsible_integration_content_row">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="title">
+                                    <span>Manage users</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m_t_20 user_toggle_content content_center align_item_bottom">
+                            <div class="col-md-6 col-lg-4 col-xl-3 m_b_10">
+                                <label>
+                                    Quick Search
+                                </label>
+                                <div class="form-group has-search">
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/search.png" class="img-fluid form-control-feedback"/>
+                                    <input type="text" class="form-control manage_users_search" placeholder="Search by name, email or job title">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-2 m_b_10">
+                                <label>Permissions</label>
+                                <div class="content_center integation_dropdown">
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                            <ins>All</ins>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="dropdown-menu radio">
+                                                                                            <label class="dropdown-item">
+                                                    <input class="permission_jRadioDropdown"
+                                                           type="radio"
+                                                           name="alphabet_1"
+                                                           value="2" />
+                                                    <i>Employee</i>
+                                                </label>
+                                                                                            <label class="dropdown-item">
+                                                    <input class="permission_jRadioDropdown"
+                                                           type="radio"
+                                                           name="alphabet_1"
+                                                           value="1" />
+                                                    <i>Admin</i>
+                                                </label>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-2 m_b_10">
+                                <label>Status</label>
+                                <div class="content_center integation_dropdown">
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                            <ins>All</ins>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="dropdown-menu radio">
+                                            <label class="dropdown-item">
+                                                <input class="status_jRadioDropdown"
+                                                       type="radio"
+                                                       value="Active"
+                                                       name="alphabet_1" />
+                                                <i>Active</i>
+                                            </label>
+                                            <label class="dropdown-item">
+                                                <input class="status_jRadioDropdown"
+                                                       type="radio"
+                                                       value="Pending"
+                                                       name="alphabet_1" />
+                                                <i>Pending</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-2 m_b_10">
+                                <label>Role</label>
+                                <div class="content_center integation_dropdown">
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                            <ins>All</ins>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="dropdown-menu radio">
+                                                                                            <label class="dropdown-item">
+                                                    <input class="role_jRadioDropdown"
+                                                           type="radio"
+                                                           value="2"
+                                                           name="alphabet_1" />
+                                                    <i>Loan Officer</i>
+                                                </label>
+                                                                                            <label class="dropdown-item">
+                                                    <input class="role_jRadioDropdown"
+                                                           type="radio"
+                                                           value="3"
+                                                           name="alphabet_1" />
+                                                    <i>QC Auditor</i>
+                                                </label>
+                                                                                            <label class="dropdown-item">
+                                                    <input class="role_jRadioDropdown"
+                                                           type="radio"
+                                                           value="4"
+                                                           name="alphabet_1" />
+                                                    <i>Jr. Loan Officer</i>
+                                                </label>
+                                                                                            <label class="dropdown-item">
+                                                    <input class="role_jRadioDropdown"
+                                                           type="radio"
+                                                           value="5"
+                                                           name="alphabet_1" />
+                                                    <i>Loan Processor</i>
+                                                </label>
+                                                                                            <label class="dropdown-item">
+                                                    <input class="role_jRadioDropdown"
+                                                           type="radio"
+                                                           value="6"
+                                                           name="alphabet_1" />
+                                                    <i>Jr. Loan Processor</i>
+                                                </label>
+                                                                                            <label class="dropdown-item">
+                                                    <input class="role_jRadioDropdown"
+                                                           type="radio"
+                                                           value="7"
+                                                           name="alphabet_1" />
+                                                    <i>Closer</i>
+                                                </label>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-3 m_b_10">
+                                <div class="row content_center align_item_bottom">
+                                    <div class="col-5">
+                                        <a class="filter_text m_b_10 m_l_0 btn_clear_filter">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/blue_cross_circle.png" class="img-fluid m_r_5 btn_clear_filter">Clear filter
+                                        </a>
+                                    </div>
+                                    <div class="col-7">
+                                        <button class="blue_btn" type="button"  data-toggle="modal" data-target="#add_user">
+                                            + Add New User
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="m_t_20">
+                    <table id="user_manage" style="display:none; width:100%">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>Profile picture</th>
+                            <th>
+                                <span>Name</span>
+                            </th>
+                            <th>
+                                <span>Email</span>
+                            </th>
+                            <th>
+                                <span>Phone number</span>
+                            </th>
+                            <th>
+                                <span>Role</span>
+                            </th>
+                            <th>
+                                <span>Status</span>
+                            </th>
+                            <th>
+                                <span>Permission</span>
+                            </th>
+                            <th>
+                                <span>Actions</span>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="number_count">0 Count</div>
+
+                    
+                    <div class="height_constant relative empty_manage_user_listing" style='display:none;'>
+                        <div class="row center_page">
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/empty_closing.png" class="img-fluid">
+                                    <div class="empty_text">
+                                        No results found
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <input type="hidden" name="add_users_url" id="add_users_url" value="http://sigmadev.beta.loanofficer.ai/api/add-mange-users">
+    <input type="hidden" name="api_token" id="api_token" value="Y29tcGFueWRldkBtYWlsaW5hdG9yLmNvbQ==">
+    <input type="hidden" name="error_img_url" id="error_img_url" value="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/error.png">
+    <input type="hidden" name="verified_img_url" id="verified_img_url" value="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/verified.png">
+
+    <div class="modal fade" id="add_user" tabindex="-1" role="dialog" aria-labelledby="add_userTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content custom_modal">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="space_between content_center">
+                                <h4 class="modal-title">Add new user</h4>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/cross.png" class="img-fluid close" data-dismiss="modal">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="form-horizontal m_t_30" action="#" method="POST" id="add_users_form" name="add_users_form">
+                        
+                        <input type="hidden" name="_token" value="IQQtCCcyO27VC9E25PWHnXSts43JbHMSKl1gVLCV">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <label>First name*</label>
+                                <input type="text" name="first_name" id="first_name" class="input_text" maxlength="20" autocomplete="off" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <label>Last name</label>
+                                <input type="text" name="last_name" id="last_name" class="input_text" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label>Email*</label>
+                                <input type="email" name="email" id="email" class="input_text" maxlength="50" autocomplete="off" required>
+                            </div>
+                        </div>
+                        <div class="row m_b_10 integation_dropdown">
+                            <div class="col-12 error_container">
+                                <label>Role*</label>
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                        <ins>&nbsp;</ins>
+                                        <span class="arrow"></span>
+                                    </button>
+                                    <div class="dropdown-menu radio">
+                                                                                    <label class="dropdown-item">
+                                                <input class="add_users_role_jRadioDropdown" type="radio"
+                                                       value="2" id="add_users_role_2"
+                                                       name="add_users_role">
+                                                <i>Loan Officer</i>
+                                            </label>
+                                                                                    <label class="dropdown-item">
+                                                <input class="add_users_role_jRadioDropdown" type="radio"
+                                                       value="3" id="add_users_role_3"
+                                                       name="add_users_role">
+                                                <i>QC Auditor</i>
+                                            </label>
+                                                                                    <label class="dropdown-item">
+                                                <input class="add_users_role_jRadioDropdown" type="radio"
+                                                       value="4" id="add_users_role_4"
+                                                       name="add_users_role">
+                                                <i>Jr. Loan Officer</i>
+                                            </label>
+                                                                                    <label class="dropdown-item">
+                                                <input class="add_users_role_jRadioDropdown" type="radio"
+                                                       value="5" id="add_users_role_5"
+                                                       name="add_users_role">
+                                                <i>Loan Processor</i>
+                                            </label>
+                                                                                    <label class="dropdown-item">
+                                                <input class="add_users_role_jRadioDropdown" type="radio"
+                                                       value="6" id="add_users_role_6"
+                                                       name="add_users_role">
+                                                <i>Jr. Loan Processor</i>
+                                            </label>
+                                                                                    <label class="dropdown-item">
+                                                <input class="add_users_role_jRadioDropdown" type="radio"
+                                                       value="7" id="add_users_role_7"
+                                                       name="add_users_role">
+                                                <i>Closer</i>
+                                            </label>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label>Job title</label>
+                                <input type="text" name="job_title" id="job_title" class="input_text" maxlength="50" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 error_container">
+                                <label>Permission Level *</label>
+                                                                    <div class="m_t_10">
+                                        <input type="radio" id="add_users_permission_2" name="add_users_permission" value="2">
+                                        <label for="add_users_permission_2">Employee</label>
+                                        <div class="radio_desp">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis diam posuere turpis cum erat pellentesque a. A amet, auctor consequat, ornare gravida.
+                                        </div>
+                                    </div>
+                                                                    <div class="m_t_10">
+                                        <input type="radio" id="add_users_permission_1" name="add_users_permission" value="1">
+                                        <label for="add_users_permission_1">Admin</label>
+                                        <div class="radio_desp">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis diam posuere turpis cum erat pellentesque a. A amet, auctor consequat, ornare gravida.
+                                        </div>
+                                    </div>
+                                                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 align_center">
+                                <input class="common_btn disable_btn add_user_step_1_btn" value="Next" type="submit">
+                                <input class="add_user_step_1_btn_trigger_step_2" value="Next" type="button" data-target="#next_user" data-backdrop="static" data-toggle="modal"  data-dismiss="modal" style="display:none;">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="next_user" tabindex="-1" role="dialog" aria-labelledby="next_userTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content custom_modal">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="space_between content_center">
+                                <h4 class="modal-title">Add new user</h4>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/cross.png" class="img-fluid close" data-dismiss="modal">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal_subtitle m_t_30">
+                        Assign performance goals
+                    </div>
+                    <div class="desp m_tb_10">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis diam posuere turpis cum erat pellentesque a. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                    <form class="form-horizontal m_t_30" action="#" method="POST" id="add_users_form_step2" name='add_users_form_step2'>
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <label>Daily number of calls</label>
+                                <input type="text" name="daily_no_of_calls" id="daily_no_of_calls" maxlength="4" autocomplete="off" class="input_text">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <label>Monthly submissions</label>
+                                <input type="text" name="monthly_submission" id="monthly_submission" autocomplete="off"  class="input_text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <label>Daily call time</label>
+                                <input type="text" name="daily_call_time" id="daily_call_time" maxlength="8" autocomplete="off"  class="input_text mask_time">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <label>Monthly fundings</label>
+                                <input type="text" name="monthly_fundings" id="monthly_fundings" maxlength="14" autocomplete="off"  class="input_text currency">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <label>Daily logged time</label>
+                                <input type="text" name="daily_logged_time" id="daily_logged_time" maxlength="8" autocomplete="off"  class="input_text mask_time">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="content_center space_between m_t_30">
+                                    <label class="m_b_0">Allow manual entry</label>
+                                    <label class="switch text_right m_b_0">
+                                        <input type="checkbox" class="name" name="allow_manual_entry" id="allow_manual_entry" value='1' checked="">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m_t_20 m_b_20">
+                            <div class="col-12">
+                                <div class="content_center">
+                                    <div class="m_r_15">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/info.png" class="img-fluid" />
+                                    </div>
+                                    <div>
+                                        <div class="modal_title_3">
+                                            What happens if I click skip
+                                        </div>
+                                        <div class="modal_subtitle_3">
+                                            The invitation will be sent, but no performance goal will be assigned.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="error_msg_block" style="display:none;"></div>
+                        <div class="row">
+                            <div class="col-12 align_center content_center">
+                                <input class="border_btn add_user_previous_step" value="← Previous" type="button" data-backdrop="static" data-toggle="modal" data-target="#add_user"  data-dismiss="modal">
+                                <input class="border_btn add_user_skip_btn" value="Skip" type="button">
+                                <input class="common_btn default_btn add_user_invite_btn" value="Invite" type="button">
+
+                                
+                                <input class="border_btn add_user_skip_model" value="Skip" type="button" data-backdrop="static" data-toggle="modal" data-target="#skip_user" data-dismiss="modal" style="display: none;">
+                                <input class="common_btn default_btn add_user_invite_model" value="Invite" type="button" data-backdrop="static" data-toggle="modal" data-target="#invite_user" data-dismiss="modal" style="display: none;">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="invite_user" tabindex="-1" role="dialog" aria-labelledby="next_userTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content custom_modal">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="space_between content_center">
+                                <h4 class="modal-title">Add new user</h4>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/cross.png" class="img-fluid close" data-dismiss="modal">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text_center p_tb_50 width_75p">
+                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/invite.png" class="img-fluid" />
+                        <div class="modal_subtitle_2 m_t_30">
+                            User has been invited
+                        </div>
+                        <div class="desp_2 m_tb_10">
+                            An invitation letter has been sent to the specified email. User status can be tracked in the user list as well as in the profile details.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 align_center">
+                            <input class="common_btn default_btn add_user_complete" value="Ok" type="submit"data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="skip_user" tabindex="-1" role="dialog" aria-labelledby="next_userTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content custom_modal">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="space_between content_center">
+                                <h4 class="modal-title">Add new user</h4>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/cross.png" class="img-fluid close" data-dismiss="modal">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text_center p_tb_50 width_50p">
+                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/invite.png" class="img-fluid" />
+                        <div class="modal_subtitle_2 m_t_30">
+                            User has been invited without assign performance goals
+                        </div>
+                        <div class="desp_2 m_tb_10">
+                            An invitation letter has been sent to the specified email. User status can be tracked in the user list as well as in the profile details. Performance goals can be configured at any time in the Reports / My team / Goals
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 align_center">
+                            <input class="common_btn default_btn add_user_complete" value="Got It!" type="submit"data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </section>
+</main> <!-- /content -->
+<script type="text/javascript">
+
+    function toggleMainmenu(e) {
+        e.classList.toggle("active");
+        document.querySelector("aside").classList.toggle("active");
+    }
+
+    function beforePrintHandler () {
+        for (var id in Chart.instances) {
+            Chart.instances[id].resize();
+        }
+    }
+    jQuery.noConflict();
+    jQuery(document).ready(function($){
+        /* dropdown */
+        $('.user').click(function (e) {
+            e.preventDefault();
+            //$(this).find('.dropdown-menu').toggle();
+            $('.dropdown-menu-profile').toggle();
+            $('.dropdown-notification').hide();
+        });
+        $('.top_menu').click(function (e) {
+            e.preventDefault();
+            //$(this).find('.dropdown-menu').toggle();
+            $('.dropdown-menu-profile').hide();
+            $('.nav-second-level').addClass('collapse').removeClass('show');
+        });
+        $('.notification').click(function (e) {
+            e.preventDefault();
+            //$(this).find('.dropdown-menu').toggle();
+            $('.dropdown-notification').toggle();
+            $('.dropdown-menu-profile').hide();
+        });
+        $('.notification_readall').click(function(){
+            $('input[name="notification_chk"]').prop('checked', true);
+        });
+
+        $(document).on("click", function (event) {
+            if (!$(event.target).closest(".notification").length) {
+                //console.log($(event.target).parents(".dropdown-notification").length);
+                if ($(event.target).parents(".dropdown-notification").length == 0) {
+                    $(".dropdown-notification").hide();
+                }
+            }
+            if (!$(event.target).closest(".user").length) {
+                //console.log($(event.target).parents(".dropdown-notification").length);
+                if ($(event.target).parents(".dropdown-menu-profile").length == 0) {
+                    $(".dropdown-menu-profile").hide();
+                }
+            }
+        });
+        $('#example').DataTable( {
+            "scrollY":        "350px",
+            "scrollCollapse": true,
+            "paging":         false,
+            'columnDefs': [{
+                'targets': 0,
+                'orderable': false,
+            }],
+            "order": [[ 3, "desc" ]]
+        });
+        $('#myteam').DataTable( {
+            "scrollY":        "350px",
+            "scrollCollapse": true,
+            "paging":         false
+        });
+        if ($(window).width() > 768) {
+            // Select and loop the container element of the elements you want to equalise
+            $('.full_width').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column', this).each(function(){
+                    $(this).css({'height':highestBox + 'px'});
+                });
+
+                //additional jquery to adjust the height for the activity section
+                var highestBox = highestBox;
+                $('.column').each(function(){
+                    if ($(this).hasClass('activityclass')) {
+                        $(this).css({'height': highestBox + 'px'});
+                        var new_height = highestBox - 30;
+                        $(this).find('.box_shadow').css({'height': new_height + 'px'});
+                    }
+                });
+            });
+
+            $('.column_width').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column_2', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column_2',this).height(highestBox);
+
+            });
+
+            $('.column_width_2').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column_3', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column_3',this).height(highestBox);
+
+            });
+
+            $('.column_width_3').each(function(){
+
+                // Cache the highest
+                var highestBox = 0;
+
+                // Select and loop the elements you want to equalise
+                $('.column_4', this).each(function(){
+
+                    // If this box is higher than the cached highest then store it
+                    if($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+
+                });
+
+                // Set the height of all those children to whichever was highest
+                $('.column_4',this).height(highestBox);
+
+                //additional jquery to set the height for finance chart
+                //var child_div_height_finance_ui = highestBox-289;
+                //$('.column_4_inner_child', this).height(child_div_height_finance_ui);
+
+                //additional jquery to set the height for finance chart
+                var child_div_height_finance_ui = highestBox-281;
+                $('.column_4_inner_child', this).height(child_div_height_finance_ui);
+            });
+        }
+    });
+</script>
+</body>
+
+</html>

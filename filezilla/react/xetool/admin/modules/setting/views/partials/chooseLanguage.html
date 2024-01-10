@@ -1,0 +1,110 @@
+<div class="panel-heading separator p-t-0">
+    <div class="panel-title">
+        <h4 class ="xe-panel-title pull-left">
+            <xe-translate text-value="Choose Language">
+            </xe-translate>
+        </h4>
+        <i class="fa fa-info-circle ng-scope info-module-icon m-l-10" ng-click="showSettingsFaqDetails(1)">
+        </i>
+    </div>
+</div>
+<div class="panel-body m-t-20">
+    <form role="form" autocomplete="off">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="control-label block m-b-10 pull-left m-r-10 m-t-5">
+                        <xe-translate text-value="Designer Tool Language">
+                        </xe-translate>
+                    </label>
+                    <div class="btn-group m-b-10">
+                        <button type="button" class="btn btn-default"  data-toggle="dropdown" style="width: 180px;">
+                            {{ selectedLanguage }}
+                        </button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret">
+                            </span>
+                            <span class="sr-only">
+                                Toggle Dropdown
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" style="width: 207px;" ng-class="{'button-scroll-lang':clientLang.length> 4}">
+                            <li ng-repeat="language in clientLang" ng-click="languageSelected(language)">
+                                <a href="">
+                                    {{ language.name }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div> 
+                    <div class = "clearfix m-t-20">
+                        <a ng-click="addNewLanguageModal()" style="cursor:pointer;" 
+                        class="m-r-10">
+                            <u class="text-info m-l-5 font-montserrat ">
+                                <xe-translate text-value="Add New">
+                                </xe-translate>
+                            </u>
+                        </a>
+                        <a ng-click="editLanguageModal()" style="cursor:pointer;" class="m-r-10">
+                            <u class="text-info m-l-5 font-montserrat ">
+                                <xe-translate text-value="Edit">
+                                </xe-translate>
+                            </u>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-12 m-t-50 m-b-50">
+                <button class="btn btn-sm btn-info m-l-10" ng-click="updateLang_Cur_Unit_Tab()" ng-disabled="demoStatus">
+                    <xe-translate text-value="Save">
+                    </xe-translate>
+                </button>
+                <hr/>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="control-label block m-b-10 pull-left m-r-10 m-t-5">
+                        <xe-translate text-value="Designer Admin Language">
+                        </xe-translate>
+                    </label>
+                    <div class="btn-group m-b-10">
+                        <button type="button" class="btn btn-default"  data-toggle="dropdown" style="width: 180px;">
+                            {{ selectedAdminLanguage }}
+                        </button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret">
+                            </span>
+                            <span class="sr-only">
+                                Toggle Dropdown
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" style="width: 207px;" ng-class="{'button-scroll-lang':adminLang.length> 4}">
+                            <li ng-repeat="adminlanguage in adminLang" ng-click="adminLanguageSelected(adminlanguage)">
+                                <a href="">
+                                    {{ adminlanguage.name }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div> 
+                    <div class = "clearfix m-t-20">
+                        <a ng-click="addNewAdminLanguageModal()" style="cursor:pointer;" 
+                        class="m-r-10">
+                            <u class="text-info m-l-5 font-montserrat ">
+                                <xe-translate text-value="Add New">
+                                </xe-translate>
+                            </u>
+                        </a>
+                        <a ng-click="editAdminLanguageModal()" style="cursor:pointer;" class="m-r-10">
+                            <u class="text-info m-l-5 font-montserrat ">
+                                <xe-translate text-value="Edit">
+                                </xe-translate>
+                            </u>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <ng-include src="'modules/setting/doc/s1.html'">
+    </ng-include>
+</div>

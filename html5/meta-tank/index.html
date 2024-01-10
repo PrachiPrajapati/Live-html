@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Meta Tank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet preload" as="font" href="assets/fonts/Normandia.ttf" type="font/ttf" crossorigin />
+    <link rel="stylesheet preload" as="font" href="assets/fonts/Gotham-Black.otf" type="font/ttf" crossorigin />
+    <script src='scripts/phaser.min.js'></script>
+    <!--Font Awsome Included-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" type="text/css"
+        rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="scripts/screen/Login/css/bootstrap.css" rel="stylesheet">
+    <!--Main Style Included-->
+    <link href="scripts/screen/Login/css/style.css" type="text/css" rel="stylesheet" />
+    <!--Main Js Included-->
+    <script src="scripts/screen/Login/js/lib/jquery.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="scripts/screen/Login/js/bootstrap.js"></script>
+    <style type="text/css">
+        @font-face {
+            font-family: "Normandia";
+            src: url('assets/fonts/Normandia.ttf');
+        }
+
+        @font-face {
+            font-family: "GothamMedium";
+            src: url('assets/fonts/Gotham-Black.otf');
+        }
+
+        body {
+            margin: 0;
+            background: #000;
+            /*background: url('assets/images/background.jpg')no-repeat center center/cover;  */
+            font-family: "GothamMedium";
+            overflow: hidden;
+        }
+
+        #img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: #000000;
+            background-image: url('assets/images/portrait.gif');
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="loader">
+        <img src="assets/img/loader.gif">
+    </div> -->
+    <script type="text/javascript">
+        window.onload = event => {
+            if (window.innerHeight > window.innerWidth) {
+                console.log("Please use Landscape!");
+                document.getElementById("img").style.display = "block";
+            } else {
+                console.log("Please use PORTRAIT!");
+                document.getElementById("img").style.display = "none";
+            }
+        }
+        window.onorientationchange = event => {
+            if (window.innerHeight > window.innerWidth) {
+                console.log("Please use Landscape!11111111");
+                document.getElementById("img").style.display = "none";
+            } else {
+                console.log("Please use PORTRAIT!111111111");
+                document.getElementById("img").style.display = "block";
+            }
+
+        };
+        var game;
+    </script>
+    <div id="img"></div>
+    <!-- Plugins -->
+    <script src="http://184.73.111.236:3000/socket.io/socket.io.js"></script>
+
+    <!-- <script src="https://backend.rummy24.com/socket.io/socket.io.js"></script> -->
+    <!-- <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script> -->
+    <script src="scripts/screen/constParams.js"></script>
+    <script src="scripts/ApiHandler.js"></script>
+    <script src="scripts/Socket.js"></script>
+    <script src="scripts/SocketHandler.js"></script>
+
+    <script src="scripts/screen/Home/homeScene.js"></script>
+    <script src="scripts/screen/GameLogin/gameLogin.js"></script>
+    <script src="scripts/screen/Play/playScene.js"></script>
+    <script src="scripts/screen/Region/regionScene.js"></script>
+    <script src="scripts/screen/Troops/troopScene.js"></script>
+    <script src="scripts/screen/Player.js"></script>
+    <script src="scripts/screen/Squad/squadScene.js"></script>
+    <script src="scripts/screen/Game/gameScene.js"></script>
+    <script src="scripts/screen/main.js"></script>
+    <script src="scripts/sound/SoundManager.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="SV3lbr4cEgcpX4pOBAkdhZEvkuHN1iBFSLpS0Qrj">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/general.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/chart.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/mobile_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/general_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">    
+    <link rel="stylesheet" type="text/css" href="css/tabs.css">    
+    <link rel="stylesheet" type="text/css" href="css/modal.css">    
+    <link rel="stylesheet" type="text/css" href="css/radio.css">   
+    <link rel="stylesheet" type="text/css" href="css/accordion.css">  
+    <link rel="stylesheet" type="text/css" href="css/skin_update.css">   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.6/dropzone.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.6/min/dropzone.min.js"></script>
+    <!-- jQuery library -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script type="text/javascript" src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/dashboard/Chart.roundedBarCharts.min.js"></script>
+    
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+    <script src="js/header.js"></script>
+
+    <script src="js/company_directory.js"></script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/custom_daterpicker.css">
+    <link rel="stylesheet" type="text/css" href="css/input_tag.css">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+    <style>
+        .tox .tox-tbtn--select {
+            margin: 2px 0 3px 0;
+            padding: 0 4px;
+            width: 80px !important;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="line_top"></div>
+        <div id="panel">
+            <span id="loading5">
+                <span id="outerCircle"></span>
+            </span>
+        </div>
+    </div>
+    <main class="content" role="content">
+        <section class="container-fluid bg_white">
+            <div class="row">
+                <div class="col-12 p_lr_0">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a href="#" data-toggle="sidebar-colapse">
+                            <div class="d-flex w-100 justify-content-start align-items-center menu_hover">
+                                <img  id="collapse-icon" src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/menu.png" class="img-fluid menu_style" />
+                                <div class="tool_tip">
+                                    Keep sidebar open
+                                </div>
+                            </div>
+                        </a>
+                        <a href="http://sigmadev.beta.loanofficer.ai/home"><img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/logo.png" class="img-fluid height_37" /></a>
+                        <div class="search_contact effect-2">
+                            <div class="content_center">
+                                <div class="form-group has-search width_100p">
+                                    <img src="images/search.png"  class="img-fluid form-control-feedback" />
+                                    <input type="text" class="form-control" placeholder="Search by contact" id="text" onkeyup="searchBox();">
+                                </div>
+                                <div>
+                                    <img src="images/menu/grey_cross.png" class="img-fluid cross_icon cursor_pointer" />
+                                </div>
+                            </div>
+                            <span class="focus-border"></span>
+                            <div id="keyword_searcher">
+                                <div class="p_lr_20">
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Joseph <span>Tr</span>iyer & Charlotte <span>Tr</span>iyer
+                                        </div>
+                                        <div class="email_id">
+                                            Joseph_Triyer@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Emerson Dokidis & Joseph <span>Tr</span>iyer
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Cris<span>tr</span>ofer Bergson
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Erin Dorwa<span>tr</span>
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Emerson Dokidis & Joseph <span>Tr</span>iyer
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Cris<span>tr</span>ofer Bergson
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Erin Dorwa<span>tr</span>
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="search_noresult">
+                                            No search results found
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+                            <form class="form-inline my-2 my-lg-0">
+                                <div class="search_hover">
+                                    <img src="images/menu/disable_search.png" class="img-fluid search_icon search_code cursor_pointer disable_search" />
+                                    <img src="images/menu/search.png" class="img-fluid search_icon search_code cursor_pointer active_search" />
+                                    <div class="tool_tip">
+                                        Search by contact name, email, phone or investor loan number
+                                    </div>
+                                </div>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/bell.png" class="img-fluid m_r_15 notification" />
+                                <span class="notification_dot"></span>
+                                <ul class="dropdown-notification">
+                                    <div class="notification_title">
+                                        Notifications
+                                        <span class="pull-right">
+                                            <img src="images/menu/black_cross.png" class="img-fluid cursor_pointer notification_close">
+                                        </span>
+                                    </div>
+                                    <div class="content_center space_between p_tb_20 b_b_grey">
+                                        <div class="permissions_tabs w_50p">
+                                            <ul class="nav nav-tabs tab_selection content_center space_between">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="#all">
+                                                        All
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#unread">
+                                                        Unread
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="notification_readall">
+                                            <svg width="21" height="20" style="margin-right: 0" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.0415 7L6.39941 13.4167L3.38029 10.5" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.1821 7L10.54 13.4167" stroke="#3246D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            Mark all as read
+                                        </div>
+                                    </div>
+                                    <div class="tab-content ">
+                                        <div id="all" class="tab-pane active">
+                                            <div class="more_notification">
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                        <label for="html_1">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="content_center space_between">
+                                                                <div class="m_t_10 date_time">
+                                                                    Created: 7/27/2020 9:11pm
+                                                                </div>
+                                                                <div class="mark_read">
+                                                                    Mark as read
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                        <label for="html_1">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="content_center space_between">
+                                                                <div class="m_t_10 date_time">
+                                                                    Created: 7/27/2020 9:11pm
+                                                                </div>
+                                                                <div class="mark_read">
+                                                                    Mark as read
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_2">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_3">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_4">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_4">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_4">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_4">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div id="unread" class="tab-pane">
+                                            <div class="more_notification">
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                <!-- <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_1">
+                                                </div> -->
+                                                <label for="html_1">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="unread_notification"></div>
+                                                <!-- <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_1">
+                                                </div> -->
+                                                <label for="html_1">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="unread_notification"></div>
+                                                <!-- <div class="checkbox_custom">
+                                                    <input type="checkbox" class="name" name="name" id="html_2">
+                                                </div> -->
+                                                <label for="html_2">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="unread_notification"></div>
+                                                <label for="html_3">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu__item nav-item">
+                                            <div class="content_center align_item_normal">
+                                                <div class="unread_notification"></div>
+                                                <label for="html_4">
+                                                    <div class="notification_text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue nunc adipiscing. Quis posuere turpis cum erat pellentesque a. A amet, auctor consequat, gravida.
+                                                    </div>
+                                                    <div class="content_center space_between">
+                                                        <div class="m_t_10 date_time">
+                                                            Created: 7/27/2020 9:11pm
+                                                        </div>
+                                                        <div class="mark_read">
+                                                            Mark as read
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36 user" />
+                        <ul class="dropdown-menu-profile">
+                            <div class="content_center">
+                                <div>
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png" class="img-fluid width_36" />
+                                </div>
+                                <div class="m_l_10">
+                                    <div class="user_name">Ruchi Patel</div>
+                                    <div class="user_profile">Super admin</div>
+                                </div>
+                            </div>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/profile-page" class="dropdown-menu__link profilepage nav-link">
+                                    <img src="images/Pipeline_NA.svg" class="default-icon"/>
+                                    <img src="images/Pipeline_A.svg" class="hover-icon" />
+                                    My Account
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/Company_Profile_NA.svg" class="default-icon"/>
+                                    <img src="images/Company_Profile_A.svg" class="hover-icon" />
+                                    Company Profile
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/closing-targets" class="dropdown-menu__link profilepage nav-link">
+                                    <img src="images/Closing_Targets_NA.svg" class="default-icon"/>
+                                    <img src="images/Closing_Targets_A.svg" class="hover-icon" />
+                                    Closing Targets
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/Plan_Billing_NA.svg" class="default-icon"/>
+                                    <img src="images/Plan_Billing_A.svg" class="hover-icon" />
+                                    Plan & Billing
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-directory" class="dropdown-menu__link nav-link">
+                                    <img src="images/Company_Directory_NA.svg" class="default-icon"/>
+                                    <img src="images/Company_Directory_A.svg" class="hover-icon" />
+                                    Company Directory
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="#" class="dropdown-menu__link nav-link">
+                                    <img src="images/Commissions_NA.svg" class="default-icon"/>
+                                    <img src="images/Commissions_A.svg" class="hover-icon" />
+                                    Commissions
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/Integrations_NA.svg" class="default-icon"/>
+                                    <img src="images/Integrations_A.svg" class="hover-icon" />
+                                    Integrations
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/activity-feeds" class="dropdown-menu__link nav-link">
+                                    <img src="images/Activity_NA.svg" class="default-icon"/>
+                                    <img src="images/Activity_A.svg" class="hover-icon" />
+                                    Activity
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/manage_users" class="dropdown-menu__link nav-link">
+                                    <img src="images/Manage_users_NA.svg" class="default-icon"/>
+                                    <img src="images/Manage_users_A.svg" class="hover-icon" />
+                                    Manage users
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/View_Permissions_NA.svg" class="default-icon"/>
+                                    <img src="images/View_Permissions_A.svg" class="hover-icon" />
+                                    View Permissions
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/commission-schedule" class="dropdown-menu__link nav-link">
+                                    <img src="images/View_Commission_Schedule_NA.svg" class="default-icon"/>
+                                    <img src="images/View_Commission_Schedule_A.svg" class="hover-icon" />
+                                    View Commission Schedule
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/Lead_rotator_NA.svg" class="default-icon"/>
+                                    <img src="images/Lead_rotator_A.svg" class="hover-icon" />
+                                    Lead rotator
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+
+                                <a href="http://sigmadev.beta.loanofficer.ai/company-settings" class="dropdown-menu__link nav-link">
+                                    <img src="images/Custom_Fields_NA.svg" class="default-icon"/>
+                                    <img src="images/Custom_Fields_A.svg" class="hover-icon" />
+                                    Custom Fields
+                                </a>
+                            </li>
+                            <li class="dropdown-menu__item nav-item">
+                                <a href="http://sigmadev.beta.loanofficer.ai/logout" class="dropdown-menu__link nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <img src="images/log-out_NA.svg" class="default-icon"/>
+                                    <img src="images/log-out_A.svg" class="hover-icon" />
+                                    Logout
+                                </a>
+                                <form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST" style="display: none;">
+                                    <input type="hidden" name="_token" value="SV3lbr4cEgcpX4pOBAkdhZEvkuHN1iBFSLpS0Qrj">         
+                                </form>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</section>
+<section>
+    <div style="display: flex;" id="body-row">
+        <div id="sidebar-container" class="sidebar-collapsed" style="display:none;">
+            <div class="d-none d-md-block">
+                <ul class="list-group">
+                    <a href="http://sigmadev.beta.loanofficer.ai/home" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <img src="images/Dashboard_NA.svg" class="default-icon"/>                                
+                            <img src="images/Dashboard_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Dashboard</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <img src="images/Pipeline_NA.svg" class="default-icon"/>
+                            <img src="images/Pipeline_A.svg" class="hover-icon" />
+                            <span class="menu-collapsed">Pipeline</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Proposals_NA.svg" class="default-icon"/>                                
+                            <img src="images/Proposals_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Proposals</span>
+                        </div>
+                    </a>
+                    <a href="http://sigmadev.beta.loanofficer.ai/rate-watches" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Rate_Watch_NA.svg" class="default-icon"/>                                
+                            <img src="images/Rate_Watch_A.svg" class="hover-icon" />
+
+
+                            <span class="menu-collapsed">Rate Watch</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Lenders_NA.svg" class="default-icon"/>                                
+                            <img src="images/Lenders_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Lenders</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Partners_NA.svg" class="default-icon"/>                                
+                            <img src="images/Partners_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Partners</span>
+                        </div>
+                    </a>
+                    <a href="http://sigmadev.beta.loanofficer.ai/report/my-team-time" class=" list-group-item list-group-item-action flex-column align-items-start active">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Reports_NA.svg" class="default-icon"/>                                
+                            <img src="images/Reports_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Reports</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Tasks_NA.svg" class="default-icon"/>                                
+                            <img src="images/Tasks_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Tasks</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Campaigns_NA.svg" class="default-icon"/>                                
+                            <img src="images/Campaigns_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Campaigns</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Finance_NA.svg" class="default-icon"/>                                
+                            <img src="images/Finance_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Finance</span>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+
+                            <img src="images/Workflow_NA.svg" class="default-icon"/>                                
+                            <img src="images/Workflow_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Workflow</span>
+                        </div>
+                    </a>
+                    <a href="http://sigmadev.beta.loanofficer.ai/data-points" class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+
+                            <img src="images/Workflow_NA.svg" class="default-icon"/>                                
+                            <img src="images/Workflow_A.svg" class="hover-icon" />
+
+                            <span class="menu-collapsed">Data-Points</span>
+                        </div>
+                    </a>
+                </ul>
+                <div class="bottom_menu">
+                    <ul class="list-group">
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/loan_officer_university_NA.svg" class="default-icon"/>
+                                <img src="images/loan_officer_university_A.svg" class="hover-icon" />
+
+                                <span class="menu-collapsed">loan officer university</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Refer_a_friend_NA.svg" class="default-icon"/>
+                                <img src="images/Refer_a_friend_A.svg" class="hover-icon" />
+
+                                <span class="menu-collapsed">Refer a friend</span>
+                            </div>
+                        </a>
+                        <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+
+                                <img src="images/Help_Center_NA.svg" class="default-icon"/>
+                                <img src="images/Help_Center_A.svg" class="hover-icon" />
+
+
+                                <span class="menu-collapsed">Help Center</span>
+                            </div>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="expanded_menu content_wrapper main_div container_company_setting">
+            <div class="container-fluid p_35">
+                <div class="row">
+                    <div class="col-12 m_b_20">
+                        <div class="content_center space_between">
+                            <div class="content_center">
+                                <div class="back_section content_center m_r_15">
+                                    <img src="images/back_arrow.png" class="img-fluid">
+                                </div>
+                                <div class="title">
+                                    Automated Campaign Review
+                                    <span class="status_campaigns">Active</span>
+                                </div>
+                            </div>
+                            <div class="content_center">
+                            	<div class="m_r_20">
+                            		<div class="date_selection light_blue content_center reportrange">
+		                                <img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/calendra.png" class="img-fluid m_r_15">
+		                                <span class="m_r_10">Mar 17, 2021 - Apr 16, 2021</span>
+		                            </div>
+                            	</div>
+                            	<div class="integation_dropdown border_dropdown">
+                            		<div class="dropdown">
+                            			<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                            				<ins>Actions</ins>
+                            				<span class="arrow"></span>
+                            			</button>
+                            			<div class="dropdown-menu radio" x-placement="bottom-start">
+                            				<label class="dropdown-item" tabindex="0">
+                            					<input class="action_jRadioDropdown" type="radio" value="edit" name="alphabet_1" tabindex="-1">
+                                                <i><img src="images/grey_edit.png" class="img-fluid">Edit</i>
+                            				</label>
+                            				<label class="dropdown-item" tabindex="0" type="button" data-toggle="modal" data-target="#duplicate_broadcast">
+                            					<input class="action_jRadioDropdown" type="radio" value="duplicate" name="alphabet_1" tabindex="-1">
+                            					<i><img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/grey_copy.png" class="img-fluid">Duplicate</i>
+                            				</label>
+                            				<label class="dropdown-item" tabindex="0" type="button" data-toggle="modal" data-target="#delete_broadcast">
+                            					<input class="action_jRadioDropdown" type="radio" value="delete" name="alphabet_1" tabindex="-1">
+                            					<i><img src="http://bootcamp.beta.loanofficer.ai/svg/loanofficer/dashboard/grey_trash.png" class="img-fluid">Delete</i>
+                            				</label>
+                            			</div>
+                            		</div>
+                            	</div>
+                            </div>
+                        </div>
+                        <div class="content_center m_t_20">
+                            <div class="m_r_50">
+                                <div class="label_text">
+                                    Compaign Name
+                                </div>
+                                <div class="label_value">
+                                    Automation
+                                </div>
+                            </div>
+                            <div class="m_r_50">
+                                <div class="label_text">
+                                    Stop on response
+                                </div>
+                                <div class="label_value">
+                                	On
+                                </div>
+                            </div>
+                            <div class="m_r_50">
+                                <div class="label_text">
+                                    Selected Days 
+                                </div>
+                                <div class="label_value">
+                                    Sun, Tue, Wed
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m_t_20">
+                            <div class="label_text">
+                               	Lead Status Changed to
+                            </div>
+                            <div class="value_text">
+                                Contacted - Hot
+                            </div>
+                            <div class="value_text">
+                                Contacted - ready for MSA
+                            </div>
+                        </div>
+                        <div class="m_t_20">
+                            <div class="label_text">
+                                Target audience
+                            </div>
+                            <div class="value_text">
+                                Agent
+                            </div>
+                            <div class="value_text">
+                                Loan Processor
+                            </div>
+                            <div class="value_text">
+                                Borrower
+                            </div>
+                            <div class="value_text">
+                                Title Officer
+                            </div>
+                            <div class="value_text">
+                                Closing Coordinator
+                            </div>
+                            <div class="value_text">
+                                Co-Borrower
+                            </div>
+                            <div class="value_text">
+                                Jr. Loan Officer
+                            </div>
+                            <div class="value_text">
+                                Jr. Loan Processor
+                            </div>
+                            <div class="value_text">
+                                Business Partner
+                            </div>
+                            <div class="value_text">
+                                Outside Loan Officer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid p_35 bg_skyblue custom_padding p_lr_0 new-broadcast-sec">
+            	<div id="main" class="bg_white m_0 border_tlr_20">
+                    <div class="accordion bg_white" id="faq">
+                        <div class="card bg_white">
+                            <div class="card-header bg_white" id="faqhead1">
+                                <a href="#" class="btn btn-header-link bg_white width_100p collapsed" data-toggle="collapse" data-target="#faq1"
+                                aria-expanded="false" aria-controls="faq1">
+					                <div class="row bg_white width_100p m_tb_20">
+					                    <div class="col-12 content_center space_between">
+					                    	<div class="content_center">
+					                    		<div class="day_count">
+					                    			Day 1
+					                    		</div>
+					                    	</div>
+					                    	<div class="content_center">
+						                        <div class="content_center m_r_20">
+						                            <img src="images/voicemail.png" class="img-fluid" />
+						                        </div>
+						                        <div class="content_center m_r_20">
+						                            <img src="images/message.png" class="img-fluid" />
+						                        </div>
+						                        <div class="content_center">
+						                            <img src="images/mail.png" class="img-fluid" />
+						                        </div>
+						                    </div>
+					                    </div>
+					                </div>
+                                </a>
+                            </div>
+                            <div id="faq1" class="collapse" aria-labelledby="faqhead1" data-parent="#faq">
+                                <div class="card-body">
+					                <div class="row bg_white p_t_20">
+					                    <div class="col-12">
+					                        <div class="email_section">
+					                            <div class="row">
+					                                <div class="col-9 right_border email-section min_height_600">
+					                                    <div class="title">
+					                                        Email 
+					                                    </div>
+					                                    <div class="row m_t_20">
+					                                        <div class="col-12">
+					                                            <div class="subject_named">The Subject</div>
+					                                        </div>
+					                                    </div>
+					                                    <div class="row m_t_20">
+					                                        <div class="col-12">
+					                                            <p>
+					                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec nisi quam gravida aenean amet sit. Pulvinar vivamus mauris sed non, at ipsum. Non adipiscing in nisi, ac donec risus cursus laoreet. Cras sit lacus, amet sollicitudin. Tellus orci velit, enim sit ornare imperdiet elementum massa. Sit convallis elementum mollis diam habitant tortor phasellus in pellentesque. Orci commodo, gravida vulputate at in placerat tortor.
+					                                            </p>
+					                                        </div>
+					                                    </div>
+					                                    <div class="row m_t_20 bottom_email">
+					                                        <div class="col-12">
+					                                            <div class="content_center m_tb_20 m_lr_0">
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Delivered 
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #3FA2B8;">
+					                                                        102349 <span>90%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Opened
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #C38C21;">
+					                                                        29336 <span>63%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Clicked
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div  class="sms_value" style="color: #3F6FB8;">
+					                                                        29336 <span>30.00%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Bounces
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #8A3FB8;">
+					                                                        29336 <span>10%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Spam
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #B83F55;">
+					                                                        29336 <span>10%</span>
+					                                                    </div>
+					                                                </div>
+					                                            </div>
+					                                        </div>
+					                                    </div>
+					                                </div>
+					                                <div class="col-3 right_border email-section">
+					                                    <div class="content_center space_between title">
+					                                        <div>
+					                                            Preview 
+					                                        </div>
+					                                        <div class="permissions_tabs">
+					                                            <ul class="nav nav-tabs tab_selection content_center space_between">
+					                                                <li class="nav-item">
+					                                                    <a class="nav-link active" data-toggle="tab" href="#phone">
+					                                                        <div class="active">
+					                                                            <img src="images/active_smartphone.png" class="img-fluid" />
+					                                                        </div>
+					                                                        <div class="non_active">
+					                                                            <img src="images/disable_smartphone.png" class="img-fluid" />
+					                                                        </div>
+					                                                    </a>
+					                                                </li>
+					                                                <li class="nav-item">
+					                                                    <a class="nav-link" data-toggle="tab" href="#monitor">
+					                                                        <div class="active">
+					                                                            <img src="images/active_monitor.png" class="img-fluid">
+					                                                        </div>
+					                                                        <div class="non_active">
+					                                                            <img src="images/disable_monitor.png" class="img-fluid">
+					                                                        </div>
+					                                                    </a>
+					                                                </li>
+					                                                <li class="nav-item">
+					                                                    <a class="nav-link" tabindex="0" data-toggle="modal" data-target="#extend" >
+					                                                        <div>
+					                                                            <img src="images/maximize.png" class="img-fluid">
+					                                                        </div>
+					                                                    </a>
+					                                                </li>
+					                                            </ul>
+					                                        </div>
+					                                    </div>
+					                                    <div class="tab-content">
+					                                        <div id="phone" class="tab-pane active">
+					                                            <div class="iphone_selected height_425" style="background-image: url('images/phone.png');">
+					                                                <div class="empty_page">
+					                                                    Choose template or create a new one
+					                                                </div>
+					                                                <div class="email_mobile_preview" style="display:none;"></div>
+					                                            </div>
+					                                        </div>
+					                                        <div id="monitor" class="tab-pane">
+					                                            <div class="iphone_selected monitor" style="background-image: url('images/mointor.png');">
+					                                                <div class="empty_page">
+					                                                    Choose template or create a new one
+					                                                </div>
+					                                                <div class="email_mobile_preview" style="display:none;"></div>
+					                                            </div>
+					                                        </div>
+					                                    </div>
+					                                </div>
+					                            </div>
+					                        </div>
+					                    </div>
+					                </div>
+					                <div class="row bg_white p_t_20">
+					                    <div class="col-12">
+					                        <div class="email_section">
+					                            <div class="row">
+					                                <div class="col-9 right_border sms-section height_425">
+					                                    <div class="title">
+					                                        SMS 
+					                                    </div>
+					                                    <div class="row m_t_20">
+					                                        <div class="col-12">
+					                                            <p>
+					                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec nisi quam gravida aenean amet sit. Pulvinar vivamus mauris sed non, at ipsum. Non adipiscing in nisi, ac donec risus cursus laoreet. Cras sit lacus, amet sollicitudin. Tellus orci velit, enim sit ornare imperdiet elementum massa. Sit convallis elementum mollis diam habitant tortor phasellus in pellentesque. Orci commodo, gravida vulputate at in placerat tortor.
+					                                            </p>
+					                                        </div>
+					                                    </div>
+					                                    <div class="row m_t_20 bottom_email">
+					                                        <div class="col-12">
+					                                            <div class="content_center m_tb_20 m_lr_0">
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Sent
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div  class="sms_value" style="color: #3F6FB8;">
+					                                                        29336
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Delivered 
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #3FA2B8;">
+					                                                        102349 <span>90%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Replied
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #22BDA1;">
+					                                                        29336 <span>63%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Blocked
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #B83F55;">
+					                                                        29336 <span>10%</span>
+					                                                    </div>
+					                                                </div>
+					                                            </div>
+					                                        </div>
+					                                    </div>
+					                                </div>
+					                                <div class="col-3 right_border sms-section">
+					                                    <div class="content_center space_between title">
+					                                        <div>
+					                                            Preview 
+					                                        </div>
+					                                        <div class="content_center">
+					                                            <div>
+					                                                <img src="images/maximize.png" class="img-fluid" type="button" data-toggle="modal" data-target="#sms_preview">
+					                                            </div>
+					                                        </div>
+					                                    </div>
+					                                    <div class="iphone_selected height_425" style="background-image: url('images/phone.png');">
+					                                        <div>
+					                                            <div class="sms_generation">
+					                                                <div class="content_center space_between">
+					                                                    <div>
+					                                                        <img src="images/back_arrow.png" class="img-fluid" style="height:20px">
+					                                                    </div>
+					                                                    <div>
+					                                                        <img src="images/empty_profile.png" class="img-fluid">
+					                                                        <div class="sms_name">The User</div>
+					                                                    </div>
+					                                                    <div>
+					                                                        <img src="images/info.png" class="img-fluid" style="height:20px">
+					                                                    </div>
+					                                                </div>
+					                                            </div>
+					                                            <div class="text_center" style="margin: 130px 20px 20px;">
+					                                                <div class="date_selected">19-03-2021</div>
+					                                                <div class="line"></div>
+					                                            </div>
+					                                            <div class="content_center space_between">
+					                                                <div class="chart_name" style="margin: 0 20px 20px">    Joseph Triyer
+					                                                </div>
+					                                                <div class="chart_time" style="margin: 0 20px 20px">
+					                                                    22:25PM
+					                                                </div>
+					                                            </div>
+					                                            <div class="chart_from m_t_10" style="margin: 0 20px 20px">Testing from Sending</div>
+					                                            <div class="empty_page" style="display: none;">
+					                                                Choose template or create a new one
+					                                            </div>
+					                                            <div class="sms_mobile_preview" style="display:none;"></div>
+					                                        </div>
+					                                    </div>
+					                                </div>
+					                            </div>
+					                        </div>
+					                    </div>
+					                </div>
+					                <div class="row bg_white p_t_20 m_b_20">
+					                    <div class="col-12">
+					                        <div class="email_section p_r_15">
+					                            <div class="row" style="border-bottom: 1px solid #CACCE1;">
+					                                <div class="col-12">
+					                                    <div class="title p_b_20">
+					                                        Ringless voicemail
+					                                    </div>
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="col-12 m_t_20">
+
+						                                <form id="partner_send_files" name="my-dropzone" class="dropzone hand-pointer upload_img_outer upload_img_outer2" action="" method="POST">
+
+							                           		<!--Dynamic preview-->
+							                                <div class="dropzoner dropzone-previews file-wrap"
+							                                    id="p_send_files_dropzoner">
+
+							                                </div>
+							                                <!--Static preview-->
+							                                <div class="dz-preview dz-file-preview " style="display:none;" id="p_send_files_template_container">
+								                                <div class="dz-details file-box">
+								                                    <span class="dz-filename file-name">
+								                                    	<span data-dz-name></span>
+								                                    </span>
+								                                	<a href="#" class="file-close">
+								                                		<img src="images/redcross.png" alt="Click me to remove the file." data-dz-remove/>
+								                                	</a>
+								                                	<div id="partner_send_files_total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+								                                		<div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress="">
+								                                			
+								                                		</div>
+								                            		</div>
+								                            		<div class="dz-success-mark"><span></span></div>
+								                            		<div class="dz-error-mark"><span></span></div>
+								                            		<div class="dz-error-message"><span data-dz-errormessage></span></div>
+								                            	</div>
+								                        	</div>
+							                    		</form>
+					                				</div>
+									            </div>
+									        </div>
+									    </div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+            <div class="container-fluid p_35 bg_skyblue custom_padding p_lr_0 new-broadcast-sec">
+            	<div id="main" class="bg_white m_0 border_tlr_20">
+                    <div class="accordion bg_white" id="faq_2">
+                        <div class="card bg_white">
+                            <div class="card-header bg_white" id="faqhead2">
+                                <a href="#" class="btn btn-header-link bg_white width_100p" data-toggle="collapse" data-target="#faq2"
+                                aria-expanded="true" aria-controls="faq2">
+					                <div class="row bg_white width_100p m_tb_20">
+					                    <div class="col-12 content_center space_between">
+					                    	<div class="content_center">
+					                    		<div class="day_count">
+					                    			Day 5
+					                    		</div>
+					                    	</div>
+					                    	<div class="content_center">
+						                        <div class="content_center m_r_20">
+						                            <img src="images/voicemail.png" class="img-fluid" />
+						                        </div>
+						                        <div class="content_center m_r_20">
+						                            <img src="images/message.png" class="img-fluid" />
+						                        </div>
+						                        <div class="content_center">
+						                            <img src="images/mail.png" class="img-fluid" />
+						                        </div>
+						                    </div>
+					                    </div>
+					                </div>
+                                </a>
+                            </div>
+                            <div id="faq2" class="collapse show" aria-labelledby="faqhead2" data-parent="#faq_2">
+                                <div class="card-body">
+					                <div class="row bg_white p_t_20">
+					                    <div class="col-12">
+					                        <div class="email_section">
+					                            <div class="row">
+					                                <div class="col-9 right_border email-section min_height_600">
+					                                	<div class="content_center space_between title">
+						                                    <div class="">
+						                                        Email 
+						                                    </div>
+					                                		<div class="email_time">
+					                                			10:30 am
+					                                		</div>
+					                                	</div>
+					                                    <div class="row m_t_20">
+					                                        <div class="col-12">
+					                                            <div class="subject_named">The Subject</div>
+					                                        </div>
+					                                    </div>
+					                                    <div class="row m_t_20">
+					                                        <div class="col-12">
+					                                            <p>
+					                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec nisi quam gravida aenean amet sit. Pulvinar vivamus mauris sed non, at ipsum. Non adipiscing in nisi, ac donec risus cursus laoreet. Cras sit lacus, amet sollicitudin. Tellus orci velit, enim sit ornare imperdiet elementum massa. Sit convallis elementum mollis diam habitant tortor phasellus in pellentesque. Orci commodo, gravida vulputate at in placerat tortor.
+					                                            </p>
+					                                        </div>
+					                                    </div>
+					                                    <div class="row m_t_20 bottom_email">
+					                                        <div class="col-12">
+					                                            <div class="content_center m_tb_20 m_lr_0">
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Delivered 
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #3FA2B8;">
+					                                                        102349 <span>90%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Opened
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #C38C21;">
+					                                                        29336 <span>63%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Clicked
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div  class="sms_value" style="color: #3F6FB8;">
+					                                                        29336 <span>30.00%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Bounces
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #8A3FB8;">
+					                                                        29336 <span>10%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Spam
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #B83F55;">
+					                                                        29336 <span>10%</span>
+					                                                    </div>
+					                                                </div>
+					                                            </div>
+					                                        </div>
+					                                    </div>
+					                                </div>
+					                                <div class="col-3 right_border email-section">
+					                                    <div class="content_center space_between title">
+					                                        <div>
+					                                            Preview 
+					                                        </div>
+					                                        <div class="permissions_tabs">
+					                                            <ul class="nav nav-tabs tab_selection content_center space_between">
+					                                                <li class="nav-item">
+					                                                    <a class="nav-link active" data-toggle="tab" href="#phone">
+					                                                        <div class="active">
+					                                                            <img src="images/active_smartphone.png" class="img-fluid" />
+					                                                        </div>
+					                                                        <div class="non_active">
+					                                                            <img src="images/disable_smartphone.png" class="img-fluid" />
+					                                                        </div>
+					                                                    </a>
+					                                                </li>
+					                                                <li class="nav-item">
+					                                                    <a class="nav-link" data-toggle="tab" href="#monitor">
+					                                                        <div class="active">
+					                                                            <img src="images/active_monitor.png" class="img-fluid">
+					                                                        </div>
+					                                                        <div class="non_active">
+					                                                            <img src="images/disable_monitor.png" class="img-fluid">
+					                                                        </div>
+					                                                    </a>
+					                                                </li>
+					                                                <li class="nav-item">
+					                                                    <a class="nav-link" tabindex="0" data-toggle="modal" data-target="#extend" >
+					                                                        <div>
+					                                                            <img src="images/maximize.png" class="img-fluid">
+					                                                        </div>
+					                                                    </a>
+					                                                </li>
+					                                            </ul>
+					                                        </div>
+					                                    </div>
+					                                    <div class="tab-content">
+					                                        <div id="phone" class="tab-pane active">
+					                                            <div class="iphone_selected height_425" style="background-image: url('images/phone.png');">
+					                                                <div class="empty_page">
+					                                                    Choose template or create a new one
+					                                                </div>
+					                                                <div class="email_mobile_preview" style="display:none;"></div>
+					                                            </div>
+					                                        </div>
+					                                        <div id="monitor" class="tab-pane">
+					                                            <div class="iphone_selected monitor" style="background-image: url('images/mointor.png');">
+					                                                <div class="empty_page">
+					                                                    Choose template or create a new one
+					                                                </div>
+					                                                <div class="email_mobile_preview" style="display:none;"></div>
+					                                            </div>
+					                                        </div>
+					                                    </div>
+					                                </div>
+					                            </div>
+					                        </div>
+					                    </div>
+					                </div>
+					                <div class="row bg_white p_t_20">
+					                    <div class="col-12">
+					                        <div class="email_section">
+					                            <div class="row">
+					                                <div class="col-9 right_border sms-section height_425">
+					                                    <div class="title">
+					                                        SMS 
+					                                    </div>
+					                                    <div class="row m_t_20">
+					                                        <div class="col-12">
+					                                            <p>
+					                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec nisi quam gravida aenean amet sit. Pulvinar vivamus mauris sed non, at ipsum. Non adipiscing in nisi, ac donec risus cursus laoreet. Cras sit lacus, amet sollicitudin. Tellus orci velit, enim sit ornare imperdiet elementum massa. Sit convallis elementum mollis diam habitant tortor phasellus in pellentesque. Orci commodo, gravida vulputate at in placerat tortor.
+					                                            </p>
+					                                        </div>
+					                                    </div>
+					                                    <div class="row m_t_20 bottom_email">
+					                                        <div class="col-12">
+					                                            <div class="content_center m_tb_20 m_lr_0">
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Sent
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div  class="sms_value" style="color: #3F6FB8;">
+					                                                        29336
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Delivered 
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #3FA2B8;">
+					                                                        102349 <span>90%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Replied
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #22BDA1;">
+					                                                        29336 <span>63%</span>
+					                                                    </div>
+					                                                </div>
+					                                                <div class="m_r_50">
+					                                                    <div class="sms_text">
+					                                                        Blocked
+					                                                        <img src="images/info.png" class="img-fluid area_code">
+					                                                        <div class="tool_tip">
+					                                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+					                                                        </div>
+					                                                    </div>
+					                                                    <div class="sms_value" style="color: #B83F55;">
+					                                                        29336 <span>10%</span>
+					                                                    </div>
+					                                                </div>
+					                                            </div>
+					                                        </div>
+					                                    </div>
+					                                </div>
+					                                <div class="col-3 right_border sms-section">
+					                                    <div class="content_center space_between title">
+					                                        <div>
+					                                            Preview 
+					                                        </div>
+					                                        <div class="content_center">
+					                                            <div>
+					                                                <img src="images/maximize.png" class="img-fluid" type="button" data-toggle="modal" data-target="#sms_preview">
+					                                            </div>
+					                                        </div>
+					                                    </div>
+					                                    <div class="iphone_selected height_425" style="background-image: url('images/phone.png');">
+					                                        <div>
+					                                            <div class="sms_generation">
+					                                                <div class="content_center space_between">
+					                                                    <div>
+					                                                        <img src="images/back_arrow.png" class="img-fluid" style="height:20px">
+					                                                    </div>
+					                                                    <div>
+					                                                        <img src="images/empty_profile.png" class="img-fluid">
+					                                                        <div class="sms_name">The User</div>
+					                                                    </div>
+					                                                    <div>
+					                                                        <img src="images/info.png" class="img-fluid" style="height:20px">
+					                                                    </div>
+					                                                </div>
+					                                            </div>
+					                                            <div class="text_center" style="margin: 130px 20px 20px;">
+					                                                <div class="date_selected">19-03-2021</div>
+					                                                <div class="line"></div>
+					                                            </div>
+					                                            <div class="content_center space_between">
+					                                                <div class="chart_name" style="margin: 0 20px 20px">    Joseph Triyer
+					                                                </div>
+					                                                <div class="chart_time" style="margin: 0 20px 20px">
+					                                                    22:25PM
+					                                                </div>
+					                                            </div>
+					                                            <div class="chart_from m_t_10" style="margin: 0 20px 20px">Testing from Sending</div>
+					                                            <div class="empty_page" style="display: none;">
+					                                                Choose template or create a new one
+					                                            </div>
+					                                            <div class="sms_mobile_preview" style="display:none;"></div>
+					                                        </div>
+					                                    </div>
+					                                </div>
+					                            </div>
+					                        </div>
+					                    </div>
+					                </div>
+					                <div class="row bg_white p_t_20 m_b_20">
+					                    <div class="col-12">
+					                        <div class="email_section p_r_15">
+					                            <div class="row" style="border-bottom: 1px solid #CACCE1;">
+					                                <div class="col-12">
+					                                    <div class="title p_b_20">
+					                                        Ringless voicemail
+					                                    </div>
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="col-12 m_t_20">
+
+						                                <form id="partner_send_files_2" name="my-dropzone" class="dropzone hand-pointer upload_img_outer upload_img_outer2" action="" method="POST">
+
+							                           		<!--Dynamic preview-->
+							                                <div class="dropzoner dropzone-previews file-wrap"
+							                                    id="p_send_files_dropzoner_2">
+
+							                                </div>
+							                                <!--Static preview-->
+							                                <div class="dz-preview dz-file-preview " style="display:none;" id="p_send_files_template_container_2">
+								                                <div class="dz-details file-box">
+								                                    <span class="dz-filename file-name">
+								                                    	<span data-dz-name></span>
+								                                    </span>
+								                                	<a href="#" class="file-close">
+								                                		<img src="images/redcross.png" alt="Click me to remove the file." data-dz-remove/>
+								                                	</a>
+								                                	<div id="partner_send_files_total-progress_2" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+								                                		<div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress="">
+								                                			
+								                                		</div>
+								                            		</div>
+								                            		<div class="dz-success-mark"><span></span></div>
+								                            		<div class="dz-error-mark"><span></span></div>
+								                            		<div class="dz-error-message"><span data-dz-errormessage></span></div>
+								                            	</div>
+								                        	</div>
+							                    		</form>
+					                				</div>
+									            </div>
+									        </div>
+									    </div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+</main>
+<div class="modal fade" id="sms_preview" tabindex="-1" role="dialog" aria-labelledby="sms_previewTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom_modal_1">
+        <div class="modal-content text_left">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title">SMS Preview</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal m_t_20" action="#" method="POST" id="sms_previewform">
+                     <div class="row m_t_20 text_center">
+                        <div class="col-12">
+                            <img src="images/sms_template.png" class="img-fluid" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="email_template" tabindex="-1" role="dialog" aria-labelledby="email_templateTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom_modal_10">
+        <div class="modal-content text_left p-35">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title">Save as template</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal m_t_20" action="#" method="POST" id="duplicate_broadcastform">
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Template name</label>
+                            <input type="text" name="campaign_name" id="campaign_name" class="input_text" maxlength="50" autocomplete="off" required="" aria-required="true"placeholder="Enter the template name">
+                        </div>
+                    </div>
+                    <div class="row m_t_20">
+                        <div class="col-12">
+                            <img src="images/email_template.png" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="row m_t_20">
+                        <div class="col-12 m_auto text_center">
+                            <button class="blue_btn width_440">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="sms_template" tabindex="-1" role="dialog" aria-labelledby="sms_templateTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom_modal_1">
+        <div class="modal-content text_left">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title">Save as template</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal m_t_20" action="#" method="POST" id="duplicate_broadcastform">
+                    <div class="row">
+                        <div class="col-12">
+                            <label>SMS Template name</label>
+                            <input type="text" name="campaign_name" id="campaign_name" class="input_text" maxlength="50" autocomplete="off" required="" aria-required="true"placeholder="Enter the template name">
+                        </div>
+                    </div>
+                    <div class="row m_t_20 text_center">
+                        <div class="col-12">
+                            <img src="images/sms_template.png" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="row m_t_20">
+                        <div class="col-12">
+                            <button class="blue_btn width_440">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="extend" tabindex="-1" role="dialog" aria-labelledby="extendTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom_modal_10">
+        <div class="modal-content text_left">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title">Email Preview</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal m_t_30" action="#" method="POST" id="duplicate_broadcastform">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="content_center space_between">
+                                <div class="content_center">
+                                    <div class="">
+                                        <img src="images/empty_profile.png" class="img-fluid">
+                                    </div>
+                                    <div class="m_l_10">
+                                        <div class="subject_title">
+                                            Subject Title
+                                        </div>
+                                        <div class="subject_username">
+                                            User name
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="content_center flex_end">
+                                        <div class="m_l_10">
+                                            <img src="images/translate.png" class="img-fluid">
+                                        </div>
+                                        <div class="m_l_10">
+                                            <img src="images/print.png" class="img-fluid">
+                                        </div>
+                                        <div class="m_l_10">
+                                            <img src="images/share.png" class="img-fluid">
+                                        </div>
+                                        <div class="m_l_10">
+                                            <img src="images/emailexternal_link.png" class="img-fluid">
+                                        </div>
+                                        <div class="m_l_10">
+                                            <img src="images/more_option.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="content_center m_t_10">
+                                        <div class="from_text">From:</div>
+                                        <div class="from_name m_l_10">Joseph Triyer</div>
+                                        <div class="from_text m_l_10">Time & Date:</div>
+                                        <div class="from_name m_l_10">10/01/2019 02:46am</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m_t_20">
+                        <div class="col-12">
+                            <div class="border_body">
+                                <p>
+                                    test
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m_t_20">
+                        <div class="col-12">
+                            <button class="non_clickable right">Reply</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="insert_variable" tabindex="-1" role="dialog" aria-labelledby="insert_variableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom_modal_10">
+        <div class="modal-content text_left">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title">Insert variable</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal m_t_30" action="#" method="POST" id="duplicate_broadcastform">
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Quick search</label>
+                            <div class="form-group has-search">
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/search.png" class="img-fluid form-control-feedback">
+                                <input type="text" name="campaign_name" id="campaign_name" class="input_text" maxlength="50" autocomplete="off" required="" aria-required="true"placeholder="Search by variable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m_t_20">
+                        <div class="col-12">
+                            <div class="modal_subtitle">Recomended Variables:</div>
+                        </div>
+                    </div>
+                    <div class="row m_t_20">
+                        <div class="col-12">
+                            <div class="variable_value"> 
+                                Borrower First NameInsert 
+                                <img src="images/dropdown_cross.png" class="img-fluid" />
+                            </div>
+                            <div class="variable_value"> 
+                                Co-Borrower Last NameInsert
+                                <img src="images/dropdown_cross.png" class="img-fluid" />
+                            </div>
+                            <div class="variable_value"> 
+                                Loan Officer Last NameInsert
+                                <img src="images/dropdown_cross.png" class="img-fluid" />
+                            </div>
+                            <div class="variable_value"> 
+                                Borrower Original Loan TermInsert
+                                <img src="images/dropdown_cross.png" class="img-fluid" />
+                            </div>
+                            <div class="variable_value"> 
+                                Loan Officer Email
+                                <img src="images/dropdown_cross.png" class="img-fluid" />
+                            </div>
+                            <div class="variable_value"> 
+                                Loan Officer Email
+                                <img src="images/dropdown_cross.png" class="img-fluid" />
+                            </div>
+                            <div class="variable_value"> 
+                                Borrower Address 1Insert
+                                <img src="images/dropdown_cross.png" class="img-fluid" />
+                            </div>
+                            <div class="variable_value"> 
+                                Borrower Home PhoneInsert
+                                <img src="images/dropdown_cross.png" class="img-fluid" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="duplicate_broadcast" tabindex="-1" role="dialog" aria-labelledby="duplicate_broadcastTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom_modal_1">
+        <div class="modal-content text_left">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title">Duplicate The Campaign</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal m_t_30" action="#" method="POST" id="duplicate_broadcastform">
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Campaign name</label>
+                            <input type="text" name="campaign_name" id="campaign_name" class="input_text" maxlength="50" autocomplete="off" required="" aria-required="true"placeholder="Enter campaign name">
+                        </div>
+                    </div>
+                    <div class="row m_t_20">
+                        <div class="col-6 m_0">
+                            <button class="border_btn width_100p m_0" data-toggle="modal">Cancel</button>
+                        </div>
+                        <div class="col-6 m_0">
+                            <button class="blue_btn width_100p m_0" data-toggle="modal">Duplicate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="delete_broadcast" tabindex="-1" role="dialog" aria-labelledby="delete_broadcastTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom_modal_1">
+        <div class="modal-content text_left">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="space_between content_center">
+                            <h4 class="modal-title text_center p35 margin_auto">Are you sure you want to <br>delete the campaign?</h4>
+                            <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal m_t_30" action="#" method="POST" id="delete_broadcastform">
+                    <div class="row m_t_20">
+                        <div class="col-6 m_0">
+                            <button class="red_btn width_100p m_0" data-toggle="modal">Yes</button>
+                        </div>
+                        <div class="col-6 m_0">
+                            <button class="border_btn width_100p m_0" data-toggle="modal">No</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.tiny.cloud/1/ldn3qbdub1rky8chf3q15gm9auhriuznk3e9tci4566cvwqx/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script type="text/javascript">
+
+    function toggleMainmenu(e) {
+        e.classList.toggle("active");
+        document.querySelector("aside").classList.toggle("active");
+    }
+
+    jQuery.noConflict();
+    jQuery(document).ready(function ($) {
+        $('.label.ui.dropdown').dropdown();
+
+        $('.no.label.ui.dropdown').dropdown({
+          useLabels: false
+      });
+
+        $('.ui.button').on('click', function () {
+          $('.ui.dropdown').dropdown('restore defaults')
+      });
+
+        tinymce.init({
+            selector: 'textarea#email_body',
+            height: 500,
+            branding: false,
+            statusbar: false,
+            menubar: false,
+            automatic_uploads: true,
+            file_picker_types: 'file image media',
+            plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount',
+            'image'
+            ],
+            toolbar: 'undo redo | fontselect | formatselect | ' +
+            'bold italic underline forecolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'link image   customInsertVariableButton',
+            toolbar_location: 'bottom',
+            file_picker_callback: function (cb, value, meta) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
+
+                /*
+                 Note: In modern browsers input[type="file"] is functional without
+                 even adding it to the DOM, but that might not be the case in some older
+                 or quirky browsers like IE, so you might want to add it to the DOM
+                 just in case, and visually hide it. And do not forget do remove it
+                 once you do not need it anymore.
+                 */
+
+                 input.onchange = function (e) {
+                    var file = this.files[0];
+                    $('.email_mobile_preview').html('<img src="'+e.target.result+'">');
+
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        /*
+                         Note: Now we need to register the blob in TinyMCEs image blob
+                         registry. In the next release this part hopefully won't be
+                         necessary, as we are looking to handle it internally.
+                         */
+                         var id = 'blobid' + (new Date()).getTime();
+                         var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+                         var base64 = reader.result.split(',')[1];
+                         var blobInfo = blobCache.create(id, file, base64);
+                         blobCache.add(blobInfo);
+                         console.log(file);
+
+                         /* call the callback and populate the Title field with the file name */
+                         cb(blobInfo.blobUri(), { title: file.name });
+                     };
+                     reader.readAsDataURL(file);
+                 };
+
+                 input.click();
+             },
+             setup: function (editor) {
+                editor.ui.registry.addButton('customInsertVariableButton', {
+                    icon: 'triangleUp',
+                    onAction: function (_) {
+                       $('#insert_variable_btn').click();
+//                        editor.insertContent(toTimeHtml(new Date()));
+},
+});
+                editor.ui.registry.addIcon('triangleUp', '<img src="images/insert.svg">' );
+                editor.on("keyup", function(){
+                    $('.email_mobile_preview').show();
+                    $('.email_mobile_preview').html(tinymce.activeEditor.getContent());
+                });
+            },
+            skin: 'outside',
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+        });
+
+        tinymce.init({
+            selector: 'textarea#sms_body',
+            height: 500,
+            branding: false,
+            statusbar: false,
+            menubar: false,
+            automatic_uploads: true,
+            file_picker_types: 'file image media',
+            plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount',
+            'image'
+            ],
+            toolbar: 'link image customInsertVariableButton',
+            toolbar_location: 'bottom',
+            file_picker_callback: function (cb, value, meta) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
+
+                /*
+                 Note: In modern browsers input[type="file"] is functional without
+                 even adding it to the DOM, but that might not be the case in some older
+                 or quirky browsers like IE, so you might want to add it to the DOM
+                 just in case, and visually hide it. And do not forget do remove it
+                 once you do not need it anymore.
+                 */
+
+                 input.onchange = function () {
+                    var file = this.files[0];
+
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        /*
+                         Note: Now we need to register the blob in TinyMCEs image blob
+                         registry. In the next release this part hopefully won't be
+                         necessary, as we are looking to handle it internally.
+                         */
+                         var id = 'blobid' + (new Date()).getTime();
+                         var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+                         var base64 = reader.result.split(',')[1];
+                         var blobInfo = blobCache.create(id, file, base64);
+                         blobCache.add(blobInfo);
+
+                         /* call the callback and populate the Title field with the file name */
+                         cb(blobInfo.blobUri(), { title: file.name });
+                     };
+                     reader.readAsDataURL(file);
+                 };
+
+                 input.click();
+             },
+             setup: function (editor) {
+                editor.ui.registry.addButton('customInsertVariableButton', {
+                    icon: 'triangleUp',
+                    onAction: function (_) {
+                        alert(1);
+//                        editor.insertContent(toTimeHtml(new Date()));
+},
+});
+                editor.ui.registry.addIcon('triangleUp', '<img src="images/insert.svg">' );
+                editor.on("keyup", function(){
+                    $('.sms_mobile_preview').show();
+                    $('.sms_mobile_preview').html(tinymce.activeEditor.getContent());
+                });
+            },
+            skin: 'outside',
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+        });
+
+        $('#recipients').DataTable( {
+            //  "scrollY":        "100%",
+            "scrollCollapse": true,
+            "dom": 'rt<"bottom right"ip><"clear">',
+            language: {
+                paginate: {
+                    next: '<img src="images/right_arrow.png">',
+                    previous: '<img src="images/left_arrow.png">'
+                }
+            },
+            "infoCallback": function( settings, start, end, max, total, pre ) {
+                return "Showing " + start +" - "+ end + " of " + total;
+            }
+        });
+        $("table.dataTable tbody tr").click(function() {
+            var selected = $(this).hasClass("highlight");
+            $("table.dataTable tbody tr").removeClass("highlight");
+            if(!selected)
+                $(this).addClass("highlight");
+        });
+
+        function setEqualContainer() {
+            if ($(window).width() > 768) {
+                $('.content_wrapper').each(function () {
+                    $(this).css('min-height', null);
+                });
+                setTimeout(function () {
+                    var highestBox = 0;
+                    // Select and loop the elements you want to equalise
+                    $('.content_wrapper').each(function () {
+                        if ($(this).outerHeight() > highestBox) {
+                            highestBox = $(this).outerHeight();
+                        }
+                        console.log('height box ' + highestBox);
+                        $('.add_edit_campaigns').css({'min-height': highestBox + 'px'});
+                    });
+                }, 1000);
+            }
+        }
+
+        function email_section() {
+            if ($(window).width() > 768) {
+                $('.email_section').each(function () {
+                    $(this).css('min-height', null);
+                });
+                setTimeout(function () {
+                    var highestBox = 0;
+                    // Select and loop the elements you want to equalise
+                    $('.email_section').each(function () {
+                        if ($(this).outerHeight() > highestBox) {
+                            highestBox = $(this).outerHeight();
+                        }
+                        console.log('height box ' + highestBox);
+                        $('.email-section').css({'min-height': highestBox + 'px'});
+                    });
+                }, 1000);
+            }
+        }
+
+        function sms_section() {
+            if ($(window).width() > 768) {
+                $('.email_section').each(function () {
+                    $(this).css('min-height', null);
+                });
+                setTimeout(function () {
+                    var highestBox = 0;
+                    // Select and loop the elements you want to equalise
+                    $('.email_section').each(function () {
+                        if ($(this).outerHeight() > highestBox) {
+                            highestBox = $(this).outerHeight();
+                        }
+                        console.log('height box ' + highestBox);
+                        $('.sms-section').css({'min-height': highestBox + 'px'});
+                    });
+                }, 1000);
+            }
+        }
+
+        setEqualContainer();
+        email_section();
+        sms_section();
+
+
+    // Change the button text & add active class
+    $('.role_jRadioDropdown').change(function() {
+        var dropdown = $(this).closest('.dropdown');
+        var thislabel = $(this).closest('label');
+
+        dropdown.find('label').removeClass('active');
+        if( $(this).is(':checked') ) {
+            thislabel.addClass('active');
+            dropdown.find('ins').html( thislabel.text() );
+        }
+
+    });    
+
+//Add tabindex on labels
+$('label.dropdown-item').each(function (index, value){
+    $(this).attr('tabindex', 0 );
+    $(this).find('input').attr('tabindex', -1 );
+});
+
+//Add keyboard navigation
+$('label.dropdown-item').keypress(function(e){
+    if((e.keyCode ? e.keyCode : e.which) == 13){
+        $(this).trigger('click');
+    }
+});
+$('.user').click(function (e) {
+    e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').toggle();
+    });
+$('.top_menu').click(function (e) {
+    e.preventDefault();
+        //$(this).find('.dropdown-menu').toggle();
+        $('.dropdown-menu-profile').hide();
+        $('.nav-second-level').addClass('collapse').removeClass('show');
+    });
+});
+Dropzone.autoDiscover = false;
+var myDropzone = new Dropzone("form#partner_send_files", {
+    dictDefaultMessage:'<img src="images/upload.png" class="w_24p" /><div class="profile_upload">Drag and drop file here or <sapn style="color: #3246D3;">Browse</span></div>',
+    url: 'upload.php',
+        // more configs here
+        method:"post",
+        maxFilesize: 10, //MB
+        maxFiles: 1,
+        acceptedFiles: "image/jpg,image/jpeg,image/png",
+        previewTemplate: document.querySelector('#p_send_files_template_container').innerHTML,
+        previewsContainer:"#p_send_files_dropzoner"
+    });
+
+Dropzone.autoDiscover = false;
+var myDropzone = new Dropzone("form#partner_send_files_2", {
+    dictDefaultMessage:'<img src="images/upload.png" class="w_24p" /><div class="profile_upload">Drag and drop file here or <sapn style="color: #3246D3;">Browse</span></div>',
+    url: 'upload.php',
+        // more configs here
+        method:"post",
+        maxFilesize: 10, //MB
+        maxFiles: 1,
+        acceptedFiles: "image/jpg,image/jpeg,image/png",
+        previewTemplate: document.querySelector('#p_send_files_template_container_2').innerHTML,
+        previewsContainer:"#p_send_files_dropzoner_2"
+    });
+</script>
+</html>

@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Quote Details</title>
+	    <script src="lib.js"></script>
+	    <script src="xequote.js"></script>
+	    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="assets/css/style.css" rel="stylesheet">-->
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet"> 
+		<script>
+			var url =  new URL(window.location.href);
+			if(url.searchParams.get("artwork_type") != null && url.searchParams.get("artwork_type") === 'order')
+			{
+				document.write('<link rel="stylesheet" type="text/css" href="assets/css/artwork.bootstrap.min.css">');
+				document.write('<link rel="stylesheet" type="text/css" href="assets/css/artwork-approve.css">');
+			}else{
+				document.write('<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">');
+				document.write('<link rel="stylesheet" type="text/css" href="assets/css/style.css">');
+			}
+		</script>
+  	</head>
+  	<body ng-app="myApp" ng-controller="myCtrl" ng-init = "init()">
+	  	<ng-include src="'views/partials/quoteRejectView.html'">
+	    </ng-include>
+		<ng-include src="'views/partials/quoteApproveView.html'">
+		</ng-include>
+		<ng-include src="'views/partials/quoteImageView.html'">
+		</ng-include>
+		<ng-include src="'views/partials/payment.html'">
+		</ng-include>
+		<ng-include src="'views/partials/artworkHistoryImageViewModal.html'">
+		</ng-include>
+		<ng-include src="'views/partials/changeArtworkView.html'">
+		</ng-include>
+		<ng-include src="'views/partials/changeOrderView.html'">
+	    </ng-include>
+	    <ng-include src="'views/partials/artworkApproveView.html'">
+		</ng-include>
+		<ng-include src="'views/partials/artworkJobImageViewModal.html'">
+		</ng-include>
+		<div class="container">
+
+
+			<div class="row" ng-show="!artworkJobId && !urlDataFromOrderPage">
+				<div class="col-sm-10" id="approvediv"></div>
+				<div class="preloder-trannsparent-initially" ng-show="main_preload">
+			        <div class="preloder-content">
+			            <img src="assets/progress.svg"/>
+			            <h3 class="animated" id="cart-load">
+			                <span ng-bind="infoMsg">
+			                </span>
+			                <i class="fa fa-shopping-cart">
+			                </i>
+			            </h3>
+			        </div>
+			    </div>
+
+				<div class="col-sm-10">
+					<div class="printDiv">
+						<div class="panel panel-default">
+							<div class="data-loader" ng-show="qDetailsPreloader">
+		                  		<img class="quotedetails-loader" src="assets/progress.svg" alt="Progress">
+		        			</div>
+							<div class="panel-body padd-0" ng-hide="qDetailsPreloader">
+								<div class="clearfix">
+									  <!-- Nav tabs -->
+									<ul class="nav nav-tabs custom-tab nav-justified" role="tablist">
+									    <li role="presentation" ng-class="{'active':qDetailsTab == 'quoteInfo'}">
+									    	<a href="" aria-controls="home" role="tab" data-toggle="tab" ng-click="goToNextQuoteSection('quoteInfo')"> Quotation Details</a>
+									    </li>
+									    <!-- <li role="presentation" ng-class="{'active':qDetailsTab == 'userDetails'}">
+									    	<a href="" aria-controls="profile" role="tab" data-toggle="tab" ng-click="goToNextQuoteSection('userDetails')">Customer Details</a>
+									    </li> -->
+							    <!-- <li role="presentation" ng-class="{'active':qDetailsTab == 'userDetails'}">
+							    	<a href="" aria-controls="profile" role="tab" data-toggle="tab" ng-click="goToNextQuoteSection('artworkHistory')">Artwork History</a>
+							    </li> -->
+									    <!-- <li role="presentation" ng-class="{'active':qDetailsTab == 'payment'}"  ng-click="goToNextQuoteSection('payment')" ng-if = "customerInvoiceList.status == 'Approved' || approvebutton == true || customerInvoiceList.status == 'Paid'">
+									    	<a href="" aria-controls="messages" role="tab" data-toggle="tab"> Payment </a>
+									    </li> -->
+									</ul>
+
+									  <!-- Tab panes -->
+		 								<div class="padd-15" role="tabpanel" ng-show = "qDetailsTab == 'quoteInfo'">
+									    	<div class="table-responsive m-t-20">
+												<table class="table table-info table-bordered">
+													<tbody>
+														<tr>
+											                <th width="15%">
+											                    Quote Id
+											                </th>
+											                <td>{{customerInvoiceList.prefix_quote_id}}</td>
+						              					</tr>
+						              					<tr>
+											                <th>
+											                    Subject
+											                </th>
+										                  	<td> {{customerInvoiceList.subject}}</td>
+						               	 				</tr>
+										                <!-- <tr>
+										                  	<th>
+											                   Printing Process
+										                  	</th>
+									                    	<td>
+									                    		{{customerInvoiceList.printProfile}}
+									                    	</td>
+										                </tr> -->
+										                <tr>
+											                <th>
+											                    Description
+											                </th>
+										                  	<td>{{customerInvoiceList.description}}</td>
+										                </tr>
+										                <tr>
+										                    <th>
+											                    Status
+										                    </th>
+										                    <td>{{customerInvoiceList.status}}</td>
+										                </tr>
+										                <tr>
+										                  	<th>
+											                   Created Date
+										                  	</th>
+										                    <td>{{customerInvoiceList.created_date}}</td>
+										                </tr>
+														<!-- <tr>
+											                <th>
+											                    Notes
+											                </th>
+											                <td>
+											                  	{{customerInvoiceList.notes}}
+											                </td>
+											            </tr> -->
+													</tbody>
+												</table>
+											</div>
+											<!-- <div class="table-responsive m-t-5">
+												<h4> Attachments </h4>
+												<ul class="product-details-list-text" >
+													<li ng-repeat="image in arr track by $index" ng-if = "is_Csv_Pdf_Extension" style = "text-decoration:none;">
+														
+														<a href="{{ image.url }}" download >
+															<div class="img-responsive">{{image.fileName}}</div>
+														</a>
+													</li>
+												</ul>
+											</div> -->
+									    </div>
+									    <div class="padd-15" role="tabpanel" ng-show = "qDetailsTab == 'userDetails'">
+									    	<div class="table-responsive m-t-20">
+									    		<h4> Customer Details </h4>
+												<table class="table table-info table-bordered">
+													<tbody>
+														<tr>
+											                <th width = "20%">
+									                    Name
+											                </th>
+								                  	<td>
+								                  		{{customerInvoiceList.first_name}} {{customerInvoiceList.last_name}}
+								                  	</td>
+										                </tr>
+										                <tr>
+											                <th>
+											                    Email
+											                </th>
+										                  	<td>{{customerInvoiceList.email}}</td>
+										                </tr>
+										                <tr>
+											                <th>
+											                    Contact Number
+											                </th>
+										                  	<td>{{customerInvoiceList.contact_no}}</td>
+										                </tr>
+										                <tr>
+											                <th>
+											                    Company
+											                </th>
+										                  	<td>{{customerInvoiceList.company_name}}</td>
+										                </tr>
+													</tbody>
+												</table>
+											</div>
+
+											<div class="table-responsive m-t-20">
+												<h4> Billing Address </h4>
+												<table class="table table-info table-bordered">
+													<tbody>
+														<tr>
+											                <th width = "20%">
+											                    Address1
+											                </th>
+										                  	<td> {{customerInvoiceList.billing_address_1}}</td>
+						               	 				</tr>
+
+										                <tr>
+										                    <th>
+											                    Address2
+										                    </th>
+										                    <td>{{customerInvoiceList.billing_address_2}}</td>
+										                </tr>
+										                <tr>
+										                  	<th>
+											                   City
+										                  	</th>
+										                    <td>{{customerInvoiceList.billing_city}}</td>
+										                </tr>
+										                <tr>
+										                  	<th>
+											                   State
+										                  	</th>
+										                    <td>{{customerInvoiceList.billing_state}}</td>
+										                </tr>
+										                <tr>
+										                  	<th>
+											                   Country
+										                  	</th>
+										                    <td>{{customerInvoiceList.billing_country}}</td>
+										                </tr>
+										                <tr>
+										                  	<th>
+											                   Zip
+										                  	</th>
+										                    <td>{{customerInvoiceList.billing_zip}}</td>
+										                </tr>
+
+													</tbody>
+												</table>
+											</div>
+
+
+											<div class="table-responsive m-t-20">
+												<h4> Shipping Address </h4>
+												<table class="table table-info table-bordered">
+													<tbody>
+														<tr> 
+											                <th width = "20%">
+											                    Address1
+											                </th>
+										                  	<td> {{customerInvoiceList.shipping_address_1}}</td>
+						               	 				</tr>
+
+										                <tr>
+										                    <th>
+											                    Address2
+										                    </th>
+										                    <td>{{customerInvoiceList.shipping_address_2}}</td>
+										                </tr>
+										                <tr>
+										                  	<th>
+											                   City
+										                  	</th>
+										                    <td>{{customerInvoiceList.shipping_city}}</td>
+										                </tr>
+										                <tr>
+										                  	<th>
+											                   State
+										                  	</th>
+										                    <td>{{customerInvoiceList.shipping_state}}</td>
+										                </tr>
+										                <tr>
+										                  	<th>
+											                   Country
+										                  	</th>
+										                    <td>{{customerInvoiceList.shipping_country}}</td>
+										                </tr>
+										                <tr>
+										                  	<th>
+											                   Zip
+										                  	</th>
+										                    <td>{{customerInvoiceList.shipping_zip}}</td>
+										                </tr>
+													</tbody>
+												</table>
+											</div>
+									    </div>
+
+									    <div class="row padd-15" role="tabpanel" ng-show = "qDetailsTab == 'payment'" style="min-height: 400px;">
+									    	<div class="table-responsive m-t-20">
+												<div class="col-sm-12">
+													<div class="clearfix m-t-10">
+									                  	<strong>Total Product Price :</strong> 
+									                  	<span class="m-l-15">
+									                  		{{currency}}{{totalUnitPriceWithoutDesign}}
+									                  	</span>
+							                		</div>
+							                		<div class="clearfix m-t-10">
+									                  	<strong>Total Customization Price :</strong> 
+									                  	<span class="m-l-15">
+									                  		{{currency}}{{totalDesignPrice}}
+									                  	</span>
+							                		</div>
+							                		<div class="clearfix m-t-10">
+									                  	<strong>Total Discount :</strong> 
+									                  	<span class="m-l-15">
+									                  		{{currency}}{{totalDiscountAmount}}
+									                  	</span>
+							                		</div>
+							                		<div class="clearfix m-t-10">
+									                  	<strong>Rush Surcharge :</strong> 
+									                  	<span class="m-l-15">
+									                  		{{currency}}{{totalOptionalPrice}}
+									                  	</span>
+							                		</div>
+													<div class="clearfix m-t-10">
+									                  	<strong>Total Price :</strong> 
+									                  	<span class="m-l-15">
+									                  		{{currency}}{{totalPrice}}
+									                  	</span>
+							                		</div>
+							                		<div class="clearfix m-t-10">
+														<span class="attachment-hints">
+												        	<i>
+												        		Hint: Final shipping charges will be calculated in your cart based upon order weight and shipping address.
+												        	</i>
+		    											</span>
+													</div>
+							                		<!-- <button type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal" data-target="#myModal2" ng-click ="payNow()" ng-show = "approvebutton == true || customerInvoiceList.status == 'Approved' || customerInvoiceList.status == 'Paid'" ng-disabled="paymentButton || customerInvoiceList.status == 'Paid'" style="margin-top:105px;">Pay Now</button> -->
+						                		</div>
+
+											</div>
+									    </div>
+
+							    <!-- <div class="padd-15" role="tabpanel" ng-show = "qDetailsTab == 'artworkHistory'">
+							    	<ul class="list-group">
+								        <li class="list-group-item" ng-repeat="artworkHistory in artworkHistoryList.artwork_history">
+								          <div class="artworkHistory-line-item-date">
+								            <span class="badge artworkHistory-line-item-date-cont">
+								              <small>
+								                  {{artworkHistory.artwork_sent_date}}
+								              </small>
+								            </span>
+								          </div>
+								          <div class="artworkHistory-line-item">
+								            <div ng-repeat="lineItem in artworkHistory.line_items">
+								                <label class="no-margin">
+								                	<div class="artworkHistory-img-name-cont">
+									                    <div class="artworkHistory-img-cont cursor-pointer" ng-click="openArtworkHistoryImgModal(lineItem.image)">
+									                        <img ng-src="{{ lineItem.image[0].thumb }}" width="100" height="100" style=" vertical-align:middle;"/>
+									                    </div>
+									                    <div class="artworkHistory-Product-name text-center">
+									                        <b>{{lineItem.product_name}}</b>
+									    				</div>
+									    			</div>	
+								                </label>
+								            </div>
+								          </div>
+								        </li>
+								        <li class="list-group-item" ng-show = "!artworkHistoryList.artwork_history || artworkHistoryList.artwork_history.length == 0 ">
+									        <span>
+								                <p class="font-normal text-lg text-center m-t-b-100">
+								                    No artwork history found.
+								                </p>
+					              			</span>
+								        </li>
+								    </ul>
+							    </div> -->
+
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default" ng-hide = "qDetailsPreloader || qDetailsTab == 'artworkHistory'">
+								<div class="panel-heading">
+									<h4>Product And Design</h4>
+								</div>
+								<div class="panel-body">
+									<div class = "row product-design-info">
+										<div class="col-sm-8">
+											<!-- <h4 class="design-header">
+												Product And Design Information 
+											</h4> -->
+											<!-- <div class="clearfix m-t-10">
+							                  	<strong>Printing Process :</strong> 
+							                  	<span class="m-l-15">
+							                  		{{customerInvoiceList.printProfile}}
+							                  	</span>
+							                </div> -->
+							                <!-- <div class="clearfix m-t-10">
+							                  <strong>Image Uploaded In At least 300 Dpi :</strong> 	 <span class="m-l-15">
+							                  		{{customerInvoiceList.quality_image}}
+							                  	</span>
+							                </div>
+							               <div class="clearfix m-t-10">
+							                    <strong>Design Dimension :</strong> 
+							                    <span class="m-l-15">
+							                  		{{customerInvoiceList.dimension_width}} x {{customerInvoiceList.dimension_height}} ({{customerInvoiceList.dimension_unit}})
+							                  	</span>
+							                </div> -->
+							               <!--  <div class="clearfix m-t-10">
+							                    <strong>Unit :</strong> 
+							                    <span class="m-l-15">
+							                  		{{customerInvoiceList.dimension_unit}} 
+							                  	</span>
+							                </div> -->
+										</div>
+										<div class="col-sm-4">
+											<!-- <button type="button" id="DownloadArtwork" class="btn btn-info pull-right m-l-30" ng-click ="downloadArtwork()">
+						                              Download Artwork
+						                        </button> -->
+										</div>
+									</div>
+									<div class="row" ng-repeat="priceAccordion in quotationpricingDetails track by $index">
+						              	<div class="col-sm-12">
+							                <ul class="xe-productList">
+							                  	<li style = "cursor:pointer;" ng-repeat="img in priceAccordion.image track by $index" ng-click = "openImageModal(img)">				         
+							                  		<img class="img-responsive" src="{{ img.thumb }}">
+							                  	</li>				              
+							                </ul>
+						              	</div>
+						              	<div class="col-sm-12">
+							                <div class="clearfix m-t-10">
+							                   <strong>Product Name :</strong> 
+							                   	<span class="m-l-15">
+							                   		{{priceAccordion.product_name}}
+							              	  	</span>
+							                </div>
+							                <div class="clearfix m-t-10">
+							                   <strong>Color :</strong> 
+							                  	<span class="m-l-15">
+							                  		{{priceAccordion.color}}
+							                    </span>
+							                </div>
+							                <div class="clearfix m-t-10">
+							                  	<strong>Size :</strong> 
+							                  	<span class="m-l-15">								{{priceAccordion.size}}
+							                  	</span>
+							                </div>
+							                <div class="clearfix m-t-10">
+							                   <strong>Printing Process :</strong> 
+							                  	<span class="m-l-15">
+							                  		{{priceAccordion.print_profile_name}}
+							                    </span>
+							                </div>	
+							                <div class="clearfix m-t-10" ng-if = "!showPricingSection">
+							                  	<strong>Quantity :</strong> 
+							                  	<span class="m-l-15">								{{priceAccordion.quantity}}
+							                  	</span>
+							                </div>						    
+							                <span ng-show = "showPricingSection == false">
+							                	<hr>
+						                	</span>
+
+							                <div class="row m-t-10" ng-show = "showPricingSection">
+							                  	<div class="col-sm-12">
+							                  		<div class="table-responsive">
+								                    	<table class="table table-bordered m-b-0 price-table-font"> 
+									                      <thead> 
+									                        <tr> 
+									                          	<th>Blank Product Price</th> 
+										                        <th>Customization Price</th>
+										                        <th>Additional Price</th> 
+										                        <th>Rush Surcharge(%)</th>
+										                        <th>Tax</th>
+										                        <th>Discount</th> 	           
+										                        <th>Unit Price</th> 
+										                        <th>Quantity</th>
+										                        <th>Order Total</th>
+									                        </tr> 
+									                      </thead> 
+									                      <tbody> 
+									                        <tr>
+									                          <td>
+									                          	{{currency}}{{priceAccordion.unit_price_without_design}}
+									                          </td>
+									                          <td>
+									                          	{{currency}}{{priceAccordion.design_price}}
+									                          </td>
+									                          <td>
+									                          	<ul class="additional-fee">
+									                          		<li ng-repeat="fee in priceAccordion.additional_fee">
+									                          			<span> 
+									                          				<b>{{fee.fee_description}}:</b>
+									                          			</span>
+									                          			<span>
+									                          				{{currency}}{{fee.fee_amount}}
+									                          			</span>
+									                          		</li>
+									                          	</ul>
+									                          </td>
+									                          <td>
+									                          	{{priceAccordion.surchage_amount}}
+									                      	  </td>
+									                      	  <td>
+									                      	  	{{priceAccordion.tax}}	
+									                      	  </td>
+									                      	  <td>
+									                          	<span ng-if = "priceAccordion.discount_type == 'percentage'">
+									                          		{{priceAccordion.discount_amount}}%
+									                          	</span>
+									                          	<span ng-if = "priceAccordion.discount_type != 'percentage'">
+									                          		{{currency}}{{priceAccordion.discount_amount}}
+									                          	</span>
+									                          </td>
+									                          <td>
+									                          	{{currency}}{{priceAccordion.unit_price}}
+									                          </td>
+									                          <td>
+									                          	{{priceAccordion.quantity}}
+									                          </td>
+									                          <td>
+									                          	{{currency}}{{priceAccordion.price}}
+									                          </td>
+									                        </tr>
+
+									                      </tbody> 
+								                    	</table>
+							                    	</div>
+							                 	</div>					                	
+							                </div>
+							                <span>
+							                	<hr>
+						                	</span>
+						              	</div>
+						            </div>
+						            
+									<div class="row m-t-50" ng-show = "showPricingSection">
+							            <div class="col-md-12 text-right">
+							                <b>
+							                  <label>
+							                    Total price:
+							                  </label>
+							                </b>
+							                <strong>
+							                	{{currency}}{{totalPrice}}
+							                </strong>
+							             </div>
+							        </div>
+								</div>
+							</div>
+					</div>
+			<div class="panel panel-default" id="quoteConversations"  ng-hide = "qDetailsPreloader || qDetailsTab == 'artworkHistory'">
+						<div class="panel-heading">
+							<h4>Conversation</h4>
+						</div>
+				<div class="panel-body">
+
+
+			      	<!-- <div class="row">
+				                <form>
+				                  <div class="col-sm-10">
+					                <div class="form-group form-group-default required">
+					                  <textarea type="text" class="form-control resize-v" id="input1" placeholder="Type a message here" ng-model = "quoteInVoiceConversation.message" ></textarea>
+					                </div>
+				                  </div>
+					                <div class="col-sm-2">
+						                <button type="reset" class="btn btn-sm btn-info" ng-click="sendInvoiceConversation()" ng-disabled="!quoteInVoiceConversation.message || isConvoPreloader">Send
+						                	<img ng-show = "isConvoPreloader" class="image-responsive-height demo-mw-50 page-loader" src="assets/progress.svg" alt="Progress" style="position: absolute;top: 5px;width: 28px;right: 50px;">
+						                </button>
+					                </div>
+			                    </form>
+			                </div>
+			                <div class="m-t-sm">
+					            <small>
+					                <label class="text-danger" style="margin-left: 290px;" ng-show ="errorConvMsg">
+					                    Conversation failed to save
+					                </label>
+					            </small>
+							</div>
+			                <div class="panel-body m-t-20 panel-scroll">
+			                	<div class="row" ng-repeat="custConvert in customerConversationList track by $index">
+							        <div ng-if="custConvert.type == 'admin'">
+							            <div class="col-sm-10" >
+							                <div class="blockquote-bg1" >
+						                       <p>{{custConvert.notes}}</p>
+							                    <span class="text-uppercase">
+							                       	{{custConvert.agent_name}}
+							                    </span>
+				                        <span class="adminClass">
+				                        	{{custConvert.created_date}}
+						                        </span>
+			                                </div>
+			                            </div>
+			                        </div>
+					                <div ng-if="custConvert.type == 'customer'">
+					                    <div class="col-sm-10 col-sm-offset-2">
+					                        <div class="blockquote-bg2">
+								                <p>{{custConvert.notes}}</p>
+						                <span class="text-uppercase">				
+						                	{{customerInvoiceList.first_name}}
+								                </span>
+						                <span class="customerClass">				
+						                	{{custConvert.created_date}}
+								                </span>
+					                        </div>
+					                    </div>
+					                </div>
+		                    	</div>
+		                    	<span ng-show = "customerConversationList.length == 0">
+					                <p class="font-normal text-lg text-center m-b-40">
+					                    No conversation found.
+					                </p>
+		              			</span>
+	                </div> -->
+
+
+
+
+
+
+	                <div>
+				        <div class="conversation-body">
+				          <div id="conversations" ng-show="artworkHistoryList.artwork_history.length > 0">
+				            <div class="row" ng-repeat="artworkHistory in artworkHistoryList.artwork_history track by $index">
+				              <div class="col-md-12 admin-section-cont" ng-if="artworkHistory.type == 'admin'">
+				                <div class="admin-section">
+				                  <div class="admin-text-sec">
+				                    <div class="admin-left-text">
+				                      {{artworkHistory.message}}
+				                    </div>
+				                    <div class="admin-top-text">
+				                      <span class="user-name">
+				                        {{artworkHistory.agent_name}}
+				                      </span> -
+				                      <span>
+				                        {{artworkHistory.artwork_sent_date}}
+				                      </span>
+				                    </div>
+				                  </div>
+				                </div>
+				                <div class="artworkHistory-line-item">
+				                  <div ng-repeat="lineItem in artworkHistory.line_items">
+				                      <label class="no-margin">
+				                        <div class="artworkHistory-img-name-cont">
+				                          <div class="artworkHistory-img-cont cursor-pointer" ng-click="openArtworkHistoryImgModal(lineItem.image)">
+				                              <img ng-src="{{ lineItem.image[0].thumb }}" width="100" height="100" style=" vertical-align:middle;"/>
+				                          </div>
+				                          <div class="artworkHistory-Product-name text-center">
+				                              <b>{{lineItem.product_name}}</b>
+				                          </div>
+				                        </div>  
+				                      </label>
+				                  </div>
+				                </div>
+				              </div>
+				              <div class="col-md-12" ng-if="artworkHistory.type == 'customer'">
+				                <div class="user-section">
+				                  <div class="user-text-sec">
+				                    <div class="user-right-text">
+				                      {{artworkHistory.message}}
+				                    </div>
+				                    <div class="user-top-text">
+				                      <span class="user-name">
+				                        {{customerInvoiceList.first_name}}
+				                      </span> -
+				                      <span>
+				                        {{artworkHistory.artwork_sent_date}}
+				                      </span>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+				          </div>
+				          <div ng-show="artworkHistoryList.artwork_history.length == 0"
+				            style="display: flex; align-items: center; justify-content: center; height: 400px;">
+				            <p class="font-normal text-lg text-center">
+				              <xe-translate text-value="No Conversations found">
+				              </xe-translate>
+				            </p>
+				          </div>
+				        </div>
+				        <div class="conversation-footer">
+				          <div class="col-md-12" style="padding-left: 0; padding-right: 0">
+				            <div class="form-group">
+				              <input type="text" class="form-control" placeholder="Type a message here..."
+				                ng-model="quoteInVoiceConversation.message"
+				                id="conversationTextBox" ng-keyup="onConvEnterBtnClicked($event)">
+				              <button type="reset" class="btn btn-primary" ng-click="sendInvoiceConversation()"
+				                ng-disabled="!quoteInVoiceConversation.message || isConvoPreloader"
+				                id="conversationSendBtn">
+				                <i class="fa fa-send"></i>
+				                <img ng-show="isConvoPreloader" class="image-responsive-height demo-mw-50 page-loader"
+				                  src="assets/img/progress/progress-circle-lg-white.svg" alt="Progress"
+				                  style="position: absolute;top: 5px;width: 28px;right: 10px;">
+				              </button>
+				            </div>
+				          </div>
+				        </div>
+				        <div class="m-t-sm">
+				            <small>
+				                <label class="text-danger" style="margin-left: 290px;" ng-show ="errorConvMsg">
+				                    Conversation failed to save
+				                </label>
+				            </small>
+						</div>
+				    </div>
+
+
+
+
+
+
+            	</div>
+			</div>
+			
+		<!-- 
+					<div class="panel panel-default" id="quoteHistory" ng-hide = "qDetailsPreloader">
+						<div class="panel-heading">
+							<h4>History</h4>
+						</div>
+		                <div class="panel-body" style = "min-height: 400px;">
+		                	<div class="page-content white-bg bordered-page inset-30">
+			                   <div class="table-responsive">
+				                    <div>
+				                      <table class="table margin-bottom-0 no-first-border">
+				                        <tbody>
+				                          <tr ng-repeat="history in quoteHistoryList">
+				                            <td class="table-padd">{{history.notes}}
+				                              <span class="item__date-wrapper m-l-10">
+				                                <small>
+				                                  {{history.created_date | date:'dd MMM yyyy'}} -  {{history.created_time | date:"shortTime"}}
+				                                </small>
+				                              </span>
+				                            </td>
+				                          </tr>
+				                        </tbody>
+				                      </table>
+				                    </div>
+			                   </div>
+				            </div>
+		                	 <span ng-show = "quoteHistoryList.length == 0">
+				                <p class="font-normal text-lg text-center m-b-40">
+				                  <xe-translate text-value="No History found">
+				                  </xe-translate>
+				                </p>
+				             </span>
+		                </div>
+					</div> -->
+				</div>
+				<div class="col-sm-2" ng-hide = "qDetailsPreloader">
+					<div class="clearfix text-center m-t-10 quote-position" style="width: 14%;">
+						<button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal" ng-click ="approveQuote()" ng-disabled="approvebutton || showPricingSection == false || customerInvoiceList.status == 'Paid' || customerInvoiceList.status == 'Approved'" >Approve</button>
+						<button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#myModal2" ng-click = "rejectQuote()"  ng-disabled="rejectbutton || showPricingSection == false || customerInvoiceList.status == 'Paid' || customerInvoiceList.status == 'Approved'">Reject</button>
+						<!-- <button type="button" class="btn btn-primary btn-block" ng-click = "changeQuote()" ng-disabled="changebutton || showPricingSection == false">Request a change</button> -->
+						<button type="button" id="button" class="btn btn-primary btn-block" ng-click = "goToMessage()">Add Note</button>
+						<!-- <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal2" ng-click ="requestPayment()" ng-show = "approvebutton == true || customerInvoiceList.status == 'Approved' || customerInvoiceList.status == 'Paid'" ng-disabled="paymentButton || customerInvoiceList.status == 'Paid'">Pay Now</button> -->
+						<a class="btn btn-default btn-block" href="{{ customerInvoiceList.pdf_file }}" download="">
+						    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>  Download Pdf
+						</a>
+
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Artwork Job Link Page -->
+			<div class="row" ng-show="artworkJobId">
+				<div class="col-sm-10" id="artworkApprovediv"></div>
+				<div class="preloder-trannsparent-initially" ng-show="artWorkJobPreloader">
+			        <div class="preloder-content">
+			            <img src="assets/progress.svg"/>
+			        </div>
+			    </div>
+				<div class="col-sm-10">
+					<div class="printDiv">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4>
+									{{invDetailsData.jobs_details.product_name}}
+								</h4>
+							</div>
+							<div class="panel-body artworkjob-pan-body">
+								<div class="row artworkjob-pan-body-row">
+									<div class="col-sm-10">
+										<h3 class="artworkjob-heading">Description</h3>
+										<p>
+											{{invDetailsData.jobs_details.job_description}}
+										</p>
+									</div>
+									<div class="col-sm-2" style="text-align: right;">
+										<b>Created date</b>
+										<p>
+											{{invDetailsData.jobs_details.job_created_date}}	
+										</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+									   <!--  <div class="clearfix" ng-if="invDetailsData.product_details.image">
+									      <div class="tab-pane fade in">
+									        <div class="panel panel-default qrPanelCustom artwork-m-b-0">
+									          <div class="panel-body" style="padding: 20px;">
+									            <div class="panelWrap">
+									              <div class="qrBody">
+									                <div class="artworkjob-image-wrap">
+									                    <a href="" ng-repeat="imageurl in invDetailsData.product_details.image track by $index" ng-click="openArtWorkJobImageModal(invDetailsData.product_details.image, imageurl.original, $index)">
+									                      <img class="img-responsive" ng-src="{{ imageurl.thumb }}" />
+									                    </a>
+									                </div>
+									                <div class="msg-meta internal-note-name-date">
+									                  <small class="pull-right" style="color: #999">{{ product_details.date }}</small>
+									                </div>
+									              </div>
+									            </div>
+									          </div>
+									        </div>
+									      </div>
+									    </div> -->
+										<div ng-repeat="prevData in invDetailsData.jobs_details.previous_data track by $index">
+										    <div class="clearfix">
+										      <div class="tab-pane fade in">
+										        <div class="panel panel-default qrPanelCustom artwork-m-b-0">
+										          <div class="panel-body" style="padding: 20px;">
+										            <div class="panelWrap">
+										              <div class="qrBody">
+										                <div ng-if="prevData.img" class="artworkjob-image-wrap">
+										                    <a href="" ng-repeat="imageurl in prevData.img track by $index" ng-click="openArtWorkJobImageModal(prevData.img, imageurl.original, $index)" class="qrImgPreviewFile">
+										                      <img class="img-responsive" ng-src="{{ imageurl.thumb }}" />
+										                    </a>
+										                </div>
+										                <div ng-if="prevData.comment" class="msg internal-note-msg" style="margin-top: 20px;">
+										                    <div class="row">
+										                    	<div class="col-sm-12">
+										                    		{{ prevData.comment }}
+										                    	</div>
+										                    </div>
+										                    <div class="row" ng-if="prevData.artwork_assets">
+										                      <div class="col-sm-12">
+										                        <div class="attachedImgWrapBox">
+										                          <a class="attachedImg d-flex-item-center" ng-repeat="attachedImgUrl in prevData.artwork_assets track by $index" href="{{ attachedImgUrl.original }}" download>
+										                              <img class="img-responsive" ng-src="{{ attachedImgUrl.thumbnail }}" />
+										                          </a>
+										                        </div>
+										                      </div>
+										                    </div>
+										                </div>
+										                <div class="msg-meta internal-note-name-date">
+										                  <small class="pull-right" style="color: #999">{{ prevData.date }}</small>
+										                </div>
+										              </div>
+										            </div>
+										          </div>
+										        </div>
+										      </div>
+										    </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="clearfix text-center m-t-10 quote-position" style="width: 14%;">
+						<button type="button" class="btn btn-success btn-block" ng-click ="approveArtwork()" ng-disabled="invDetailsData.product_details.jobs_details.artwork_job_status == 'approved' ">
+							Approve
+						</button>
+						<button type="button" id="button" class="btn btn-primary btn-block" ng-click = "artworkChangeRequest()" ng-disabled="invDetailsData.product_details.jobs_details.artwork_job_status == 'approved' ">
+							Change Request
+						</button>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- For Order Section -->
+	<section class="artworkApproveWrap" ng-show="urlDataFromOrderPage">
+		<div class="data-loader" ng-show="orderDetailsLoader">
+			<div class="order-proof-loader">
+				<img class="quotedetails-loader" src="assets/progress.svg" alt="Progress">
+			</div>
+		</div>
+			<div class="container">
+				<h3 class="pageTitle">Artwork Proof</h3>
+				<div class="row">
+					<div class="col-12" ng-show="approveError">
+						<div class="alert alert-danger">
+							Failed to approve the artwork.
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="panel panel-default panel-custom" id="orderConversations">
+							<div class="panel-body conversation-body scroll-bar-wrap" id="sconversations">
+								<div  class="scroll-box">
+									<div class="conversation-col"
+										ng-repeat="order in orderHistory track by $index">
+										<div class="chatBubble fromCustomer" ng-if="order.agent_type == 'admin'">
+											<div class="chatBubbleWrap">
+												<div class="chatFlex approved" ng-if="order.preview_images.length > 0 && selectedproofBtnEnbl[$index] && orderArtworkStatus == 'approved'" >
+													<div class="chatText">
+														<h3>Artwork has been approved.</h3>
+														<!-- <p>This artwork proof has been approved by <b>{{orderList.customer_name}}</b></p> -->
+														{{order.message}}
+													</div>
+													<div class="chatImgGroup">
+														<div class="chatImgWrap" ng-repeat="lineItem in order.preview_images track by $index">
+															<div class="chatImgBox">
+																<img ng-src="{{lineItem}}" style="height: 80px;width: 80px;" />
+																<a href="{{order.attached_files[$index]}}" download>
+																		<span class="downHover"><i
+																			class="fa fa-cloud-download"></i></span>
+																</a>
+																
+															</div>
+															<!-- <div class="chatImgLabel">{{lineItem.product_name}}</div> -->
+														</div>
+													</div>
+												</div>
+												<div class="chatFlex" ng-if="selectedproofBtnEnbl[$index] != true || orderArtworkStatus == 'pending'">
+													<div class="chatText">
+														{{order.message}}
+													</div>
+													<div class="chatImgGroup">
+														<div class="chatImgWrap" ng-repeat="lineItem in order.preview_images  track by $index">
+															<div class="chatImgBox">
+																<img ng-src="{{lineItem}}" style="height: 80px;width: 80px;" />
+																<a href="{{order.attached_files[$index]}}" download>
+																		<span class="downHover"><i
+																			class="fa fa-cloud-download"></i></span>
+																</a>
+																
+															</div>
+															<!-- <div class="chatImgLabel">{{lineItem.product_name}}</div> -->
+														</div>
+													</div>
+													<div class="chatBtnGroup" ng-if="order.preview_images.length > 0 && selectedproofBtnEnbl[$index] && orderArtworkStatus == 'pending'">
+														<button type="button" ng-click = "approveArtworkProof()"
+															class="btn btn-success btn-sm">Approve</button>
+														<button type="button" class="btn btn-danger btn-sm" ng-click = "showConversation(order)">Change
+															Request</button>
+													</div>
+												</div>
+												<div class="chatTime" ng-if="selectedproofBtnEnbl[$index] != true || orderArtworkStatus == 'pending'">
+													{{order.created_date}}
+												</div>
+												<div class="chatTime" ng-if="order.preview_images.length > 0 && selectedproofBtnEnbl[$index] && orderArtworkStatus == 'approved'">
+														{{order.created_date}}
+												</div>
+											</div>
+										</div>
+										<div class="chatBubble fromAdmin" ng-if="order.agent_type == 'customer'">
+											<div class="chatBubbleWrap">
+												<!-- <div class="chatFlex alertBg">
+													<div class="chatText">Customer request for modification.</div>
+												</div> -->
+												<div class="chatFlex">
+													<div class="chatText">
+														{{order.message}}
+													</div>
+													<div class="chatImgGroup">
+														<div class="chatImgWrap" ng-repeat="lineItem in order.preview_images track by $index">
+															<div class="chatImgBox">
+																<img ng-src="{{lineItem}}" style="height: 80px;width: 80px;"/>
+																<!-- <span class="downHover"><i
+																		class="fa fa-cloud-download"></i></span> -->
+															</div>
+															<!-- <div class="chatImgLabel">{{lineItem.product_name}}</div> -->
+														</div>
+													</div>
+												</div>
+												<div class="chatTime">
+													{{order.created_date}}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer conversation-footer" ng-show = "isConversationsOn">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Type a message here..."
+										ng-model="orderProof.message" id="conversationTextBox">
+									<button class="btn btn-default" ng-file-drop="" ng-file-change="uploadAttachedFiles($files)" ng-file-select="" ng-multiple="true" title="Supports .jpg, .png, .jpeg, .pdf, .zip file formats.Maximum file upload size is {{orderList.upload_max_filesize}}" tooltip-placement="top" ng-disabled="isConvoPreloader">
+										<!-- <i class="fa fa-paperclip"></i> -->
+										Attach
+										<!-- <xe-translate text-value="ATTACH PROOF"></xe-translate> -->
+									</button>
+									<button type="button" class="btn btn-success" id="conversationSendBtn"
+										ng-click='sendConversations(orderProof.message)'
+										ng-disabled="orderProof.message == '' || orderProof.message == undefined || !isValidFileFormat || isConvoPreloader" title="Send">
+										<!-- <i class="fa fa-send"></i> -->
+										Send
+										<img ng-show="isConvoPreloader" class="image-responsive-height demo-mw-50 page-loader"
+										src="assets/progress.svg" alt="Progress"
+										style="position: absolute;top: 9px;width: 28px;right: 10px;">
+									</button>
+								</div>
+								<span class="block text-right" ng-show="isUploadFileCount"
+									style="position:absolute;right:0;">{{ uploadFileCount }}</span>
+								<span class="block text-right text-danger" ng-show="isValidFileFormat == false"
+									style="position:absolute;right:0;">{{validFormatMsg}}</span>
+									<span class="block text-right text-danger" ng-show="errorFileFormat"
+									style="position:absolute;right:0;">{{erroFileMeassage}}</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						
+						<div class="orderInfo" ng-hide="qDetailsPreloader">
+							<div class="card card-default">
+								<div class="card-header">
+									<div class="card-title">Order Details</div>
+								</div>
+								<div class="card-body">
+									<div class="infoFlex">
+										<div class="infoRow">
+											<div class="infoBox">
+												<h4 class="item-heading">Order id</h4>
+												<p class="item-text">#{{orderList.order_incremental_id}}</p>
+											</div>
+										</div>
+										<div class="infoRow">
+											<div class="infoBox">
+												<h4 class="item-heading">Order Status</h4>
+												<p class="item-text" style="text-transform: capitalize;">{{orderList.order_status}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card card-default">
+								<div class="card-header">
+									<div class="card-title">Customer Details</div>
+								</div>
+								<div class="card-body">
+									<div class="infoFlex">
+										<div class="infoRow">
+											<div class="infoBox">
+												<h4 class="item-heading">Name</h4>
+												<p class="item-text">{{orderList.customer_name}}</p>
+											</div>
+										</div>
+										<div class="infoRow">
+											<div class="infoBox">
+												<h4 class="item-heading">Email</h4>
+												<p class="item-text">{{orderList.customer_email}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card card-default">
+								<div class="card-header">
+									<div class="card-title">Artwork Details</div>
+								</div>
+								<div class="card-body">
+									<div class="infoFlex">
+										<div class="infoRow">
+											<div class="infoBox">
+												<h4 class="item-heading">Status</h4>
+												<p class="item-text" style="text-transform: capitalize;">{{orderList.artwork_status}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card card-default">
+									<div class="card-header">
+										<div class="card-title">Print Details</div>
+									</div>
+									<div class="card-body">
+										<div class="infoFlex">
+											<div class="infoRow">
+												<div class="infoBox">
+													<h4 class="item-heading">Status</h4>
+													<p class="item-text" ng-if="orderList.print_status == null || orderList.print_status == 0" style="text-transform: capitalize;">
+														not printed
+													</p>
+													<p class="item-text" ng-if="orderList.print_status == 1" style="text-transform: capitalize;">
+														printed
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							<!-- <div class="card card-default">
+								<div class="card-header">
+									<div class="card-title">Product details</div>
+								</div>
+								<div class="card-body">
+									<div class="infoFlex">
+										<div class="infoRow">
+											<div class="productBox">
+												<div class="productImg"><img src="http://wc3.inkxe.com/xetool/assets/wc3_inkxe_com/images/printmethod/pm_1.png?1570688131638" /></div>
+												<div class="productTxt">
+													<div class="productName">Color T-Shirt</div>
+													<div class="productTags">
+														<span class="tags">Small</span>
+														<span class="tags">Black</span>
+														<span class="tags">50 pieces</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="infoRow">
+											<div class="productBox">
+												<div class="productImg"><img src="http://wc3.inkxe.com/xetool/assets/wc3_inkxe_com/images/printmethod/pm_1.png?1570688131638" /></div>
+												<div class="productTxt">
+													<div class="productName">Color T-Shirt</div>
+													<div class="productTags">
+														<span class="tags">Small</span>
+														<span class="tags">Black</span>
+														<span class="tags">50 pieces</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+  	</body>
+</html>

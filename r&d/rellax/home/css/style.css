@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+*							{ margin: 0px; padding: 0px;}
+body						{ font-family: Arial, Helvetica, sans-serif; font-size:14px;}
+.clear						{ clear:both;}
+img							{ border: 0px;}
+ul,ol						{ list-style: none;}
+a							{ text-decoration: none; outline: none;}
+a:focus, a:active,a:visited	{ outline: none; border: 0px;}
+h1							{}
+h2							{}
+h3							{}
+h4							{}
+p							{}
+/******* Common Element CSS End *********/
+
+/******* Header Section CSS Start *******/
+header						{}
+.logo						{}
+nav ul.top-nav 			    	{}
+nav ul.top-nav li				{}
+nav ul.top-nav li a				{}
+nav ul.top-nav li a:hover,	
+nav ul.top-nav li a.selected	{}
+/******* Header Section CSS End *********/
+
+/******* Banner section CSS Start *******/
+/******* Banner section CSS End *********/
+
+/******* Middle section CSS Start ******/
+section						{}
+article						{}
+aside						{}
+/******** Middle section CSS End *******/
+
+/***** Bottom section CSS Start *******/
+footer							{}
+nav ul.footer-nav				{}
+nav ul.footer-nav li			{}
+nav ul.footer-nav li a			{}
+nav ul.footer-nav li a:hover	{}
+.site-info					{}
+/****** Bottom section CSS End *******/

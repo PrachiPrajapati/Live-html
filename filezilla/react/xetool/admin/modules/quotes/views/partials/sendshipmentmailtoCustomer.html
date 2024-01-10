@@ -1,0 +1,123 @@
+<div class="modal fade stick-up" id="productshipmentMailToCustomer" pg-portlet tabindex="-1" role="dialog"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left" id="quoteCustomerEmailMsg">
+                <button type="button" class="close custom-modal-close" data-dismiss="modal" aria-hidden="true"
+                    style="margin-right:6px;">
+                    <i class="pg-close fs-14"></i>
+                </button>
+                <h4><xe-translate text-value="Send an email to customer">
+                </xe-translate></h4>
+            </div>
+            <div class="modal-body" id="productshipmentMailToCustomer">
+                <div class="row m-b-10">
+                    <div class="col-md-2">
+                         <xe-translate text-value="Subject">
+                        </xe-translate>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" ng-model="mailSendToCustomerInputs.subject" class="form-control"
+                            placeholder="Enter Subject">
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-md-2"> <xe-translate text-value="To">
+                    </xe-translate></div>
+                    <div class="col-md-10"><input type="text" ng-model="mailSendToCustomerInputs.to" class="form-control" placeholder="Enter Customer Email" readonly> </div>
+                </div>
+               <!--  <div class="row m-b-10">
+                    <div class="col-md-2"> <xe-translate text-value="Cc">
+                    </xe-translate></div>
+                    <div class="col-md-10"><input type="email" ng-model="mailSendToCustomerInputs.cc"
+                            ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/"
+                            class="form-control" placeholder="Enter cc "> </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-md-2"> <xe-translate text-value="Bcc">
+                    </xe-translate></div>
+                    <div class="col-md-10"><input type="email" ng-model="mailSendToCustomerInputs.bcc"
+                            ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/"
+                            class="form-control" placeholder="Enter Bcc"> </div>
+                </div> -->                
+
+                <div class="row m-b-10">
+                    <div class="col-md-2" style="padding-right: 0px;">Message</div>
+                    <div class="col-md-10">
+                        <textarea class="form-control h-auto" style="resize: none;" ng-model="mailSendToCustomerInputs.message" rows="{{(shippingData.deliver_by == 'shipping')? 7: 4 }}" required readonly></textarea>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-10">
+                        <div class="">
+                            <div class="panel panel-default">
+                                <div class="panel-body no-padding" ng-hide="noData">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped no-margin">
+                                            <thead>
+                                                <tr>
+                                                    <th ng-show="true">
+                                                        <xe-translate text-value="Product">
+                                                        </xe-translate>
+                                                    </th>
+                                                    <th ng-show="true">
+                                                        <xe-translate text-value="Size">
+                                                        </xe-translate>
+                                                    </th>
+                                                    <th ng-show="true">
+                                                        <xe-translate text-value="Color">
+                                                        </xe-translate>
+                                                    </th>
+                                                    <th ng-show="true">
+                                                        <xe-translate text-value="Quantity">
+                                                        </xe-translate>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="quoteItems in quoteDesignDetailsForm track by $index">
+                                                    <td>{{quoteItems.product_name}}</td>
+                                                    <td>{{quoteItems.size}}</td>
+                                                    <td>{{quoteItems.color}}</td>
+                                                    <td>{{quoteItems.quantity}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkbox check-info"> 
+                            <input type="checkbox" ng-model="mailSendToCustomerInputs.attach_pdf" id="attach_pdf">
+                            <label for="attach_pdf">
+                                <xe-translate text-value="Attach pdf">
+                                </xe-translate>
+                            </label>
+                        </div>                         
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-sm-12 text-right">
+                        <button class="btn btn-danger btn-cons" ng-click="cancelEmailToCustomer()">
+                            <xe-translate text-value="Cancel">
+                            </xe-translate>
+                        </button>
+                        <button class="btn btn-success btn-cons" ng-disabled="sendmailbuttonDissable"
+                            ng-click="sendEmailToCustomer()">
+                            <xe-translate text-value="Send">
+                            </xe-translate>
+                        </button>
+                    </div>
+                </div>
+                <div class="preloader-trans" ng-show="shipMailPreLoader" style="padding-left: 0px; z-index: 100000">
+                    <div class="page-loader">
+                        <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                        <xe-translate text-value="Please wait"></xe-translate>...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

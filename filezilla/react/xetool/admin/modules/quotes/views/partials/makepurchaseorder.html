@@ -1,0 +1,198 @@
+<div class="Form_Details">
+        <div class="panel panel-default">
+          <div class="panel-heading separator">
+             <div class="row">
+                <div class="col-md-6">
+                    <xe-translate text-value="Create Purchase Order">
+                      </xe-translate>
+                </div>
+                <div class="col-md-6  text-right">
+                    <button class="btn btn-warning btn-sm" ng-click="ResetAddressFields()">Reset Fields</button>
+                </div>
+              </div>
+          </div>
+          <div class="panel-body m-t-20">
+            <div class="form-wrap">
+              <form > 
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <div class="form-group form-group-default required">
+                            <label  class="control-label">
+                              <xe-translate text-value="Order Title">
+                              </xe-translate>
+                            </label>
+                            <input type="text" ng-model="purchseOrder.title" class="form-control"  placeholder="Enter Order Title" >
+                          </div>
+                        </div>
+                     </div>
+                  <br>
+                  <div class="row">
+                      <div class="col-sm-6">
+                          <div class="customer">
+                             <div id="b-Vendorlist" class="select-wrap" ng-click="quotepurchaseOrderVendor()" ng-disabled="vendorList.length==0">
+                               <div class="d-flex justify-content-between align-items-center margin-b">
+                                 <span class="heading-one">
+                                   <xe-translate text-value="Select Vendor">
+                                   </xe-translate>
+                                 </span>
+                                 <span class="star-one">*</span>
+                               </div>
+                               <div class="d-flex justify-content-between align-items-center">
+                                 <span class="select-one"> {{ purchseOrder.vendor_name }} </span>
+                                 <span class="arrow-one"></span>
+                               </div>
+                             </div>
+                           </div>
+                           <div class="customer">
+                             <div id="b-Vendorlist-drop" class="dropdown-wrap">
+                               <input type="text" class="input-sm form-control" id="b-Vendorlist-search" ng-model="vendor_search.value">
+                               <ul>
+                                 <li ng-repeat="vendor in vendorList" ng-click="vendorselected(vendor)">
+                                     {{vendor.name}}  
+                                 </li>
+                               </ul>
+                             </div>
+                           </div>  
+                       </div>  
+                      <div class="col-sm-6">
+                          <div class="form-group form-group-default required">
+                            <label  class="control-label">
+                              <xe-translate text-value="Expected Date Of Delivery">
+                              </xe-translate>
+                            </label>
+                            <input id="makePurchaseOrder" ui-date="dateOptions" class="form-control" ui-date-format  ng-model="purchseOrder.expecteddate"  onkeydown="return false">
+                           </div>
+                        </div>
+                    <div class="col-sm-6">
+                        <div class="form-group form-group-default required">
+                          <label  class="control-label">
+                            <xe-translate text-value="addr">
+                            </xe-translate>
+                          </label>
+                          <input type="text" ng-model="purchseOrder.address1" class="form-control"  placeholder="Enter Address" >
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="form-group form-group-default">
+                            <label  class="control-label">
+                              <xe-translate text-value="Address">
+                              </xe-translate>
+                            </label>
+                            <input type="text" ng-model="purchseOrder.address2" class="form-control"  placeholder="Enter Address" >
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group form-group-default required">
+                              <label  class="control-label">
+                                <xe-translate text-value="city">
+                                </xe-translate>
+                              </label>
+                              <input type="text" ng-model="purchseOrder.city" class="form-control"  placeholder="Enter City name" >
+                            </div>
+                          </div>
+                        <div class="col-sm-6">
+                            <div class="form-group form-group-default required">
+                              <label  class="control-label">
+                                <xe-translate text-value="Zip">
+                                </xe-translate>
+                              </label>
+                              <input type="text" ng-model="purchseOrder.zip" class="form-control"  placeholder="Enter Zip" >
+                            </div>
+                          </div>
+                          <div class="col-sm-6 form-group">
+                              <div class="customer">
+                                  <div id="g-country" class="select-wrap"  ng-click="quotePurchaseOrderCountry()">
+                                    <div class="d-flex justify-content-between align-items-center margin-b">
+                                      <span class="heading-one">
+                                        <xe-translate text-value="Country">
+                                        </xe-translate>
+                                      </span>
+                                      <span class="star-one">*</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <span class="select-one"> {{ purchseOrder.billing_country }} </span>
+                                      <span class="arrow-one"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="customer">
+                                  <div id="g-country-drop" class="dropdown-wrap" >
+                                    <input type="text" class="input-sm form-control" id="g-country-search" ng-model="billingCountrySearch.value">
+                                    <ul>
+                                      <li ng-repeat="country in countryList | filter:billingCountrySearch.value" ng-click="onGlobalPurchaseCountrySelected(country)">
+                                        {{ country.countries_name }}  
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>  
+                            </div>
+                            <div class="col-sm-6 form-group">
+                              <div class="customer" ng-class="purchseOrder.billing_country == 'Select' ? 'disable-div' : '' ">
+                               <div id="g-state" class="select-wrap" ng-click="quotePurchaseOrderState()">
+                                   <div class="d-flex justify-content-between align-items-center margin-b">
+                                     <span class="heading-one">
+                                       <xe-translate text-value="State">
+                                       </xe-translate>
+                                     </span>
+                                     <span class="star-one">*</span>
+                                   </div>
+                                   <div class="d-flex justify-content-between align-items-center">
+                                     <span class="select-one"> {{ purchseOrder.billing_state }} </span>
+                                     <span class="arrow-one"></span>
+                                   </div>
+                               </div>
+                             </div>
+                             <div class="customer">  
+                               <div id="g-state-drop" class="dropdown-wrap">
+                                   <input type="text" class="input-sm form-control" id="g-state-search" ng-model="billingStateSearch.value">
+                                   <ul>
+                                     <li ng-repeat="state in billingStateList | filter:billingStateSearch.value" ng-click="onGlobalPurchaseStateSelected(state)">
+                                       {{ state.state_name }}  
+                                     </li>
+                                   </ul>
+                               </div>
+                             </div>
+                           </div>
+                </div>
+                <br>
+                <div class="row">
+                    <label  class="control-label">
+                        <xe-translate text-value="Quote Items">
+                        </xe-translate>
+                      </label>
+                    <div class="form-group" data-ng-repeat="purchseOrder in quotProductAndQtyDetails track by $index" >
+                          <div class="row">    
+                              <div class="col-sm-3"><input type="text"  ng-model="purchseOrder.product_name"  class="form-control" name="product_name"  placeholder="Enter a Product name" readonly></div> 
+                              <div class="col-sm-3" ng-hide="purchseOrder.size == 'Select' || purchseOrder.size == 'Default'"><input type="text" ng-model="purchseOrder.size"  class="form-control" name="product_size"  placeholder="Enter a Product Size" readonly></div>   
+                              <div class="col-sm-3" ng-hide="purchseOrder.color == 'Select' || purchseOrder.color == 'Default'"><input type="text" ng-model="purchseOrder.color"  class="form-control" name="product_color"  placeholder="Select Color" readonly></div> 
+                              <div class="col-sm-2"><input type="text" ng-model="purchseOrder.quantity"  class="form-control" name="product_quantity"  placeholder="Enter a Quantity" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required></div> 
+                              <div class="col-sm-1"><button class="btn btn-danger btn-sm" ng-show="quotProductAndQtyDetails.length>1" ng-click="removeNewChoice(purchseOrder)"><span><i class="fa fa-trash" aria-hidden="true"></i></span></button></div> 
+                          </div>
+                    </div>
+                    <!-- <button  ng-click="addNewChoice()">Add Items To purchase Order</button> -->
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="panel-footer">
+           <div class="row">
+            <div class="col-sm-12 text-right">
+                 <button type="reset" class="btn btn-danger" ng-click="cancelPurchaseOrder()">Cancel</button>
+                 <button type="submit" ng-show="quotProductAndQtyDetails.length >= 1" class="btn btn-primary" ng-click="createNewPurchaseOrderFromQuote()"><xe-translate text-value="Place order">
+                </xe-translate></button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="preloader-trans" ng-show="makePurchaseOrderPreloader">
+            <div class="page-loader">
+                <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress"/>
+                <span>
+                    <xe-translate text-value="Please wait">
+                    </xe-translate>
+                    ...
+                </span>
+            </div>
+        </div>
+      </div>
+      

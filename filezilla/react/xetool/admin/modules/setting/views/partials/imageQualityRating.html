@@ -1,0 +1,41 @@
+<div class="panel-heading separator p-t-0">
+    <div class="panel-title">
+        <h4 class ="xe-panel-title pull-left">
+            <xe-translate text-value="Image Quality Rating">
+            </xe-translate>
+        </h4>
+        <i class="fa fa-info-circle ng-scope info-module-icon m-l-10" ng-click="showSettingsFaqDetails(15)">
+        </i>
+    </div>
+</div>
+<div class="panel-body m-t-20">
+    <form class="form-horizontal" role="form" autocomplete="off">
+        <div class="form-group">
+            <div class="form-group no-border no-margin">
+                <div class="col-md-4">
+                    <div class="radio radio-success m-b-15">
+                        <input type="radio" value="1" id="enable2" ng-model="addToCartSetting.is_img_quality" ng-checked="addToCartSetting.is_img_quality == 1" ng-change="imageQualityRating(addToCartSetting.is_img_quality)"/>
+                        <label  for="enable2">
+                            <xe-translate text-value="Enabled">
+                            </xe-translate>
+                        </label>
+                        <input type="radio" value="0" id="disable2" ng-model="addToCartSetting.is_img_quality" ng-checked="addToCartSetting.is_img_quality == 0" ng-change="addToCartSetting.is_img_quality = 0"/>
+                        <label for="disable2">
+                            <xe-translate text-value="Disabled">
+                            </xe-translate>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+<div class="panel-footer wizard-ftr bg-white panel-footer-mg">
+    <button class="btn btn-sm btn-info pull-left m-r-10" ng-click="updateGeneralSetting()" ng-disabled="demoStatus">
+        <xe-translate text-value="Save">
+        </xe-translate>
+    </button>
+</div>
+<ng-include src="'modules/setting/doc/s15.html'">
+</ng-include>

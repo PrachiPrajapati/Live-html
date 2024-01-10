@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>file-2(24x24)@1x</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="07.2_Add-Package" transform="translate(-1113.000000, -622.000000)" stroke="#B9B9B9" stroke-width="1.7">
+            <g id="Group-9" transform="translate(374.000000, 579.000000)">
+                <g id="file-2(24x24)@1x" transform="translate(740.000000, 44.000000)">
+                    <path d="M25.993,0.493 L33.49,7.99 C33.813,8.313 34,8.755 34,9.197 L34,32.3 C34,33.235 33.235,34 32.3,34 L1.7,34 C0.765,34 0,33.235 0,32.3 L0,1.7 C0,0.765 0.765,0 1.7,0 L24.803,0 C25.245,0 25.687,0.187 25.993,0.493 Z" id="Path"></path>
+                    <line x1="8.5" y1="25.5" x2="25.5" y2="25.5" id="Path"></line>
+                    <line x1="8.5" y1="17" x2="25.5" y2="17" id="Path"></line>
+                    <line x1="8.5" y1="8.5" x2="17" y2="8.5" id="Path"></line>
+                    <path d="M23.8,0 L23.8,10.2 L34,10.2 L34,9.197 C34,8.755 33.813,8.313 33.507,8.007 L25.993,0.493 C25.687,0.187 25.245,0 24.803,0 L23.8,0 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

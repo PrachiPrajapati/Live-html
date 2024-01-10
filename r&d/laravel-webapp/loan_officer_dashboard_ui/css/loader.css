@@ -1,0 +1,200 @@
+.scroll_body.margin_auto.p_tb_50.empty_campaign_listing .p_tb_50,
+.add_edit_campaigns .loading5, 
+.recipients .loading5 {
+	top: 100%;
+}
+
+.add_edit_campaigns .loading5{
+	margin-top: 75px!important;
+}
+.center_code{    
+	position: absolute;
+	left: 50%;
+	top: 2%;
+	transform: translate(-50%, -2%);
+	display: none;
+}
+.line_top {
+	display:block;
+	position:fixed;
+	z-index: 999999;
+	top:0;
+	left:0%;
+	border-bottom:2px solid #3246D3;
+	width:0%;
+	text-align:center;
+	animation: line 2s linear forwards;
+}
+
+@keyframes line {
+	from {
+		left:0%;
+		width:0%;
+	}
+	to {
+		left:0%;
+		width:100%;
+	}
+}
+.panel,
+#panel {
+	display:block;
+	text-align: center;
+	margin: auto;
+}
+
+.loading5 {
+	display: block!important;
+	position: absolute!important;
+	width: 64px!important;
+	height: 64px!important;
+	margin: 10px auto!important;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loading5,
+#loading5
+{
+	display:none;
+	position:fixed;
+	z-index: 999999;
+	margin:10px 0 0 10px;
+	width:24px;
+	height:24px;
+}
+
+.loading5 .outerCircle{
+	width: 64px!important;
+	height: 64px!important;
+	position: relative!important;
+}
+
+.loading5 .outerCircle,
+#loading5 #outerCircle
+{
+	display:block;
+	position:absolute;
+	margin:0 auto;
+	width:24px;
+	height:24px;
+	border-top:2px solid #3246D3;
+	border-bottom:2px solid #3246D3;
+	border-left:2px solid transparent;
+	border-right:2px solid transparent;
+
+	border-radius:80px;
+	-moz-border-radius:80px;
+	-webkit-border-radius:80px;
+	-ms-border-radius:80px;
+	-o-border-radius:80px;
+
+	box-shadow:0 0 20px #3246D3;
+	-mozbox-shadow:0 0 20px #3246D3;
+	-ms-box-shadow:0 0 20px #3246D3;
+	-o-box-shadow:0 0 20px #3246D3;
+	-webkit-box-shadow:0 0 20px #3246D3;
+
+	-webkit-animation: cwSpin 1s linear .2s infinite;
+	-moz-animation: cwSpin .666s linear .2s infinite;
+	-o-animation: cwSpin .666s linear .2s infinite;
+	-ms-animation: cwSpin .666s linear .2s infinite;
+	animation: cwSpin .666s linear .2s infinite;
+}
+.loading5 .outerCircle,
+#loading5 #outerCircle
+{
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-ms-box-shadow:none;
+	-o-box-shadow:none;
+	-webkit-box-shadow:none;
+
+	border-top:2px solid transparent;
+	border-bottom:2px solid #3246D3;
+	border-left:2px solid #3246D3;
+	border-right:2px solid transparent;
+
+	-webkit-animation: cwSpin 1s linear .2s infinite;
+	-moz-animation: cwSpin .666s linear .2s infinite;
+	-o-animation: cwSpin .666s linear .2s infinite;
+	-ms-animation: cwSpin .666s linear .2s infinite;
+	animation: cwSpin .666s linear .2s infinite;
+}
+@-webkit-keyframes cwSpin
+{
+	0%{-webkit-transform:rotate(0deg);	}
+	100%{-webkit-transform:rotate(360deg); }
+}
+@-moz-keyframes cwSpin
+{
+	0%{-moz-transform:rotate(0deg);	}
+	100%{-moz-transform:rotate(360deg); }
+}
+@-ms-keyframes cwSpin
+{
+	0%{-ms-transform:rotate(0deg);	}
+	100%{-ms-transform:rotate(360deg); }
+}
+@-o-keyframes cwSpin
+{
+	0%{-o-transform:rotate(0deg);	}
+	100%{-o-transform:rotate(360deg); }
+}
+@keyframes cwSpin
+{
+	0%{transform:rotate(0deg);	}
+	100%{transform:rotate(360deg); }
+}
+
+@-webkit-keyframes ccwSpin
+{
+	0%{-webkit-transform:rotate(0deg);	}
+	100%{-webkit-transform:rotate(-360deg); }
+}
+@-moz-keyframes ccwSpin
+{
+	0%{-moz-transform:rotate(0deg);	}
+	100%{-moz-transform:rotate(-360deg); }
+}
+@-ms-keyframes ccwSpin
+{
+	0%{-ms-transform:rotate(0deg);	}
+	100%{-ms-transform:rotate(-360deg); }
+}
+@-o-keyframes ccwSpin
+{
+	0%{-o-transform:rotate(0deg);	}
+	100%{-o-transform:rotate(-360deg); }
+}
+@keyframes ccwSpin
+{
+	0%{transform:rotate(0deg);	}
+	100%{transform:rotate(-360deg); }
+}
+
+.panel-loading.now-loading {
+	/* background-color: rgba(0,0,0,.5);*/
+	background-color: #fff;
+	color: #fff;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.25);
+	pointer-events: auto;
+	border-radius: 0;
+	min-height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.panel-loading, .loading-hide, .loading-hide {
+	color: transparent;
+	text-shadow: -1px -1px 0 transparent;
+	background-color: rgba(0,0,0,0);
+	pointer-events: none;
+}
+.panel-loading {
+	transition: all .3s;
+	cursor: default;
+}

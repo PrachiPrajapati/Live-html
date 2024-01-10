@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+/********* Fonts Face CSS End **********/
+
+/******* Grid Element CSS Start ******/
+/*
+.parent 
+{ 
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 10px;
+    background: #ccc;
+    grid-template-areas: "first first first" "second second second" "third third third";
+    justify-items: stretch;
+}
+
+.parent .child1,
+.parent .child2,
+.parent .child3 { grid-area: "first"; background: red;}
+
+.parent .child4,
+.parent .child5,
+.parent .child6 { grid-area: "second"; background: green; justify-self: center; align-self: center;}
+
+.parent .child7,
+.parent .child8,
+.parent .child9 { grid-area: "third"; background: blue;}
+*/
+/******* Grid Element CSS Start ******/

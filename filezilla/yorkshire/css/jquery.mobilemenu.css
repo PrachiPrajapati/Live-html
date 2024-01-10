@@ -1,0 +1,33 @@
+.mobilemenu { overflow-y: scroll; position: fixed;z-index: 10000;top: 0;left: 0;right: 0;bottom: 100%;}
+.mobilemenu.js-mobilemenu--opened {  bottom: 0;}
+.mobilemenu .mobilemenu--inner { width: 90%; max-width: 480px; min-height: 100%;}
+.mobilemenu.mobilemenu-theme {  background: rgba(255, 255, 255, 0); -webkit-transition: background 0.3s ease-out; -moz-transition: background 0.3s ease-out; -o-transition: background 0.3s ease-out; transition: background 0.3s ease-out;}
+.mobilemenu.mobilemenu-theme .mobilemenu--inner {  overflow: hidden; margin-left: -90%; background: rgba(0, 0, 0, 0.8); border-right: 5px solid #b81e24;}
+.mobilemenu.mobilemenu-theme ul {  margin: 0; padding: 0px 0 0;  text-align: center;}
+.mobilemenu.mobilemenu-theme ul ul {  overflow: hidden; height: 0; opacity: 0; -webkit-transition: opacity 0.3s ease-out; -moz-transition: opacity 0.3s ease-out; -o-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; background: rgba(184, 30, 36, 0.3);;}
+.mobilemenu.mobilemenu-theme ul li { list-style: none;}
+.mobilemenu.mobilemenu-theme ul li.js-mobilemenu--li-with-child.js-mobilemenu--li-active > a:after { margin-top: -9px; -webkit-transform: rotateZ(135deg); -moz-transform: rotateZ(135deg); -o-transform: rotateZ(135deg); transform: rotateZ(135deg);}
+.mobilemenu.mobilemenu-theme ul li.js-mobilemenu--li-with-child.js-mobilemenu--li-active > ul { height: auto; opacity: 1;}
+.mobilemenu.mobilemenu-theme ul li a { display: block; color: #fff; padding: 6px 10px; text-decoration: none; text-transform: uppercase; font-size: 14px;}
+.mobilemenu.mobilemenu-theme.js-mobilemenu--opened { background: rgba(255, 255, 255, .5);}
+.mobilemenu.mobilemenu-theme.js-mobilemenu--opened .mobilemenu--inner { margin-left: 0; -webkit-transition: margin-left 0.3s ease-out; -moz-transition: margin-left 0.3s ease-out; -o-transition: margin-left 0.3s ease-out; transition: margin-left 0.3s ease-out;}
+.mobilemenu.mobilemenu-theme.js-mobilemenu--animate-out { background: rgba(255, 255, 255, 0);}
+.mobilemenu.mobilemenu-theme.js-mobilemenu--animate-out .mobilemenu--inner { margin-left: -90%;}
+.mobilemenu.mobilemenu-theme.mobilemenu--open-icon { display: block; width: 100%; height: 30px; background: red;}
+.mobilemenu.mobilemenu-theme.js-mobilemenu--opened { background: transparent; }
+.mobilemenu.mobilemenu-theme,
+.mobilemenu.mobilemenu-theme.js-mobilemenu--animate-out { background: rgba(0, 0, 0, 0); }
+.mobilemenu--open-icon.mobilemenu-theme:before { content: "\f0c9"; position: absolute; top: 0; left: 0; height: 100%; width: 100%; font-size: 24px; line-height: 35px; text-align: center; color: #fff; font-family: 'fontawesome';}
+.mobilemenu--open-icon.mobilemenu-theme { display: block; width: 35px; height: 35px; border-radius: 0px; cursor: pointer; background: transparent; position: relative;}
+.mobilemenu--open-icon.mobilemenu-theme .slicknav_icon { display: block; padding: 6px;}
+.mobilemenu--open-icon.mobilemenu-theme .slicknav_icon .slicknav_icon-bar { display: block; height: 5px; margin-top: 4px; background: #fff;}
+.mobilemenu--open-icon.mobilemenu-theme .slicknav_icon .slicknav_icon-bar.slicknav_icon-bar--first { margin-top: 0; }
+.mob-nav { display: none;}
+.some-text {  overflow: hidden; margin: 30px 10px 10px;}
+.js-mobilemenu--opened .mob-nav { display: block; }
+.search { margin: 10px;}
+
+ @media (min-width: 767px) {
+.mobilemenu--open-icon.mobilemenu-theme { display: none; }
+.js-mobilemenu--opened .mob-nav { display: block; }
+}

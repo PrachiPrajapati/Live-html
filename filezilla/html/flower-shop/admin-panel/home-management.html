@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flower Shop</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/manifest.json">
+        <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<meta name="csrf-token" content="KFk1mzddVngKIzOXj3JsG1DpBkBgmVEWzxOqbMZ5">        
+            <link href="css/profile.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+            <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+
+
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+<link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+<link href="plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+
+<link href="plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+<link href="plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+
+<link href="css/components-md.min.css" rel="stylesheet" type="text/css" />
+<link href="css/plugins.min.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="css/layout.min.css">
+<link rel="stylesheet" type="text/css" href="css/darkblue.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.nestable.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link href="plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />    
+<script src="js/jquery.min.js"></script>
+<script src="js/Sortable.min.js"></script>
+    <!-- END HEAD -->
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-content-white">
+        
+
+        <div class="page-header navbar navbar-fixed-top">
+    <div class="page-header-inner ">
+        
+            <div class="page-logo">
+                <a href="box-listing.html">
+                    <img class="logo-default" src="images/logo.svg" alt="Flowers Shop" height="40">
+                </a>
+                <div class="menu-toggler sidebar-toggler"> </div>
+            </div>
+        
+        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"></a>
+        
+        
+        <div class="top-menu">
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown dropdown-user">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                        <span class="username username-hide-on-mobile"> Super Admin </span>
+                        <i class="icon-users"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-default">
+                        <li>
+                            <a href="#">
+                                <i class="icon-user"></i> My Profile </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-lock"></i> Change Password </a>
+                        </li>
+                        <li class="divider"> </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-logout"></i> Logout </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>        <div class="clearfix"> </div>
+
+
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+    <div class="page-sidebar navbar-collapse collapse">
+        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 10px">  
+                    <li class="nav-item start ">
+                        <a href="box-listing.html" class="nav-link ">
+                            <i class="icon-home"></i>
+                            <span class="title">Box Management</span>
+                        </a>
+                    </li>
+                                                                
+                    <li class="nav-item start ">
+                        <a href="category-listing.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                                <span class="title">Category Management</span>
+                        </a>
+                    </li>
+                                                                
+                    <li class="nav-item start ">
+                        <a href="color-listing.html" class="nav-link ">
+                             <i class="icon-home"></i>
+                                <span class="title">Colors Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start ">
+                        <a href="product-listing.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                                 <span class="title">Products Management</span>
+                        </a>
+                    </li> 
+                     <li class="nav-item start ">
+                        <a href="shape-listing.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                                 <span class="title">Shape Management</span>
+                        </a>
+                    </li>    
+                    <li class="nav-item start ">
+                        <a href="home-management.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                            <span class="title">Home Management</span>
+                        </a>
+                    </li>
+             </ul>
+    </div>
+</div>            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content" style="min-height:501px">    
+                        <h3 class="page-title"> 
+    </h3>
+                    
+                        <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption font-dark">
+                        <span class="caption-subject bold uppercase"> Home Management </span>
+                    </div>
+                </div>
+                <div class="profile-content">
+                <form action="" role="form"  method="POST" enctype="multipart/form-data" novalidate="novalidate">
+                    <input type="hidden" name="_token" value="W4leT0YuB5xOKQT3MuTYQKy32Qw2uT6RLIVMHNzT">                    
+                       <div class="row">
+                            <div class="col-md-12">
+                                <div class="portlet-title">
+                                    <div class="caption font-dark my-15">
+                                        <span class="caption-subject bold uppercase"> For Every Occassion </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="control-label"><span class="mendatory">*</span>Select Products</label>
+                                            <select class="form-control">
+                                                <option>Mixed Flowers</option>
+                                                <option>Long Life Arcylic</option>
+                                                <option>Chocolate</option>
+                                                <option>Mini Trees</option>
+                                                <option>Mixed Flowers</option>
+                                                <option>Long Life Arcylic</option>
+                                                <option>Chocolate</option>
+                                                <option>Mini Trees</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="dd reorder-list">
+                                                <ol class="dd-list" id="nestable_list_1">
+                                                    <li class="dd-item dd3-item" data-id="16">
+                                                        <div class="dd-handle dd3-handle"> </div>
+                                                        <div class="dd3-content"> Mixed Flowers </div>
+                                                        <a href="" class="remove"><img src="images/close.png" alt="close"></a>
+                                                    </li>
+                                                    <li class="dd-item dd3-item" data-id="14">
+                                                        <div class="dd-handle dd3-handle"> </div>
+                                                        <div class="dd3-content"> Chocolate </div>
+                                                        <a href="" class="remove"><img src="images/close.png" alt="close"></a>
+                                                    </li>
+                                                    <li class="dd-item dd3-item" data-id="13">
+                                                        <div class="dd-handle dd3-handle"> </div>
+                                                        <div class="dd3-content"> Mini Trees </div>
+                                                        <a href="" class="remove"><img src="images/close.png" alt="close"></a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <input type="submit" value="Add" class="btn grey">
+                                        <input type="submit" value="Update" id="update_1" class="btn grey">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <br/>
+                                <br/>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="portlet-title">
+                                    <div class="caption font-dark my-15">
+                                        <span class="caption-subject bold uppercase"> Shop By Color </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label class="control-label"><span class="mendatory">*</span>Select Color</label>
+                                        <select class="form-control">
+                                            <option>Shades of Blue</option>
+                                            <option>Purple Bright</option>
+                                            <option>Classic Red</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label class="control-label"><span class="mendatory">*</span>Select Product</label>
+                                        <select class="form-control">
+                                            <option>Product 1</option>
+                                            <option>Product 2</option>
+                                            <option>Product 3</option>
+                                            <option>Product 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="dd reorder-list">
+                                                        <ol class="dd-list" id="nestable_list_2">
+                                                            <li class="dd-item dd3-item" data-id="16">
+                                                                <div class="dd-handle dd3-handle"> </div>
+                                                                <div class="dd3-content"> Shades of Blue - Product 1 </div>
+                                                                <a href="" class="remove"><img src="images/close.png" alt="close"></a>
+                                                            </li>
+                                                            <li class="dd-item dd3-item" data-id="14">
+                                                                <div class="dd-handle dd3-handle"> </div>
+                                                                <div class="dd3-content"> Purple Bright - Product 2 </div>
+                                                                <a href="" class="remove"><img src="images/close.png" alt="close"></a>
+                                                            </li>
+                                                            <li class="dd-item dd3-item" data-id="13">
+                                                                <div class="dd-handle dd3-handle"> </div>
+                                                                <div class="dd3-content"> Classic Red - Product 3 </div>
+                                                                <a href="" class="remove"><img src="images/close.png" alt="close"></a>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="submit" value="Add" class="btn grey">
+                                    </div>
+                                </div>
+                            
+                                <!-- <div class="col-md-4">
+                                                            <br>
+                                                            <input type="submit" value="Add" class="btn grey">
+                                                        </div>
+                                                    
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <br><br><br>
+                                                                <div class="col-md-2">
+                                                                    <input type="submit" value="Save Changes" class="btn green">
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a href="#" class="btn default">Cancel</a>
+                                                                </div>
+                                                            </div>
+                                                        </div> -->
+                            </div>
+                            <div class="col-md-12">
+                                <br />
+                                <br />
+                            </div>
+                            <div class="col-md-12">
+                                <div class="portlet-title">
+                                    <div class="caption font-dark my-15">
+                                        <span class="caption-subject bold uppercase"> Services </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <div class="dd reorder-list">
+                                            <ol class="dd-list" id="nestable_list_3">
+                                                <li class="dd-item dd3-item" data-id="16">
+                                                    <div class="dd-handle dd3-handle"> </div>
+                                                    <div class="dd3-content"> Corporate Events </div>
+                                                </li>
+                                                <li class="dd-item dd3-item" data-id="14">
+                                                    <div class="dd-handle dd3-handle"> </div>
+                                                    <div class="dd3-content"> Weddings </div>
+                                                </li>
+                                                <li class="dd-item dd3-item" data-id="13">
+                                                    <div class="dd-handle dd3-handle"> </div>
+                                                    <div class="dd3-content"> Home Services </div>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="submit" value="Update" class="btn grey">
+                                    </div>
+                                </div>
+                            
+                                <!-- <div class="col-md-4">
+                                                            <br>
+                                                            <input type="submit" value="Add" class="btn grey">
+                                                        </div>
+                                                    
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <br><br><br>
+                                                                <div class="col-md-2">
+                                                                    <input type="submit" value="Save Changes" class="btn green">
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a href="#" class="btn default">Cancel</a>
+                                                                </div>
+                                                            </div>
+                                                        </div> -->
+                            </div>
+                       </div>                  
+                </form>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+    <div class="page-footer-inner">
+        June, 2020 © Flowers Shop.
+    </div>
+    <div class="scroll-to-top">
+        <i class="icon-arrow-up"></i>
+    </div>
+</div>        <!-- END FOOTER -->
+    
+<script>
+    $(document).ready(function(){
+        // $('.reorder-list').sortable();
+        // UINestable.init();
+        var el1 = document.getElementById('nestable_list_1');
+        var sortable = Sortable.create(el1);
+        var el2 = document.getElementById('nestable_list_2');
+        var sortable = Sortable.create(el2);
+        var el3 = document.getElementById('nestable_list_3');
+        var sortable = Sortable.create(el3);
+    });
+</script>
+</body>
+</html>

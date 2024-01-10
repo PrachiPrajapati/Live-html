@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>online-payment(24x24)@1x</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Table/Artist-Payout" transform="translate(-1416.000000, -24.000000)">
+            <g id="Group-9-Copy" transform="translate(1396.000000, 0.000000)">
+                <g id="online-payment(24x24)@1x" transform="translate(20.000000, 24.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                    <polygon id="Path" stroke="#26A541" stroke-linecap="round" stroke-linejoin="round" points="13 15 11 15 11 20 13 20"></polygon>
+                    <line x1="7" y1="20" x2="17" y2="20" id="Path" stroke="#26A541" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <path d="M21.5,15 L2.5,15 C2.22,15 2,14.78 2,14.5 L2,2.5 C2,2.22 2.22,2 2.5,2 L21.5,2 C21.78,2 22,2.22 22,2.5 L22,14.5 C22,14.78 21.78,15 21.5,15 Z" id="Path" stroke="#26A541" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <line x1="7" y1="12.5" x2="7" y2="11.49" id="Path" stroke="#26A541" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="7" y1="5.51" x2="7" y2="4.5" id="Path" stroke="#26A541" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <path d="M9,6.77006 C8.83,6.15006 8.28,5.67006 7.58,5.54006 C6.88,5.41006 6.15,5.65006 5.74,6.14006 C5.69,6.20006 5.23,6.76006 5.45,7.36006 C5.59,7.74006 5.92,7.95006 6.38,8.23006 C6.88,8.54006 7.02,8.49006 7.78,8.88006 C8.55,9.2801 8.68,9.4801 8.74,9.5801 C8.96,10.0101 8.81,10.4301 8.78,10.5001 C8.57,11.0401 7.99,11.2601 7.78,11.3501 C7.69,11.3901 6.85,11.6901 6.02,11.3101 C5.56,11.1001 5.32,10.7801 5.24,10.6801 C5.11,10.4901 5.04,10.3201 5,10.1901" id="Path" stroke="#26A541" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <polyline id="Path" stroke="#26A541" stroke-linecap="round" stroke-linejoin="round" points="17 5 19 7 12 7"></polyline>
+                    <polyline id="Path" stroke="#26A541" stroke-linecap="round" stroke-linejoin="round" points="14 12 12 10 19 10"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

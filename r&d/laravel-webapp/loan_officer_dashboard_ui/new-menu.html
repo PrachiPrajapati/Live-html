@@ -1,0 +1,2385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="3kvyNliwXDWU2lexWEsoVlFyxrDfJrIzEytDvmzw">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/general.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/chart.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/mobile_menu.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/general_menu.css">
+    <link rel="stylesheet" type="text/css"
+        href="css/header.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="css/calender.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- jQuery library -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script type="text/javascript"
+        src="http://sigmadev.beta.loanofficer.ai/js/loanofficer/dashboard/Chart.roundedBarCharts.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="js/header-new.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tabs.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/loader.css">
+
+    <link rel="stylesheet" type="text/css" href="css/tabs.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link rel="stylesheet" type="text/css"
+        href="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.10/css/dataTables.checkboxes.css">
+    <script type="text/javascript"
+        src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.10/js/dataTables.checkboxes.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/switch.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/checkbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/input_tag.css">
+
+
+    <link rel="stylesheet" type="text/css"
+        href="http://sigmadev.beta.loanofficer.ai/css/loanofficer/dashboard/custom_daterpicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.6/dropzone.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.6/min/dropzone.min.js"></script>
+    <script type="text/javascript">
+        var myVar;
+        // JavaScript code
+        function disableScrolling() {
+            clearTimeout(myVar);
+            myVar = setTimeout(function () {
+                document.body.style.overflow = 'hidden';
+                document.body.style.marginRight = '0';
+            }, 500);
+        }
+
+        function enableScrolling() {
+            if (document.body.scrollHeight > window.innerHeight) {
+                document.body.style.overflow = '';
+                document.body.style.marginRight = '-6px';
+            }
+        }
+        disableScrolling();
+    </script>
+</head>
+
+<body onload="enableScrolling()" onscroll="disableScrolling()" onmousewheel="enableScrolling()"
+    onmousedown="disableScrolling()" onkeydown="disableScrolling()" onkeyup="enableScrolling()">
+
+    <div class="overlay">
+        <div class="line_top"></div>
+        <div id="panel">
+            <span id="loading5">
+                <span id="outerCircle"></span>
+            </span>
+        </div>
+    </div>
+
+    <main class="content" role="content">
+        <section class="container-fluid bg_white new-menu-style">
+            <div class="row">
+                <div class="col-12 p_lr_0">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a href="#">
+                            <div>
+                                <img src="images/logo-icon.svg" class="img-fluid height_37 menu_style default-logo" />
+                                <img src="images/new-logo.svg" class="img-fluid height_37 menu_style main-logo"/>
+                            </div>
+                        </a>
+                        <a href="#" data-toggle="sidebar-colapse" class="menu">
+                            <div class="d-flex w-100 justify-content-start align-items-center menu_hover">
+                                <img id="collapse-icon" src="images/new-menu-ic.svg" class="img-fluid menu_style" />
+                                <div class="tool_tip">
+                                    Keep sidebar open
+                                </div>
+                            </div>
+                        </a>
+                        <div class="menu-breadcrumbs">
+                            <ul>
+                                <li><a href="£">Reports > </a></li>
+                                <li>Time</li>
+                            </ul>
+                        </div>
+                        <div class="search_contact effect-2">
+                            <div class="content_center">
+                                <div class="form-group has-search width_100p">
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/search.png"
+                                        class="img-fluid form-control-feedback" />
+                                    <input type="text" class="form-control" placeholder="Search by contact" id="text"
+                                        onkeyup="searchBox();">
+                                </div>
+                                <div>
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/grey_cross.png"
+                                        class="img-fluid cross_icon cursor_pointer" />
+                                </div>
+                            </div>
+                            <span class="focus-border"></span>
+                            <div id="keyword_searcher">
+                                <div class="p_lr_20">
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Joseph <span>Tr</span>iyer & Charlotte <span>Tr</span>iyer
+                                        </div>
+                                        <div class="email_id">
+                                            Joseph_Triyer@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Emerson Dokidis & Joseph <span>Tr</span>iyer
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Cris<span>tr</span>ofer Bergson
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Erin Dorwa<span>tr</span>
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Emerson Dokidis & Joseph <span>Tr</span>iyer
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Cris<span>tr</span>ofer Bergson
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="name">
+                                            Erin Dorwa<span>tr</span>
+                                        </div>
+                                        <div class="email_id">
+                                            Dokidis@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="search_text">
+                                        <div class="search_noresult">
+                                            No search results found
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse navbar-collapse d-none d-lg-block" id="navbarTogglerDemo03">
+                            <form class="form-inline my-2 my-lg-0">
+                                <div class="search_hover">
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/disable_search.png"
+                                        class="img-fluid search_icon search_code cursor_pointer disable_search" />
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/search.png"
+                                        class="img-fluid search_icon search_code cursor_pointer active_search" />
+                                    <div class="tool_tip">
+                                        Search by contact name, email, phone or investor loan number
+                                    </div>
+                                </div>
+                                <div class="dialer-sec">
+                                    <img src="images/phone-call.svg" class="img-fluid m_r_15" />
+                                </div>
+                                <div class="dialer-blk" style="display:none;">
+                                    <div class="dialer_title">
+                                        Dialer
+                                            <span class="pull-right">
+                                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/black_cross.png"
+                                                     class="img-fluid cursor_pointer dialer_close">
+                                            </span>
+                                    </div>
+                                    <div class="contact-dialer-blk" style="display: block;">
+                                        <div class="integation_dropdown m_t_20">
+                                            <label>Call from</label>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-light dropdown-toggle width-100"
+                                                        data-toggle="dropdown">
+                                                    <ins>Select</ins>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="dropdown-menu radio width-100">
+                                                    <label class="dropdown-item">
+                                                        <input class="role_jRadioDropdown" type="radio"
+                                                               name="alphabet_1">
+                                                        <i>Guilherme Andrade</i>
+                                                    </label>
+                                                    <label class="dropdown-item">
+                                                        <input class="role_jRadioDropdown" type="radio"
+                                                               name="alphabet_1">
+                                                        <i>Andrade Guilherme</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="permissions_tabs reports m_t_20">
+                                            <ul class="nav nav-tabs all_reports tab_selection">
+                                                <div class="border-bottom-sec d-flex">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" data-toggle="tab"
+                                                           href="#dial">Dial</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="tab"
+                                                           href="#contact">Contacts</a>
+                                                    </li>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content m_t_20">
+                                            <div id="dial" class="tab-pane active">
+                                                <div class="dial-textbox justify-space-between">
+                                                    <div id="output">
+                                                        (949) 516-6392
+                                                    </div>
+                                                    <div>
+                                                        <button>
+                                                            <img src="images/backspace.svg" alt="backspace-ic"/>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>1</h4>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>2</h4>
+                                                                <span>ABC</span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>3</h4>
+                                                                <span>DEF</span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>4</h4>
+                                                                <span>GHI</span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>5</h4>
+                                                                <span>JKL</span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>6</h4>
+                                                                <span>MNO</span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>7</h4>
+                                                                <span>PQRS</span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>8</h4>
+                                                                <span>TUV</span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>9</h4>
+                                                                <span>WXYZ</span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>*</h4>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>0</h4>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dial-no">
+                                                            <div class="justify-space-between">
+                                                                <h4>#</h4>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div id="contact" class="tab-pane">
+                                                <div class="dial-search">
+                                                    <div class="form-group has-search">
+                                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/search.png"
+                                                             class="img-fluid form-control-feedback" />
+                                                        <input type="text" class="form-control width-100"
+                                                               placeholder="Search Contact">
+                                                    </div>
+                                                </div>
+                                                <div class="contact-list-sec">
+                                                    <ul class="contact-list">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="align-center">
+                                                                    <div class="contact-person-nm1">
+                                                                        JH
+                                                                    </div>
+                                                                    <div class="contact-person-nm2">
+                                                                        <h5>John Herwitz</h5>
+                                                                        <span>(949) 516-6392</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="align-center">
+                                                                    <div class="contact-person-nm1">
+                                                                        JH
+                                                                    </div>
+                                                                    <div class="contact-person-nm2">
+                                                                        <h5>John Herwitz</h5>
+                                                                        <span>(949) 516-6392</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="align-center">
+                                                                    <div class="contact-person-nm1">
+                                                                        JF
+                                                                    </div>
+                                                                    <div class="contact-person-nm2">
+                                                                        <h5>James Franci</h5>
+                                                                        <span>(949) 516-6392</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="align-center">
+                                                                    <div class="contact-person-nm1">
+                                                                        NM
+                                                                    </div>
+                                                                    <div class="contact-person-nm2">
+                                                                        <h5>Nolan Mango</h5>
+                                                                        <span>(949) 516-6392</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="align-center">
+                                                                    <div class="contact-person-nm1">
+                                                                        DS
+                                                                    </div>
+                                                                    <div class="contact-person-nm2">
+                                                                        <h5>Davis Siphron</h5>
+                                                                        <span>(949) 516-6392</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="align-center">
+                                                                    <div class="contact-person-nm1">
+                                                                        CW
+                                                                    </div>
+                                                                    <div class="contact-person-nm2">
+                                                                        <h5>Chance Westervelt</h5>
+                                                                        <span>(949) 516-6392</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="selected-contact justify-center flex-column">
+                                                        <div class="contact-person-nm1">
+                                                            CH
+                                                        </div>
+                                                        <div class="contact-person-nm2 text-center">
+                                                            <h5>Chance Westervelt</h5>
+                                                            <span>(949) 516-6392</span>
+                                                        </div>
+                                                        <button class="bg-none m_t_20"><img src="images/red-cross.svg" alt="red-crosee-ic"/></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dial-call dial-btn">
+                                            <button class="width-100">
+                                                <img src="images/dial-call.svg"  alt="dial-call"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="dialing-screen" style="display: none;">
+                                        <div class="dialed-no">(949) 516-6392</div>
+                                        <div class="unknown-tag">unknown</div>
+                                        <div class="unknown-tag contact-nm" style="display: none;">Chance Westervelt</div>
+                                        <div class="dialing-progress" style="display: none;">Dialling...</div>
+                                        <div class="call-timing"><span></span>00:00:01</div>
+                                        <ul class="dialing-option">
+                                            <li>
+                                                <button><img src="images/microphone-ic.svg" alt="microphone-ic"/></button>
+                                                <span>Mute</span>
+                                            </li>
+                                            <li>
+                                                <button><img src="images/diapad-ic.svg" alt="diapad-ic"/></button>
+                                                <span>Dial</span>
+                                            </li>
+                                            <li>
+                                                <button><img src="images/pause-ic.svg" alt="pause-ic"/></button>
+                                                <span>Hold</span>
+                                            </li>
+                                            <li>
+                                                <button><img src="images/call1.svg" alt="call1-ic"/></button>
+                                                <span>Blind<br/> Transfer</span>
+                                            </li>
+                                            <li>
+                                                <button><img src="images/call2.svg" alt="call2-ic"/></button>
+                                                <span>Warm Transfer</span>
+                                            </li>
+                                            <li>
+                                                <button><img src="images/minimize-ic.svg" alt="minimize-ic"/></button>
+                                                <span>Minimize<br/> to icon</span>
+                                            </li>
+                                        </ul>
+                                        <div class="dial-call end-call-btn">
+                                            <button class="width-100">
+                                                <img src="images/end-call-ic.svg"  alt="end-call"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="end-call-screen" style="display: none;">
+                                        <div class="dialed-no">01:32:19</div>
+                                        <div class="unknown-tag">Call Ended</div>
+                                        <div class="call-end-info unknown-nm justify-center flex-column">
+                                            <div class="contact-person-nm1 m_0">
+                                                ?
+                                            </div>
+                                            <div class="contact-person-nm2 text-center m_t_10">
+                                                <h5>unknown</h5>
+                                                <span>(949) 516-6392</span>
+                                            </div>
+                                        </div>
+                                        <div class="call-end-info contact-nm justify-center flex-column" style="display: none;">
+                                            <div class="contact-person-nm1 m_0">
+                                                CW
+                                            </div>
+                                            <div class="contact-person-nm2 text-center m_t_10">
+                                                <h5>Chance Westervelt</h5>
+                                                <span>(949) 516-6392</span>
+                                            </div>
+                                        </div>
+                                        <div class="dial-call end-call-back-btn">
+                                            <button class="width-100">
+                                                <img src="images/end-call-back.svg"  alt="end-call-back"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/bell.png"
+                                    class="img-fluid m_r_15 notification" />
+                                <span class="notification_dot"></span>
+                                <ul class="dropdown-notification">
+                                    <div class="notification_title">
+                                        Notifications
+                                        <span class="pull-right">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/black_cross.png"
+                                                class="img-fluid cursor_pointer notification_close">
+                                        </span>
+                                    </div>
+                                    <div class="content_center space_between p_tb_20 b_b_grey">
+                                        <div class="permissions_tabs w_50p">
+                                            <ul class="nav nav-tabs tab_selection content_center space_between">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="#all">
+                                                        All
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#unread">
+                                                        Unread
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="notification_readall">
+                                            <svg width="21" height="20" style="margin-right: 0" viewBox="0 0 21 20"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.0415 7L6.39941 13.4167L3.38029 10.5" stroke="#3246D3"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M17.1821 7L10.54 13.4167" stroke="#3246D3" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Mark all as read
+                                        </div>
+                                    </div>
+                                    <div class="tab-content ">
+                                        <div id="all" class="tab-pane active">
+                                            <div class="more_notification">
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                        <!-- <div class="checkbox_custom">
+                                                        <input type="checkbox" class="name" name="name" id="html_1">
+                                                    </div> -->
+                                                        <label for="html_1">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="content_center space_between">
+                                                                <div class="m_t_10 date_time">
+                                                                    Created: 7/27/2020 9:11pm
+                                                                </div>
+                                                                <div class="mark_read">
+                                                                    Mark as read
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                        <!-- <div class="checkbox_custom">
+                                                        <input type="checkbox" class="name" name="name" id="html_1">
+                                                    </div> -->
+                                                        <label for="html_1">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="content_center space_between">
+                                                                <div class="m_t_10 date_time">
+                                                                    Created: 7/27/2020 9:11pm
+                                                                </div>
+                                                                <div class="mark_read">
+                                                                    Mark as read
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <!-- <div class="checkbox_custom">
+                                                        <input type="checkbox" class="name" name="name" id="html_2">
+                                                    </div> -->
+                                                        <label for="html_2">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_3">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_4">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_4">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_4">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="read_notification"></div>
+                                                        <label for="html_4">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="m_t_10 date_time">
+                                                                Created: 7/27/2020 9:11pm
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div id="unread" class="tab-pane">
+                                            <div class="more_notification">
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                        <!-- <div class="checkbox_custom">
+                                                        <input type="checkbox" class="name" name="name" id="html_1">
+                                                    </div> -->
+                                                        <label for="html_1">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="content_center space_between">
+                                                                <div class="m_t_10 date_time">
+                                                                    Created: 7/27/2020 9:11pm
+                                                                </div>
+                                                                <div class="mark_read">
+                                                                    Mark as read
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                        <!-- <div class="checkbox_custom">
+                                                        <input type="checkbox" class="name" name="name" id="html_1">
+                                                    </div> -->
+                                                        <label for="html_1">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="content_center space_between">
+                                                                <div class="m_t_10 date_time">
+                                                                    Created: 7/27/2020 9:11pm
+                                                                </div>
+                                                                <div class="mark_read">
+                                                                    Mark as read
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                        <!-- <div class="checkbox_custom">
+                                                        <input type="checkbox" class="name" name="name" id="html_2">
+                                                    </div> -->
+                                                        <label for="html_2">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="content_center space_between">
+                                                                <div class="m_t_10 date_time">
+                                                                    Created: 7/27/2020 9:11pm
+                                                                </div>
+                                                                <div class="mark_read">
+                                                                    Mark as read
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                        <label for="html_3">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="content_center space_between">
+                                                                <div class="m_t_10 date_time">
+                                                                    Created: 7/27/2020 9:11pm
+                                                                </div>
+                                                                <div class="mark_read">
+                                                                    Mark as read
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-menu__item nav-item">
+                                                    <div class="content_center align_item_normal">
+                                                        <div class="unread_notification"></div>
+                                                        <label for="html_4">
+                                                            <div class="notification_text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Duis dui augue nunc adipiscing. Quis posuere turpis cum
+                                                                erat pellentesque a. A amet, auctor consequat, gravida.
+                                                            </div>
+                                                            <div class="content_center space_between">
+                                                                <div class="m_t_10 date_time">
+                                                                    Created: 7/27/2020 9:11pm
+                                                                </div>
+                                                                <div class="mark_read">
+                                                                    Mark as read
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                                <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png"
+                                    class="img-fluid width_36 user" />
+                                <ul class="dropdown-menu-profile">
+                                    <div class="content_center">
+                                        <div>
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/user.png"
+                                                class="img-fluid width_36" />
+                                        </div>
+                                        <div class="m_l_10">
+                                            <div class="user_name">Ruchi Patel</div>
+                                            <div class="user_profile">Super admin</div>
+                                        </div>
+                                    </div>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="#"
+                                            class="dropdown-menu__link profilepage nav-link">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_A.svg"
+                                                class="hover-icon" />
+
+                                            My Account
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+                                        <a href="#"
+                                            class="dropdown-menu__link nav-link">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Manage_users_NA.svg"
+                                            class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Manage_users_A.svg"
+                                            class="hover-icon" />
+
+                                            Company Settings
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="#"
+                                            class="dropdown-menu__link nav-link ">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Company_Directory_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Company_Directory_A.svg"
+                                                class="hover-icon" />
+
+                                            Company Directory
+                                        </a>
+                                    </li>
+                                    <!-- <li class="dropdown-menu__item nav-item">
+
+                                        <a href="#"
+                                            class="dropdown-menu__link nav-link">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Plan_Billing_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Plan_Billing_A.svg"
+                                                class="hover-icon" />
+
+                                            Plan & Billing
+                                        </a>
+                                    </li> -->
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="#" class="dropdown-menu__link nav-link">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Commissions_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Commissions_A.svg"
+                                                class="hover-icon" />
+
+                                            Commissions
+                                        </a>
+                                    </li>
+                                    <!-- <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings"
+                                            class="dropdown-menu__link nav-link ">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Integrations_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Integrations_A.svg"
+                                                class="hover-icon" />
+
+                                            Integrations
+                                        </a>
+                                    </li> -->
+                                    <!-- <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/closing-targets"
+                                            class="dropdown-menu__link profilepage nav-link ">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Closing_Targets_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Closing_Targets_A.svg"
+                                                class="hover-icon" />
+
+                                            Closing Targets
+                                        </a>
+                                    </li> -->
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/activity-feeds"
+                                            class="dropdown-menu__link nav-link ">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Activity_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Activity_A.svg"
+                                                class="hover-icon" />
+
+                                            Activity Log
+                                        </a>
+                                    </li>
+                                    <!-- <li class="dropdown-menu__item nav-item">
+                                        <a href="#"
+                                            class="dropdown-menu__link nav-link ">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Manage_users_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Manage_users_A.svg"
+                                                class="hover-icon" />
+
+                                           Users
+                                        </a>
+                                    </li> -->
+                                    <!-- <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/permissions"
+                                            class="dropdown-menu__link nav-link ">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Permissions_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Permissions_A.svg"
+                                                class="hover-icon" />
+
+                                            View Permissions
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/commission-schedule"
+                                            class="dropdown-menu__link nav-link ">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Commission_Schedule_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/View_Commission_Schedule_A.svg"
+                                                class="hover-icon" />
+
+                                            View Commission Schedule
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item nav-item">
+
+                                        <a href="http://sigmadev.beta.loanofficer.ai/company-settings"
+                                            class="dropdown-menu__link nav-link">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lead_rotator_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lead_rotator_A.svg"
+                                                class="hover-icon" />
+
+                                            Lead rotator
+                                        </a>
+                                    </li> -->
+                                    <!-- <li class="dropdown-menu__item nav-item">
+
+                                        <a href="#"
+                                            class="dropdown-menu__link nav-link">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Custom_Fields_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Custom_Fields_A.svg"
+                                                class="hover-icon" />
+
+                                            Custom Fields
+                                        </a>
+                                    </li> -->
+                                    <!-- <li class="dropdown-menu__item nav-item">
+
+                                        <a href="#"
+                                            class="dropdown-menu__link nav-link">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Custom_Fields_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Custom_Fields_A.svg"
+                                                class="hover-icon" />
+
+                                            Custom Links
+                                        </a>
+                                    </li> -->
+                                    <li class="dropdown-menu__item nav-item">
+                                        <a href="#"
+                                            class="dropdown-menu__link nav-link" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/log-out_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/log-out_A.svg"
+                                                class="hover-icon" />
+
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </form>
+                            <form id="logout-form" action="http://sigmadev.beta.loanofficer.ai/logout" method="POST"
+                                style="display: none;">
+                                <input type="hidden" name="_token" value="3kvyNliwXDWU2lexWEsoVlFyxrDfJrIzEytDvmzw">
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <section class="new-menu-expand">
+            <div style="display: flex;" id="body-row">
+                <div id="sidebar-container" class="sidebar-collapsed" style="display:none;">
+                    <div class="d-none d-md-block menu-height">
+                        <ul class="list-group">
+                            <!-- <a href="http://sigmadev.beta.loanofficer.ai/home"
+                                class=" list-group-item list-group-item-action flex-column align-items-start collapsed_menu_option">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/new_account.png"
+                                        class="default-icon" width="26px" />
+                                </div>
+                            </a>
+                            <a href="http://sigmadev.beta.loanofficer.ai/home"
+                                class=" list-group-item list-group-item-action flex-column align-items-start expanded_menu_option">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <button class="blue_btn">Create new contact</button>
+                                </div>
+                            </a> -->
+                            <div class="accordian-menu hover-horizontal-menu add-account-blk">
+                                <a href="#"
+                                    class="list-group-item list-group-item-action flex-column align-items-start create-account-btn">
+                                    <div class="d-flex w-100 justify-content-start align-items-center">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/new_account.png"
+                                            width="26px" />
+                                        <span class="menu-collapsed blue_btn">Create new contact</span>
+                                        <!-- <button class="blue_btn"></button> -->
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu radio">
+                                    <a class="dropdown-item" tabindex="0" type="button"
+                                        data-toggle="modal" data-target="#new_income">
+                                        <input class="role_jRadioDropdown" type="radio"
+                                            value="type" name="alphabet_1" tabindex="-1">
+                                        <i><img src="images/single-user.svg"
+                                                class="img-fluid m_r_10" />Single</i>
+                                    </a>
+                                    <a class="dropdown-item" tabindex="0" type="button"
+                                        data-toggle="modal" data-target="#bulkadded_income">
+                                        <input class="role_jRadioDropdown" type="radio"
+                                            value="state" name="alphabet_1" tabindex="-1">
+                                        <i><img src="images/multiple-user.svg"
+                                                class="img-fluid m_r_10" />Bulk</i>
+                                    </a>
+                                </div>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Add Contact</a></div>
+                                        <li>
+                                            <a href="#"><img src="images/single-user.svg"
+                                                class="img-fluid m_r_10" /><span>Single </span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="images/multiple-user.svg"
+                                                class="img-fluid m_r_10" /><span>Bulk</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordian-menu hover-horizontal-menu">
+                                <a href="#"
+                                    class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Dashboard_NA.svg"
+                                            class="default-icon" />
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Dashboard_A.svg"
+                                            class="hover-icon" />
+
+                                        <span class="menu-collapsed">Dashboard</span>
+                                    </div>
+                                </a>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Dashboard</a></div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordian-menu hover-horizontal-menu">
+                                <div>
+                                    <a href="#"
+                                    class=" list-group-item list-group-item-action flex-column align-items-start" id="pipline">
+                                        <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Pipeline_A.svg"
+                                                class="hover-icon" />
+                                            <span class="menu-collapsed" id="submenu-icon">Pipeline</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="submenu-list">
+                                    <span class="submenu-icon ml-auto"></span>
+                                    <ul class="accordian-menu-item">
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Contacts </span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Proposal </span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Rate Watch</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Closing targets</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Pipeline</a></div>
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Contacts </span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Proposal </span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Rate Watch</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Closing targets</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordian-menu hover-horizontal-menu">
+                                <div>
+                                    <a href="#"
+                                    class=" list-group-item list-group-item-action flex-column align-items-start active">
+                                        <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Reports_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Reports_A.svg"
+                                                class="hover-icon" />
+                                            <span class="menu-collapsed">Reports</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="submenu-list">
+                                    <span class="submenu-icon ml-auto"></span>
+                                    <ul class="accordian-menu-item">
+                                        <li class="active">
+                                            <a href="#" class="active"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Leads</span></a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Goals</span></a>
+                                        </li> -->
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Marketing</span></a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Mailer</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Loans finance</span></a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Reports</a></div>
+                                        <li class="active">
+                                            <a href="#" class="active"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Leads</span></a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Goals</span></a>
+                                        </li> -->
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Marketing</span></a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Mailer</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Loans finance</span></a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordian-menu hover-horizontal-menu">
+                                <a href="#"
+                                class=" list-group-item list-group-item-action flex-column align-items-start ">
+                                    <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lenders_NA.svg"
+                                            class="default-icon" />
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Lenders_A.svg"
+                                            class="hover-icon" />
+                                        <span class="menu-collapsed">Lenders</span>
+                                    </div>
+                                </a>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Lenders</a></div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordian-menu hover-horizontal-menu">
+                                <a href="#"
+                                    class=" list-group-item list-group-item-action flex-column align-items-start ">
+                                    <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Partners_NA.svg"
+                                            class="default-icon" />
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Partners_A.svg"
+                                            class="hover-icon" />
+                                        <span class="menu-collapsed">Partners</span>
+                                    </div>
+                                </a>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Partners</a></div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordian-menu hover-horizontal-menu">
+                                <a href="#"
+                                class=" list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Tasks_NA.svg"
+                                            class="default-icon" />
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Tasks_A.svg"
+                                            class="hover-icon" />
+                                        <span class="menu-collapsed">Calender</span>
+                                    </div>
+                                </a>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Calender</a></div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordian-menu hover-horizontal-menu">
+                                <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Tasks_NA.svg"
+                                            class="default-icon" />
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Tasks_A.svg"
+                                            class="hover-icon" />
+                                        <span class="menu-collapsed">Tasks</span>
+                                    </div>
+                                </a>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Tasks</a></div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordian-menu hover-horizontal-menu">
+                                <a href="#"
+                                class=" list-group-item list-group-item-action flex-column align-items-start ">
+                                    <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Finance_NA.svg"
+                                            class="default-icon" />
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Finance_A.svg"
+                                            class="hover-icon" />
+                                        <span class="menu-collapsed">Finance</span>
+                                    </div>
+                                </a>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Finance</a></div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordian-menu hover-horizontal-menu">
+                                <a href="#"
+                                class=" list-group-item list-group-item-action flex-column align-items-start ">
+                                    <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Campaigns_NA.svg"
+                                            class="default-icon" />
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Campaigns_A.svg"
+                                            class="hover-icon" />
+                                        <span class="menu-collapsed">Campaigns</span>
+                                    </div>
+                                </a>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Campaigns</a></div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordian-menu hover-horizontal-menu">
+                                <a href="#"
+                                class=" list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_NA.svg"
+                                            class="default-icon" />
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_A.svg"
+                                            class="hover-icon" />
+                                        <span class="menu-collapsed">Conversation</span>
+                                    </div>
+                                </a>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Conversation</a></div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="accordian-menu hover-horizontal-menu">
+                                <a href="#" class=" list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_NA.svg"
+                                            class="default-icon" />
+                                        <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Workflow_A.svg"
+                                            class="hover-icon" />
+                                        <span class="menu-collapsed">Workflow</span>
+                                    </div>
+                                </a>
+                                <div class="hover-submenu">
+                                    <ul class="hover-submenu-item">
+                                        <div class="main-link"><a href="#">Workflow</a></div>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </ul>
+                        <div class="bottom_menu">
+                            <ul class="list-group">
+                                <div class="accordian-menu hover-horizontal-menu">
+                                    <a href="#"
+                                        class=" list-group-item list-group-item-action flex-column align-items-start">
+                                        <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/loan_officer_university_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/loan_officer_university_A.svg"
+                                                class="hover-icon" />
+                                            <span class="menu-collapsed">loan officer university</span>
+                                        </div>
+                                    </a>
+                                    <div class="hover-submenu">
+                                        <ul class="hover-submenu-item">
+                                            <div class="main-link"><a href="#">loan officer university</a></div>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="accordian-menu hover-horizontal-menu">
+                                    <a href="#"
+                                        class=" list-group-item list-group-item-action flex-column align-items-start">
+                                        <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Refer_a_friend_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Refer_a_friend_A.svg"
+                                                class="hover-icon" />
+                                            <span class="menu-collapsed">Refer a friend</span>
+                                        </div>
+                                    </a>
+                                    <div class="hover-submenu">
+                                        <ul class="hover-submenu-item">
+                                            <div class="main-link"><a href="#">Refer a friend</a></div>
+                                        </ul>
+                                    </div>
+                                </div> -->
+                                <div class="accordian-menu hover-horizontal-menu">
+                                    <a href="#"
+                                        class=" list-group-item list-group-item-action flex-column align-items-start">
+                                        <div class="d-flex w-100 justify-content-start align-items-center left_menu">
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Help_Center_NA.svg"
+                                                class="default-icon" />
+                                            <img src="http://sigmadev.beta.loanofficer.ai/svg/loanofficer/dashboard/menu/Help_Center_A.svg"
+                                                class="hover-icon" />
+
+                                            <span class="menu-collapsed">Help Center</span>
+                                        </div>
+                                    </a>
+                                    <div class="hover-submenu">
+                                        <ul class="hover-submenu-item">
+                                            <div class="main-link"><a href="#">Help Center</a></div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="expanded_menu_collapse content_wrapper main_div" style="display:none;">
+                    <div class="container-fluid p_35">
+                        <div class="row">
+                            <div class="m_t_auto m_b_auto col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="title width-100">
+                                            <span>Calendar</span>
+                                            <button class="blue_btn right w_170px" data-toggle="modal"
+                                            data-target="#edit_recurring">Add Task</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 content_center m_tb_20 ">
+                                <div class="justify-space-between">
+                                    <div class="integation_dropdown m_r_24 width-25p">
+                                        <label class="m_b_0">Filter by</label>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-light dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="true">
+                                                <ins>All Members</ins>
+                                                <span class="arrow"></span>
+                                            </button>
+                                            <div class="dropdown-menu radio" x-placement="bottom-start">
+                                                <label class="dropdown-item" tabindex="0">
+                                                    <input class="jRadioDropdown campaign_type_jRadioDropdown"
+                                                        type="radio" value="2" name="alphabet_1" tabindex="-1">
+                                                    <i>Me</i>
+                                                </label>
+                                                <label class="dropdown-item" tabindex="0">
+                                                    <input class="jRadioDropdown campaign_type_jRadioDropdown"
+                                                        type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                    <i>Emerson Vaccaro</i>
+                                                </label>
+                                                <label class="dropdown-item" tabindex="0">
+                                                    <input class="jRadioDropdown campaign_type_jRadioDropdown"
+                                                        type="radio" value="2" name="alphabet_1" tabindex="-1">
+                                                    <i>Craig Calzoni</i>
+                                                </label>
+                                                <label class="dropdown-item" tabindex="0">
+                                                    <input class="jRadioDropdown campaign_type_jRadioDropdown"
+                                                        type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                    <i>Martin Ekstrom Bothman</i>
+                                                </label>
+                                                <label class="dropdown-item" tabindex="0">
+                                                    <input class="jRadioDropdown campaign_type_jRadioDropdown"
+                                                        type="radio" value="2" name="alphabet_1" tabindex="-1">
+                                                    <i>Chance Lipshutz</i>
+                                                </label>
+                                                <label class="dropdown-item" tabindex="0">
+                                                    <input class="jRadioDropdown campaign_type_jRadioDropdown"
+                                                        type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                    <i>Brandon Geidt</i>
+                                                </label>
+                                                <label class="dropdown-item" tabindex="0">
+                                                    <input class="jRadioDropdown campaign_type_jRadioDropdown"
+                                                        type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                    <i>Omar Saris</i>
+                                                </label>
+                                                <label class="dropdown-item" tabindex="0">
+                                                    <input class="jRadioDropdown campaign_type_jRadioDropdown"
+                                                        type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                    <i>Zain Geidt</i>
+                                                </label>
+                                                <label class="dropdown-item" tabindex="0">
+                                                    <input class="jRadioDropdown campaign_type_jRadioDropdown"
+                                                        type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                    <i>Emerson Bergson</i>
+                                                </label>
+                                                <label class="dropdown-item" tabindex="0">
+                                                    <input class="jRadioDropdown campaign_type_jRadioDropdown"
+                                                        type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                    <i>Alfredo Bator</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calender-lables">
+                                        <ul>
+                                            <li class="one-time">One-time</li>
+                                            <li class="daily">Daily</li>
+                                            <li class="weekly">Weekly</li>
+                                            <li class="bi-weekly">Bi-weekly</li>
+                                            <li class="monthly">Monthly</li>
+                                            <li class="annualy">Annually</li>
+                                            <li class="completed">Completed</li>
+                                            <li class="imp-date">Important Date</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row custom-calender">
+                            <div class="table-responsive">
+                                <table class="cc-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="cc-nav cc-prev" onclick="prev()"><img src="images/left-arrow.svg"
+                                                    alt="left-arrow"></th>
+                                            <th class="cc-title" colspan="5">May 2021</th>
+                                            <th class="cc-nav cc-next" onclick="next()"><img
+                                                    src="images/right-arrow.svg" alt="right-arrow"></th>
+                                        </tr>
+                                        <tr>
+                                            <th class="cc-dow">Sunday</th>
+                                            <th class="cc-dow">Monday</th>
+                                            <th class="cc-dow">Tuesday</th>
+                                            <th class="cc-dow">Wednesday</th>
+                                            <th class="cc-dow">Thursday</th>
+                                            <th class="cc-dow">Friday</th>
+                                            <th class="cc-dow">Saturday</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="calendar_dates">
+                                        <tr>
+                                            <td class="cc-day">
+                                                <div class="cc-day-number"></div>
+                                            </td>
+                                            <td class="cc-day">
+                                                <div class="cc-day-number"></div>
+                                            </td>
+                                            <td class="cc-day">
+                                                <div class="cc-day-number"></div>
+                                            </td>
+                                            <td class="cc-day">
+                                                <div class="cc-day-number"></div>
+                                            </td>
+                                            <td class="cc-day">
+                                                <div class="cc-day-number"></div>
+                                            </td>
+                                            <td class="cc-day">
+                                                <div class="cc-day-number"></div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">1</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">2</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">3</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">4</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">5</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">6
+                                                    <span class="totel-event-no">2</span>
+                                                </div>
+                                                <div class="event-info-blk">
+                                                    <div class="daily-event p-10">
+                                                        <h4>Jaxson Bator</h4>
+                                                        <p>with Jaxson Bator & Jaxson Bator</p>
+                                                        <div class="info-event">
+                                                            <img src="images/info-2.svg" class="img-fluid area_code">
+                                                            <div class="tool_tip">
+                                                                Lorem ipsum, or lipsum as it is sometimes known, is
+                                                                dummy text used in laying out print, graphic or web
+                                                                designs.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="event-info-blk">
+                                                    <div class="weekly-event p-10">
+                                                        <h4>Jaxson Bator</h4>
+                                                        <p>with Jaxson Bator & Jaxson Bator</p>
+                                                        <div class="info-event">
+                                                            <img src="images/info-4.svg" class="img-fluid area_code">
+                                                            <div class="tool_tip">
+                                                                Lorem ipsum, or lipsum as it is sometimes known, is
+                                                                dummy text used in laying out print, graphic or web
+                                                                designs.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">7</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">8</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">9</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">
+                                                    10
+                                                    <span class="totel-event-no">1</span>
+                                                </div>
+                                                <div class="event-info-blk">
+                                                    <div class="green-event p-10">
+                                                        <h4>Jaxson Bator</h4>
+                                                        <p>with Jaxson Bator & Jaxson Bator</p>
+                                                        <div class="info-event">
+                                                            <img src="images/info-8.svg" class="img-fluid area_code">
+                                                            <div class="tool_tip">
+                                                                Lorem ipsum, or lipsum as it is sometimes known, is
+                                                                dummy text used in laying out print, graphic or web
+                                                                designs.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">11</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">
+                                                    12
+                                                    <span class="totel-event-no">11</span>
+                                                    <a href="javascript:;" class="more-event" data-toggle="modal"
+                                                        data-target="#calender_event_modal">+<span>17</span> More</a>
+                                                </div>
+                                                <div class="event-info-blk">
+                                                    <div class="daily-event p-10">
+                                                        <h4>Jaxson Bator</h4>
+                                                        <p>with Jaxson Bator & Jaxson Bator</p>
+                                                        <div class="info-event">
+                                                            <img src="images/info-2.svg" class="img-fluid area_code">
+                                                            <div class="tool_tip">
+                                                                Lorem ipsum, or lipsum as it is sometimes known, is
+                                                                dummy text used in laying out print, graphic or web
+                                                                designs.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="event-info-blk">
+                                                    <div class="weekly-event p-10">
+                                                        <h4>Jaxson Bator</h4>
+                                                        <p>with Jaxson Bator & Jaxson Bator</p>
+                                                        <div class="info-event">
+                                                            <img src="images/info-4.svg" class="img-fluid area_code">
+                                                            <div class="tool_tip">
+                                                                Lorem ipsum, or lipsum as it is sometimes known, is
+                                                                dummy text used in laying out print, graphic or web
+                                                                designs.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="event-info-blk">
+                                                    <div class="green-event p-10">
+                                                        <h4>Jaxson Bator</h4>
+                                                        <p>with Jaxson Bator & Jaxson Bator</p>
+                                                        <div class="info-event">
+                                                            <img src="images/info-8.svg" class="img-fluid area_code">
+                                                            <div class="tool_tip">
+                                                                Lorem ipsum, or lipsum as it is sometimes known, is
+                                                                dummy text used in laying out print, graphic or web
+                                                                designs.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">
+                                                    13
+                                                    <span class="totel-event-no">1</span>
+                                                </div>
+                                                <div class="event-info-blk">
+                                                    <div class="done-event p-10">
+                                                        <h4>Jaxson Bator</h4>
+                                                        <p>with Jaxson Bator & Jaxson Bator</p>
+                                                        <div class="info-event">
+                                                            <img src="images/tick-info.svg" class="img-fluid area_code">
+                                                            <div class="tool_tip">
+                                                                Lorem ipsum, or lipsum as it is sometimes known, is
+                                                                dummy text used in laying out print, graphic or web
+                                                                designs.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">14</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">15</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">16</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">17</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">18</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">19</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">20</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">21</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">22</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">23</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">24</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">
+                                                    25
+                                                    <span class="totel-event-no">2</span>
+                                                </div>
+                                                <div class="event-info-blk">
+                                                    <div class="daily-event p-10">
+                                                        <h4>Jaxson Bator</h4>
+                                                        <p>with Jaxson Bator & Jaxson Bator</p>
+                                                        <div class="info-event">
+                                                            <img src="images/info-2.svg" class="img-fluid area_code">
+                                                            <div class="tool_tip">
+                                                                Lorem ipsum, or lipsum as it is sometimes known, is
+                                                                dummy text used in laying out print, graphic or web
+                                                                designs.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="event-info-blk">
+                                                    <div class="green-event p-10">
+                                                        <h4>Jaxson Bator</h4>
+                                                        <p>with Jaxson Bator & Jaxson Bator</p>
+                                                        <div class="info-event">
+                                                            <img src="images/info-8.svg" class="img-fluid area_code">
+                                                            <div class="tool_tip">
+                                                                Lorem ipsum, or lipsum as it is sometimes known, is
+                                                                dummy text used in laying out print, graphic or web
+                                                                designs.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">26</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">27</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">28</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">29</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">30</div>
+                                            </td>
+                                            <td class="cc-day cc-completed-count">
+                                                <div class="cc-day-number">31</div>
+                                            </td>
+                                            <td class="cc-day">
+                                                <div class="cc-day-number">
+                                                    <div class="cc-day-number"></div>
+                                                </div>
+                                            </td>
+                                            <td class="cc-day">
+                                                <div class="cc-day-number">
+                                                    <div class="cc-day-number"></div>
+                                                </div>
+                                            </td>
+                                            <td class="cc-day">
+                                                <div class="cc-day-number">
+                                                    <div class="cc-day-number"></div>
+                                                </div>
+                                            </td>
+                                            <td class="cc-day">
+                                                <div class="cc-day-number">
+                                                    <div class="cc-day-number"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </main> <!-- /content -->
+    <div class="modal fade" id="calender_event_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content ratewatch_modal_section calender-filter-modal">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="space_between content_center">
+                                <h4 class="modal-title">10 September 2020 Tasks</h4>
+                                <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                            </div>
+                        </div>
+                    </div>
+                    <form action="#" method="POST" id="modalform">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="integation_dropdown">
+                                    <label class="m_b_0">Tasks Type</label>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-light dropdown-toggle"
+                                            data-toggle="dropdown" aria-expanded="true">
+                                            <ins>All</ins>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="dropdown-menu radio" x-placement="bottom-start">
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio"
+                                                    value="2" name="alphabet_1" tabindex="-1">
+                                                <i>Ongoing task</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio"
+                                                    value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Completed task</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="integation_dropdown">
+                                    <label class="m_b_0"> Status </label>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-light dropdown-toggle"
+                                            data-toggle="dropdown" aria-expanded="true">
+                                            <ins>Completed</ins>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="dropdown-menu radio" x-placement="bottom-start">
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio"
+                                                    value="2" name="alphabet_1" tabindex="-1">
+                                                <i>Daily</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio"
+                                                    value="1" name="alphabet_1" tabindex="-1">
+                                                <i>One-time</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio"
+                                                    value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Daily</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio"
+                                                    value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Weekly</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio"
+                                                    value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Bi-weekly</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio"
+                                                    value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Monthly</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio"
+                                                    value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Annually</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio"
+                                                    value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Important Date</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="all-task-popup">
+                            <div class="event-info-blk">
+                                <div class="one-time-event p-10">
+                                    <h4>Jaxson Bator</h4>
+                                    <p>with Jaxson Bator & Jaxson Bator</p>
+                                    <div class="info-event">
+                                        <img src="images/info-3.svg" class="img-fluid area_code">
+                                        <div class="tool_tip">
+                                            Lorem ipsum, or lipsum as it is sometimes known, is
+                                            dummy text used in laying out print, graphic or web
+                                            designs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-info-blk">
+                                <div class="daily-event p-10">
+                                    <h4>Jaxson Bator</h4>
+                                    <p>with Jaxson Bator & Jaxson Bator</p>
+                                    <div class="info-event">
+                                        <img src="images/info-2.svg" class="img-fluid area_code">
+                                        <div class="tool_tip">
+                                            Lorem ipsum, or lipsum as it is sometimes known, is
+                                            dummy text used in laying out print, graphic or web
+                                            designs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-info-blk">
+                                <div class="weekly-event p-10">
+                                    <h4>Jaxson Bator</h4>
+                                    <p>with Jaxson Bator & Jaxson Bator</p>
+                                    <div class="info-event">
+                                        <img src="images/info-4.svg" class="img-fluid area_code">
+                                        <div class="tool_tip">
+                                            Lorem ipsum, or lipsum as it is sometimes known, is
+                                            dummy text used in laying out print, graphic or web
+                                            designs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-info-blk">
+                                <div class="bi-weekly-event p-10">
+                                    <h4>Jaxson Bator</h4>
+                                    <p>with Jaxson Bator & Jaxson Bator</p>
+                                    <div class="info-event">
+                                        <img src="images/info-5.svg" class="img-fluid area_code">
+                                        <div class="tool_tip">
+                                            Lorem ipsum, or lipsum as it is sometimes known, is
+                                            dummy text used in laying out print, graphic or web
+                                            designs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-info-blk">
+                                <div class="monthly-event p-10">
+                                    <h4>Jaxson Bator</h4>
+                                    <p>with Jaxson Bator & Jaxson Bator</p>
+                                    <div class="info-event">
+                                        <img src="images/info-6.svg" class="img-fluid area_code">
+                                        <div class="tool_tip">
+                                            Lorem ipsum, or lipsum as it is sometimes known, is
+                                            dummy text used in laying out print, graphic or web
+                                            designs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-info-blk">
+                                <div class="annual-event p-10">
+                                    <h4>Jaxson Bator</h4>
+                                    <p>with Jaxson Bator & Jaxson Bator</p>
+                                    <div class="info-event">
+                                        <img src="images/info-7.svg" class="img-fluid area_code">
+                                        <div class="tool_tip">
+                                            Lorem ipsum, or lipsum as it is sometimes known, is
+                                            dummy text used in laying out print, graphic or web
+                                            designs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-info-blk">
+                                <div class="completed-event p-10">
+                                    <h4>Jaxson Bator</h4>
+                                    <p>with Jaxson Bator & Jaxson Bator</p>
+                                    <div class="info-event">
+                                        <img src="images/info-9.svg" class="img-fluid area_code">
+                                        <div class="tool_tip">
+                                            Lorem ipsum, or lipsum as it is sometimes known, is
+                                            dummy text used in laying out print, graphic or web
+                                            designs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-info-blk">
+                                <div class="green-event p-10">
+                                    <h4>Jaxson Bator</h4>
+                                    <p>with Jaxson Bator & Jaxson Bator</p>
+                                    <div class="info-event">
+                                        <img src="images/info-8.svg" class="img-fluid area_code">
+                                        <div class="tool_tip">
+                                            Lorem ipsum, or lipsum as it is sometimes known, is
+                                            dummy text used in laying out print, graphic or web
+                                            designs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="edit_recurring" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content ratewatch_modal_section">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="space_between content_center">
+                                <h4 class="modal-title">Edit custom task</h4>
+                                <img src="images/cross.png" class="img-fluid close" data-dismiss="modal">
+                            </div>
+                        </div>
+                    </div>
+                    <form class="form-horizontal" action="#" method="POST" id="modalform">
+                        <div class="row m_t_20">
+                            <div class="col-6">
+                                <div class="integation_dropdown">
+                                    <label class="m_b_0">Assign Task to</label>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            <ins>Sergei</ins>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="dropdown-menu radio" x-placement="bottom-start">
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="2" name="alphabet_1" tabindex="-1">
+                                                <i>All tasks</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Ongoing task</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="2" name="alphabet_1" tabindex="-1">
+                                                <i>Completed task</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="integation_dropdown">
+                                    <label class="m_b_0">Task type</label>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            <ins>Recurring</ins>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="dropdown-menu radio" x-placement="bottom-start">
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="2" name="alphabet_1" tabindex="-1">
+                                                <i>One-Time</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Recurring</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m_t_20">
+                            <div class="col-4">
+                                <div class="integation_dropdown img_before">
+                                    <label class="m_b_0">Recurring</label>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            <img src="images/recurring.png" class="img-fluid m_r_5 calendra">
+                                            <ins>Weekly</ins>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="dropdown-menu radio" x-placement="bottom-start">
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="2" name="alphabet_1" tabindex="-1">
+                                                <i>Daily</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Weekly</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="2" name="alphabet_1" tabindex="-1">
+                                                <i>Bi-Weekly</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Monthly</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Annually</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="integation_dropdown img_before">
+                                    <label class="m_b_0">Day</label>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            <img src="images/calendra.png" class="img-fluid m_r_5 calendra">
+                                            <ins>Monday</ins>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="dropdown-menu radio" x-placement="bottom-start">
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="2" name="alphabet_1" tabindex="-1">
+                                                <i>Monday</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Tuesday</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="2" name="alphabet_1" tabindex="-1">
+                                                <i>Wednesday</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Thursday</i>
+                                            </label>
+                                            <label class="dropdown-item" tabindex="0">
+                                                <input class="jRadioDropdown campaign_type_jRadioDropdown" type="radio" value="1" name="alphabet_1" tabindex="-1">
+                                                <i>Friday</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="datepicker_center">
+                                    <label class="m_b_0">Time</label>
+                                    <div class="date_selection light_blue content_center reportrange">
+                                        <img src="images/access_time.png" class="img-fluid m_r_15">
+                                        <span class="m_r_10 text_left">10:30 AM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m_t_20">
+                            <div class="col-12">
+                                <label class="m_b_0">
+                                    Task Description
+                                </label>
+                                <textarea class="form-control" onKeyPress=check_length(this.form); onKeyDown=check_length(this.form); name="my_text"></textarea>
+                            </div>
+                        </div>
+                        <div class="row m_t_20">
+                            <div class="col-12 content_center">
+                                <input type="checkbox" class="name p_l_7" name="name" id="show_locked">
+                                <label for="show_locked" class="m_l_10 cursor_pointer">Send a text reminder</label>
+                            </div>
+                        </div>
+                        <div class="row m_t_20">
+                            <div class="col-4">
+                                <input class="red_btn width_100p cursor_pointer" value="Delete">
+                            </div>
+                            <div class="col-4">
+                                <input class="border_btn m_0 width_100p cursor_pointer" value="Cancel">
+                            </div>
+                            <div class="col-4">
+                                <input class="blue_btn width_100p" type="submit" value="Save">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function toggleMainmenu(e) {
+            e.classList.toggle("active");
+            document.querySelector("aside").classList.toggle("active");
+        }
+
+        function beforePrintHandler() {
+            for (var id in Chart.instances) {
+                Chart.instances[id].resize();
+            }
+        }
+
+        jQuery.noConflict();
+        jQuery(document).ready(function ($) {
+            function setEqualContainer() {
+                if ($(window).width() > 768) {
+                    $('.border_top').each(function () {
+                        $(this).css('min-height', null);
+                    });
+                    setTimeout(function () {
+                        var highestBox = 0;
+                        // Select and loop the elements you want to equalise
+                        $('.border_top').each(function () {
+                            if ($(this).outerHeight() > highestBox) {
+                                highestBox = $(this).outerHeight();
+                            }
+                            console.log('height box ' + highestBox);
+                            $('.sameheight_modal').css({ 'min-height': highestBox + 'px' });
+                        });
+                    }, 1000);
+                }
+            }
+
+            setEqualContainer();
+            /* dropdown */
+            $('.user').click(function (e) {
+                e.preventDefault();
+                //$(this).find('.dropdown-menu').toggle();
+                $('.dropdown-menu-profile').toggle();
+                $('.dropdown-notification').hide();
+            });
+            $('.top_menu').click(function (e) {
+                e.preventDefault();
+                //$(this).find('.dropdown-menu').toggle();
+                $('.dropdown-menu-profile').hide();
+                $('.nav-second-level').addClass('collapse').removeClass('show');
+            });
+            $('.notification').click(function (e) {
+                e.preventDefault();
+                //$(this).find('.dropdown-menu').toggle();
+                $('.dropdown-notification').toggle();
+                $('.dropdown-menu-profile').hide();
+            });
+            $('.notification_readall').click(function () {
+                $('input[name="notification_chk"]').prop('checked', true);
+            });
+
+            $(document).on("click", function (event) {
+                if (!$(event.target).closest(".notification").length) {
+                    //console.log($(event.target).parents(".dropdown-notification").length);
+                    if ($(event.target).parents(".dropdown-notification").length == 0) {
+                        $(".dropdown-notification").hide();
+                    }
+                }
+                if (!$(event.target).closest(".user").length) {
+                    //console.log($(event.target).parents(".dropdown-notification").length);
+                    if ($(event.target).parents(".dropdown-menu-profile").length == 0) {
+                        $(".dropdown-menu-profile").hide();
+                    }
+                }
+                $('.notification_close').click(function (e) {
+                    e.preventDefault();
+                    $('.dropdown-notification').hide();
+                });
+            });
+            $("#customtask_table").DataTable({
+                "scrollCollapse": true,
+                "dom": 'rt<"bottom right"ip><"clear">',
+                language: {
+                    paginate: {
+                        next: '<img src="images/right_arrow.png">',
+                        previous: '<img src="images/left_arrow.png">'
+                    }
+                },
+                "infoCallback": function (settings, start, end, max, total, pre) {
+                    return "Showing " + start + " - " + end + " of " + total;
+                },
+                'columnDefs': [{
+                    'targets': [7], // column index (start from 0)
+                    'orderable': false,
+                }]
+            });
+            $("#lockdesk_table").DataTable({
+                "scrollCollapse": true,
+                "dom": 'rt<"bottom right"ip><"clear">',
+                language: {
+                    paginate: {
+                        next: '<img src="images/right_arrow.png">',
+                        previous: '<img src="images/left_arrow.png">'
+                    }
+                },
+                "infoCallback": function (settings, start, end, max, total, pre) {
+                    return "Showing " + start + " - " + end + " of " + total;
+                }
+            });
+            $("#request_table").DataTable({
+                "scrollCollapse": true,
+                "dom": 'rt<"bottom right"ip><"clear">',
+                language: {
+                    paginate: {
+                        next: '<img src="images/right_arrow.png">',
+                        previous: '<img src="images/left_arrow.png">'
+                    }
+                },
+                "infoCallback": function (settings, start, end, max, total, pre) {
+                    return "Showing " + start + " - " + end + " of " + total;
+                }
+            });
+            $('#cd_docsqueue').DataTable({
+                "scrollCollapse": true,
+                "dom": 'rt<"bottom right"ip><"clear">',
+                language: {
+                    paginate: {
+                        next: '<img src="images/right_arrow.png">',
+                        previous: '<img src="images/left_arrow.png">'
+                    }
+                },
+                "infoCallback": function (settings, start, end, max, total, pre) {
+                    return "Showing " + start + " - " + end + " of " + total;
+                }
+            });
+        });
+        Dropzone.autoDiscover = false;
+        if (document.getElementById('lockdesk_files')) {
+            var myDropzone = new Dropzone("div#lockdesk_files", {
+                dictDefaultMessage: '<img src="images/upload.png" class="w_24p" /><div class="profile_upload">Drop File with document Here to Upload</div>',
+                url: 'upload.php',
+                // more configs here
+                method: "post",
+                maxFilesize: 10, //MB
+                maxFiles: 1,
+                acceptedFiles: "image/jpg,image/jpeg,image/png",
+                previewTemplate: document.querySelector('#lockdesk_files_template_container').innerHTML,
+                previewsContainer: "#lockdesk_files_dropzoner"
+            });
+        }
+
+    </script>
+</body>
+
+</html>

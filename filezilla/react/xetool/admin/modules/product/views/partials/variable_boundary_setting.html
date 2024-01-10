@@ -1,0 +1,134 @@
+<div class="xe-product-setting">
+    <div class="setting-view">
+        <div class="row">
+            <div class="col-md-6 col-padd">
+                <label class="custom-label">
+                    Minimum width
+                </label>
+                <div class="form-group input-group">
+                    <input class="form-control" ng-model="tempMaskData[selectedThumbIndex].custom_min_width"
+                        placeholder="width" type="text"
+                        ng-keyup="setMinDimension(tempMaskData[selectedThumbIndex].custom_min_width,'width')" />
+                    <span class="input-group-addon" ng-bind="productUnit">
+                        <!-- inch -->
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-6 col-padd">
+                <label class="custom-label">
+                    Minimum height
+                </label>
+                <div class="form-group input-group">
+                    <input class="form-control" ng-model="tempMaskData[selectedThumbIndex].custom_min_height"
+                        placeholder="height" type="text"
+                        ng-keyup="setMinDimension(tempMaskData[selectedThumbIndex].custom_min_height,'height')" />
+                    <span class="input-group-addon" ng-bind="productUnit">
+                        <!-- inch -->
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-padd">
+                <label class="custom-label">
+                    Maximum width
+                </label>
+                <div class="form-group input-group">
+                    <input class="form-control" ng-model="tempMaskData[selectedThumbIndex].custom_max_width"
+                        placeholder="width" type="text"
+                        ng-keyup="setMaxDimension(tempMaskData[selectedThumbIndex].custom_max_width,'width')" />
+                    <span class="input-group-addon" ng-bind="productUnit">
+                        <!-- inch -->
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-6 col-padd">
+                <label class="custom-label">
+                    Maximum height
+                </label>
+                <div class="form-group input-group">
+                    <input class="form-control" ng-model="tempMaskData[selectedThumbIndex].custom_max_height"
+                        placeholder="height" type="text"
+                        ng-keyup="setMaxDimension(tempMaskData[selectedThumbIndex].custom_max_height,'height')" />
+                    <span class="input-group-addon" ng-bind="productUnit">
+                        <!-- inch -->
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-padd">
+                <label class="custom-label">
+                    <xe-translate text-value="Price per square unit">
+                    </xe-translate>
+                    <!-- <i class="fa fa-info-circle ng-scope info-module-icon" tooltip="" tooltip-placement="left"
+                    ng-click="showProductFaqDetails(5)"> -->
+                </i>
+                </label>
+                <div class="form-group input-group">
+                    <input class="form-control"
+                        ng-model="tempMaskData[selectedThumbIndex].custom_boundary_price"
+                        ng-keyup="setBoundaryPrice()" placeholder="price" type="text">
+                    <span class="input-group-addon">
+                        {{ appCurrency }}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-padd">
+                <div class="checkbox check-info">
+                    <input id="checkboxb" ng-model="bstatus" type="checkbox"
+                        ng-checked="tempMaskData[selectedThumbIndex].isBorderEnable == '1'"
+                        ng-change="borderEnabled(bstatus,selectedThumbIndex)" value="1">
+                    <label class="" for="checkboxb">
+                        <xe-translate text-value="Enable border">
+                        </xe-translate>
+                    </label>
+                    <i class="fa fa-info-circle info-module-icon" ng-click="showProductFaqDetails(4)"></i>
+                </div>
+            </div>
+            <div class="col-sm-12 col-padd">
+                <!-- Allow users to add sides -->
+                <div class="checkbox check-info">
+                    <input id="checkbox5" type="checkbox" value="2" ng-model="isSidesAdded[selectedThumbIndex]"
+                        ng-checked="isSidesAdded[selectedThumbIndex] == '1'"
+                        ng-change="enableAddSides(isSidesAdded[selectedThumbIndex],selectedThumbIndex)">
+                    <label class="" for="checkbox5">
+                        <xe-translate text-value="Add Sides Description">
+                        </xe-translate>
+                    </label>
+                    <i class="fa fa-info-circle info-module-icon" tooltip="{{ addSideMessage }}" tooltip-placement="right"></i>
+                    
+                </div>
+                <div class="form-group m-t-10 m-l-25 m-b-0" ng-show="isSidesAdded[selectedThumbIndex]">
+                    <label class="custom-label">
+                        <xe-translate text-value="Add Sides">
+                        </xe-translate>
+                    </label>
+                    <input ng-model="sidesAllowed[selectedThumbIndex]" type="text" class="form-control"
+                        price-Only="priceOnly" name="pName"
+                        ng-keyup="sideValidate(sidesAllowed[selectedThumbIndex])" />
+                </div>            
+            </div>
+            <div class="col-sm-12 col-padd">
+                <div class="checkbox check-info">
+                    <input id="checkboxbd" ng-model="dimensionstatus" type="checkbox"
+                        ng-checked="tempMaskData[selectedThumbIndex].isDimensionEnable == '1'"
+                        ng-change="dimensionEnabled(dimensionstatus,'portlet-error')" value="1">
+                    <label class="" for="checkboxbd">
+                        <xe-translate text-value="Change Dimension">
+                        </xe-translate>
+                    </label>
+                </div>
+                <div pg-portlet id="portlet-error"></div>
+            </div>
+        </div>
+        <ng-include src="'modules/product/doc/ps04.html'">
+        </ng-include>
+        <ng-include src="'modules/product/doc/ps05.html'">
+        </ng-include>
+        <ng-include src="'modules/product/doc/ps06.html'">
+        </ng-include>
+    </div>
+</div>

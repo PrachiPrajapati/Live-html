@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 2 Copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FE7073" offset="0%"></stop>
+            <stop stop-color="#FF8701" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-88.9%" y="-66.7%" width="277.8%" height="233.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0951704545 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M7.875,0.4875 L1.125,0.4875 C0.594642857,0.4875 0.165535714,0.92625 0.165535714,1.4625 L0.160714286,7.765875 C0.160714286,8.10225 0.329464286,8.399625 0.585,8.575125 L4.5,11.2125 L8.41017857,8.575125 C8.66571429,8.399625 8.83446429,8.10225 8.83446429,7.765875 L8.83928571,1.4625 C8.83928571,0.92625 8.40535714,0.4875 7.875,0.4875 L7.875,0.4875 Z M3.53571429,7.8 L1.125,5.3625 L1.80482143,4.675125 L3.53571429,6.420375 L7.19517857,2.72025 L7.875,3.4125 L3.53571429,7.8 L3.53571429,7.8 Z" id="path-3"></path>
+    </defs>
+    <g id="Trails" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1" transform="translate(-847.000000, -162.000000)">
+            <g id="Group-7" transform="translate(308.000000, 133.000000)">
+                <g id="Group-5" transform="translate(374.000000, 0.000000)">
+                    <g id="Group-2-Copy-4" transform="translate(165.000000, 29.000000)">
+                        <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="18" height="18" rx="9"></rect>
+                        <g id="ic_beenhere" filter="url(#filter-2)" transform="translate(4.500000, 3.600000)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="Mask" fill="#FFFFFF" xlink:href="#path-3"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

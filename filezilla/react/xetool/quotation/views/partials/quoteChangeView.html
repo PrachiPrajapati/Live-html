@@ -1,0 +1,45 @@
+<div class="modal fade change_popup" id="changeQuoteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content" >
+		   <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title"> {{quoteModalLabel}}</h4>
+		   </div>
+		   	<div class="modal-body"  id="changeQuoteModal">
+		   		<form>
+					<div class="form-group">
+						<label for="input1" class="control-label">Message</label>
+						<textarea class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched" ng-model="changeQuote.notes" rows="3" required=""></textarea>
+					</div>
+					<div class="clearfix">
+						<input type="file" id="fileInput" multiple="true"/> <br>
+						<span ng-show="isUploadFiles">
+						    {{ uploadChangeFileCount }} files selected
+						</span>
+					</div>
+				</form>
+		    </div>
+		    <div class="modal-footer">
+				<div class="row">
+    				<div calss="col-sm-6">
+	            		<small ng-hide="isValidFile" class="" style=" margin-right: 100px;">
+			                <label class="text-danger">
+			                  {{fileFormatNoti}}
+			                </label>
+	            		</small>
+	
+						<p class="text-danger" ng-show="isErrorMsg">
+		                	{{ errorMsg }} 
+		            	</p>
+    				</div>
+	            	<button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+	            		Cancel
+	            	</button>
+					<button type="button" class="btn btn-primary" ng-click="changeQuoteDetails()" ng-disabled="!changeQuote.notes" data-dismiss="modal" style="margin-right: 10px;">
+						Submit
+					</button>
+				</div>
+			</div>
+	    </div>
+   </div>
+</div>	

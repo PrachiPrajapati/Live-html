@@ -1,0 +1,109 @@
+<div class="container-fluid" ng-controller="PluginController">
+     <div class="row" ng-init="init()">
+        <div class="col-sm-12">
+            <div class="panel panel-transparent">
+                <div class="panel-body padding-0">
+                    <button type="button" class="btn btn-info btn-sm btn-cons" ng-click="addNewPlugin()">
+                        <span>
+                            <xe-translate text-value="Install New plugin">
+                            </xe-translate>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <ng-include src="'modules/plugins/views/partials/installPlugin.html'"  ng-show="isUploadViewActive">
+            </ng-include>
+        <div class="panel panel-default">
+                <div class="panel-heading separator">  
+                	<label class="panel-title">  
+	                	<xe-translate text-value="Installed plugins">
+			            </xe-translate>
+		            </label>
+                </div>
+                <div class="panel-body m-h-400">
+                   <div ng-show = "isPluginsList == false" class="product-list panel panel-default m-t-10">
+		                <!-- <div class="table-responsive" ng-show="dataLoaded"> -->
+		                    <table class="table table-hover table-condensed" id="id_Table" ui-options="options">
+		                        <thead>
+		                            <tr>
+		                                <th style="width:25%">
+		                                    <xe-translate text-value="Plugin name">
+		                                    </xe-translate>
+		                                </th>
+		                                <th style="width:35%">
+		                                    <xe-translate text-value="Description">
+		                                    </xe-translate>
+		                                </th>
+		                                <th style="width:20%">
+		                                    <xe-translate text-value="Installed On">
+		                                    </xe-translate>
+		                                </th>
+		                                 <th style="width:20%">
+		                                    <xe-translate text-value="Uninstall">
+		                                    </xe-translate>
+		                                </th>
+		                            </tr>
+		                        </thead>
+		                        <tbody>
+		                            <tr ng-repeat="plugins in pluginList">
+		                                <td class="v-align-middle semi-bold">
+		                                    {{ plugins.name }}
+		                                </td>
+		                                <td class="v-align-middle">
+		                                   {{ plugins.description }}
+		                                </td>
+		                                <td class="v-align-middle semi-bold">
+		                                    {{ plugins.installed_on}}
+		                                </td>
+		                                <td class="v-align-middle semi-bold">
+		                                    <button class="btn btn-success pull-left" type="button" ng-click="uninstall($index)" style=" padding: 3px 4px;">
+								                <xe-translate text-value="Uninstall">
+								                </xe-translate>
+    										</button>
+		                                </td>
+		                            </tr>
+		                            <tr ng-show="showNoResultMsg">
+		                                <td colspan="4" align="center">
+		                                    <p class="font-normal text-lg">
+		                                        <xe-translate text-value="No Products found">
+		                                        </xe-translate>
+		                                        <span class="m-l-20">
+		                                            <a ng-click="selectedCatagory('0')">
+		                                                <xe-translate text-value="Back to all products">
+		                                                </xe-translate>
+		                                            </a>
+		                                        </span>
+		                                    </p>
+		                                </td>
+		                            </tr>
+		                        </tbody>
+		                    </table>
+		               <!--  </div> -->
+    				</div>
+            		<span ng-show = "isPluginsList">
+                        <p class="font-normal text-lg text-center m-t-150">
+                            <xe-translate text-value="No Plugins found">
+                            </xe-translate>
+                        </p>
+                    </span>
+                    <div class="row"  ng-hide ="isPluginloader">
+				        <div class="col-lg-12 bg-white">
+				            <div class="product-wrap-height">
+				                <div class="panel-body text-center">
+				                    <img class="image-responsive-height demo-mw-50 page-loader" src="assets/img/demo/progress.svg" alt="Progress"/>
+				                    <span class="loader-label">
+				                        <xe-translate text-value="Loading orders">
+				                        </xe-translate>
+				                        ...
+				                    </span>
+				                </div>
+				            </div>
+				        </div>
+    				</div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <ng-include src="'modules/plugins/views/partials/warningModal.html'">
+</div>

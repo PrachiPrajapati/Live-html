@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>:: Runner boy css Demo ::</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!--Main Js Included-->
+    <script src="js/lib/jquery.js" type="text/javascript"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="runner-boy">
+        <div class="top">
+            <div class="face">
+                <div class="hair">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="drop">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </div>
+                    
+                </div>
+                <div class="ear"></div>
+                <div class="nose"></div>
+                <div class="eye"></div>
+                
+            </div>
+            <div class="neck"></div>
+        </div>
+        <div class="middle">
+            <div class="hand-with-sleev back">
+                <div class="hand-sleev"></div>
+                <div class="hand">
+                    <div class="upper-part"></div>
+                    <div class="lower-part">
+                        <div class="finger-block">
+                            <div class="thumb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mid-body"></div>
+            <div class="mid-bottom">
+                <div class="belt-holder">
+                    <div class="belt"></div>
+                    <span class="belt-buckle"></span>
+                </div>
+            </div>
+            <div class="hand-with-sleev front">
+                <div class="hand-sleev"></div>
+                <div class="hand">
+                    <div class="upper-part"></div>
+                    <div class="lower-part">
+                        <div class="hand-watch"></div>
+                        <div class="finger-block">
+                            <div class="thumb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="leg-with-cover back">
+                <div class="leg-cover"></div>
+                <div class="leg">
+                    <div class="upper-part"></div>
+                    <div class="lower-part">
+                        <div class="shoe-block"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-body"></div>
+            <div class="leg-with-cover front">
+                <div class="leg-cover"></div>
+                <div class="leg">
+                    <div class="upper-part"></div>
+                    <div class="lower-part">
+                        <div class="shoe-block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="track">
+        <div class="hurdles"></div>
+    </div>
+    <script>
+        $(document).keydown(function(e) {
+            switch(e.which) {
+                case 37: // left
+                break;
+
+                case 38: // up
+                    $('.leg-with-cover.front, .leg-with-cover.back, .leg-with-cover.front .lower-part, .leg-with-cover.back .lower-part, .hand-with-sleev').addClass('pause-animate');
+                    $('.runner-boy').addClass('jump-up');
+                    setTimeout(function(){
+                        $('.leg-with-cover.front, .leg-with-cover.back, .leg-with-cover.front .lower-part, .leg-with-cover.back .lower-part, .hand-with-sleev').removeClass('pause-animate');
+                        $('.runner-boy').removeClass('jump-up');
+                    },700);
+                break;
+
+                case 39: // right
+                break;
+
+                case 40: // down
+                break;
+
+                default: return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<div class="panel-heading separator p-t-0">
+    <div class="panel-title">
+        <h4 class ="xe-panel-title">
+            <xe-translate text-value="Choose Theme">
+            </xe-translate>
+        </h4>
+    </div>
+</div>
+<div class="panel-body m-t-20">
+    <form class="form-horizontal" role="form" autocomplete="off">
+        <div class="form-group">
+            <div class="clearfix">
+                <div class="pull-left m-r-10">
+                    <spectrum-colorpicker ng-model="themeColorChooser.Val"  options="{showInput: true,  showAlpha: false}" format="'hex'"  on-hide="onThemeColorChooserChange(color)">
+                    </spectrum-colorpicker>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="panel-footer wizard-ftr bg-white panel-footer-mg">
+    <button class="btn btn-sm btn-info pull-left" ng-click="
+    updateThemeDetails()" ng-disabled="demoStatus">
+        <xe-translate text-value="Save">
+        </xe-translate>
+    </button>
+</div>

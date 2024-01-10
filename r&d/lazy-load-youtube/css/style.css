@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+* 						{ margin: 0px; padding: 0px;}
+body 					{ font-family: 'Open Sans', sans-serif; font-size:14px;}
+.clear 					{ clear:both;}
+img 					{ border: 0px;}
+ul,ol 					{ list-style: none;}
+a 						{ text-decoration: none; outline: none;}
+a:focus, a:active, a:visited, a:HOVER	{ text-decoration: none; outline: none; }
+a:HOVER					{ }
+h1 						{ }
+h1 strong 				{ }
+h2 						{ }
+h3 						{ }
+h4 						{ }
+h5 						{ }
+h6 						{ }
+p 						{ }
+button 					{ }
+/******* Common Element CSS End *********/
+
+/* -------- Title Style ------- */
+/* -------- Button Style ------- */
+
+/******* Header Section CSS Start *******/
+iframe { width: 100%; height: 300px;}
+/******* Header Section CSS End *********/
+
+/******* Banner Section CSS Start *******/
+
+/******* Banner Section CSS End *********/
+
+/******* Middle Section CSS Start ******/
+/* -------- Inner Page ------- */
+
+
+
+/******** Middle Section CSS End *******/
+
+/***** Bottom Section CSS Start *******/
+
+/* -------- Footer Inner Section ------- */
+/****** Bottom Section CSS End *******/
+
+/***** Responsive CSS Start ******/
+
+@media (max-width: 1199px) {
+
+}	
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+@media (max-width: 991px) {
+	
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	
+}
+
+@media (max-width: 767px) {
+	
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapstar NFT Marketplace</title>
+    <!-- favicon  -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- css  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jcf.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+
+</head>
+
+<body>
+    <!-- header  -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.svg" alt="logo">
+                    </a>
+                    <div class="mobile-nav">
+                        <a href="my-wallet.html" class="common-btn wallet-btn">$1,45,820 <img
+                                src="./images/wallet-ic.svg" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+                        </button>
+                    </div>
+                    <div class="input-group header-sercher">
+                        <span class="input-group-text" id="basic-addon1"><img src="./images/search-ic.svg" alt=""></i></span>
+                        <input type="text"   placeholder="Go Land" aria-label="Search for NFTs, Collections or User" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="explore.html">Explore</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="manage-bids.html">Manage Bids</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="mynft.html">My NFTs</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex align-items-center">
+                            <a href="my-wallet.html" class="common-btn wallet-btn"><span class="doller-crrn">$1,45,820</span>  <img
+                                    src="./images/wallet-ic.svg" alt=""></a>
+                            <div class="dropdown">
+                                <button class="user-btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><img class="user-icon"
+                                        src="./images/user-ic.svg" alt=""></button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <div class="modal-content">
+                                        <div class="myprofile-header">
+                                            <div class="myprofile-img"></div>
+                                            <div class="myprofile-title">
+                                                <p>Maryland Winkles</p>
+                                                <span>maryland.winkles@example.com</span>
+                                                <button class="copy-url">
+                                                    0x3046b90bFdd60....21
+                                                    <i class="fa-solid fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <ul class="myprofile-nav">
+                                            <li><a href="edit-profile.html"><i
+                                                        class="fa-solid fa-pen-to-square"></i>Edit Profile</a></li>
+                                            <li><a href="change-password.html"><i class="fa-solid fa-lock"></i>Change
+                                                    Password</a></li>
+                                            <li><a href="index.html"><i
+                                                        class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="navbar mobile-search">
+        <div class="container">
+            <form action="">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"><img src="./images/search-ic.svg"
+                            alt=""></i></span>
+                    <input type="text" placeholder="Search for NFTs, Collections or Users" aria-label="Search for NFTs, Collections or User" aria-describedby="basic-addon1">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- main  -->
+    <div class="filter-content-mobile ">
+        <div class="filter-dropdown">
+            <p>Filter</p>
+            <div class="filter-icon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="mobile-filter-details">
+            <div class="mobile-filter-block">
+                <span>Sort By</span>
+                <ul class="filter-mobile-list">
+                    <li><input type="radio" name="sorting" class="form-check-input" id="radio1" checked><label
+                            for="radio1">All</label></li>
+                    <li><input type="radio" name="sorting" id="rad1" /><label for="radio1">Recently added</label></li>
+                    <li><input type="radio" name="sorting" class="form-check-input" id="radio1"><label for="radio1">Most
+                            Viewed</label></li>
+                    <li><input type="radio" name="sorting" class="form-check-input" id="radio1"><label
+                            for="radio1">Price - High to Low</label></li>
+                    <li><input type="radio" name="sorting" class="form-check-input" id="radio1"><label
+                            for="radio1">Price - Low to High</label></li>
+                </ul>
+            </div>
+            <div class="mobile-filter-block status">
+                <span>Status</span>
+                <ul class="filter-mobile-list">
+                    <li><input type="radio" name="statuscheck" class="form-check-input" id="radio1" checked><label
+                            for="radio1">All</label></li>
+                    <li><input type="radio" name="statuscheck" id="radio2" /><label for="radio2">Fixed Price</label>
+                    </li>
+                    <li><input type="radio" name="statuscheck" class="form-check-input" id="radio3"><label
+                            for="radio3">Unlimited Auction</label></li>
+                </ul>
+            </div>
+            <div class="mobile-filter-block check-collection custom-dropdown">
+                <span>Collection</span>
+                <ul class="filter-mobile-list">
+                    <li><input type="checkbox" class="form-check-input" id="check1" checked><label
+                            for="check1">Collection 1</label></li>
+                    <li><input type="checkbox" class="form-check-input" id="check2"><label for="check2">Collection
+                            5</label></li>
+                    <li><input type="checkbox" class="form-check-input" id="check3"><label for="check3">Collection
+                            2</label></li>
+                    <li><input type="checkbox" class="form-check-input" id="check4"><label for="check4">Collection
+                            3</label></li>
+                    <li><input type="checkbox" class="form-check-input" id="check5"><label for="check5">Collection
+                            4</label></li>
+                    <li><input type="checkbox" class="form-check-input" id="check6"><label for="check6">Collection
+                            6</label></li>
+                </ul>
+            </div>
+            <div class="mobile-btn-group">
+                <button class="common-btn view-btn">Clear All</button>
+                <button class="common-btn ">Submit</button>
+            </div>
+
+        </div>
+    </div>
+    <main>
+        <div class="circle-group">
+            <div class="circle-3"></div>
+            <div class="circle-4"></div>
+            <div class="circle-5"></div>
+        </div>
+        <!-- banner section  -->
+        <div class="common-page explore-page">
+            <div class="container">
+<div class="serach-tag">
+   <div class="tag"><p>Gro Land</p> <span><img src="./images/colse-ic.svg" alt=""></span></div>
+</div>
+                <!-- fixed-price section  -->
+                <div class="collection-cards" id="fixed-price">
+                    <div class="row card-wrapper">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="fixed-price-card">
+                                <a href="#" class="card-img">
+                                    <img src="images/card-img-1.png" alt="card-image">
+                                </a>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <h6>Gro Land Art #1587</h6>
+                                        <a href="explore-collection-details.html">Collection #1</a>
+                                    </div>
+                                    <div class="card-details">
+                                        <span>Geohash:</span>
+                                        <div class="card-details-wrapper">
+                                            <span class="theme-color">MD32HDBK</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Price:</span>
+                                        <a href="javascript:void(0)" class="common-btn" data-bs-toggle="modal"
+                                            data-bs-target="#buyNowModal">$1,27,900 <sub><span>USD</span></sub></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="fixed-price-card">
+                                <a href="#" class="card-img">
+                                    <img src="images/card-img-2.png" alt="card-image">
+                                </a>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <h6>Land Art #1587248</h6>
+                                        <a href="explore-collection-details.html">Collection #1</a>
+                                    </div>
+                                    <div class="card-details">
+                                        <span>Geohash:</span>
+                                        <div class="card-details-wrapper">
+                                            <span class="theme-color">MD32HDBK</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Price:</span>
+                                        <a href="javascript:void(0)" class="common-btn" data-bs-toggle="modal"
+                                            data-bs-target="#buyNowModal">$2,27,900 <sub><span>USD</span></sub></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="fixed-price-card">
+                                <a href="#" class="card-img">
+                                    <img src="images/card-img-3.png" alt="card-image">
+                                </a>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <h6>Green Land Art #1587</h6>
+                                        <a href="explore-collection-details.html">Collection #1</a>
+                                    </div>
+                                    <div class="card-details">
+                                        <span>Geohash:</span>
+                                        <div class="card-details-wrapper">
+                                            <span class="theme-color">MD32HDBK</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Price:</span>
+                                        <a href="javascript:void(0)" class="common-btn" data-bs-toggle="modal"
+                                            data-bs-target="#buyNowModal">$12,7900 <sub><span>USD</span></sub></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="fixed-price-card">
+                                <a class="card-img" data-fancybox="gallery" rel="group1" href="images/demo-video.mp4">
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <img src="images/card-img-4.png" alt="card-image">
+                                </a>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <h6>Land Art #1587125</h6>
+                                        <a href="explore-collection-details.html">Collection #1</a>
+                                    </div>
+                                    <div class="card-details">
+                                        <span>Geohash:</span>
+                                        <div class="card-details-wrapper">
+                                            <span class="theme-color">MD32HDBK</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Price:</span>
+                                        <a href="javascript:void(0)" class="common-btn" data-bs-toggle="modal"
+                                            data-bs-target="#buyNowModal">$1,28,000 <sub><span>USD</span></sub></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="fixed-price-card">
+                                <a href="#" class="card-img">
+                                    <img src="images/card-img-5.png" alt="card-image">
+                                </a>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <h6>Sports Land Art #1587</h6>
+                                        <a href="explore-collection-details.html">Collection #1</a>
+                                    </div>
+                                    <div class="card-details">
+                                        <span>Geohash:</span>
+                                        <div class="card-details-wrapper">
+                                            <span class="theme-color">MD32HDBK</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Price:</span>
+                                        <a href="javascript:void(0)" class="common-btn" data-bs-toggle="modal"
+                                            data-bs-target="#buyNowModal">$4,27,900 <sub><span>USD</span></sub></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="fixed-price-card">
+                                <a href="#" class="card-img">
+                                    <img src="images/card-img-6.png" alt="card-image">
+                                </a>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <h6>Land Art #1587</h6>
+                                        <a href="explore-collection-details.html">Collection #1</a>
+                                    </div>
+                                    <div class="card-details">
+                                        <span>Geohash:</span>
+                                        <div class="card-details-wrapper">
+                                            <span class="theme-color">MD32HDBK</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Price:</span>
+                                        <a href="javascript:void(0)" class="common-btn" data-bs-toggle="modal"
+                                            data-bs-target="#buyNowModal">$2,77,900 <sub><span>USD</span></sub></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="fixed-price-card">
+                                <a class="card-img" data-fancybox="gallery" rel="group1" href="images/demo-video.mp4">
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <img src="images/card-img-4.png" alt="card-image">
+                                </a>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <h6>Land Art #1587125</h6>
+                                        <a href="explore-collection-details.html">Collection #1</a>
+                                    </div>
+                                    <div class="card-details">
+                                        <span>Geohash:</span>
+                                        <div class="card-details-wrapper">
+                                            <span class="theme-color">MD32HDBK</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Price:</span>
+                                        <a href="javascript:void(0)" class="common-btn" data-bs-toggle="modal"
+                                            data-bs-target="#buyNowModal">$1,28,000 <sub><span>USD</span></sub></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="fixed-price-card">
+                                <a href="#" class="card-img">
+                                    <img src="images/card-img-5.png" alt="card-image">
+                                </a>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <h6>Sports Land Art #1587</h6>
+                                        <a href="explore-collection-details.html">Collection #1</a>
+                                    </div>
+                                    <div class="card-details">
+                                        <span>Geohash:</span>
+                                        <div class="card-details-wrapper">
+                                            <span class="theme-color">MD32HDBK</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Price:</span>
+                                        <a href="javascript:void(0)" class="common-btn" data-bs-toggle="modal"
+                                            data-bs-target="#buyNowModal">$4,27,900 <sub><span>USD</span></sub></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="fixed-price-card">
+                                <a href="#" class="card-img">
+                                    <img src="images/card-img-6.png" alt="card-image">
+                                </a>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <h6>Land Art #1587</h6>
+                                        <a href="explore-collection-details.html">Collection #1</a>
+                                    </div>
+                                    <div class="card-details">
+                                        <span>Geohash:</span>
+                                        <div class="card-details-wrapper">
+                                            <span class="theme-color">MD32HDBK</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Price:</span>
+                                        <a href="javascript:void(0)" class="common-btn" data-bs-toggle="modal"
+                                            data-bs-target="#buyNowModal">$2,77,900 <sub><span>USD</span></sub></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer  -->
+        <footer>
+            <div class="container">
+                <ul class="footer-nav">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="imprint.html">Imprint</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+                </ul>
+                <p class="p-small">&copy; Copyright. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+    <!-- js -->
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/"></script> -->
+    <script src="js/index.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/jcf.js"></script>
+    <!-- <script src="js/jcf.checkbox.js"></script> -->
+    <script src="js/jcf.radio.js"></script>
+    <!-- <script src="js/jcf.select.js"></script> -->
+    <script>
+        $(function () {
+            jcf.replaceAll();
+        });
+    </script>
+
+    <!-- myprofile Modal -->
+    <div class="modal fade" id="myProfileModal" tabindex="-1" aria-labelledby="myProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog common-modal profile-modal">
+            <div class="modal-content">
+                <div class="myprofile-header">
+                    <div class="myprofile-img"></div>
+                    <div class="myprofile-title">
+                        <p>Maryland Winkles</p>
+                        <span>maryland.winkles@example.com</span>
+                        <button class="copy-url">
+                            0x3046b90bFdd60....21
+                            <i class="fa-solid fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                <ul class="myprofile-nav">
+                    <li><a href="edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit Profile</a></li>
+                    <li><a href="change-password.html"><i class="fa-solid fa-lock"></i>Change Password</a></li>
+                    <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Buy_Now Modal -->
+    <div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered common-modal buy-modal">
+            <div class="modal-content">
+                <div class="custom-modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Buy Now</h4>
+                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <hr>
+                <div class="custom-modal-body">
+                    <div class="modal-img">
+                        <img src="images/card-img-1.png" alt="image">
+                    </div>
+                    <div class="modal-details">
+                        <h6>Gro Land Art #1587</h6>
+                        <div class="author-detail">
+                            <img src="images/collection-img.png" alt="author-profile">
+                            <span class="p-small">Kathryn Murphy</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="custom-modal-footer">
+                    <div class="bid-details">
+                        <div class="price-details">
+                            <p class="p-small">Total</p>
+                            <h6>10.03 USD</h6>
+                        </div>
+                        <button class="modal-btn" data-bs-dismiss="modal">Pay Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

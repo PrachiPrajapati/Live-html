@@ -1,0 +1,33 @@
+version: 0.2
+
+phases:
+  install:
+    commands: 
+       - curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+       - chmod +x ./kubectl
+       - mv ./kubectl /usr/local/bin/kubectl
+       - curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/linux/amd64/aws-iam-authenticator
+       - chmod +x ./aws-iam-authenticator
+       - mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$PATH:$HOME/bin
+       - echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+       - aws sts get-caller-identity
+       - aws eks --region ap-south-1 update-kubeconfig --name 11wickets-k8s --role-arn arn:aws:iam::321210576648:role/EksCodeBuildkubectlRole
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...          
+      - docker build -t frontend-public-staging:$CODEBUILD_RESOLVED_SOURCE_VERSION .
+      - docker tag frontend-public-staging:$CODEBUILD_RESOLVED_SOURCE_VERSION 321210576648.dkr.ecr.ap-south-1.amazonaws.com/frontend-public-staging:$CODEBUILD_RESOLVED_SOURCE_VERSION      
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push 321210576648.dkr.ecr.ap-south-1.amazonaws.com/frontend-public-staging:$CODEBUILD_RESOLVED_SOURCE_VERSION
+      - kubectl set image deployment/frontend-public-staging frontend-public-staging=321210576648.dkr.ecr.ap-south-1.amazonaws.com/frontend-public-staging:$CODEBUILD_RESOLVED_SOURCE_VERSION
+
+
+

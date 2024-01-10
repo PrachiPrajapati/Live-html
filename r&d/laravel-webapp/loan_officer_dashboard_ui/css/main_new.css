@@ -1,0 +1,40 @@
+
+.draft-mode-i{position: relative;}
+.draft-mode-i img{cursor: pointer;}
+.draft-mode-i img:hover + .tool_tip{
+    right: 39px;
+    width: 200px;
+    z-index: 999;
+    white-space: normal;
+    display: block;
+    top: 10px;
+}
+
+.window_selection{position: relative;}
+.window_selection img{cursor: pointer;}
+.window_selection img:hover + .tool_tip{
+   
+    width: 200px;
+    z-index: 999;
+    white-space: normal;
+    display: block;
+  left: 80px;
+}
+
+li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui-timepicker-selected:hover{
+ 
+    background-color: #D7E4FF !important;
+    color: #60698B !important;
+}
+.ui-timepicker-list{
+    background: #F2F6FE;
+}
+.ui-timepicker-list li{color: #60698B;font-size: 12px;line-height: 20px;min-height: 21px;}
+
+.ui-timepicker-wrapper{width: 6em;}
+.content_data{display: flex;}
+
+.tox-tinymce-aux{ z-index: 999 !important;}
+
+.col-3.right_border .height_auto, #sms_extend .iphone_selected.height_425 .height_auto,
+ #sms_template_form .iphone_selected.height_425 .height_auto{margin: 130px auto 0px;}

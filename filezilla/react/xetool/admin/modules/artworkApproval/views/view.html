@@ -1,0 +1,149 @@
+<div class="container-fluid" ng-controller="ArtworkApprovalController" ng-init="init()">
+  <div ng-show="artworkJobListView">
+    <row>
+      <label class="pageTitle">
+        <xe-translate text-value="Artwork Jobs">
+        </xe-translate>
+      </label>
+      <button type="button" class="btn btn-default btn-sm pull-right m-l-15" ng-click="reloadArtworkJobList()">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      </button>
+      <!-- notification -->
+      <div class="btn-notification pull-right" ng-click="showArtworkJobNotifications()">
+        <i class="fa fa-bell-o" aria-hidden="true"></i> Notifications
+        <span class="badge badge-danger">{{artworkNotificatonData.notifications}}</span>
+      </div>
+    </row>
+    <row ng-if="artwokJobList.length > 0 && !artwokJobListLoader">
+      <div class="dxTable table-responsive m-t-15">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>
+                <xe-translate text-value="Id">
+                </xe-translate>
+              </th>
+              <th width="40%">
+                <xe-translate text-value="Description">
+                </xe-translate>
+              </th>
+              <th>
+                <xe-translate text-value="Created Date">
+                </xe-translate>
+              </th>
+              <th>
+                <xe-translate text-value="Due Date">
+                </xe-translate>
+              </th>
+              <th>
+                <xe-translate text-value="Quote Id">
+                </xe-translate>
+              </th>
+              <th width="20%">
+                <xe-translate text-value="Status">
+                </xe-translate>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="artwokJob in artwokJobList track by $index" class="cursor-pointer" >
+              <td ng-click="showArtworkJobDetails($index)">
+                <span>
+                    {{artwokJob.artwork_job_id}}
+                </span>
+              </td>
+              <td ng-click="showArtworkJobDetails($index)">
+                <div class="text-ellipsis" style="width: 600px;">
+                    {{artwokJob.description}}
+                </div>
+              </td>
+              <td ng-click="showArtworkJobDetails($index)">
+                <span>
+                    {{artwokJob.created_date}}
+                </span>
+              </td>
+              <td ng-click="showArtworkJobDetails($index)">
+                <span>
+                    {{artwokJob.due_date}}
+                </span>
+              </td>
+              <td ng-click="showArtworkJobDetails($index)">
+                <span>
+                    {{artwokJob.quote_id}}
+                </span>
+              </td>
+              <td>
+                <!-- <span>
+                    {{artwokJob.job_status}}
+                </span> -->
+                <div class="q-r-status-drop dropdown" style="display:inline-block; width:100%;">
+                  <button class="btn btn-default btn-sm btn-cons dropdown-toggle q-r-status-drop-btn" type="button" data-toggle="dropdown" data-disabled="true">
+                      <div>
+                        <span class="statusColor q-r-status-color" style="background:{{artwokJob.color_code}}">
+                        </span>
+                        <span style="padding-left: 20px;">
+                          {{artwokJob.job_status | capitalize}}
+                        </span>
+                      </div>
+                      <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" style="width: 100%">
+                    <div  ng-class="{'custom-scroll-menu-bar': statusLists.length > '10'}">  
+                        <li ng-repeat="status in statusLists" ng-click="onArtworkJobStatusClicked(artwokJob.artwork_job_id, status, 'jobList')" ng-if="status.name != 'Customize Statuses'">
+                            <a href="#" style="position:relative;padding-left:20px;" class="status-adjust">
+                                {{status.name | capitalize}}
+                                <span class="statusColor" style="background:{{status.color_code}};"></span>
+                            </a>
+                        </li>
+                    </div>  
+                    
+                      <li ng-click="onCustomizeStatusClicked()" ng-show="isSuperAdmin">
+                          <a href="#" class="btn btn-info m-t-10" style="color:#fff;text-align:center;font-size: 12px;">
+                              <xe-translate text-value="Customize Statuses"></xe-translate>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </row>
+    <row ng-if="artwokJobList.length == 0 && !artwokJobListLoader">
+      <div class="custom-table">
+        <p class="font-normal text-lg text-center m-t-20 p-t-20 p-b-20">
+          <xe-translate text-value="No artwork jobs found">
+          </xe-translate>
+        </p>
+      </div>
+    </row>
+    <div class="row" ng-if="artwokJobListLoader">
+      <div class="col-lg-12">
+        <div class="product-wrap-height">
+          <div class="panel-body text-center">
+            <img class="image-responsive-height demo-mw-50 page-loader" src="assets/img/demo/progress.svg"
+              alt="Progress" />
+            <span class="loader-label">
+              <xe-translate text-value="Loading">
+              </xe-translate>
+              ...
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-include src="'modules/artworkApproval/views/partials/artworkJobdetailsview.html'" ng-show="artworkJobDetView">
+  </ng-include>
+  <ng-include src="'modules/artworkApproval/views/partials/artworkJobImageViewModal.html'">
+  </ng-include>
+  <ng-include src="'modules/artworkApproval/views/partials/createArtwork.html'">
+  </ng-include>
+  <ng-include src="'modules/artworkApproval/views/partials/createArtworkConfirm.html'">
+  </ng-include>
+  <ng-include src="'modules/artworkApproval/views/partials/artworkNotificationModal.html'">
+  </ng-include>
+  <ng-include src="'modules/artworkApproval/views/partials/addCustomStatus.html'">
+  </ng-include>
+</div>

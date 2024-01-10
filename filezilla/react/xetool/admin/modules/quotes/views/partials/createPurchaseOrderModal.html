@@ -1,0 +1,222 @@
+<div class="modal fade stick-up" id="createPurchaseOrderModal" pg-portlet tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left" id="createPurchaseOrderModalMsg">
+                 <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h5>
+                            <span class="semi-bold">
+                               <xe-translate text-value="Create Purchase Order">
+                               </xe-translate>
+                            </span>
+                        </h5>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="m-t-10">
+                            <button type="button" class="close custom-modal-close" data-dismiss="modal" aria-hidden="true">
+                                <i class="pg-close fs-14"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                  <div class="col-sm-12">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <div class="flexRow">
+                          <div class="flexCol">
+                            <div class="q-r-products-container" ng-click="resetVendorSearchField()">
+                              <span class="q-r-dropdown-star" style="right: 10px">*</span>
+                              <label class="control-label q-r-dropdown-btn-label">
+                                <xe-translate text-value="Select Vendor">
+                                </xe-translate>
+                              </label>
+                              <div class="btn-group" style="width:100%;display:flex;">
+                                <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown">
+                                  {{ purchseOrder.vendor_name }}
+                                </button>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                                  <li>
+                                    <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="vendor_search.value">
+                                  </li>
+                                  <li>
+                                    <ul ng-class="{'quote-drop-down-scroll':vendorList.length > 5}" class="quote-drop-down" style="padding: 12px 0;">
+                                      <li ng-repeat="vendor in vendorList | filter:vendor_search.value" ng-click="vendorselected(vendor)">
+                                        <a href="" style="color:#333;">
+                                            {{vendor.name}}
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flexCol">
+                            <div class="q-r-products-container" ng-click="resetPrintShopSearchField()">
+                              <span class="q-r-dropdown-star" style="right: 10px">*</span>
+                              <label class="control-label q-r-dropdown-btn-label">
+                                <xe-translate text-value="Select Printshop Address">
+                                </xe-translate>
+                              </label>
+                              <div class="btn-group" style="width:100%;display:flex;">
+                                <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown">
+                                  {{ purchseOrder.printShopName }}
+                                </button>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                                  <li>
+                                    <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="printShopSearch.value">
+                                  </li>
+                                  <li>
+                                    <ul ng-class="{'quote-drop-down-scroll':printShopAddList.length > 5}" class="quote-drop-down" style="padding: 12px 0;">
+                                      <li ng-repeat="printShop in printShopAddList | filter:printShopSearch.value" ng-click="onPrintShopSelected(printShop)">
+                                        <a href="" style="color:#333;">
+                                            {{printShop.name}}
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flexRow m-t-10">
+                          <div class="flexCol">
+                            <div class="form-group form-group-default required">
+                            <label  class="control-label">
+                              <xe-translate text-value="Expected Date Of Delivery">
+                              </xe-translate>
+                            </label>
+                            <input id="makePurchaseOrder" ui-date="dateOptions" class="form-control" ui-date-format  ng-model="purchseOrder.expecteddate"  onkeydown="return false">
+                            </div>
+                          </div>
+                          <div class="flexCol">
+                            <div class="form-group form-group-default">
+                              <label class="control-label">
+                                <xe-translate text-value="Tracking Number">
+                                </xe-translate>
+                              </label>
+                              <input type="text" autocomplete="off" placeholder="Tracking Number" class="form-control" ng-model="purchseOrder.trackingNo">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flexRow">
+                          <div class="flexCol" style="flex: 2.04">
+                            <div class="form-group form-group-default">
+                              <label class="control-label">
+                                <xe-translate text-value="PO Notes">
+                                </xe-translate>
+                              </label>
+                              <textarea class="form-control h-auto" ng-model="purchseOrder.poNotes">
+                              </textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="panel-title">
+                              <xe-translate text-value="Product And Quantity Details">
+                              </xe-translate>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel-body">
+                        <div class="flexRow">
+                          <div class="flexCol">
+                            <div class="po-head">
+                              <div class="po-width-80">
+                                <xe-translate text-value="Products">
+                                </xe-translate>
+                              </div>
+                              <div class="po-width-10">
+                                <xe-translate text-value="SKU">
+                                </xe-translate>
+                              </div>
+                              <div class="po-width-10">
+                                <xe-translate text-value="Quantity">
+                                </xe-translate>
+                              </div>
+                            </div>
+                            <div class="po-body border-none po-create-modal-scroll">
+                              <div class="po-listing-cs" ng-repeat="product in quotProductAndQtyDetails track by $index">
+                                <div class="po-width-80">
+                                  <div class="po-product-content">
+                                    <div class="po-img-left">
+                                      <img class="img-responsive" ng-src="{{ product.mainProductImage }}" />
+                                    </div>
+                                    <div>
+                                      <p>
+                                        <h5> {{ product.product_name }} </h5>
+                                      </p>
+                                      <p>
+                                        <span class="bold">
+                                          <xe-translate text-value="Color">
+                                          </xe-translate>:
+                                        </span> 
+                                        {{ product.color | capitalize }}
+                                      </p>
+                                      <p>
+                                        <span class="bold">
+                                          <xe-translate text-value="Size">
+                                          </xe-translate>:
+                                        </span> 
+                                        {{ product.size }}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="po-width-10">
+                                  {{ product.sku }}
+                                </div>
+                                <div class="po-width-10">
+                                  <input type="text" ng-model="product.quantity"  class="form-control" name="product_quantity" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="m-t-20 clearfix">
+                      <button type="button" class="btn btn-success btn-sm pull-right m-l-5" ng-click="createNewPurchaseOrderFromQuote()">
+                          <span>
+                              <xe-translate text-value="Place order">
+                              </xe-translate>
+                          </span>
+                      </button>
+                      <button type="button" class="btn btn-danger btn-sm pull-right" ng-click="cancelPurchaseOrder()">
+                          <span>
+                              <xe-translate text-value="Cancel">
+                              </xe-translate>
+                          </span>
+                      </button>
+                  </div>
+                  <div class="preloader-trans" ng-show="makePurchaseOrderPreloader" style="padding-left: 0px; z-index: 100000">
+                    <div class="page-loader">
+                      <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+                      <xe-translate text-value="Please wait"></xe-translate>...
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

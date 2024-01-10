@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flower Shop</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/manifest.json">
+        <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<meta name="csrf-token" content="KFk1mzddVngKIzOXj3JsG1DpBkBgmVEWzxOqbMZ5">        
+            <link href="css/profile.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+            <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+
+
+<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+<link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+<link href="plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+
+<link href="plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+<link href="plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+
+<link href="css/components-md.min.css" rel="stylesheet" type="text/css" />
+<link href="css/plugins.min.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="css/layout.min.css">
+<link rel="stylesheet" type="text/css" href="css/darkblue.min.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link href="plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />                
+    <!-- END HEAD -->
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-content-white">
+        
+
+        <div class="page-header navbar navbar-fixed-top">
+    <div class="page-header-inner ">
+        
+            <div class="page-logo">
+                <a href="box-listing.html">
+                    <img class="logo-default" src="images/logo.svg" alt="Flowers Shop" height="40">
+                </a>
+                <div class="menu-toggler sidebar-toggler"> </div>
+            </div>
+        
+        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"></a>
+        
+        
+        <div class="top-menu">
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown dropdown-user">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                        <span class="username username-hide-on-mobile"> Super Admin </span>
+                        <i class="icon-users"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-default">
+                        <li>
+                            <a href="profile">
+                                <i class="icon-user"></i> My Profile </a>
+                        </li>
+                        <li>
+                            <a href="change/password">
+                                <i class="icon-lock"></i> Change Password </a>
+                        </li>
+                        <li class="divider"> </li>
+                        <li>
+                            <a href="logout">
+                                <i class="icon-logout"></i> Logout </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>        <div class="clearfix"> </div>
+
+
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+    <div class="page-sidebar navbar-collapse collapse">
+        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 10px">  
+                    <li class="nav-item start ">
+                        <a href="box-listing.html" class="nav-link ">
+                            <i class="icon-home"></i>
+                            <span class="title">Box Management</span>
+                        </a>
+                    </li>
+                                                                
+                    <li class="nav-item start ">
+                        <a href="category-listing.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                                <span class="title">Category Management</span>
+                        </a>
+                    </li>
+                                                                
+                    <li class="nav-item start ">
+                        <a href="color-listing.html" class="nav-link ">
+                             <i class="icon-home"></i>
+                                <span class="title">Colors Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start ">
+                        <a href="product-listing.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                                 <span class="title">Products Management</span>
+                        </a>
+                    </li> 
+                    <li class="nav-item start ">
+                        <a href="shape-listing.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                                 <span class="title">Shape Management</span>
+                        </a>
+                    </li>    
+                    <li class="nav-item start ">
+                        <a href="home-management.html" class="nav-link ">
+                            <i class="icon-users"></i>
+                            <span class="title">Home Management</span>
+                        </a>
+                    </li>
+             </ul>
+    </div>
+</div>            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content" style="min-height:5px">    
+                        <h3 class="page-title"> 
+    </h3>
+                    
+                        <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet light bordered">
+                 <div class="portlet-title">
+                    <div class="caption font-dark">
+                        <span class="caption-subject bold uppercase">Product Detail </span>
+                    </div>
+                    <div class="actions">
+                        <div class="btn-group btn-group-devided">                                     
+                              <a href="#" class="btn btn-info">
+                               Delete
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-content">
+                <form action="franchises" role="form" id="frmAddNewFranchises" name="frmAddNewFranchises" method="POST" enctype="multipart/form-data" novalidate="novalidate">
+                    <input type="hidden" name="_token" value="W4leT0YuB5xOKQT3MuTYQKy32Qw2uT6RLIVMHNzT">                    
+                    <div class="col-md-12">
+                        <div class="form-group  col-md-12">
+                            <label class="control-label"><span class="mendatory"></span>Product Title</label>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <strong><label class="control-label"><span class="mendatory" style="font-size: 20px;"></span>Classic Acrylic</label></strong>
+                        </div>
+                    </div>                   
+                </form>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+
+         <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content" style="min-height:5px;">    
+                        <h3 class="page-title"> 
+                          </h3>
+                        <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption font-dark">
+                        <span class="caption-subject bold uppercase"> Product Shape List </span>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div id="franchisesList_wrapper" class="dataTables_wrapper no-footer">
+                        <div class="table-scrollable">
+                            <table class="table table-striped table-bordered table-hover table-checkable dataTable no-footer" id="franchisesList" role="grid" aria-describedby="franchisesList_info" style="width: 1043px;">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting_asc" tabindex="0" aria-controls="franchisesList" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 250px;">Sr No.
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="franchisesList" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 250px;">Title
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="franchisesList" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 250px;">Image
+                                        </th>
+                                        <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 250px;">Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr role="row" class="odd">
+                                         <td class="sorting_1">1</td>
+                                        <td>Large round</td>
+                                        <td><img style="width: 40px; height: 40px;" src="images/logo.jpg" alt="image"></td>
+                                        <td>
+                                            <div style="width: 300px;">
+                                              <a href="#" onclick="addOverlay()" title="View" class="btn extra-maring btn-success btn-sm">
+                                            <img class="btn-icon-img" src="images/action/view.svg">
+                                            </a> 
+                                            <a href="#" onclick="addOverlay()" title="Edit" class="btn extra-maring btn-warning btn-sm">
+                                            <img class="btn-icon-img" src="images/action/edit.svg">
+                                             </a>
+                                            <a title="Delete" href="#" class="btn extra-maring btn-danger btn-sm act-delete">
+                                            <img class="btn-icon-img" src="images/action/delete.svg">
+                                            </a>
+                                        </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr role="row" class="even">
+                                          <td class="sorting_1">2</td>
+                                        <td>Medium round</td>
+                                        <td><img style="width: 40px; height: 40px;" src="images/logo.jpg" alt="image"></td>
+                                        <td><div style="width: 300px;">
+                                            <a href="#" onclick="addOverlay()" title="View" class="btn extra-maring btn-success btn-sm">
+                                            <img class="btn-icon-img" src="images/action/view.svg">
+                                            </a>  
+                                            <a href="#" onclick="addOverlay()" title="Edit" class="btn extra-maring btn-warning btn-sm">
+                                                <img class="btn-icon-img" src="images/action/edit.svg">
+                                            </a>
+                                        <a title="Delete" href="#" class="btn extra-maring btn-danger btn-sm act-delete">
+                                        <img class="btn-icon-img" src="images/action/delete.svg">
+                                    </a>  
+                                         </div>
+
+                                     </td>
+                                </tr>
+
+                                <tr role="row" class="even">
+                                          <td class="sorting_1">2</td>
+                                        <td>Large Square</td>
+                                        <td><img style="width: 40px; height: 40px;" src="images/logo.jpg" alt="image"></td>
+                                        <td><div style="width: 300px;">
+                                              <a href="#" onclick="addOverlay()" title="View" class="btn extra-maring btn-success btn-sm">
+                                            <img class="btn-icon-img" src="images/action/view.svg">
+                                            </a> 
+                                            <a href="#" onclick="addOverlay()" title="Edit" class="btn extra-maring btn-warning btn-sm">
+                                                <img class="btn-icon-img" src="images/action/edit.svg">
+                                            </a>
+                                        <a title="Delete" href="#" class="btn extra-maring btn-danger btn-sm act-delete">
+                                        <img class="btn-icon-img" src="images/action/delete.svg">
+                                    </a>  
+                            </div>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+    <div class="page-footer-inner">
+        June, 2020 © Flowers Shop.
+    </div>
+    <div class="scroll-to-top">
+        <i class="icon-arrow-up"></i>
+    </div>
+</div>        <!-- END FOOTER -->
+    
+</body>
+</html>

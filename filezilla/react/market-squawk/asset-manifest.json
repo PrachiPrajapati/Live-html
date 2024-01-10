@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/react/market-squawk/static/css/main.3f70340b.chunk.css",
+    "main.js": "/react/market-squawk/static/js/main.b99f8f88.chunk.js",
+    "main.js.map": "/react/market-squawk/static/js/main.b99f8f88.chunk.js.map",
+    "runtime-main.js": "/react/market-squawk/static/js/runtime-main.c9fca27f.js",
+    "runtime-main.js.map": "/react/market-squawk/static/js/runtime-main.c9fca27f.js.map",
+    "static/css/2.21bdfae2.chunk.css": "/react/market-squawk/static/css/2.21bdfae2.chunk.css",
+    "static/js/2.5c44d9fa.chunk.js": "/react/market-squawk/static/js/2.5c44d9fa.chunk.js",
+    "static/js/2.5c44d9fa.chunk.js.map": "/react/market-squawk/static/js/2.5c44d9fa.chunk.js.map",
+    "index.html": "/react/market-squawk/index.html",
+    "precache-manifest.10bdf0e5770f96650b6047c2cc6f57a8.js": "/react/market-squawk/precache-manifest.10bdf0e5770f96650b6047c2cc6f57a8.js",
+    "service-worker.js": "/react/market-squawk/service-worker.js",
+    "static/css/2.21bdfae2.chunk.css.map": "/react/market-squawk/static/css/2.21bdfae2.chunk.css.map",
+    "static/css/main.3f70340b.chunk.css.map": "/react/market-squawk/static/css/main.3f70340b.chunk.css.map",
+    "static/js/2.5c44d9fa.chunk.js.LICENSE.txt": "/react/market-squawk/static/js/2.5c44d9fa.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/react/market-squawk/static/media/tringle.119185ba.svg",
+    "static/media/about-img.png": "/react/market-squawk/static/media/about-img.86cace93.png",
+    "static/media/about-reaserch.png": "/react/market-squawk/static/media/about-reaserch.5cf77e9c.png",
+    "static/media/about-team.png": "/react/market-squawk/static/media/about-team.82a753ea.png",
+    "static/media/about-video.mp4": "/react/market-squawk/static/media/about-video.10ff3ac1.mp4",
+    "static/media/blog-bg.png": "/react/market-squawk/static/media/blog-bg.29b197ac.png",
+    "static/media/blog-bg.jpg": "/react/market-squawk/static/media/blog-bg.d2ad1ed2.jpg",
+    "static/media/compnay-slide-bg.jpg": "/react/market-squawk/static/media/compnay-slide-bg.e050e1eb.jpg",
+    "static/media/feature-cost.svg": "/react/market-squawk/static/media/feature-cost.ce559208.svg",
+    "static/media/feature-instant.svg": "/react/market-squawk/static/media/feature-instant.6310809c.svg",
+    "static/media/feature-no-contract.svg": "/react/market-squawk/static/media/feature-no-contract.99003618.svg",
+    "static/media/font-awesome.css": "/react/market-squawk/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/logo.svg": "/react/market-squawk/static/media/logo.7ab96ba2.svg",
+    "static/media/news-img.png": "/react/market-squawk/static/media/news-img.547ed4f3.png",
+    "static/media/slick-theme.css": "/react/market-squawk/static/media/slick.f97e3bbf.svg",
+    "static/media/spotify-logo.png": "/react/market-squawk/static/media/spotify-logo.fb70d195.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c9fca27f.js",
+    "static/css/2.21bdfae2.chunk.css",
+    "static/js/2.5c44d9fa.chunk.js",
+    "static/css/main.3f70340b.chunk.css",
+    "static/js/main.b99f8f88.chunk.js"
+  ]
+}

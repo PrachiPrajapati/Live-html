@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4">
+            <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+            <g id="Group-3" transform="translate(2.843137, 9.000000)" stroke-width="0.833333333">
+                <g id="Group-2" transform="translate(17.156863, 0.000000)">
+                    <polyline id="Path-2" stroke="#FFFFFF" points="0 5.11792943 0 0 16.6666667 0 16.6666667 16.6666667 4.81291803 16.6666667"></polyline>
+                    <g id="Group" transform="translate(2.343750, 2.343750)">
+                        <polyline id="Path-4" stroke="#47EBC6" points="9.375 0.886915209 10.5149665 2.08333333 12.5 0"></polyline>
+                        <polyline id="Path-4-Copy" stroke="#47EBC6" points="9.375 5.31399854 10.5149665 6.51041667 12.5 4.42708333"></polyline>
+                        <polyline id="Path-4-Copy-2" stroke="#47EBC6" points="9.375 10.0014985 10.5149665 11.1979167 12.5 9.11458333"></polyline>
+                        <path d="M0,1.171875 L7.8125,1.171875" id="Path-3" stroke="#FFFFFF"></path>
+                        <path d="M4.16666667,5.59895833 L7.8125,5.59895833" id="Path-3-Copy" stroke="#FFFFFF"></path>
+                        <path d="M4.6875,10.15625 L7.8125,10.15625" id="Path-3-Copy-2" stroke="#FFFFFF"></path>
+                    </g>
+                </g>
+                <g id="Group-2" transform="translate(0.000000, 4.947917)" stroke="#FFFFFF">
+                    <g id="Group" transform="translate(3.577467, 0.000000)">
+                        <ellipse id="Oval" fill-rule="nonzero" cx="7.41366366" cy="4.93350494" rx="4.94244244" ry="4.93350494"></ellipse>
+                        <path d="M14.8273273,17.2672673 C14.8273273,13.180218 11.508117,9.86700987 7.41366366,9.86700987 C3.31921029,9.86700987 0,13.180218 0,17.2672673" id="Path"></path>
+                    </g>
+                    <g id="Group-Copy" transform="translate(13.149539, 2.627628)">
+                        <path d="M0.587338211,6.26747125 C1.16879653,6.70923151 1.89308992,6.97125696 2.6783033,6.97125696 L2.6783033,6.97125696 C4.5945766,6.97125696 6.14802303,5.41068795 6.14802303,3.48562849 C6.14802303,1.56056903 4.5945766,0 2.6783033,0 C2.4585384,0 2.2435455,0.0205250758 2.0351205,0.0597711203" id="Path"></path>
+                        <path d="M7.88288288,12.1996997 C7.88288288,9.31211051 5.55271323,6.97125696 2.6783033,6.97125696 C1.70579671,6.97125696 0.795588735,7.23921201 0.0168458745,7.70563848" id="Path"></path>
+                    </g>
+                    <g id="Group-Copy-2" transform="translate(4.269659, 9.315315) scale(-1, 1) translate(-4.269659, -9.315315) translate(0.269659, 2.815315)">
+                        <path d="M0.287770079,6.26747125 C0.863186522,6.70923151 1.57995385,6.97125696 2.35700816,6.97125696 L2.35700816,6.97125696 C4.25336967,6.97125696 5.7906744,5.41068795 5.7906744,3.48562849 C5.7906744,1.56056903 4.25336967,0 2.35700816,0 C2.13952682,0 1.92676789,0.0205250758 1.7205086,0.0597711203" id="Path"></path>
+                        <path d="M7.50750751,12.1996997 C7.50750751,9.31211051 5.20155041,6.97125696 2.35700816,6.97125696 C1.5951029,6.97125696 0.871837142,7.13919591 0.221172919,7.44059782 C0.147703692,7.47463037 0.0751601072,7.51036453 0.00359105606,7.54775064" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

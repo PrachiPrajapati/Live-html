@@ -1,0 +1,108 @@
+<div class="page-body" ng-if= "tabModel == 'quoteDetails'">
+	<div class="row">
+		<div class="form-content-value">
+			<div class="col-sm-12">
+				<form class="form-horizontal">
+					<div class="form-group required">
+						<label for="text" class="col-sm-2 control-label">Subject
+							<span class="text-danger">
+		                		*
+		            		</span>
+						</label>
+						<div class="col-sm-10">
+						  	<input type="text" class="form-control" ng-keyup="quoteValidate(formData.subject,'sub')" ng-model="formData.subject" id="" placeholder="Subject" ng-style ="isSubject == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+						</div>
+				    </div>
+
+				</form>
+			</div>
+			<div class="col-sm-12">
+				<form class="form-horizontal">
+
+				  <div class="form-group">
+					<label for="text" class="col-sm-2 control-label">Description
+						<span class="text-danger">
+				            *
+				        </span>
+					</label>
+					<div class="col-sm-10">
+						<textarea class="form-control" ng-keyup="quoteValidate(formData.description,'des')" ng-model="formData.description" rows="3" ng-style ="isDesc == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required></textarea>
+					  <!-- <textarea class="form-control" rows="3"></textarea> -->
+					</div>
+				   </div>
+<!--
+				    <div class="form-group">
+						<label for="text" class="col-sm-2 control-label">Quantity
+							<span class="text-danger">
+								*
+							</span>
+						</label>
+						<div class="col-sm-10">
+							<input type="text" ng-keyup="quoteValidate(formData.quantity,'quan')" ng-model="formData.quantity" class="form-control" id="input1" placeholder="Quantity" numbers-only="numbers-only" ng-style ="isQuantity == true ? {'background-color':'rgba(254, 186, 186, 0.5)'} : {'background-color':'white'}" required>
+						</div>
+				    </div> -->
+
+
+					<div class="form-group">
+						<label for="text" class="col-sm-2 control-label">Notes
+						</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" ng-model="formData.notes" rows="3"  placeholder="Any special instructions" required></textarea>
+						</div>
+				  	</div>
+				<!-- 	<div class="form-group">
+						<label for="text" class="col-sm-2 control-label">Attachments
+						</label>
+						<div class="col-sm-10" style="margin-top: 5px;">
+							<button class="btn btn-success btn-sm btn-cons" multiple ng-file-select ng-file-change="upload($files)">
+					            Attach File
+					        </button>
+							<span ng-show="isUploadFileCount">
+							    {{ uploadFileCount }}
+							</span> <br>
+							<span class="attachment-hints">
+						        <i>
+						        	Hint: Press ctrl key to select multiple files.
+						        </i>
+    						</span>
+						</div>
+					</div> -->
+				</form>
+			</div>
+		</div>
+		<div class="col-sm-12">
+		<hr/>
+		</div>
+		<div class="col-sm-12 text-right">
+
+			<!-- <button type="button" class="btn btn-info btn-sm m-r-5" ng-click = "goToQuoteListingPage()">Back</button> -->
+			<small ng-show = "isSubject" class="text-right">
+                <label class="text-danger quote-error-message">
+                  Enter subject.
+                </label>
+            </small>
+            <small ng-show = "isFileSelected" class="text-right">
+                <label class="text-danger quote-error-message">
+                  Please select files.
+                </label>
+            </small>
+            <small ng-show = "isValidFileFormat == false" class="text-right">
+                <label class="text-danger quote-error-message">
+                  {{validFormatMsg}}
+                </label>
+            </small>
+            <small ng-show = "isDesc" class="text-right">
+                <label class="text-danger quote-error-message">
+                    Enter description.
+                </label>
+            </small>
+             <small ng-show = "isCustomerDetailsInvalid" class="text-right">
+                <label class="text-danger quote-error-message">
+                  	please fill up customer details before proceeding product&design section.
+                </label>
+            </small>
+						<button type="button" class="btn btn-info btn-sm" ng-click="goBackToQuoteDetails()">Back</button>
+						<button type="button" class="btn btn-success btn-sm" ng-click = "changeTab('address', true)">Next</button>
+		</div>
+	</div>
+</div>

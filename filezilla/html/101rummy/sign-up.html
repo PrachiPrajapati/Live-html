@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <title>:: Rummy 101 ::</title>
+        <!--********fevicon included********-->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <!--****bootstrap included****-->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <!--******css included******-->
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <!--********font-awesome inlcuded*******-->
+        <link rel="stylesheet" href="css/fontawesome.css" type="text/css" />
+        <!--******slick slider included*****-->
+        <link rel="stylesheet" href="css/slick.css" type="text/css" />
+
+    </head>
+
+    <body class="login-page">
+        <div class="banner-details overlay d-flex justify-content-center align-items-center">
+            <div class="banner-content">
+                <a href="index.html" class="logo"><img src="images/logo.png" class="img-fluid" alt="logo"></a>
+                <div class="sign-up-form">
+                    <h2>Sign Up</h2>
+                    <form id="joinForm" name="joinForm" method="POST">
+                        <div class="form-group">
+                            <div class="form-control">
+                                <input type="text" placeholder="Enter Your Username*" name="name" />
+                            </div>
+                            <div class="img-box">
+                                <img src="images/username-icon.svg" class="img-fluid" alt="name-icon" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control">
+                                <input type="Email" name="email" placeholder="Enter Your Email*" />
+                            </div>
+                            <div class="img-box">
+                                <img src="images/email-icon.svg" class="img-fluid" alt="email-icon" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control">
+                                <input type="tel" name="mobile" placeholder="Enter Your Mobile Number*" />
+                            </div>
+                            <div class="img-box">
+                                <img src="images/call-icon.svg" class="img-fluid" alt="call-icon" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control">
+                                <input type="password" name="password" placeholder="Enter Your Password*"
+                                    name="Password" />
+                            </div>
+                            <div class="img-box">
+                                <img src="images/lock-icon.svg" class="img-fluid" alt="password-icon" />
+                            </div>
+                        </div>
+                        <div id="errorMsg" class="alert alert-danger">
+                            <span id="errorMsgSpan" class="errorMessage">
+                            </span>
+                        </div>
+                        <div id="successMsg" class="alert alert-success">
+                            <span id="successMsgSpan" class="successMessage">
+                            </span>
+                        </div>
+                        <div class="text-center mt-4">
+                            <input type="submit" id="submitBtn" name='submitbutton' class="sign-up-btn" value="Sign Up">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--******jquery  included*******-->
+        <script src="js/lib/jquery.min.js" type="text/javascript"> </script>
+        <!--******bootstrao js included*******-->
+        <script src="js/bootstrap.min.js" type="text/javascript"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+        <script src="./js/api.js"></script>
+    </body>
+
+</html>

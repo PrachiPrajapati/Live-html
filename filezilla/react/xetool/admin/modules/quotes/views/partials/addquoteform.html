@@ -1,0 +1,652 @@
+<div class="Form_Details newCustomerField">
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="pageTitle">
+        <xe-translate text-value="Create Quote Request"></xe-translate>
+      </label>
+      <button class="btn btn-default btn-sm m-l-10" type="button" ng-click="onAddCustomerClicked()"
+        ng-hide="isShowNewCustView">
+        <xe-translate text-value="Add Customer"></xe-translate>
+      </button>
+      <span ng-hide="totalNoOfCustomer > 0 || customerListLoader || isShowNewCustView" class="m-l-20">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+        <xe-translate text-value="Add customer to generate a quote">
+        </xe-translate>
+      </span>
+    </div>
+    <div class="col-sm-6 text-right">
+      <button type="reset" class="btn btn-default btn-sm" ng-click="backToQuoteListing()">
+        <i class="fa fa-caret-left"></i>
+        <xe-translate text-value="Back"></xe-translate>
+      </button>
+    </div>
+  </div>
+  <div class="panel panel-default m-t-20" ng-show="isChooseCustOpt" ng-hide="isShowNewCustView">
+    <div class="panel-body" ng-show="totalNoOfCustomer > 0">
+      <div class="flexRow">
+        <div class="flexCol">
+          <div class="q-r-products-container" ng-click="reSetCustomerListSearchField()">
+            <span class="q-r-dropdown-star" style="right: 10px">*</span>
+            <label class="control-label q-r-dropdown-btn-label">
+              <xe-translate text-value="Select Customer">
+              </xe-translate>
+            </label>
+            <div class="btn-group" style="width:100%;display:flex;">
+              <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown"
+                style="width:100%;font-size:12px;text-align:left;padding-top:35px;background-color:transparent;">
+                <span ng-if="selectedCustomer == 'Select'">
+                  {{ selectedCustomer }}
+                </span>
+                <span ng-if="selectedCustomer != 'Select'">
+                  {{selectedCustomerData.first_name}}
+                  {{selectedCustomerData.last_name}}
+                  ({{ selectedCustomer }})
+                </span>
+              </button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                <li>
+                  <input type="text" class="form-control input-sm q-r-drop-search-field"
+                    ng-model="customerListSearch.value">
+                </li>
+                <li>
+                  <ul ng-class="{'quote-drop-down-scroll':customerList.length > 5}" style="list-style:none;padding:10px 0 0 0;margin:0;">
+                    <li ng-repeat="customer in customerList | filter:customerListSearch.value"
+                      ng-click="onSelectcustomerEmail(customer)">
+                      <a href="" style="color:#333;">
+                          {{ customer.first_name }} {{ customer.last_name }}
+                          ({{ customer.email }})
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <ng-include src="'modules/quotes/views/partials/addCustomerForm.html'" ng-show="isShowNewCustView">
+  </ng-include>
+  <div ng-if="isShowExistingCustView">
+    <div class="panel panel-default" style="margin-bottom:6px;">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <xe-translate text-value="Quote Info">
+          </xe-translate>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="flexRow">
+          <div class="flexCol">
+            <div class="form-group form-group-default required">
+              <label class="control-label">
+                <xe-translate text-value="Title">
+                </xe-translate>
+              </label>
+              <input type="text" ng-model="quotFormData.subject" class="form-control" required>
+            </div>
+          </div>
+          <div class="flexCol">
+            <div class="form-group form-group-default input-group">
+              <div class="form-input-group">
+                <label>
+                  <xe-translate text-value="Production Due Date">
+                  </xe-translate>
+                </label>
+                <input ui-date="dateOptions" class="form-control" ui-date-format id="production_date"
+                  ng-model="productionDueDate" autocomplete="off" readonly="" onkeydown="return false">
+              </div>
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+            </div>
+          </div>
+          <div class="flexCol">
+            <div class="form-group form-group-default input-group">
+              <div class="form-input-group">
+                <label>
+                  <xe-translate text-value="Customer Due Date">
+                  </xe-translate>
+                </label>
+                <input ui-date="custDuedateOptions" class="form-control" ui-date-format id="customer_date"
+                  ng-model="customerDueDate" autocomplete="off" readonly="" onkeydown="return false" ng-focus="setCustomerDueDateMin()">
+              </div>
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flexRow">
+          <div class="flexCol">
+            <div class="form-group form-group-default required">
+              <label class="control-label">
+                <xe-translate text-value="Description">
+                </xe-translate>
+              </label>
+              <textarea class="form-control h-auto" ng-model="quotFormData.description" required></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default" style="margin-bottom:6px;">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <xe-translate text-value="Product And Quantity Details"></xe-translate>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="q-r-product-qty-container" ng-repeat="productAndQtys in productAndQtyDetails track by $index">
+          <div class="flexRow">
+            <div class="flexCol">
+              <div class="q-r-products-container" ng-click="resetProductSearchField($index)">
+                <label class="control-label q-r-dropdown-btn-label">
+                  <xe-translate text-value="Products"></xe-translate>
+                </label>
+                <div class="btn-group" style="width:100%;display:flex;">
+                  <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown"
+                    style="width:100%;font-size:12px;text-align:left;padding-top:35px;background-color:transparent;">
+                    {{ productAndQtys.selectedProduct }}
+                  </button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                    <li>
+                      <input type="text" class="form-control input-sm q-r-drop-search-field"
+                        ng-model="productAndQtys.searchItem">
+                    </li>
+                    <li>
+                      <ul ng-class="{'quote-drop-down-scroll':productAndQtys.productList.product.length > 5}" class="quote-drop-down" style="padding: 12px 0;">
+                        <li ng-repeat="product in productAndQtys.productList.product | filter:productAndQtys.searchItem"
+                          ng-click="onProductSelected(product, $parent.$index)">
+                          <a href="" style="color:#333;">{{ product.name }}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flexCol">
+              <div class="q-r-quantity-container" ng-if="productAndQtys.selectedProduct != 'Select'">
+                <div class="form-group-default">
+                  <label class="control-label">
+                    <xe-translate text-value="Quantity">
+                    </xe-translate>
+                  </label>
+                  <input type="number" ng-model="productAndQtys.qty" class="form-control" placeholder="Quantity"
+                    ng-blur="checkQuantity(productAndQtys.qty, $index)" min="1"
+                    onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+                </div>
+              </div>
+            </div>
+            <div class="flexCol" ng-if="productAndQtys.color.length > 0">
+              <div class="q-r-colors-container" ng-if="productAndQtys.selectedProduct != 'Select'">
+                <label class="control-label q-r-dropdown-btn-label">
+                  <xe-translate text-value="Colors">
+                  </xe-translate>
+                </label>
+                <div class="btn-group" style="width: 100%; display: flex;">
+                  <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown"
+                    style="width: 100%; font-size: 12px; text-align: left;padding-top: 35px; background-color: transparent;">
+                    {{ productAndQtys.selectedcolor | capitalize }}
+                  </button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                    <span class="caret">
+                    </span>
+                    <span class="sr-only">
+                      Toggle Dropdown
+                    </span>
+                  </button>
+                  <ul class="dropdown-menu quote-drop-down quote-drop-down-pad" role="menu"
+                    ng-class="{'quote-drop-down-scroll':productAndQtys.color.length > 5}">
+                    <li ng-click="onColorSelected('Select', $index)">
+                      <a href="">
+                        Select
+                      </a>
+                    </li>
+                    <li ng-repeat="color in productAndQtys.color" ng-click="onColorSelected(color, $parent.$index)">
+                      <a href="">
+                        {{ color.xeColor | capitalize}}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flexCol" ng-if="productAndQtys.size.length > 0 && productAndQtys.size[0].xe_size_id != 0">
+              <div class="q-r-size-container" ng-if="productAndQtys.selectedProduct != 'Select'">
+                <label class="control-label q-r-dropdown-btn-label">
+                  <xe-translate text-value="Size">
+                  </xe-translate>
+                </label>
+                <div class="btn-group" style="width: 100%; display: flex;">
+                  <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown"
+                    style="width: 100%; font-size: 12px; text-align: left;padding-top: 35px; background-color: transparent;">
+                    {{ productAndQtys.selectedsize }}
+                  </button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                    <span class="caret">
+                    </span>
+                    <span class="sr-only">
+                      Toggle Dropdown
+                    </span>
+                  </button>
+                  <ul class="dropdown-menu quote-drop-down quote-drop-down-pad" role="menu" ng-class="{'quote-drop-down-scroll':productAndQtys.size.length > 5}">
+                    <li ng-click="onSizeSelected('Select', $index)">
+                      <a href="">
+                        Select
+                      </a>
+                    </li>
+                    <li ng-repeat="size in productAndQtys.size" ng-click="onSizeSelected(size, $parent.$index)">
+                      <a href="">
+                        {{ size.xe_size }}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flexCol">
+              <div class="q-r-print-process-container" ng-if="productAndQtys.selectedProduct != 'Select'">
+                <label class="control-label q-r-dropdown-btn-label">
+                  <xe-translate text-value="Printing Process">
+                  </xe-translate>
+                </label>
+                <div class="btn-group" style="width: 100%; display: flex;">
+                  <button type="button" class="btn btn-default text-ellipsis" data-toggle="dropdown"
+                    style="width: 100%; font-size: 12px; text-align: left;padding-top: 35px; background-color: transparent;">
+                    {{ productAndQtys.selectedPrintProcess }}
+                  </button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu quote-drop-down quote-drop-down-pad" role="menu"
+                    ng-class="{'quote-drop-down-scroll':productAndQtys.printProcess.length > 5}">
+                    <li ng-click="onPrintProfileSelected('Select', $index)">
+                      <a href="">Select</a>
+                    </li>
+                    <li ng-repeat="printProfile in productAndQtys.printProcess"
+                      ng-click="onPrintProfileSelected(printProfile, $parent.$index)">
+                      <a href="">{{ printProfile.name }}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flexCol" style="text-align:right;flex:inherit;">
+              <button class="btn btn-default btn-sm btn-cons m-t-10" multiple ng-file-select
+                ng-file-change="upload($files, $index)" tooltip="{{ attachFileInfo }}" tooltip-placement="top">
+                <i class="fa fa-info-circle"></i>
+                <xe-translate text-value="Attach File"></xe-translate>
+              </button>
+              <span class="block" ng-show="productAndQtys.isUploadFileCount">
+                {{ productAndQtys.uploadFileCount }}
+              </span>
+              <span class="block" ng-show="productAndQtys.isValidFileFormat == false">
+                <small>
+                  <label class="text-danger">
+                    {{fileFormatMsg}}
+                  </label>
+                </small>
+              </span>
+            </div>
+          </div>
+          <i class="fa fa-times text-danger ship-add-rem-btn" ng-if="productAndQtyDetails.length > 1"
+            ng-click="removeProductAndQty($index)"></i>
+        </div>
+        <button class="btn btn-default btn-sm btn-cons" ng-click="addMoreProductToQuote()">
+          <i class="fa fa-plus"></i>
+          <xe-translate text-value="Add More"></xe-translate>
+        </button>
+      </div>
+    </div>
+    <div class="panel panel-default" style="margin-bottom:6px;" ng-if="multipleShippingAdd.length && getShipAddPreLoader == false">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-sm-6">
+              <div class="panel-title">
+                  <xe-translate text-value="Shipping Address">
+                  </xe-translate>
+                </div>
+          </div>
+          <div class="col-sm-6 text-right">
+              <button class="btn btn-default btn-sm" ng-click="addNewAddress()">
+                  <i class="fa fa-plus"></i>
+                  <xe-translate text-value="Add New Address">
+                  </xe-translate>
+                </button>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="flexRow">
+          <div class="flexCol" ng-repeat="Shipping in multipleShippingAdd track by $index">
+            <div class="ship-add-section">
+              <div class="ship-add-section-left">
+                <div class="radio radio-success" style="margin: 4px 0 0 0;">
+                  <input type="radio" id="ship_{{$index}}" name="mulShipAdd" value="{{Shipping.id}}"
+                    ng-model="shipAddChecked[$index]" ng-change="onMulShipAddSelected(Shipping, $index)" />
+                  <label for="ship_{{$index}}">
+                  </label>
+                </div>
+              </div>
+              <div class="ship-add-section-right">
+                <div class="prduct-details-section" style="padding:0;">
+                  <ul>
+                    <li>
+                      <span ng-if="Shipping.address_line_one">
+                        {{Shipping.address_line_one}},
+                      </span>
+                    </li>
+                    <li>
+                      <span ng-if="Shipping.address_line_two">
+                        {{Shipping.address_line_two}},
+                      </span>
+                    </li>
+                    <li>
+                      <span ng-if="Shipping.city">{{Shipping.city}} - </span>
+                      <span ng-if="Shipping.postcode">{{Shipping.postcode}},</span>
+                    </li>
+                    <li>
+                      <span ng-if="Shipping.state">{{Shipping.state}},</span>
+                      <span ng-if="Shipping.country">{{Shipping.country}}.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ng-if="multipleShippingAdd.length == 0 && getShipAddPreLoader == false">
+      <div class="panel panel-default" style="margin-bottom:6px;" ng-hide="storeDepSection">
+        <div class="panel-heading">
+          <div class="panel-title">
+            <xe-translate text-value="Billing Address">
+            </xe-translate>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="flexRow">
+            <div class="flexCol">
+              <div class="form-group form-group-default required">
+                <label class="control-label">
+                  <xe-translate text-value="Addr">
+                  </xe-translate>
+                </label>
+                <input type="text" ng-model="existingCustomerData.billing_address1" class="form-control" placeholder="Address Line 1"
+                  required>
+              </div>
+            </div>
+            <div class="flexCol">
+              <div class="form-group form-group-default">
+                <label class="control-label">
+                  <xe-translate text-value="Address">
+                  </xe-translate>
+                </label>
+                <input type="text" ng-model="existingCustomerData.billing_address2" class="form-control" placeholder="Address Line 2"
+                  required>
+              </div>
+            </div>
+            <div class="flexCol">
+              <div class="form-group form-group-default required">
+                <label class="control-label">
+                  <xe-translate text-value="City">
+                  </xe-translate>
+                </label>
+                <input type="text" ng-model="existingCustomerData.billing_city" class="form-control" placeholder="City" required>
+              </div>
+            </div>
+            <div class="flexCol">
+              <div class="form-group form-group-default required">
+                <label class="control-label">
+                  <xe-translate text-value="Zip">
+                  </xe-translate>
+                </label>
+                <input type="text" ng-model="existingCustomerData.billing_postcode" class="form-control" placeholder="Zip"
+                  required>
+              </div>
+            </div>
+            <div class="flexCol form-group">
+              <div class="q-r-products-container" ng-click="resetCountrySearchField()">
+                <span class="q-r-dropdown-star" style="right: 10px">*</span>
+                <label class="control-label q-r-dropdown-btn-label">
+                  <xe-translate text-value="Country">
+                  </xe-translate>
+                </label>
+                <div class="btn-group" style="width:100%;display:flex;">
+                  <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown">
+                    {{ existingCustomerData.billing_country }}
+                  </button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                    <li>
+                      <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="existingCountrySearch.value">
+                    </li>
+                    <li>
+                      <ul class="quote-drop-down" ng-class="{'quote-drop-down-scroll':countryList.length > 5}" style="padding: 12px 0;">
+                        <li ng-repeat="country in countryList | filter:existingCountrySearch.value" ng-click="onCreateQuotBillCountrySelected(country)">
+                          <a href="" style="color:#333;">
+                              {{ country.countries_name }}
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flexCol form-group">
+              <div class="q-r-products-container" ng-click="resetStateSearchField()">
+                <span class="q-r-dropdown-star" style="right: 10px">*</span>
+                <label class="control-label q-r-dropdown-btn-label">
+                  <xe-translate text-value="State">
+                  </xe-translate>
+                </label>
+                <div class="btn-group" style="width:100%;display:flex;">
+                  <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown" ng-disabled="existingCustomerData.billing_country == 'Select'">
+                    {{ existingCustomerData.billing_state }}
+                  </button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="height: 64px;" ng-disabled="existingCustomerData.billing_country == 'Select'">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                    <li>
+                      <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="existingStateSearch.value">
+                    </li>
+                    <li>
+                      <ul class="quote-drop-down" ng-class="{'quote-drop-down-scroll':existingBillStateList.length > 5}" style="padding: 12px 0;">
+                        <li ng-repeat="state in existingBillStateList | filter:existingStateSearch.value" ng-click="onCreateQuotBillStateSelected(state)">
+                          <a href="" style="color:#333;">
+                              {{ state.state_name }}
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default" style="margin-bottom:6px;">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="panel-title">
+                <xe-translate text-value="Shipping Address">
+                </xe-translate>
+              </div>
+              <div class="checkbox-inline checkbox check-info pull-right" style="margin:0;position:relative;top:-5px;" ng-hide="storeDepSection">
+                <input type="checkbox" id="exist_is_checked" ng-model="existSameAsBillingAddress.is_checked"
+                  ng-change="onSameAsBillAddClicked(existSameAsBillingAddress.is_checked)">
+                <label for="exist_is_checked">
+                  <xe-translate text-value="Same As Billing Address">
+                  </xe-translate>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-8">
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="flexRow">
+            <div class="flexCol">
+              <div class="form-group form-group-default required">
+                <label class="control-label">
+                  <xe-translate text-value="Addr">
+                  </xe-translate>
+                </label>
+                <input type="text" ng-model="existingCustomerData.shipping_address1" class="form-control" placeholder="Address Line 1"
+                  required>
+              </div>
+            </div>
+            <div class="flexCol">
+              <div class="form-group form-group-default">
+                <label class="control-label">
+                  <xe-translate text-value="Address">
+                  </xe-translate>
+                </label>
+                <input type="text" ng-model="existingCustomerData.shipping_address2" class="form-control" placeholder="Address Line 2"
+                  required>
+              </div>
+            </div>
+            <div class="flexCol">
+              <div class="form-group form-group-default required">
+                <label class="control-label">
+                  <xe-translate text-value="City">
+                  </xe-translate>
+                </label>
+                <input type="text" ng-model="existingCustomerData.shipping_city" class="form-control" placeholder="City"
+                  required>
+              </div>
+            </div>
+            <div class="flexCol">
+              <div class="form-group form-group-default required">
+                <label class="control-label">
+                  <xe-translate text-value="Zip">
+                  </xe-translate>
+                </label>
+                <input type="text" ng-model="existingCustomerData.shipping_postcode" class="form-control" placeholder="Zip"
+                  required>
+              </div>
+            </div>
+            <div class="flexCol form-group">
+              <div class="q-r-products-container" ng-click="resetCountrySearchField()">
+                <span class="q-r-dropdown-star" style="right: 10px">*</span>
+                <label class="control-label q-r-dropdown-btn-label">
+                  <xe-translate text-value="Country">
+                  </xe-translate>
+                </label>
+                <div class="btn-group" style="width:100%;display:flex;">
+                  <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown">
+                    {{ existingCustomerData.shipping_country }}
+                  </button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="height: 64px;">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                    <li>
+                      <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="existingCountrySearch.value">
+                    </li>
+                    <li>
+                      <ul class="quote-drop-down" ng-class="{'quote-drop-down-scroll':countryList.length > 5}" style="padding: 12px 0;">
+                        <li ng-repeat="country in countryList | filter:existingCountrySearch.value" ng-click="onCreateQuotShipCountrySelected(country)">
+                          <a href="" style="color:#333;">
+                              {{ country.countries_name }}
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flexCol form-group">
+              <div class="q-r-products-container" ng-click="resetStateSearchField()">
+                <span class="q-r-dropdown-star" style="right: 10px">*</span>
+                <label class="control-label q-r-dropdown-btn-label">
+                  <xe-translate text-value="State">
+                  </xe-translate>
+                </label>
+                <div class="btn-group" style="width:100%;display:flex;">
+                  <button type="button" class="btn btn-default text-ellipsis q-r-dropdown-btn-cont" data-toggle="dropdown" ng-disabled="existingCustomerData.shipping_country == 'Select'">
+                    {{ existingCustomerData.shipping_state }}
+                  </button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="height: 64px;" ng-disabled="existingCustomerData.shipping_country == 'Select'">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" style="width:100%;padding:10px;">
+                    <li>
+                      <input type="text" class="form-control input-sm q-r-drop-search-field" ng-model="existingStateSearch.value">
+                    </li>
+                    <li>
+                      <ul class="quote-drop-down" ng-class="{'quote-drop-down-scroll':existingShipStateList.length > 5}" style="padding: 12px 0;">
+                        <li ng-repeat="state in existingShipStateList | filter:existingStateSearch.value" ng-click="onCreateQuotShipStateSelected(state)">
+                          <a href="" style="color:#333;">
+                              {{ state.state_name }}
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default" style="margin-bottom:0px;background:transparent;border:0;">
+      <div class="panel-body" style="padding:15px 0;">
+        <div class="row">
+          <div class="col-sm-12 text-right">
+            <button type="reset" class="btn btn-danger" ng-click="cancelQuoteForm()">
+              <xe-translate text-value="Cancel"></xe-translate>
+            </button>
+            <button type="submit" class="btn btn-success" ng-click="submitQuoteData()"
+              ng-disabled="createQuoteRequestPreloader || getShipAddPreLoader">
+              <xe-translate text-value="Submit"></xe-translate>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="preloader-trans" ng-show="createQuoteRequestPreloader">
+    <div class="page-loader">
+      <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress" />
+      <span>
+        <xe-translate text-value="Please wait"></xe-translate>...
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+*							{ margin: 0px; padding: 0px;}
+body						{ font-family: Arial, Helvetica, sans-serif; font-size:14px; height: 100vh;}
+.clear						{ clear:both;}
+img							{ border: 0px;}
+ul,ol						{ list-style: none;}
+a							{ text-decoration: none; outline: none;}
+a:focus, a:active,a:visited	{ outline: none; border: 0px;}
+h1							{}
+h2							{}
+h3							{}
+h4							{}
+p							{}
+/******* Common Element CSS End *********/
+body { position: relative; background: lightcyan; text-align: center;}
+/******* Runner boy CSS Start *******/
+.runner-boy { position: relative; top: 150px; display: inline-block; margin: 0px auto; z-index: 1000; transform: rotate(8deg); -webkit-transform: rotate(8deg); animation: runjump 0.75s ease-in infinite; -webkit-animation: runjump 0.75s ease-in infinite; transition: all 0.3s ease-in;}
+.face {width: 100px; position: relative; height: 140px; border-radius: 40px 40px 80px 80px; background: bisque; position: relative; margin-top: 50px; z-index: 100; transform: rotate(-8deg); -webkit-transform: rotate(-8deg);}
+.hair { position: absolute; width: 100%; display: block; top: 0;}
+.hair span { background: brown; display: block; position: absolute; z-index: 2;}
+.hair span:nth-child(1) { height: 40px; border-radius: 20px; margin-top: 0px; width: 120%; margin-left: -10%; transform: rotate(-3deg);}
+.hair span:nth-child(2) { top: -20px; right: -7px; height: 50px; width: 50px; border-radius: 25px 25px 10px 10px; transform: rotate(-5deg);}
+.hair span:nth-child(3) { top: -15px; right: 30px; height: 40px; width: 45px; border-radius: 22px 22px 10px 10px;}
+.hair span:nth-child(4) { top: -10px; right: 60px; height: 35px; width: 40px; border-radius: 20px 20px 10px 10px;}
+.hair b { position: absolute; border: 4px solid transparent; border-bottom: 10px solid #fff; border-top: none; border-radius: 5px;}
+.hair .drop { position: relative; z-index: 1; animation: rundrop 1s ease-in-out infinite; -webkit-animation: rundrop 2s ease-in-out infinite;}
+.hair .drop b:nth-child(1) { bottom: -40px; left: 25px;}
+.hair .drop b:nth-child(2) { bottom: -30px; left: 30px;}
+.hair .drop b:nth-child(3) { bottom: -50px; left: 35px;}
+.hair .drop b:nth-child(4) { bottom: -25px; left: 40px;}
+.ear { position: absolute; width: 12px; height: 30px; border-radius: 6px; background: rgba(0, 0, 0, 0.05);display: block; top: 50%; left: 10%; box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.3);}
+.eye { position: absolute; width: 18px; height: 30px; border-radius: 10px; background: white; display: block; top: 35%; right: 5%; box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.1);}
+.eye:before { position: absolute; content: ""; width: 10px; height: 15px; box-shadow: inset 0px 0px 2px 3px rgba(0, 0, 0, 0.8); top:10px; right: 0; display: block; border-radius: 50%;}
+.nose { position: absolute; width: 15px; height: 25px; border-radius: 10px; background: bisque; display: block; top: 52%; right: -5%; transform: rotate(-15deg); }
+.neck { position: relative; background: #f7dcbe; height: 50px; width: 40px; border-radius: 30px;left: calc(50% - 20px); top: -25px;z-index: 50;}
+.middle { width: 100px; height: 140px;  margin-top: -50px; position: relative; z-index: 20;}
+.mid-body { position: relative; height: 100%; width: 100%; background: darkseagreen; border-radius: 50px 50px 0px 0px; z-index: 7;}
+.mid-bottom { width: 100px; height: 30px; background: #005CA1; margin-top: 0px; position: relative; z-index: 8;}
+.hand-with-sleev {position: absolute; top: 40px; width: 40px; display: block; left: calc(50% - 20px);}
+.hand-sleev { width: 100%; border-radius: 50% 50% 0px 0px; height: 50px; background: #87b287;  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.2);}
+.hand { position: relative; left: calc(50% - 15px)}
+.hand .upper-part { width: 30px; height: 45px; background: bisque; border-radius: 0px 0px 15px 15px; position: relative;}
+.hand .lower-part { position: absolute; top: calc(100% - 0px); top: calc(100% - 12px); left: 0; height: 70px; width: 25px; background: bisque; border-radius: 15px 15px 4px 4px; transform: rotate(-95deg); transform-origin: top center;}
+.finger-block { background: bisque; height: 30px; width: 25px; position: relative; border-radius: 4px 4px 10px 10px; position: absolute; top: 100%;}
+.finger-block .thumb { position: absolute; top: 0px; right: 0px; width: 10px; height: 15px; background: bisque; border-radius: 5px; transform: rotate(-27deg); display: block; transform-origin: top left; border-bottom: 2px solid rgba(0, 0, 0, 0.2);}
+.finger-block:before { position: absolute; bottom: 0px;left: 6px; width: 8px; height: 15px; border: 2px solid rgba(0, 0, 0, 0.2); content: ""; border-top: none; border-bottom: none;}
+.finger-block:after { position: absolute; bottom: 0px;left: 18px; width: 8px; height: 15px;border-left: 2px solid rgba(0, 0, 0, 0.2); content: "";}
+
+.hand-with-sleev.front {z-index: 10; transform: rotate(-85deg); -webkit-transform: rotate(-85deg); transform-origin: top center; animation: handrun-front linear 1.5s infinite;}
+.hand-with-sleev.back {z-index: 5; transform: rotate(85deg); -webkit-transform: rotate(85deg); transform-origin: top center; animation: handrun-back linear 1.5s infinite;}
+
+.hand-watch { position: absolute; width: 100%; height: 12px; background: #6d1b1b; bottom: 10px; left: 0; display: block;}
+.hand-watch:before { position: absolute; width: 16px; height: 16px; border: 2px solid #000; border-radius: 50%; display: block; left: calc( 50% - 8px); top: -2px; content: ""; background: #fff; animation: watch-reflection 1.5s linear infinite; -webkit-animation:  watch-reflection 1.5s linear infinite;}
+.belt-holder {position: absolute; top: 1px; width: 100%; height: 17px;}
+.belt-holder:before,
+.belt-holder:after { position: absolute; top: 0px; height: 100%; background: #005CA1; width: 5px; display: block; content: ""; z-index: 5;}
+.belt-holder:before { left: 25px;}
+.belt-holder:after { right: 25px;}
+.belt { position: absolute; top: 2px; width: 100%; height: 15px; background: yellow;  box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);}
+.belt-buckle { position: absolute; top: -1px; height: calc(100% + 2px); background: orange; width: 15px; right: -2px; border-radius: 15px 0px 0px 15px;}
+.bottom { position: relative; z-index: 20;}
+.bottom-body { position: absolute; background: #005CA1; width: 100px; height: 50px; margin-top: 0px; border-radius: 0px 0px 40px 40px; top: 30px;left: 0; display: block; z-index: 7;}
+.leg-with-cover { position: absolute; top: 60px; width: 50px; display: block; left: calc(50% - 25px);}
+.leg-cover {  width: 100%; border-radius: 50% 50% 0px 0px; height: 60px; background: #065187; box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.2);}
+.leg .upper-part { width: 40px; height: 50px; background: bisque; border-radius: 0px 0px 15px 15px; position: relative; left: calc(50% - 20px)}
+.leg .lower-part { position: absolute; top: calc(100% - 0px); top: calc(100% - 15px); left: calc(50% - 15px); height: 70px; width: 30px; background: bisque; border-radius: 15px; animation: legrun-lower linear 1.5s infinite; -webkit-animation: legrun-lower linear 1.5s infinite;}
+.shoe-block { position: relative; top: calc(100% - 15px); left: -5px; width: 70px; height: 30px; background: #ccc; border-bottom: 5px solid purple; border-radius: 5px 15px 10px 5px; z-index: -1; animation: run-shoe linear 1.5s infinite; -webkit-animation: run-shoe linear 1.5s infinite;}
+.shoe-block:before { position: absolute; height: 10px; width: 8px; border: 2px solid purple; border-bottom: none; border-top: none; content: ""; right: 17px; top: 0px;}
+.leg-with-cover.front {z-index: 10; transform: rotate(-80deg); -webkit-transform: rotate(-80deg); transform-origin: top center; animation: legrun-front linear 1.5s infinite; -webkit-animation: legrun-front linear 1.5s infinite;}
+.leg-with-cover.back {z-index: 5; transform: rotate(80deg); -webkit-transform: rotate(80deg); transform-origin: top center; animation: legrun-back linear 1.5s infinite; -webkit-animation: legrun-back linear 1.5s infinite;}
+.leg-with-cover.front .lower-part { transform-origin: top; -webkit-transform-origin: top; animation: legrun-front-lower linear 1.5s infinite; -webkit-animation: legrun-front-lower linear 1.5s infinite;}
+.leg-with-cover.back .lower-part { transform-origin: top; -webkit-transform-origin: top; animation: legrun-back-lower linear 1.5s infinite; -webkit-animation: legrun-back-lower linear 1.5s infinite;}
+
+
+.pause-animate { animation-iteration-count: 0 !important; -webkit-animation-iteration-count: 0 !important;}
+.jump-up { top: 30px !important;}
+/******* Runner boy CSS End *******/
+/******* Track CSS Start ******/
+.track:before,
+.track:after { height: 30px; width: 30%; background: #fff; content: ""; position: absolute; top: calc(50% - 20px); left: 100%; display: block; z-index: 101; animation: track 4s linear infinite; -webkit-animation: track 4s linear infinite;}
+.track:after { animation-delay: 2s; -webkit-animation-delay: 2s;}
+.track { background: #333; height: 450px; z-index: 100; position: absolute; overflow: hidden; overflow-y: visible !important; bottom: 0px; width: 100%;  overflow-y: visible;}
+
+.hurdles { position: absolute; height: 150px; left: 300%; border: 15px solid #ccc; width: 300px; border-bottom: none; z-index: 150; transform: skewY(43deg); bottom: 160px; border-radius: 20px 20px 0px 0px; animation: hurdles 6.4s linear infinite; -webkit-animation:  hurdles 6.4s linear infinite; overflow: visible;}
+.hurdles:after {position: relative; padding: 20px 0px; background: #ffc500; color: red; text-align: center; width: 100%; font-size: 25px; line-height: 40px; content: "WORK IN PROGRESS"; box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.1); display: block; font-weight: bold;}
+/******** Track CSS End *******/
+
+/***** Bottom section CSS Start *******/
+/****** Bottom section CSS End *******/
+
+/****** Animation CSS Start *******/
+@keyframes runjump {
+    0% { margin-top: 0px;}
+    50% { margin-top: 15px;}
+    100% { margin-top: 0px;}
+}
+@-webkit-keyframes runjump {
+    0% { margin-top: 0px;}
+    50% { margin-top: 15px;}
+    100% { margin-top: 0px;}
+}
+@keyframes rundrop {
+    0% { opacity:1; bottom:0;}
+    100% { opacity:0; bottom:-50px;}
+}
+@-webkit-keyframes rundrop {
+    0% { opacity:1; bottom:0;}
+    100% { opacity:0; bottom:-50px;}
+}
+@keyframes handrun-front {
+    0% {transform: rotate(-80deg);}
+    50% { transform: rotate(80deg);}
+    100% {transform: rotate(-80deg);}
+}
+@-webkit-keyframes handrun-front {
+    0% {transform: rotate(-80deg);}
+    50% { transform: rotate(80deg);}
+    100% {transform: rotate(-80deg);}
+}
+
+@keyframes handrun-back {
+    0% {transform: rotate(80deg);}
+    50% { transform: rotate(-80deg);}
+    100% {transform: rotate(80deg);}
+}
+@-webkit-keyframes handrun-back {
+    0% {transform: rotate(80deg);}
+    50% { transform: rotate(-80deg);}
+    100% {transform: rotate(80deg);}
+}
+
+@keyframes legdrun-front {
+    0% {transform: rotate(-80deg);}
+    50% { transform: rotate(80deg);}
+    100% {transform: rotate(-80deg);}
+}
+@-webkit-keyframes legrun-front {
+    0% {transform: rotate(-80deg);}
+    50% { transform: rotate(80deg);}
+    100% {transform: rotate(-80deg);}
+}
+@keyframes legrun-back {
+    0% {transform: rotate(80deg);}
+    50% { transform: rotate(-80deg);}
+    100% {transform: rotate(80deg);}
+}
+@-webkit-keyframes legrun-back {
+    0% {transform: rotate(80deg);}
+    50% { transform: rotate(-80deg);}
+    100% {transform: rotate(80deg);}
+}
+@keyframes legdrun-front-lower {
+    0% {transform: rotate(25deg);}
+    15% {transform: rotate(0deg);}
+    35% {transform: rotate(15deg);}
+    50% {transform: rotate(25deg);}
+    60% {transform: rotate(100deg);}
+    80% {transform: rotate(80deg);}
+    100% {transform: rotate(25deg);}
+}
+@-webkit-keyframes legrun-front-lower {
+    0% {transform: rotate(25deg);}
+    15% {transform: rotate(0deg);}
+    35% {transform: rotate(15deg);}
+    50% {transform: rotate(25deg);}
+    70% {transform: rotate(100deg);}
+    85% {transform: rotate(80deg);}
+    100% {transform: rotate(25deg);}
+}
+
+@keyframes legdrun-back-lower {
+    0% {transform: rotate(25deg);}
+    20% {transform: rotate(100deg);}
+    35% {transform: rotate(80deg);}
+    50% {transform: rotate(25deg);}
+    65% {transform: rotate(0deg);}
+    85 %{transform: rotate(15deg);}
+    100% {transform: rotate(25deg);}
+}
+@-webkit-keyframes legrun-back-lower {
+    0% {transform: rotate(25deg);}
+    20% {transform: rotate(100deg);}
+    35% {transform: rotate(80deg);}
+    50% {transform: rotate(25deg);}
+    65% {transform: rotate(0deg);}
+    85%{transform: rotate(15deg);}
+    100% {transform: rotate(25deg);}
+}
+/*
+@-webkit-keyframes legrun-back-lower {
+    0% {transform: rotate(25deg);}
+    15% {transform: rotate(0deg);}
+    30% {transform: rotate(15deg);}
+    50% {transform: rotate(25deg);}
+    65% {transform: rotate(100deg);}
+    85% {transform: rotate(80deg);}
+    100% {transform: rotate(25deg);}
+}
+*/
+/*
+@keyframes run-shoe {
+    0% {transform: rotate(-5deg);}
+    50% {transform: rotate(-80deg);}
+    100% {transform: rotate(-5deg);}
+}
+@-webkit-keyframes run-shoe {
+    0% {transform: rotate( -5deg);}
+    50% {transform: rotate(-80deg);}
+    100% {transform: rotate(-5deg);}
+}*/
+
+@keyframes track {
+    0% { left: 100%;}
+    100% { left: -35%;}
+}
+@-webkit-keyframes track {
+    0% { left: 100%;}
+    100% { left: -35%;}
+}
+
+@keyframes hurdles {
+    0% { left: 200%;}
+    100% { left: -300px;}
+}
+@-webkit-keyframes hurdles {
+    0% { left: 200%;}
+    100% { left: -300px;}
+}
+
+@keyframes watch-reflection {
+    0% { background: #fff;}
+    50% { background: #7a87ef;}
+    100% { background: #fff;}
+}
+@-webkit-keyframes watch-reflection {
+    0% { background: #fff;}
+    50% { background: #7a87ef;}
+    100% { background: #fff;}
+}
+/****** Animation CSS End *******/

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 28</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Static-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Contact-Us" transform="translate(-193.000000, -812.000000)" fill="#0566FF">
+            <g id="Group-31" transform="translate(0.000000, 554.000000)">
+                <g id="Group-32" transform="translate(187.000000, 188.000000)">
+                    <g id="Group-28" transform="translate(6.000000, 70.000000)">
+                        <circle id="Oval" opacity="0.2" cx="32" cy="32" r="32"></circle>
+                        <circle id="Oval" opacity="0.4" cx="32" cy="32" r="16"></circle>
+                        <circle id="Oval" stroke="#FFFFFF" stroke-width="0.75" cx="32" cy="32" r="5.625"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

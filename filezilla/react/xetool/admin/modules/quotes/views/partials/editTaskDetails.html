@@ -1,0 +1,59 @@
+<div class="Form_Details">
+  <div class="panel panel-default">
+    <div class="panel-heading separator">
+      <div class="panel-title">
+        <xe-translate text-value="Edit Task">
+        </xe-translate>
+      </div>
+    </div>
+    <div class="panel-body m-t-20">
+      <div class="form-wrap">
+        <form >
+          <div class="row">
+            <div class="col-sm-9">
+              <div class="form-group form-group-default required">
+                <label  class="control-label">
+                  <xe-translate text-value="Description">
+                  </xe-translate>
+                </label>
+                <input type="text" ng-model="textDataClicked.editTitle" class="form-control"  placeholder="Description" required>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="form-group form-group-default required">
+                <label class="control-label">
+                  <xe-translate text-value="Assigned To">
+                  </xe-translate>
+                </label> 
+
+                <select class="form-control select" ng-model="textDataClicked.assign_to" ng-options="item.id as item.name for item in userDataList">
+                  <option value="" ng-disabled="true">Assigned To </option>
+                </select>
+              </div>
+            </div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="panel-footer">
+     <div class="row">
+        <div class="col-sm-12 text-right">
+           <button type="reset" class="btn btn-danger btn-sm" ng-click="cancelEditTask()">Cancel</button>
+           <button type="submit" class="btn btn-success btn-sm" ng-click="saveEditTask()">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="preloader-trans" ng-show="editCustomerPreloader">
+      <div class="page-loader">
+          <img class="demo-mw-50 block" src="assets/img/demo/progress.svg" alt="Progress"/>
+          <span>
+              <xe-translate text-value="Please wait">
+              </xe-translate>
+              ...
+          </span>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /node_application_public/
+Disallow: /application_public/
+
+Sitemap: https://www.11wickets.com/sitemap.xml

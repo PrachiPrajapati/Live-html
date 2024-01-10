@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="31px" viewBox="0 0 38 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>multiple-user-2(24x24)@1x</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="01_Dashboard" transform="translate(-410.000000, -274.000000)" stroke="#FFFFFF" stroke-width="1.8">
+            <g id="Group-10" transform="translate(374.000000, 234.000000)">
+                <g id="Group-11" transform="translate(24.000000, 24.000000)">
+                    <g id="multiple-user-2(24x24)@1x" transform="translate(13.000000, 17.000000)">
+                        <path d="M9,19.8 C4.032,19.8 0,23.832 0,28.8 C0.018,28.8 18,28.8 18,28.8 C18,23.832 13.968,19.8 9,19.8 Z" id="Path"></path>
+                        <path d="M9,19.8 C11.485278,19.8 13.5,17.78526 13.5,15.3 C13.5,12.81474 11.485278,10.8 9,10.8 C6.514722,10.8 4.5,12.81474 4.5,15.3 C4.5,17.78526 6.514722,19.8 9,19.8 Z" id="Path"></path>
+                        <path d="M27,9 C22.032,9 18,13.032 18,18 C18.018,18 36,18 36,18 C36,13.032 31.968,9 27,9 Z" id="Path"></path>
+                        <path d="M27,9 C29.48526,9 31.5,6.985278 31.5,4.5 C31.5,2.014722 29.48526,0 27,0 C24.51474,0 22.5,2.014722 22.5,4.5 C22.5,6.985278 24.51474,9 27,9 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
